@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #9B59B6; top: -100px; right: -100px; }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 48px; 
+      font-weight: 800; 
+      margin-bottom: 60px;
+    }
+    .highlight { color: #E8B86D; }
+    .progression {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      max-width: 800px;
+    }
+    .stage {
+      width: 100%;
+      padding: 30px 40px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    .stage-1 { background: rgba(231, 76, 60, 0.15); border: 2px solid rgba(231, 76, 60, 0.3); }
+    .stage-2 { background: rgba(74, 144, 164, 0.15); border: 2px solid rgba(74, 144, 164, 0.3); }
+    .stage-3 { background: rgba(39, 174, 96, 0.15); border: 2px solid rgba(39, 174, 96, 0.3); }
+    .stage-4 { background: rgba(232, 184, 109, 0.15); border: 2px solid rgba(232, 184, 109, 0.3); }
+    .stage-num {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .stage-1 .stage-num { background: #E74C3C; }
+    .stage-2 .stage-num { background: #4A90A4; }
+    .stage-3 .stage-num { background: #27AE60; }
+    .stage-4 .stage-num { background: #E8B86D; color: #1a1a2e; }
+    .stage-content { text-align: left; }
+    .stage-title { font-size: 26px; font-weight: 700; margin-bottom: 5px; }
+    .stage-desc { font-size: 18px; opacity: 0.7; }
+    .arrow-down { font-size: 32px; opacity: 0.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="title">The <span class="highlight">Progression</span></div>
+  
+  <div class="progression">
+    <div class="stage stage-1">
+      <div class="stage-num">1</div>
+      <div class="stage-content">
+        <div class="stage-title">Awareness</div>
+        <div class="stage-desc">"Autism exists"</div>
+      </div>
+    </div>
+    <div class="arrow-down">↓</div>
+    <div class="stage stage-2">
+      <div class="stage-num">2</div>
+      <div class="stage-content">
+        <div class="stage-title">Acceptance</div>
+        <div class="stage-desc">"Autism is valid and valuable"</div>
+      </div>
+    </div>
+    <div class="arrow-down">↓</div>
+    <div class="stage stage-3">
+      <div class="stage-num">3</div>
+      <div class="stage-content">
+        <div class="stage-title">Inclusion</div>
+        <div class="stage-desc">"Autistic people belong everywhere"</div>
+      </div>
+    </div>
+    <div class="arrow-down">↓</div>
+    <div class="stage stage-4">
+      <div class="stage-num">4</div>
+      <div class="stage-content">
+        <div class="stage-title">Appreciation</div>
+        <div class="stage-desc">"Autism enriches our world"</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 4</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

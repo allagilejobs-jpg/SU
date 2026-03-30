@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Sequence — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; line-height: 1.7; }
+    .header { background: linear-gradient(135deg, #E8B86D, #d4a35a); color: #1a1a2e; padding: 30px 20px; text-align: center; }
+    .header h1 { font-size: 1.8rem; margin-bottom: 5px; }
+    .header a { color: rgba(0,0,0,0.7); text-decoration: none; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    .email-card { background: #16213e; border-radius: 16px; padding: 25px; margin-bottom: 25px; }
+    .email-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+    .email-num { background: #E8B86D; color: #1a1a2e; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 13px; }
+    .email-day { color: #aaa; font-size: 13px; }
+    .subject { color: #E8B86D; font-weight: 700; font-size: 16px; margin-bottom: 15px; }
+    .email-body { background: #0a1628; border-radius: 10px; padding: 20px; color: #ccc; font-size: 14px; line-height: 1.8; white-space: pre-wrap; }
+    .copy-btn { background: #4A90A4; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; margin-top: 15px; font-family: 'Poppins', sans-serif; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📧 Welcome Email Sequence</h1>
+    <a href="../content-hub.html">← Back to Content Hub</a>
+  </div>
+  <div class="container">
+    <p style="color:#aaa; margin-bottom:30px;">Trigger: When someone downloads "The First 48 Hours Post-Diagnosis" guide</p>
+    
+    <div class="email-card">
+      <div class="email-header">
+        <span class="email-num">Email 1</span>
+        <span class="email-day">Immediate (upon signup)</span>
+      </div>
+      <div class="subject">Subject: Your guide is here 💙 (+ a note from one parent to another)</div>
+      <div class="email-body">Hi {first_name},
+
+Your guide is attached — "The First 48 Hours Post-Diagnosis."
+
+Before you dive in, I want you to know something:
+
+**You're going to be okay.**
+
+I know it might not feel that way right now. When my child was diagnosed, I felt like the ground had shifted beneath me. I Googled until 3 AM. I cried in the shower. I questioned everything.
+
+But here's what I've learned: the diagnosis doesn't change who your child is. It gives you a roadmap to help them thrive.
+
+That's why I created Spectrum Unlocked — to be the resource I wish existed when we started this journey.
+
+Take a breath. Read the guide when you're ready. And know that you're not alone.
+
+💙 [Your name]
+Spectrum Unlocked
+
+P.S. — Hit reply and tell me: what's your biggest worry right now? I read every email.</div>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent);this.textContent='✓ Copied!'">📋 Copy Email</button>
+    </div>
+    
+    <div class="email-card">
+      <div class="email-header">
+        <span class="email-num">Email 2</span>
+        <span class="email-day">Day 2</span>
+      </div>
+      <div class="subject">Subject: The one call you should make this week</div>
+      <div class="email-body">Hi {first_name},
+
+Quick check-in: how are you doing?
+
+If you've had a chance to look at the guide, you might be feeling overwhelmed by all the "next steps."
+
+Let me simplify it:
+
+**This week, make ONE call: your pediatrician.**
+
+Ask them for referrals to:
+- A developmental pediatrician (if you haven't seen one)
+- Speech therapy
+- Occupational therapy
+
+Then get on those waitlists immediately. Even if you're not sure you need them. Waitlists can be 6-12 months long, and you can always decline later.
+
+That's it. One call. One action. You've got this.
+
+Tomorrow, I'll share the biggest mistake I made after our diagnosis (so you don't have to make it too).
+
+💙 [Your name]</div>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent);this.textContent='✓ Copied!'">📋 Copy Email</button>
+    </div>
+    
+    <div class="email-card">
+      <div class="email-header">
+        <span class="email-num">Email 3</span>
+        <span class="email-day">Day 4</span>
+      </div>
+      <div class="subject">Subject: The mistake I made (please don't repeat it)</div>
+      <div class="email-body">Hi {first_name},
+
+When my child was diagnosed, I made a mistake that cost us nearly a year of progress.
+
+**I waited.**
+
+I waited to see if things would "improve on their own."
+I waited because the waitlists seemed too long.
+I waited because I was still processing.
+
+By the time we finally started therapy, we were almost a year behind where we could have been.
+
+Early intervention matters. The research is clear: the earlier kids start getting support, the better their outcomes.
+
+So here's my advice: don't wait.
+
+- Get on every waitlist now (you can always say no later)
+- Contact your school district about evaluations
+- Start learning about IEPs and 504 plans
+
+You're doing great. Keep going.
+
+💙 [Your name]</div>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent);this.textContent='✓ Copied!'">📋 Copy Email</button>
+    </div>
+    
+  </div>
+</body>
+</html>

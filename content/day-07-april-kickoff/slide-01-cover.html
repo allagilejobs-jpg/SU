@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #0f3460 50%, #16213e 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; }
+    .bg-shape-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(74,144,164,0.3) 0%, transparent 70%); top: -200px; left: -200px; }
+    .bg-shape-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,184,109,0.25) 0%, transparent 70%); bottom: -150px; right: -150px; }
+    .date-badge { 
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      padding: 15px 40px; 
+      border-radius: 35px; 
+      font-size: 22px; 
+      font-weight: 800; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(74, 144, 164, 0.3);
+    }
+    .emoji-row { font-size: 80px; margin-bottom: 30px; letter-spacing: 20px; }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 72px; 
+      font-weight: 800; 
+      line-height: 1.1; 
+      margin-bottom: 30px;
+      max-width: 950px;
+    }
+    .highlight { color: #E8B86D; }
+    .highlight-blue { color: #4A90A4; }
+    .subtitle {
+      font-size: 28px;
+      opacity: 0.85;
+      margin-bottom: 50px;
+      max-width: 850px;
+      line-height: 1.4;
+    }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+    .arrow { font-size: 30px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="date-badge">🗓️ April 1, 2026</div>
+  
+  <div class="emoji-row">♾️💙✨</div>
+  
+  <div class="main-title">
+    <span class="highlight">Autism</span> <span class="highlight-blue">Acceptance</span> Month
+  </div>
+  
+  <div class="subtitle">
+    It's here. A whole month dedicated to understanding, embracing, and celebrating the autistic community.
+  </div>
+  
+  <div class="swipe-cta">
+    <span>Swipe to see what's coming</span>
+    <span class="arrow">→</span>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

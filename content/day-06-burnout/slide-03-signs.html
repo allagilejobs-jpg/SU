@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      color: #E8B86D;
+    }
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 920px;
+    }
+    .sign-card {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid rgba(231, 76, 60, 0.2);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .sign-icon { font-size: 32px; flex-shrink: 0; }
+    .sign-text { font-size: 19px; line-height: 1.3; opacity: 0.9; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Warning Signs</div>
+  <div class="title">Signs of Burnout</div>
+  
+  <div class="signs-grid">
+    <div class="sign-card">
+      <span class="sign-icon">😶</span>
+      <span class="sign-text">Loss of speech or increased difficulty communicating</span>
+    </div>
+    <div class="sign-card">
+      <span class="sign-icon">📉</span>
+      <span class="sign-text">Skills regression (things that were easy become hard)</span>
+    </div>
+    <div class="sign-card">
+      <span class="sign-icon">🔋</span>
+      <span class="sign-text">Extreme exhaustion that sleep doesn't fix</span>
+    </div>
+    <div class="sign-card">
+      <span class="sign-icon">🚫</span>
+      <span class="sign-text">Increased sensory sensitivities</span>
+    </div>
+    <div class="sign-card">
+      <span class="sign-icon">😵</span>
+      <span class="sign-text">Executive function collapse (can't plan, decide, start)</span>
+    </div>
+    <div class="sign-card">
+      <span class="sign-icon">🏠</span>
+      <span class="sign-text">Withdrawing from everything and everyone</span>
+    </div>
+    <div class="sign-card">
+      <span class="sign-icon">😢</span>
+      <span class="sign-text">Feeling like you've lost yourself</span>
+    </div>
+    <div class="sign-card">
+      <span class="sign-icon">💥</span>
+      <span class="sign-text">More frequent meltdowns or shutdowns</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 4</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

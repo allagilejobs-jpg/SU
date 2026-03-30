@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1080px; height: 1920px; font-family: 'Poppins', sans-serif; color: white; }
+    .slide {
+      width: 1080px; height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 80px; padding-bottom: 350px; position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.1; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #27AE60; top: -150px; left: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #4A90A4; bottom: 400px; right: -100px; }
+    .check { font-size: 100px; margin-bottom: 30px; }
+    .header-text {
+      font-size: 32px; text-transform: uppercase; letter-spacing: 4px;
+      opacity: 0.7; margin-bottom: 20px; color: #27AE60;
+    }
+    .main-text {
+      font-family: 'Playfair Display', serif; font-size: 55px; font-weight: 800;
+      line-height: 1.3; margin-bottom: 40px; max-width: 900px;
+    }
+    .say-instead {
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .say-item {
+      background: rgba(39, 174, 96, 0.2); border: 2px solid rgba(39, 174, 96, 0.4);
+      padding: 22px 40px; border-radius: 20px; font-size: 30px;
+    }
+    .cta {
+      background: linear-gradient(135deg, #E8B86D, #d4a35a);
+      color: #1a1a2e; padding: 22px 50px; border-radius: 50px; margin-top: 40px;
+      font-size: 24px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px;
+    }
+    .logo { font-size: 26px; opacity: 0.6; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="check">💚</div>
+    <div class="header-text">Say this instead</div>
+    <div class="main-text">Sometimes the best thing to say is...</div>
+    <div class="say-instead">
+      <div class="say-item">"How can I support you?"</div>
+      <div class="say-item">"I'm here if you need to talk"</div>
+      <div class="say-item">"You're doing a great job"</div>
+    </div>
+    <div class="cta">Share with someone 💙</div>
+    <span class="logo">@spectrum_unlocked</span>
+  </div>
+</body>
+</html>

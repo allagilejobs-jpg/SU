@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Templates — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+      padding: 30px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    
+    .header p { opacity: 0.9; }
+    
+    .header .badge {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #E8B86D;
+    }
+    
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+    
+    .template-card {
+      background: #16213e;
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .template-card .label {
+      padding: 15px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #E8B86D;
+      background: #0f0f1a;
+    }
+    
+    /* Story frame wrapper */
+    .story-frame {
+      width: 270px;
+      height: 480px;
+      margin: 15px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    /* Export container - actual story size */
+    .story-export {
+      width: 1080px;
+      height: 1920px;
+      position: relative;
+      transform-origin: top left;
+      transform: scale(0.25);
+      margin-bottom: -1440px; /* compensate for scale */
+    }
+    
+    /* ============ TEMPLATE 1: Quick Tip ============ */
+    .story-tip {
+      background: linear-gradient(180deg, #1a1a2e 0%, #2d2d5a 50%, #27AE60 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 60px;
+      text-align: center;
+    }
+    
+    .story-tip .icon {
+      font-size: 120px;
+      margin-bottom: 40px;
+    }
+    
+    .story-tip .tip-badge {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 15px 50px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: 60px;
+    }
+    
+    .story-tip h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      line-height: 1.3;
+      margin-bottom: 50px;
+      max-width: 900px;
+    }
+    
+    .story-tip .tip-text {
+      font-size: 42px;
+      line-height: 1.6;
+      opacity: 0.95;
+      max-width: 850px;
+    }
+    
+    .story-tip .handle {
+      position: absolute;
+      bottom: 80px;
+      font-size: 36px;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+    
+    /* ============ TEMPLATE 2: Poll/Question ============ */
+    .story-poll {
+      background: linear-gradient(180deg, #4A90A4 0%, #357a8a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 60px;
+      text-align: center;
+    }
+    
+    .story-poll .question-mark {
+      font-size: 200px;
+      margin-bottom: 30px;
+      opacity: 0.3;
+    }
+    
+    .story-poll h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 68px;
+      line-height: 1.3;
+      margin-bottom: 80px;
+      max-width: 900px;
+    }
+    
+    .story-poll .poll-options {
+      width: 100%;
+      max-width: 800px;
+    }
+    
+    .story-poll .option {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border: 3px solid rgba(255,255,255,0.4);
+      border-radius: 30px;
+      padding: 45px 60px;
+      margin-bottom: 30px;
+      font-size: 42px;
+      font-weight: 600;
+    }
+    
+    .story-poll .tap-hint {
+      margin-top: 60px;
+      font-size: 32px;
+      opacity: 0.7;
+    }
+    
+    .story-poll .handle {
+      position: absolute;
+      bottom: 80px;
+      font-size: 36px;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+    
+    /* ============ TEMPLATE 3: New Post Alert ============ */
+    .story-newpost {
+      background: linear-gradient(180deg, #E8B86D 0%, #d4a35a 50%, #c4934a 100%);
+      color: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 60px;
+      text-align: center;
+    }
+    
+    .story-newpost .alert-icon {
+      font-size: 150px;
+      margin-bottom: 40px;
+    }
+    
+    .story-newpost .new-badge {
+      background: #1a1a2e;
+      color: #E8B86D;
+      padding: 20px 60px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 42px;
+      letter-spacing: 5px;
+      margin-bottom: 50px;
+    }
+    
+    .story-newpost h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 76px;
+      line-height: 1.3;
+      margin-bottom: 40px;
+    }
+    
+    .story-newpost .preview-box {
+      width: 600px;
+      height: 600px;
+      background: #1a1a2e;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+      font-size: 200px;
+    }
+    
+    .story-newpost .cta {
+      font-size: 48px;
+      font-weight: 700;
+      margin-top: 40px;
+    }
+    
+    .story-newpost .arrow {
+      font-size: 80px;
+      margin-top: 30px;
+      animation: bounce 1s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(20px); }
+    }
+    
+    /* ============ TEMPLATE 4: Quote/Affirmation ============ */
+    .story-quote {
+      background: linear-gradient(180deg, #27AE60 0%, #1e8449 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 80px;
+      text-align: center;
+    }
+    
+    .story-quote .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 300px;
+      opacity: 0.2;
+      line-height: 0.5;
+      margin-bottom: -50px;
+    }
+    
+    .story-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      line-height: 1.5;
+      font-style: italic;
+      max-width: 900px;
+      margin-bottom: 60px;
+    }
+    
+    .story-quote .divider {
+      width: 150px;
+      height: 6px;
+      background: #E8B86D;
+      border-radius: 3px;
+      margin-bottom: 50px;
+    }
+    
+    .story-quote .attribution {
+      font-size: 36px;
+      opacity: 0.8;
+    }
+    
+    .story-quote .handle {
+      position: absolute;
+      bottom: 80px;
+      font-size: 36px;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+    
+    /* ============ TEMPLATE 5: This or That ============ */
+    .story-thisorthat {
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .story-thisorthat .top-half {
+      flex: 1;
+      background: linear-gradient(135deg, #27AE60 0%, #1e8449 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      text-align: center;
+    }
+    
+    .story-thisorthat .bottom-half {
+      flex: 1;
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      text-align: center;
+    }
+    
+    .story-thisorthat .choice-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      line-height: 1.3;
+      max-width: 800px;
+    }
+    
+    .story-thisorthat .vs-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #E8B86D;
+      color: #1a1a2e;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 48px;
+      border: 8px solid #1a1a2e;
+    }
+    
+    .story-thisorthat .header-text {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.3);
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 3px;
+    }
+    
+    /* ============ TEMPLATE 6: Behind the Scenes ============ */
+    .story-bts {
+      background: linear-gradient(180deg, #2d2d5a 0%, #1a1a2e 100%);
+      display: flex;
+      flex-direction: column;
+      padding: 80px 60px;
+    }
+    
+    .story-bts .bts-badge {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 2px;
+      align-self: flex-start;
+      margin-bottom: 40px;
+    }
+    
+    .story-bts .photo-placeholder {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 4px dashed rgba(255,255,255,0.2);
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    
+    .story-bts .photo-placeholder .icon {
+      font-size: 120px;
+      opacity: 0.3;
+      margin-bottom: 30px;
+    }
+    
+    .story-bts .photo-placeholder p {
+      font-size: 36px;
+      opacity: 0.5;
+    }
+    
+    .story-bts .caption-area {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    
+    .story-bts .caption-area p {
+      font-size: 38px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    
+    .story-bts .handle {
+      margin-top: 30px;
+      font-size: 32px;
+      opacity: 0.6;
+      text-align: center;
+    }
+    
+    /* ============ TEMPLATE 7: Daily Reminder ============ */
+    .story-reminder {
+      background: linear-gradient(180deg, #9B59B6 0%, #1a1a2e 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 70px;
+      text-align: center;
+    }
+    
+    .story-reminder .reminder-badge {
+      background: rgba(255,255,255,0.2);
+      padding: 15px 50px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 3px;
+      margin-bottom: 80px;
+    }
+    
+    .story-reminder .heart {
+      font-size: 100px;
+      margin-bottom: 50px;
+    }
+    
+    .story-reminder h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      line-height: 1.4;
+      max-width: 900px;
+      margin-bottom: 60px;
+    }
+    
+    .story-reminder .subtext {
+      font-size: 38px;
+      opacity: 0.8;
+      line-height: 1.6;
+      max-width: 800px;
+    }
+    
+    .story-reminder .handle {
+      position: absolute;
+      bottom: 80px;
+      font-size: 36px;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+    
+    /* ============ TEMPLATE 8: Swipe Up / Link ============ */
+    .story-link {
+      background: linear-gradient(180deg, #1a1a2e 0%, #27AE60 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 70px;
+      text-align: center;
+    }
+    
+    .story-link .resource-icon {
+      font-size: 150px;
+      margin-bottom: 50px;
+    }
+    
+    .story-link h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 68px;
+      line-height: 1.3;
+      margin-bottom: 40px;
+      max-width: 900px;
+    }
+    
+    .story-link .description {
+      font-size: 40px;
+      opacity: 0.85;
+      line-height: 1.5;
+      max-width: 800px;
+      margin-bottom: 80px;
+    }
+    
+    .story-link .link-button {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 35px 80px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: 2px;
+    }
+    
+    .story-link .tap-hint {
+      margin-top: 50px;
+      font-size: 32px;
+      opacity: 0.6;
+    }
+    
+    .story-link .handle {
+      position: absolute;
+      bottom: 80px;
+      font-size: 36px;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+    
+    /* Export button */
+    .export-all-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #27AE60, #1e8449);
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
+      z-index: 1000;
+    }
+    
+    .export-all-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    .instructions {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .instructions h3 {
+      color: #E8B86D;
+      margin-bottom: 15px;
+    }
+    
+    .instructions p {
+      color: #aaa;
+      line-height: 1.8;
+    }
+    
+    .instructions code {
+      background: #0f0f1a;
+      padding: 3px 10px;
+      border-radius: 5px;
+      color: #4A90A4;
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="content-hub.html">📁 Content</a>
+    <a href="calendar.html">📅 Calendar</a>
+    <a href="create.html">✨ Create</a>
+    <a href="carousel.html">📚 Carousels</a>
+    <a href="editor.html">🎨 Editor</a>
+    <a href="sensory-hacks/">🧠 Sensory</a>
+    <a href="spotlight-series.html">⭐ Spotlight</a>
+    <a href="story-templates.html" class="active">📱 Stories</a>
+  </nav>
+  
+  <header class="header">
+    <span class="badge">📱 STORIES</span>
+    <h1>Story Templates</h1>
+    <p>Ready-to-use templates for authentic daily stories</p>
+  </header>
+  
+  <div class="container">
+    <div class="instructions">
+      <h3>💡 How to Use These Templates</h3>
+      <p>
+        These are <strong>editable templates</strong> — customize the text, then export!<br>
+        Each template is sized at <code>1080×1920px</code> (perfect 9:16 ratio for Instagram/TikTok stories).<br>
+        Click <strong>"Export All"</strong> to download all templates as PNG files.
+      </p>
+    </div>
+    
+    <h2 class="section-title">📱 Story Templates</h2>
+    
+    <div class="templates-grid">
+      
+      <!-- Template 1: Quick Tip -->
+      <div class="template-card">
+        <div class="label">💡 Quick Tip</div>
+        <div class="story-frame">
+          <div class="story-export story-tip" id="story-tip">
+            <div class="icon">💡</div>
+            <div class="tip-badge">QUICK TIP</div>
+            <h2 contenteditable="true">Sensory Break Ideas</h2>
+            <p class="tip-text" contenteditable="true">Try a 5-minute movement break when your child seems overwhelmed. Sometimes their body just needs to reset! 🧘‍♀️</p>
+            <span class="handle">@spectrum_unlocked</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Template 2: Poll -->
+      <div class="template-card">
+        <div class="label">📊 Poll / Question</div>
+        <div class="story-frame">
+          <div class="story-export story-poll" id="story-poll">
+            <div class="question-mark">?</div>
+            <h2 contenteditable="true">What's your biggest challenge this week?</h2>
+            <div class="poll-options">
+              <div class="option" contenteditable="true">🏫 School communication</div>
+              <div class="option" contenteditable="true">😴 Sleep struggles</div>
+            </div>
+            <p class="tap-hint">Tap to vote! 👆</p>
+            <span class="handle">@spectrum_unlocked</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Template 3: New Post -->
+      <div class="template-card">
+        <div class="label">🔔 New Post Alert</div>
+        <div class="story-frame">
+          <div class="story-export story-newpost" id="story-newpost">
+            <div class="alert-icon">🔔</div>
+            <div class="new-badge">NEW POST</div>
+            <h2 contenteditable="true">You don't want to miss this one!</h2>
+            <div class="preview-box">📚</div>
+            <p class="cta" contenteditable="true">Tap to read the full carousel →</p>
+            <div class="arrow">👇</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Template 4: Quote -->
+      <div class="template-card">
+        <div class="label">💬 Quote / Affirmation</div>
+        <div class="story-frame">
+          <div class="story-export story-quote" id="story-quote">
+            <div class="quote-mark">"</div>
+            <blockquote contenteditable="true">You are not failing your child. You are fighting for them. There's a difference.</blockquote>
+            <div class="divider"></div>
+            <p class="attribution" contenteditable="true">— For every exhausted parent today</p>
+            <span class="handle">@spectrum_unlocked</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Template 5: This or That -->
+      <div class="template-card">
+        <div class="label">⚖️ This or That</div>
+        <div class="story-frame">
+          <div class="story-export story-thisorthat" id="story-thisorthat">
+            <div class="header-text">THIS OR THAT</div>
+            <div class="top-half">
+              <p class="choice-text" contenteditable="true">Morning therapy sessions</p>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="bottom-half">
+              <p class="choice-text" contenteditable="true">After school therapy sessions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Template 6: Behind the Scenes -->
+      <div class="template-card">
+        <div class="label">🎬 Behind the Scenes</div>
+        <div class="story-frame">
+          <div class="story-export story-bts" id="story-bts">
+            <div class="bts-badge">📸 REAL LIFE</div>
+            <div class="photo-placeholder">
+              <div class="icon">📷</div>
+              <p>Drop your photo here</p>
+            </div>
+            <div class="caption-area">
+              <p contenteditable="true">This is what "getting ready for therapy" actually looks like at our house... 😅</p>
+            </div>
+            <p class="handle">@spectrum_unlocked</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Template 7: Daily Reminder -->
+      <div class="template-card">
+        <div class="label">💜 Daily Reminder</div>
+        <div class="story-frame">
+          <div class="story-export story-reminder" id="story-reminder">
+            <div class="reminder-badge">DAILY REMINDER</div>
+            <div class="heart">💜</div>
+            <h2 contenteditable="true">Your child's timeline is not a competition.</h2>
+            <p class="subtext" contenteditable="true">Progress looks different for every child. Celebrate the small wins today.</p>
+            <span class="handle">@spectrum_unlocked</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Template 8: Link/Resource -->
+      <div class="template-card">
+        <div class="label">🔗 Link / Resource</div>
+        <div class="story-frame">
+          <div class="story-export story-link" id="story-link">
+            <div class="resource-icon">📋</div>
+            <h2 contenteditable="true">Free IEP Checklist</h2>
+            <p class="description" contenteditable="true">Everything you need to prepare for your next IEP meeting — questions to ask, documents to bring, and more!</p>
+            <div class="link-button">TAP FOR LINK</div>
+            <p class="tap-hint">Link in bio 👆</p>
+            <span class="handle">@spectrum_unlocked</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <button class="export-all-btn" onclick="exportAllStories()">📥 Export All Templates</button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    async function exportStory(elementId, filename) {
+      const element = document.getElementById(elementId);
+      
+      // Temporarily reset transform for export
+      const originalTransform = element.style.transform;
+      const originalMargin = element.style.marginBottom;
+      element.style.transform = 'none';
+      element.style.marginBottom = '0';
+      
+      const canvas = await html2canvas(element, {
+        width: 1080,
+        height: 1920,
+        scale: 1,
+        useCORS: true,
+        backgroundColor: null
+      });
+      
+      // Restore transform
+      element.style.transform = originalTransform;
+      element.style.marginBottom = originalMargin;
+      
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+    
+    async function exportAllStories() {
+      const templates = [
+        { id: 'story-tip', name: 'story-quick-tip.png' },
+        { id: 'story-poll', name: 'story-poll.png' },
+        { id: 'story-newpost', name: 'story-new-post.png' },
+        { id: 'story-quote', name: 'story-quote.png' },
+        { id: 'story-thisorthat', name: 'story-this-or-that.png' },
+        { id: 'story-bts', name: 'story-behind-scenes.png' },
+        { id: 'story-reminder', name: 'story-reminder.png' },
+        { id: 'story-link', name: 'story-link.png' }
+      ];
+      
+      for (const template of templates) {
+        await exportStory(template.id, template.name);
+        await new Promise(r => setTimeout(r, 500)); // delay between downloads
+      }
+      
+      alert('✅ All story templates exported!');
+    }
+    
+    // Handle URL parameters for auto-fill
+    const urlParams = new URLSearchParams(window.location.search);
+    const templateParam = urlParams.get('template');
+    const textParam = urlParams.get('text');
+    
+    if (templateParam && textParam) {
+      const templateMapping = {
+        'tip': { id: 'story-tip', selector: '.story-tip .tip-text', filename: 'story-quick-tip.png' },
+        'poll': { id: 'story-poll', selector: '.story-poll h2', filename: 'story-poll.png' },
+        'newpost': { id: 'story-newpost', selector: '.story-newpost h2', filename: 'story-new-post.png' },
+        'quote': { id: 'story-quote', selector: '.story-quote blockquote', filename: 'story-quote.png' },
+        'thisorthat': { id: 'story-thisorthat', selector: '.story-thisorthat .top-half .choice-text', filename: 'story-this-or-that.png' },
+        'bts': { id: 'story-bts', selector: '.story-bts .caption-area p', filename: 'story-behind-scenes.png' },
+        'reminder': { id: 'story-reminder', selector: '.story-reminder h2', filename: 'story-reminder.png' },
+        'link': { id: 'story-link', selector: '.story-link .description', filename: 'story-link.png' }
+      };
+      
+      const config = templateMapping[templateParam];
+      if (config) {
+        // Decode and set the text
+        const decodedText = decodeURIComponent(textParam);
+        const textElement = document.querySelector(config.selector);
+        if (textElement) {
+          textElement.textContent = decodedText;
+        }
+        
+        // Scroll to the template
+        const templateCard = document.getElementById(config.id).closest('.template-card');
+        if (templateCard) {
+          templateCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          templateCard.style.boxShadow = '0 0 30px rgba(39, 174, 96, 0.8)';
+          templateCard.style.transform = 'scale(1.02)';
+        }
+        
+        // Add export button for this specific template
+        const exportBtn = document.createElement('button');
+        exportBtn.className = 'export-all-btn';
+        exportBtn.style.background = 'linear-gradient(135deg, #9B59B6, #8E44AD)';
+        exportBtn.style.right = '200px';
+        exportBtn.innerHTML = '📥 Export This Story';
+        exportBtn.onclick = () => exportStory(config.id, config.filename);
+        document.body.appendChild(exportBtn);
+        
+        // Show toast
+        setTimeout(() => {
+          alert('✨ Template ready! Edit if needed, then click "Export This Story"');
+        }, 500);
+      }
+    }
+  </script>
+</body>
+</html>

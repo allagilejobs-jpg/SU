@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      color: #E8B86D;
+    }
+    .signs {
+      max-width: 900px;
+    }
+    .sign-item {
+      background: rgba(231, 76, 60, 0.10);
+      border-left: 5px solid #E74C3C;
+      padding: 22px 30px;
+      margin-bottom: 15px;
+      border-radius: 0 16px 16px 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .sign-item .icon { font-size: 26px; flex-shrink: 0; }
+    .sign-item .text { font-size: 22px; line-height: 1.3; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Watch For</div>
+  <div class="title">Warning Signs</div>
+  
+  <div class="signs">
+    <div class="sign-item">
+      <span class="icon">🤫</span>
+      <span class="text">Never asks for help or says "I'm fine" constantly</span>
+    </div>
+    <div class="sign-item">
+      <span class="icon">🏆</span>
+      <span class="text">Becomes the "perfect child" to avoid adding stress</span>
+    </div>
+    <div class="sign-item">
+      <span class="icon">😔</span>
+      <span class="text">Downplays their own achievements and needs</span>
+    </div>
+    <div class="sign-item">
+      <span class="icon">😤</span>
+      <span class="text">Shows resentment toward sibling (then guilt)</span>
+    </div>
+    <div class="sign-item">
+      <span class="icon">🙋</span>
+      <span class="text">Takes on a caretaking role too young</span>
+    </div>
+    <div class="sign-item">
+      <span class="icon">📉</span>
+      <span class="text">Declining grades or losing interest in activities</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

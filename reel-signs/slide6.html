@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1080px; height: 1920px; font-family: 'Poppins', sans-serif; color: white; }
+    .slide {
+      width: 1080px; height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 80px; position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.1; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E8B86D; top: -150px; left: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #4A90A4; bottom: 200px; right: -100px; }
+    .emoji { font-size: 120px; margin-bottom: 50px; }
+    .main-text {
+      font-family: 'Playfair Display', serif; font-size: 75px; font-weight: 800;
+      line-height: 1.2; margin-bottom: 40px; max-width: 900px;
+    }
+    .highlight { color: #E8B86D; }
+    .sub-text {
+      font-size: 36px; opacity: 0.8; line-height: 1.6; max-width: 800px; margin-bottom: 60px;
+    }
+    .cta {
+      background: linear-gradient(135deg, #E8B86D, #d4a35a);
+      color: #1a1a2e; padding: 25px 60px; border-radius: 50px;
+      font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px;
+    }
+    .logo { position: absolute; bottom: 60px; font-size: 28px; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="emoji">💙</div>
+    <div class="main-text">Early intervention <span class="highlight">matters.</span></div>
+    <div class="sub-text">If you notice these signs, trust your gut. Talk to your pediatrician.</div>
+    <div class="cta">Save & Share 🔖</div>
+    <span class="logo">@spectrum_unlocked</span>
+  </div>
+</body>
+</html>

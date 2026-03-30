@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Audit — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; line-height: 1.7; }
+    .header { background: linear-gradient(135deg, #27AE60, #1e8449); padding: 30px 20px; text-align: center; }
+    .header h1 { font-size: 1.8rem; margin-bottom: 5px; }
+    .header a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    h2 { color: #E8B86D; margin: 40px 0 20px 0; font-size: 1.4rem; border-bottom: 2px solid #E8B86D; padding-bottom: 10px; }
+    h2:first-of-type { margin-top: 0; }
+    h3 { color: #4A90A4; margin: 25px 0 15px 0; font-size: 1.1rem; }
+    .card { background: #16213e; border-radius: 16px; padding: 25px; margin-bottom: 20px; }
+    ul { margin-left: 20px; color: #ccc; }
+    li { margin-bottom: 10px; }
+    p { color: #ccc; margin-bottom: 15px; }
+    strong { color: #E8B86D; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
+    th { background: #0f3460; color: #E8B86D; font-size: 13px; text-transform: uppercase; }
+    td { color: #ccc; font-size: 14px; }
+    .keyword { background: #0a1628; display: inline-block; padding: 5px 15px; border-radius: 20px; margin: 5px; font-size: 13px; }
+    .keyword.high { border-left: 3px solid #E74C3C; }
+    .keyword.med { border-left: 3px solid #E8B86D; }
+    .check { color: #27AE60; }
+    .warn { color: #E8B86D; }
+    .task { background: #0a1628; padding: 15px; border-radius: 10px; margin: 10px 0; display: flex; align-items: flex-start; gap: 10px; }
+    .task input { margin-top: 5px; }
+    hr { border: none; border-top: 1px solid #333; margin: 30px 0; }
+    code { background: #0f3460; padding: 2px 8px; border-radius: 4px; font-size: 0.9em; color: #4A90A4; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔍 SEO Audit & Strategy</h1>
+    <a href="../content-hub.html">← Back to Content Hub</a>
+  </div>
+  <div class="container">
+    
+    <h2>Current Site Assessment</h2>
+    
+    <div class="card">
+      <h3 class="check">✅ Strengths</h3>
+      <ul>
+        <li>Clear, emotional messaging that resonates</li>
+        <li>Strong value proposition ("built by parents, for parents")</li>
+        <li>Lead magnet (First 48 Hours guide) — great for list building</li>
+        <li>Clean, focused homepage</li>
+        <li><strong>Robust blog</strong> — 16 posts covering key parent pain points</li>
+        <li><strong>Resource library</strong> — 8 downloadable PDFs (IEP checklist, behavior tracker, sensory worksheet, etc.)</li>
+        <li>Good content categories (Getting Started, Education, Daily Life, Sensory Care, Community, Transition)</li>
+        <li>Strong internal content linking opportunities</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3 class="warn">⚠️ Opportunities</h3>
+      <ul>
+        <li>Optimize existing blog posts for featured snippets</li>
+        <li>Add internal linking between related posts & resources</li>
+        <li>Add structured data (FAQ schema, Article schema, HowTo schema)</li>
+        <li>Build backlinks to your best-performing content</li>
+        <li>Cross-promote resources within blog posts</li>
+      </ul>
+    </div>
+    
+    <hr>
+    
+    <h2>Keyword Strategy</h2>
+    
+    <h3>High-Intent Keywords (people actively seeking help)</h3>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Keyword</th>
+          <th>Monthly Searches</th>
+          <th>Difficulty</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>autism diagnosis what to do</td>
+          <td>1,200</td>
+          <td>Medium</td>
+          <td>🔥 HIGH</td>
+        </tr>
+        <tr>
+          <td>child just diagnosed with autism</td>
+          <td>800</td>
+          <td>Low</td>
+          <td>🔥 HIGH</td>
+        </tr>
+        <tr>
+          <td>autism resources for parents</td>
+          <td>2,400</td>
+          <td>Medium</td>
+          <td>🔥 HIGH</td>
+        </tr>
+        <tr>
+          <td>autism support for families</td>
+          <td>1,000</td>
+          <td>Medium</td>
+          <td>HIGH</td>
+        </tr>
+        <tr>
+          <td>first steps after autism diagnosis</td>
+          <td>600</td>
+          <td>Low</td>
+          <td>🔥 HIGH</td>
+        </tr>
+        <tr>
+          <td>autism early intervention</td>
+          <td>1,800</td>
+          <td>High</td>
+          <td>MEDIUM</td>
+        </tr>
+        <tr>
+          <td>autism therapy options</td>
+          <td>1,500</td>
+          <td>High</td>
+          <td>MEDIUM</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>Long-Tail Keywords (easier to rank, specific intent)</h3>
+    <div class="card">
+      <span class="keyword">"what to do when your child is diagnosed with autism"</span>
+      <span class="keyword">"autism diagnosis parent guide"</span>
+      <span class="keyword">"how to help autistic child at home"</span>
+      <span class="keyword">"autism support groups for parents near me"</span>
+      <span class="keyword">"autism IEP tips for parents"</span>
+      <span class="keyword">"autism meltdown vs tantrum"</span>
+      <span class="keyword">"how to tell family about autism diagnosis"</span>
+      <span class="keyword">"autism therapy waitlist what to do"</span>
+    </div>
+    
+    <h3>Local Keywords (for Atlanta/Georgia focus)</h3>
+    <div class="card">
+      <span class="keyword">"autism resources Atlanta"</span>
+      <span class="keyword">"autism support groups Georgia"</span>
+      <span class="keyword">"autism therapists Cobb County"</span>
+      <span class="keyword">"autism services metro Atlanta"</span>
+    </div>
+    
+    <hr>
+    
+    <h2>Content Optimization</h2>
+    
+    <h3>Your Blog Posts — Already Strong 💪</h3>
+    <div class="card">
+      <ul>
+        <li><span class="check">✅</span> "My Child Was Just Diagnosed — Now What?" (targets: autism diagnosis what to do)</li>
+        <li><span class="check">✅</span> "ABA, OT, Speech, and More: Therapies Explained" (targets: autism therapy options)</li>
+        <li><span class="check">✅</span> "Meltdown vs. Tantrum" (targets: autism meltdown vs tantrum)</li>
+        <li><span class="check">✅</span> "Navigating Your First IEP Meeting" (targets: first IEP meeting)</li>
+        <li><span class="check">✅</span> "Finding Your Village" (targets: autism support groups)</li>
+        <li><span class="check">✅</span> "How to Explain Autism to Family" (targets: telling family about autism)</li>
+      </ul>
+    </div>
+    
+    <h3>Optimization Tasks for Existing Posts</h3>
+    <div class="card">
+      <ol style="margin-left:20px; color:#ccc;">
+        <li><strong>Add FAQ sections</strong> to your top posts (triggers Google FAQ rich snippets)</li>
+        <li><strong>Internal link</strong> between related content:
+          <ul>
+            <li>"Diagnosed Now What?" → link to Therapy Guide + IEP checklist</li>
+            <li>"Meltdown vs Tantrum" → link to Public Meltdowns post + Behavior Tracker PDF</li>
+            <li>Each blog post → relevant Resource Library PDF</li>
+          </ul>
+        </li>
+        <li><strong>Update meta descriptions</strong> if not already optimized</li>
+        <li><strong>Add "Last updated" dates</strong> (signals freshness to Google)</li>
+      </ol>
+    </div>
+    
+    <h3>Resource Library Cross-Promotion</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Promote In These Posts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>IEP Checklist</td>
+          <td>IEP Meeting, IEP Rights, School Communication</td>
+        </tr>
+        <tr>
+          <td>Behavior Tracker</td>
+          <td>Meltdown vs Tantrum, Public Meltdowns</td>
+        </tr>
+        <tr>
+          <td>Sensory Worksheet</td>
+          <td>Sensory Diet Guide, Sensory Activities</td>
+        </tr>
+        <tr>
+          <td>Therapy Comparison</td>
+          <td>Therapy Types Explained, Diagnosed Now What</td>
+        </tr>
+        <tr>
+          <td>AAC Basics</td>
+          <td>(consider a dedicated AAC blog post)</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>Content Gaps (Future Posts)</h3>
+    <div class="card">
+      <ol style="margin-left:20px; color:#ccc;">
+        <li>"Autism Early Intervention: What Parents Need to Know" (high search volume)</li>
+        <li>"IEP vs 504 Plan: Which Does Your Child Need?"</li>
+        <li>"Autism Therapy Waitlists: What to Do While You Wait"</li>
+        <li>"Self-Care for Autism Parents" (emotional/community content)</li>
+        <li>"AAC for Beginners" — full blog post to complement your PDF</li>
+      </ol>
+    </div>
+    
+    <hr>
+    
+    <h2>Technical SEO Checklist</h2>
+    
+    <div class="card">
+      <h3>Immediate Actions</h3>
+      <div class="task"><input type="checkbox"> Add meta descriptions to all pages (150-160 characters)</div>
+      <div class="task"><input type="checkbox"> Ensure title tags include target keywords</div>
+      <div class="task"><input type="checkbox"> Add alt text to all images</div>
+      <div class="task"><input type="checkbox"> Submit sitemap to Google Search Console</div>
+      <div class="task"><input type="checkbox"> Set up Google Analytics 4</div>
+      <div class="task"><input type="checkbox"> Verify mobile responsiveness</div>
+      <div class="task"><input type="checkbox"> Check page load speed (aim for <3 seconds)</div>
+    </div>
+    
+    <h3>Page Title Formula</h3>
+    <div class="card">
+      <code>[Primary Keyword] | Spectrum Unlocked</code>
+      <p style="margin-top:15px;">Examples:</p>
+      <ul>
+        <li>"Autism Resources for Parents | Spectrum Unlocked"</li>
+        <li>"What to Do After Autism Diagnosis | Spectrum Unlocked"</li>
+        <li>"Free Autism Parent Guide | Spectrum Unlocked"</li>
+      </ul>
+    </div>
+    
+    <h3>Meta Description Formula</h3>
+    <div class="card">
+      <code>[Benefit] + [What you offer] + [Call to action]. [Trust signal].</code>
+      <p style="margin-top:15px;">Example:</p>
+      <p style="color:#4A90A4; font-style:italic;">"Overwhelmed after your child's autism diagnosis? Get our free step-by-step guide for parents. Calm, practical advice from parents who've been there."</p>
+    </div>
+    
+    <hr>
+    
+    <h2>Backlink Opportunities</h2>
+    
+    <div class="card">
+      <h3>Guest Posting</h3>
+      <ul>
+        <li>Parenting blogs (Scary Mommy, Today's Parent)</li>
+        <li>Special needs parenting blogs</li>
+        <li>Autism-focused publications</li>
+        <li>Local Atlanta parenting sites</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3>Resource Pages</h3>
+      <ul>
+        <li>Get listed on "autism resources" pages</li>
+        <li>Pediatric practice websites</li>
+        <li>Therapy provider websites</li>
+        <li>School district resource lists</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3>Partnerships</h3>
+      <ul>
+        <li>Autism therapists (they can recommend your resources)</li>
+        <li>Pediatricians' offices</li>
+        <li>Special education advocates</li>
+        <li>Other autism parent bloggers (non-competitive)</li>
+      </ul>
+    </div>
+    
+    <hr>
+    
+    <h2>Quick Wins (Do This Week)</h2>
+    
+    <div class="card">
+      <ol style="margin-left:20px; color:#ccc;">
+        <li><strong>Set up Google Search Console</strong> (if not already)
+          <ul>
+            <li>Submit sitemap</li>
+            <li>Check for crawl errors</li>
+            <li>See which queries you're ranking for</li>
+          </ul>
+        </li>
+        <li><strong>Add internal links</strong> to your top 5 posts
+          <ul>
+            <li>Link to related posts + Resource Library PDFs</li>
+            <li>Keeps visitors on site longer, boosts SEO</li>
+          </ul>
+        </li>
+        <li><strong>Add FAQ schema</strong> to "Diagnosed Now What?" and "Meltdown vs Tantrum"
+          <ul>
+            <li>These are your most snippet-friendly posts</li>
+          </ul>
+        </li>
+        <li><strong>Promote Resource Library</strong> in blog posts
+          <ul>
+            <li>Add callout boxes: "📥 Download our free [X] worksheet"</li>
+          </ul>
+        </li>
+        <li><strong>Pitch for backlinks</strong>
+          <ul>
+            <li>Your IEP guides are link-worthy for school resource pages</li>
+            <li>Reach out to parent bloggers, therapists, pediatricians</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    
+    <hr>
+    
+    <h2>Instagram Hashtag Strategy</h2>
+    
+    <div class="card">
+      <h3>Primary Hashtags (Use Every Post)</h3>
+      <p style="color:#4A90A4;">#AutismParent #AutismMom #AutismDad #AutismSupport #AutismCommunity</p>
+    </div>
+    
+    <div class="card">
+      <h3>Secondary Hashtags (Rotate)</h3>
+      <p style="color:#4A90A4;">#AutismAwareness #AutismAcceptance #NeurodiverseFamily #SpecialNeedsParent #AutismLife #AutismJourney</p>
+    </div>
+    
+    <div class="card">
+      <h3>Niche Hashtags (Topic Specific)</h3>
+      <p style="color:#4A90A4;">#AutismDiagnosis #NewlyDiagnosed #EarlyIntervention #IEPAdvocacy #AutismTherapy</p>
+    </div>
+    
+  </div>
+</body>
+</html>

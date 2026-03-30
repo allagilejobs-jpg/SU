@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; right: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      color: #27AE60;
+    }
+    .tips {
+      max-width: 900px;
+    }
+    .tip-item {
+      background: rgba(39, 174, 96, 0.12);
+      border-left: 5px solid #27AE60;
+      padding: 22px 30px;
+      margin-bottom: 15px;
+      border-radius: 0 16px 16px 0;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .tip-item .icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+    .tip-item .text { font-size: 22px; line-height: 1.4; }
+    .tip-item .text strong { color: #27AE60; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">What You Can Do</div>
+  <div class="title">How to Help</div>
+  
+  <div class="tips">
+    <div class="tip-item">
+      <span class="icon">📅</span>
+      <span class="text"><strong>Schedule 1-on-1 time</strong> — even 15 minutes of undivided attention matters</span>
+    </div>
+    <div class="tip-item">
+      <span class="icon">👂</span>
+      <span class="text"><strong>Ask AND listen</strong> — "How are YOU doing?" and wait for the real answer</span>
+    </div>
+    <div class="tip-item">
+      <span class="icon">🎉</span>
+      <span class="text"><strong>Celebrate their wins</strong> — make a big deal of their achievements too</span>
+    </div>
+    <div class="tip-item">
+      <span class="icon">💬</span>
+      <span class="text"><strong>Validate their feelings</strong> — it's okay to feel frustrated or jealous</span>
+    </div>
+    <div class="tip-item">
+      <span class="icon">🧑‍🤝‍🧑</span>
+      <span class="text"><strong>Connect with sibling support groups</strong> — they're not alone</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

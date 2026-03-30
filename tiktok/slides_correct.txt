@@ -1,0 +1,9 @@
+file '../sensory-hacks/hack-01-headphones.png'
+duration 16
+file '../sensory-hacks/hack-03-sunglasses.png'
+duration 10
+file '../sensory-hacks/hack-04-fidgets.png'
+duration 7
+file '../sensory-hacks/hack-10-chewy.png'
+duration 19
+file '../sensory-hacks/hack-10-chewy.png'

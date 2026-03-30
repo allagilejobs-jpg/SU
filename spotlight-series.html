@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spectrum Spotlight Series — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #E8B86D 0%, #d4a35a 100%);
+      color: #1a1a2e;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    
+    .header p { opacity: 0.8; }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin: 40px 0 20px 0;
+      color: #E8B86D;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    
+    .post-card {
+      background: #16213e;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .post-card .card-header {
+      padding: 15px 20px;
+      background: #0f3460;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .post-card .week-badge {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    
+    .post-card .post-day {
+      color: #aaa;
+      font-size: 13px;
+    }
+    
+    .post-preview {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* ========== ICON POST (Autistic Celebrities) - Quote Card Style ========== */
+    .icon-post {
+      width: 280px;
+      height: 280px;
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 25px;
+    }
+    
+    .icon-post .series-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .icon-post .big-quote {
+      position: absolute;
+      top: 35px;
+      left: 18px;
+      font-size: 50px;
+      opacity: 0.25;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .icon-post .field-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
+      opacity: 0.5;
+    }
+    
+    .icon-post .quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .icon-post .person-name {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.95;
+    }
+    
+    .icon-post .person-title {
+      font-size: 9px;
+      opacity: 0.7;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .icon-post .logo {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+    
+    /* ========== PARENT POST (Celebrity Autism Parents) - Achievement Style ========== */
+    .parent-post {
+      width: 280px;
+      height: 280px;
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+    
+    .parent-post .series-badge {
+      background: rgba(255,255,255,0.2);
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    
+    .parent-post .person-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    
+    .parent-post .person-title {
+      font-size: 9px;
+      opacity: 0.8;
+      margin-bottom: 15px;
+    }
+    
+    .parent-post .achievements {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .parent-post .achievement {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 9px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    
+    .parent-post .achievement .check {
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    
+    .parent-post .logo {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+    
+    /* Caption Area */
+    .caption-area {
+      padding: 20px;
+      border-top: 1px solid #0f3460;
+    }
+    
+    .caption-area h4 {
+      color: #E8B86D;
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .caption-box {
+      background: #0a1628;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #ccc;
+      max-height: 200px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+    
+    .caption-box .hashtags {
+      color: #4A90A4;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 10px;
+      padding: 15px 20px;
+      background: #0f3460;
+    }
+    
+    .btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .btn-download {
+      background: linear-gradient(135deg, #27AE60, #1e8449);
+      color: white;
+    }
+    
+    .btn-copy {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #27AE60;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    
+    .toast.show { opacity: 1; }
+    
+    .intro-card {
+      background: linear-gradient(135deg, #16213e, #1a2a4a);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border: 1px solid #0f3460;
+    }
+    
+    .intro-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #E8B86D;
+    }
+    
+    .intro-card p {
+      color: #aaa;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    
+    .intro-card ul {
+      color: #ccc;
+      margin-left: 20px;
+      line-height: 2;
+    }
+    
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    .schedule-table th, .schedule-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #0f3460;
+    }
+    
+    .schedule-table th {
+      background: #0f3460;
+      color: #E8B86D;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .schedule-table td {
+      color: #ccc;
+      font-size: 14px;
+    }
+    
+    .schedule-table .icon-label {
+      color: #4A90A4;
+      font-weight: 600;
+    }
+    
+    .schedule-table .parent-label {
+      color: #9B59B6;
+      font-weight: 600;
+    }
+    
+    /* Export containers - full size */
+    .export-container {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+    
+    .export-post {
+      width: 1080px;
+      height: 1080px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Export Icon Post - Quote Card Style */
+    .export-post.icon-theme {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px;
+    }
+    
+    .export-post.icon-theme .series-badge {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background: rgba(255,255,255,0.2);
+      padding: 18px 35px;
+      border-radius: 40px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    .export-post.icon-theme .big-quote {
+      position: absolute;
+      top: 120px;
+      left: 60px;
+      font-size: 180px;
+      opacity: 0.2;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .export-post.icon-theme .field-icon {
+      position: absolute;
+      top: 50px;
+      right: 60px;
+      font-size: 80px;
+      opacity: 0.5;
+    }
+    
+    .export-post.icon-theme .quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .export-post.icon-theme .person-name {
+      font-size: 42px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      opacity: 0.95;
+    }
+    
+    .export-post.icon-theme .person-title {
+      font-size: 26px;
+      opacity: 0.7;
+      margin-top: 15px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    
+    .export-post.icon-theme .logo {
+      position: absolute;
+      bottom: 35px;
+      right: 50px;
+      font-size: 24px;
+      opacity: 0.6;
+    }
+    
+    /* Export Parent Post - Achievement Style */
+    .export-post.parent-theme {
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+      padding: 80px;
+    }
+    
+    .export-post.parent-theme .series-badge {
+      background: rgba(255,255,255,0.2);
+      padding: 18px 35px;
+      border-radius: 40px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+    
+    .export-post.parent-theme .person-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .export-post.parent-theme .person-title {
+      font-size: 32px;
+      opacity: 0.85;
+      margin-bottom: 60px;
+    }
+    
+    .export-post.parent-theme .achievements {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .export-post.parent-theme .achievement {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      background: rgba(255,255,255,0.15);
+      padding: 35px 45px;
+      border-radius: 25px;
+      font-size: 36px;
+      font-weight: 500;
+    }
+    
+    .export-post.parent-theme .achievement .check {
+      font-size: 45px;
+      flex-shrink: 0;
+    }
+    
+    .export-post.parent-theme .logo {
+      position: absolute;
+      bottom: 35px;
+      right: 50px;
+      font-size: 24px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="content-hub.html">📁 Content</a>
+    <a href="calendar.html">📅 Calendar</a>
+    <a href="create.html">✨ Create</a>
+    <a href="spotlight-series.html" class="active">⭐ Spotlight Series</a>
+    <a href="spotlight-templates.html">🎨 Visual Templates</a>
+    <a href="story-templates.html">📱 Stories</a>
+    <a href="guides.html">📖 Guides</a>
+  </nav>
+  
+  <header class="header">
+    <h1>⭐ Spectrum Spotlight Series</h1>
+    <p>Celebrating autistic icons and celebrity autism parents</p>
+  </header>
+  
+  <div class="container">
+    
+    <div class="intro-card">
+      <h3>📅 8-Week Series Schedule</h3>
+      <p>Post twice weekly: <strong>Tuesdays</strong> (Autistic Icons) and <strong>Saturdays</strong> (Celebrity Autism Parents)</p>
+      
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Tuesday — Icon</th>
+            <th>Saturday — Parent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Week 1</td><td class="icon-label">🌟 Temple Grandin</td><td class="parent-label">💜 Holly Robinson Peete</td></tr>
+          <tr><td>Week 2</td><td class="icon-label">🌟 Anthony Hopkins</td><td class="parent-label">💜 Toni Braxton</td></tr>
+          <tr><td>Week 3</td><td class="icon-label">🌟 Greta Thunberg</td><td class="parent-label">💜 Tisha Campbell</td></tr>
+          <tr><td>Week 4</td><td class="icon-label">🌟 Bella Ramsey</td><td class="parent-label">💜 Shawn Stockman</td></tr>
+          <tr><td>Week 5</td><td class="icon-label">🌟 Dan Aykroyd</td><td class="parent-label">💜 JWoww (Jenni Farley)</td></tr>
+          <tr><td>Week 6</td><td class="icon-label">🌟 Sia</td><td class="parent-label">💜 Sylvester Stallone</td></tr>
+          <tr><td>Week 7</td><td class="icon-label">🌟 Elon Musk</td><td class="parent-label">💜 Tommy Hilfiger</td></tr>
+          <tr><td>Week 8</td><td colspan="2" style="text-align:center; color:#E8B86D;">🎉 Series Finale Carousel — Recap + "Who should we feature next?"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- ========== ICONS ON THE SPECTRUM ========== -->
+    <h2 class="section-title">🌟 Icons on the Spectrum</h2>
+    
+    <div class="posts-grid" id="icons-grid">
+      <!-- Posts will be generated by JavaScript -->
+    </div>
+    
+    <!-- ========== AUTISM PARENTS ========== -->
+    <h2 class="section-title">💜 Autism Parents in the Spotlight</h2>
+    
+    <div class="posts-grid" id="parents-grid">
+      <!-- Posts will be generated by JavaScript -->
+    </div>
+    
+  </div>
+  
+  <!-- Export containers (hidden) -->
+  <div class="export-container" id="export-container"></div>
+  
+  <div class="toast" id="toast">✓ Copied!</div>
+  
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script>
+    // ========== ICONS DATA ==========
+    const icons = [
+      {
+        id: 'temple-grandin',
+        week: 1,
+        day: 'Tuesday',
+        name: 'Temple Grandin',
+        title: 'Scientist, Author & Autism Advocate',
+        emoji: '🧬',
+        quote: '"Different, not less."',
+        caption: `🌟 SPECTRUM SPOTLIGHT: Temple Grandin
+
+She was diagnosed with autism in 1950 — when doctors told her mother to institutionalize her.
+
+Instead, her mother fought for her education.
+
+Today, Dr. Temple Grandin is:
+✓ A world-renowned animal scientist
+✓ A professor at Colorado State University
+✓ The subject of an Emmy-winning HBO film
+✓ One of TIME's 100 most influential people
+
+Her famous words: "Different, not less."
+
+She didn't succeed DESPITE her autism. She succeeded BECAUSE of how her autistic mind works — her visual thinking revolutionized the livestock industry.
+
+To every parent wondering what's possible for your child: Look at Temple.
+
+The diagnosis is not the ceiling. It's just the beginning. 💙
+
+#SpectrumSpotlight #TempleGrandin #AutismAdvocate #DifferentNotLess #AutismAwareness #AutismAcceptance #ActuallyAutistic #AutismCommunity #AutismParent`
+      },
+      {
+        id: 'anthony-hopkins',
+        week: 2,
+        day: 'Tuesday',
+        name: 'Anthony Hopkins',
+        title: 'Academy Award-Winning Actor',
+        emoji: '🎭',
+        quote: '"I definitely look at people differently."',
+        caption: `🌟 SPECTRUM SPOTLIGHT: Anthony Hopkins
+
+Two-time Oscar winner. Legendary actor. Autistic.
+
+Sir Anthony Hopkins was diagnosed with Asperger's in his late 70s — and suddenly, his whole life made sense.
+
+"I was a loner," he said. "I didn't understand other kids."
+
+But that same brain that made socializing hard? It gave him:
+✓ Obsessive focus on his craft
+✓ An extraordinary memory for scripts
+✓ The intensity that made Hannibal Lecter unforgettable
+
+At 83, he became the oldest Best Actor winner in Oscar history.
+
+His advice: "Don't listen to people who say you can't."
+
+Proof that an autism diagnosis at ANY age can bring clarity — and that success has no expiration date. 💙
+
+#SpectrumSpotlight #AnthonyHopkins #AutismDiagnosis #Neurodivergent #AutismAcceptance #ActuallyAutistic #LateAutismDiagnosis #AutismAwareness`
+      },
+      {
+        id: 'greta-thunberg',
+        week: 3,
+        day: 'Tuesday',
+        name: 'Greta Thunberg',
+        title: 'Climate Activist',
+        emoji: '🌍',
+        quote: '"Being different is a superpower."',
+        caption: `🌟 SPECTRUM SPOTLIGHT: Greta Thunberg
+
+At 15, she sat alone outside Swedish Parliament with a sign.
+
+By 16, she'd sparked a global movement of millions.
+
+Greta Thunberg calls her autism her "superpower."
+
+"I see the world a bit different, from another perspective," she explains. "I don't fall for the same lies. I can see through things."
+
+Her autism gives her:
+✓ Intense focus on climate science
+✓ The courage to speak bluntly to world leaders
+✓ An inability to accept comfortable half-truths
+
+When critics mock her autism, she responds: "I see it as a gift."
+
+She proves that seeing the world differently isn't a weakness — it might be exactly what the world needs. 🌍💙
+
+#SpectrumSpotlight #GretaThunberg #AutismSuperpower #Neurodivergent #AutismAcceptance #ActuallyAutistic #AutismPride`
+      },
+      {
+        id: 'bella-ramsey',
+        week: 4,
+        day: 'Tuesday',
+        name: 'Bella Ramsey',
+        title: 'Actor — The Last of Us',
+        emoji: '🎬',
+        quote: '"The diagnosis was liberating."',
+        caption: `🌟 SPECTRUM SPOTLIGHT: Bella Ramsey
+
+You know them as Ellie in HBO's The Last of Us.
+
+What you might not know: Bella was diagnosed with autism while filming the show.
+
+A crew member with an autistic daughter noticed the signs — and changed Bella's life.
+
+"The diagnosis was liberating," Bella told British Vogue. "It explained so many things."
+
+At just 21, they've:
+✓ Starred in Game of Thrones and The Last of Us
+✓ Become a powerful voice for autism acceptance
+✓ Shown young autistic people that their dreams are valid
+
+Bella's message: "Knowing yourself is powerful."
+
+Representation matters. Seeing autistic actors thrive on screen tells every autistic kid: You belong here too. 💙
+
+#SpectrumSpotlight #BellaRamsey #TheLastOfUs #AutismDiagnosis #Neurodivergent #AutismAcceptance #ActuallyAutistic #AutismRepresentation`
+      },
+      {
+        id: 'dan-aykroyd',
+        week: 5,
+        day: 'Tuesday',
+        name: 'Dan Aykroyd',
+        title: 'Actor, Comedian & Writer',
+        emoji: '👻',
+        quote: '"My obsession with ghosts gave us Ghostbusters."',
+        caption: `🌟 SPECTRUM SPOTLIGHT: Dan Aykroyd
+
+Without autism, there would be no Ghostbusters. Seriously.
+
+Dan Aykroyd was diagnosed with Asperger's as a child. His "obsessions"? Ghosts and law enforcement.
+
+Those special interests became his career:
+✓ Ghostbusters (his ghost obsession → $300M film franchise)
+✓ The Blues Brothers (his music obsession → iconic film)
+✓ SNL legend (original cast member)
+
+"I had therapy, but my parents never tried to change me," he says.
+
+His advice to parents: "Don't stifle their interests. Those obsessions might become their greatest gifts."
+
+What's your child obsessed with? It might just change the world. 👻💙
+
+#SpectrumSpotlight #DanAykroyd #Ghostbusters #AutismGifts #SpecialInterests #Neurodivergent #AutismAcceptance #AutismStrengths`
+      },
+      {
+        id: 'sia',
+        week: 6,
+        day: 'Tuesday',
+        name: 'Sia',
+        title: 'Singer & Songwriter',
+        emoji: '🎵',
+        quote: '"I\'m on the spectrum and I\'m okay."',
+        caption: `🌟 SPECTRUM SPOTLIGHT: Sia
+
+"Chandelier." "Titanium." "Cheap Thrills." You know the songs.
+
+But you might not know: Sia was diagnosed with autism in 2021, at age 45.
+
+The diagnosis brought relief: "I realized I wasn't broken — I was just wired differently."
+
+Sia's journey:
+✓ Struggled with fame and public life
+✓ Created her iconic wig to manage sensory overload
+✓ Found strategies that let her thrive on her own terms
+
+Her autism explains:
+• Why she hides her face (sensory/social overwhelm)
+• Her incredible focus on songwriting
+• Her unique artistic vision
+
+Late diagnosis didn't change who she is — it helped her understand herself better. 💙
+
+#SpectrumSpotlight #Sia #LateAutismDiagnosis #Neurodivergent #AutismAcceptance #ActuallyAutistic #AutismAwareness #AdultAutismDiagnosis`
+      },
+      {
+        id: 'elon-musk',
+        week: 7,
+        day: 'Tuesday',
+        name: 'Elon Musk',
+        title: 'Entrepreneur & Engineer',
+        emoji: '🚀',
+        quote: '"Did you think I was also going to be a chill, normal dude?"',
+        caption: `🌟 SPECTRUM SPOTLIGHT: Elon Musk
+
+"I'm actually making history tonight as the first person with Asperger's to host SNL."
+
+In 2021, Elon Musk revealed his autism diagnosis on live TV — and made millions feel less alone.
+
+"I know I sometimes say or post strange things," he joked. "But that's just how my brain works."
+
+Love him or not, his point landed:
+
+"Did you think I was also going to be a chill, normal dude?"
+
+Autism doesn't mean can't succeed. 
+It means succeeding differently.
+
+His brain built:
+✓ PayPal
+✓ Tesla
+✓ SpaceX
+✓ A $200B+ net worth
+
+The "weird kid" can grow up to change the world. Never forget that. 🚀💙
+
+#SpectrumSpotlight #ElonMusk #Aspergers #AutismAwareness #Neurodivergent #AutismAcceptance #AutismStrengths #AutismSuccess`
+      }
+    ];
+    
+    // ========== PARENTS DATA ==========
+    const parents = [
+      {
+        id: 'holly-robinson-peete',
+        week: 1,
+        day: 'Saturday',
+        name: 'Holly Robinson Peete',
+        title: 'Actress & Autism Advocate',
+        child: 'Son RJ',
+        emoji: '💜',
+        quote: '"RJ is my greatest teacher."',
+        achievements: ['Founded HollyRod Foundation', 'Raised $10M+ for autism families', 'Multiple books on autism parenting'],
+        caption: `💜 AUTISM PARENT SPOTLIGHT: Holly Robinson Peete
+
+When her son RJ was diagnosed with autism at age 3, Holly Robinson Peete did what many of us do: She grieved. Then she fought.
+
+23 years later, she's one of the most powerful autism advocates in the world.
+
+Her journey:
+✓ Founded HollyRod Foundation (raised $10M+ for autism families)
+✓ Wrote multiple books on autism parenting
+✓ Got autism education into LA schools
+✓ Watched RJ graduate high school and thrive
+
+"I never wanted RJ to be 'normal,'" she says. "I wanted him to be the best version of himself."
+
+RJ is now a young adult, working, living his life, and inspiring millions.
+
+To every parent early in this journey: You are not alone. 💙
+
+#AutismParent #HollyRobinsonPeete #AutismMom #AutismAdvocacy #HollyRodFoundation #AutismJourney #AutismFamily #AutismCommunity`
+      },
+      {
+        id: 'toni-braxton',
+        week: 2,
+        day: 'Saturday',
+        name: 'Toni Braxton',
+        title: 'Grammy-Winning Singer',
+        child: 'Son Diezel',
+        emoji: '🎤',
+        quote: '"Early intervention changed everything."',
+        achievements: ['Champion of early intervention', 'Broke stigma publicly', 'Shared therapy journey openly'],
+        caption: `💜 AUTISM PARENT SPOTLIGHT: Toni Braxton
+
+When Toni Braxton's son Diezel was diagnosed with autism at age 3, she made a decision: She would do EVERYTHING.
+
+Early intervention. Therapy. Advocacy. And she talked about it publicly — helping break the stigma.
+
+Years later, Diezel's progress has been remarkable. Toni has called him "off the spectrum" (though this term is debated, his growth is undeniable).
+
+What she wants parents to know:
+✓ Early intervention matters enormously
+✓ Don't be afraid to try different therapies
+✓ Every child's journey is different
+✓ Progress is possible — always
+
+"I'm not just his mom, I'm his advocate," she says.
+
+Toni didn't hide her journey. She shared it — and helped millions of families feel less alone. 💙
+
+#AutismParent #ToniBraxton #AutismMom #EarlyIntervention #AutismAdvocacy #AutismAwareness #AutismJourney #AutismProgress`
+      },
+      {
+        id: 'tisha-campbell',
+        week: 3,
+        day: 'Saturday',
+        name: 'Tisha Campbell',
+        title: 'Actress & Advocate',
+        child: 'Son Xen',
+        emoji: '✊',
+        quote: '"In our community, we don\'t talk about it. I\'m changing that."',
+        achievements: ['Breaking stigma in Black community', 'Pushing for earlier diagnosis', 'Building support networks'],
+        caption: `💜 AUTISM PARENT SPOTLIGHT: Tisha Campbell
+
+Tisha Campbell (Martin, My Wife and Kids) isn't just raising an autistic son — she's fighting to change how the Black community sees autism.
+
+Her son Xen was diagnosed at 18 months. In a community where autism is often stigmatized or dismissed, Tisha chose to speak up.
+
+"There's a stigma in the Black community," she says. "People don't want to talk about it. I'm changing that."
+
+Her mission:
+✓ Normalize autism conversations in communities of color
+✓ Push for earlier diagnosis in Black children
+✓ End the shame and silence
+✓ Show that advocacy is love
+
+She's connected with Holly Robinson Peete, Jenny McCarthy, and other celeb autism moms — building a support network.
+
+Representation matters. Black autism families need to see themselves too. 💙✊
+
+#AutismParent #TishaCampbell #AutismMom #BlackAutismFamily #AutismAdvocacy #AutismAwareness #RepresentationMatters`
+      },
+      {
+        id: 'shawn-stockman',
+        week: 4,
+        day: 'Saturday',
+        name: 'Shawn Stockman',
+        title: 'Boyz II Men Singer',
+        child: 'Daughter Micah',
+        emoji: '🎶',
+        quote: '"Micah made me a better man."',
+        achievements: ['Speaks at autism events', 'Advocates for autism dads', 'Uses platform for awareness'],
+        caption: `💜 AUTISM PARENT SPOTLIGHT: Shawn Stockman
+
+You know his voice from "End of the Road" and "I'll Make Love to You."
+
+What you might not know: Boyz II Men's Shawn Stockman is a dedicated autism dad.
+
+When his daughter Micah was diagnosed, Shawn became a fierce advocate. He's spoken at autism events, raised awareness through his platform, and shared his family's journey openly.
+
+"Micah taught me patience, unconditional love, and acceptance," he says.
+
+His message to dads:
+✓ Don't retreat — lean in
+✓ Your child needs you present
+✓ It's okay to struggle and still show up
+✓ Autism parenting makes you stronger
+
+We don't see enough autism DADS in the spotlight. Shawn is changing that. 💙
+
+#AutismParent #ShawnStockman #BoyzIIMen #AutismDad #AutismAdvocacy #AutismAwareness #AutismFamily #AutismFather`
+      },
+      {
+        id: 'jwoww',
+        week: 5,
+        day: 'Saturday',
+        name: 'JWoww (Jenni Farley)',
+        title: 'TV Personality & Entrepreneur',
+        child: 'Son Greyson',
+        emoji: '💪',
+        quote: '"I share everything — the wins AND the hard days."',
+        achievements: ['Documents therapy journey', 'Shares wins AND struggles', 'Millions reached via social'],
+        caption: `💜 AUTISM PARENT SPOTLIGHT: JWoww (Jenni Farley)
+
+She's known for Jersey Shore. But to autism parents, JWoww is known for something bigger: radical honesty.
+
+When her son Greyson was diagnosed with autism, Jenni didn't hide it. She documented EVERYTHING — the therapy sessions, the meltdowns, the breakthroughs.
+
+"I share the wins AND the hard days," she says. "Because other moms need to see it's not perfect."
+
+What she's shared:
+✓ Speech therapy progress videos
+✓ Sensory meltdown moments
+✓ Developmental milestone celebrations
+✓ The reality of autism parenting
+
+Her transparency has helped thousands of families feel seen.
+
+You don't have to be perfect. You just have to show up. 💙
+
+#AutismParent #JWoww #JenniFarley #AutismMom #AutismAdvocacy #RealTalk #AutismJourney #AutismAwareness`
+      },
+      {
+        id: 'sylvester-stallone',
+        week: 6,
+        day: 'Saturday',
+        name: 'Sylvester Stallone',
+        title: 'Actor & Filmmaker',
+        child: 'Son Seargeoh',
+        emoji: '🥊',
+        quote: '"You can\'t force a child to be what they\'re not."',
+        achievements: ['Spoke openly in the 1980s', 'Supported autism research', 'Early celebrity advocate'],
+        caption: `💜 AUTISM PARENT SPOTLIGHT: Sylvester Stallone
+
+Rocky. Rambo. And... one of the first celebrities to openly discuss his child's autism.
+
+Sylvester Stallone's son Seargeoh was diagnosed with autism in the early 1980s — when almost NO ONE talked about it publicly.
+
+Stallone could have hidden it. Instead, he spoke up.
+
+"You can't force a child to be what they're not," he said. "You have to meet them where they are."
+
+At a time when autism was deeply stigmatized, Stallone helped normalize the conversation.
+
+His example:
+✓ Spoke openly in interviews decades ago
+✓ Supported autism research
+✓ Showed that "tough guys" can be vulnerable dads
+
+Sometimes the first voice matters most. 💙
+
+#AutismParent #SylvesterStallone #AutismDad #AutismAdvocacy #AutismHistory #AutismAwareness #AutismPioneer`
+      },
+      {
+        id: 'tommy-hilfiger',
+        week: 7,
+        day: 'Saturday',
+        name: 'Tommy Hilfiger',
+        title: 'Fashion Designer',
+        child: 'Daughter',
+        emoji: '👔',
+        quote: '"Adaptive clothing means everyone belongs."',
+        achievements: ['Launched Tommy Adaptive', 'Sensory-friendly fabrics', 'Fashion for ALL abilities'],
+        caption: `💜 AUTISM PARENT SPOTLIGHT: Tommy Hilfiger
+
+Tommy Hilfiger isn't just a fashion icon — he's a father who turned his daughter's challenges into industry change.
+
+His daughter's autism inspired him to think differently about fashion: Why should getting dressed be a struggle?
+
+In 2016, he launched Tommy Adaptive — clothing designed for people with disabilities:
+✓ Magnetic buttons instead of fiddly ones
+✓ Seated-fit pants
+✓ Sensory-friendly fabrics
+✓ Easy-on, easy-off designs
+
+"Fashion should be for EVERYONE," he said.
+
+He didn't just raise awareness. He created solutions.
+
+That's what autism parenting does: It makes us see problems others don't — and sometimes, we fix them. 💙
+
+#AutismParent #TommyHilfiger #TommyAdaptive #AutismDad #AdaptiveClothing #AutismAdvocacy #InclusiveFashion #AutismAwareness`
+      }
+    ];
+    
+    // ========== RENDER FUNCTIONS ==========
+    function renderIconCard(data) {
+      return `
+        <div class="post-card" data-id="${data.id}">
+          <div class="card-header">
+            <span class="week-badge">Week ${data.week}</span>
+            <span class="post-day">${data.day}</span>
+          </div>
+          <div class="post-preview">
+            <div class="icon-post" id="preview-${data.id}">
+              <span class="series-badge">🌟 Spectrum Spotlight</span>
+              <span class="big-quote">"</span>
+              <span class="field-icon">${data.emoji}</span>
+              <div class="quote" contenteditable="true">${data.quote}</div>
+              <div class="person-name" contenteditable="true">${data.name}</div>
+              <div class="person-title">${data.title}</div>
+              <span class="logo">@spectrum_unlocked</span>
+            </div>
+          </div>
+          <div class="caption-area">
+            <h4>📝 Caption</h4>
+            <div class="caption-box" id="caption-${data.id}">${data.caption.replace(/(#\w+)/g, '<span class="hashtags">$1</span>')}</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn-download" onclick="downloadPost('${data.id}', 'icon')">📥 Download</button>
+            <button class="btn btn-copy" onclick="copyCaption('${data.id}')">📋 Copy Caption</button>
+          </div>
+        </div>
+      `;
+    }
+    
+    function renderParentCard(data) {
+      const achievementsHtml = data.achievements ? data.achievements.map(a => 
+        `<div class="achievement"><span class="check">✓</span> ${a}</div>`
+      ).join('') : '';
+      
+      return `
+        <div class="post-card" data-id="${data.id}">
+          <div class="card-header">
+            <span class="week-badge">Week ${data.week}</span>
+            <span class="post-day">${data.day}</span>
+          </div>
+          <div class="post-preview">
+            <div class="parent-post" id="preview-${data.id}">
+              <span class="series-badge">💜 Autism Parent Spotlight</span>
+              <div class="person-name" contenteditable="true">${data.name}</div>
+              <div class="person-title">${data.title} • ${data.child}</div>
+              <div class="achievements">
+                ${achievementsHtml}
+              </div>
+              <span class="logo">@spectrum_unlocked</span>
+            </div>
+          </div>
+          <div class="caption-area">
+            <h4>📝 Caption</h4>
+            <div class="caption-box" id="caption-${data.id}">${data.caption.replace(/(#\w+)/g, '<span class="hashtags">$1</span>')}</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn-download" onclick="downloadPost('${data.id}', 'parent')">📥 Download</button>
+            <button class="btn btn-copy" onclick="copyCaption('${data.id}')">📋 Copy Caption</button>
+          </div>
+        </div>
+      `;
+    }
+    
+    // ========== INIT ==========
+    function init() {
+      const iconsGrid = document.getElementById('icons-grid');
+      const parentsGrid = document.getElementById('parents-grid');
+      
+      iconsGrid.innerHTML = icons.map(renderIconCard).join('');
+      parentsGrid.innerHTML = parents.map(renderParentCard).join('');
+    }
+    
+    // ========== ACTIONS ==========
+    async function downloadPost(id, type) {
+      const preview = document.getElementById('preview-' + id);
+      const data = type === 'icon' ? icons.find(i => i.id === id) : parents.find(p => p.id === id);
+      
+      const exportContainer = document.getElementById('export-container');
+      const themeClass = type === 'icon' ? 'icon-theme' : 'parent-theme';
+      const badge = type === 'icon' ? '🌟 Spectrum Spotlight' : '💜 Autism Parent Spotlight';
+      
+      let exportHtml = '';
+      
+      if (type === 'icon') {
+        // Quote Card style for Icons
+        exportHtml = `
+          <div class="export-post ${themeClass}" id="export-temp">
+            <span class="series-badge">${badge}</span>
+            <span class="big-quote">"</span>
+            <span class="field-icon">${data.emoji}</span>
+            <div class="quote">${preview.querySelector('.quote').textContent}</div>
+            <div class="person-name">${preview.querySelector('.person-name').textContent}</div>
+            <div class="person-title">${data.title}</div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        `;
+      } else {
+        // Achievement style for Parents
+        const achievementsHtml = data.achievements ? data.achievements.map(a => 
+          `<div class="achievement"><span class="check">✓</span> ${a}</div>`
+        ).join('') : '';
+        
+        exportHtml = `
+          <div class="export-post ${themeClass}" id="export-temp">
+            <span class="series-badge">${badge}</span>
+            <div class="person-name">${preview.querySelector('.person-name').textContent}</div>
+            <div class="person-title">${data.title} • ${data.child}</div>
+            <div class="achievements">${achievementsHtml}</div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        `;
+      }
+      
+      exportContainer.innerHTML = exportHtml;
+      
+      const exportEl = document.getElementById('export-temp');
+      exportEl.style.position = 'absolute';
+      exportEl.style.left = '0';
+      exportEl.style.top = '0';
+      
+      const canvas = await html2canvas(exportEl, {
+        width: 1080,
+        height: 1080,
+        scale: 1,
+        useCORS: true,
+        backgroundColor: null
+      });
+      
+      const link = document.createElement('a');
+      link.download = `spectrum-spotlight-${id}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      
+      exportContainer.innerHTML = '';
+      showToast('✓ Downloaded!');
+    }
+    
+    function copyCaption(id) {
+      const data = icons.find(i => i.id === id) || parents.find(p => p.id === id);
+      if (!data) return;
+      
+      navigator.clipboard.writeText(data.caption).then(() => {
+        showToast('✓ Caption copied!');
+      });
+    }
+    
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+    
+    init();
+  </script>
+</body>
+</html>

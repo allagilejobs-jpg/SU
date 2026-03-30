@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapy Carousel — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
+    .main-nav { background: #0f0f1a; padding: 15px 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .main-nav a { color: #aaa; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+    .main-nav a:hover, .main-nav a.active { background: #4A90A4; color: white; }
+    .header { background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); padding: 30px 20px; text-align: center; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px; }
+    .header p { opacity: 0.9; }
+    .header .badge { background: #FFF; color: #D35400; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 14px; display: inline-block; margin-bottom: 10px; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
+    .slides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+    .slide-card { background: #16213e; border-radius: 12px; overflow: hidden; text-align: center; }
+    .slide-card img { width: 100%; height: auto; display: block; }
+    .slide-card .slide-label { padding: 12px; font-size: 14px; color: #aaa; }
+    .slide-card .slide-label strong { color: #E67E22; }
+    .caption-section { background: #16213e; border-radius: 16px; padding: 25px; margin-bottom: 25px; }
+    .caption-section h2 { color: #E67E22; font-size: 16px; margin-bottom: 15px; }
+    .caption-box { background: #0a1628; border: 1px solid #0f3460; border-radius: 12px; padding: 20px; font-size: 14px; line-height: 1.8; color: #ddd; white-space: pre-wrap; }
+    .caption-box .hashtags { color: #E67E22; }
+    .actions { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
+    .btn { flex: 1; min-width: 200px; padding: 18px 30px; border: none; border-radius: 12px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.2s; text-align: center; text-decoration: none; display: inline-block; }
+    .btn-download { background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); color: white; }
+    .btn-download:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(230, 126, 34, 0.4); }
+    .btn-copy { background: #4A90A4; color: white; }
+    .btn-copy:hover { transform: translateY(-3px); }
+    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #27AE60; color: white; padding: 18px 35px; border-radius: 12px; font-weight: 600; font-size: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); opacity: 0; transition: opacity 0.3s; z-index: 1000; }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+<nav class="main-nav">
+  <a href="index.html">🏠 Dashboard</a>
+  <a href="calendar.html">📅 30-Day Calendar</a>
+  <a href="editor.html">✏️ Template Editor</a>
+</nav>
+<div class="header">
+  <div class="badge">Day 25 — Carousel Post</div>
+  <h1>🧡 Autism Therapies Explained</h1>
+  <p>A plain-English guide to therapy options</p>
+</div>
+<div class="container">
+  <div class="slides-grid">
+    <div class="slide-card"><img src="graphics/therapy-carousel-01.png" alt="Slide 1"><div class="slide-label"><strong>Slide 1:</strong> Cover</div></div>
+    <div class="slide-card"><img src="graphics/therapy-carousel-02.png" alt="Slide 2"><div class="slide-label"><strong>Slide 2:</strong> ABA</div></div>
+    <div class="slide-card"><img src="graphics/therapy-carousel-03.png" alt="Slide 3"><div class="slide-label"><strong>Slide 3:</strong> Speech Therapy</div></div>
+    <div class="slide-card"><img src="graphics/therapy-carousel-04.png" alt="Slide 4"><div class="slide-label"><strong>Slide 4:</strong> Occupational Therapy</div></div>
+    <div class="slide-card"><img src="graphics/therapy-carousel-05.png" alt="Slide 5"><div class="slide-label"><strong>Slide 5:</strong> Floortime/DIR</div></div>
+    <div class="slide-card"><img src="graphics/therapy-carousel-06.png" alt="Slide 6"><div class="slide-label"><strong>Slide 6:</strong> Social Skills Groups</div></div>
+    <div class="slide-card"><img src="graphics/therapy-carousel-07.png" alt="Slide 7"><div class="slide-label"><strong>Slide 7:</strong> CTA</div></div>
+  </div>
+  <div class="actions">
+    <a href="graphics/therapy-carousel-all.zip" class="btn btn-download" download>📥 Download All 7 Slides (ZIP)</a>
+    <button class="btn btn-copy" onclick="copyCaption()">📋 Copy Caption</button>
+  </div>
+  <div class="caption-section">
+    <h2>📝 Caption (Ready to Copy)</h2>
+    <div class="caption-box" id="caption">Confused by all the therapy options? Here's your cheat sheet 🧡
+
+Swipe through for a plain-English breakdown:
+
+1️⃣ ABA — Behavior & skills through reinforcement
+2️⃣ Speech — Communication & language
+3️⃣ OT — Sensory, motor skills & daily tasks
+4️⃣ Floortime — Play-based emotional development
+5️⃣ Social Skills Groups — Peer practice
+
+Every child is different. There's no one "right" answer.
+
+Save this for when you're researching options. Share with a newly diagnosed family.
+
+Full comparison guide at spectrumunlocked.com/resources 📋
+
+<span class="hashtags">#AutismTherapy #ABA #SpeechTherapy #OccupationalTherapy #AutismParent #AutismSupport</span></div>
+  </div>
+  <div style="text-align: center;"><a href="calendar.html" class="btn" style="background: #2a2a4a; color: #aaa;">← Back to Calendar</a></div>
+</div>
+<div class="toast" id="toast">✓ Copied!</div>
+<script>
+const captionText = `Confused by all the therapy options? Here's your cheat sheet 🧡
+
+Swipe through for a plain-English breakdown:
+
+1️⃣ ABA — Behavior & skills through reinforcement
+2️⃣ Speech — Communication & language
+3️⃣ OT — Sensory, motor skills & daily tasks
+4️⃣ Floortime — Play-based emotional development
+5️⃣ Social Skills Groups — Peer practice
+
+Every child is different. There's no one "right" answer.
+
+Save this for when you're researching options. Share with a newly diagnosed family.
+
+Full comparison guide at spectrumunlocked.com/resources 📋
+
+#AutismTherapy #ABA #SpeechTherapy #OccupationalTherapy #AutismParent #AutismSupport`;
+
+function copyCaption() {
+  navigator.clipboard.writeText(captionText).then(() => {
+    document.getElementById('toast').classList.add('show');
+    setTimeout(() => document.getElementById('toast').classList.remove('show'), 2000);
+  });
+}
+</script>
+</body>
+</html>

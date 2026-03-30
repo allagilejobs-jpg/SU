@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; top: -100px; left: -100px; }
+    .myth-badge { 
+      background: #E74C3C; 
+      padding: 15px 40px; 
+      border-radius: 35px; 
+      font-size: 20px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      margin-bottom: 40px;
+    }
+    .myth-icon { font-size: 80px; margin-bottom: 30px; }
+    .myth-text { 
+      font-family: 'Playfair Display', serif;
+      font-size: 42px; 
+      font-weight: 700; 
+      line-height: 1.3; 
+      margin-bottom: 50px;
+      max-width: 850px;
+      padding: 30px 40px;
+      background: rgba(231, 76, 60, 0.15);
+      border-radius: 20px;
+      border-left: 6px solid #E74C3C;
+    }
+    .truth-badge { 
+      background: #27AE60; 
+      padding: 15px 40px; 
+      border-radius: 35px; 
+      font-size: 20px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      margin-bottom: 30px;
+    }
+    .truth-text { 
+      font-size: 28px; 
+      line-height: 1.5; 
+      opacity: 0.95;
+      max-width: 850px;
+      padding: 25px 35px;
+      background: rgba(39, 174, 96, 0.12);
+      border-radius: 16px;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="myth-badge">❌ Myth #1</div>
+  
+  <div class="myth-icon">🤖</div>
+  
+  <div class="myth-text">
+    "If you relate to these signs, you're definitely autistic"
+  </div>
+  
+  <div class="truth-badge">✅ The Truth</div>
+  
+  <div class="truth-text">
+    Many autism "signs" on TikTok are common human experiences. Self-diagnosis is valid for exploration, but getting evaluated by a professional is the only way to know for sure. Don't diagnose yourself from a 30-second video.
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 3</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

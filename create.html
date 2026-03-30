@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Graphic — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      padding: 30px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    
+    .header .day-badge {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    .create-card {
+      background: #16213e;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    }
+    
+    .card-body {
+      display: flex;
+      gap: 30px;
+      padding: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .preview-section {
+      flex: 0 0 auto;
+    }
+    
+    .caption-section {
+      flex: 1;
+      min-width: 280px;
+    }
+    
+    .section-label {
+      color: #E8B86D;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .caption-box {
+      background: #0a1628;
+      border: 1px solid #0f3460;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #ddd;
+      white-space: pre-wrap;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    
+    .caption-box .hashtags {
+      color: #4A90A4;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 15px;
+      padding: 25px 30px;
+      background: #0f3460;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      flex: 1;
+      min-width: 150px;
+      padding: 18px 30px;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    
+    .btn-download {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      color: white;
+    }
+    
+    .btn-download:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(74, 144, 164, 0.4);
+    }
+    
+    .btn-copy {
+      background: #27AE60;
+      color: white;
+    }
+    
+    .btn-copy:hover {
+      background: #2ecc71;
+      transform: translateY(-3px);
+    }
+    
+    .btn-both {
+      background: linear-gradient(135deg, #9B59B6, #8E44AD);
+      color: white;
+      flex: 2;
+    }
+    
+    .btn-both:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(155, 89, 182, 0.4);
+    }
+    
+    .btn-back {
+      background: #2a2a4a;
+      color: #aaa;
+    }
+    
+    .btn-back:hover {
+      background: #3a3a5a;
+      color: white;
+    }
+    
+    .instructions {
+      background: #0f3460;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+    }
+    
+    .instructions h3 {
+      color: #E8B86D;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .instructions ol {
+      margin-left: 20px;
+      line-height: 2;
+      color: #aaa;
+    }
+    
+    .instructions li {
+      margin-bottom: 5px;
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #27AE60;
+      color: white;
+      padding: 18px 35px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    
+    .toast.show { opacity: 1; }
+    
+    /* ========== TEMPLATE STYLES ========== */
+    .post {
+      width: 270px;
+      height: 270px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .story {
+      width: 180px;
+      height: 320px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    /* Quote Post */
+    .quote-post {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 25px; text-align: center;
+    }
+    .quote-post .quote-mark { font-size: 40px; color: rgba(255,255,255,0.3); font-family: Georgia, serif; line-height: 1; margin-bottom: -10px; }
+    .quote-post .quote-text { font-family: 'Playfair Display', serif; font-size: 14px; color: white; line-height: 1.4; margin-bottom: 15px; }
+    .quote-post .quote-author { font-size: 7px; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 2px; }
+    .quote-post .logo { position: absolute; bottom: 12px; font-size: 7px; color: rgba(255,255,255,0.6); }
+    
+    /* Tip Post */
+    .tip-post {
+      background: #FDF6E9;
+      display: flex; flex-direction: column;
+      padding: 22px;
+    }
+    .tip-post .tip-header { background: #4A90A4; color: white; padding: 6px 12px; border-radius: 12px; font-weight: 600; font-size: 7px; text-transform: uppercase; letter-spacing: 1px; align-self: flex-start; margin-bottom: 12px; }
+    .tip-post .tip-title { font-family: 'Playfair Display', serif; font-size: 16px; color: #2C5F6E; line-height: 1.3; margin-bottom: 12px; }
+    .tip-post .tip-content { font-size: 9px; color: #555; line-height: 1.6; flex-grow: 1; }
+    .tip-post .logo { color: #4A90A4; font-size: 7px; font-weight: 600; }
+    
+    /* List Post */
+    .list-post {
+      background: linear-gradient(180deg, #2C5F6E 0%, #1a3a44 100%);
+      padding: 20px; display: flex; flex-direction: column;
+    }
+    .list-post .list-title { font-family: 'Playfair Display', serif; font-size: 13px; color: white; margin-bottom: 14px; line-height: 1.3; }
+    .list-post .list-items { flex-grow: 1; }
+    .list-post .list-item { display: flex; align-items: flex-start; margin-bottom: 8px; }
+    .list-post .list-number { background: #E8B86D; color: #2C5F6E; width: 14px; height: 14px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 7px; margin-right: 8px; flex-shrink: 0; }
+    .list-post .list-text { color: white; font-size: 7px; line-height: 1.4; padding-top: 1px; }
+    .list-post .logo { color: rgba(255,255,255,0.6); font-size: 7px; margin-top: 8px; }
+    
+    /* Myth Post */
+    .myth-post { display: flex; flex-direction: column; }
+    .myth-post .myth-section { flex: 1; padding: 18px; display: flex; flex-direction: column; justify-content: center; }
+    .myth-post .myth-section.myth { background: #E74C3C; color: white; }
+    .myth-post .myth-section.truth { background: #27AE60; color: white; }
+    .myth-post .section-label { font-size: 6px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; margin-bottom: 6px; }
+    .myth-post .section-text { font-family: 'Playfair Display', serif; font-size: 11px; line-height: 1.4; }
+    .myth-post .logo { position: absolute; bottom: 8px; right: 10px; color: rgba(255,255,255,0.7); font-size: 6px; }
+    
+    /* Resource Post */
+    .resource-post {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 22px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    }
+    .resource-post .free-badge { background: #E8B86D; color: #333; padding: 4px 10px; border-radius: 10px; font-weight: 700; font-size: 6px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .resource-post .resource-title { font-family: 'Playfair Display', serif; font-size: 16px; color: white; line-height: 1.3; margin-bottom: 12px; }
+    .resource-post .resource-list { text-align: left; margin-bottom: 12px; }
+    .resource-post .resource-item { color: rgba(255,255,255,0.9); font-size: 7px; margin-bottom: 4px; display: flex; align-items: center; }
+    .resource-post .check { margin-right: 5px; }
+    .resource-post .cta { background: white; color: #764ba2; padding: 8px 16px; border-radius: 12px; font-weight: 600; font-size: 7px; }
+    .resource-post .logo { position: absolute; bottom: 10px; color: rgba(255,255,255,0.6); font-size: 6px; }
+    
+    /* Emotional Post */
+    .emotional-post {
+      background: linear-gradient(180deg, #f8f4f0 0%, #e8e0d8 100%);
+      padding: 22px; display: flex; flex-direction: column; justify-content: center; text-align: center;
+    }
+    .emotional-post .heart { font-size: 28px; margin-bottom: 10px; }
+    .emotional-post .emotional-text { font-family: 'Playfair Display', serif; font-size: 15px; color: #4A5568; line-height: 1.4; margin-bottom: 12px; }
+    .emotional-post .emotional-subtext { font-size: 8px; color: #718096; line-height: 1.6; }
+    .emotional-post .logo { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); color: #4A90A4; font-size: 7px; }
+    
+    /* Community/Question Post - same as quote */
+    .community-post {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 25px; text-align: center;
+    }
+    .community-post .question { font-family: 'Playfair Display', serif; font-size: 15px; color: white; line-height: 1.4; margin-bottom: 15px; }
+    .community-post .cta { font-size: 9px; color: rgba(255,255,255,0.8); }
+    .community-post .logo { position: absolute; bottom: 12px; font-size: 7px; color: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <a href="index.html">🏠 Dashboard</a>
+    <a href="content-hub.html">📁 Content</a>
+  <a href="calendar.html">📅 Calendar</a>
+  <a href="editor.html">✏️ Template Editor</a>
+</nav>
+
+<div class="header">
+  <div class="day-badge" id="dayBadge">Day 1</div>
+  <h1 id="headerTitle">Loading...</h1>
+</div>
+
+<div class="container">
+  <div class="create-card">
+    <div class="card-body">
+      <div class="preview-section">
+        <div class="section-label">📸 Your Graphic</div>
+        <div id="templateContainer"></div>
+      </div>
+      <div class="caption-section">
+        <div class="section-label">📝 Caption (Ready to Copy)</div>
+        <div class="caption-box" id="captionBox"></div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn btn-both" onclick="downloadAndCopy()">🚀 Download & Copy — Ready to Post!</button>
+      <a href="calendar.html" class="btn btn-back">← Back</a>
+    </div>
+    <div class="actions" style="padding-top: 0;">
+      <button class="btn btn-download" onclick="downloadGraphic()" style="flex: 1;">📥 PNG Only</button>
+      <button class="btn btn-copy" onclick="copyCaption()" style="flex: 1;">📋 Caption Only</button>
+    </div>
+  </div>
+  
+  <div class="instructions">
+    <h3>📱 One-Click Workflow:</h3>
+    <ol>
+      <li><strong>Click "Download & Copy"</strong> — gets both at once!</li>
+      <li><strong>Open Instagram</strong> — create new post</li>
+      <li><strong>Select image</strong> — choose the downloaded PNG</li>
+      <li><strong>Paste caption</strong> — it's already copied!</li>
+      <li><strong>Post!</strong> 🎉</li>
+    </ol>
+  </div>
+</div>
+
+<div class="toast" id="toast">✓ Copied!</div>
+
+<script>
+// Content for all 30 days
+const content = {
+  1: {
+    title: "Monday — Introduction Post",
+    type: "quote",
+    graphic: {
+      quote: "When my child was diagnosed, I did what every parent does — I Googled frantically at 2 AM. I built Spectrum Unlocked so you don't have to.",
+      author: "— A parent who's been there"
+    },
+    caption: `When my child was diagnosed, I did what every parent does — I Googled frantically at 2 AM, overwhelmed by medical jargon and conflicting advice.
+
+I wish someone had just handed me a simple guide and said: "Here. Start here."
+
+That's why I built Spectrum Unlocked.
+
+Real tools. Real guidance. No jargon, no judgment.
+
+Just one parent helping another. 💙
+
+#AutismParent #AutismMom #AutismDad #AutismAwareness #AutismSupport #AutismCommunity`
+  },
+  2: {
+    title: "Tuesday — Educational Tip",
+    type: "tip",
+    graphic: {
+      header: "💡 Quick Tip",
+      title: "Therapy waitlists can be 6-12 months long",
+      content: "Get on multiple waitlists NOW — even before you're 100% sure which therapy is right. You can always decline when they call, but you can't get that time back."
+    },
+    caption: `PSA for newly diagnosed families: 👇
+
+Therapy waitlists can be 6-12 months long.
+
+Get on multiple waitlists NOW — even before you're 100% sure which therapy is right.
+
+You can always say no when they call. But you can't get that time back.
+
+This is the advice I wish someone gave me on day one.
+
+Save this. Share with a parent who needs it. 💙
+
+#AutismDiagnosis #AutismTips #AutismTherapy #EarlyIntervention #AutismParent`
+  },
+  3: {
+    title: "Wednesday — Emotional Support",
+    type: "emotional",
+    graphic: {
+      main: "You're doing better than you think.",
+      sub: "The fact that you're here, learning, searching for resources — that's love in action. Your child is lucky to have you."
+    },
+    caption: `Hey you. Yes, you — the one reading this at midnight, wondering if you're doing enough.
+
+You're doing better than you think. 💙
+
+The fact that you're here, searching, learning, advocating — that's love in action.
+
+Your child is lucky to have you in their corner.
+
+Save this for when you need the reminder. ❤️
+
+#AutismParent #AutismMom #AutismDad #YoureDoingGreat #AutismSupport`
+  },
+  5: {
+    title: "Friday — Resource Promo",
+    type: "resource",
+    graphic: {
+      title: "The First 48 Hours Post-Diagnosis",
+      items: ["Emotional processing tips", "The 3 most important calls to make", "How to talk to your child", "What NOT to do"]
+    },
+    caption: `FREE GUIDE: The First 48 Hours Post-Diagnosis 📚
+
+Stop the frantic 2am Googling. This guide gives you:
+
+✓ Emotional processing tips (you matter too)
+✓ The 3 most important calls to make
+✓ How to talk to your child about it
+✓ What NOT to do (avoid the Google spiral!)
+
+Calm. Step-by-step. No overwhelm.
+
+Link in bio → spectrumunlocked.com 💙
+
+#FreeResource #AutismResources #AutismDiagnosis #AutismParent #NewlyDiagnosed`
+  },
+  6: {
+    title: "Saturday — List Post",
+    type: "list",
+    graphic: {
+      title: "5 Things I Wish I Knew After the Diagnosis",
+      items: [
+        "Therapy waitlists are LONG — get on them NOW",
+        "Your pediatrician isn't always the expert — find specialists",
+        "IEPs are negotiable — advocate loudly",
+        "Other autism parents will become your village",
+        "Your child is still the same amazing kid they were yesterday"
+      ]
+    },
+    caption: `5 things I wish I knew after my child's diagnosis:
+
+1️⃣ Therapy waitlists are LONG — get on them NOW
+2️⃣ Your pediatrician isn't always the expert — find specialists
+3️⃣ IEPs are negotiable — advocate loudly
+4️⃣ Other autism parents will become your village
+5️⃣ Your child is still the same amazing kid they were yesterday
+
+What would YOU add to this list? Drop it below 👇
+
+#AutismParent #AutismAdvice #AutismCommunity #AutismMom #AutismDad`
+  },
+  8: {
+    title: "Monday — Myth Buster",
+    type: "myth",
+    graphic: {
+      myth: '"Autism is caused by bad parenting"',
+      truth: "Autism is a neurological difference. It's how your child's brain is wired — not caused by anything you did."
+    },
+    caption: `Let's clear this up once and for all:
+
+❌ MYTH: "Autism is caused by bad parenting"
+
+✅ TRUTH: Autism is a neurological difference. It's how your child's brain is wired — not caused by vaccines, screen time, or anything you did.
+
+If anyone ever implies otherwise, hand them a science textbook and walk away. 📚
+
+You're a great parent. Full stop.
+
+#AutismMyths #AutismFacts #AutismAwareness #AutismAcceptance #AutismParent`
+  },
+  9: {
+    title: "Tuesday — IEP Tip",
+    type: "tip",
+    graphic: {
+      header: "💡 Quick Tip",
+      title: "Always request IEP meetings in WRITING",
+      content: "Email creates a paper trail. Schools are legally required to respond within a specific timeframe once you put it in writing."
+    },
+    caption: `IEP tip that changed everything for us: 👇
+
+Always request meetings in WRITING (email works!).
+
+Why?
+✓ Creates a paper trail
+✓ Schools MUST respond within a legal timeframe
+✓ Protects you if there's ever a dispute
+✓ Shows you mean business
+
+Screenshot this. You'll thank me later.
+
+#IEPTips #AutismParent #SpecialEducation #IEPAdvocacy #AutismMom`
+  },
+  12: {
+    title: "Friday — Quote Post",
+    type: "quote",
+    graphic: {
+      quote: "The moment after diagnosis, everything feels urgent. Breathe. You don't have to figure it all out today.",
+      author: "— A fellow autism parent"
+    },
+    caption: `The moment after a diagnosis, everything feels urgent.
+
+"What therapy do we start?"
+"Should I tell the school?"
+"Is it my fault?"
+"Will they be okay?"
+
+Breathe. 🧘
+
+You don't have to figure it all out today.
+
+The diagnosis didn't change who your child is. It just gave you new information to help them thrive.
+
+One day at a time. 💙
+
+#AutismDiagnosis #NewlyDiagnosed #AutismParent #AutismMom #AutismSupport`
+  },
+  13: {
+    title: "Saturday — Myth Buster #2",
+    type: "myth",
+    graphic: {
+      myth: '"Autistic kids don\'t feel emotions"',
+      truth: "Autistic children feel deeply — sometimes MORE intensely. They may just express it differently than you expect."
+    },
+    caption: `Another myth that needs to go: 👇
+
+❌ MYTH: "Autistic kids don't feel emotions"
+
+✅ TRUTH: Autistic children often feel DEEPLY — sometimes more intensely than neurotypical kids. They may just express it differently.
+
+Different ≠ less.
+
+Understanding this changed how I connected with my child. 💙
+
+#AutismMyths #AutismFacts #AutismAwareness #ActuallyAutistic #AutismParent`
+  },
+  15: {
+    title: "Monday — Community Question",
+    type: "quote",
+    graphic: {
+      quote: "What's ONE thing you wish you knew right after your child's diagnosis?",
+      author: "Tell me in the comments 👇"
+    },
+    caption: `Tell me in the comments 👇
+
+What's ONE thing you wish you knew right after your child's diagnosis?
+
+I'll go first: I wish I knew that therapy waitlists were so long. We lost months because no one told us to get on lists immediately.
+
+Your answer might help another parent today. 💙
+
+#AutismCommunity #AutismParent #AutismAdvice #AutismTips #AutismSupport`
+  },
+  16: {
+    title: "Tuesday — Meltdown Tip",
+    type: "tip",
+    graphic: {
+      header: "💡 Quick Tip",
+      title: "Meltdowns ≠ tantrums",
+      content: "Tantrums have a goal. Meltdowns are sensory/emotional overload. The response to each is completely different."
+    },
+    caption: `This changed how I parent: 👇
+
+Meltdowns ≠ Tantrums
+
+🔸 TANTRUM: Has a goal (wants something). Child has some control. Will stop if they get what they want.
+
+🔸 MELTDOWN: No goal. Sensory or emotional overload. Child has NO control. Can't just "stop."
+
+The response to each is completely different.
+
+Understanding this = more patience + better support. 💙
+
+Full guide on our blog (link in bio)
+
+#AutismMeltdown #AutismParenting #AutismTips #SensoryOverload #AutismMom`
+  },
+  17: {
+    title: "Wednesday — IEP Resource",
+    type: "resource",
+    graphic: {
+      title: "IEP Meeting Prep Checklist",
+      items: ["Questions to ask", "Documents to bring", "Rights you need to know", "Red flags to watch for"]
+    },
+    caption: `IEP meeting coming up? Don't walk in unprepared. 📋
+
+FREE DOWNLOAD: IEP Meeting Prep Checklist
+
+✓ Every question you should ask
+✓ Documents to bring (and request!)
+✓ Your rights under IDEA
+✓ Red flags to watch for
+✓ What to do if they say "no"
+
+Be your child's best advocate.
+
+Link in bio → spectrumunlocked.com/resources 💙
+
+#IEP #IEPMeeting #SpecialEducation #AutismParent #AutismAdvocacy`
+  },
+  19: {
+    title: "Friday — Grief Post",
+    type: "emotional",
+    graphic: {
+      main: "No one tells you about the grief.",
+      sub: "You can mourn the future you imagined AND fiercely love your child. Both things are true."
+    },
+    caption: `No one tells you about the grief.
+
+You might grieve the future you imagined.
+The milestones you expected.
+The "easy" path you thought you'd have.
+
+And that's okay.
+
+Grief and love can exist together.
+
+You can mourn what you thought would be AND fiercely love and advocate for your child.
+
+Both things are true. 💙
+
+#AutismParent #AutismMom #AutismDad #ParentingWithAutism #AutismGrief #AutismLove`
+  },
+  20: {
+    title: "Saturday — Apps List",
+    type: "list",
+    graphic: {
+      title: "5 Apps Every Autism Parent Needs",
+      items: [
+        "Visual schedule apps (First Then, Choiceworks)",
+        "AAC communication apps",
+        "Calm/sensory apps",
+        "Social stories apps",
+        "Parent support communities"
+      ]
+    },
+    caption: `5 apps that make autism parenting easier: 📱
+
+1️⃣ Visual Schedule Apps — First Then Visual, Choiceworks
+2️⃣ AAC Apps — Proloquo2Go, TouchChat, LAMP
+3️⃣ Calm/Sensory — Calm, Moshi, sensory games
+4️⃣ Social Stories — Social Stories Creator, StoryMaker
+5️⃣ Parent Support — Facebook groups, Autism Speaks app
+
+What apps do YOU rely on? Drop your favorites below 👇
+
+#AutismApps #AutismResources #AutismParent #AutismTech #AutismSupport`
+  },
+  22: {
+    title: "Monday — Language Tip",
+    type: "tip",
+    graphic: {
+      header: "💡 Quick Tip",
+      title: '"High-functioning" is NOT a compliment',
+      content: "It dismisses real struggles. All autistic people deserve support — not just those who 'look' like they need it."
+    },
+    caption: `Gentle reminder: 💙
+
+"High-functioning" is not a compliment.
+
+It dismisses real struggles. It denies support. It says "you don't look autistic enough to need help."
+
+ALL autistic people deserve understanding and support — not just those who fit a stereotype.
+
+Language matters.
+
+#AutismAcceptance #AutismAwareness #ActuallyAutistic #AutismCommunity #Neurodiversity`
+  },
+  23: {
+    title: "Tuesday — Sensory Resource",
+    type: "resource",
+    graphic: {
+      title: "Sensory Profile Worksheet",
+      items: ["Identify triggers", "Find calming strategies", "Share with therapists", "Build a sensory diet"]
+    },
+    caption: `Does your child cover their ears at certain sounds? Refuse certain clothes? Crave constant movement?
+
+Understanding their sensory profile changes EVERYTHING.
+
+FREE: Sensory Profile Worksheet 📋
+
+✓ Identify what they seek vs. avoid
+✓ Pinpoint triggers
+✓ Find calming strategies
+✓ Share with therapists & teachers
+
+Link in bio → spectrumunlocked.com/resources
+
+#SensoryProcessing #AutismSensory #SensoryDiet #AutismParent #OccupationalTherapy`
+  },
+  24: {
+    title: "Wednesday — Myth Buster #3",
+    type: "myth",
+    graphic: {
+      myth: '"If they can talk, they\'re fine"',
+      truth: "Verbal ability ≠ ability to communicate needs, regulate emotions, or navigate social situations."
+    },
+    caption: `Say it louder for the people in the back: 📢
+
+❌ MYTH: "If they can talk, they're fine"
+
+✅ TRUTH: Verbal ability ≠ ability to:
+— Communicate needs effectively
+— Regulate emotions
+— Navigate social situations
+— Process sensory input
+— Handle changes in routine
+
+Talking is just ONE form of communication.
+
+Understanding goes SO much deeper. 💙
+
+#AutismMyths #AutismAwareness #AutismAcceptance #SpeechIsNotEverything #AutismParent`
+  },
+  26: {
+    title: "Friday — Warrior Quote",
+    type: "quote",
+    graphic: {
+      quote: "Behind every autistic child who's thriving is a parent who's fighting battles you'll never see.",
+      author: "— Spectrum Unlocked"
+    },
+    caption: `Behind every autistic child who's thriving is a parent who:
+
+— Fought for their IEP
+— Made 47 phone calls to get on a waitlist
+— Learned to decode meltdown triggers
+— Stayed up researching therapies
+— Advocated when teachers didn't understand
+— Kept going when they were exhausted
+
+You are THAT parent. And you're incredible. 💙
+
+Tag a warrior parent who needs to hear this today.
+
+#AutismParent #AutismMom #AutismDad #AutismWarrior #AutismAdvocate`
+  },
+  27: {
+    title: "Saturday — What To Say List",
+    type: "list",
+    graphic: {
+      title: "What TO say to autism parents",
+      items: [
+        '"How can I help?"',
+        '"You\'re doing great"',
+        '"Tell me about your child"',
+        '"I\'m here to listen"',
+        '"What does your child love?"'
+      ]
+    },
+    caption: `What TO say to autism parents (instead of unsolicited advice): 💙
+
+✓ "How can I help?"
+✓ "You're doing an amazing job"
+✓ "Tell me about your child — what are they into?"
+✓ "I'm here if you ever need to talk"
+✓ "What does your child love?"
+
+What we DON'T need:
+✗ "Have you tried..."
+✗ "But they look so normal!"
+✗ "My neighbor's kid was cured by..."
+
+Sometimes just listening is everything. 🙏
+
+#AutismParent #AutismSupport #HowToHelp #AutismCommunity #AutismAwareness`
+  },
+  29: {
+    title: "Monday — Progress Post",
+    type: "emotional",
+    graphic: {
+      main: "Progress isn't always linear.",
+      sub: "Some days feel like setbacks. But zoom out — look how far you've both come."
+    },
+    caption: `Reminder for the hard days: 💙
+
+Progress isn't always linear.
+
+Some days feel like huge setbacks. Skills that seemed mastered suddenly disappear. Meltdowns come out of nowhere.
+
+But zoom out.
+
+Look at where you were 6 months ago. A year ago.
+
+Look how far you've BOTH come.
+
+The hard days don't erase the progress. 🙏
+
+#AutismProgress #AutismParent #AutismJourney #AutismMom #AutismDad`
+  },
+  30: {
+    title: "Tuesday — Resource Roundup",
+    type: "resource",
+    graphic: {
+      title: "All Our Free Resources",
+      items: ["First 48 Hours Guide", "IEP Checklist", "Sensory Worksheet", "Therapy Comparison + More!"]
+    },
+    caption: `Everything we offer — 100% FREE 📚
+
+✓ The First 48 Hours Post-Diagnosis Guide
+✓ IEP Meeting Prep Checklist  
+✓ Sensory Profile Worksheet
+✓ Autism Therapy Comparison Guide
+✓ Behavior Tracking Log
+✓ School Communication Templates
+✓ AAC Basics Guide
+✓ Visual Schedule Resources
+
+No email required. No catch. Just help.
+
+Link in bio → spectrumunlocked.com/resources 💙
+
+#FreeResources #AutismResources #AutismParent #AutismSupport #AutismHelp`
+  }
+};
+
+// Generate template HTML based on type
+function generateTemplate(day) {
+  const data = content[day];
+  if (!data) return '<p>Content not found for this day.</p>';
+  
+  let html = '';
+  
+  switch(data.type) {
+    case 'quote':
+      html = `
+        <div class="post quote-post" id="graphic">
+          <div class="quote-mark">"</div>
+          <div class="quote-text">${data.graphic.quote}</div>
+          <div class="quote-author">${data.graphic.author}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'tip':
+      html = `
+        <div class="post tip-post" id="graphic">
+          <div class="tip-header">${data.graphic.header}</div>
+          <div class="tip-title">${data.graphic.title}</div>
+          <div class="tip-content">${data.graphic.content}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'emotional':
+      html = `
+        <div class="post emotional-post" id="graphic">
+          <div class="heart">💙</div>
+          <div class="emotional-text">${data.graphic.main}</div>
+          <div class="emotional-subtext">${data.graphic.sub}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'resource':
+      const items = data.graphic.items.map(i => `<div class="resource-item"><span class="check">✓</span> ${i}</div>`).join('');
+      html = `
+        <div class="post resource-post" id="graphic">
+          <div class="free-badge">📚 Free Download</div>
+          <div class="resource-title">${data.graphic.title}</div>
+          <div class="resource-list">${items}</div>
+          <div class="cta">Link in Bio →</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'list':
+      const listItems = data.graphic.items.map((item, i) => `
+        <div class="list-item">
+          <div class="list-number">${i+1}</div>
+          <div class="list-text">${item}</div>
+        </div>`).join('');
+      html = `
+        <div class="post list-post" id="graphic">
+          <div class="list-title">${data.graphic.title}</div>
+          <div class="list-items">${listItems}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'myth':
+      html = `
+        <div class="post myth-post" id="graphic">
+          <div class="myth-section myth">
+            <div class="section-label">❌ Myth</div>
+            <div class="section-text">${data.graphic.myth}</div>
+          </div>
+          <div class="myth-section truth">
+            <div class="section-label">✓ Truth</div>
+            <div class="section-text">${data.graphic.truth}</div>
+          </div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+  }
+  
+  return html;
+}
+
+// Initialize page
+function init() {
+  const params = new URLSearchParams(window.location.search);
+  const day = parseInt(params.get('day')) || 1;
+  
+  const data = content[day];
+  
+  if (!data) {
+    document.getElementById('headerTitle').textContent = 'Day not found';
+    document.getElementById('templateContainer').innerHTML = '<p style="color:#888;">This day has no content or is a rest day. <a href="calendar.html" style="color:#4A90A4;">Go back to calendar</a></p>';
+    return;
+  }
+  
+  document.getElementById('dayBadge').textContent = `Day ${day}`;
+  document.getElementById('headerTitle').textContent = data.title;
+  document.getElementById('templateContainer').innerHTML = generateTemplate(day);
+  document.getElementById('captionBox').innerHTML = data.caption.replace(/(#\w+)/g, '<span class="hashtags">$1</span>');
+}
+
+function downloadGraphic() {
+  const element = document.getElementById('graphic');
+  if (!element) return;
+  
+  html2canvas(element, {
+    scale: 4,
+    useCORS: true,
+    allowTaint: true,
+    backgroundColor: null
+  }).then(canvas => {
+    const link = document.createElement('a');
+    const params = new URLSearchParams(window.location.search);
+    const day = params.get('day') || 1;
+    link.download = `spectrum-unlocked-day-${day}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('✓ Downloaded!');
+  });
+}
+
+function copyCaption() {
+  const params = new URLSearchParams(window.location.search);
+  const day = parseInt(params.get('day')) || 1;
+  const data = content[day];
+  
+  if (!data) return;
+  
+  navigator.clipboard.writeText(data.caption).then(() => {
+    showToast('✓ Caption copied!');
+  }).catch(() => {
+    const textarea = document.createElement('textarea');
+    textarea.value = data.caption;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showToast('✓ Caption copied!');
+  });
+}
+
+async function downloadAndCopy() {
+  // Copy caption first
+  const params = new URLSearchParams(window.location.search);
+  const day = parseInt(params.get('day')) || 1;
+  const data = content[day];
+  
+  if (data) {
+    try {
+      await navigator.clipboard.writeText(data.caption);
+    } catch {
+      const textarea = document.createElement('textarea');
+      textarea.value = data.caption;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+  }
+  
+  // Then download graphic
+  const element = document.getElementById('graphic');
+  if (!element) return;
+  
+  html2canvas(element, {
+    scale: 4,
+    useCORS: true,
+    allowTaint: true,
+    backgroundColor: null
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `spectrum-unlocked-day-${day}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('✓ Downloaded + Caption Copied! Ready to post!');
+  });
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+init();
+</script>
+
+</body>
+</html>

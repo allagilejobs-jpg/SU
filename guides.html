@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How-To Guides — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #E8B86D 0%, #D4A05A 100%);
+      color: #1a1a2e;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .header p { opacity: 0.8; max-width: 600px; margin: 0 auto; }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .guide-section {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .guide-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #4A90A4;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .guide-section h3 {
+      font-size: 1.1rem;
+      color: #E8B86D;
+      margin: 25px 0 12px 0;
+    }
+    
+    .guide-section p, .guide-section li {
+      color: #ccc;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    
+    .guide-section ul, .guide-section ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+    
+    .guide-section li {
+      margin-bottom: 8px;
+    }
+    
+    .step-box {
+      background: #1a1a2e;
+      border-left: 4px solid #4A90A4;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .step-box strong {
+      color: #4A90A4;
+    }
+    
+    .tip-box {
+      background: rgba(232, 184, 109, 0.15);
+      border: 1px solid rgba(232, 184, 109, 0.3);
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+    
+    .tip-box strong {
+      color: #E8B86D;
+    }
+    
+    .size-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .size-card {
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    
+    .size-card .dimensions {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 5px;
+    }
+    
+    .size-card .ratio {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    
+    .size-card .use {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+    
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .link-card {
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #eee;
+      transition: transform 0.2s, background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .link-card:hover {
+      transform: translateY(-3px);
+      background: #0f3460;
+    }
+    
+    .link-card .icon {
+      font-size: 2rem;
+    }
+    
+    .link-card .info h4 {
+      color: #4A90A4;
+      margin-bottom: 5px;
+    }
+    
+    .link-card .info p {
+      font-size: 0.85rem;
+      color: #888;
+      margin: 0;
+    }
+    
+    .toc {
+      background: #0f0f1a;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .toc h3 {
+      color: #E8B86D;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+    
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    
+    .toc a {
+      color: #4A90A4;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .toc a:hover {
+      background: #16213e;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #555;
+      font-size: 0.85rem;
+    }
+    
+    footer a { color: #4A90A4; }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="content-hub.html">📁 Content</a>
+    <a href="calendar.html">📅 Calendar</a>
+    <a href="create.html">✨ Create</a>
+    <a href="editor.html">🎨 Editor</a>
+    <a href="sensory-hacks/">🧠 Sensory</a>
+    <a href="spotlight-series.html">⭐ Spotlight</a>
+    <a href="story-templates.html">📱 Stories</a>
+    <a href="guides.html" class="active">📖 Guides</a>
+  </nav>
+
+  <div class="header">
+    <h1>📖 How-To Guides</h1>
+    <p>Everything you need to know about using the Spectrum Unlocked content package</p>
+  </div>
+
+  <div class="container">
+    
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h3>📋 Quick Links</h3>
+      <ul>
+        <li><a href="#overview">🗺️ Content Overview</a></li>
+        <li><a href="#sizes">📐 Instagram Sizes</a></li>
+        <li><a href="#workflow">🔄 Posting Workflow</a></li>
+        <li><a href="#templates">🎨 Using Templates</a></li>
+        <li><a href="#sensory">🧠 Sensory Hacks</a></li>
+        <li><a href="#spotlight">⭐ Spotlight Series</a></li>
+        <li><a href="#stories">📱 Story Templates</a></li>
+        <li><a href="#automation">🤖 Automation</a></li>
+      </ul>
+    </div>
+
+    <!-- Overview -->
+    <div class="guide-section" id="overview">
+      <h2>🗺️ Content Overview</h2>
+      <p>This package contains everything you need to run the Spectrum Unlocked Instagram account consistently. Here's what's included:</p>
+      
+      <div class="link-grid">
+        <a href="index.html" class="link-card">
+          <div class="icon">🏠</div>
+          <div class="info">
+            <h4>Dashboard</h4>
+            <p>Overview stats, graphics gallery, site status</p>
+          </div>
+        </a>
+        <a href="content-hub.html" class="link-card">
+          <div class="icon">📁</div>
+          <div class="info">
+            <h4>Content Hub</h4>
+            <p>All content organized by type</p>
+          </div>
+        </a>
+        <a href="calendar.html" class="link-card">
+          <div class="icon">📅</div>
+          <div class="info">
+            <h4>30-Day Calendar</h4>
+            <p>Pre-planned posting schedule with captions</p>
+          </div>
+        </a>
+        <a href="create.html" class="link-card">
+          <div class="icon">✨</div>
+          <div class="info">
+            <h4>Create Post</h4>
+            <p>Generate new content from templates</p>
+          </div>
+        </a>
+        <a href="editor.html" class="link-card">
+          <div class="icon">🎨</div>
+          <div class="info">
+            <h4>Template Editor</h4>
+            <p>Customize & export at any size</p>
+          </div>
+        </a>
+        <a href="sensory-hacks/" class="link-card">
+          <div class="icon">🧠</div>
+          <div class="info">
+            <h4>Sensory Hacks</h4>
+            <p>10 Tuesday Tips posts ready to go</p>
+          </div>
+        </a>
+        <a href="spotlight-series.html" class="link-card">
+          <div class="icon">⭐</div>
+          <div class="info">
+            <h4>Spotlight Series</h4>
+            <p>Famous autistic people + autism parents</p>
+          </div>
+        </a>
+        <a href="story-templates.html" class="link-card">
+          <div class="icon">📱</div>
+          <div class="info">
+            <h4>Story Templates</h4>
+            <p>8 story formats for daily engagement</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Instagram Sizes -->
+    <div class="guide-section" id="sizes">
+      <h2>📐 Instagram Sizes (2026)</h2>
+      <p>Instagram supports multiple aspect ratios. Here's what works best:</p>
+      
+      <div class="size-grid">
+        <div class="size-card">
+          <div class="dimensions">1080 × 1350</div>
+          <div class="ratio">4:5 Portrait</div>
+          <div class="use">⭐ Best for feed posts — max screen space</div>
+        </div>
+        <div class="size-card">
+          <div class="dimensions">1080 × 1080</div>
+          <div class="ratio">1:1 Square</div>
+          <div class="use">Classic, works everywhere</div>
+        </div>
+        <div class="size-card">
+          <div class="dimensions">1080 × 1920</div>
+          <div class="ratio">9:16 Vertical</div>
+          <div class="use">Stories & Reels (full screen)</div>
+        </div>
+        <div class="size-card">
+          <div class="dimensions">1080 × 1440</div>
+          <div class="ratio">3:4 Tall</div>
+          <div class="use">Alternative portrait format</div>
+        </div>
+      </div>
+      
+      <div class="tip-box">
+        <strong>💡 Pro Tip:</strong> Portrait (4:5) posts get 30% more engagement than square because they take up more screen space in the feed!
+      </div>
+    </div>
+
+    <!-- Posting Workflow -->
+    <div class="guide-section" id="workflow">
+      <h2>🔄 Daily Posting Workflow</h2>
+      
+      <h3>Morning (9 AM)</h3>
+      <p>You'll receive an automated reminder with:</p>
+      <ul>
+        <li>What's scheduled for today</li>
+        <li>The graphic file path</li>
+        <li>Ready-to-copy caption</li>
+      </ul>
+      
+      <h3>Post to Instagram</h3>
+      <div class="step-box">
+        <strong>Step 1:</strong> Open the graphic file or use the Editor to customize
+      </div>
+      <div class="step-box">
+        <strong>Step 2:</strong> Copy the caption from the calendar/reminder
+      </div>
+      <div class="step-box">
+        <strong>Step 3:</strong> Post to Instagram with hashtags
+      </div>
+      <div class="step-box">
+        <strong>Step 4:</strong> Share to Stories with engagement sticker (poll, question, etc.)
+      </div>
+      
+      <h3>Best Posting Times</h3>
+      <ul>
+        <li><strong>Morning:</strong> 7-9 AM (parents checking phones)</li>
+        <li><strong>Midday:</strong> 12-1 PM (lunch breaks)</li>
+        <li><strong>Evening:</strong> 7-9 PM (after kids' bedtime)</li>
+      </ul>
+    </div>
+
+    <!-- Using Templates -->
+    <div class="guide-section" id="templates">
+      <h2>🎨 Using the Template Editor</h2>
+      
+      <p>The <a href="editor.html" style="color:#4A90A4;">Template Editor</a> lets you customize any template and export at your desired size.</p>
+      
+      <h3>How to Use</h3>
+      <div class="step-box">
+        <strong>Step 1:</strong> Select a template from the dropdown
+      </div>
+      <div class="step-box">
+        <strong>Step 2:</strong> Click any text to edit it directly
+      </div>
+      <div class="step-box">
+        <strong>Step 3:</strong> Choose your export size (Portrait, Square, Story)
+      </div>
+      <div class="step-box">
+        <strong>Step 4:</strong> Click "Download PNG" — image saves automatically
+      </div>
+      
+      <div class="tip-box">
+        <strong>💡 Pro Tip:</strong> Use Portrait (1080×1350) for feed posts to maximize screen real estate!
+      </div>
+    </div>
+
+    <!-- Sensory Hacks -->
+    <div class="guide-section" id="sensory">
+      <h2>🧠 Sensory Hacks Series</h2>
+      
+      <p>10 ready-to-post "Tuesday Tips" about sensory strategies for autism parents.</p>
+      
+      <h3>The 10 Hacks</h3>
+      <ol>
+        <li>🎧 <strong>Headphones</strong> — Noise buffer strategy</li>
+        <li>🛏️ <strong>Weighted Blanket</strong> — Deep pressure input</li>
+        <li>🕶️ <strong>Sunglasses Indoors</strong> — Light sensitivity</li>
+        <li>🌀 <strong>Fidget Rotation</strong> — Keep fidgets effective</li>
+        <li>⏱️ <strong>Transition Countdown</strong> — Visual timers</li>
+        <li>🏕️ <strong>Calm Corner</strong> — Regulation station at home</li>
+        <li>🎒 <strong>Sensory Go-Bag</strong> — Always be prepared</li>
+        <li>🤗 <strong>Compression Clothing</strong> — Wearable hugs</li>
+        <li>🌊 <strong>White Noise</strong> — Sound masking</li>
+        <li>🍬 <strong>Oral Sensory</strong> — Chewing is calming</li>
+      </ol>
+      
+      <h3>How to Use</h3>
+      <ul>
+        <li>Post one every Tuesday ("Tuesday Tips")</li>
+        <li>Each has an HTML template + exported PNG</li>
+        <li>Captions included with hashtags</li>
+        <li>Currently in Story format (1080×1920)</li>
+      </ul>
+      
+      <a href="sensory-hacks/" class="link-card" style="margin-top:20px;">
+        <div class="icon">📂</div>
+        <div class="info">
+          <h4>View All Sensory Hacks →</h4>
+          <p>Browse templates and exports</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Spotlight Series -->
+    <div class="guide-section" id="spotlight">
+      <h2>⭐ Spotlight Series</h2>
+      
+      <p>8-week series featuring famous autistic people and celebrity autism parents.</p>
+      
+      <h3>Icons on the Spectrum (Blue design)</h3>
+      <ul>
+        <li>Temple Grandin — Scientist & Advocate</li>
+        <li>Anthony Hopkins — Oscar-winning Actor</li>
+        <li>Greta Thunberg — Climate Activist</li>
+        <li>Bella Ramsey — Actor (The Last of Us)</li>
+        <li>Dan Aykroyd — Comedian (Ghostbusters)</li>
+        <li>Sia — Grammy-winning Singer</li>
+        <li>Elon Musk — Entrepreneur</li>
+      </ul>
+      
+      <h3>Autism Parents in the Spotlight (Purple design)</h3>
+      <ul>
+        <li>Holly Robinson Peete — Son RJ</li>
+        <li>Toni Braxton — Son Diezel</li>
+        <li>Tisha Campbell — Son Xen</li>
+        <li>Shawn Stockman (Boyz II Men) — Daughter Micah</li>
+        <li>JWoww (Jenni Farley) — Son Greyson</li>
+        <li>Sylvester Stallone — Son Seargeoh</li>
+        <li>Tommy Hilfiger — Daughter</li>
+      </ul>
+      
+      <a href="spotlight-series.html" class="link-card" style="margin-top:20px;">
+        <div class="icon">⭐</div>
+        <div class="info">
+          <h4>View Spotlight Series →</h4>
+          <p>Templates, captions, and posting schedule</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Story Templates -->
+    <div class="guide-section" id="stories">
+      <h2>📱 Story Templates</h2>
+      
+      <p>8 different story formats for daily engagement:</p>
+      
+      <ol>
+        <li>💡 <strong>Quick Tip</strong> — Actionable advice</li>
+        <li>📊 <strong>Poll/Question</strong> — Engagement builders</li>
+        <li>🔔 <strong>New Post Alert</strong> — Drive traffic to feed</li>
+        <li>💬 <strong>Quote/Affirmation</strong> — Emotional connection</li>
+        <li>⚖️ <strong>This or That</strong> — Fun engagement polls</li>
+        <li>🎬 <strong>Behind the Scenes</strong> — Authenticity</li>
+        <li>💜 <strong>Daily Reminder</strong> — Encouragement</li>
+        <li>🔗 <strong>Link/Resource</strong> — Promote downloads</li>
+      </ol>
+      
+      <div class="tip-box">
+        <strong>💡 Story Strategy:</strong> Post 3-5 stories per day. Mix content types. Use polls and questions for engagement. Stories expire in 24h, so be consistent!
+      </div>
+      
+      <a href="story-templates.html" class="link-card" style="margin-top:20px;">
+        <div class="icon">📱</div>
+        <div class="info">
+          <h4>View Story Templates →</h4>
+          <p>All 8 templates ready to customize</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Automation -->
+    <div class="guide-section" id="automation">
+      <h2>🤖 Automation (Cron Jobs)</h2>
+      
+      <p>Three automated processes help you stay consistent:</p>
+      
+      <h3>📝 Weekly Content Brainstorm</h3>
+      <ul>
+        <li><strong>When:</strong> Sundays @ 8 PM</li>
+        <li><strong>What:</strong> Generates 7 fresh post ideas for the week</li>
+        <li><strong>Output:</strong> <code>weekly-ideas/YYYY-MM-DD.md</code></li>
+        <li><strong>Delivery:</strong> Summary sent to Telegram</li>
+      </ul>
+      
+      <h3>📢 Daily Posting Reminder</h3>
+      <ul>
+        <li><strong>When:</strong> Every day @ 9 AM</li>
+        <li><strong>What:</strong> Checks calendar, preps today's content</li>
+        <li><strong>Delivery:</strong> Telegram with graphic path + caption</li>
+      </ul>
+      
+      <h3>🔍 Content Research</h3>
+      <ul>
+        <li><strong>When:</strong> Wednesdays @ 12 PM</li>
+        <li><strong>What:</strong> Trends, awareness dates, fresh angles</li>
+        <li><strong>Output:</strong> <code>research/YYYY-MM-DD.md</code></li>
+        <li><strong>Delivery:</strong> Summary sent to Telegram</li>
+      </ul>
+      
+      <div class="tip-box">
+        <strong>💡 Note:</strong> All automation outputs are saved to files AND pushed to GitHub Pages automatically, so you can always access them here.
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="index.html">← Back to Dashboard</a> · 
+    Spectrum Unlocked Marketing Package · 
+    Last updated: March 2026
+  </footer>
+
+</body>
+</html>

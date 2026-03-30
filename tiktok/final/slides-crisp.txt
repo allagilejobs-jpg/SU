@@ -1,0 +1,9 @@
+file 'slide-01-crisp.png'
+duration 16
+file 'slide-02-crisp.png'
+duration 10
+file 'slide-03-crisp.png'
+duration 7
+file 'slide-04-crisp.png'
+duration 19
+file 'slide-04-crisp.png'

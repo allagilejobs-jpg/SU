@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotlight Visual Templates — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #E8B86D 0%, #d4a35a 100%);
+      color: #1a1a2e;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    
+    .header p { opacity: 0.8; }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    .controls {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .controls h3 {
+      color: #E8B86D;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      color: #aaa;
+      font-size: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #0f3460;
+      border-radius: 10px;
+      background: #0a1628;
+      color: #eee;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+    }
+    
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #4A90A4;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    
+    .template-selector {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .template-btn {
+      padding: 12px 20px;
+      border: 2px solid #0f3460;
+      border-radius: 10px;
+      background: #0a1628;
+      color: #ccc;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .template-btn:hover {
+      border-color: #4A90A4;
+      color: white;
+    }
+    
+    .template-btn.active {
+      background: #4A90A4;
+      border-color: #4A90A4;
+      color: white;
+    }
+    
+    .preview-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    
+    .preview-card {
+      background: #16213e;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .preview-header {
+      padding: 15px 20px;
+      background: #0f3460;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .preview-header h4 {
+      color: #E8B86D;
+      font-size: 14px;
+    }
+    
+    .preview-area {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 10px;
+      padding: 15px 20px;
+      background: #0f3460;
+    }
+    
+    .btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .btn-download {
+      background: linear-gradient(135deg, #27AE60, #1e8449);
+      color: white;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* ========== TEMPLATE 1: QUOTE CARD ========== */
+    .quote-card {
+      width: 300px;
+      height: 300px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+    
+    .quote-card.icon-theme {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+    }
+    
+    .quote-card.parent-theme {
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+    }
+    
+    .quote-card .series-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .quote-card .big-quote {
+      font-size: 50px;
+      opacity: 0.3;
+      position: absolute;
+      top: 40px;
+      left: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .quote-card .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .quote-card .person-name {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.9;
+    }
+    
+    .quote-card .person-title {
+      font-size: 10px;
+      opacity: 0.7;
+      margin-top: 5px;
+    }
+    
+    .quote-card .logo {
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+    
+    /* ========== TEMPLATE 2: SILHOUETTE ========== */
+    .silhouette-card {
+      width: 300px;
+      height: 300px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .silhouette-card.icon-theme {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+    }
+    
+    .silhouette-card.parent-theme {
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+    }
+    
+    .silhouette-card .series-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    
+    .silhouette-card .silhouette {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 140px;
+    }
+    
+    .silhouette-card .silhouette svg {
+      width: 100%;
+      height: 100%;
+      fill: rgba(255,255,255,0.15);
+    }
+    
+    .silhouette-card .field-icon {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      font-size: 40px;
+      opacity: 0.4;
+    }
+    
+    .silhouette-card .info-area {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .silhouette-card .person-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    
+    .silhouette-card .person-title {
+      font-size: 10px;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .silhouette-card .logo {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+    
+    /* ========== TEMPLATE 3: FIELD ICON ========== */
+    .field-card {
+      width: 300px;
+      height: 300px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .field-card.icon-theme {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+    }
+    
+    .field-card.parent-theme {
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+    }
+    
+    .field-card .series-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .field-card .icon-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 30px;
+    }
+    
+    .field-card .big-icon {
+      font-size: 100px;
+      opacity: 0.9;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+    }
+    
+    .field-card .info-area {
+      background: rgba(0,0,0,0.4);
+      padding: 25px;
+      text-align: center;
+    }
+    
+    .field-card .person-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    
+    .field-card .person-title {
+      font-size: 10px;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .field-card .logo {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+    
+    /* ========== TEMPLATE 4: NAME HERO ========== */
+    .name-card {
+      width: 300px;
+      height: 300px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .name-card.icon-theme {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    
+    .name-card.parent-theme {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 100%);
+    }
+    
+    .name-card .series-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(255,255,255,0.1);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .name-card .big-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      padding: 0 20px;
+    }
+    
+    .name-card.icon-theme .big-name {
+      background: linear-gradient(135deg, #4A90A4, #6BC5E8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .name-card.parent-theme .big-name {
+      background: linear-gradient(135deg, #9B59B6, #E8A0E8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .name-card .person-title {
+      font-size: 11px;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    
+    .name-card .mini-quote {
+      font-size: 12px;
+      font-style: italic;
+      opacity: 0.6;
+      padding: 0 30px;
+      line-height: 1.5;
+    }
+    
+    .name-card .field-emoji {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 30px;
+      opacity: 0.3;
+    }
+    
+    .name-card .logo {
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+    
+    /* ========== TEMPLATE 5: ACHIEVEMENT CARD ========== */
+    .achievement-card {
+      width: 300px;
+      height: 300px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      padding: 25px;
+    }
+    
+    .achievement-card.icon-theme {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+    }
+    
+    .achievement-card.parent-theme {
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+    }
+    
+    .achievement-card .series-badge {
+      background: rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    
+    .achievement-card .person-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    
+    .achievement-card .person-title {
+      font-size: 11px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    
+    .achievement-card .achievements {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .achievement-card .achievement {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.15);
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    
+    .achievement-card .achievement .check {
+      font-size: 14px;
+    }
+    
+    .achievement-card .logo {
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+      font-size: 8px;
+      opacity: 0.6;
+    }
+    
+    /* Export versions */
+    .export-container {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+    
+    .export-post {
+      width: 1080px;
+      height: 1080px;
+    }
+    
+    /* Export Quote Card */
+    .export-post.quote-card {
+      padding: 100px;
+    }
+    
+    .export-post.quote-card .series-badge {
+      top: 50px;
+      left: 50px;
+      padding: 20px 40px;
+      font-size: 28px;
+    }
+    
+    .export-post.quote-card .big-quote {
+      font-size: 180px;
+      top: 130px;
+      left: 70px;
+    }
+    
+    .export-post.quote-card .quote-text {
+      font-size: 64px;
+      line-height: 1.3;
+      margin-bottom: 50px;
+    }
+    
+    .export-post.quote-card .person-name {
+      font-size: 42px;
+      letter-spacing: 5px;
+    }
+    
+    .export-post.quote-card .person-title {
+      font-size: 28px;
+      margin-top: 15px;
+    }
+    
+    .export-post.quote-card .logo {
+      bottom: 35px;
+      right: 50px;
+      font-size: 26px;
+    }
+    
+    /* Export Silhouette Card */
+    .export-post.silhouette-card .series-badge {
+      top: 50px;
+      left: 50px;
+      padding: 20px 40px;
+      font-size: 28px;
+    }
+    
+    .export-post.silhouette-card .silhouette {
+      bottom: 280px;
+      width: 500px;
+      height: 500px;
+    }
+    
+    .export-post.silhouette-card .field-icon {
+      top: 180px;
+      right: 80px;
+      font-size: 140px;
+    }
+    
+    .export-post.silhouette-card .info-area {
+      padding: 70px;
+    }
+    
+    .export-post.silhouette-card .person-name {
+      font-size: 72px;
+      margin-bottom: 15px;
+    }
+    
+    .export-post.silhouette-card .person-title {
+      font-size: 32px;
+    }
+    
+    .export-post.silhouette-card .logo {
+      bottom: 30px;
+      right: 45px;
+      font-size: 26px;
+    }
+    
+    /* Export Field Card */
+    .export-post.field-card .series-badge {
+      top: 50px;
+      left: 50px;
+      padding: 20px 40px;
+      font-size: 28px;
+    }
+    
+    .export-post.field-card .big-icon {
+      font-size: 350px;
+    }
+    
+    .export-post.field-card .info-area {
+      padding: 80px;
+    }
+    
+    .export-post.field-card .person-name {
+      font-size: 72px;
+      margin-bottom: 15px;
+    }
+    
+    .export-post.field-card .person-title {
+      font-size: 32px;
+    }
+    
+    .export-post.field-card .logo {
+      bottom: 30px;
+      right: 45px;
+      font-size: 26px;
+    }
+    
+    /* Export Name Card */
+    .export-post.name-card .series-badge {
+      top: 50px;
+      left: 50px;
+      padding: 20px 40px;
+      font-size: 28px;
+    }
+    
+    .export-post.name-card .big-name {
+      font-size: 120px;
+      padding: 0 80px;
+      margin-bottom: 40px;
+    }
+    
+    .export-post.name-card .person-title {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+    
+    .export-post.name-card .mini-quote {
+      font-size: 38px;
+      padding: 0 100px;
+    }
+    
+    .export-post.name-card .field-emoji {
+      bottom: 70px;
+      font-size: 100px;
+    }
+    
+    .export-post.name-card .logo {
+      bottom: 35px;
+      right: 50px;
+      font-size: 26px;
+    }
+    
+    /* Export Achievement Card */
+    .export-post.achievement-card {
+      padding: 80px;
+    }
+    
+    .export-post.achievement-card .series-badge {
+      padding: 20px 40px;
+      font-size: 28px;
+      margin-bottom: 50px;
+    }
+    
+    .export-post.achievement-card .person-name {
+      font-size: 80px;
+      margin-bottom: 15px;
+    }
+    
+    .export-post.achievement-card .person-title {
+      font-size: 36px;
+      margin-bottom: 60px;
+    }
+    
+    .export-post.achievement-card .achievements {
+      gap: 25px;
+    }
+    
+    .export-post.achievement-card .achievement {
+      padding: 35px 45px;
+      border-radius: 30px;
+      font-size: 36px;
+      gap: 25px;
+    }
+    
+    .export-post.achievement-card .achievement .check {
+      font-size: 45px;
+    }
+    
+    .export-post.achievement-card .logo {
+      bottom: 35px;
+      right: 50px;
+      font-size: 26px;
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #27AE60;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="calendar.html">📅 30-Day Calendar</a>
+    <a href="create.html">✨ Create Post</a>
+    <a href="spotlight-series.html">⭐ Spotlight Series</a>
+    <a href="spotlight-templates.html" class="active">🎨 Visual Templates</a>
+    <a href="story-templates.html">📱 Stories</a>
+  </nav>
+  
+  <header class="header">
+    <h1>🎨 Visual Templates</h1>
+    <p>No-photo templates for Spectrum Spotlight posts</p>
+  </header>
+  
+  <div class="container">
+    
+    <div class="controls">
+      <h3>✏️ Customize Your Post</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Person Name</label>
+          <input type="text" id="personName" value="Temple Grandin" oninput="updatePreviews()">
+        </div>
+        <div class="form-group">
+          <label>Title / Role</label>
+          <input type="text" id="personTitle" value="Scientist, Author & Autism Advocate" oninput="updatePreviews()">
+        </div>
+        <div class="form-group">
+          <label>Quote</label>
+          <input type="text" id="personQuote" value="Different, not less." oninput="updatePreviews()">
+        </div>
+        <div class="form-group">
+          <label>Field Icon (emoji)</label>
+          <input type="text" id="fieldIcon" value="🧬" oninput="updatePreviews()">
+        </div>
+        <div class="form-group">
+          <label>Series Type</label>
+          <select id="seriesType" onchange="updatePreviews()">
+            <option value="icon">🌟 Icons on the Spectrum</option>
+            <option value="parent">💜 Autism Parent Spotlight</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Achievements (one per line)</label>
+          <textarea id="achievements" oninput="updatePreviews()">World-renowned animal scientist
+Professor at Colorado State University
+TIME's 100 most influential people</textarea>
+        </div>
+      </div>
+    </div>
+    
+    <div class="preview-section">
+      
+      <!-- Quote Card -->
+      <div class="preview-card">
+        <div class="preview-header">
+          <h4>📝 Quote Card</h4>
+        </div>
+        <div class="preview-area">
+          <div class="quote-card icon-theme" id="preview-quote">
+            <span class="series-badge">🌟 Spectrum Spotlight</span>
+            <span class="big-quote">"</span>
+            <div class="quote-text">"Different, not less."</div>
+            <div class="person-name">Temple Grandin</div>
+            <div class="person-title">Scientist, Author & Autism Advocate</div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-download" onclick="downloadTemplate('quote')">📥 Download 1080×1080</button>
+        </div>
+      </div>
+      
+      <!-- Silhouette Card -->
+      <div class="preview-card">
+        <div class="preview-header">
+          <h4>👤 Silhouette</h4>
+        </div>
+        <div class="preview-area">
+          <div class="silhouette-card icon-theme" id="preview-silhouette">
+            <span class="series-badge">🌟 Spectrum Spotlight</span>
+            <span class="field-icon">🧬</span>
+            <div class="silhouette">
+              <svg viewBox="0 0 100 100">
+                <ellipse cx="50" cy="30" rx="22" ry="25"/>
+                <ellipse cx="50" cy="85" rx="35" ry="30"/>
+              </svg>
+            </div>
+            <div class="info-area">
+              <div class="person-name">Temple Grandin</div>
+              <div class="person-title">Scientist, Author & Autism Advocate</div>
+            </div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-download" onclick="downloadTemplate('silhouette')">📥 Download 1080×1080</button>
+        </div>
+      </div>
+      
+      <!-- Field Icon Card -->
+      <div class="preview-card">
+        <div class="preview-header">
+          <h4>🎯 Field Icon</h4>
+        </div>
+        <div class="preview-area">
+          <div class="field-card icon-theme" id="preview-field">
+            <span class="series-badge">🌟 Spectrum Spotlight</span>
+            <div class="icon-area">
+              <span class="big-icon">🧬</span>
+            </div>
+            <div class="info-area">
+              <div class="person-name">Temple Grandin</div>
+              <div class="person-title">Scientist, Author & Autism Advocate</div>
+            </div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-download" onclick="downloadTemplate('field')">📥 Download 1080×1080</button>
+        </div>
+      </div>
+      
+      <!-- Name Hero Card -->
+      <div class="preview-card">
+        <div class="preview-header">
+          <h4>✨ Name Hero</h4>
+        </div>
+        <div class="preview-area">
+          <div class="name-card icon-theme" id="preview-name">
+            <span class="series-badge">🌟 Spectrum Spotlight</span>
+            <div class="big-name">Temple Grandin</div>
+            <div class="person-title">Scientist, Author & Autism Advocate</div>
+            <div class="mini-quote">"Different, not less."</div>
+            <span class="field-emoji">🧬</span>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-download" onclick="downloadTemplate('name')">📥 Download 1080×1080</button>
+        </div>
+      </div>
+      
+      <!-- Achievement Card -->
+      <div class="preview-card">
+        <div class="preview-header">
+          <h4>🏆 Achievements</h4>
+        </div>
+        <div class="preview-area">
+          <div class="achievement-card icon-theme" id="preview-achievement">
+            <span class="series-badge">🌟 Spectrum Spotlight</span>
+            <div class="person-name">Temple Grandin</div>
+            <div class="person-title">Scientist, Author & Autism Advocate</div>
+            <div class="achievements">
+              <div class="achievement"><span class="check">✓</span> World-renowned animal scientist</div>
+              <div class="achievement"><span class="check">✓</span> Professor at Colorado State University</div>
+              <div class="achievement"><span class="check">✓</span> TIME's 100 most influential people</div>
+            </div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-download" onclick="downloadTemplate('achievement')">📥 Download 1080×1080</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Export container -->
+  <div class="export-container" id="export-container"></div>
+  
+  <div class="toast" id="toast">✓ Downloaded!</div>
+  
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script>
+    function updatePreviews() {
+      const name = document.getElementById('personName').value;
+      const title = document.getElementById('personTitle').value;
+      const quote = document.getElementById('personQuote').value;
+      const icon = document.getElementById('fieldIcon').value;
+      const type = document.getElementById('seriesType').value;
+      const achievements = document.getElementById('achievements').value.split('\n').filter(a => a.trim());
+      
+      const themeClass = type === 'icon' ? 'icon-theme' : 'parent-theme';
+      const badge = type === 'icon' ? '🌟 Spectrum Spotlight' : '💜 Autism Parent Spotlight';
+      
+      // Update Quote Card
+      const quoteCard = document.getElementById('preview-quote');
+      quoteCard.className = 'quote-card ' + themeClass;
+      quoteCard.querySelector('.series-badge').textContent = badge;
+      quoteCard.querySelector('.quote-text').textContent = '"' + quote + '"';
+      quoteCard.querySelector('.person-name').textContent = name;
+      quoteCard.querySelector('.person-title').textContent = title;
+      
+      // Update Silhouette Card
+      const silCard = document.getElementById('preview-silhouette');
+      silCard.className = 'silhouette-card ' + themeClass;
+      silCard.querySelector('.series-badge').textContent = badge;
+      silCard.querySelector('.field-icon').textContent = icon;
+      silCard.querySelector('.person-name').textContent = name;
+      silCard.querySelector('.person-title').textContent = title;
+      
+      // Update Field Card
+      const fieldCard = document.getElementById('preview-field');
+      fieldCard.className = 'field-card ' + themeClass;
+      fieldCard.querySelector('.series-badge').textContent = badge;
+      fieldCard.querySelector('.big-icon').textContent = icon;
+      fieldCard.querySelector('.person-name').textContent = name;
+      fieldCard.querySelector('.person-title').textContent = title;
+      
+      // Update Name Card
+      const nameCard = document.getElementById('preview-name');
+      nameCard.className = 'name-card ' + themeClass;
+      nameCard.querySelector('.series-badge').textContent = badge;
+      nameCard.querySelector('.big-name').textContent = name;
+      nameCard.querySelector('.person-title').textContent = title;
+      nameCard.querySelector('.mini-quote').textContent = '"' + quote + '"';
+      nameCard.querySelector('.field-emoji').textContent = icon;
+      
+      // Update Achievement Card
+      const achCard = document.getElementById('preview-achievement');
+      achCard.className = 'achievement-card ' + themeClass;
+      achCard.querySelector('.series-badge').textContent = badge;
+      achCard.querySelector('.person-name').textContent = name;
+      achCard.querySelector('.person-title').textContent = title;
+      const achContainer = achCard.querySelector('.achievements');
+      achContainer.innerHTML = achievements.slice(0, 3).map(a => 
+        `<div class="achievement"><span class="check">✓</span> ${a}</div>`
+      ).join('');
+    }
+    
+    async function downloadTemplate(templateType) {
+      const name = document.getElementById('personName').value;
+      const title = document.getElementById('personTitle').value;
+      const quote = document.getElementById('personQuote').value;
+      const icon = document.getElementById('fieldIcon').value;
+      const type = document.getElementById('seriesType').value;
+      const achievements = document.getElementById('achievements').value.split('\n').filter(a => a.trim());
+      
+      const themeClass = type === 'icon' ? 'icon-theme' : 'parent-theme';
+      const badge = type === 'icon' ? '🌟 Spectrum Spotlight' : '💜 Autism Parent Spotlight';
+      
+      const exportContainer = document.getElementById('export-container');
+      let html = '';
+      
+      if (templateType === 'quote') {
+        html = `
+          <div class="export-post quote-card ${themeClass}" id="export-temp">
+            <span class="series-badge">${badge}</span>
+            <span class="big-quote">"</span>
+            <div class="quote-text">"${quote}"</div>
+            <div class="person-name">${name}</div>
+            <div class="person-title">${title}</div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        `;
+      } else if (templateType === 'silhouette') {
+        html = `
+          <div class="export-post silhouette-card ${themeClass}" id="export-temp">
+            <span class="series-badge">${badge}</span>
+            <span class="field-icon">${icon}</span>
+            <div class="silhouette">
+              <svg viewBox="0 0 100 100">
+                <ellipse cx="50" cy="30" rx="22" ry="25"/>
+                <ellipse cx="50" cy="85" rx="35" ry="30"/>
+              </svg>
+            </div>
+            <div class="info-area">
+              <div class="person-name">${name}</div>
+              <div class="person-title">${title}</div>
+            </div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        `;
+      } else if (templateType === 'field') {
+        html = `
+          <div class="export-post field-card ${themeClass}" id="export-temp">
+            <span class="series-badge">${badge}</span>
+            <div class="icon-area">
+              <span class="big-icon">${icon}</span>
+            </div>
+            <div class="info-area">
+              <div class="person-name">${name}</div>
+              <div class="person-title">${title}</div>
+            </div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        `;
+      } else if (templateType === 'name') {
+        html = `
+          <div class="export-post name-card ${themeClass}" id="export-temp">
+            <span class="series-badge">${badge}</span>
+            <div class="big-name">${name}</div>
+            <div class="person-title">${title}</div>
+            <div class="mini-quote">"${quote}"</div>
+            <span class="field-emoji">${icon}</span>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        `;
+      } else if (templateType === 'achievement') {
+        const achHtml = achievements.slice(0, 3).map(a => 
+          `<div class="achievement"><span class="check">✓</span> ${a}</div>`
+        ).join('');
+        html = `
+          <div class="export-post achievement-card ${themeClass}" id="export-temp">
+            <span class="series-badge">${badge}</span>
+            <div class="person-name">${name}</div>
+            <div class="person-title">${title}</div>
+            <div class="achievements">${achHtml}</div>
+            <span class="logo">@spectrum_unlocked</span>
+          </div>
+        `;
+      }
+      
+      exportContainer.innerHTML = html;
+      
+      const exportEl = document.getElementById('export-temp');
+      
+      const canvas = await html2canvas(exportEl, {
+        width: 1080,
+        height: 1080,
+        scale: 1,
+        useCORS: true,
+        backgroundColor: null
+      });
+      
+      const link = document.createElement('a');
+      const safeName = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      link.download = `spotlight-${templateType}-${safeName}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      
+      exportContainer.innerHTML = '';
+      showToast('✓ Downloaded!');
+    }
+    
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+    
+    // Initialize
+    updatePreviews();
+  </script>
+</body>
+</html>

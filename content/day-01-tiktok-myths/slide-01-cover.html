@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E74C3C; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #E8B86D; bottom: 100px; left: -100px; }
+    .badge { 
+      background: #E74C3C; 
+      padding: 12px 30px; 
+      border-radius: 30px; 
+      font-size: 18px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 72px; 
+      font-weight: 800; 
+      line-height: 1.1; 
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
+    .highlight { color: #E74C3C; }
+    .highlight-gold { color: #E8B86D; }
+    .subtitle {
+      font-size: 28px;
+      opacity: 0.85;
+      margin-bottom: 50px;
+      max-width: 800px;
+      line-height: 1.4;
+    }
+    .emoji { font-size: 100px; margin-bottom: 40px; }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.7;
+      margin-top: 30px;
+    }
+    .arrow { font-size: 30px; animation: bounce 1s infinite; }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="badge">🚨 Myth Alert</div>
+  
+  <div class="main-title">
+    3 Things <span class="highlight">TikTok</span> Gets <span class="highlight-gold">WRONG</span> About Autism
+  </div>
+  
+  <div class="subtitle">
+    A new study found over 50% of autism content on social media is misleading. Let's set the record straight.
+  </div>
+  
+  <div class="swipe-cta">
+    <span>Swipe to learn the truth</span>
+    <span class="arrow">→</span>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

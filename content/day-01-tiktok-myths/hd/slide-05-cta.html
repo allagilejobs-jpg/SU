@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 2160px; height: 2700px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 120px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 1000px; height: 1000px; background: #4A90A4; top: -300px; right: -300px; }
+    .bg-shape-2 { width: 700px; height: 700px; background: #E8B86D; bottom: 100px; left: -200px; }
+    .emoji { font-size: 200px; margin-bottom: 80px; }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 116px; 
+      font-weight: 800; 
+      line-height: 1.2; 
+      margin-bottom: 80px;
+      max-width: 1800px;
+    }
+    .highlight { color: #E8B86D; }
+    .subtitle {
+      font-size: 52px;
+      opacity: 0.85;
+      margin-bottom: 100px;
+      max-width: 1600px;
+      line-height: 1.5;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      padding: 70px 120px;
+      border-radius: 40px;
+      margin-bottom: 80px;
+    }
+    .cta-text {
+      font-size: 56px;
+      font-weight: 700;
+    }
+    .actions {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .action-item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 44px;
+      font-weight: 600;
+      opacity: 0.8;
+    }
+    .footer { position: absolute; bottom: 80px; text-align: center; }
+    .handle { font-size: 44px; opacity: 0.6; }
+    .follow-text { font-size: 32px; opacity: 0.4; margin-bottom: 16px; letter-spacing: 4px; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="emoji">💙</div>
+  
+  <div class="main-title">
+    Be a <span class="highlight">Trusted Source</span>
+  </div>
+  
+  <div class="subtitle">
+    Don't let misinformation spread. Share accurate information from evidence-based sources.
+  </div>
+  
+  <div class="cta-box">
+    <div class="cta-text">💾 Save this to share with someone who needs it</div>
+  </div>
+  
+  <div class="actions">
+    <div class="action-item">📤 Share</div>
+    <div class="action-item">💬 Comment</div>
+    <div class="action-item">➕ Follow for more</div>
+  </div>
+  
+  <div class="footer">
+    <div class="follow-text">FOLLOW FOR EVIDENCE-BASED AUTISM INFO</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

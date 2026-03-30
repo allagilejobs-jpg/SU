@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #0f3460 50%, #16213e 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; }
+    .bg-shape-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(74,144,164,0.25) 0%, transparent 70%); top: -150px; right: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(232,184,109,0.2) 0%, transparent 70%); bottom: -100px; left: -100px; }
+    .emoji-row { font-size: 80px; margin-bottom: 40px; letter-spacing: 15px; }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 58px; 
+      font-weight: 800; 
+      line-height: 1.2; 
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
+    .highlight { color: #E8B86D; }
+    .highlight-blue { color: #4A90A4; }
+    .subtitle {
+      font-size: 26px;
+      opacity: 0.85;
+      margin-bottom: 50px;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+    .cta-primary {
+      background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%);
+      color: #1a1a2e;
+      padding: 28px 55px;
+      border-radius: 20px;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px rgba(232, 184, 109, 0.3);
+    }
+    .cta-secondary {
+      background: rgba(74, 144, 164, 0.2);
+      border: 2px solid rgba(74, 144, 164, 0.4);
+      padding: 20px 45px;
+      border-radius: 16px;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .notification {
+      font-size: 20px;
+      opacity: 0.6;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 22px; opacity: 0.7; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="emoji-row">♾️💙🎉</div>
+  
+  <div class="main-title">
+    <span class="highlight-blue">April</span> Is Going to Be <span class="highlight">Amazing</span>
+  </div>
+  
+  <div class="subtitle">
+    New content every single day. Education, support, community, and celebration. You don't want to miss this.
+  </div>
+  
+  <div class="cta-primary">➕ Follow for daily content</div>
+  
+  <div class="cta-secondary">💾 Save • 🔔 Turn on notifications</div>
+  
+  <div class="notification">
+    🔔 Tomorrow: World Autism Acceptance Day — our biggest post yet!
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

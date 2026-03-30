@@ -1,0 +1,9 @@
+file 'graphics/tiktok-01-headphones.png'
+duration 16
+file 'graphics/tiktok-02-sunglasses.png'
+duration 10
+file 'graphics/tiktok-03-fidgets.png'
+duration 7
+file 'graphics/tiktok-04-chewy.png'
+duration 19
+file 'graphics/tiktok-04-chewy.png'

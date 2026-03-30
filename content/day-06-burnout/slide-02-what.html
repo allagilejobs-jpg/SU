@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; top: -100px; left: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      color: #E8B86D;
+    }
+    .definition-box {
+      background: rgba(231, 76, 60, 0.12);
+      border: 2px solid rgba(231, 76, 60, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+      margin-bottom: 40px;
+    }
+    .definition {
+      font-size: 26px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .vs-box {
+      display: flex;
+      gap: 25px;
+      max-width: 850px;
+    }
+    .vs-item {
+      flex: 1;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: left;
+    }
+    .vs-item.not { background: rgba(231, 76, 60, 0.15); }
+    .vs-item.is { background: rgba(39, 174, 96, 0.15); }
+    .vs-label { font-weight: 700; font-size: 18px; margin-bottom: 12px; }
+    .vs-item.not .vs-label { color: #E74C3C; }
+    .vs-item.is .vs-label { color: #27AE60; }
+    .vs-list { font-size: 18px; line-height: 1.8; opacity: 0.9; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Understanding</div>
+  <div class="title">What Is Autistic Burnout?</div>
+  
+  <div class="definition-box">
+    <div class="definition">
+      A state of chronic exhaustion caused by the cumulative effect of navigating a neurotypical world without adequate support or accommodation.
+    </div>
+  </div>
+  
+  <div class="vs-box">
+    <div class="vs-item not">
+      <div class="vs-label">❌ It's NOT:</div>
+      <div class="vs-list">
+        • Regular tiredness<br>
+        • Laziness<br>
+        • Just depression<br>
+        • A choice
+      </div>
+    </div>
+    <div class="vs-item is">
+      <div class="vs-label">✅ It IS:</div>
+      <div class="vs-list">
+        • Neurological exhaustion<br>
+        • Loss of skills<br>
+        • Identity crisis<br>
+        • Recoverable (with support)
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 4</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

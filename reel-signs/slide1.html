@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1080px; height: 1920px; font-family: 'Poppins', sans-serif; color: white; }
+    .slide {
+      width: 1080px; height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 80px; position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 600px; height: 600px; background: #4A90A4; top: -200px; right: -200px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #E8B86D; bottom: 300px; left: -150px; }
+    .hook-text {
+      font-size: 32px; text-transform: uppercase; letter-spacing: 5px;
+      opacity: 0.7; margin-bottom: 40px;
+    }
+    .main-text {
+      font-family: 'Playfair Display', serif; font-size: 90px; font-weight: 800;
+      line-height: 1.15; max-width: 900px;
+    }
+    .highlight { color: #E8B86D; }
+    .emoji { font-size: 100px; margin-top: 60px; }
+    .swipe { position: absolute; bottom: 150px; font-size: 24px; opacity: 0.5; letter-spacing: 3px; }
+    .logo { position: absolute; bottom: 60px; font-size: 26px; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="hook-text">Parents, watch for these</div>
+    <div class="main-text">Early signs of <span class="highlight">autism</span> you might have missed</div>
+    <div class="emoji">👀</div>
+    <div class="swipe">WATCH TO LEARN →</div>
+    <span class="logo">@spectrum_unlocked</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 5px;
+      opacity: 0.5;
+      margin-bottom: 30px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 58px; 
+      font-weight: 800; 
+      margin-bottom: 50px;
+    }
+    .highlight { color: #E8B86D; }
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      max-width: 900px;
+    }
+    .value-card {
+      background: rgba(232, 184, 109, 0.1);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+    .value-icon { font-size: 50px; margin-bottom: 15px; }
+    .value-title { font-size: 24px; font-weight: 700; color: #E8B86D; margin-bottom: 10px; }
+    .value-desc { font-size: 18px; opacity: 0.8; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Every Life Has</div>
+  <div class="title"><span class="highlight">Value</span></div>
+  
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🌟</div>
+      <div class="value-title">Unique Strengths</div>
+      <div class="value-desc">Different perspectives drive innovation and creativity</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💡</div>
+      <div class="value-title">Deep Knowledge</div>
+      <div class="value-desc">Special interests become expertise and passion</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💙</div>
+      <div class="value-title">Authentic Connection</div>
+      <div class="value-desc">Honest, genuine relationships without pretense</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🔍</div>
+      <div class="value-title">Attention to Detail</div>
+      <div class="value-desc">Noticing what others miss, solving complex problems</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

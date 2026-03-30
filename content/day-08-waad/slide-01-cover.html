@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #0f3460 50%, #16213e 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; }
+    .bg-shape-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(74,144,164,0.3) 0%, transparent 70%); top: -200px; right: -200px; }
+    .bg-shape-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,184,109,0.25) 0%, transparent 70%); bottom: -100px; left: -150px; }
+    .bg-shape-3 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(155,89,182,0.2) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .date-badge { 
+      background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%);
+      color: #1a1a2e;
+      padding: 15px 40px; 
+      border-radius: 35px; 
+      font-size: 22px; 
+      font-weight: 800; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(232, 184, 109, 0.3);
+    }
+    .infinity { font-size: 120px; margin-bottom: 30px; }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 64px; 
+      font-weight: 800; 
+      line-height: 1.15; 
+      margin-bottom: 25px;
+      max-width: 950px;
+    }
+    .highlight { color: #E8B86D; }
+    .highlight-blue { color: #4A90A4; }
+    .un-theme {
+      font-size: 26px;
+      font-style: italic;
+      opacity: 0.8;
+      margin-bottom: 40px;
+      max-width: 800px;
+    }
+    .subtitle {
+      font-size: 28px;
+      opacity: 0.9;
+      max-width: 850px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+    .arrow { font-size: 30px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+  
+  <div class="date-badge">🌍 April 2, 2026</div>
+  
+  <div class="infinity">♾️💙</div>
+  
+  <div class="main-title">
+    World <span class="highlight-blue">Autism</span> <span class="highlight">Acceptance</span> Day
+  </div>
+  
+  <div class="un-theme">
+    UN Theme 2026: "Autism and Humanity — Every Life Has Value"
+  </div>
+  
+  <div class="subtitle">
+    Today we don't just spread awareness.<br>We celebrate humanity. We embrace difference. We choose acceptance.
+  </div>
+  
+  <div class="swipe-cta">
+    <span>Swipe to celebrate with us</span>
+    <span class="arrow">→</span>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

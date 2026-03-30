@@ -1,0 +1,13 @@
+file 'slides/00-hook.png'
+duration 3
+file 'slides/01-headphones.png'
+duration 13
+file 'slides/02-sunglasses.png'
+duration 10
+file 'slides/03-fidgets.png'
+duration 7
+file 'slides/04-chewy.png'
+duration 12
+file 'slides/05-cta.png'
+duration 7
+file 'slides/05-cta.png'

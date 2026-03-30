@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    width: 1080px; height: 1920px; 
+    font-family: 'Poppins', sans-serif; color: white;
+    background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    position: relative; overflow: hidden;
+  }
+  .bg-shape { position: absolute; border-radius: 50%; }
+  .bg-shape-1 { width: 500px; height: 500px; background: rgba(74, 144, 164, 0.08); top: -150px; right: -150px; }
+  .bg-shape-2 { width: 500px; height: 500px; background: rgba(74, 144, 164, 0.08); bottom: -150px; left: -150px; }
+  .caption-bar {
+    position: absolute; bottom: 200px; left: 40px; right: 40px;
+    background: rgba(0,0,0,0.75); padding: 24px 30px;
+    text-align: center; border-radius: 12px;
+  }
+  .caption-text {
+    font-size: 36px; font-weight: 600; line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  }
+</style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;padding:0 50px;">
+      <div style="font-size:180px;font-weight:900;color:#E8B86D;line-height:1;margin-bottom:20px;">4</div>
+      <div style="font-family:'Playfair Display',serif;font-size:90px;font-weight:800;line-height:1.1;margin-bottom:40px;"><span style="color:#E8B86D;">Sensory</span> Hacks</div>
+      <div style="font-size:36px;opacity:0.8;font-weight:500;margin-bottom:60px;">That Actually Work</div>
+      <div style="font-size:80px;margin-bottom:40px;">🎧 🕶️ 🌀 🍬</div>
+    </div>
+    <div style="position:absolute;bottom:100px;left:0;right:0;text-align:center;font-size:28px;opacity:0.6;">@spectrum_unlocked</div>
+  
+  <div class="caption-bar">
+    <div class="caption-text">Sensory hacks that actually work.</div>
+  </div>
+</body>
+</html>

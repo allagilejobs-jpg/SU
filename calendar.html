@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spectrum Unlocked — 30-Day Content Calendar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+    
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    
+    .main-nav a:hover {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      padding: 30px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    
+    .header p { opacity: 0.9; font-size: 0.9rem; }
+    
+    .nav {
+      background: #16213e;
+      padding: 15px 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #0f3460;
+      position: sticky;
+      top: 88px;
+      z-index: 99;
+    }
+    
+    .nav a {
+      color: #4A90A4;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: #0f3460;
+      transition: all 0.2s;
+    }
+    
+    .nav a:hover, .nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    .week-header {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 30px 0 20px 0;
+      text-align: center;
+    }
+    
+    .week-header h2 {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+    
+    .week-header p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+    
+    .day-card {
+      background: #16213e;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    
+    .day-header {
+      background: #0f3460;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .day-num {
+      background: #E8B86D;
+      color: #1a1a2e;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    
+    .day-info {
+      flex: 1;
+      margin-left: 15px;
+    }
+    
+    .day-info h3 {
+      font-size: 1rem;
+      color: #E8B86D;
+    }
+    
+    .day-info .template-type {
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+    
+    .best-time {
+      background: rgba(74, 144, 164, 0.3);
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      color: #4A90A4;
+    }
+    
+    .day-content {
+      padding: 20px;
+    }
+    
+    .graphic-instructions {
+      background: #0f3460;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .graphic-instructions h4 {
+      color: #E8B86D;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .graphic-instructions p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    
+    .caption-box {
+      background: #0a1628;
+      border: 1px solid #0f3460;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #ddd;
+      white-space: pre-wrap;
+      position: relative;
+    }
+    
+    .caption-box .hashtags {
+      color: #4A90A4;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #27AE60;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .copy-btn:hover {
+      background: #2ecc71;
+      transform: scale(1.05);
+    }
+    
+    .editor-link {
+      display: inline-block;
+      margin-top: 15px;
+      background: linear-gradient(135deg, #9B59B6, #8E44AD);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: 0 5px 20px rgba(155, 89, 182, 0.3);
+      transition: all 0.2s;
+    }
+    
+    .editor-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(155, 89, 182, 0.4);
+    }
+    
+    /* Story Section Styles */
+    .story-section {
+      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .story-section h4 {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .story-section h4::before {
+      content: "📱";
+    }
+    
+    .story-ideas {
+      display: grid;
+      gap: 12px;
+    }
+    
+    .story-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 12px 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .story-item .story-time {
+      background: rgba(255,255,255,0.2);
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    
+    .story-item .story-content {
+      flex: 1;
+    }
+    
+    .story-item .story-type {
+      font-size: 0.75rem;
+      opacity: 0.8;
+      margin-bottom: 4px;
+    }
+    
+    .story-item .story-text {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    
+    .story-section .create-stories-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
+    }
+    
+    .story-section .create-stories-btn:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+    }
+    
+    .story-item .copy-story-btn {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    
+    .story-item .copy-story-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .rest-day {
+      background: #1a2a3e;
+      border: 2px dashed #2a4a6e;
+    }
+    
+    .rest-day .day-header {
+      background: transparent;
+    }
+    
+    .rest-day .day-num {
+      background: #4A90A4;
+      opacity: 0.5;
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #27AE60;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    
+    .toast.show { opacity: 1; }
+    
+    .legend {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #16213e;
+      border-radius: 10px;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .legend-dot.quote { background: #4A90A4; }
+    .legend-dot.tip { background: #E8B86D; }
+    .legend-dot.list { background: #2C5F6E; }
+    .legend-dot.myth { background: #E74C3C; }
+    .legend-dot.resource { background: #764ba2; }
+    .legend-dot.emotional { background: #f8f4f0; border: 1px solid #999; }
+    .legend-dot.carousel { background: #27AE60; }
+    .legend-dot.story { background: #9B59B6; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📅 30-Day Content Calendar</h1>
+  <p>Your complete posting schedule with ready-to-copy captions</p>
+  <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 8px;">📊 Aligned with <a href="research/2026-03-25-instagram.html" style="color: #E8B86D;">Instagram Research</a> — Carousels 9-10am Wed/Thurs (PEAK), 8-10 slides, Reels included</p>
+</div>
+
+<nav class="main-nav">
+  <a href="index.html">🏠 Dashboard</a>
+    <a href="content-hub.html">📁 Content</a>
+  <a href="calendar.html" class="active">📅 30-Day Calendar</a>
+  <a href="create.html">✨ Create</a>
+  <a href="carousel.html">📚 Carousels</a>
+    <a href="editor.html">🎨 Editor</a>
+    <a href="sensory-hacks/">🧠 Sensory</a>
+    <a href="spotlight-series.html">⭐ Spotlight</a>
+  <a href="story-templates.html">📱 Stories</a>
+    <a href="guides.html">📖 Guides</a>
+</nav>
+
+<div class="nav">
+  <a href="#week1" class="week-link active">Week 1</a>
+  <a href="#week2" class="week-link">Week 2</a>
+  <a href="#week3" class="week-link">Week 3</a>
+  <a href="#week4" class="week-link">Week 4</a>
+</div>
+
+<div class="container">
+  
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot quote"></div> Quote</div>
+    <div class="legend-item"><div class="legend-dot tip"></div> Tip</div>
+    <div class="legend-item"><div class="legend-dot list"></div> List</div>
+    <div class="legend-item"><div class="legend-dot myth"></div> Myth Buster</div>
+    <div class="legend-item"><div class="legend-dot resource"></div> Resource</div>
+    <div class="legend-item"><div class="legend-dot emotional"></div> Emotional</div>
+    <div class="legend-item"><div class="legend-dot carousel"></div> Carousel</div>
+    <div class="legend-item"><div class="legend-dot story"></div> 📱 Stories</div>
+  </div>
+
+  <!-- WEEK 1 -->
+  <div class="week-header" id="week1">
+    <h2>📆 Week 1: Introduction & Awareness</h2>
+    <p>Building connection and establishing your voice</p>
+  </div>
+  
+  <!-- Day 1 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">1</div>
+      <div class="day-info">
+        <h3>Monday — Introduction Post</h3>
+        <div class="template-type">📝 Quote Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Quote:</strong> "When my child was diagnosed, I did what every parent does — I Googled frantically at 2 AM. I built Spectrum Unlocked so you don't have to."</p>
+        <p><strong>Attribution:</strong> — A parent who's been there</p>
+      </div>
+      <div class="caption-box" id="caption-d1">
+When my child was diagnosed, I did what every parent does — I Googled frantically at 2 AM, overwhelmed by medical jargon and conflicting advice.
+
+I wish someone had just handed me a simple guide and said: "Here. Start here."
+
+That's why I built Spectrum Unlocked.
+
+Real tools. Real guidance. No jargon, no judgment.
+
+Just one parent helping another. 💙
+
+<span class="hashtags">#AutismParent #AutismMom #AutismDad #AutismAwareness #AutismSupport #AutismCommunity #AutismFamily #AutismAdvocate #AutismAcceptance #SpecialNeeds #Neurodiversity #AutismLife</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d1')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=1" class="editor-link">🚀 Create Post</a>
+      
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"When did you first notice something was different?" — Before age 2 / Age 2-4 / After age 4</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share today's post to stories with "New post! The story behind why I started this page 💙"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">💬 Quote Template</div>
+              <div class="story-text">"The diagnosis isn't the end of the story. It's just the beginning of understanding." @spectrum_unlocked</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 2 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">2</div>
+      <div class="day-info">
+        <h3>Tuesday — Educational Tip</h3>
+        <div class="template-type">💡 Tip Template</div>
+      </div>
+      <div class="best-time">🕐 12-1 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> Therapy waitlists can be 6-12 months long</p>
+        <p><strong>Body:</strong> Get on multiple waitlists NOW — even before you're 100% sure which therapy is right. You can always decline when they call.</p>
+      </div>
+      <div class="caption-box" id="caption-d2">
+PSA for newly diagnosed families: 👇
+
+Therapy waitlists can be 6-12 months long.
+
+Get on multiple waitlists NOW — even before you're 100% sure which therapy is right.
+
+You can always say no when they call. But you can't get that time back.
+
+This is the advice I wish someone gave me on day one.
+
+Save this. Share with a parent who needs it. 💙
+
+<span class="hashtags">#AutismDiagnosis #AutismTips #AutismTherapy #EarlyIntervention #AutismParent #AutismMom #AutismDad #AutismSupport #NewlyDiagnosed #AutismResources #AutismAdvice #SpecialNeedsParenting</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d2')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=2" class="editor-link">🚀 Create Post</a>
+      
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Pro tip: When calling for therapy waitlists, ask about cancellation lists too! Sometimes you can get in sooner."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"ABA vs OT — which one did you start with first?" (engagement question)</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share the tip post: "Save this if you're on ANY waitlists right now 👆"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 3 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">3</div>
+      <div class="day-info">
+        <h3>Wednesday — Emotional Support</h3>
+        <div class="template-type">💙 Emotional Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Main:</strong> You're doing better than you think.</p>
+        <p><strong>Sub:</strong> The fact that you're here, learning, searching for resources — that's love in action. Your child is lucky to have you.</p>
+      </div>
+      <div class="caption-box" id="caption-d3">
+Hey you. Yes, you — the one reading this at midnight, wondering if you're doing enough.
+
+You're doing better than you think. 💙
+
+The fact that you're here, searching, learning, advocating — that's love in action.
+
+Your child is lucky to have you in their corner.
+
+Save this for when you need the reminder. ❤️
+
+<span class="hashtags">#AutismParent #AutismMom #AutismDad #YoureDoingGreat #AutismSupport</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d3')">📋 Copy</button>
+      </div>
+      
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Your worth as a parent isn't measured by your child's milestones. It's measured by your love."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"How are you REALLY doing today?" — Thriving ✨ / Surviving 💪 / Struggling 🥺 / Send coffee ☕</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share evening post: "Tag a parent who needs to see this tonight 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 4 -->
+  <div class="day-card rest-day">
+    <div class="day-header">
+      <div class="day-num">4</div>
+      <div class="day-info">
+        <h3>Thursday — Rest Day</h3>
+        <div class="template-type">📱 Engage with comments & DMs</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <p style="color: #888;">No posting today! Use this time to:</p>
+      <ul style="color: #aaa; margin: 15px 0 0 20px; line-height: 2;">
+        <li>Reply to comments on previous posts</li>
+        <li>Respond to DMs</li>
+        <li>Engage with other autism parent accounts</li>
+        <li>Save content ideas for later</li>
+      </ul>
+      
+      <div class="story-section">
+        <h4>Stories for Today (Rest day = casual stories!)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">Any</span>
+            <div class="story-content">
+              <div class="story-type">🎬 Behind the Scenes</div>
+              <div class="story-text">Share a real moment from your day — messy house, therapy drive, small win. Keep it authentic!</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Any</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"What content do you want more of?" — Tips / Emotional support / Resources / Myth busters</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">💬 Quote Template</div>
+              <div class="story-text">"Rest is productive. You can't pour from an empty cup." — Repost if you needed this today</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 5 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">5</div>
+      <div class="day-info">
+        <h3>Friday — Resource Promo</h3>
+        <div class="template-type">📚 Resource Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> The First 48 Hours Post-Diagnosis</p>
+        <p><strong>Checklist:</strong> ✓ Emotional processing tips ✓ The 3 most important calls ✓ How to talk to your child ✓ What NOT to do</p>
+      </div>
+      <div class="caption-box" id="caption-d5">
+FREE GUIDE: The First 48 Hours Post-Diagnosis 📚
+
+Stop the frantic 2am Googling. This guide gives you:
+
+✓ Emotional processing tips (you matter too)
+✓ The 3 most important calls to make
+✓ How to talk to your child about it
+✓ What NOT to do (avoid the Google spiral!)
+
+Calm. Step-by-step. No overwhelm.
+
+Link in bio → spectrumunlocked.com 💙
+
+<span class="hashtags">#FreeResource #AutismResources #AutismDiagnosis #AutismParent #NewlyDiagnosed</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d5')">📋 Copy</button>
+      </div>
+      
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🔗 Link/Resource</div>
+              <div class="story-text">"Free guide dropping today! 📚 The First 48 Hours Post-Diagnosis — everything I wish I had."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Did you feel prepared after your child's diagnosis?" — Yes / No / I'm still figuring it out</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share post to stories: "Grab the free guide in my bio! Link expires soon 👆"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 6 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">6</div>
+      <div class="day-info">
+        <h3>Saturday — List Post</h3>
+        <div class="template-type">📋 List Template</div>
+      </div>
+      <div class="best-time">🕐 10-11 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> 5 Things I Wish I Knew After the Diagnosis</p>
+        <p><strong>Items:</strong> 1. Therapy waitlists are LONG 2. Your pediatrician isn't always the expert 3. IEPs are negotiable 4. Other autism parents become your village 5. Your child is still amazing</p>
+      </div>
+      <div class="caption-box" id="caption-d6">
+5 things I wish I knew after my child's diagnosis:
+
+1️⃣ Therapy waitlists are LONG — get on them NOW
+2️⃣ Your pediatrician isn't always the expert — find specialists
+3️⃣ IEPs are negotiable — advocate loudly
+4️⃣ Other autism parents will become your village
+5️⃣ Your child is still the same amazing kid they were yesterday
+
+What would YOU add to this list? Drop it below 👇
+
+<span class="hashtags">#AutismParent #AutismAdvice #AutismCommunity #AutismMom #AutismDad</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d6')">📋 Copy</button>
+      </div>
+      
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Saturday tip: Prep for the week by writing down 3 wins from this week — no matter how small!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"Weekend plans: Cozy day at home OR Sensory-friendly outing?"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share list post: "Which of these surprised you most? Comment below! 👇"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 7 -->
+  <div class="day-card rest-day">
+    <div class="day-header">
+      <div class="day-num">7</div>
+      <div class="day-info">
+        <h3>Sunday — Rest Day</h3>
+        <div class="template-type">📱 Post a Story instead (optional)</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <p style="color: #888;">Light day! Optional: Post a quick Story using the Story template to remind people about your free resources.</p>
+      
+      <div class="story-section">
+        <h4>Stories for Today (Sunday vibes - keep it light!)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Sunday reminder: You made it through another week. That's not nothing. 💜"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">🎬 Behind the Scenes</div>
+              <div class="story-text">Share a cozy Sunday moment — pajamas all day? Favorite snack? Zero judgment zone!</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔗 Link/Resource</div>
+              <div class="story-text">"In case you missed it this week — free resources in my bio! Start fresh Monday 💪"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 2 -->
+  <div class="week-header" id="week2">
+    <h2>📆 Week 2: Education & Myth Busting</h2>
+    <p>Establishing expertise and building trust</p>
+  </div>
+  
+  <!-- Day 8 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">8</div>
+      <div class="day-info">
+        <h3>Monday — Myth Buster</h3>
+        <div class="template-type">❌✅ Myth Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Myth:</strong> "Autism is caused by bad parenting"</p>
+        <p><strong>Truth:</strong> Autism is a neurological difference. It's how your child's brain is wired — not caused by anything you did.</p>
+      </div>
+      <div class="caption-box" id="caption-d8">
+Let's clear this up once and for all:
+
+❌ MYTH: "Autism is caused by bad parenting"
+
+✅ TRUTH: Autism is a neurological difference. It's how your child's brain is wired — not caused by vaccines, screen time, or anything you did.
+
+If anyone ever implies otherwise, hand them a science textbook and walk away. 📚
+
+You're a great parent. Full stop.
+
+<span class="hashtags">#AutismMyths #AutismFacts #AutismAwareness #AutismAcceptance #AutismParent</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d8')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=8" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"You didn't cause your child's autism. Science says so. 📚"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Ever been blamed?" — Yes 😔 / No / Working through it</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share myth buster: "This needed to be said 💪"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 9 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">9</div>
+      <div class="day-info">
+        <h3>Tuesday — Tip Post</h3>
+        <div class="template-type">💡 Tip Template</div>
+      </div>
+      <div class="best-time">🕐 12-1 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> Always request IEP meetings in WRITING</p>
+        <p><strong>Body:</strong> Email creates a paper trail. Schools are legally required to respond within a specific timeframe once you put it in writing.</p>
+      </div>
+      <div class="caption-box" id="caption-d9">
+IEP tip that changed everything for us: 👇
+
+Always request meetings in WRITING (email works!).
+
+Why?
+✓ Creates a paper trail
+✓ Schools MUST respond within a legal timeframe
+✓ Protects you if there's ever a dispute
+✓ Shows you mean business
+
+Screenshot this. You'll thank me later.
+
+<span class="hashtags">#IEPTips #AutismParent #SpecialEducation #IEPAdvocacy #AutismMom</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d9')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=9" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Your feelings are valid. Grief and love can coexist."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"What helps? Talking to parents OR Researching alone?"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share post: "Save for the hard days 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 10 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">10</div>
+      <div class="day-info">
+        <h3>Wednesday — Carousel Post</h3>
+        <div class="template-type">🎠 8-10 Slide Carousel</div>
+      </div>
+      <div class="best-time">🕐 9-10 AM ⭐ PEAK</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Use 8-10 carousel slides (optimal for engagement):</h4>
+        <p>1. Cover: "Just Got an Autism Diagnosis?" (hook with →)</p>
+        <p>2. Step 1: Take a breath</p>
+        <p>3. Step 2: Get on waitlists NOW</p>
+        <p>4. Step 3: Contact school district</p>
+        <p>5. Step 4: Find your people</p>
+        <p>6. Step 5: Take care of YOU</p>
+        <p>7. Bonus: What NOT to do</p>
+        <p>8. Bonus: The biggest mistake parents make</p>
+        <p>9. CTA: Save this + share with a parent who needs it</p>
+        <p>10. CTA: You've got this + website</p>
+      </div>
+      <div class="caption-box" id="caption-d10">
+Just got an autism diagnosis? Here's what to do THIS WEEK 👇
+
+Swipe through for 5 steps that actually help — not generic advice, but the things I wish someone told me on day one.
+
+Save this for later. Share it with a parent who needs it. 💙
+
+More free resources at spectrumunlocked.com (link in bio)
+
+<span class="hashtags">#AutismDiagnosis #AutismParent #NewlyDiagnosed #AutismMom #AutismDad</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d10')">📋 Copy</button>
+      </div>
+      <a href="carousel.html" class="editor-link" style="background: #27AE60;">🎠 Get All 7 Carousel Slides</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (BIG carousel day!)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">"🚨 New carousel dropping! 7 slides every newly diagnosed parent needs to see. Check my latest post!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Which slide was most helpful?" — Take a breath / Get on waitlists / Find your people / Take care of YOU</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">Share a behind-the-scenes of making the carousel: "I spent hours on this because I needed it 2 years ago!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Night</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">"In case you missed it! Swipe through my latest post — it's a good one 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 11 -->
+  <div class="day-card rest-day">
+    <div class="day-header">
+      <div class="day-num">11</div>
+      <div class="day-info">
+        <h3>Thursday — Rest Day</h3>
+        <div class="template-type">📱 Engage with carousel comments</div>
+    <div class="day-content">
+      <p style="color: #888;">Engage with all those carousel comments today!</p>
+      
+      <div class="story-section">
+        <h4>Stories for Today (Engagement day!)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🎬 Behind the Scenes</div>
+              <div class="story-text">"Reading all your comments from yesterday's carousel and 😭💙 You all get it."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Drop a 💙 if you saved yesterday's carousel for later!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">💬 Quote Template</div>
+              <div class="story-text">"The best thing about this community? Nobody judges. We all get it."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Day 12 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">12</div>
+      <div class="day-info">
+        <h3>Friday — Quote Post</h3>
+        <div class="template-type">📝 Quote Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Quote:</strong> "The moment after diagnosis, everything feels urgent. Breathe. You don't have to figure it all out today."</p>
+      </div>
+      <div class="caption-box" id="caption-d12">
+The moment after a diagnosis, everything feels urgent.
+
+"What therapy do we start?"
+"Should I tell the school?"
+"Is it my fault?"
+"Will they be okay?"
+
+Breathe. 🧘
+
+You don't have to figure it all out today.
+
+The diagnosis didn't change who your child is. It just gave you new information to help them thrive.
+
+One day at a time. 💙
+
+<span class="hashtags">#AutismDiagnosis #NewlyDiagnosed #AutismParent #AutismMom #AutismSupport</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d12')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=12" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Friday: You made it through another week. 💜"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Weekend plans:" — Therapy / Family / REST / All</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share quote: "Evening reminder 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 13 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">13</div>
+      <div class="day-info">
+        <h3>Saturday — Myth Buster #2</h3>
+        <div class="template-type">❌✅ Myth Template</div>
+      </div>
+      <div class="best-time">🕐 10-11 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Myth:</strong> "Autistic kids don't feel emotions"</p>
+        <p><strong>Truth:</strong> Autistic children feel deeply — sometimes MORE intensely. They may just express it differently than you expect.</p>
+      </div>
+      <div class="caption-box" id="caption-d13">
+Another myth that needs to go: 👇
+
+❌ MYTH: "Autistic kids don't feel emotions"
+
+✅ TRUTH: Autistic children often feel DEEPLY — sometimes more intensely than neurotypical kids. They may just express it differently.
+
+Different ≠ less.
+
+Understanding this changed how I connected with my child. 💙
+
+<span class="hashtags">#AutismMyths #AutismFacts #AutismAwareness #ActuallyAutistic #AutismParent</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d13')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=13" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🔗 Link/Resource</div>
+              <div class="story-text">"Saturday reading! Free IEP guide in bio 📚"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"IEP meetings:" — Empowered 💪 / Overwhelmed 😰</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share resource: "Save before your next IEP! 👆"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 14 -->
+  <div class="day-card rest-day">
+    <div class="day-header">
+      <div class="day-num">14</div>
+      <div class="day-info">
+        <h3>Sunday — Rest Day</h3>
+        <div class="template-type">📱 Story only (optional)</div>
+    <div class="day-content">
+      <p style="color: #888;">Light posting day — but stories keep engagement up!</p>
+      
+      <div class="story-section">
+        <h4>Stories for Today (Sunday vibes)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Sunday reminder: Rest is not lazy. It's necessary. Especially for us. 💜"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">🎬 Behind the Scenes</div>
+              <div class="story-text">Share something low-key — coffee, cozy moment, messy reality. Authenticity wins!</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"What do you need most going into this week?" — Energy / Patience / Coffee / All 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!-- WEEK 3 -->
+  <div class="week-header" id="week3">
+    <h2>📆 Week 3: Community & Resources</h2>
+    <p>Building connection and promoting your resources</p>
+  </div>
+  
+  <!-- Day 15 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">15</div>
+      <div class="day-info">
+        <h3>Monday — Community Question</h3>
+        <div class="template-type">📝 Quote Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Quote:</strong> "What's ONE thing you wish you knew right after your child's diagnosis?"</p>
+        <p><strong>Attribution:</strong> Tell me in the comments 👇</p>
+      </div>
+      <div class="caption-box" id="caption-d15">
+Tell me in the comments 👇
+
+What's ONE thing you wish you knew right after your child's diagnosis?
+
+I'll go first: I wish I knew that therapy waitlists were so long. We lost months because no one told us to get on lists immediately.
+
+Your answer might help another parent today. 💙
+
+<span class="hashtags">#AutismCommunity #AutismParent #AutismAdvice #AutismTips #AutismSupport</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d15')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=15" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Monday: One phone call. One email. That's enough."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"On your to-do:" — IEP prep / Therapy calls / Self-care</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share post: "This one's important! 👇"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 16 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">16</div>
+      <div class="day-info">
+        <h3>Tuesday — Reel Day 🎬</h3>
+        <div class="template-type">🎬 POV Reel (30-60 sec)</div>
+      </div>
+      <div class="best-time">🕐 9-10 AM or 6-9 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Reel Idea (choose one):</h4>
+        <p><strong>Option 1 - POV:</strong> "POV: You finally get 5 minutes to yourself and your brain immediately goes to therapy schedules"</p>
+        <p><strong>Option 2 - Mistake:</strong> "You've been handling meltdowns wrong. Here's why." (then show meltdown vs tantrum difference)</p>
+        <p><strong>Option 3 - Relatable:</strong> "Things that just make sense when you're an autism parent"</p>
+        <p><strong>Specs:</strong> 30-60 sec, original audio/voiceover, captions ON (92% watch without sound!)</p>
+      </div>
+      <div class="caption-box" id="caption-d16">
+POV: You finally get 5 minutes to yourself... 🧘‍♀️
+
+And your brain immediately goes to:
+• Did I schedule that therapy?
+• Is the IEP meeting this week?
+• Why is it so quiet... too quiet 👀
+
+This is the autism parent brain. We never fully clock out.
+
+Tag someone who gets it 💙
+
+Save this for when you need to laugh instead of cry!
+
+<span class="hashtags">#AutismParent #AutismMom #AutismDad #AutismLife #AutismReels #AutismHumor #AutismFamily #Neurodivergent #SpecialNeedsParenting #AutismCommunity #AutismSupport #ParentingReels</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d16')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=16" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Request IEP docs 3 days before meeting. Your right!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"IEP: In-person OR Virtual?"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share tip: "Save for your next IEP! 💪"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 17 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">17</div>
+      <div class="day-info">
+        <h3>Wednesday — Carousel Post</h3>
+        <div class="template-type">🎠 8-10 Slide Carousel (IEP Guide)</div>
+      </div>
+      <div class="best-time">🕐 9-10 AM ⭐ PEAK</div>
+    </div>
+    <!-- Note: 9-10am Wed/Thurs is PEAK time per Instagram research --
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>IEP Meeting Survival Guide (7 slides):</h4>
+        <p>1. Cover: "IEP Meeting Survival Guide"</p>
+        <p>2. Documents to Bring</p>
+        <p>3. Questions to Ask</p>
+        <p>4. Know Your Rights</p>
+        <p>5. Red Flags to Watch</p>
+        <p>6. If They Say "No"</p>
+        <p>7. CTA: You are the expert</p>
+      </div>
+      <div class="caption-box" id="caption-d17">
+IEP meeting coming up? Here's your survival guide 💜
+
+Swipe through for everything you need to walk in prepared:
+
+1️⃣ Documents to bring
+2️⃣ Questions to ask
+3️⃣ Your rights (yes, you have them!)
+4️⃣ Red flags to watch for
+5️⃣ What to do if they say "no"
+
+You are your child's BEST advocate. You've got this.
+
+Save this for your next meeting. Share with a parent who needs it.
+
+<span class="hashtags">#IEP #IEPMeeting #SpecialEducation #AutismParent #IEPAdvocacy</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d17')">📋 Copy</button>
+      </div>
+      <a href="carousel-iep.html" class="editor-link" style="background: #8E44AD;">💜 Get All 7 IEP Carousel Slides</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (Carousel launch day!)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">"🚨 BIG POST TODAY! My IEP Rights carousel is live — every parent needs to know this!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Which IEP right surprised you most?" (Reference your carousel slides)</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"The #1 thing I wish I knew: You can say NO in an IEP meeting. You don't have to sign same-day!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Night</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">"Tag a parent who has an IEP meeting coming up! They need to see this 👆"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Day 18 -->
+  <div class="day-card rest-day">
+    <div class="day-header">
+      <div class="day-num">18</div>
+      <div class="day-info">
+        <h3>Thursday — Rest Day</h3>
+        <div class="template-type">📱 Engage only</div>
+    <div class="day-content">
+      <p style="color: #888;">Engage with IEP carousel comments — lots of emotions here!</p>
+      
+      <div class="story-section">
+        <h4>Stories for Today (Rest day with engagement)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🎬 Behind the Scenes</div>
+              <div class="story-text">"Reading your IEP stories and... wow. We've all been through it. You're not alone 💙"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Rate your last IEP experience:" — Great! / Okay / Frustrating / Don't ask 😬</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">💬 Quote Template</div>
+              <div class="story-text">"You are your child's best advocate. Don't let anyone make you forget that."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Day 19 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">19</div>
+      <div class="day-info">
+        <h3>Friday — Emotional Support</h3>
+        <div class="template-type">💙 Emotional Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Main:</strong> No one tells you about the grief.</p>
+        <p><strong>Sub:</strong> You can mourn the future you imagined AND fiercely love your child. Both things are true.</p>
+      </div>
+      <div class="caption-box" id="caption-d19">
+No one tells you about the grief.
+
+You might grieve the future you imagined.
+The milestones you expected.
+The "easy" path you thought you'd have.
+
+And that's okay.
+
+Grief and love can exist together.
+
+You can mourn what you thought would be AND fiercely love and advocate for your child.
+
+Both things are true. 💙
+
+<span class="hashtags">#AutismParent #AutismMom #AutismDad #ParentingWithAutism #AutismGrief #AutismLove</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d19')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=19" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Friday: You advocated. You showed up. That matters."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Energy level?" — 💪 / 😐 / 😴 / ☕</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share emotional post: "For anyone who needed this 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 20 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">20</div>
+      <div class="day-info">
+        <h3>Saturday — List Post</h3>
+        <div class="template-type">📋 List Template</div>
+      </div>
+      <div class="best-time">🕐 10-11 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> 5 Apps Every Autism Parent Needs</p>
+        <p><strong>Items:</strong> 1. Visual schedule apps 2. AAC communication apps 3. Calm/sensory apps 4. Social stories apps 5. Parent support apps</p>
+      </div>
+      <div class="caption-box" id="caption-d20">
+5 apps that make autism parenting easier: 📱
+
+1️⃣ Visual Schedule Apps — First Then Visual, Choiceworks
+2️⃣ AAC Apps — Proloquo2Go, TouchChat, LAMP
+3️⃣ Calm/Sensory — Calm, Moshi, sensory games
+4️⃣ Social Stories — Social Stories Creator, StoryMaker
+5️⃣ Parent Support — Facebook groups, Autism Speaks app
+
+What apps do YOU rely on? Drop your favorites below 👇
+
+<span class="hashtags">#AutismApps #AutismResources #AutismParent #AutismTech #AutismSupport</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d20')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=20" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"Saturday:" — Sleep in / Early therapy / Errands</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Document one win. Screenshot a good moment!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share list: "Which resonated? Comment below!"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Day 21 -->
+  <div class="day-card rest-day">
+    <div class="day-header">
+      <div class="day-num">21</div>
+      <div class="day-info">
+        <h3>Sunday — Rest Day</h3>
+        <div class="template-type">🧘 Take care of yourself!</div>
+    <div class="day-content">
+      <p style="color: #888;">Sunday reset — keep stories casual and authentic!</p>
+      
+      <div class="story-section">
+        <h4>Stories for Today (Sunday vibes)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Week 3 done. You're still here. Still fighting. Still showing up. That's everything. 💜"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">🎬 Behind the Scenes</div>
+              <div class="story-text">Share a real Sunday moment — whatever it looks like today. No filter needed!</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"What would help you most next week?" — Therapy tips / IEP help / Emotional support / Quick wins</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!-- WEEK 4 -->
+  <div class="week-header" id="week4">
+    <h2>📆 Week 4: Deep Dives & Engagement</h2>
+    <p>Establishing authority and building loyal followers</p>
+  </div>
+  
+  <!-- Day 22-28 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">22</div>
+      <div class="day-info">
+        <h3>Monday — Tip Post</h3>
+        <div class="template-type">💡 Tip Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> "High-functioning" is NOT a compliment</p>
+        <p><strong>Body:</strong> It dismisses real struggles. All autistic people deserve support — not just those who "look" like they need it.</p>
+      </div>
+      <div class="caption-box" id="caption-d22">
+Gentle reminder: 💙
+
+"High-functioning" is not a compliment.
+
+It dismisses real struggles. It denies support. It says "you don't look autistic enough to need help."
+
+ALL autistic people deserve understanding and support — not just those who fit a stereotype.
+
+Language matters.
+
+<span class="hashtags">#AutismAcceptance #AutismAwareness #ActuallyAutistic #AutismCommunity #Neurodiversity</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d22')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=22" class="editor-link">🚀 Create Post</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Language matters. 'High-functioning' dismisses real struggles."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"What therapy does your child do?" — OT / Speech / ABA / Multiple</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share today's post: "This one's important 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">23</div>
+      <div class="day-info">
+        <h3>Tuesday — Resource Promo</h3>
+        <div class="template-type">📚 Resource Template</div>
+      </div>
+      <div class="best-time">🕐 12-1 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> Sensory Profile Worksheet</p>
+        <p><strong>Checklist:</strong> ✓ Identify triggers ✓ Find calming strategies ✓ Share with therapists ✓ Build a sensory diet</p>
+      </div>
+      <div class="caption-box" id="caption-d23">
+Does your child cover their ears at certain sounds? Refuse certain clothes? Crave constant movement?
+
+Understanding their sensory profile changes EVERYTHING.
+
+FREE: Sensory Profile Worksheet 📋
+
+✓ Identify what they seek vs. avoid
+✓ Pinpoint triggers
+✓ Find calming strategies
+✓ Share with therapists & teachers
+
+Link in bio → spectrumunlocked.com/resources
+
+<span class="hashtags">#SensoryProcessing #AutismSensory #SensoryDiet #AutismParent #OccupationalTherapy</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d23')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=23" class="editor-link">🚀 Create Post</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🔗 Link/Resource</div>
+              <div class="story-text">"Free sensory worksheet dropping! Link in bio 📋"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Biggest sensory challenge?" — Sounds / Textures / Lights / Movement</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share resource post: "Save this for later! 👆"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">24</div>
+      <div class="day-info">
+        <h3>Wednesday — Myth Buster #3</h3>
+        <div class="template-type">❌✅ Myth Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Myth:</strong> "If they can talk, they're fine"</p>
+        <p><strong>Truth:</strong> Verbal ability ≠ ability to communicate needs, regulate emotions, or navigate social situations.</p>
+      </div>
+      <div class="caption-box" id="caption-d24">
+Say it louder for the people in the back: 📢
+
+❌ MYTH: "If they can talk, they're fine"
+
+✅ TRUTH: Verbal ability ≠ ability to:
+— Communicate needs effectively
+— Regulate emotions
+— Navigate social situations
+— Process sensory input
+— Handle changes in routine
+
+Talking is just ONE form of communication.
+
+Understanding goes SO much deeper. 💙
+
+<span class="hashtags">#AutismMyths #AutismAwareness #AutismAcceptance #SpeechIsNotEverything #AutismParent</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d24')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=24" class="editor-link">🚀 Create Post</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Verbal ≠ ability to communicate needs. Important distinction!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Does your child use verbal speech?" — Yes / Sometimes / AAC / Mix</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share myth buster: "Share with anyone who says 'but they can talk!'"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">25</div>
+      <div class="day-info">
+        <h3>Thursday — Carousel Post</h3>
+        <div class="template-type">🎠 7-Slide Carousel (Therapies)</div>
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Autism Therapies Explained (7 slides):</h4>
+        <p>1. Cover: "Autism Therapies Explained"</p>
+        <p>2. ABA</p>
+        <p>3. Speech Therapy</p>
+        <p>4. Occupational Therapy</p>
+        <p>5. Floortime / DIR</p>
+        <p>6. Social Skills Groups</p>
+        <p>7. CTA: Every child is different</p>
+      </div>
+      <div class="caption-box" id="caption-d25">
+Confused by all the therapy options? Here's your cheat sheet 🧡
+
+Swipe through for a plain-English breakdown:
+
+1️⃣ ABA — Behavior & skills through reinforcement
+2️⃣ Speech — Communication & language
+3️⃣ OT — Sensory, motor skills & daily tasks
+4️⃣ Floortime — Play-based emotional development
+5️⃣ Social Skills Groups — Peer practice
+
+Every child is different. There's no one "right" answer.
+
+<span class="hashtags">#AutismTherapy #ABA #SpeechTherapy #OccupationalTherapy #AutismParent</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d25')">📋 Copy</button>
+      </div>
+      <a href="carousel-therapy.html" class="editor-link" style="background: #E67E22;">🧡 Get All 7 Therapy Carousel Slides</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (Therapy carousel day!)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">"🚨 THERAPY CAROUSEL! Finally — all therapies explained simply!"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Which therapy slide was most helpful?"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">💬 Quote Template</div>
+              <div class="story-text">"No 'best' therapy — only what works for YOUR child."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">26</div>
+      <div class="day-info">
+        <h3>Friday — Quote Post</h3>
+        <div class="template-type">📝 Quote Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Quote:</strong> "Behind every autistic child who's thriving is a parent who's fighting battles you'll never see."</p>
+      </div>
+      <div class="caption-box" id="caption-d26">
+Behind every autistic child who's thriving is a parent who:
+
+— Fought for their IEP
+— Made 47 phone calls to get on a waitlist
+— Learned to decode meltdown triggers
+— Stayed up researching therapies
+— Advocated when teachers didn't understand
+— Kept going when they were exhausted
+
+You are THAT parent. And you're incredible. 💙
+
+Tag a warrior parent who needs to hear this today.
+
+<span class="hashtags">#AutismParent #AutismMom #AutismDad #AutismWarrior #AutismAdvocate</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d26')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=26" class="editor-link">🚀 Create Post</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Friday: Behind every thriving child is an exhausted, incredible parent. That's YOU. 💜"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"This week I:" — Advocated / Survived / Both / All of the above 💪</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share quote: "Tag a warrior parent who needs this! 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">27</div>
+      <div class="day-info">
+        <h3>Saturday — List Post</h3>
+        <div class="template-type">📋 List Template</div>
+      </div>
+      <div class="best-time">🕐 10-11 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> What TO say to autism parents</p>
+        <p><strong>Items:</strong> 1. "How can I help?" 2. "You're doing great" 3. "Tell me about your child" 4. "I'm here to listen" 5. "What does your child love?"</p>
+      </div>
+      <div class="caption-box" id="caption-d27">
+What TO say to autism parents (instead of unsolicited advice): 💙
+
+✓ "How can I help?"
+✓ "You're doing an amazing job"
+✓ "Tell me about your child — what are they into?"
+✓ "I'm here if you ever need to talk"
+✓ "What does your child love?"
+
+What we DON'T need:
+✗ "Have you tried..."
+✗ "But they look so normal!"
+✗ "My neighbor's kid was cured by..."
+
+Sometimes just listening is everything. 🙏
+
+<span class="hashtags">#AutismParent #AutismSupport #HowToHelp #AutismCommunity #AutismAwareness</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d27')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=27" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"'How can I help?' is better than 'Have you tried...'"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"Worst unsolicited advice you've gotten?"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share list: "Send to THAT family member 😅"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="day-card rest-day">
+    <div class="day-header">
+      <div class="day-num">28</div>
+      <div class="day-info">
+        <h3>Sunday — Rest Day</h3>
+        <div class="template-type">🎉 You made it! Review & plan ahead</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <p style="color: #aaa;">Congrats! You completed 4 weeks! 🎉</p>
+      <p style="color: #888; margin-top: 10px;">Next: Repeat the cycle with new content, or revisit your best-performing posts!</p>
+    
+      <div class="story-section">
+        <h4>Stories for Today (Celebration Sunday!)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💜 Daily Reminder</div>
+              <div class="story-text">"Week 4 DONE! You showed up every single day. Celebrate that! 💜"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"Biggest win this month?" — Therapy progress / School win / Self-care / Survived!</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🎬 Behind the Scenes</div>
+              <div class="story-text">"Thank you for being here. This community means everything 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <!-- Days 29-30 Bonus -->
+  <div class="week-header">
+    <h2>🎁 Bonus Days 29-30</h2>
+    <p>Extra content if you want to keep the momentum</p>
+  </div>
+  
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">29</div>
+      <div class="day-info">
+        <h3>Monday — Emotional Support</h3>
+        <div class="template-type">💙 Emotional Template</div>
+      </div>
+      <div class="best-time">🕐 8-9 AM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Main:</strong> Progress isn't always linear.</p>
+        <p><strong>Sub:</strong> Some days feel like setbacks. But zoom out — look how far you've both come.</p>
+      </div>
+      <div class="caption-box" id="caption-d29">
+Reminder for the hard days: 💙
+
+Progress isn't always linear.
+
+Some days feel like huge setbacks. Skills that seemed mastered suddenly disappear. Meltdowns come out of nowhere.
+
+But zoom out.
+
+Look at where you were 6 months ago. A year ago.
+
+Look how far you've BOTH come.
+
+The hard days don't erase the progress. 🙏
+
+<span class="hashtags">#AutismProgress #AutismParent #AutismJourney #AutismMom #AutismDad</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d29')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=29" class="editor-link">🚀 Create Post</a>
+    
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"What TO say: 'How can I help?' What NOT to say: 'Have you tried...'"</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">⚖️ This or That</div>
+              <div class="story-text">"Worst unsolicited advice you've gotten?" (Let them vent in DMs!)</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share list: "Screenshot and send to THAT family member 😅"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">30</div>
+      <div class="day-info">
+        <h3>Tuesday — Resource Roundup</h3>
+        <div class="template-type">📚 Resource Template</div>
+      </div>
+      <div class="best-time">🕐 12-1 PM</div>
+    </div>
+    <div class="day-content">
+      <div class="graphic-instructions">
+        <h4>Graphic Text:</h4>
+        <p><strong>Title:</strong> All Our Free Resources</p>
+        <p><strong>Checklist:</strong> ✓ First 48 Hours Guide ✓ IEP Checklist ✓ Sensory Worksheet ✓ Therapy Comparison ✓ + More!</p>
+      </div>
+      <div class="caption-box" id="caption-d30">
+Everything we offer — 100% FREE 📚
+
+✓ The First 48 Hours Post-Diagnosis Guide
+✓ IEP Meeting Prep Checklist  
+✓ Sensory Profile Worksheet
+✓ Autism Therapy Comparison Guide
+✓ Behavior Tracking Log
+✓ School Communication Templates
+✓ AAC Basics Guide
+✓ Visual Schedule Resources
+
+No email required. No catch. Just help.
+
+Link in bio → spectrumunlocked.com/resources 💙
+
+<span class="hashtags">#FreeResources #AutismResources #AutismParent #AutismSupport #AutismHelp</span>
+        <button class="copy-btn" onclick="copyCaption('caption-d30')">📋 Copy</button>
+      </div>
+      <a href="create.html?day=30" class="editor-link">🚀 Create Post</a>
+      <div class="story-section">
+        <h4>Stories for Today (3-5 stories)</h4>
+        <div class="story-ideas">
+          <div class="story-item">
+            <span class="story-time">AM</span>
+            <div class="story-content">
+              <div class="story-type">💡 Quick Tip</div>
+              <div class="story-text">"Progress isn't linear. Hard days don't erase wins."</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">Noon</span>
+            <div class="story-content">
+              <div class="story-type">📊 Poll Template</div>
+              <div class="story-text">"What helped most this month?" — Tips / Carousels / Quotes / Resources</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <span class="story-time">PM</span>
+            <div class="story-content">
+              <div class="story-type">🔔 New Post Alert</div>
+              <div class="story-text">Share emotional post: "For anyone having a hard day 💙"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+
+</div>
+
+<div class="toast" id="toast">✓ Copied!</div>
+
+<script>
+  function copyCaption(elementId) {
+    const element = document.getElementById(elementId);
+    // Get text but exclude the button
+    const clone = element.cloneNode(true);
+    const button = clone.querySelector('button');
+    if (button) button.remove();
+    const text = clone.innerText.trim();
+    
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('✓ Caption copied!');
+    }).catch(() => {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      showToast('✓ Caption copied!');
+    });
+  }
+  
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  }
+  
+  // Template type mapping
+  const templateMap = {
+    '💡 Quick Tip': 'tip',
+    '📊 Poll Template': 'poll', 
+    '🔔 New Post Alert': 'newpost',
+    '💬 Quote Template': 'quote',
+    '⚖️ This or That': 'thisorthat',
+    '🎬 Behind the Scenes': 'bts',
+    '💜 Daily Reminder': 'reminder',
+    '🔗 Link/Resource': 'link',
+    '💬 Quote / Affirmation': 'quote'
+  };
+  
+  // Add "Create" button to each story item
+  document.querySelectorAll('.story-section').forEach((section) => {
+    section.querySelectorAll('.story-item').forEach(item => {
+      const storyType = item.querySelector('.story-type');
+      const storyText = item.querySelector('.story-text');
+      
+      if (storyType && storyText) {
+        const createBtn = document.createElement('button');
+        createBtn.className = 'copy-story-btn';
+        createBtn.textContent = '✨ Create';
+        createBtn.title = 'Create this story';
+        createBtn.style.background = 'rgba(39, 174, 96, 0.5)';
+        createBtn.onclick = function(e) {
+          e.stopPropagation();
+          const typeKey = storyType.textContent.trim();
+          const template = templateMap[typeKey] || 'tip';
+          const text = encodeURIComponent(storyText.textContent.trim());
+          window.location.href = `story-templates.html?template=${template}&text=${text}`;
+        };
+        item.appendChild(createBtn);
+      }
+    });
+  });
+  
+  // Update nav active state on scroll
+  const sections = document.querySelectorAll('.week-header');
+  const navLinks = document.querySelectorAll('.nav a');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Research — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #4A90A4;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #888;
+      margin-bottom: 30px;
+    }
+    .research-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .research-card {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .research-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .research-info h3 {
+      color: #E8B86D;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+    .research-info p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .research-tags {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tag {
+      background: rgba(74, 144, 164, 0.2);
+      color: #4A90A4;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .tag.instagram { background: rgba(225, 48, 108, 0.2); color: #E1306C; }
+    .tag.tiktok { background: rgba(0, 0, 0, 0.3); color: #fff; }
+    .tag.general { background: rgba(232, 184, 109, 0.2); color: #E8B86D; }
+    .view-btn {
+      background: #4A90A4;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .view-btn:hover {
+      background: #3a7a8a;
+    }
+    a {
+      color: #4A90A4;
+    }
+    .back-link {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .section-title {
+      color: #666;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 30px 0 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Content Research</h1>
+    <p class="subtitle">Trends, awareness dates, competitor insights, and fresh content angles.</p>
+    
+    <div class="section-title">March 2026</div>
+    
+    <div class="research-list">
+      
+      <div class="research-card">
+        <div class="research-info">
+          <h3>📸 Instagram Strategy Research</h3>
+          <p>March 25, 2026 — Reels vs Carousels, hashtag strategy, competitor analysis</p>
+          <div class="research-tags">
+            <span class="tag instagram">Instagram</span>
+            <span class="tag">Competitor Analysis</span>
+            <span class="tag">Hashtags</span>
+          </div>
+        </div>
+        <a href="2026-03-25-instagram.html" class="view-btn">View →</a>
+      </div>
+      
+      <div class="research-card">
+        <div class="research-info">
+          <h3>🔥 Weekly Trends & Awareness Dates</h3>
+          <p>March 25, 2026 — TikTok misinformation trending, Autism Awareness Month prep</p>
+          <div class="research-tags">
+            <span class="tag general">Trends</span>
+            <span class="tag">Awareness Dates</span>
+            <span class="tag tiktok">TikTok</span>
+          </div>
+        </div>
+        <a href="2026-03-25.html" class="view-btn">View →</a>
+      </div>
+      
+    </div>
+    
+    <p class="back-link"><a href="../index.html">← Back to Dashboard</a></p>
+  </div>
+</body>
+</html>

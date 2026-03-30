@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #4A90A4 100%);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+      text-align: center;
+    }
+    .header {
+      color: #FFD700;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+    .vs {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    .box {
+      padding: 40px;
+      border-radius: 20px;
+      width: 420px;
+    }
+    .old {
+      background: rgba(139,0,0,0.3);
+      border: 3px solid #CC4444;
+    }
+    .new {
+      background: rgba(46,139,87,0.3);
+      border: 3px solid #2E8B57;
+    }
+    .label {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .old .label { color: #FF6B6B; }
+    .new .label { color: #90EE90; }
+    .text {
+      color: white;
+      font-size: 32px;
+      font-weight: 500;
+    }
+    .arrow { font-size: 50px; color: white; }
+    .handle {
+      position: absolute;
+      bottom: 40px;
+      color: rgba(255,255,255,0.5);
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">It's Not Just About Knowing</div>
+  <div class="vs">
+    <div class="box old">
+      <div class="label">❌ Awareness</div>
+      <div class="text">"I know autism exists"</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box new">
+      <div class="label">✅ Acceptance</div>
+      <div class="text">"I understand, include, and support"</div>
+    </div>
+  </div>
+  <div class="handle">@spectrum_unlocked</div>
+</body>
+</html>

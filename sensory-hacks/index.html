@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensory Hacks — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .intro {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .intro h2 {
+      color: #E8B86D;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+    
+    .intro p {
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    
+    .intro ul {
+      color: #aaa;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    
+    .intro li { margin-bottom: 5px; }
+    
+    .hacks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    
+    .hack-card {
+      background: #16213e;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .hack-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+    
+    .hack-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: top;
+    }
+    
+    .hack-card .card-info {
+      padding: 20px;
+    }
+    
+    .hack-card .number {
+      background: #4A90A4;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    
+    .hack-card h3 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    
+    .hack-card p {
+      font-size: 0.9rem;
+      color: #aaa;
+      line-height: 1.5;
+    }
+    
+    .hack-card .links {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .hack-card .links a {
+      font-size: 0.8rem;
+      color: #4A90A4;
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid #4A90A4;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    
+    .hack-card .links a:hover {
+      background: #4A90A4;
+      color: white;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #555;
+      font-size: 0.85rem;
+    }
+    
+    footer a { color: #4A90A4; }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="../index.html">🏠 Dashboard</a>
+    <a href="../content-hub.html">📁 Content</a>
+    <a href="../calendar.html">📅 Calendar</a>
+    <a href="../create.html">✨ Create</a>
+    <a href="../editor.html">🎨 Editor</a>
+    <a href="./" class="active">🧠 Sensory</a>
+    <a href="../spotlight-series.html">⭐ Spotlight</a>
+    <a href="../story-templates.html">📱 Stories</a>
+    <a href="../guides.html">📖 Guides</a>
+  </nav>
+
+  <div class="header">
+    <h1>🧠 Sensory Hacks</h1>
+    <p>10 "Tuesday Tips" posts about sensory strategies for autism parents — ready to post!</p>
+  </div>
+
+  <div class="container">
+    
+    <div class="intro">
+      <h2>📋 How to Use This Series</h2>
+      <p>These 10 sensory hacks are designed for weekly "Tuesday Tips" posts. Each one includes:</p>
+      <ul>
+        <li>✅ Ready-to-post PNG image (1080×1920 story format)</li>
+        <li>✅ Editable HTML template</li>
+        <li>✅ Caption with hashtags (see Guides page)</li>
+      </ul>
+      <p style="margin-top:15px;"><strong>Posting schedule:</strong> One hack per Tuesday = 10 weeks of content!</p>
+    </div>
+
+    <div class="hacks-grid">
+      
+      <div class="hack-card">
+        <img src="hack-01-headphones.png" alt="Headphones Hack">
+        <div class="card-info">
+          <span class="number">HACK #1</span>
+          <h3>🎧 The "Noise Buffer" Strategy</h3>
+          <p>Keep noise-canceling headphones in your bag at ALL times. Even without music, they cut sound by 20-30dB.</p>
+          <div class="links">
+            <a href="hack-01-headphones.png" download>Download PNG</a>
+            <a href="hack-01-headphones.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-02-weighted-blanket.png" alt="Weighted Blanket Hack">
+        <div class="card-info">
+          <span class="number">HACK #2</span>
+          <h3>🛏️ Weighted Blanket Magic</h3>
+          <p>Deep pressure input that calms. Use 10% of body weight. Even 10 minutes helps after a tough day.</p>
+          <div class="links">
+            <a href="hack-02-weighted-blanket.png" download>Download PNG</a>
+            <a href="hack-02-weighted-blanket.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-03-sunglasses.png" alt="Sunglasses Hack">
+        <div class="card-info">
+          <span class="number">HACK #3</span>
+          <h3>🕶️ Sunglasses Indoors</h3>
+          <p>Fluorescent lights can be overwhelming. Let your child wear sunglasses indoors — who cares what people think?</p>
+          <div class="links">
+            <a href="hack-03-sunglasses.png" download>Download PNG</a>
+            <a href="hack-03-sunglasses.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-04-fidgets.png" alt="Fidgets Hack">
+        <div class="card-info">
+          <span class="number">HACK #4</span>
+          <h3>🌀 Fidget Rotation</h3>
+          <p>Keep 3-4 different fidgets and rotate them weekly. The novelty keeps them effective longer.</p>
+          <div class="links">
+            <a href="hack-04-fidgets.png" download>Download PNG</a>
+            <a href="hack-04-fidgets.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-05-countdown.png" alt="Countdown Hack">
+        <div class="card-info">
+          <span class="number">HACK #5</span>
+          <h3>⏱️ Transition Countdown</h3>
+          <p>Give warnings at 5 minutes, 3 minutes, and 1 minute. Visual timers work even better than verbal.</p>
+          <div class="links">
+            <a href="hack-05-countdown.png" download>Download PNG</a>
+            <a href="hack-05-countdown.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-06-calm-corner.png" alt="Calm Corner Hack">
+        <div class="card-info">
+          <span class="number">HACK #6</span>
+          <h3>🏕️ Create a Calm Corner</h3>
+          <p>Dedicated calm-down spot at home. Small tent, bean bag, soft lighting. Not punishment — it's regulation.</p>
+          <div class="links">
+            <a href="hack-06-calm-corner.png" download>Download PNG</a>
+            <a href="hack-06-calm-corner.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-07-sensory-bag.png" alt="Sensory Bag Hack">
+        <div class="card-info">
+          <span class="number">HACK #7</span>
+          <h3>🎒 Sensory Go-Bag</h3>
+          <p>Pack headphones, fidgets, snacks, sunglasses, comfort item. Being prepared prevents meltdowns.</p>
+          <div class="links">
+            <a href="hack-07-sensory-bag.png" download>Download PNG</a>
+            <a href="hack-07-sensory-bag.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-08-compression.png" alt="Compression Hack">
+        <div class="card-info">
+          <span class="number">HACK #8</span>
+          <h3>🤗 Compression Clothing</h3>
+          <p>Tight undershirts, compression socks provide constant calming input. It's like a hug they can wear all day.</p>
+          <div class="links">
+            <a href="hack-08-compression.png" download>Download PNG</a>
+            <a href="hack-08-compression.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-09-white-noise.png" alt="White Noise Hack">
+        <div class="card-info">
+          <span class="number">HACK #9</span>
+          <h3>🌊 White Noise</h3>
+          <p>White noise or nature sounds mask unpredictable noises that cause anxiety. Use at bedtime or during homework.</p>
+          <div class="links">
+            <a href="hack-09-white-noise.png" download>Download PNG</a>
+            <a href="hack-09-white-noise.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hack-card">
+        <img src="hack-10-chewy.png" alt="Chewy Hack">
+        <div class="card-info">
+          <span class="number">HACK #10</span>
+          <h3>🍬 Oral Sensory Input</h3>
+          <p>Chewing is calming! Silicone chew necklaces, crunchy snacks, or thick smoothies through a straw.</p>
+          <div class="links">
+            <a href="hack-10-chewy.png" download>Download PNG</a>
+            <a href="hack-10-chewy.html" target="_blank">Edit Template</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="../guides.html">📖 See Full Captions in Guides</a> · 
+    <a href="../index.html">← Back to Dashboard</a>
+  </footer>
+
+</body>
+</html>
