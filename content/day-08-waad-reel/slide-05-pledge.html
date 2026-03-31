@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1920px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #9B59B6; top: 45%; left: -200px; transform: translateY(-50%); }
+    .label { 
+      font-size: 22px; 
+      text-transform: uppercase; 
+      letter-spacing: 6px;
+      opacity: 0.5;
+      margin-bottom: 35px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 60px; 
+      font-weight: 800; 
+      margin-bottom: 55px;
+    }
+    .highlight { color: #E8B86D; }
+    .pledge-box {
+      background: linear-gradient(135deg, rgba(74,144,164,0.2) 0%, rgba(155,89,182,0.15) 100%);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+      border-radius: 30px;
+      padding: 60px;
+      max-width: 880px;
+    }
+    .pledge-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      line-height: 1.5;
+      margin-bottom: 50px;
+    }
+    .pledge-items {
+      text-align: left;
+      font-size: 26px;
+      line-height: 2.2;
+    }
+    .pledge-item { margin-bottom: 12px; }
+    .checkmark { color: #27AE60; margin-right: 18px; }
+    .footer { position: absolute; bottom: 60px; text-align: center; }
+    .handle { font-size: 22px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Take The</div>
+  <div class="title">Acceptance <span class="highlight">Pledge</span></div>
+  
+  <div class="pledge-box">
+    <div class="pledge-text">
+      Today and every day, I commit to:
+    </div>
+    <div class="pledge-items">
+      <div class="pledge-item"><span class="checkmark">✓</span> Seeing autistic people as whole humans</div>
+      <div class="pledge-item"><span class="checkmark">✓</span> Listening before speaking</div>
+      <div class="pledge-item"><span class="checkmark">✓</span> Advocating for inclusion, not just awareness</div>
+      <div class="pledge-item"><span class="checkmark">✓</span> Celebrating neurodiversity</div>
+      <div class="pledge-item"><span class="checkmark">✓</span> Remembering: different, not less</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
