@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 44px; 
+      font-weight: 800; 
+      margin-bottom: 35px;
+      color: #E8B86D;
+    }
+    .questions-box {
+      background: rgba(74, 144, 164, 0.12);
+      border: 2px solid rgba(74, 144, 164, 0.3);
+      border-radius: 20px;
+      padding: 35px 40px;
+      max-width: 900px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 22px;
+      margin-bottom: 25px;
+      opacity: 0.9;
+      text-align: center;
+    }
+    .question {
+      font-size: 23px;
+      line-height: 1.5;
+      margin: 14px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .icon { font-size: 20px; color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">If Considering ABA</div>
+  <div class="title">Questions to Ask Providers</div>
+  
+  <div class="questions-box">
+    <div class="intro">Vet carefully. Good providers welcome these:</div>
+    <div class="question"><span class="icon">❓</span> What's your approach to stimming?</div>
+    <div class="question"><span class="icon">❓</span> How do you handle refusal or "no"?</div>
+    <div class="question"><span class="icon">❓</span> Who sets the goals — and are they functional?</div>
+    <div class="question"><span class="icon">❓</span> What does a typical session look like?</div>
+    <div class="question"><span class="icon">❓</span> How do you measure success?</div>
+    <div class="question"><span class="icon">❓</span> Can I observe sessions anytime?</div>
+    <div class="question"><span class="icon">❓</span> What's your view on neurodiversity?</div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

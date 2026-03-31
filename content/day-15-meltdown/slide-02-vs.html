@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 48px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      color: #E8B86D;
+    }
+    .vs-box {
+      display: flex;
+      gap: 25px;
+      max-width: 920px;
+    }
+    .vs-item {
+      flex: 1;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: left;
+    }
+    .vs-item.tantrum { 
+      background: rgba(231, 76, 60, 0.12);
+      border: 2px solid rgba(231, 76, 60, 0.3);
+    }
+    .vs-item.meltdown { 
+      background: rgba(74, 144, 164, 0.12);
+      border: 2px solid rgba(74, 144, 164, 0.3);
+    }
+    .vs-label { font-weight: 700; font-size: 22px; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+    .vs-item.tantrum .vs-label { color: #E74C3C; }
+    .vs-item.meltdown .vs-label { color: #4A90A4; }
+    .vs-list { font-size: 20px; line-height: 1.9; opacity: 0.9; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">First, Understand</div>
+  <div class="title">Meltdown vs Tantrum</div>
+  
+  <div class="vs-box">
+    <div class="vs-item tantrum">
+      <div class="vs-label">😤 TANTRUM</div>
+      <div class="vs-list">
+        • Goal-oriented<br>
+        • Wants something specific<br>
+        • Checks for audience<br>
+        • Can stop if need is met<br>
+        • Strategic behavior
+      </div>
+    </div>
+    <div class="vs-item meltdown">
+      <div class="vs-label">🌪️ MELTDOWN</div>
+      <div class="vs-list">
+        • Overwhelm response<br>
+        • Neurological crisis<br>
+        • No audience awareness<br>
+        • Can't just "stop"<br>
+        • NOT manipulation
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

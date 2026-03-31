@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E74C3C; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #4A90A4; bottom: 100px; left: -100px; }
+    .badge { 
+      background: rgba(255,255,255,0.1); 
+      border: 2px solid rgba(255,255,255,0.2);
+      padding: 12px 30px; 
+      border-radius: 30px; 
+      font-size: 18px; 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+    .emoji { font-size: 100px; margin-bottom: 30px; }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 62px; 
+      font-weight: 800; 
+      line-height: 1.15; 
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
+    .highlight { color: #4A90A4; }
+    .subtitle {
+      font-size: 28px;
+      opacity: 0.85;
+      margin-bottom: 30px;
+      max-width: 800px;
+      line-height: 1.4;
+    }
+    .hook {
+      font-size: 24px;
+      opacity: 0.7;
+      font-style: italic;
+    }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.7;
+      margin-top: 40px;
+    }
+    .arrow { font-size: 30px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="badge">💙 Support Guide</div>
+  
+  <div class="emoji">🌪️</div>
+  
+  <div class="main-title">
+    Supporting Your Child Through <span class="highlight">Meltdowns</span>
+  </div>
+  
+  <div class="subtitle">
+    During & After
+  </div>
+  
+  <div class="hook">
+    It's not a tantrum. Here's what to do.
+  </div>
+  
+  <div class="swipe-cta">
+    <span>Swipe for the guide</span>
+    <span class="arrow">→</span>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

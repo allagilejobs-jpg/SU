@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1920px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 600px; height: 600px; background: #9B59B6; top: -200px; right: -200px; }
+    .bg-shape-2 { width: 450px; height: 450px; background: #E8B86D; bottom: 200px; left: -150px; }
+    .bg-shape-3 { width: 300px; height: 300px; background: #3498db; top: 400px; right: -100px; }
+    
+    .month-badge { 
+      background: linear-gradient(135deg, #9B59B6, #8E44AD);
+      padding: 16px 40px; 
+      border-radius: 40px; 
+      font-size: 20px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 40px rgba(155, 89, 182, 0.3);
+    }
+    
+    .infinity-symbol {
+      font-size: 120px;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #E74C3C, #E8B86D, #F1C40F, #2ECC71, #3498DB, #9B59B6, #E74C3C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 10px 30px rgba(155, 89, 182, 0.4));
+    }
+    
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 82px; 
+      font-weight: 800; 
+      line-height: 1.1; 
+      margin-bottom: 40px;
+      max-width: 950px;
+    }
+    
+    .highlight { 
+      color: #E8B86D; 
+      display: block;
+    }
+    
+    .subtitle {
+      font-size: 32px;
+      opacity: 0.85;
+      margin-bottom: 60px;
+      max-width: 850px;
+      line-height: 1.5;
+    }
+    
+    .key-message {
+      background: rgba(255,255,255,0.1);
+      padding: 30px 50px;
+      border-radius: 20px;
+      font-size: 26px;
+      font-weight: 600;
+      max-width: 900px;
+      line-height: 1.5;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .key-message em {
+      color: #E8B86D;
+      font-style: normal;
+    }
+    
+    .footer { 
+      position: absolute; 
+      bottom: 120px; 
+      text-align: center; 
+    }
+    .handle { 
+      font-size: 24px; 
+      opacity: 0.6;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+  
+  <div class="month-badge">🧩 April 2025</div>
+  
+  <div class="infinity-symbol">∞</div>
+  
+  <div class="main-title">
+    Autism<br>
+    <span class="highlight">Acceptance</span>
+    Month
+  </div>
+  
+  <div class="subtitle">
+    Not awareness. Not puzzle pieces.<br>
+    <strong>Acceptance. Understanding. Inclusion.</strong>
+  </div>
+  
+  <div class="key-message">
+    This month, we celebrate autistic people <em>as they are</em> — not as something to be fixed or cured.
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

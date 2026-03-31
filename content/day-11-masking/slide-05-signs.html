@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #9B59B6; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 18px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 48px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      color: #E8B86D;
+    }
+    .signs-box {
+      background: rgba(155, 89, 182, 0.12);
+      border: 2px solid rgba(155, 89, 182, 0.3);
+      border-radius: 20px;
+      padding: 35px 40px;
+      max-width: 900px;
+      text-align: left;
+    }
+    .sign {
+      font-size: 24px;
+      line-height: 1.5;
+      margin: 18px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .icon { font-size: 22px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Recognition</div>
+  <div class="title">Signs of High-Masking Autism</div>
+  
+  <div class="signs-box">
+    <div class="sign"><span class="icon">😴</span> Completely exhausted after social situations</div>
+    <div class="sign"><span class="icon">🎭</span> Feels like "performing" a character in public</div>
+    <div class="sign"><span class="icon">🏠</span> Major personality shift at home vs. outside</div>
+    <div class="sign"><span class="icon">📝</span> Scripts conversations in advance</div>
+    <div class="sign"><span class="icon">👀</span> Studies others to learn "normal" behavior</div>
+    <div class="sign"><span class="icon">💥</span> Meltdowns or shutdowns in private</div>
+    <div class="sign"><span class="icon">❓</span> Constant feeling of being "different"</div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

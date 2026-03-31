@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #3498DB; top: -100px; right: -100px; }
+    .num { 
+      background: #3498DB; 
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; font-weight: 800;
+      margin-bottom: 25px;
+    }
+    .emoji { font-size: 80px; margin-bottom: 20px; }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .content-box {
+      background: rgba(52, 152, 219, 0.12);
+      border: 2px solid rgba(52, 152, 219, 0.3);
+      border-radius: 20px;
+      padding: 35px 45px;
+      max-width: 900px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 24px;
+      margin-bottom: 25px;
+      text-align: center;
+      opacity: 0.9;
+    }
+    .item {
+      font-size: 24px;
+      line-height: 1.5;
+      margin: 16px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .icon { font-size: 22px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="num">2</div>
+  <div class="emoji">🤝</div>
+  <div class="title">Find Your People</div>
+  
+  <div class="content-box">
+    <div class="intro">Support groups aren't weakness — they're survival.</div>
+    <div class="item"><span class="icon">💻</span> Online autism parent communities</div>
+    <div class="item"><span class="icon">📍</span> Local support group meetups</div>
+    <div class="item"><span class="icon">📱</span> Facebook groups (private, judgment-free)</div>
+    <div class="item"><span class="icon">🧠</span> Therapy for caregivers (yes, it's valid!)</div>
+    <div class="item"><span class="icon">👥</span> One friend who actually GETS IT</div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 4</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

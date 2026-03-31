@@ -7,226 +7,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #1a1a2e;
-      color: #eee;
-      min-height: 100vh;
-    }
-    .main-nav {
-      background: #0f0f1a;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .main-nav a {
-      color: #aaa;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.2s;
-    }
-    .main-nav a:hover, .main-nav a.active {
-      background: #4A90A4;
-      color: white;
-    }
-    .header {
-      background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%);
-      padding: 40px 20px;
-      text-align: center;
-      color: #1a1a2e;
-    }
-    .header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+    body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
+    .main-nav { background: #0f0f1a; padding: 15px 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .main-nav a { color: #aaa; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+    .main-nav a:hover, .main-nav a.active { background: #4A90A4; color: white; }
+    .header { background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%); padding: 40px 20px; text-align: center; color: #1a1a2e; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
     .header p { opacity: 0.8; font-size: 1.1rem; }
-    .stats-bar {
-      background: #16213e;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .stat {
-      text-align: center;
-    }
-    .stat-num {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #E8B86D;
-    }
-    .stat-label {
-      font-size: 0.85rem;
-      opacity: 0.7;
-    }
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 30px 20px;
-    }
-    .phase-header {
-      background: #16213e;
-      padding: 20px 25px;
-      border-radius: 12px;
-      margin-bottom: 25px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .phase-badge {
-      background: #4A90A4;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .phase-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-    .phase-dates {
-      margin-left: auto;
-      opacity: 0.6;
-      font-size: 14px;
-    }
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 25px;
-      margin-bottom: 40px;
-    }
-    .day-card {
-      background: #16213e;
-      border-radius: 16px;
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .day-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    }
-    .day-card.hero {
-      border: 2px solid #E8B86D;
-    }
-    .day-header {
-      padding: 15px 20px;
-      background: #0f3460;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .day-num {
-      background: #4A90A4;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .day-card.hero .day-num {
-      background: #E8B86D;
-      color: #1a1a2e;
-    }
-    .day-info h3 {
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .day-info .date {
-      font-size: 12px;
-      opacity: 0.6;
-    }
-    .platform-badges {
-      margin-left: auto;
-      display: flex;
-      gap: 5px;
-    }
-    .platform-badge {
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 11px;
-      font-weight: 600;
-    }
-    .platform-badge.tiktok { background: rgba(0,0,0,0.3); }
-    .platform-badge.instagram { background: rgba(193, 53, 132, 0.3); }
-    .platform-badge.both { background: rgba(74, 144, 164, 0.3); }
-    .preview-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 3px;
-      padding: 3px;
-      background: #0a1628;
-    }
-    .preview-grid img {
-      width: 100%;
-      height: 80px;
-      object-fit: cover;
-      cursor: pointer;
-      transition: opacity 0.2s;
-    }
-    .preview-grid img:hover {
-      opacity: 0.8;
-    }
-    .day-content {
-      padding: 15px 20px;
-    }
-    .day-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #E8B86D;
-    }
-    .day-hook {
-      font-size: 13px;
-      opacity: 0.8;
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
-    .day-actions {
-      display: flex;
-      gap: 10px;
-    }
-    .day-actions a {
-      flex: 1;
-      padding: 10px;
-      background: #0f3460;
-      color: #eee;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 600;
-      text-align: center;
-      transition: background 0.2s;
-    }
-    .day-actions a:hover {
-      background: #4A90A4;
-    }
-    .coming-soon {
-      opacity: 0.5;
-      text-align: center;
-      padding: 40px;
-      font-style: italic;
-    }
+    .stats-bar { background: #16213e; padding: 20px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 700; color: #E8B86D; }
+    .stat-label { font-size: 0.85rem; opacity: 0.7; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 30px 20px; }
+    .phase-header { background: #16213e; padding: 20px 25px; border-radius: 12px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px; }
+    .phase-badge { background: #4A90A4; color: white; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 14px; }
+    .phase-title { font-size: 1.3rem; font-weight: 600; }
+    .phase-dates { margin-left: auto; opacity: 0.6; font-size: 14px; }
+    .content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-bottom: 40px; }
+    .day-card { background: #16213e; border-radius: 16px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+    .day-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+    .day-card.hero { border: 2px solid #E8B86D; }
+    .day-header { padding: 15px 20px; background: #0f3460; display: flex; align-items: center; gap: 12px; }
+    .day-num { background: #27AE60; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+    .day-card.hero .day-num { background: #E8B86D; color: #1a1a2e; }
+    .day-info h3 { font-size: 14px; font-weight: 600; }
+    .day-info .date { font-size: 12px; opacity: 0.6; }
+    .platform-badges { margin-left: auto; display: flex; gap: 5px; }
+    .platform-badge { padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; background: rgba(74, 144, 164, 0.3); }
+    .preview-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; padding: 3px; background: #0a1628; }
+    .preview-grid img { width: 100%; height: 80px; object-fit: cover; cursor: pointer; transition: opacity 0.2s; }
+    .preview-grid img:hover { opacity: 0.8; }
+    .day-content { padding: 15px 20px; }
+    .day-title { font-size: 15px; font-weight: 600; margin-bottom: 8px; color: #E8B86D; }
+    .day-hook { font-size: 13px; opacity: 0.8; line-height: 1.4; margin-bottom: 12px; }
+    .day-actions { display: flex; gap: 10px; }
+    .day-actions a { flex: 1; padding: 10px; background: #0f3460; color: #eee; text-decoration: none; border-radius: 8px; font-size: 12px; font-weight: 600; text-align: center; transition: background 0.2s; }
+    .day-actions a:hover { background: #4A90A4; }
+    .coming-soon { opacity: 0.5; text-align: center; padding: 40px; font-style: italic; }
   </style>
 </head>
 <body>
   <nav class="main-nav">
     <a href="../index.html">🏠 Home</a>
-    <a href="../calendar.html">📅 Calendar</a>
+    <a href="../calendar-60day.html">📅 60-Day</a>
     <a href="index.html" class="active">📦 Content</a>
-    <a href="../research/index.html">🔬 Research</a>
-    <a href="../create.html">✨ Create</a>
-    <a href="../editor.html">🎨 Editor</a>
+    <a href="../research/">🔬 Research</a>
   </nav>
 
   <header class="header">
@@ -235,22 +60,9 @@
   </header>
 
   <div class="stats-bar">
-    <div class="stat">
-      <div class="stat-num">60</div>
-      <div class="stat-label">Days of Content</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">150+</div>
-      <div class="stat-label">Posts Planned</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">22</div>
-      <div class="stat-label">Graphics Ready</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Carousels Built</div>
-    </div>
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">Days Ready</div></div>
+    <div class="stat"><div class="stat-num">86</div><div class="stat-label">Graphics</div></div>
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">Carousels</div></div>
   </div>
 
   <div class="container">
@@ -266,13 +78,8 @@
       <div class="day-card">
         <div class="day-header">
           <div class="day-num">1</div>
-          <div class="day-info">
-            <h3>Wednesday</h3>
-            <div class="date">March 26</div>
-          </div>
-          <div class="platform-badges">
-            <span class="platform-badge both">🔄 Both</span>
-          </div>
+          <div class="day-info"><h3>Wednesday</h3><div class="date">March 26</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
         </div>
         <div class="preview-grid">
           <img src="day-01-tiktok-myths/slide-01-cover.png" alt="Cover">
@@ -282,8 +89,8 @@
           <img src="day-01-tiktok-myths/slide-05-cta.png" alt="CTA">
         </div>
         <div class="day-content">
-          <div class="day-title">3 Things TikTok Gets WRONG About Autism</div>
-          <div class="day-hook">"A new study found over 50% of autism content is misleading..."</div>
+          <div class="day-title">3 Things TikTok Gets WRONG</div>
+          <div class="day-hook">Myth-buster carousel</div>
           <div class="day-actions">
             <a href="day-01-tiktok-myths/">📂 View All</a>
             <a href="day-01-tiktok-myths/captions.md">📝 Captions</a>
@@ -295,24 +102,19 @@
       <div class="day-card">
         <div class="day-header">
           <div class="day-num">2</div>
-          <div class="day-info">
-            <h3>Thursday</h3>
-            <div class="date">March 27</div>
-          </div>
-          <div class="platform-badges">
-            <span class="platform-badge both">🔄 Both</span>
-          </div>
+          <div class="day-info"><h3>Thursday</h3><div class="date">March 27</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
         </div>
         <div class="preview-grid">
           <img src="day-02-acceptance-vs-awareness/slide-01-cover.png" alt="Cover">
           <img src="day-02-acceptance-vs-awareness/slide-02-awareness.png" alt="Awareness">
           <img src="day-02-acceptance-vs-awareness/slide-03-acceptance.png" alt="Acceptance">
-          <img src="day-02-acceptance-vs-awareness/slide-04-progression.png" alt="Progression">
+          <img src="day-02-acceptance-vs-awareness/slide-04-progression.png" alt="Progress">
           <img src="day-02-acceptance-vs-awareness/slide-05-cta.png" alt="CTA">
         </div>
         <div class="day-content">
-          <div class="day-title">Acceptance vs. Awareness — Why Language Matters</div>
-          <div class="day-hook">"Stop saying autism awareness. Here's why..."</div>
+          <div class="day-title">Acceptance vs. Awareness</div>
+          <div class="day-hook">Why language matters</div>
           <div class="day-actions">
             <a href="day-02-acceptance-vs-awareness/">📂 View All</a>
             <a href="day-02-acceptance-vs-awareness/captions.md">📝 Captions</a>
@@ -324,13 +126,8 @@
       <div class="day-card">
         <div class="day-header">
           <div class="day-num">3</div>
-          <div class="day-info">
-            <h3>Friday</h3>
-            <div class="date">March 28</div>
-          </div>
-          <div class="platform-badges">
-            <span class="platform-badge both">🔄 Both</span>
-          </div>
+          <div class="day-info"><h3>Friday</h3><div class="date">March 28</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
         </div>
         <div class="preview-grid">
           <img src="day-03-glass-child/slide-01-cover.png" alt="Cover">
@@ -341,7 +138,7 @@
         </div>
         <div class="day-content">
           <div class="day-title">Glass Child Syndrome</div>
-          <div class="day-hook">"Is your neurotypical child becoming invisible?"</div>
+          <div class="day-hook">Siblings who fade away</div>
           <div class="day-actions">
             <a href="day-03-glass-child/">📂 View All</a>
             <a href="day-03-glass-child/captions.md">📝 Captions</a>
@@ -349,18 +146,75 @@
         </div>
       </div>
 
-      <!-- Days 4-6 placeholder -->
-      <div class="day-card" style="opacity: 0.6;">
+      <!-- Day 4 -->
+      <div class="day-card">
         <div class="day-header">
-          <div class="day-num">4-6</div>
-          <div class="day-info">
-            <h3>Sat-Mon</h3>
-            <div class="date">March 29-31</div>
-          </div>
+          <div class="day-num">4</div>
+          <div class="day-info"><h3>Saturday</h3><div class="date">March 29</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-04-sensory-hacks/slide-01-cover.png" alt="Cover">
+          <img src="day-04-sensory-hacks/slide-02-hack1.png" alt="Hack 1">
+          <img src="day-04-sensory-hacks/slide-03-hack2.png" alt="Hack 2">
+          <img src="day-04-sensory-hacks/slide-04-hack3.png" alt="Hack 3">
+          <img src="day-04-sensory-hacks/slide-05-hack4.png" alt="Hack 4">
         </div>
         <div class="day-content">
-          <div class="day-title">Coming Soon</div>
-          <div class="day-hook">Sensory Hacks, Late Diagnosis, Autistic Burnout</div>
+          <div class="day-title">5 Sensory Hacks</div>
+          <div class="day-hook">OT-approved tips</div>
+          <div class="day-actions">
+            <a href="day-04-sensory-hacks/">📂 View All</a>
+            <a href="day-04-sensory-hacks/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">5</div>
+          <div class="day-info"><h3>Sunday</h3><div class="date">March 30</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-05-late-diagnosis/slide-01-cover.png" alt="Cover">
+          <img src="day-05-late-diagnosis/slide-02-why.png" alt="Why">
+          <img src="day-05-late-diagnosis/slide-03-signs.png" alt="Signs">
+          <img src="day-05-late-diagnosis/slide-04-next.png" alt="Next">
+          <img src="day-05-late-diagnosis/slide-05-cta.png" alt="CTA">
+        </div>
+        <div class="day-content">
+          <div class="day-title">Late-Diagnosed Women</div>
+          <div class="day-hook">450% increase trending</div>
+          <div class="day-actions">
+            <a href="day-05-late-diagnosis/">📂 View All</a>
+            <a href="day-05-late-diagnosis/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">6</div>
+          <div class="day-info"><h3>Monday</h3><div class="date">March 31</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-06-burnout/slide-01-cover.png" alt="Cover">
+          <img src="day-06-burnout/slide-02-what.png" alt="What">
+          <img src="day-06-burnout/slide-03-signs.png" alt="Signs">
+          <img src="day-06-burnout/slide-04-help.png" alt="Help">
+          <img src="day-06-burnout/slide-05-cta.png" alt="CTA">
+        </div>
+        <div class="day-content">
+          <div class="day-title">Autistic Burnout</div>
+          <div class="day-hook">Signs & prevention</div>
+          <div class="day-actions">
+            <a href="day-06-burnout/">📂 View All</a>
+            <a href="day-06-burnout/captions.md">📝 Captions</a>
+          </div>
         </div>
       </div>
     </div>
@@ -373,38 +227,41 @@
     </div>
 
     <div class="content-grid">
-      <!-- Day 7 placeholder -->
-      <div class="day-card" style="opacity: 0.6;">
+      <!-- Day 7 -->
+      <div class="day-card">
         <div class="day-header">
           <div class="day-num">7</div>
-          <div class="day-info">
-            <h3>Tuesday</h3>
-            <div class="date">April 1</div>
-          </div>
+          <div class="day-info"><h3>Tuesday</h3><div class="date">April 1</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-07-april-kickoff/slide-01-cover.png" alt="Cover">
+          <img src="day-07-april-kickoff/slide-02-why.png" alt="Why">
+          <img src="day-07-april-kickoff/slide-03-expect.png" alt="Expect">
+          <img src="day-07-april-kickoff/slide-04-cta.png" alt="CTA">
         </div>
         <div class="day-content">
-          <div class="day-title">Autism Acceptance Month Kickoff</div>
-          <div class="day-hook">"April is here. Let's make it count."</div>
+          <div class="day-title">April Kickoff!</div>
+          <div class="day-hook">Month announcement</div>
+          <div class="day-actions">
+            <a href="day-07-april-kickoff/">📂 View All</a>
+            <a href="day-07-april-kickoff/captions.md">📝 Captions</a>
+          </div>
         </div>
       </div>
 
-      <!-- Day 8 - WAAD Hero -->
+      <!-- Day 8 - HERO -->
       <div class="day-card hero">
         <div class="day-header">
           <div class="day-num">8</div>
-          <div class="day-info">
-            <h3>⭐ WAAD</h3>
-            <div class="date">April 2</div>
-          </div>
-          <div class="platform-badges">
-            <span class="platform-badge both">🔄 HERO</span>
-          </div>
+          <div class="day-info"><h3>⭐ WAAD</h3><div class="date">April 2</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 HERO</span></div>
         </div>
         <div class="preview-grid">
           <img src="day-08-waad/slide-01-cover.png" alt="Cover">
           <img src="day-08-waad/slide-02-humanity.png" alt="Humanity">
           <img src="day-08-waad/slide-03-value.png" alt="Value">
-          <img src="day-08-waad/slide-04-acceptance.png" alt="Acceptance">
+          <img src="day-08-waad/slide-04-acceptance.png" alt="Accept">
           <img src="day-08-waad/slide-05-pledge.png" alt="Pledge">
         </div>
         <div class="day-content">
@@ -417,32 +274,179 @@
         </div>
       </div>
 
-      <!-- Remaining days placeholder -->
-      <div class="day-card" style="opacity: 0.6;">
+      <!-- Day 9 -->
+      <div class="day-card">
         <div class="day-header">
-          <div class="day-num">9-36</div>
-          <div class="day-info">
-            <h3>April 3-30</h3>
-            <div class="date">28 Days</div>
-          </div>
+          <div class="day-num">9</div>
+          <div class="day-info"><h3>Thursday</h3><div class="date">April 3</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-09-myths-die/slide-01-cover.png" alt="Cover">
+          <img src="day-09-myths-die/slide-02-myth1.png" alt="Myth 1">
+          <img src="day-09-myths-die/slide-03-myth2.png" alt="Myth 2">
+          <img src="day-09-myths-die/slide-04-myth3.png" alt="Myth 3">
+          <img src="day-09-myths-die/slide-05-myth4.png" alt="Myth 4">
         </div>
         <div class="day-content">
-          <div class="day-title">Full Month Planned</div>
-          <div class="day-hook">IEP Tips, Meltdowns, Sleep, AuDHD, Feeding & more...</div>
+          <div class="day-title">5 Myths That Need to Die</div>
+          <div class="day-hook">Post-WAAD education</div>
+          <div class="day-actions">
+            <a href="day-09-myths-die/">📂 View All</a>
+            <a href="day-09-myths-die/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 10 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">10</div>
+          <div class="day-info"><h3>Friday</h3><div class="date">April 4</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-10-iep/slide-01-cover.png" alt="Cover">
+          <img src="day-10-iep/slide-02-sensory.png" alt="Sensory">
+          <img src="day-10-iep/slide-03-communication.png" alt="Comm">
+          <img src="day-10-iep/slide-04-academic.png" alt="Academic">
+          <img src="day-10-iep/slide-05-social.png" alt="Social">
+        </div>
+        <div class="day-content">
+          <div class="day-title">IEP Accommodations</div>
+          <div class="day-hook">Neurodiversity-affirming</div>
+          <div class="day-actions">
+            <a href="day-10-iep/">📂 View All</a>
+            <a href="day-10-iep/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 11 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">11</div>
+          <div class="day-info"><h3>Saturday</h3><div class="date">April 5</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-11-masking/slide-01-cover.png" alt="Cover">
+          <img src="day-11-masking/slide-02-what.png" alt="What">
+          <img src="day-11-masking/slide-03-why.png" alt="Why">
+          <img src="day-11-masking/slide-04-cost.png" alt="Cost">
+          <img src="day-11-masking/slide-05-signs.png" alt="Signs">
+        </div>
+        <div class="day-content">
+          <div class="day-title">High-Masking Autism</div>
+          <div class="day-hook">The hidden struggle</div>
+          <div class="day-actions">
+            <a href="day-11-masking/">📂 View All</a>
+            <a href="day-11-masking/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 12 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">12</div>
+          <div class="day-info"><h3>Sunday</h3><div class="date">April 6</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-12-selfcare/slide-01-cover.png" alt="Cover">
+          <img src="day-12-selfcare/slide-02-micro.png" alt="Micro">
+          <img src="day-12-selfcare/slide-03-people.png" alt="People">
+          <img src="day-12-selfcare/slide-04-boundaries.png" alt="Bound">
+          <img src="day-12-selfcare/slide-05-help.png" alt="Help">
+        </div>
+        <div class="day-content">
+          <div class="day-title">Self-Care for Parents</div>
+          <div class="day-hook">Real strategies</div>
+          <div class="day-actions">
+            <a href="day-12-selfcare/">📂 View All</a>
+            <a href="day-12-selfcare/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 13 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">13</div>
+          <div class="day-info"><h3>Monday</h3><div class="date">April 7</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-13-aba/slide-01-cover.png" alt="Cover">
+          <img src="day-13-aba/slide-02-what.png" alt="What">
+          <img src="day-13-aba/slide-03-concerns.png" alt="Concerns">
+          <img src="day-13-aba/slide-04-other.png" alt="Other">
+          <img src="day-13-aba/slide-05-questions.png" alt="Questions">
+        </div>
+        <div class="day-content">
+          <div class="day-title">ABA Controversy</div>
+          <div class="day-hook">Both sides</div>
+          <div class="day-actions">
+            <a href="day-13-aba/">📂 View All</a>
+            <a href="day-13-aba/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 14 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">14</div>
+          <div class="day-info"><h3>Tuesday</h3><div class="date">April 8</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-14-visual/slide-01-cover.png" alt="Cover">
+          <img src="day-14-visual/slide-02-schedule.png" alt="Schedule">
+          <img src="day-14-visual/slide-03-timer.png" alt="Timer">
+          <img src="day-14-visual/slide-04-first.png" alt="First">
+          <img src="day-14-visual/slide-05-choice.png" alt="Choice">
+        </div>
+        <div class="day-content">
+          <div class="day-title">Visual Supports</div>
+          <div class="day-hook">Templates</div>
+          <div class="day-actions">
+            <a href="day-14-visual/">📂 View All</a>
+            <a href="day-14-visual/captions.md">📝 Captions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 15 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-num">15</div>
+          <div class="day-info"><h3>Wednesday</h3><div class="date">April 9</div></div>
+          <div class="platform-badges"><span class="platform-badge">🔄 Both</span></div>
+        </div>
+        <div class="preview-grid">
+          <img src="day-15-meltdown/slide-01-cover.png" alt="Cover">
+          <img src="day-15-meltdown/slide-02-vs.png" alt="VS">
+          <img src="day-15-meltdown/slide-03-dont.png" alt="Dont">
+          <img src="day-15-meltdown/slide-04-do.png" alt="Do">
+          <img src="day-15-meltdown/slide-05-after.png" alt="After">
+        </div>
+        <div class="day-content">
+          <div class="day-title">Meltdown Support</div>
+          <div class="day-hook">During & after</div>
+          <div class="day-actions">
+            <a href="day-15-meltdown/">📂 View All</a>
+            <a href="day-15-meltdown/captions.md">📝 Captions</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Phase 3 -->
-    <div class="phase-header">
-      <span class="phase-badge" style="background: #27AE60;">PHASE 3</span>
-      <span class="phase-title">Post-April Momentum</span>
-      <span class="phase-dates">May 1-24</span>
-    </div>
-
+    <!-- Remaining -->
     <div class="coming-soon">
-      <p>📅 24 days of continued content planned</p>
-      <p>Summer prep, therapy deep-dives, family dynamics & more</p>
+      <p>📅 Days 16-60 coming soon</p>
+      <p>Feeding, Sleep, Autism in Girls, AuDHD, AAC & more...</p>
     </div>
   </div>
 </body>

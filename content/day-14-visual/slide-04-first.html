@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #9B59B6; bottom: -100px; left: -100px; }
+    .num { 
+      background: #9B59B6; 
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; font-weight: 800;
+      margin-bottom: 25px;
+    }
+    .emoji { font-size: 80px; margin-bottom: 20px; }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .desc {
+      font-size: 26px;
+      line-height: 1.5;
+      max-width: 850px;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+    .example {
+      background: rgba(155, 89, 182, 0.2);
+      border: 2px solid rgba(155, 89, 182, 0.4);
+      border-radius: 16px;
+      padding: 30px 40px;
+      max-width: 700px;
+      font-size: 28px;
+      line-height: 1.6;
+    }
+    .first { color: #9B59B6; font-weight: 700; }
+    .then { color: #27AE60; font-weight: 700; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="num">3</div>
+  <div class="emoji">1️⃣ ➡️ 2️⃣</div>
+  <div class="title">First-Then Boards</div>
+  
+  <div class="desc">
+    Simple motivation tool. Shows what to do NOW and what comes AFTER.
+  </div>
+  
+  <div class="example">
+    <span class="first">FIRST:</span> Brush teeth 🪥<br><br>
+    <span class="then">THEN:</span> iPad time 📱
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 4</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
