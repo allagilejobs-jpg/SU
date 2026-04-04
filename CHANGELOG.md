@@ -2,6 +2,31 @@
 
 ## 2026-04-04
 
+### Added - One-Click Edit from Calendar
+**Commit:** 36466ad
+
+**New Workflow:**
+1. Open calendar, click any day
+2. Hover over any slide thumbnail
+3. Click ✏️ Edit button
+4. Editor opens with that graphic loaded and ready to edit!
+
+**How it works:**
+- Editor receives URL params (day, slide, folder, slideName)
+- Fetches the original HTML template
+- Auto-detects template type from slide name:
+  - `cover` → Cover template
+  - `cta` → CTA template
+  - `myth*` → Myth Buster
+  - `vs` → VS Compare
+  - `checklist` → Checklist
+  - etc.
+- Loads matching Fabric.js template
+- Extracts text content from HTML and populates canvas
+- Header shows "Editing: Day X - Slide Y"
+
+---
+
 ### Fixed - Critical Editor Issues (Testing Pass)
 **Commit:** 7557bbf
 
