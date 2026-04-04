@@ -2,6 +2,19 @@
 
 ## 2026-04-04
 
+### Fixed - Missing Day 37 CTA Image
+**Commit:** c0813ac
+
+**Issue:** Day 37 (May Goals) was missing slide-06-cta.png
+
+**Fixed:**
+- Rendered slide-06-cta.png from HTML template
+- Updated calendar slides count from 5 to 6
+- Added 'cta' to Day 37 slideNames array
+- Removed empty day-36-hero-content folder
+
+---
+
 ### Updated - Brand Guidelines with Templates & Categories Documentation
 **Commit:** 0e8903c
 
