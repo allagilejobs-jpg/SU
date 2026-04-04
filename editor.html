@@ -331,7 +331,8 @@
       </div>
       
       <div class="sidebar-section">
-        <h3>📐 Templates</h3>
+        <h3>📐 Templates (11)</h3>
+        <p style="font-size:10px;color:rgba(255,255,255,0.4);margin-bottom:10px">Template = visual layout structure</p>
         <div class="template-grid">
           <button class="template-btn" onclick="loadTemplate('cover')"><span class="icon">🎬</span>Cover</button>
           <button class="template-btn" onclick="loadTemplate('myth')"><span class="icon">❌</span>Myth</button>
@@ -341,7 +342,46 @@
           <button class="template-btn" onclick="loadTemplate('cta')"><span class="icon">📢</span>CTA</button>
           <button class="template-btn" onclick="loadTemplate('stats')"><span class="icon">📊</span>Stats</button>
           <button class="template-btn" onclick="loadTemplate('quote')"><span class="icon">💬</span>Quote</button>
+          <button class="template-btn" onclick="loadTemplate('contentbox')" style="border:1px solid #27AE60"><span class="icon">📦</span>Content</button>
+          <button class="template-btn" onclick="loadTemplate('tipcards')" style="border:1px solid #27AE60"><span class="icon">💡</span>Tips</button>
+          <button class="template-btn" onclick="loadTemplate('signcards')" style="border:1px solid #27AE60"><span class="icon">⚠️</span>Signs</button>
         </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <h3>🏷️ Category</h3>
+        <p style="font-size:10px;color:rgba(255,255,255,0.4);margin-bottom:10px">Category = content topic (fills into template)</p>
+        <select id="categorySelect" class="day-search" style="margin-bottom:8px" onchange="updateCategory()">
+          <option value="">— Select Category —</option>
+          <optgroup label="🎓 Education">
+            <option value="sensory">🎧 Sensory Supports</option>
+            <option value="communication">💬 Communication</option>
+            <option value="academic">📚 Academic</option>
+            <option value="social">👥 Social Skills</option>
+            <option value="executive">🧠 Executive Function</option>
+          </optgroup>
+          <optgroup label="🏠 Practical">
+            <option value="iep">📋 IEP/School</option>
+            <option value="routines">🔄 Routines</option>
+            <option value="meltdowns">🌪️ Meltdowns</option>
+            <option value="selfcare">💆 Self-Care</option>
+            <option value="therapy">🩺 Therapy</option>
+          </optgroup>
+          <optgroup label="❤️ Emotional">
+            <option value="acceptance">💙 Acceptance</option>
+            <option value="advocacy">✊ Advocacy</option>
+            <option value="joy">✨ Autistic Joy</option>
+            <option value="burnout">🔥 Burnout</option>
+            <option value="masking">🎭 Masking</option>
+          </optgroup>
+          <optgroup label="👨‍👩‍👧 Family">
+            <option value="siblings">👫 Siblings</option>
+            <option value="marriage">💑 Marriage</option>
+            <option value="parenting">👶 Parenting</option>
+            <option value="support">🤝 Support Systems</option>
+          </optgroup>
+        </select>
+        <div id="categoryPreview" style="font-size:11px;color:#E8B86D;padding:8px;background:rgba(232,184,109,0.1);border-radius:6px;display:none"></div>
       </div>
       
       <div class="sidebar-section">
@@ -742,6 +782,15 @@
           break;
         case 'quote':
           loadQuoteTemplate();
+          break;
+        case 'contentbox':
+          loadContentBoxTemplate();
+          break;
+        case 'tipcards':
+          loadTipCardsTemplate();
+          break;
+        case 'signcards':
+          loadSignCardsTemplate();
           break;
       }
       
@@ -1327,6 +1376,320 @@
       });
       
       canvas.add(quoteMark, quote, attribution, handle);
+    }
+    
+    // ============ NEW TEMPLATES (Content Box, Tip Cards, Sign Cards) ============
+    
+    function loadContentBoxTemplate() {
+      // Category badge
+      const badge = new fabric.IText('CATEGORY', {
+        left: canvasWidth / 2,
+        top: 100,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fontWeight: '700',
+        fill: COLORS.teal,
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        letterSpacing: 3,
+        originX: 'center'
+      });
+      
+      // Emoji
+      const emoji = new fabric.Text('📦', {
+        left: canvasWidth / 2,
+        top: 200,
+        fontSize: 100,
+        originX: 'center'
+      });
+      
+      // Title
+      const title = new fabric.IText('Content Title Here', {
+        left: canvasWidth / 2,
+        top: 340,
+        fontFamily: 'Playfair Display',
+        fontSize: 52,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Content box
+      const contentBox = new fabric.Rect({
+        left: 60,
+        top: 440,
+        width: canvasWidth - 120,
+        height: 600,
+        fill: 'rgba(74, 144, 164, 0.12)',
+        stroke: 'rgba(74, 144, 164, 0.3)',
+        strokeWidth: 2,
+        rx: 20,
+        ry: 20
+      });
+      
+      // Body text
+      const bodyText = new fabric.IText('This is where your main content goes.\n\nExplain the key points, provide information,\nor share insights with your audience.\n\nKeep paragraphs short and easy to read\non mobile screens.', {
+        left: canvasWidth / 2,
+        top: 740,
+        fontFamily: 'Poppins',
+        fontSize: 26,
+        fill: 'rgba(255,255,255,0.9)',
+        textAlign: 'center',
+        lineHeight: 1.6,
+        originX: 'center'
+      });
+      
+      // Slide number
+      const slideNum = new fabric.Text('1 of 5', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 90,
+        fontFamily: 'Poppins',
+        fontSize: 14,
+        fill: 'rgba(255,255,255,0.3)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(badge, emoji, title, contentBox, bodyText, slideNum, handle);
+    }
+    
+    function loadTipCardsTemplate() {
+      // Title
+      const title = new fabric.IText('💡 5 Quick Tips', {
+        left: canvasWidth / 2,
+        top: 80,
+        fontFamily: 'Playfair Display',
+        fontSize: 48,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Subtitle
+      const subtitle = new fabric.IText('Practical strategies you can use today', {
+        left: canvasWidth / 2,
+        top: 150,
+        fontFamily: 'Poppins',
+        fontSize: 22,
+        fill: 'rgba(255,255,255,0.7)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const tips = [
+        { num: '1', text: 'First tip goes here' },
+        { num: '2', text: 'Second tip goes here' },
+        { num: '3', text: 'Third tip goes here' },
+        { num: '4', text: 'Fourth tip goes here' },
+        { num: '5', text: 'Fifth tip goes here' }
+      ];
+      
+      const startY = 230;
+      const tipHeight = 150;
+      
+      tips.forEach((tip, i) => {
+        const y = startY + i * tipHeight;
+        
+        // Number circle
+        const circle = new fabric.Circle({
+          left: 100,
+          top: y + 30,
+          radius: 28,
+          fill: COLORS.gold,
+          originX: 'center',
+          originY: 'center'
+        });
+        
+        const num = new fabric.Text(tip.num, {
+          left: 100,
+          top: y + 30,
+          fontFamily: 'Poppins',
+          fontSize: 24,
+          fontWeight: '800',
+          fill: COLORS.bgPrimary,
+          originX: 'center',
+          originY: 'center'
+        });
+        
+        // Tip text
+        const tipText = new fabric.IText(tip.text, {
+          left: 160,
+          top: y + 30,
+          fontFamily: 'Poppins',
+          fontSize: 26,
+          fill: COLORS.white,
+          originY: 'center'
+        });
+        
+        canvas.add(circle, num, tipText);
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(title, subtitle, handle);
+    }
+    
+    function loadSignCardsTemplate() {
+      // Title
+      const title = new fabric.IText('⚠️ Warning Signs', {
+        left: canvasWidth / 2,
+        top: 80,
+        fontFamily: 'Playfair Display',
+        fontSize: 48,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Subtitle
+      const subtitle = new fabric.IText('Know what to look for', {
+        left: canvasWidth / 2,
+        top: 150,
+        fontFamily: 'Poppins',
+        fontSize: 22,
+        fill: 'rgba(255,255,255,0.7)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const signs = [
+        { icon: '😰', text: 'First warning sign' },
+        { icon: '😔', text: 'Second warning sign' },
+        { icon: '😤', text: 'Third warning sign' },
+        { icon: '😢', text: 'Fourth warning sign' }
+      ];
+      
+      const startX = 80;
+      const startY = 220;
+      const cardWidth = 450;
+      const cardHeight = 220;
+      const gap = 30;
+      
+      signs.forEach((sign, i) => {
+        const col = i % 2;
+        const row = Math.floor(i / 2);
+        const x = startX + col * (cardWidth + gap);
+        const y = startY + row * (cardHeight + gap);
+        
+        // Card background
+        const card = new fabric.Rect({
+          left: x,
+          top: y,
+          width: cardWidth,
+          height: cardHeight,
+          fill: 'rgba(231, 76, 60, 0.12)',
+          stroke: 'rgba(231, 76, 60, 0.25)',
+          strokeWidth: 2,
+          rx: 16,
+          ry: 16
+        });
+        
+        // Icon
+        const icon = new fabric.Text(sign.icon, {
+          left: x + cardWidth / 2,
+          top: y + 60,
+          fontSize: 50,
+          originX: 'center'
+        });
+        
+        // Text
+        const text = new fabric.IText(sign.text, {
+          left: x + cardWidth / 2,
+          top: y + 150,
+          fontFamily: 'Poppins',
+          fontSize: 22,
+          fill: COLORS.white,
+          textAlign: 'center',
+          originX: 'center'
+        });
+        
+        canvas.add(card, icon, text);
+      });
+      
+      const footer = new fabric.IText('If you notice these, reach out for support', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 150,
+        fontFamily: 'Poppins',
+        fontSize: 20,
+        fill: COLORS.teal,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(title, subtitle, footer, handle);
+    }
+    
+    // ============ CATEGORY SYSTEM ============
+    const categoryData = {
+      sensory: { emoji: '🎧', title: 'Sensory Supports', color: '#4A90A4' },
+      communication: { emoji: '💬', title: 'Communication', color: '#4A90A4' },
+      academic: { emoji: '📚', title: 'Academic Supports', color: '#4A90A4' },
+      social: { emoji: '👥', title: 'Social Skills', color: '#4A90A4' },
+      executive: { emoji: '🧠', title: 'Executive Function', color: '#4A90A4' },
+      iep: { emoji: '📋', title: 'IEP/School', color: '#27AE60' },
+      routines: { emoji: '🔄', title: 'Routines & Transitions', color: '#27AE60' },
+      meltdowns: { emoji: '🌪️', title: 'Meltdowns', color: '#E74C3C' },
+      selfcare: { emoji: '💆', title: 'Self-Care', color: '#27AE60' },
+      therapy: { emoji: '🩺', title: 'Therapy', color: '#27AE60' },
+      acceptance: { emoji: '💙', title: 'Acceptance', color: '#4A90A4' },
+      advocacy: { emoji: '✊', title: 'Self-Advocacy', color: '#E8B86D' },
+      joy: { emoji: '✨', title: 'Autistic Joy', color: '#27AE60' },
+      burnout: { emoji: '🔥', title: 'Burnout', color: '#E74C3C' },
+      masking: { emoji: '🎭', title: 'Masking', color: '#E74C3C' },
+      siblings: { emoji: '👫', title: 'Siblings', color: '#9B59B6' },
+      marriage: { emoji: '💑', title: 'Marriage & Relationships', color: '#9B59B6' },
+      parenting: { emoji: '👶', title: 'Parenting', color: '#9B59B6' },
+      support: { emoji: '🤝', title: 'Support Systems', color: '#9B59B6' }
+    };
+    
+    function updateCategory() {
+      const select = document.getElementById('categorySelect');
+      const preview = document.getElementById('categoryPreview');
+      const cat = categoryData[select.value];
+      
+      if (cat) {
+        preview.style.display = 'block';
+        preview.innerHTML = `<strong>${cat.emoji} ${cat.title}</strong><br><span style="font-size:10px;opacity:0.7">Click a template to apply this category</span>`;
+        
+        // Update any selected text element with the category
+        const active = canvas.getActiveObject();
+        if (active && (active.type === 'i-text' || active.type === 'text')) {
+          // Don't auto-update, let user choose
+        }
+      } else {
+        preview.style.display = 'none';
+      }
     }
     
     function clearCanvas() {
