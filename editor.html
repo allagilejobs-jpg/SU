@@ -308,17 +308,91 @@
       margin-top: 20px;
     }
     .instructions strong { color: #4A90A4; }
+    
+    /* Mobile Responsive */
+    @media (max-width: 1200px) {
+      .app {
+        grid-template-columns: 240px 1fr 260px;
+      }
+    }
+    
+    @media (max-width: 900px) {
+      .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+      .sidebar-left, .sidebar-right {
+        display: none;
+      }
+      .sidebar-left.mobile-open, .sidebar-right.mobile-open {
+        display: block;
+        position: fixed;
+        top: 56px;
+        bottom: 0;
+        width: 280px;
+        z-index: 100;
+        overflow-y: auto;
+      }
+      .sidebar-left.mobile-open { left: 0; }
+      .sidebar-right.mobile-open { right: 0; }
+      .header {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+      }
+      .header h1 { font-size: 16px; }
+      .header-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn { padding: 8px 12px; font-size: 12px; }
+      .mobile-toggle {
+        display: inline-block !important;
+      }
+    }
+    
+    .mobile-toggle {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .mobile-toggle:hover { background: rgba(255,255,255,0.2); }
+    
+    /* Overlay for mobile sidebars */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 99;
+    }
+    .mobile-overlay.active { display: block; }
   </style>
 </head>
 <body>
   <div class="app">
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileSidebars()"></div>
+    
     <!-- Header -->
     <header class="header">
+      <button class="mobile-toggle" onclick="toggleMobileSidebar('left')">☰ Menu</button>
       <h1>Spectrum <span>Unlocked</span> Editor</h1>
       <div class="header-actions">
         <button class="btn btn-secondary" onclick="exportSlide()">📥 Export PNG</button>
         <button class="btn btn-secondary" onclick="exportAllSlides()">📦 Export All</button>
+        <input type="file" id="loadFileInput" accept=".json" style="display:none" onchange="loadProjectFile(event)">
+        <button class="btn btn-secondary" onclick="document.getElementById('loadFileInput').click()">📂 Load</button>
         <button class="btn" onclick="saveProject()">💾 Save</button>
+        <button class="mobile-toggle" onclick="toggleMobileSidebar('right')">🎨 Props</button>
       </div>
     </header>
     
@@ -428,7 +502,11 @@
         • <strong>Delete/Backspace</strong> — Remove selected<br>
         • <strong>Ctrl+C / Ctrl+V</strong> — Copy/Paste<br>
         • <strong>Double-click text</strong> — Edit inline<br>
-        • <strong>Drag corners</strong> — Resize
+        • <strong>Drag corners</strong> — Resize<br><br>
+        <strong>💾 Save/Load:</strong><br>
+        • Save exports project as JSON<br>
+        • Load restores from JSON file<br>
+        • ⚠️ No auto-save! Save often!
       </div>
     </aside>
   </div>
@@ -526,6 +604,14 @@
       renderDayList();
       renderSlideTabs();
       loadTemplate('cover');
+      
+      // Warn before leaving if there's work
+      window.addEventListener('beforeunload', (e) => {
+        if (slides.length > 1 || (slides[0] && slides[0].json)) {
+          e.preventDefault();
+          e.returnValue = 'You have unsaved work. Are you sure you want to leave?';
+        }
+      });
     });
     
     async function preloadFonts() {
@@ -2127,6 +2213,86 @@
       link.download = 'spectrum-project.json';
       link.href = URL.createObjectURL(blob);
       link.click();
+    }
+    
+    function loadProjectFile(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const data = JSON.parse(e.target.result);
+          
+          // Validate data structure
+          if (!data.slides || !Array.isArray(data.slides)) {
+            alert('Invalid project file: missing slides data');
+            return;
+          }
+          
+          // Load canvas size
+          if (data.canvasWidth && data.canvasHeight) {
+            canvasWidth = data.canvasWidth;
+            canvasHeight = data.canvasHeight;
+            
+            // Update size buttons
+            document.querySelectorAll('.size-btn').forEach(btn => {
+              btn.classList.toggle('active', btn.dataset.size === `${canvasWidth}x${canvasHeight}`);
+            });
+          }
+          
+          // Load slides
+          slides = data.slides;
+          currentSlide = 0;
+          
+          // Render first slide
+          if (slides[0] && slides[0].json) {
+            canvas.loadFromJSON(slides[0].json, () => {
+              canvas.renderAll();
+              renderSlideTabs();
+            });
+          } else {
+            clearCanvas();
+            drawBackground();
+            renderSlideTabs();
+          }
+          
+          console.log('✅ Project loaded successfully');
+          alert('Project loaded! ' + slides.length + ' slide(s) found.');
+          
+        } catch (err) {
+          console.error('Failed to load project:', err);
+          alert('Failed to load project file. Make sure it\'s a valid JSON file.');
+        }
+      };
+      reader.readAsText(file);
+      
+      // Reset file input so same file can be loaded again
+      event.target.value = '';
+    }
+    
+    // ============ MOBILE SIDEBAR ============
+    function toggleMobileSidebar(side) {
+      const leftSidebar = document.querySelector('.sidebar-left');
+      const rightSidebar = document.querySelector('.sidebar-right');
+      const overlay = document.getElementById('mobileOverlay');
+      
+      if (side === 'left') {
+        leftSidebar.classList.toggle('mobile-open');
+        rightSidebar.classList.remove('mobile-open');
+      } else {
+        rightSidebar.classList.toggle('mobile-open');
+        leftSidebar.classList.remove('mobile-open');
+      }
+      
+      const isOpen = leftSidebar.classList.contains('mobile-open') || rightSidebar.classList.contains('mobile-open');
+      overlay.classList.toggle('active', isOpen);
+    }
+    
+    function closeMobileSidebars() {
+      document.querySelector('.sidebar-left').classList.remove('mobile-open');
+      document.querySelector('.sidebar-right').classList.remove('mobile-open');
+      document.getElementById('mobileOverlay').classList.remove('active');
     }
     
     // ============ UTILITIES ============
