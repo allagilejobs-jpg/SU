@@ -2,6 +2,34 @@
 
 ## 2026-04-04
 
+### Fixed - Critical Editor Issues (Testing Pass)
+**Commit:** 7557bbf
+
+**Bugs Found & Fixed:**
+
+1. **Load Project Feature** (CRITICAL)
+   - Problem: Save button worked but no way to load saved projects!
+   - Fix: Added 📂 Load button and `loadProjectFile()` function
+   - Now can load .json project files back into editor
+
+2. **Mobile Responsiveness** 
+   - Problem: Editor unusable on tablets/phones (3-column grid)
+   - Fix: Added responsive CSS, collapsible sidebars, mobile toggles
+   - Sidebars now accessible via ☰ Menu and 🎨 Props buttons
+
+3. **Unsaved Work Warning**
+   - Problem: Work lost on accidental page close
+   - Fix: Added `beforeunload` event to warn users
+
+4. **Updated Instructions**
+   - Added Save/Load documentation
+   - Added warning about no auto-save
+
+**Also Added:**
+- `EDITOR-TEST-CHECKLIST.md` for comprehensive testing
+
+---
+
 ### Fixed - Font Rendering on PNG Export
 **Commit:** c72aa81
 
