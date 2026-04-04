@@ -3,1308 +3,1711 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template Editor — Spectrum Unlocked</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Spectrum Unlocked — Template Editor</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --bg-primary: #1a1a2e;
-      --bg-secondary: #16213e;
-      --bg-tertiary: #0f3460;
-      --accent-teal: #4A90A4;
-      --accent-gold: #E8B86D;
-      --accent-green: #27AE60;
-      --accent-red: #E74C3C;
-      --text-primary: #fff;
-      --text-muted: rgba(255,255,255,0.6);
-      --border: rgba(255,255,255,0.1);
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f1a;
+      color: #fff;
+      min-height: 100vh;
     }
-    body { font-family: 'Poppins', sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; }
-    
-    /* Nav */
-    .nav { background: #0f0f1a; padding: 12px 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
-    .nav a { color: #888; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; font-size: 13px; transition: all 0.2s; }
-    .nav a:hover, .nav a.active { background: var(--accent-teal); color: #fff; }
     
     /* Layout */
-    .app { display: grid; grid-template-columns: 260px 1fr 280px; height: calc(100vh - 52px); }
-    @media (max-width: 1100px) { .app { grid-template-columns: 1fr; } .panel { display: none; } }
+    .app {
+      display: grid;
+      grid-template-columns: 280px 1fr 300px;
+      grid-template-rows: 56px 1fr;
+      height: 100vh;
+    }
     
-    .panel { background: var(--bg-secondary); overflow-y: auto; border-right: 1px solid var(--border); }
-    .panel:last-child { border-right: none; border-left: 1px solid var(--border); }
-    .panel-section { padding: 16px; border-bottom: 1px solid var(--border); }
-    .panel-section h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-gold); margin-bottom: 12px; }
+    /* Header */
+    .header {
+      grid-column: 1 / -1;
+      background: #1a1a2e;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    .header h1 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .header h1 span { color: #E8B86D; }
+    .header-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      background: #E8B86D;
+      color: #1a1a2e;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn:hover { background: #d4a85d; }
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+    
+    /* Left Sidebar */
+    .sidebar-left {
+      background: #1a1a2e;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      overflow-y: auto;
+      padding: 16px;
+    }
+    .sidebar-section {
+      margin-bottom: 24px;
+    }
+    .sidebar-section h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 12px;
+    }
+    
+    /* Day Selector */
+    .day-search {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .day-search::placeholder { color: rgba(255,255,255,0.4); }
+    .day-list {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .day-item {
+      padding: 10px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      margin-bottom: 4px;
+      background: rgba(255,255,255,0.03);
+    }
+    .day-item:hover { background: rgba(255,255,255,0.08); }
+    .day-item.active { background: #E8B86D; color: #1a1a2e; }
+    
+    /* Templates */
+    .template-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .template-btn {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 12px 8px;
+      color: #fff;
+      font-size: 11px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .template-btn:hover { background: rgba(255,255,255,0.1); border-color: #E8B86D; }
+    .template-btn .icon { font-size: 20px; display: block; margin-bottom: 4px; }
+    
+    /* Add Elements */
+    .add-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .add-btn {
+      background: rgba(74,144,164,0.2);
+      border: 1px solid rgba(74,144,164,0.3);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: #4A90A4;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .add-btn:hover { background: rgba(74,144,164,0.3); }
     
     /* Canvas Area */
-    .canvas-area { background: #0a0a14; display: flex; flex-direction: column; align-items: center; padding: 20px; overflow: auto; }
-    .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; justify-content: center; }
-    .btn { padding: 10px 18px; border: none; border-radius: 8px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary { background: var(--accent-teal); color: #fff; }
-    .btn-success { background: var(--accent-green); color: #fff; }
-    .btn-gold { background: var(--accent-gold); color: #1a1a2e; }
-    .btn-secondary { background: var(--bg-tertiary); color: #fff; }
-    .btn-danger { background: var(--accent-red); color: #fff; }
-    .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .canvas-area {
+      background: #12121f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: auto;
+    }
+    .canvas-container {
+      background: #1a1a2e;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
     
-    .canvas-wrap { background: #111; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-    #c { border-radius: 8px; }
+    /* Slide Tabs */
+    .slide-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .slide-tab {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .slide-tab:hover { background: rgba(255,255,255,0.2); }
+    .slide-tab.active { background: #E8B86D; color: #1a1a2e; }
+    .slide-tab-add {
+      background: rgba(39,174,96,0.2);
+      color: #27AE60;
+    }
     
-    /* Template Grid */
-    .tpl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .tpl-card { background: var(--bg-tertiary); border: 2px solid transparent; border-radius: 8px; padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.15s; font-size: 11px; }
-    .tpl-card:hover { border-color: var(--accent-teal); }
-    .tpl-card.active { border-color: var(--accent-gold); background: rgba(232,184,109,0.1); }
-    .tpl-card .icon { font-size: 24px; margin-bottom: 6px; }
+    /* Right Sidebar - Properties */
+    .sidebar-right {
+      background: #1a1a2e;
+      border-left: 1px solid rgba(255,255,255,0.1);
+      overflow-y: auto;
+      padding: 16px;
+    }
+    .prop-group {
+      margin-bottom: 20px;
+    }
+    .prop-group h4 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 10px;
+    }
+    .prop-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .prop-row label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      min-width: 60px;
+    }
+    .prop-input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 8px 10px;
+      color: #fff;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    .prop-input:focus {
+      outline: none;
+      border-color: #E8B86D;
+    }
+    select.prop-input {
+      cursor: pointer;
+    }
+    .color-picker {
+      width: 40px;
+      height: 36px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: transparent;
+    }
+    .prop-colors {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .color-swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .color-swatch:hover { border-color: #fff; }
+    .color-swatch.active { border-color: #E8B86D; }
     
-    /* Slides */
-    .slides { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
-    .slide-btn { width: 34px; height: 34px; border-radius: 6px; background: var(--bg-tertiary); border: 2px solid transparent; color: #fff; font-weight: 600; font-size: 12px; cursor: pointer; }
-    .slide-btn:hover { border-color: var(--accent-teal); }
-    .slide-btn.active { background: var(--accent-teal); }
-    .slide-btn.add { background: transparent; border: 2px dashed var(--border); }
-    .slide-btn.add:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+    /* Canvas Size Selector */
+    .size-btns {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .size-btn {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 6px 12px;
+      color: #fff;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .size-btn:hover { background: rgba(255,255,255,0.1); }
+    .size-btn.active { background: #E8B86D; color: #1a1a2e; }
     
-    /* Form Controls */
-    .form-group { margin-bottom: 12px; }
-    .form-group label { display: block; font-size: 11px; margin-bottom: 4px; color: var(--text-muted); }
-    .form-control { width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg-tertiary); color: #fff; font-family: 'Poppins', sans-serif; font-size: 12px; }
-    .form-control:focus { outline: none; border-color: var(--accent-teal); }
-    textarea.form-control { min-height: 60px; resize: vertical; }
+    /* Delete Button */
+    .delete-btn {
+      background: rgba(231,76,60,0.2);
+      border: 1px solid rgba(231,76,60,0.3);
+      color: #E74C3C;
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: inherit;
+      margin-top: 10px;
+    }
+    .delete-btn:hover { background: rgba(231,76,60,0.3); }
     
-    /* Colors */
-    .color-row { display: flex; gap: 6px; flex-wrap: wrap; }
-    .swatch { width: 28px; height: 28px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
-    .swatch:hover, .swatch.active { border-color: #fff; transform: scale(1.1); }
-    .swatch.custom { background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); position: relative; overflow: hidden; }
-    .swatch.custom input { position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
-    
-    /* List Items */
-    .list-row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
-    .list-row input { flex: 1; }
-    .list-row .del { width: 28px; height: 28px; border-radius: 4px; background: var(--bg-tertiary); border: none; color: #fff; cursor: pointer; font-size: 14px; }
-    .list-row .del:hover { background: var(--accent-red); }
-    
-    /* Caption */
-    .caption-box { background: var(--bg-tertiary); border-radius: 8px; padding: 12px; margin-top: 12px; }
-    .caption-box h4 { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
-    .caption-box pre { font-family: 'Poppins', sans-serif; font-size: 11px; white-space: pre-wrap; word-wrap: break-word; max-height: 120px; overflow-y: auto; line-height: 1.5; color: var(--text-muted); }
-    .copy-btn { padding: 4px 8px; font-size: 10px; }
-    
-    /* Modal */
-    .modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-    .modal-bg.open { display: flex; }
-    .modal { background: var(--bg-secondary); border-radius: 16px; max-width: 900px; width: 100%; max-height: 85vh; overflow: hidden; }
-    .modal-head { padding: 16px 20px; background: var(--bg-tertiary); display: flex; justify-content: space-between; align-items: center; }
-    .modal-head h2 { font-size: 18px; }
-    .modal-close { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; color: #fff; font-size: 18px; cursor: pointer; }
-    .modal-body { padding: 16px 20px; overflow-y: auto; max-height: calc(85vh - 60px); }
-    .day-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
-    .day-card { background: var(--bg-tertiary); border: 2px solid transparent; border-radius: 8px; padding: 12px; cursor: pointer; transition: all 0.15s; }
-    .day-card:hover { border-color: var(--accent-teal); }
-    .day-card .num { font-size: 20px; font-weight: 700; color: var(--accent-gold); }
-    .day-card .title { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
-    
-    /* Toast */
-    .toast { position: fixed; bottom: 20px; right: 20px; background: var(--accent-green); color: #fff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 13px; transform: translateY(100px); opacity: 0; transition: all 0.3s; z-index: 2000; }
-    .toast.show { transform: translateY(0); opacity: 1; }
-    .toast.error { background: var(--accent-red); }
-    
-    /* Zoom */
-    .zoom { display: flex; align-items: center; gap: 8px; margin-left: auto; }
-    .zoom button { width: 28px; height: 28px; border-radius: 4px; background: var(--bg-tertiary); border: none; color: #fff; cursor: pointer; font-size: 16px; }
-    .zoom span { font-size: 12px; min-width: 40px; text-align: center; }
-    
-    /* Selection info */
-    .sel-info { background: rgba(232,184,109,0.1); border: 1px solid var(--accent-gold); border-radius: 8px; padding: 12px; margin-bottom: 12px; font-size: 11px; }
-    .sel-info strong { color: var(--accent-gold); }
+    /* No Selection */
+    .no-selection {
+      text-align: center;
+      padding: 40px 20px;
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+    }
+    .no-selection .icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      opacity: 0.3;
+    }
     
     /* Instructions */
-    .instructions { background: rgba(74,144,164,0.1); border-radius: 8px; padding: 12px; font-size: 11px; line-height: 1.6; color: var(--text-muted); }
-    .instructions strong { color: var(--accent-teal); }
+    .instructions {
+      background: rgba(74,144,164,0.1);
+      border: 1px solid rgba(74,144,164,0.2);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+    .instructions strong { color: #4A90A4; }
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="calendar-60day.html">📅 60-Day</a>
-    <a href="content/">📦 Content</a>
-    <a href="editor.html" class="active">✨ Editor</a>
-  </nav>
-
   <div class="app">
-    <!-- LEFT PANEL -->
-    <div class="panel">
-      <div class="panel-section">
-        <h3>📋 Template</h3>
-        <div class="tpl-grid" id="tplGrid"></div>
+    <!-- Header -->
+    <header class="header">
+      <h1>Spectrum <span>Unlocked</span> Editor</h1>
+      <div class="header-actions">
+        <button class="btn btn-secondary" onclick="exportSlide()">📥 Export PNG</button>
+        <button class="btn btn-secondary" onclick="exportAllSlides()">📦 Export All</button>
+        <button class="btn" onclick="saveProject()">💾 Save</button>
       </div>
-      <div class="panel-section">
-        <h3>📅 Load Content</h3>
-        <button class="btn btn-gold" style="width:100%" onclick="openModal()">📂 Select Day</button>
+    </header>
+    
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <div class="sidebar-section">
+        <h3>📅 Load Day</h3>
+        <input type="text" class="day-search" placeholder="Search days..." id="daySearch" oninput="filterDays()">
+        <div class="day-list" id="dayList"></div>
       </div>
-      <div class="panel-section">
-        <h3>🎨 Slides</h3>
-        <div class="slides" id="slideTabs"></div>
-        <div style="display:flex;gap:6px">
-          <button class="btn btn-secondary" style="flex:1" onclick="addSlide()">+ Add</button>
-          <button class="btn btn-danger" style="flex:1" onclick="removeSlide()">− Remove</button>
+      
+      <div class="sidebar-section">
+        <h3>📐 Templates</h3>
+        <div class="template-grid">
+          <button class="template-btn" onclick="loadTemplate('cover')"><span class="icon">🎬</span>Cover</button>
+          <button class="template-btn" onclick="loadTemplate('myth')"><span class="icon">❌</span>Myth</button>
+          <button class="template-btn" onclick="loadTemplate('checklist')"><span class="icon">✓</span>List</button>
+          <button class="template-btn" onclick="loadTemplate('vs')"><span class="icon">⚔️</span>VS</button>
+          <button class="template-btn" onclick="loadTemplate('grid')"><span class="icon">🔲</span>Grid</button>
+          <button class="template-btn" onclick="loadTemplate('cta')"><span class="icon">📢</span>CTA</button>
+          <button class="template-btn" onclick="loadTemplate('stats')"><span class="icon">📊</span>Stats</button>
+          <button class="template-btn" onclick="loadTemplate('quote')"><span class="icon">💬</span>Quote</button>
         </div>
       </div>
-      <div class="panel-section">
-        <h3>📐 Canvas Size</h3>
-        <select class="form-control" id="canvasSize" onchange="resizeCanvas()">
-          <option value="1080x1350">Instagram (1080×1350)</option>
-          <option value="1080x1920">Stories/TikTok (1080×1920)</option>
-          <option value="1080x1080">Square (1080×1080)</option>
-        </select>
+      
+      <div class="sidebar-section">
+        <h3>➕ Add Elements</h3>
+        <div class="add-btns">
+          <button class="add-btn" onclick="addText()">📝 Text</button>
+          <button class="add-btn" onclick="addHeading()">🔤 Heading</button>
+          <button class="add-btn" onclick="addBadge()">🏷️ Badge</button>
+          <button class="add-btn" onclick="addRect()">⬜ Rect</button>
+          <button class="add-btn" onclick="addCircle()">⭕ Circle</button>
+          <button class="add-btn" onclick="addEmoji()">😀 Emoji</button>
+        </div>
       </div>
-      <div class="panel-section instructions">
-        <strong>💡 How to Edit:</strong><br>
-        • <strong>Double-click</strong> text to edit inline<br>
-        • <strong>Click</strong> to select, then drag<br>
-        • <strong>Delete key</strong> removes selected<br>
-        • Use right panel to change colors/fonts
+      
+      <div class="sidebar-section">
+        <h3>📏 Canvas Size</h3>
+        <div class="size-btns">
+          <button class="size-btn active" onclick="setCanvasSize(1080,1350)" data-size="1080x1350">4:5</button>
+          <button class="size-btn" onclick="setCanvasSize(1080,1920)" data-size="1080x1920">9:16</button>
+          <button class="size-btn" onclick="setCanvasSize(1080,1080)" data-size="1080x1080">1:1</button>
+        </div>
       </div>
-    </div>
+    </aside>
+    
+    <!-- Canvas Area -->
+    <main class="canvas-area">
+      <div class="slide-tabs" id="slideTabs"></div>
+      <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+      </div>
+    </main>
+    
+    <!-- Right Sidebar - Properties -->
+    <aside class="sidebar-right">
+      <div id="propertiesPanel">
+        <div class="no-selection">
+          <div class="icon">🎨</div>
+          <p>Select an element on the canvas to edit its properties</p>
+        </div>
+      </div>
+      
+      <div class="instructions">
+        <strong>Keyboard Shortcuts:</strong><br>
+        • <strong>Delete/Backspace</strong> — Remove selected<br>
+        • <strong>Ctrl+C / Ctrl+V</strong> — Copy/Paste<br>
+        • <strong>Double-click text</strong> — Edit inline<br>
+        • <strong>Drag corners</strong> — Resize
+      </div>
+    </aside>
+  </div>
 
-    <!-- CANVAS AREA -->
-    <div class="canvas-area">
-      <div class="toolbar">
-        <button class="btn btn-success" onclick="downloadPNG()">⬇️ Download PNG</button>
-        <button class="btn btn-primary" onclick="downloadAllSlides()">📦 All Slides</button>
-        <button class="btn btn-secondary" onclick="addText()">T+ Add Text</button>
-        <button class="btn btn-secondary" onclick="deleteSelected()">🗑️ Delete</button>
-        <button class="btn btn-secondary" onclick="resetSlide()">🔄 Reset</button>
-        <div class="zoom">
-          <button onclick="zoomOut()">−</button>
-          <span id="zoomLvl">50%</span>
-          <button onclick="zoomIn()">+</button>
-        </div>
-      </div>
-      <div class="canvas-wrap" id="canvasWrap">
-        <canvas id="c"></canvas>
-      </div>
-    </div>
-
-    <!-- RIGHT PANEL -->
-    <div class="panel">
-      <div class="panel-section">
-        <h3>🎯 Selection</h3>
-        <div class="sel-info" id="selInfo">
-          <strong>No selection</strong><br>Click an element on canvas to edit it
-        </div>
-        <div id="selControls" style="display:none">
-          <div class="form-group">
-            <label>Text Content</label>
-            <textarea class="form-control" id="selText" rows="3" oninput="updateSelectedText()"></textarea>
-          </div>
-          <div class="form-group">
-            <label>Font Size: <span id="fontSizeVal">24</span>px</label>
-            <input type="range" class="form-control" id="fontSize" min="12" max="120" value="24" oninput="updateSelectedFontSize()">
-          </div>
-          <div class="form-group">
-            <label>Text Color</label>
-            <div class="color-row">
-              <div class="swatch active" style="background:#fff" data-color="#ffffff" onclick="setTextColor(this)"></div>
-              <div class="swatch" style="background:#E8B86D" data-color="#E8B86D" onclick="setTextColor(this)"></div>
-              <div class="swatch" style="background:#4A90A4" data-color="#4A90A4" onclick="setTextColor(this)"></div>
-              <div class="swatch" style="background:#27AE60" data-color="#27AE60" onclick="setTextColor(this)"></div>
-              <div class="swatch" style="background:#E74C3C" data-color="#E74C3C" onclick="setTextColor(this)"></div>
-              <div class="swatch custom"><input type="color" value="#ffffff" onchange="setTextColor(this, true)"></div>
+  <script>
+    // ============ GLOBAL STATE ============
+    let canvas;
+    let slides = [{ json: null, name: 'Slide 1' }];
+    let currentSlide = 0;
+    let canvasWidth = 1080;
+    let canvasHeight = 1350;
+    let clipboard = null;
+    
+    // Brand Colors
+    const COLORS = {
+      gold: '#E8B86D',
+      teal: '#4A90A4',
+      green: '#27AE60',
+      red: '#E74C3C',
+      white: '#FFFFFF',
+      bgPrimary: '#1a1a2e',
+      bgSecondary: '#16213e',
+      bgTertiary: '#0f3460'
+    };
+    
+    // 60-Day Calendar Data
+    const calendarData = [
+      { day: 1, title: "TikTok Autism Myths", topic: "myth-busting" },
+      { day: 2, title: "What is Autism?", topic: "education" },
+      { day: 3, title: "Stimming Explained", topic: "education" },
+      { day: 4, title: "Sensory Processing", topic: "education" },
+      { day: 5, title: "Communication Styles", topic: "education" },
+      { day: 6, title: "Eye Contact Myths", topic: "myth-busting" },
+      { day: 7, title: "Autism Acceptance Month", topic: "awareness" },
+      { day: 8, title: "WAAD Introduction", topic: "awareness" },
+      { day: 9, title: "Identity-First Language", topic: "education" },
+      { day: 10, title: "IEP Accommodations", topic: "practical" },
+      { day: 11, title: "Masking & Burnout", topic: "education" },
+      { day: 12, title: "Special Interests", topic: "celebration" },
+      { day: 13, title: "Autism in Girls", topic: "education" },
+      { day: 14, title: "Late Diagnosis", topic: "stories" },
+      { day: 15, title: "Meltdown vs Tantrum", topic: "education" },
+      { day: 16, title: "Sensory-Friendly Spaces", topic: "practical" },
+      { day: 17, title: "Executive Function", topic: "education" },
+      { day: 18, title: "Autism & Anxiety", topic: "mental-health" },
+      { day: 19, title: "Neurodiversity Movement", topic: "awareness" },
+      { day: 20, title: "Workplace Accommodations", topic: "practical" },
+      { day: 21, title: "AuDHD Explained", topic: "education" },
+      { day: 22, title: "Rejection Sensitivity", topic: "mental-health" },
+      { day: 23, title: "Autistic Parenting", topic: "stories" },
+      { day: 24, title: "Routine & Transitions", topic: "practical" },
+      { day: 25, title: "Autism & Sleep", topic: "health" },
+      { day: 26, title: "Social Scripts", topic: "practical" },
+      { day: 27, title: "Interoception", topic: "education" },
+      { day: 28, title: "Autism & Eating", topic: "health" },
+      { day: 29, title: "Pathological Demand Avoidance", topic: "education" },
+      { day: 30, title: "Month Reflection", topic: "awareness" },
+      { day: 31, title: "Advocacy Tips", topic: "practical" },
+      { day: 32, title: "Self-Care for Parents", topic: "wellness" },
+      { day: 33, title: "Autism & Creativity", topic: "celebration" },
+      { day: 34, title: "Accommodations at School", topic: "practical" },
+      { day: 35, title: "Understanding Shutdowns", topic: "education" },
+      { day: 36, title: "Autism & Friendship", topic: "social" },
+      { day: 37, title: "Therapy Options", topic: "practical" },
+      { day: 38, title: "Autism Strengths", topic: "celebration" },
+      { day: 39, title: "Sensory Diet", topic: "practical" },
+      { day: 40, title: "Nonverbal Communication", topic: "education" },
+      { day: 41, title: "AAC Devices", topic: "practical" },
+      { day: 42, title: "Autism & Puberty", topic: "health" },
+      { day: 43, title: "Dating & Relationships", topic: "social" },
+      { day: 44, title: "Employment Statistics", topic: "awareness" },
+      { day: 45, title: "Interview Tips", topic: "practical" },
+      { day: 46, title: "Disclosure Decisions", topic: "practical" },
+      { day: 47, title: "Autism & College", topic: "education" },
+      { day: 48, title: "Independent Living", topic: "practical" },
+      { day: 49, title: "Autism & Aging", topic: "health" },
+      { day: 50, title: "Family Dynamics", topic: "stories" },
+      { day: 51, title: "Sibling Perspectives", topic: "stories" },
+      { day: 52, title: "Building Support Networks", topic: "practical" },
+      { day: 53, title: "Autism Acceptance vs Awareness", topic: "awareness" },
+      { day: 54, title: "Harmful Therapies to Avoid", topic: "education" },
+      { day: 55, title: "Autistic-Led Organizations", topic: "resources" },
+      { day: 56, title: "Books by Autistic Authors", topic: "resources" },
+      { day: 57, title: "Creating Inclusive Spaces", topic: "practical" },
+      { day: 58, title: "Celebrating Differences", topic: "celebration" },
+      { day: 59, title: "Autistic Joy", topic: "celebration" },
+      { day: 60, title: "Thank You & Next Steps", topic: "closing" }
+    ];
+    
+    // ============ INITIALIZATION ============
+    document.addEventListener('DOMContentLoaded', () => {
+      initCanvas();
+      renderDayList();
+      renderSlideTabs();
+      loadTemplate('cover');
+    });
+    
+    function initCanvas() {
+      // Calculate display scale (fit in viewport)
+      const maxDisplayHeight = window.innerHeight - 180;
+      const maxDisplayWidth = window.innerWidth - 620;
+      const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, 0.6);
+      
+      canvas = new fabric.Canvas('canvas', {
+        width: canvasWidth * scale,
+        height: canvasHeight * scale,
+        backgroundColor: '#1a1a2e',
+        preserveObjectStacking: true
+      });
+      
+      // Set zoom to match display scale
+      canvas.setZoom(scale);
+      
+      // Draw gradient background
+      drawBackground();
+      
+      // Event listeners
+      canvas.on('selection:created', updatePropertiesPanel);
+      canvas.on('selection:updated', updatePropertiesPanel);
+      canvas.on('selection:cleared', clearPropertiesPanel);
+      canvas.on('object:modified', saveCurrentSlide);
+      canvas.on('object:added', saveCurrentSlide);
+      
+      // Keyboard events
+      document.addEventListener('keydown', handleKeyDown);
+    }
+    
+    function drawBackground() {
+      // Create gradient background
+      const gradient = new fabric.Gradient({
+        type: 'linear',
+        coords: { x1: 0, y1: 0, x2: canvasWidth, y2: canvasHeight },
+        colorStops: [
+          { offset: 0, color: COLORS.bgPrimary },
+          { offset: 0.5, color: COLORS.bgSecondary },
+          { offset: 1, color: COLORS.bgTertiary }
+        ]
+      });
+      
+      const bg = new fabric.Rect({
+        left: 0,
+        top: 0,
+        width: canvasWidth,
+        height: canvasHeight,
+        fill: gradient,
+        selectable: false,
+        evented: false,
+        excludeFromExport: false
+      });
+      bg.isBackground = true;
+      canvas.add(bg);
+      canvas.sendToBack(bg);
+      
+      // Add decorative circles
+      const goldCircle = new fabric.Circle({
+        left: canvasWidth - 150,
+        top: -100,
+        radius: 200,
+        fill: COLORS.gold,
+        opacity: 0.08,
+        selectable: false,
+        evented: false
+      });
+      goldCircle.isDecoration = true;
+      canvas.add(goldCircle);
+      
+      const tealCircle = new fabric.Circle({
+        left: -100,
+        top: canvasHeight - 150,
+        radius: 150,
+        fill: COLORS.teal,
+        opacity: 0.06,
+        selectable: false,
+        evented: false
+      });
+      tealCircle.isDecoration = true;
+      canvas.add(tealCircle);
+    }
+    
+    // ============ KEYBOARD HANDLING ============
+    function handleKeyDown(e) {
+      const active = canvas.getActiveObject();
+      
+      // Delete/Backspace - remove object (unless editing text)
+      if ((e.key === 'Delete' || e.key === 'Backspace') && active && !active.isEditing) {
+        if (!active.isBackground && !active.isDecoration) {
+          canvas.remove(active);
+          canvas.discardActiveObject();
+          canvas.renderAll();
+          clearPropertiesPanel();
+        }
+        e.preventDefault();
+      }
+      
+      // Ctrl+C - copy
+      if (e.ctrlKey && e.key === 'c' && active) {
+        active.clone(cloned => { clipboard = cloned; });
+      }
+      
+      // Ctrl+V - paste
+      if (e.ctrlKey && e.key === 'v' && clipboard) {
+        clipboard.clone(cloned => {
+          cloned.set({ left: cloned.left + 20, top: cloned.top + 20 });
+          canvas.add(cloned);
+          canvas.setActiveObject(cloned);
+          canvas.renderAll();
+        });
+      }
+    }
+    
+    // ============ ADD ELEMENTS ============
+    function addText() {
+      const text = new fabric.IText('Click to edit', {
+        left: canvasWidth / 2,
+        top: canvasHeight / 2,
+        fontFamily: 'Poppins',
+        fontSize: 24,
+        fill: COLORS.white,
+        originX: 'center',
+        originY: 'center'
+      });
+      canvas.add(text);
+      canvas.setActiveObject(text);
+      canvas.renderAll();
+    }
+    
+    function addHeading() {
+      const text = new fabric.IText('Heading', {
+        left: canvasWidth / 2,
+        top: canvasHeight / 2,
+        fontFamily: 'Playfair Display',
+        fontSize: 64,
+        fontWeight: '800',
+        fill: COLORS.white,
+        originX: 'center',
+        originY: 'center'
+      });
+      canvas.add(text);
+      canvas.setActiveObject(text);
+      canvas.renderAll();
+    }
+    
+    function addBadge() {
+      const group = new fabric.Group([], {
+        left: canvasWidth / 2,
+        top: 100,
+        originX: 'center'
+      });
+      
+      const rect = new fabric.Rect({
+        width: 200,
+        height: 40,
+        rx: 20,
+        ry: 20,
+        fill: COLORS.gold,
+        originX: 'center',
+        originY: 'center'
+      });
+      
+      const text = new fabric.Text('🚨 BADGE TEXT', {
+        fontFamily: 'Poppins',
+        fontSize: 14,
+        fontWeight: '700',
+        fill: COLORS.bgPrimary,
+        originX: 'center',
+        originY: 'center'
+      });
+      
+      group.addWithUpdate(rect);
+      group.addWithUpdate(text);
+      canvas.add(group);
+      canvas.setActiveObject(group);
+      canvas.renderAll();
+    }
+    
+    function addRect() {
+      const rect = new fabric.Rect({
+        left: canvasWidth / 2,
+        top: canvasHeight / 2,
+        width: 300,
+        height: 200,
+        fill: 'rgba(74, 144, 164, 0.15)',
+        stroke: 'rgba(74, 144, 164, 0.3)',
+        strokeWidth: 2,
+        rx: 16,
+        ry: 16,
+        originX: 'center',
+        originY: 'center'
+      });
+      canvas.add(rect);
+      canvas.setActiveObject(rect);
+      canvas.renderAll();
+    }
+    
+    function addCircle() {
+      const circle = new fabric.Circle({
+        left: canvasWidth / 2,
+        top: canvasHeight / 2,
+        radius: 80,
+        fill: COLORS.gold,
+        originX: 'center',
+        originY: 'center'
+      });
+      canvas.add(circle);
+      canvas.setActiveObject(circle);
+      canvas.renderAll();
+    }
+    
+    function addEmoji() {
+      const emoji = prompt('Enter emoji:', '✨');
+      if (emoji) {
+        const text = new fabric.Text(emoji, {
+          left: canvasWidth / 2,
+          top: canvasHeight / 2,
+          fontSize: 80,
+          originX: 'center',
+          originY: 'center'
+        });
+        canvas.add(text);
+        canvas.setActiveObject(text);
+        canvas.renderAll();
+      }
+    }
+    
+    // ============ TEMPLATES ============
+    function loadTemplate(type) {
+      clearCanvas();
+      drawBackground();
+      
+      switch(type) {
+        case 'cover':
+          loadCoverTemplate();
+          break;
+        case 'myth':
+          loadMythTemplate();
+          break;
+        case 'checklist':
+          loadChecklistTemplate();
+          break;
+        case 'vs':
+          loadVSTemplate();
+          break;
+        case 'grid':
+          loadGridTemplate();
+          break;
+        case 'cta':
+          loadCTATemplate();
+          break;
+        case 'stats':
+          loadStatsTemplate();
+          break;
+        case 'quote':
+          loadQuoteTemplate();
+          break;
+      }
+      
+      canvas.renderAll();
+      saveCurrentSlide();
+    }
+    
+    function loadCoverTemplate() {
+      // Badge
+      const badge = new fabric.IText('🚨 MYTH ALERT', {
+        left: canvasWidth / 2,
+        top: 200,
+        fontFamily: 'Poppins',
+        fontSize: 18,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Title
+      const title = new fabric.IText('3 Things TikTok\nGets WRONG\nAbout Autism', {
+        left: canvasWidth / 2,
+        top: 450,
+        fontFamily: 'Playfair Display',
+        fontSize: 72,
+        fontWeight: '800',
+        fill: COLORS.white,
+        textAlign: 'center',
+        lineHeight: 1.1,
+        originX: 'center'
+      });
+      
+      // Subtitle
+      const subtitle = new fabric.IText('A new study found over 50% of autism\ncontent on social media is misleading.', {
+        left: canvasWidth / 2,
+        top: 750,
+        fontFamily: 'Poppins',
+        fontSize: 22,
+        fill: 'rgba(255,255,255,0.8)',
+        textAlign: 'center',
+        lineHeight: 1.5,
+        originX: 'center'
+      });
+      
+      // Swipe CTA
+      const cta = new fabric.IText('👉 Swipe to learn the truth', {
+        left: canvasWidth / 2,
+        top: 1050,
+        fontFamily: 'Poppins',
+        fontSize: 20,
+        fill: COLORS.teal,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Handle
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(badge, title, subtitle, cta, handle);
+    }
+    
+    function loadMythTemplate() {
+      const titleLabel = new fabric.IText('❌ MYTH #1', {
+        left: canvasWidth / 2,
+        top: 120,
+        fontFamily: 'Poppins',
+        fontSize: 18,
+        fontWeight: '700',
+        fill: COLORS.red,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Myth box
+      const mythBox = new fabric.Rect({
+        left: 60,
+        top: 180,
+        width: canvasWidth - 120,
+        height: 200,
+        fill: 'rgba(231, 76, 60, 0.12)',
+        stroke: COLORS.red,
+        strokeWidth: 4,
+        rx: 16,
+        ry: 16
+      });
+      
+      const mythText = new fabric.IText('"Autistic people lack empathy\nand can\'t understand emotions."', {
+        left: canvasWidth / 2,
+        top: 280,
+        fontFamily: 'Playfair Display',
+        fontStyle: 'italic',
+        fontSize: 32,
+        fill: COLORS.white,
+        textAlign: 'center',
+        lineHeight: 1.4,
+        originX: 'center'
+      });
+      
+      const truthLabel = new fabric.IText('✅ TRUTH', {
+        left: canvasWidth / 2,
+        top: 450,
+        fontFamily: 'Poppins',
+        fontSize: 18,
+        fontWeight: '700',
+        fill: COLORS.green,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Truth box
+      const truthBox = new fabric.Rect({
+        left: 60,
+        top: 510,
+        width: canvasWidth - 120,
+        height: 350,
+        fill: 'rgba(39, 174, 96, 0.12)',
+        rx: 16,
+        ry: 16
+      });
+      
+      const truthText = new fabric.IText('Autistic people often experience\nEMPATHY VERY DEEPLY.\n\nThey may express it differently or\nstruggle with cognitive empathy\n(reading social cues), but emotional\nempathy is frequently intense.', {
+        left: canvasWidth / 2,
+        top: 685,
+        fontFamily: 'Poppins',
+        fontSize: 24,
+        fill: COLORS.white,
+        textAlign: 'center',
+        lineHeight: 1.5,
+        originX: 'center'
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(titleLabel, mythBox, mythText, truthLabel, truthBox, truthText, handle);
+    }
+    
+    function loadChecklistTemplate() {
+      const title = new fabric.IText('🎧 Sensory Supports', {
+        left: canvasWidth / 2,
+        top: 100,
+        fontFamily: 'Playfair Display',
+        fontSize: 48,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const container = new fabric.Rect({
+        left: 60,
+        top: 200,
+        width: canvasWidth - 120,
+        height: 900,
+        fill: 'rgba(74, 144, 164, 0.12)',
+        stroke: 'rgba(74, 144, 164, 0.3)',
+        strokeWidth: 2,
+        rx: 20,
+        ry: 20
+      });
+      
+      const items = [
+        '✓ Noise-canceling headphones allowed',
+        '✓ Scheduled sensory breaks',
+        '✓ Fidgets permitted in class',
+        '✓ Alternative seating options',
+        '✓ Reduced fluorescent lighting',
+        '✓ Quiet space for overwhelm'
+      ];
+      
+      const list = new fabric.IText(items.join('\n\n'), {
+        left: 100,
+        top: 280,
+        fontFamily: 'Poppins',
+        fontSize: 28,
+        fill: COLORS.white,
+        lineHeight: 1.8
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(title, container, list, handle);
+    }
+    
+    function loadVSTemplate() {
+      const title = new fabric.IText('What\'s the Difference?', {
+        left: canvasWidth / 2,
+        top: 80,
+        fontFamily: 'Playfair Display',
+        fontSize: 42,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // Left box (Tantrum)
+      const leftBox = new fabric.Rect({
+        left: 60,
+        top: 180,
+        width: 450,
+        height: 500,
+        fill: 'rgba(231, 76, 60, 0.12)',
+        stroke: 'rgba(231, 76, 60, 0.3)',
+        strokeWidth: 2,
+        rx: 20,
+        ry: 20
+      });
+      
+      const leftTitle = new fabric.IText('😤 Tantrum', {
+        left: 285,
+        top: 220,
+        fontFamily: 'Playfair Display',
+        fontSize: 36,
+        fontWeight: '700',
+        fill: COLORS.white,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const leftContent = new fabric.IText('• Goal-oriented behavior\n• Stops when goal is met\n• Aware of audience\n• Can be controlled\n• Often for attention', {
+        left: 100,
+        top: 300,
+        fontFamily: 'Poppins',
+        fontSize: 22,
+        fill: 'rgba(255,255,255,0.9)',
+        lineHeight: 1.8
+      });
+      
+      // VS Circle
+      const vsCircle = new fabric.Circle({
+        left: canvasWidth / 2,
+        top: 430,
+        radius: 35,
+        fill: COLORS.gold,
+        originX: 'center',
+        originY: 'center'
+      });
+      
+      const vsText = new fabric.Text('VS', {
+        left: canvasWidth / 2,
+        top: 430,
+        fontFamily: 'Poppins',
+        fontSize: 22,
+        fontWeight: '800',
+        fill: COLORS.bgPrimary,
+        textAlign: 'center',
+        originX: 'center',
+        originY: 'center'
+      });
+      
+      // Right box (Meltdown)
+      const rightBox = new fabric.Rect({
+        left: canvasWidth - 510,
+        top: 180,
+        width: 450,
+        height: 500,
+        fill: 'rgba(74, 144, 164, 0.12)',
+        stroke: 'rgba(74, 144, 164, 0.3)',
+        strokeWidth: 2,
+        rx: 20,
+        ry: 20
+      });
+      
+      const rightTitle = new fabric.IText('🌪️ Meltdown', {
+        left: canvasWidth - 285,
+        top: 220,
+        fontFamily: 'Playfair Display',
+        fontSize: 36,
+        fontWeight: '700',
+        fill: COLORS.white,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const rightContent = new fabric.IText('• Sensory/emotional overload\n• Not goal-oriented\n• Unaware of surroundings\n• Cannot be controlled\n• Needs time to recover', {
+        left: canvasWidth - 470,
+        top: 300,
+        fontFamily: 'Poppins',
+        fontSize: 22,
+        fill: 'rgba(255,255,255,0.9)',
+        lineHeight: 1.8
+      });
+      
+      const footer = new fabric.IText('Both are valid. Understanding helps.', {
+        left: canvasWidth / 2,
+        top: 750,
+        fontFamily: 'Poppins',
+        fontSize: 24,
+        fill: COLORS.teal,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(title, leftBox, leftTitle, leftContent, rightBox, rightTitle, rightContent, vsCircle, vsText, footer, handle);
+    }
+    
+    function loadGridTemplate() {
+      const title = new fabric.IText('✨ Moments of Joy', {
+        left: canvasWidth / 2,
+        top: 80,
+        fontFamily: 'Playfair Display',
+        fontSize: 48,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const gridItems = [
+        { emoji: '📚', label: 'Deep diving into\nspecial interests' },
+        { emoji: '🧸', label: 'Comfort items\nthat ground us' },
+        { emoji: '🎧', label: 'Perfect playlist\non repeat' },
+        { emoji: '🧩', label: 'Satisfying patterns\nand routines' }
+      ];
+      
+      const startX = 100;
+      const startY = 200;
+      const cardWidth = 440;
+      const cardHeight = 300;
+      const gap = 40;
+      
+      gridItems.forEach((item, i) => {
+        const col = i % 2;
+        const row = Math.floor(i / 2);
+        const x = startX + col * (cardWidth + gap);
+        const y = startY + row * (cardHeight + gap);
+        
+        const card = new fabric.Rect({
+          left: x,
+          top: y,
+          width: cardWidth,
+          height: cardHeight,
+          fill: 'rgba(39, 174, 96, 0.12)',
+          stroke: 'rgba(39, 174, 96, 0.25)',
+          strokeWidth: 2,
+          rx: 16,
+          ry: 16
+        });
+        
+        const emoji = new fabric.Text(item.emoji, {
+          left: x + cardWidth / 2,
+          top: y + 80,
+          fontSize: 64,
+          originX: 'center'
+        });
+        
+        const label = new fabric.IText(item.label, {
+          left: x + cardWidth / 2,
+          top: y + 180,
+          fontFamily: 'Poppins',
+          fontSize: 22,
+          fill: COLORS.white,
+          textAlign: 'center',
+          lineHeight: 1.4,
+          originX: 'center'
+        });
+        
+        canvas.add(card, emoji, label);
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(title, handle);
+    }
+    
+    function loadCTATemplate() {
+      const emoji = new fabric.Text('💾', {
+        left: canvasWidth / 2,
+        top: 300,
+        fontSize: 120,
+        originX: 'center'
+      });
+      
+      const title = new fabric.IText('Save This Post!', {
+        left: canvasWidth / 2,
+        top: 480,
+        fontFamily: 'Playfair Display',
+        fontSize: 56,
+        fontWeight: '700',
+        fill: COLORS.white,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const subtitle = new fabric.IText('Reference it when you need it most.', {
+        left: canvasWidth / 2,
+        top: 560,
+        fontFamily: 'Poppins',
+        fontSize: 24,
+        fill: 'rgba(255,255,255,0.7)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      // CTA Button
+      const btnBg = new fabric.Rect({
+        left: canvasWidth / 2 - 180,
+        top: 680,
+        width: 360,
+        height: 60,
+        fill: COLORS.gold,
+        rx: 30,
+        ry: 30
+      });
+      
+      const btnText = new fabric.Text('📩 DM "tips" for more resources', {
+        left: canvasWidth / 2,
+        top: 710,
+        fontFamily: 'Poppins',
+        fontSize: 18,
+        fontWeight: '600',
+        fill: COLORS.bgPrimary,
+        textAlign: 'center',
+        originX: 'center',
+        originY: 'center'
+      });
+      
+      const actions = new fabric.IText('📤 Share  •  💬 Comment  •  ➕ Follow', {
+        left: canvasWidth / 2,
+        top: 850,
+        fontFamily: 'Poppins',
+        fontSize: 22,
+        fill: 'rgba(255,255,255,0.5)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(emoji, title, subtitle, btnBg, btnText, actions, handle);
+    }
+    
+    function loadStatsTemplate() {
+      const title = new fabric.IText('📊 Did You Know?', {
+        left: canvasWidth / 2,
+        top: 150,
+        fontFamily: 'Playfair Display',
+        fontSize: 42,
+        fontWeight: '700',
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const stat = new fabric.IText('85%', {
+        left: canvasWidth / 2,
+        top: 450,
+        fontFamily: 'Playfair Display',
+        fontSize: 180,
+        fontWeight: '800',
+        fill: COLORS.white,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const description = new fabric.IText('of college-educated autistic adults\nare unemployed or underemployed', {
+        left: canvasWidth / 2,
+        top: 650,
+        fontFamily: 'Poppins',
+        fontSize: 28,
+        fill: 'rgba(255,255,255,0.85)',
+        textAlign: 'center',
+        lineHeight: 1.5,
+        originX: 'center'
+      });
+      
+      const source = new fabric.IText('Source: Autism Speaks Employment Report', {
+        left: canvasWidth / 2,
+        top: 820,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(title, stat, description, source, handle);
+    }
+    
+    function loadQuoteTemplate() {
+      // Big quote mark
+      const quoteMark = new fabric.Text('"', {
+        left: 80,
+        top: 150,
+        fontFamily: 'Playfair Display',
+        fontSize: 250,
+        fill: COLORS.gold,
+        opacity: 0.25
+      });
+      
+      const quote = new fabric.IText('You shouldn\'t have to\nperform neurotypicality\njust to be accepted.', {
+        left: canvasWidth / 2,
+        top: 500,
+        fontFamily: 'Playfair Display',
+        fontStyle: 'italic',
+        fontSize: 48,
+        fontWeight: '700',
+        fill: COLORS.white,
+        textAlign: 'center',
+        lineHeight: 1.4,
+        originX: 'center'
+      });
+      
+      const attribution = new fabric.IText('— The Autistic Community', {
+        left: canvasWidth / 2,
+        top: 780,
+        fontFamily: 'Poppins',
+        fontSize: 24,
+        fill: COLORS.gold,
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      const handle = new fabric.Text('@spectrum_unlocked', {
+        left: canvasWidth / 2,
+        top: canvasHeight - 60,
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        fill: 'rgba(255,255,255,0.4)',
+        textAlign: 'center',
+        originX: 'center'
+      });
+      
+      canvas.add(quoteMark, quote, attribution, handle);
+    }
+    
+    function clearCanvas() {
+      const objects = canvas.getObjects().slice();
+      objects.forEach(obj => canvas.remove(obj));
+    }
+    
+    // ============ PROPERTIES PANEL ============
+    function updatePropertiesPanel() {
+      const active = canvas.getActiveObject();
+      if (!active || active.isBackground || active.isDecoration) {
+        clearPropertiesPanel();
+        return;
+      }
+      
+      const panel = document.getElementById('propertiesPanel');
+      const isText = active.type === 'i-text' || active.type === 'text';
+      
+      let html = '';
+      
+      if (isText) {
+        html = `
+          <div class="prop-group">
+            <h4>Text Properties</h4>
+            <div class="prop-row">
+              <label>Font</label>
+              <select class="prop-input" onchange="setFont(this.value)">
+                <option value="Poppins" ${active.fontFamily === 'Poppins' ? 'selected' : ''}>Poppins</option>
+                <option value="Playfair Display" ${active.fontFamily === 'Playfair Display' ? 'selected' : ''}>Playfair Display</option>
+              </select>
+            </div>
+            <div class="prop-row">
+              <label>Size</label>
+              <input type="number" class="prop-input" value="${active.fontSize || 24}" onchange="setFontSize(this.value)" min="8" max="300">
+            </div>
+            <div class="prop-row">
+              <label>Weight</label>
+              <select class="prop-input" onchange="setFontWeight(this.value)">
+                <option value="400" ${active.fontWeight == 400 ? 'selected' : ''}>Regular</option>
+                <option value="500" ${active.fontWeight == 500 ? 'selected' : ''}>Medium</option>
+                <option value="600" ${active.fontWeight == 600 ? 'selected' : ''}>Semibold</option>
+                <option value="700" ${active.fontWeight == 700 ? 'selected' : ''}>Bold</option>
+                <option value="800" ${active.fontWeight == 800 ? 'selected' : ''}>Extra Bold</option>
+              </select>
+            </div>
+            <div class="prop-row">
+              <label>Color</label>
+              <input type="color" class="color-picker" value="${rgbToHex(active.fill)}" onchange="setFill(this.value)">
             </div>
           </div>
-          <div class="form-group">
-            <label>Font Family</label>
-            <select class="form-control" id="fontFamily" onchange="updateSelectedFont()">
-              <option value="Poppins">Poppins</option>
-              <option value="Playfair Display">Playfair Display</option>
-              <option value="Arial">Arial</option>
-              <option value="Georgia">Georgia</option>
-            </select>
+          <div class="prop-group">
+            <h4>Quick Colors</h4>
+            <div class="prop-colors">
+              <div class="color-swatch" style="background:${COLORS.white}" onclick="setFill('${COLORS.white}')"></div>
+              <div class="color-swatch" style="background:${COLORS.gold}" onclick="setFill('${COLORS.gold}')"></div>
+              <div class="color-swatch" style="background:${COLORS.teal}" onclick="setFill('${COLORS.teal}')"></div>
+              <div class="color-swatch" style="background:${COLORS.green}" onclick="setFill('${COLORS.green}')"></div>
+              <div class="color-swatch" style="background:${COLORS.red}" onclick="setFill('${COLORS.red}')"></div>
+            </div>
           </div>
-          <div class="form-group">
-            <label>Font Weight</label>
-            <select class="form-control" id="fontWeight" onchange="updateSelectedWeight()">
-              <option value="400">Normal</option>
-              <option value="600">Semi-Bold</option>
-              <option value="700">Bold</option>
-              <option value="800">Extra Bold</option>
-            </select>
+        `;
+      } else {
+        // Shape properties
+        html = `
+          <div class="prop-group">
+            <h4>Shape Properties</h4>
+            <div class="prop-row">
+              <label>Fill</label>
+              <input type="color" class="color-picker" value="${rgbToHex(active.fill)}" onchange="setFill(this.value)">
+            </div>
+            <div class="prop-row">
+              <label>Opacity</label>
+              <input type="range" class="prop-input" value="${(active.opacity || 1) * 100}" onchange="setOpacity(this.value)" min="0" max="100">
+            </div>
+            ${active.type === 'rect' ? `
+            <div class="prop-row">
+              <label>Radius</label>
+              <input type="number" class="prop-input" value="${active.rx || 0}" onchange="setRadius(this.value)" min="0" max="100">
+            </div>
+            ` : ''}
+          </div>
+          <div class="prop-group">
+            <h4>Quick Colors</h4>
+            <div class="prop-colors">
+              <div class="color-swatch" style="background:${COLORS.gold}" onclick="setFill('${COLORS.gold}')"></div>
+              <div class="color-swatch" style="background:${COLORS.teal}" onclick="setFill('${COLORS.teal}')"></div>
+              <div class="color-swatch" style="background:${COLORS.green}" onclick="setFill('${COLORS.green}')"></div>
+              <div class="color-swatch" style="background:${COLORS.red}" onclick="setFill('${COLORS.red}')"></div>
+              <div class="color-swatch" style="background:rgba(74,144,164,0.15)" onclick="setFill('rgba(74,144,164,0.15)')"></div>
+            </div>
+          </div>
+        `;
+      }
+      
+      html += `
+        <div class="prop-group">
+          <h4>Position</h4>
+          <div class="prop-row">
+            <label>X</label>
+            <input type="number" class="prop-input" value="${Math.round(active.left)}" onchange="setPosition('left', this.value)">
+          </div>
+          <div class="prop-row">
+            <label>Y</label>
+            <input type="number" class="prop-input" value="${Math.round(active.top)}" onchange="setPosition('top', this.value)">
           </div>
         </div>
-      </div>
+        <button class="delete-btn" onclick="deleteSelected()">🗑️ Delete Element</button>
+      `;
       
-      <div class="panel-section">
-        <h3>🎨 Background</h3>
-        <div class="color-row" style="margin-bottom:10px">
-          <div class="swatch active" style="background:linear-gradient(135deg,#1a1a2e,#0f3460)" data-bg="default" onclick="setBg(this)"></div>
-          <div class="swatch" style="background:linear-gradient(135deg,#1a1a2e,#2d1f3d)" data-bg="purple" onclick="setBg(this)"></div>
-          <div class="swatch" style="background:linear-gradient(135deg,#0f2027,#203a43)" data-bg="ocean" onclick="setBg(this)"></div>
-          <div class="swatch" style="background:linear-gradient(135deg,#232526,#414345)" data-bg="dark" onclick="setBg(this)"></div>
-          <div class="swatch custom"><input type="color" value="#1a1a2e" onchange="setCustomBg(this.value)"></div>
+      panel.innerHTML = html;
+    }
+    
+    function clearPropertiesPanel() {
+      document.getElementById('propertiesPanel').innerHTML = `
+        <div class="no-selection">
+          <div class="icon">🎨</div>
+          <p>Select an element on the canvas to edit its properties</p>
         </div>
-        <div class="form-group">
-          <label>Accent Color</label>
-          <div class="color-row">
-            <div class="swatch active" style="background:#E8B86D" data-accent="#E8B86D" onclick="setAccent(this)"></div>
-            <div class="swatch" style="background:#4A90A4" data-accent="#4A90A4" onclick="setAccent(this)"></div>
-            <div class="swatch" style="background:#27AE60" data-accent="#27AE60" onclick="setAccent(this)"></div>
-            <div class="swatch" style="background:#E74C3C" data-accent="#E74C3C" onclick="setAccent(this)"></div>
-            <div class="swatch" style="background:#9B59B6" data-accent="#9B59B6" onclick="setAccent(this)"></div>
-          </div>
-        </div>
-      </div>
+      `;
+    }
+    
+    // Property setters
+    function setFont(value) {
+      const active = canvas.getActiveObject();
+      if (active) {
+        active.set('fontFamily', value);
+        canvas.renderAll();
+        saveCurrentSlide();
+      }
+    }
+    
+    function setFontSize(value) {
+      const active = canvas.getActiveObject();
+      if (active) {
+        active.set('fontSize', parseInt(value));
+        canvas.renderAll();
+        saveCurrentSlide();
+      }
+    }
+    
+    function setFontWeight(value) {
+      const active = canvas.getActiveObject();
+      if (active) {
+        active.set('fontWeight', value);
+        canvas.renderAll();
+        saveCurrentSlide();
+      }
+    }
+    
+    function setFill(value) {
+      const active = canvas.getActiveObject();
+      if (active) {
+        active.set('fill', value);
+        canvas.renderAll();
+        updatePropertiesPanel();
+        saveCurrentSlide();
+      }
+    }
+    
+    function setOpacity(value) {
+      const active = canvas.getActiveObject();
+      if (active) {
+        active.set('opacity', value / 100);
+        canvas.renderAll();
+        saveCurrentSlide();
+      }
+    }
+    
+    function setRadius(value) {
+      const active = canvas.getActiveObject();
+      if (active) {
+        active.set({ rx: parseInt(value), ry: parseInt(value) });
+        canvas.renderAll();
+        saveCurrentSlide();
+      }
+    }
+    
+    function setPosition(prop, value) {
+      const active = canvas.getActiveObject();
+      if (active) {
+        active.set(prop, parseInt(value));
+        canvas.renderAll();
+        saveCurrentSlide();
+      }
+    }
+    
+    function deleteSelected() {
+      const active = canvas.getActiveObject();
+      if (active && !active.isBackground && !active.isDecoration) {
+        canvas.remove(active);
+        canvas.discardActiveObject();
+        canvas.renderAll();
+        clearPropertiesPanel();
+        saveCurrentSlide();
+      }
+    }
+    
+    // ============ SLIDES ============
+    function renderSlideTabs() {
+      const container = document.getElementById('slideTabs');
+      let html = '';
       
-      <div class="panel-section" id="listSection">
-        <h3>📝 Quick Add Elements</h3>
-        <button class="btn btn-secondary" style="width:100%;margin-bottom:6px" onclick="addBadge()">+ Badge</button>
-        <button class="btn btn-secondary" style="width:100%;margin-bottom:6px" onclick="addListItem()">+ List Item</button>
-        <button class="btn btn-secondary" style="width:100%;margin-bottom:6px" onclick="addShape()">+ Shape</button>
-        <button class="btn btn-secondary" style="width:100%" onclick="addEmoji()">+ Emoji</button>
-      </div>
+      slides.forEach((slide, i) => {
+        html += `<button class="slide-tab ${i === currentSlide ? 'active' : ''}" onclick="switchSlide(${i})">${slide.name}</button>`;
+      });
       
-      <div class="panel-section">
-        <h3>📱 Captions</h3>
-        <div class="caption-box">
-          <h4>Instagram <button class="btn btn-secondary copy-btn" onclick="copyIG()">📋</button></h4>
-          <pre id="igCaption">Load a day to see caption</pre>
-        </div>
-        <div class="caption-box">
-          <h4>TikTok <button class="btn btn-secondary copy-btn" onclick="copyTT()">📋</button></h4>
-          <pre id="ttCaption">Load a day to see caption</pre>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Day Modal -->
-  <div class="modal-bg" id="modal">
-    <div class="modal">
-      <div class="modal-head">
-        <h2>📅 Select Day Content</h2>
-        <button class="modal-close" onclick="closeModal()">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <input type="text" class="form-control" id="daySearch" placeholder="🔍 Search..." oninput="filterDays()">
-        </div>
-        <div class="day-grid" id="dayGrid"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="toast" id="toast"></div>
-
-<script>
-// ============ STATE ============
-let canvas;
-let W = 1080, H = 1350;
-let zoom = 0.5;
-let slides = [null]; // Store canvas JSON for each slide
-let currentSlide = 0;
-let accent = '#E8B86D';
-let bgType = 'default';
-
-const TEMPLATES = [
-  { id: 'cover', name: 'Cover', icon: '🎬' },
-  { id: 'myth', name: 'Myth Buster', icon: '❌' },
-  { id: 'list', name: 'Checklist', icon: '✓' },
-  { id: 'vs', name: 'VS Compare', icon: '⚔️' },
-  { id: 'grid', name: 'Grid Cards', icon: '🔲' },
-  { id: 'cta', name: 'CTA Slide', icon: '📢' },
-  { id: 'stats', name: 'Stats', icon: '📊' },
-  { id: 'quote', name: 'Quote', icon: '💬' }
-];
-
-const DAYS = {
-  1: { title: '3 Things TikTok Gets WRONG', folder: 'day-01-tiktok-myths', slides: 5, ig: "🚨 STOP scrolling TikTok for autism \"facts.\"\n\nA new study found 50%+ of autism content is MISLEADING.\n\n💾 Save & share!", tt: "🚨 3 things TikTok gets WRONG about autism #autism #fyp" },
-  2: { title: 'Acceptance vs Awareness', folder: 'day-02-acceptance-vs-awareness', slides: 5, ig: "🛑 Stop saying \"autism awareness.\"\n\nACCEPTANCE > AWARENESS\n\n💾 Save & share!", tt: "🛑 Why we say acceptance not awareness #autism #fyp" },
-  3: { title: 'Glass Child Syndrome', folder: 'day-03-glass-child', slides: 6, ig: "🪟 Is your NT child becoming invisible?\n\nGlass Child Syndrome: when siblings fade.\n\n💙 Tag a sibling parent", tt: "🪟 Glass Child Syndrome explained #autism #siblings #fyp" },
-  4: { title: '5 Sensory Hacks', folder: 'day-04-sensory-hacks', slides: 7, ig: "🎧😎 5 SENSORY HACKS that work!\n\n1️⃣ Headphones\n2️⃣ Sunglasses\n3️⃣ Fidgets\n4️⃣ Visual timers\n5️⃣ Calm corner\n\n💾 Save!", tt: "🎧 5 sensory hacks that ACTUALLY work #autism #sensory #fyp" },
-  5: { title: 'Late-Diagnosed Women', folder: 'day-05-late-diagnosis', slides: 5, ig: "💜 450% increase in adult autism diagnoses.\n\nMost are WOMEN.\n\nIt's never too late to understand yourself.", tt: "💜 450% spike in adult diagnoses — most are women #autism #latediagnosed #fyp" },
-  6: { title: 'Autistic Burnout', folder: 'day-06-burnout', slides: 5, ig: "🔥 AUTISTIC BURNOUT is real.\n\nNot laziness. Not depression.\n\nNeurological exhaustion.\n\n💙 You're not broken.", tt: "🔥 Autistic burnout is NOT laziness #autism #burnout #fyp" },
-  7: { title: 'April Kickoff', folder: 'day-07-april-kickoff', slides: 4, ig: "♾️💙 IT'S AUTISM ACCEPTANCE MONTH!\n\n➕ Follow\n🔔 Notifications ON\n💾 Save!", tt: "♾️💙 AUTISM ACCEPTANCE MONTH IS HERE! #autism #april #fyp" },
-  8: { title: 'World Autism Day', folder: 'day-08-waad', slides: 6, ig: "♾️💙 WORLD AUTISM ACCEPTANCE DAY\n\nApril 2, 2026\n\n\"Autism and Humanity — Every Life Has Value\"", tt: "♾️💙 WORLD AUTISM ACCEPTANCE DAY #WAAD2026 #autism #fyp" },
-  9: { title: '5 Myths That Need to Die', folder: 'day-09-myths-die', slides: 7, ig: "💀 5 MYTHS about autism:\n\n❌ Vaccines cause autism\n❌ No empathy\n❌ \"You don't look autistic\"\n❌ Only boys\n❌ Can be cured\n\n💾 Save!", tt: "💀 5 autism myths that need to DIE #autism #mythbusters #fyp" },
-  10: { title: 'IEP Accommodations', folder: 'day-10-iep', slides: 6, ig: "📋 NEURODIVERSITY-AFFIRMING IEP accommodations\n\n🎧 Sensory supports\n💬 Communication\n📚 Academic flexibility\n🤝 Social/emotional\n\n📩 DM \"IEP\" for tips!", tt: "📋 IEP accommodations that SUPPORT your child #IEP #autism #fyp" },
-  11: { title: 'High-Masking Autism', folder: 'day-11-masking', slides: 6, ig: "🎭 HIGH-MASKING AUTISM\n\n\"They look fine. They're falling apart inside.\"\n\nYou shouldn't have to perform to be accepted.", tt: "🎭 High-masking autism: the hidden struggle #autism #masking #fyp" },
-  12: { title: 'Self-Care for Parents', folder: 'day-12-selfcare', slides: 6, ig: "🧘‍♀️ SELF-CARE that actually works\n\nNot bubble baths. REAL strategies.\n\n💕 You can't pour from an empty cup.", tt: "🧘‍♀️ Self-care for autism parents (real stuff) #autism #selfcare #fyp" },
-  13: { title: 'ABA Controversy', folder: 'day-13-aba', slides: 6, ig: "🤔 THE ABA CONTROVERSY\n\nBoth sides explained.\n\nYou know your child best. 💙", tt: "🤔 The ABA debate: both sides #ABA #autism #fyp" },
-  14: { title: 'Visual Supports', folder: 'day-14-visual', slides: 6, ig: "📋 VISUAL SUPPORTS that work!\n\n📅 Schedules\n⏰ Timers\n1️⃣➡️2️⃣ First-Then\n🔘 Choice boards\n\n📩 DM \"VISUALS\" for templates!", tt: "📋 Visual supports that WORK #autism #visualsupports #fyp" },
-  15: { title: 'Meltdown Support', folder: 'day-15-meltdown', slides: 6, ig: "🌪️ MELTDOWN ≠ TANTRUM\n\nMeltdowns are overwhelm.\nNot manipulation.\n\n💙 Support, don't punish.", tt: "🌪️ Meltdown vs tantrum: the difference #autism #meltdown #fyp" },
-  16: { title: 'Feeding Challenges', folder: 'day-16-feeding', slides: 6 },
-  17: { title: 'Sleep Issues', folder: 'day-17-sleep', slides: 6 },
-  18: { title: 'Autism in Girls', folder: 'day-18-girls', slides: 6 },
-  19: { title: 'Community Spotlight', folder: 'day-19-community', slides: 4 },
-  20: { title: 'Potty Training', folder: 'day-20-potty', slides: 6 },
-  21: { title: 'AuDHD', folder: 'day-21-audhd', slides: 6 },
-  22: { title: 'AAC Communication', folder: 'day-22-aac', slides: 6 },
-  23: { title: 'School Accommodations', folder: 'day-23-accommodations', slides: 6 },
-  24: { title: 'Autism & Anxiety', folder: 'day-24-anxiety', slides: 6 },
-  25: { title: 'Events & Respite', folder: 'day-25-holidays-respite', slides: 6 },
-  26: { title: 'Week 3 Recap', folder: 'day-26-week3-recap', slides: 6 },
-  27: { title: 'Autism in Teens', folder: 'day-27-autism-teens', slides: 6 },
-  28: { title: 'Nature & Autism', folder: 'day-28-nature-autism', slides: 6 },
-  29: { title: 'Building Friendships', folder: 'day-29-building-friendships', slides: 6 },
-  30: { title: 'Late Diagnosis Adults', folder: 'day-30-late-diagnosis', slides: 6 },
-  31: { title: 'Glass Child Pt 2', folder: 'day-31-glass-child', slides: 6 },
-  32: { title: 'Spring Activities', folder: 'day-32-weekend-spring', slides: 6 },
-  33: { title: 'April Reflection', folder: 'day-33-monthly-reflection', slides: 6 },
-  34: { title: 'After Autism Month', folder: 'day-34-transitioning', slides: 6 },
-  35: { title: 'Resource Toolkit', folder: 'day-35-resources-toolkit', slides: 7 },
-  36: { title: 'Month Celebration', folder: 'day-36-end-autism-month-hero', slides: 7 },
-  37: { title: 'May Goals', folder: 'day-37-may-goals', slides: 5 },
-  38: { title: 'Summer Prep', folder: 'day-38-summer-prep', slides: 6 },
-  39: { title: 'OT Guide', folder: 'day-39-therapy-ot', slides: 6 },
-  40: { title: 'Speech Therapy', folder: 'day-40-therapy-speech', slides: 6 },
-  41: { title: 'Physical Therapy', folder: 'day-41-physical-therapy', slides: 6 },
-  42: { title: 'Insurance Coverage', folder: 'day-42-insurance-coverage', slides: 6 },
-  43: { title: 'Family Education', folder: 'day-43-family-education', slides: 6 },
-  44: { title: 'Marriage & Autism', folder: 'day-44-marriage-autism', slides: 6 },
-  45: { title: 'Self-Care Deep Dive', folder: 'day-45-self-care', slides: 6 },
-  46: { title: 'Support System', folder: 'day-46-support-system', slides: 6 },
-  47: { title: 'Summer Camps', folder: 'day-47-summer-camps', slides: 6 },
-  48: { title: 'Travel Tips', folder: 'day-48-travel-autism', slides: 6 },
-  49: { title: 'ESY / Year-Round', folder: 'day-49-year-round-school', slides: 6 },
-  50: { title: 'Building Independence', folder: 'day-50-building-independence', slides: 6 },
-  51: { title: 'Sensory Deep Dive', folder: 'day-51-sensory-deep-dive', slides: 6 },
-  52: { title: 'Executive Function', folder: 'day-52-executive-function', slides: 6 },
-  53: { title: 'Autism & Tech', folder: 'day-53-autism-technology', slides: 6 },
-  54: { title: 'Adulthood Transition', folder: 'day-54-adulthood-transition', slides: 6 },
-  55: { title: 'Employment', folder: 'day-55-employment-autism', slides: 6 },
-  56: { title: 'Self-Advocacy', folder: 'day-56-self-advocacy', slides: 6 },
-  57: { title: 'Work/School Acceptance', folder: 'day-57-acceptance-work-school', slides: 6 },
-  58: { title: 'Mental Health', folder: 'day-58-mental-health', slides: 6 },
-  59: { title: 'Autistic Joy', folder: 'day-59-autistic-joy', slides: 6 },
-  60: { title: 'Journey Continues', folder: 'day-60-journey-continues', slides: 7 }
-};
-
-// ============ INIT ============
-document.addEventListener('DOMContentLoaded', () => {
-  initCanvas();
-  renderTemplateGrid();
-  renderDayGrid();
-  renderSlideTabs();
-  loadTemplate('cover');
-});
-
-function initCanvas() {
-  canvas = new fabric.Canvas('c', {
-    width: W,
-    height: H,
-    backgroundColor: '#1a1a2e',
-    preserveObjectStacking: true,
-    selection: true
-  });
-  
-  applyZoom();
-  
-  // Selection events
-  canvas.on('selection:created', onSelect);
-  canvas.on('selection:updated', onSelect);
-  canvas.on('selection:cleared', onDeselect);
-  
-  // Double-click to edit text
-  canvas.on('mouse:dblclick', (e) => {
-    if (e.target && e.target.type === 'textbox') {
-      e.target.enterEditing();
-      e.target.selectAll();
+      html += `<button class="slide-tab slide-tab-add" onclick="addSlide()">+ Add Slide</button>`;
+      container.innerHTML = html;
     }
-  });
-  
-  // Keyboard delete
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Delete' || e.key === 'Backspace') {
-      const el = document.activeElement;
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
-      deleteSelected();
+    
+    function saveCurrentSlide() {
+      slides[currentSlide].json = canvas.toJSON(['isBackground', 'isDecoration']);
     }
-    if (e.key === 'Escape') closeModal();
-  });
-}
-
-function applyZoom() {
-  const wrap = document.getElementById('canvasWrap');
-  wrap.style.transform = `scale(${zoom})`;
-  wrap.style.transformOrigin = 'top center';
-  document.getElementById('zoomLvl').textContent = Math.round(zoom * 100) + '%';
-}
-
-function zoomIn() { zoom = Math.min(1, zoom + 0.1); applyZoom(); }
-function zoomOut() { zoom = Math.max(0.2, zoom - 0.1); applyZoom(); }
-
-// ============ SELECTION ============
-function onSelect(e) {
-  const obj = e.selected[0];
-  document.getElementById('selInfo').innerHTML = `<strong>Selected:</strong> ${obj.type}<br>Double-click text to edit inline`;
-  document.getElementById('selControls').style.display = 'block';
-  
-  if (obj.type === 'textbox' || obj.type === 'text') {
-    document.getElementById('selText').value = obj.text || '';
-    document.getElementById('fontSize').value = obj.fontSize || 24;
-    document.getElementById('fontSizeVal').textContent = obj.fontSize || 24;
-    document.getElementById('fontFamily').value = obj.fontFamily || 'Poppins';
-    document.getElementById('fontWeight').value = obj.fontWeight || '400';
-  }
-}
-
-function onDeselect() {
-  document.getElementById('selInfo').innerHTML = '<strong>No selection</strong><br>Click an element on canvas to edit it';
-  document.getElementById('selControls').style.display = 'none';
-}
-
-function updateSelectedText() {
-  const obj = canvas.getActiveObject();
-  if (obj && (obj.type === 'textbox' || obj.type === 'text')) {
-    obj.set('text', document.getElementById('selText').value);
-    canvas.renderAll();
-  }
-}
-
-function updateSelectedFontSize() {
-  const obj = canvas.getActiveObject();
-  const size = parseInt(document.getElementById('fontSize').value);
-  document.getElementById('fontSizeVal').textContent = size;
-  if (obj) {
-    obj.set('fontSize', size);
-    canvas.renderAll();
-  }
-}
-
-function updateSelectedFont() {
-  const obj = canvas.getActiveObject();
-  if (obj) {
-    obj.set('fontFamily', document.getElementById('fontFamily').value);
-    canvas.renderAll();
-  }
-}
-
-function updateSelectedWeight() {
-  const obj = canvas.getActiveObject();
-  if (obj) {
-    obj.set('fontWeight', document.getElementById('fontWeight').value);
-    canvas.renderAll();
-  }
-}
-
-function setTextColor(el, isCustom) {
-  const color = isCustom ? el.value : el.dataset.color;
-  if (!isCustom) {
-    el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
-    el.classList.add('active');
-  }
-  const obj = canvas.getActiveObject();
-  if (obj) {
-    obj.set('fill', color);
-    canvas.renderAll();
-  }
-}
-
-function deleteSelected() {
-  const obj = canvas.getActiveObject();
-  if (obj) {
-    canvas.remove(obj);
-    canvas.discardActiveObject();
-    canvas.renderAll();
-    toast('Deleted');
-  }
-}
-
-// ============ BACKGROUND ============
-function setBg(el) {
-  el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
-  el.classList.add('active');
-  bgType = el.dataset.bg;
-  drawBackground();
-}
-
-function setCustomBg(color) {
-  bgType = 'custom';
-  canvas.backgroundColor = color;
-  canvas.renderAll();
-}
-
-function setAccent(el) {
-  el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
-  el.classList.add('active');
-  accent = el.dataset.accent;
-  // Update accent-colored elements
-  canvas.getObjects().forEach(obj => {
-    if (obj.isAccent) {
-      obj.set('fill', accent);
-    }
-  });
-  canvas.renderAll();
-}
-
-function drawBackground() {
-  // Remove old bg rect
-  const old = canvas.getObjects().find(o => o.isBgRect);
-  if (old) canvas.remove(old);
-  
-  const gradients = {
-    default: ['#1a1a2e', '#16213e', '#0f3460'],
-    purple: ['#1a1a2e', '#2d1f3d', '#1a1a2e'],
-    ocean: ['#0f2027', '#203a43', '#2c5364'],
-    dark: ['#232526', '#414345', '#232526']
-  };
-  
-  const colors = gradients[bgType] || gradients.default;
-  
-  const gradient = new fabric.Gradient({
-    type: 'linear',
-    coords: { x1: 0, y1: 0, x2: W, y2: H },
-    colorStops: [
-      { offset: 0, color: colors[0] },
-      { offset: 0.5, color: colors[1] },
-      { offset: 1, color: colors[2] }
-    ]
-  });
-  
-  const bgRect = new fabric.Rect({
-    left: 0, top: 0, width: W, height: H,
-    fill: gradient,
-    selectable: false,
-    evented: false,
-    isBgRect: true
-  });
-  
-  canvas.add(bgRect);
-  canvas.sendToBack(bgRect);
-  
-  // Decorative shapes
-  addDecorativeCircle(W - 200, -100, 300, accent, 0.08);
-  addDecorativeCircle(-80, H - 350, 200, '#4A90A4', 0.06);
-  
-  canvas.renderAll();
-}
-
-function addDecorativeCircle(x, y, r, color, opacity) {
-  const circle = new fabric.Circle({
-    left: x, top: y, radius: r,
-    fill: color,
-    opacity: opacity,
-    selectable: false,
-    evented: false,
-    isDecor: true
-  });
-  canvas.add(circle);
-  canvas.sendToBack(circle);
-}
-
-// ============ TEMPLATES ============
-function renderTemplateGrid() {
-  const grid = document.getElementById('tplGrid');
-  grid.innerHTML = TEMPLATES.map(t => `
-    <div class="tpl-card${t.id === 'cover' ? ' active' : ''}" data-tpl="${t.id}" onclick="loadTemplate('${t.id}')">
-      <div class="icon">${t.icon}</div>
-      <div>${t.name}</div>
-    </div>
-  `).join('');
-}
-
-function loadTemplate(id) {
-  document.querySelectorAll('.tpl-card').forEach(c => c.classList.toggle('active', c.dataset.tpl === id));
-  
-  canvas.clear();
-  drawBackground();
-  
-  switch(id) {
-    case 'cover': templateCover(); break;
-    case 'myth': templateMyth(); break;
-    case 'list': templateList(); break;
-    case 'vs': templateVS(); break;
-    case 'grid': templateGrid(); break;
-    case 'cta': templateCTA(); break;
-    case 'stats': templateStats(); break;
-    case 'quote': templateQuote(); break;
-  }
-  
-  canvas.renderAll();
-}
-
-function templateCover() {
-  // Badge
-  const badge = new fabric.Textbox('🚨 MYTH ALERT', {
-    left: W/2, top: 180, width: 300,
-    fontSize: 18, fontFamily: 'Poppins', fontWeight: '700',
-    fill: '#1a1a2e', textAlign: 'center',
-    backgroundColor: accent,
-    padding: 15,
-    originX: 'center'
-  });
-  badge.isAccent = true;
-  canvas.add(badge);
-  
-  // Title
-  const title = new fabric.Textbox('3 Things TikTok Gets\nWRONG About Autism', {
-    left: W/2, top: H/2 - 80, width: 900,
-    fontSize: 62, fontFamily: 'Playfair Display', fontWeight: '800',
-    fill: '#fff', textAlign: 'center',
-    originX: 'center', originY: 'center',
-    lineHeight: 1.15
-  });
-  canvas.add(title);
-  
-  // Subtitle
-  const sub = new fabric.Textbox('A new study found over 50% of autism content on social media is misleading. Let\'s set the record straight.', {
-    left: W/2, top: H/2 + 120, width: 800,
-    fontSize: 24, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.85)', textAlign: 'center',
-    originX: 'center', originY: 'center',
-    lineHeight: 1.4
-  });
-  canvas.add(sub);
-  
-  // Swipe CTA
-  const swipe = new fabric.Text('Swipe to learn more →', {
-    left: W/2, top: H - 180,
-    fontSize: 22, fontFamily: 'Poppins', fontWeight: '600',
-    fill: 'rgba(255,255,255,0.6)',
-    originX: 'center'
-  });
-  canvas.add(swipe);
-  
-  // Handle
-  const handle = new fabric.Text('@spectrum_unlocked', {
-    left: W/2, top: H - 50,
-    fontSize: 18, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.4)',
-    originX: 'center'
-  });
-  canvas.add(handle);
-}
-
-function templateMyth() {
-  // Myth badge
-  const mythBadge = new fabric.Text('❌ MYTH #1', {
-    left: W/2, top: 120,
-    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
-    fill: '#E74C3C',
-    originX: 'center'
-  });
-  canvas.add(mythBadge);
-  
-  // Myth box
-  const mythBox = new fabric.Rect({
-    left: W/2, top: 350, width: 900, height: 200,
-    fill: 'rgba(231,76,60,0.15)',
-    stroke: '#E74C3C', strokeWidth: 4,
-    rx: 20, ry: 20,
-    originX: 'center', originY: 'center',
-    selectable: false
-  });
-  canvas.add(mythBox);
-  
-  const mythText = new fabric.Textbox('"If you relate to these signs, you\'re definitely autistic"', {
-    left: W/2, top: 350, width: 850,
-    fontSize: 36, fontFamily: 'Playfair Display', fontWeight: '700',
-    fill: '#fff', textAlign: 'center',
-    originX: 'center', originY: 'center',
-    lineHeight: 1.3
-  });
-  canvas.add(mythText);
-  
-  // Truth badge
-  const truthBadge = new fabric.Text('✅ THE TRUTH', {
-    left: W/2, top: 520,
-    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
-    fill: '#27AE60',
-    originX: 'center'
-  });
-  canvas.add(truthBadge);
-  
-  // Truth box
-  const truthBox = new fabric.Rect({
-    left: W/2, top: 750, width: 900, height: 280,
-    fill: 'rgba(39,174,96,0.12)',
-    rx: 16, ry: 16,
-    originX: 'center', originY: 'center',
-    selectable: false
-  });
-  canvas.add(truthBox);
-  
-  const truthText = new fabric.Textbox('Many autism "signs" on TikTok are common human experiences. Self-diagnosis is valid for exploration, but professional evaluation is the only way to know for sure.', {
-    left: W/2, top: 750, width: 850,
-    fontSize: 24, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.95)', textAlign: 'center',
-    originX: 'center', originY: 'center',
-    lineHeight: 1.5
-  });
-  canvas.add(truthText);
-  
-  addFooter('1 of 3');
-}
-
-function templateList() {
-  // Title
-  const title = new fabric.Textbox('Sensory Supports', {
-    left: W/2, top: 100, width: 900,
-    fontSize: 48, fontFamily: 'Playfair Display', fontWeight: '800',
-    fill: accent, textAlign: 'center',
-    originX: 'center'
-  });
-  title.isAccent = true;
-  canvas.add(title);
-  
-  // Emoji
-  const emoji = new fabric.Text('🎧', {
-    left: W/2, top: 200,
-    fontSize: 80,
-    originX: 'center'
-  });
-  canvas.add(emoji);
-  
-  // List box
-  const listBox = new fabric.Rect({
-    left: W/2, top: 700, width: 900, height: 600,
-    fill: 'rgba(74,144,164,0.12)',
-    stroke: 'rgba(74,144,164,0.3)', strokeWidth: 2,
-    rx: 20, ry: 20,
-    originX: 'center', originY: 'center',
-    selectable: false
-  });
-  canvas.add(listBox);
-  
-  // List items
-  const items = [
-    'Noise-canceling headphones allowed',
-    'Sensory breaks as needed (not earned)',
-    'Fidgets permitted without restriction',
-    'Flexible seating options',
-    'Movement breaks every 20-30 min',
-    'Option for dim lighting or sunglasses'
-  ];
-  
-  items.forEach((item, i) => {
-    const text = new fabric.Textbox(`✓  ${item}`, {
-      left: 130, top: 450 + i * 55, width: 820,
-      fontSize: 24, fontFamily: 'Poppins',
-      fill: '#fff',
-      lineHeight: 1.4
-    });
-    canvas.add(text);
-  });
-  
-  addFooter('1 of 4');
-}
-
-function templateVS() {
-  // Title
-  const title = new fabric.Textbox('Meltdown vs Tantrum', {
-    left: W/2, top: 100, width: 900,
-    fontSize: 48, fontFamily: 'Playfair Display', fontWeight: '800',
-    fill: accent, textAlign: 'center',
-    originX: 'center'
-  });
-  title.isAccent = true;
-  canvas.add(title);
-  
-  // Left box
-  const leftBox = new fabric.Rect({
-    left: 90, top: 220, width: 430, height: 500,
-    fill: 'rgba(231,76,60,0.12)',
-    stroke: 'rgba(231,76,60,0.3)', strokeWidth: 2,
-    rx: 20, ry: 20,
-    selectable: false
-  });
-  canvas.add(leftBox);
-  
-  const leftLabel = new fabric.Text('😤 TANTRUM', {
-    left: 305, top: 260,
-    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
-    fill: '#E74C3C',
-    originX: 'center'
-  });
-  canvas.add(leftLabel);
-  
-  const leftText = new fabric.Textbox('• Goal-oriented\n• Wants something specific\n• Checks for audience\n• Can stop if need met\n• Strategic behavior', {
-    left: 120, top: 320, width: 380,
-    fontSize: 20, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.9)',
-    lineHeight: 1.8
-  });
-  canvas.add(leftText);
-  
-  // Right box
-  const rightBox = new fabric.Rect({
-    left: 560, top: 220, width: 430, height: 500,
-    fill: 'rgba(74,144,164,0.12)',
-    stroke: 'rgba(74,144,164,0.3)', strokeWidth: 2,
-    rx: 20, ry: 20,
-    selectable: false
-  });
-  canvas.add(rightBox);
-  
-  const rightLabel = new fabric.Text('🌪️ MELTDOWN', {
-    left: 775, top: 260,
-    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
-    fill: '#4A90A4',
-    originX: 'center'
-  });
-  canvas.add(rightLabel);
-  
-  const rightText = new fabric.Textbox('• Overwhelm response\n• Neurological crisis\n• No audience awareness\n• Can\'t just "stop"\n• NOT manipulation', {
-    left: 590, top: 320, width: 380,
-    fontSize: 20, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.9)',
-    lineHeight: 1.8
-  });
-  canvas.add(rightText);
-  
-  // VS circle
-  const vsCircle = new fabric.Circle({
-    left: W/2, top: 470, radius: 35,
-    fill: accent,
-    originX: 'center', originY: 'center'
-  });
-  vsCircle.isAccent = true;
-  canvas.add(vsCircle);
-  
-  const vsText = new fabric.Text('VS', {
-    left: W/2, top: 470,
-    fontSize: 22, fontFamily: 'Poppins', fontWeight: '800',
-    fill: '#1a1a2e',
-    originX: 'center', originY: 'center'
-  });
-  canvas.add(vsText);
-  
-  addFooter('1 of 5');
-}
-
-function templateGrid() {
-  const title = new fabric.Textbox('Moments of Autistic Joy', {
-    left: W/2, top: 100, width: 900,
-    fontSize: 46, fontFamily: 'Playfair Display', fontWeight: '800',
-    fill: accent, textAlign: 'center',
-    originX: 'center'
-  });
-  title.isAccent = true;
-  canvas.add(title);
-  
-  const items = [
-    { emoji: '📚', text: 'Getting lost in a special interest' },
-    { emoji: '🧸', text: 'Finding the PERFECT texture' },
-    { emoji: '🎧', text: 'A song that hits exactly right' },
-    { emoji: '🧩', text: 'When all the pieces click' },
-    { emoji: '🤗', text: 'Meeting someone who GETS you' },
-    { emoji: '🏠', text: 'Coming home and unmasking' }
-  ];
-  
-  items.forEach((item, i) => {
-    const col = i % 2;
-    const row = Math.floor(i / 2);
-    const x = 100 + col * 460;
-    const y = 220 + row * 200;
     
-    const card = new fabric.Rect({
-      left: x, top: y, width: 420, height: 170,
-      fill: 'rgba(39,174,96,0.1)',
-      stroke: 'rgba(39,174,96,0.25)', strokeWidth: 2,
-      rx: 16, ry: 16,
-      selectable: false
-    });
-    canvas.add(card);
-    
-    const emoji = new fabric.Text(item.emoji, {
-      left: x + 210, top: y + 50,
-      fontSize: 42,
-      originX: 'center'
-    });
-    canvas.add(emoji);
-    
-    const text = new fabric.Textbox(item.text, {
-      left: x + 210, top: y + 115, width: 380,
-      fontSize: 18, fontFamily: 'Poppins',
-      fill: '#fff', textAlign: 'center',
-      originX: 'center'
-    });
-    canvas.add(text);
-  });
-  
-  addFooter('2 of 5');
-}
-
-function templateCTA() {
-  const emoji = new fabric.Text('💾', {
-    left: W/2, top: 200,
-    fontSize: 100,
-    originX: 'center'
-  });
-  canvas.add(emoji);
-  
-  const title = new fabric.Textbox('Save This for Your Next\nIEP Meeting', {
-    left: W/2, top: 400, width: 900,
-    fontSize: 52, fontFamily: 'Playfair Display', fontWeight: '800',
-    fill: '#fff', textAlign: 'center',
-    originX: 'center',
-    lineHeight: 1.2
-  });
-  canvas.add(title);
-  
-  const sub = new fabric.Textbox('Accommodations should support your child — not teach them to hide who they are.', {
-    left: W/2, top: 580, width: 800,
-    fontSize: 24, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.85)', textAlign: 'center',
-    originX: 'center',
-    lineHeight: 1.5
-  });
-  canvas.add(sub);
-  
-  const ctaBox = new fabric.Rect({
-    left: W/2, top: 750, width: 600, height: 80,
-    fill: accent,
-    rx: 20, ry: 20,
-    originX: 'center', originY: 'center'
-  });
-  ctaBox.isAccent = true;
-  canvas.add(ctaBox);
-  
-  const ctaText = new fabric.Text('📩 DM "IEP" for more tips', {
-    left: W/2, top: 750,
-    fontSize: 26, fontFamily: 'Poppins', fontWeight: '700',
-    fill: '#1a1a2e',
-    originX: 'center', originY: 'center'
-  });
-  canvas.add(ctaText);
-  
-  const actions = ['📤 Share', '💬 Comment', '➕ Follow'];
-  actions.forEach((a, i) => {
-    const t = new fabric.Text(a, {
-      left: 180 + i * 300, top: 880,
-      fontSize: 22, fontFamily: 'Poppins', fontWeight: '600',
-      fill: 'rgba(255,255,255,0.7)'
-    });
-    canvas.add(t);
-  });
-  
-  addFooter();
-}
-
-function templateStats() {
-  const title = new fabric.Textbox('The Stats Don\'t Lie', {
-    left: W/2, top: 150, width: 900,
-    fontSize: 42, fontFamily: 'Playfair Display', fontWeight: '800',
-    fill: accent, textAlign: 'center',
-    originX: 'center'
-  });
-  title.isAccent = true;
-  canvas.add(title);
-  
-  const stat = new fabric.Text('85%', {
-    left: W/2, top: 450,
-    fontSize: 180, fontFamily: 'Playfair Display', fontWeight: '800',
-    fill: '#fff',
-    originX: 'center', originY: 'center'
-  });
-  canvas.add(stat);
-  
-  const desc = new fabric.Textbox('of autistic college graduates are unemployed or underemployed', {
-    left: W/2, top: 650, width: 800,
-    fontSize: 28, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.85)', textAlign: 'center',
-    originX: 'center',
-    lineHeight: 1.4
-  });
-  canvas.add(desc);
-  
-  addFooter('1 of 4');
-}
-
-function templateQuote() {
-  const quoteOpen = new fabric.Text('"', {
-    left: 100, top: 250,
-    fontSize: 200, fontFamily: 'Playfair Display',
-    fill: accent,
-    opacity: 0.3
-  });
-  quoteOpen.isAccent = true;
-  canvas.add(quoteOpen);
-  
-  const quote = new fabric.Textbox('You shouldn\'t have to perform to be accepted. You shouldn\'t have to hide who you are to be loved.', {
-    left: W/2, top: H/2 - 50, width: 850,
-    fontSize: 42, fontFamily: 'Playfair Display', fontWeight: '700',
-    fontStyle: 'italic',
-    fill: '#fff', textAlign: 'center',
-    originX: 'center', originY: 'center',
-    lineHeight: 1.4
-  });
-  canvas.add(quote);
-  
-  const attr = new fabric.Text('— Autistic Community', {
-    left: W/2, top: H/2 + 180,
-    fontSize: 24, fontFamily: 'Poppins',
-    fill: accent,
-    originX: 'center'
-  });
-  attr.isAccent = true;
-  canvas.add(attr);
-  
-  addFooter();
-}
-
-function addFooter(slideNum) {
-  if (slideNum) {
-    const num = new fabric.Text(slideNum, {
-      left: W/2, top: H - 80,
-      fontSize: 16, fontFamily: 'Poppins',
-      fill: 'rgba(255,255,255,0.4)',
-      originX: 'center'
-    });
-    canvas.add(num);
-  }
-  
-  const handle = new fabric.Text('@spectrum_unlocked', {
-    left: W/2, top: H - 45,
-    fontSize: 18, fontFamily: 'Poppins',
-    fill: 'rgba(255,255,255,0.5)',
-    originX: 'center'
-  });
-  canvas.add(handle);
-}
-
-// ============ ADD ELEMENTS ============
-function addText() {
-  const text = new fabric.Textbox('Double-click to edit', {
-    left: W/2, top: H/2, width: 400,
-    fontSize: 32, fontFamily: 'Poppins', fontWeight: '600',
-    fill: '#fff', textAlign: 'center',
-    originX: 'center', originY: 'center'
-  });
-  canvas.add(text);
-  canvas.setActiveObject(text);
-  canvas.renderAll();
-}
-
-function addBadge() {
-  const badge = new fabric.Textbox('📌 BADGE', {
-    left: W/2, top: 200, width: 200,
-    fontSize: 18, fontFamily: 'Poppins', fontWeight: '700',
-    fill: '#1a1a2e', textAlign: 'center',
-    backgroundColor: accent,
-    padding: 12,
-    originX: 'center'
-  });
-  badge.isAccent = true;
-  canvas.add(badge);
-  canvas.setActiveObject(badge);
-  canvas.renderAll();
-}
-
-function addListItem() {
-  const item = new fabric.Textbox('✓  New list item here', {
-    left: 130, top: H/2, width: 820,
-    fontSize: 24, fontFamily: 'Poppins',
-    fill: '#fff'
-  });
-  canvas.add(item);
-  canvas.setActiveObject(item);
-  canvas.renderAll();
-}
-
-function addShape() {
-  const rect = new fabric.Rect({
-    left: W/2, top: H/2, width: 200, height: 100,
-    fill: 'rgba(74,144,164,0.3)',
-    stroke: 'rgba(74,144,164,0.5)', strokeWidth: 2,
-    rx: 12, ry: 12,
-    originX: 'center', originY: 'center'
-  });
-  canvas.add(rect);
-  canvas.setActiveObject(rect);
-  canvas.renderAll();
-}
-
-function addEmoji() {
-  const emojis = ['💙', '✨', '🧠', '🎯', '💪', '🌟', '♾️', '🔥'];
-  const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-  const text = new fabric.Text(emoji, {
-    left: W/2, top: H/2,
-    fontSize: 80,
-    originX: 'center', originY: 'center'
-  });
-  canvas.add(text);
-  canvas.setActiveObject(text);
-  canvas.renderAll();
-}
-
-// ============ SLIDES ============
-function renderSlideTabs() {
-  const tabs = document.getElementById('slideTabs');
-  tabs.innerHTML = slides.map((_, i) => `
-    <button class="slide-btn${i === currentSlide ? ' active' : ''}" onclick="switchSlide(${i})">${i + 1}</button>
-  `).join('') + '<button class="slide-btn add" onclick="addSlide()">+</button>';
-}
-
-function saveCurrentSlide() {
-  slides[currentSlide] = canvas.toJSON(['isAccent', 'isBgRect', 'isDecor']);
-}
-
-function switchSlide(i) {
-  saveCurrentSlide();
-  currentSlide = i;
-  const data = slides[i];
-  if (data) {
-    canvas.loadFromJSON(data, () => canvas.renderAll());
-  } else {
-    loadTemplate('cover');
-  }
-  renderSlideTabs();
-}
-
-function addSlide() {
-  saveCurrentSlide();
-  slides.push(null);
-  currentSlide = slides.length - 1;
-  loadTemplate('cover');
-  renderSlideTabs();
-  toast(`Slide ${currentSlide + 1} added`);
-}
-
-function removeSlide() {
-  if (slides.length <= 1) {
-    toast('Cannot remove only slide', true);
-    return;
-  }
-  slides.splice(currentSlide, 1);
-  currentSlide = Math.min(currentSlide, slides.length - 1);
-  const data = slides[currentSlide];
-  if (data) {
-    canvas.loadFromJSON(data, () => canvas.renderAll());
-  } else {
-    loadTemplate('cover');
-  }
-  renderSlideTabs();
-  toast('Slide removed');
-}
-
-function resetSlide() {
-  loadTemplate(document.querySelector('.tpl-card.active').dataset.tpl);
-  toast('Slide reset');
-}
-
-// ============ CANVAS SIZE ============
-function resizeCanvas() {
-  const size = document.getElementById('canvasSize').value.split('x');
-  W = parseInt(size[0]);
-  H = parseInt(size[1]);
-  canvas.setDimensions({ width: W, height: H });
-  loadTemplate(document.querySelector('.tpl-card.active').dataset.tpl);
-  toast(`Canvas: ${W}×${H}`);
-}
-
-// ============ EXPORT ============
-function downloadPNG() {
-  const dataURL = canvas.toDataURL({ format: 'png', quality: 1, multiplier: 1 });
-  const link = document.createElement('a');
-  const date = new Date().toISOString().split('T')[0];
-  link.download = `spectrum-unlocked-slide${currentSlide + 1}-${date}.png`;
-  link.href = dataURL;
-  link.click();
-  toast('PNG downloaded!');
-}
-
-async function downloadAllSlides() {
-  saveCurrentSlide();
-  const original = currentSlide;
-  
-  for (let i = 0; i < slides.length; i++) {
-    if (slides[i]) {
-      await new Promise(resolve => {
-        canvas.loadFromJSON(slides[i], () => {
+    function switchSlide(index) {
+      saveCurrentSlide();
+      currentSlide = index;
+      
+      if (slides[index].json) {
+        canvas.loadFromJSON(slides[index].json, () => {
           canvas.renderAll();
-          setTimeout(resolve, 100);
         });
+      } else {
+        clearCanvas();
+        drawBackground();
+      }
+      
+      renderSlideTabs();
+      clearPropertiesPanel();
+    }
+    
+    function addSlide() {
+      saveCurrentSlide();
+      slides.push({ json: null, name: `Slide ${slides.length + 1}` });
+      currentSlide = slides.length - 1;
+      clearCanvas();
+      drawBackground();
+      renderSlideTabs();
+    }
+    
+    // ============ DAY SELECTOR ============
+    function renderDayList() {
+      const container = document.getElementById('dayList');
+      container.innerHTML = calendarData.map(day => 
+        `<div class="day-item" onclick="loadDay(${day.day})">Day ${day.day}: ${day.title}</div>`
+      ).join('');
+    }
+    
+    function filterDays() {
+      const search = document.getElementById('daySearch').value.toLowerCase();
+      const items = document.querySelectorAll('.day-item');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(search) ? 'block' : 'none';
       });
     }
     
-    const dataURL = canvas.toDataURL({ format: 'png', quality: 1 });
-    const link = document.createElement('a');
-    const date = new Date().toISOString().split('T')[0];
-    link.download = `spectrum-unlocked-slide${i + 1}-${date}.png`;
-    link.href = dataURL;
-    link.click();
-    
-    await new Promise(r => setTimeout(r, 300));
-  }
-  
-  if (slides[original]) {
-    canvas.loadFromJSON(slides[original], () => canvas.renderAll());
-  }
-  
-  toast(`Downloaded ${slides.length} slides!`);
-}
-
-// ============ DAY LOADER ============
-function renderDayGrid() {
-  const grid = document.getElementById('dayGrid');
-  grid.innerHTML = Object.entries(DAYS).map(([num, d]) => `
-    <div class="day-card" onclick="loadDay(${num})">
-      <div class="num">Day ${num}</div>
-      <div class="title">${d.title}</div>
-    </div>
-  `).join('');
-}
-
-function filterDays() {
-  const q = document.getElementById('daySearch').value.toLowerCase();
-  document.querySelectorAll('.day-card').forEach(card => {
-    const text = card.textContent.toLowerCase();
-    card.style.display = text.includes(q) ? 'block' : 'none';
-  });
-}
-
-function loadDay(num) {
-  const d = DAYS[num];
-  if (!d) return;
-  
-  closeModal();
-  
-  // Setup slides
-  slides = [];
-  for (let i = 0; i < d.slides; i++) slides.push(null);
-  currentSlide = 0;
-  renderSlideTabs();
-  
-  // Load cover template with day title
-  loadTemplate('cover');
-  
-  // Update title on canvas
-  canvas.getObjects().forEach(obj => {
-    if (obj.type === 'textbox' && obj.fontSize > 50) {
-      obj.set('text', d.title);
+    function loadDay(dayNum) {
+      const day = calendarData.find(d => d.day === dayNum);
+      if (day) {
+        // For now, load a cover template with the day's title
+        loadTemplate('cover');
+        
+        // Find and update the title text
+        const objects = canvas.getObjects();
+        const titleObj = objects.find(o => o.type === 'i-text' && o.fontSize > 50);
+        if (titleObj) {
+          titleObj.set('text', day.title.replace(/ /g, '\n'));
+          canvas.renderAll();
+          saveCurrentSlide();
+        }
+        
+        // Update day list active state
+        document.querySelectorAll('.day-item').forEach((item, i) => {
+          item.classList.toggle('active', i === dayNum - 1);
+        });
+      }
     }
-  });
-  canvas.renderAll();
-  
-  // Update captions
-  document.getElementById('igCaption').textContent = d.ig || 'No caption available';
-  document.getElementById('ttCaption').textContent = d.tt || 'No caption available';
-  
-  toast(`Loaded Day ${num}: ${d.title}`);
-}
-
-function openModal() { document.getElementById('modal').classList.add('open'); }
-function closeModal() { document.getElementById('modal').classList.remove('open'); }
-
-// ============ COPY ============
-function copyIG() {
-  navigator.clipboard.writeText(document.getElementById('igCaption').textContent);
-  toast('Instagram caption copied!');
-}
-function copyTT() {
-  navigator.clipboard.writeText(document.getElementById('ttCaption').textContent);
-  toast('TikTok caption copied!');
-}
-
-// ============ TOAST ============
-function toast(msg, isError) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = 'toast show' + (isError ? ' error' : '');
-  setTimeout(() => t.classList.remove('show'), 3000);
-}
-</script>
+    
+    // ============ CANVAS SIZE ============
+    function setCanvasSize(width, height) {
+      canvasWidth = width;
+      canvasHeight = height;
+      
+      // Update button states
+      document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.size === `${width}x${height}`);
+      });
+      
+      // Recalculate scale
+      const maxDisplayHeight = window.innerHeight - 180;
+      const maxDisplayWidth = window.innerWidth - 620;
+      const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, 0.6);
+      
+      canvas.setWidth(canvasWidth * scale);
+      canvas.setHeight(canvasHeight * scale);
+      canvas.setZoom(scale);
+      
+      // Redraw background
+      clearCanvas();
+      drawBackground();
+      loadTemplate('cover');
+    }
+    
+    // ============ EXPORT ============
+    function exportSlide() {
+      // Reset zoom for export
+      const originalZoom = canvas.getZoom();
+      canvas.setZoom(1);
+      canvas.setWidth(canvasWidth);
+      canvas.setHeight(canvasHeight);
+      
+      const dataURL = canvas.toDataURL({
+        format: 'png',
+        quality: 1,
+        multiplier: 1
+      });
+      
+      // Restore zoom
+      canvas.setZoom(originalZoom);
+      canvas.setWidth(canvasWidth * originalZoom);
+      canvas.setHeight(canvasHeight * originalZoom);
+      
+      // Download
+      const link = document.createElement('a');
+      link.download = `spectrum-slide-${currentSlide + 1}.png`;
+      link.href = dataURL;
+      link.click();
+    }
+    
+    function exportAllSlides() {
+      saveCurrentSlide();
+      
+      slides.forEach((slide, i) => {
+        if (slide.json) {
+          // Load slide
+          canvas.loadFromJSON(slide.json, () => {
+            // Export after load
+            setTimeout(() => {
+              const originalZoom = canvas.getZoom();
+              canvas.setZoom(1);
+              canvas.setWidth(canvasWidth);
+              canvas.setHeight(canvasHeight);
+              
+              const dataURL = canvas.toDataURL({ format: 'png', quality: 1 });
+              
+              canvas.setZoom(originalZoom);
+              canvas.setWidth(canvasWidth * originalZoom);
+              canvas.setHeight(canvasHeight * originalZoom);
+              
+              const link = document.createElement('a');
+              link.download = `spectrum-slide-${i + 1}.png`;
+              link.href = dataURL;
+              link.click();
+            }, 100);
+          });
+        }
+      });
+    }
+    
+    function saveProject() {
+      saveCurrentSlide();
+      const data = JSON.stringify({ slides, canvasWidth, canvasHeight });
+      const blob = new Blob([data], { type: 'application/json' });
+      const link = document.createElement('a');
+      link.download = 'spectrum-project.json';
+      link.href = URL.createObjectURL(blob);
+      link.click();
+    }
+    
+    // ============ UTILITIES ============
+    function rgbToHex(color) {
+      if (!color) return '#ffffff';
+      if (color.startsWith('#')) return color;
+      if (color.startsWith('rgba')) {
+        const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+        if (match) {
+          return '#' + [match[1], match[2], match[3]].map(x => parseInt(x).toString(16).padStart(2, '0')).join('');
+        }
+      }
+      return '#ffffff';
+    }
+  </script>
 </body>
 </html>
