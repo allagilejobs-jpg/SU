@@ -603,7 +603,20 @@
       initCanvas();
       renderDayList();
       renderSlideTabs();
-      loadTemplate('cover');
+      
+      // Check for URL params (loading from calendar)
+      const urlParams = new URLSearchParams(window.location.search);
+      const dayNum = urlParams.get('day');
+      const slideNum = urlParams.get('slide');
+      const folder = urlParams.get('folder');
+      const slideName = urlParams.get('slideName');
+      
+      if (dayNum && folder && slideName) {
+        // Loading from calendar - fetch and parse HTML
+        await loadFromCalendar(dayNum, slideNum, folder, slideName);
+      } else {
+        loadTemplate('cover');
+      }
       
       // Warn before leaving if there's work
       window.addEventListener('beforeunload', (e) => {
@@ -613,6 +626,122 @@
         }
       });
     });
+    
+    async function loadFromCalendar(dayNum, slideNum, folder, slideName) {
+      const slideNumPadded = slideNum.toString().padStart(2, '0');
+      const htmlUrl = `content/${folder}/slide-${slideNumPadded}-${slideName}.html`;
+      
+      try {
+        const response = await fetch(htmlUrl);
+        if (!response.ok) throw new Error('HTML not found');
+        const html = await response.text();
+        
+        // Parse HTML to extract content
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Detect template type from slide name or content
+        const templateType = detectTemplateType(slideName, doc);
+        
+        // Load the appropriate template first
+        loadTemplate(templateType);
+        
+        // Extract and apply content from HTML
+        await applyContentFromHTML(doc, templateType);
+        
+        // Update UI to show what's loaded
+        document.querySelector('.header h1').innerHTML = `Editing: <span>Day ${dayNum} - Slide ${slideNum}</span>`;
+        
+        console.log(`✅ Loaded Day ${dayNum}, Slide ${slideNum} (${templateType} template)`);
+        
+      } catch (err) {
+        console.warn('Could not load HTML template:', err);
+        // Fall back to detected template type
+        const templateType = detectTemplateType(slideName, null);
+        loadTemplate(templateType);
+        alert(`Loaded ${templateType} template. Edit the placeholder content.`);
+      }
+    }
+    
+    function detectTemplateType(slideName, doc) {
+      // Detect based on slide name
+      const name = slideName.toLowerCase();
+      
+      if (name === 'cover') return 'cover';
+      if (name === 'cta') return 'cta';
+      if (name.includes('myth')) return 'myth';
+      if (name.includes('vs') || name.includes('compare')) return 'vs';
+      if (name.includes('stat') || name.includes('data')) return 'stats';
+      if (name.includes('quote')) return 'quote';
+      if (name.includes('checklist') || name.includes('list')) return 'checklist';
+      if (name.includes('tip') || name.includes('hack')) return 'tipcards';
+      if (name.includes('sign') || name.includes('warning')) return 'signcards';
+      if (name.includes('grid')) return 'grid';
+      
+      // If doc available, detect from HTML content
+      if (doc) {
+        const bodyText = doc.body?.innerHTML || '';
+        if (bodyText.includes('MYTH') || bodyText.includes('TRUTH')) return 'myth';
+        if (bodyText.includes('✓') || bodyText.includes('checklist')) return 'checklist';
+        if (bodyText.includes('VS') || bodyText.includes('vs.')) return 'vs';
+        if (bodyText.includes('%') && /\d{2,3}%/.test(bodyText)) return 'stats';
+      }
+      
+      // Default to content box for general content slides
+      return 'contentbox';
+    }
+    
+    async function applyContentFromHTML(doc, templateType) {
+      // Extract text content from HTML and update canvas objects
+      const body = doc.body;
+      if (!body) return;
+      
+      // Get all text elements from the HTML
+      const textElements = [];
+      
+      // Extract headings
+      body.querySelectorAll('h1, h2, h3, .title, .heading').forEach(el => {
+        textElements.push({ type: 'heading', text: el.textContent.trim() });
+      });
+      
+      // Extract paragraphs
+      body.querySelectorAll('p, .text, .content, .body').forEach(el => {
+        textElements.push({ type: 'body', text: el.textContent.trim() });
+      });
+      
+      // Extract list items
+      body.querySelectorAll('li, .item, .list-item').forEach(el => {
+        textElements.push({ type: 'list', text: el.textContent.trim() });
+      });
+      
+      // Now update canvas objects with extracted content
+      const canvasObjects = canvas.getObjects();
+      let headingIndex = 0;
+      let bodyIndex = 0;
+      
+      canvasObjects.forEach(obj => {
+        if (obj.type === 'i-text' || obj.type === 'text') {
+          // Try to match and replace placeholder text
+          const fontSize = obj.fontSize || 24;
+          
+          // Large text = headings
+          if (fontSize >= 40 && textElements.filter(t => t.type === 'heading')[headingIndex]) {
+            const content = textElements.filter(t => t.type === 'heading')[headingIndex];
+            obj.set('text', content.text);
+            headingIndex++;
+          }
+          // Medium/small text = body
+          else if (fontSize < 40 && fontSize >= 20 && textElements.filter(t => t.type === 'body')[bodyIndex]) {
+            const content = textElements.filter(t => t.type === 'body')[bodyIndex];
+            obj.set('text', content.text);
+            bodyIndex++;
+          }
+        }
+      });
+      
+      canvas.renderAll();
+      saveCurrentSlide();
+    }
     
     async function preloadFonts() {
       // Use Font Loading API to ensure fonts are ready
