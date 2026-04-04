@@ -304,7 +304,8 @@
       </div>
       <div class="header-actions">
         <button class="btn btn-secondary" onclick="resetChanges()">↩️ Reset</button>
-        <button class="btn btn-primary" onclick="saveAndRender()">💾 Save & Export PNG</button>
+        <button class="btn btn-secondary" onclick="renderAllSlides()">📦 Render All Slides</button>
+        <button class="btn btn-primary" onclick="saveAndRender()">💾 Save This Slide</button>
       </div>
     </header>
     
@@ -422,22 +423,38 @@
       }
     }
     
+    function detectSize(html) {
+      // Detect size from HTML body style
+      const match = html.match(/body\s*\{[^}]*width:\s*(\d+)px;\s*height:\s*(\d+)px/);
+      if (match) {
+        return { width: parseInt(match[1]), height: parseInt(match[2]) };
+      }
+      return { width: 1080, height: 1350 }; // Default carousel size
+    }
+    
     function displayPreview() {
       const container = document.getElementById('previewContainer');
+      const size = detectSize(currentHTML);
+      window.currentSize = size;
+      
       const maxHeight = window.innerHeight - 100;
-      const scale = Math.min(maxHeight / 1350, 0.45);
+      const scale = Math.min(maxHeight / size.height, 0.45);
       
       container.innerHTML = `
         <iframe 
           id="previewFrame"
           srcdoc="${escapeHTML(currentHTML)}"
-          width="1080"
-          height="1350"
+          width="${size.width}"
+          height="${size.height}"
           style="transform: scale(${scale}); transform-origin: top left;"
         ></iframe>
       `;
-      container.style.width = (1080 * scale) + 'px';
-      container.style.height = (1350 * scale) + 'px';
+      container.style.width = (size.width * scale) + 'px';
+      container.style.height = (size.height * scale) + 'px';
+      
+      // Show size in header
+      const sizeLabel = size.height === 1920 ? '(Story/Reel)' : size.height === 1080 ? '(Square)' : '(Carousel)';
+      document.getElementById('headerTitle').textContent = `Day ${currentDay} — Slide ${currentSlide} ${sizeLabel}`;
     }
     
     function escapeHTML(html) {
@@ -590,6 +607,68 @@
       } catch (err) {
         hideLoading();
         
+        if (err.message.includes('Failed to fetch')) {
+          showStatus('⚠️ Start render server: node render-server.js', 'error');
+        } else {
+          showStatus('Error: ' + err.message, 'error');
+        }
+      }
+    }
+    
+    async function renderAllSlides() {
+      showLoading('Rendering all slides...');
+      
+      const folderPath = `content/${currentFolder}/`;
+      let rendered = 0;
+      let errors = [];
+      
+      try {
+        // Get all HTML files in folder
+        const dirResponse = await fetch(folderPath);
+        const dirText = await dirResponse.text();
+        
+        // Find all slide HTML files
+        const regex = /slide-\d+-[^"]+\.html/g;
+        const htmlFiles = [...new Set(dirText.match(regex) || [])];
+        
+        for (const htmlFile of htmlFiles) {
+          try {
+            document.getElementById('loadingText').textContent = `Rendering ${htmlFile}...`;
+            
+            // Fetch HTML
+            const response = await fetch(folderPath + htmlFile);
+            const html = await response.text();
+            
+            // Render via server
+            const renderResponse = await fetch('http://localhost:3456/render', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                html: html,
+                outputPath: folderPath + htmlFile.replace('.html', '.png')
+              })
+            });
+            
+            if (renderResponse.ok) {
+              rendered++;
+            } else {
+              errors.push(htmlFile);
+            }
+          } catch (e) {
+            errors.push(htmlFile);
+          }
+        }
+        
+        hideLoading();
+        
+        if (errors.length === 0) {
+          showStatus(`✅ Rendered all ${rendered} slides!`, 'success');
+        } else {
+          showStatus(`Rendered ${rendered} slides. ${errors.length} failed.`, 'error');
+        }
+        
+      } catch (err) {
+        hideLoading();
         if (err.message.includes('Failed to fetch')) {
           showStatus('⚠️ Start render server: node render-server.js', 'error');
         } else {

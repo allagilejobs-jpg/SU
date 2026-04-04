@@ -46,9 +46,18 @@ const server = http.createServer(async (req, res) => {
         // Full output path
         const fullOutputPath = path.join(BASE_DIR, outputPath);
         
-        // Render with Playwright
-        console.log(`Rendering: ${outputPath}`);
-        execSync(`npx playwright screenshot --viewport-size=1080,1350 "${tempHtml}" "${fullOutputPath}"`, {
+        // Detect size from HTML (look for body width/height)
+        let width = 1080;
+        let height = 1350;
+        const sizeMatch = html.match(/body\s*\{[^}]*width:\s*(\d+)px;\s*height:\s*(\d+)px/);
+        if (sizeMatch) {
+          width = parseInt(sizeMatch[1]);
+          height = parseInt(sizeMatch[2]);
+        }
+        
+        // Render with Playwright at detected size
+        console.log(`Rendering: ${outputPath} (${width}x${height})`);
+        execSync(`npx playwright screenshot --viewport-size=${width},${height} "${tempHtml}" "${fullOutputPath}"`, {
           cwd: BASE_DIR,
           stdio: 'inherit'
         });
