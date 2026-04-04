@@ -2,6 +2,21 @@
 
 ## 2026-04-04
 
+### Updated - Brand Guidelines with Templates & Categories Documentation
+**Commit:** 0e8903c
+
+**Enhanced `brand-guidelines.html`:**
+- Added new "Templates & Categories System" section explaining the content creation concept
+- Visual diagram showing how templates + categories combine
+- Updated template count from 8 to 11
+- Added visual mockups for 3 new templates: Content Box, Tip Cards, Sign Cards
+- Added VS Compare mockup preview
+- New grid displaying all 11 templates with icons and descriptions
+- Added "Content Categories" section with all 4 category groups (Education, Practical, Emotional, Family)
+- Usage tips for combining templates and categories in the editor
+
+---
+
 ### Added - Brand Guidelines Page
 **Commit:** 3bc80a4
 
