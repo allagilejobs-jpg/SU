@@ -1650,10 +1650,17 @@
     }
     
     function loadCoverTemplate() {
-      const badge = new fabric.IText('🚨 MYTH ALERT', {
-        left: canvasWidth / 2, top: 200,
-        fontFamily: 'Poppins', fontSize: 18, fontWeight: '700',
-        fill: COLORS.gold, textAlign: 'center', originX: 'center'
+      // Badge with background pill
+      const badgeBg = new fabric.Rect({
+        left: canvasWidth / 2 - 100, top: 185,
+        width: 200, height: 44,
+        fill: COLORS.gold, rx: 22, ry: 22
+      });
+      
+      const badgeText = new fabric.IText('🚨 MYTH ALERT', {
+        left: canvasWidth / 2, top: 207,
+        fontFamily: 'Poppins', fontSize: 16, fontWeight: '700',
+        fill: COLORS.bgPrimary, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const title = new fabric.IText('3 Things TikTok\nGets WRONG\nAbout Autism', {
@@ -1680,19 +1687,26 @@
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(badge, title, subtitle, cta, handle);
+      canvas.add(badgeBg, badgeText, title, subtitle, cta, handle);
     }
     
     function loadMythTemplate() {
-      const titleLabel = new fabric.IText('❌ MYTH #1', {
-        left: canvasWidth / 2, top: 120,
-        fontFamily: 'Poppins', fontSize: 18, fontWeight: '700',
-        fill: COLORS.red, textAlign: 'center', originX: 'center'
+      // Myth badge background (red pill)
+      const mythBadgeBg = new fabric.Rect({
+        left: canvasWidth / 2 - 90, top: 105,
+        width: 180, height: 40,
+        fill: COLORS.red, rx: 20, ry: 20
+      });
+      
+      const mythBadgeText = new fabric.IText('❌ MYTH', {
+        left: canvasWidth / 2, top: 125,
+        fontFamily: 'Poppins', fontSize: 16, fontWeight: '700',
+        fill: COLORS.white, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const mythBox = new fabric.Rect({
-        left: 60, top: 180, width: canvasWidth - 120, height: 200,
-        fill: 'rgba(231, 76, 60, 0.12)', stroke: COLORS.red, strokeWidth: 4, rx: 16, ry: 16
+        left: 60, top: 170, width: canvasWidth - 120, height: 220,
+        fill: 'rgba(231, 76, 60, 0.12)', stroke: COLORS.red, strokeWidth: 3, rx: 16, ry: 16
       });
       
       const mythText = new fabric.IText('"Autistic people lack empathy\nand can\'t understand emotions."', {
@@ -1701,19 +1715,26 @@
         fill: COLORS.white, textAlign: 'center', lineHeight: 1.4, originX: 'center'
       });
       
-      const truthLabel = new fabric.IText('✅ TRUTH', {
+      // Truth badge background (green pill)
+      const truthBadgeBg = new fabric.Rect({
+        left: canvasWidth / 2 - 90, top: 430,
+        width: 180, height: 40,
+        fill: COLORS.green, rx: 20, ry: 20
+      });
+      
+      const truthBadgeText = new fabric.IText('✅ TRUTH', {
         left: canvasWidth / 2, top: 450,
-        fontFamily: 'Poppins', fontSize: 18, fontWeight: '700',
-        fill: COLORS.green, textAlign: 'center', originX: 'center'
+        fontFamily: 'Poppins', fontSize: 16, fontWeight: '700',
+        fill: COLORS.white, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const truthBox = new fabric.Rect({
-        left: 60, top: 510, width: canvasWidth - 120, height: 350,
+        left: 60, top: 495, width: canvasWidth - 120, height: 380,
         fill: 'rgba(39, 174, 96, 0.12)', rx: 16, ry: 16
       });
       
       const truthText = new fabric.IText('Autistic people often experience\nEMPATHY VERY DEEPLY.\n\nThey may express it differently or\nstruggle with cognitive empathy\n(reading social cues), but emotional\nempathy is frequently intense.', {
-        left: canvasWidth / 2, top: 685,
+        left: canvasWidth / 2, top: 700,
         fontFamily: 'Poppins', fontSize: 24,
         fill: COLORS.white, textAlign: 'center', lineHeight: 1.5, originX: 'center'
       });
@@ -1724,7 +1745,7 @@
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(titleLabel, mythBox, mythText, truthLabel, truthBox, truthText, handle);
+      canvas.add(mythBadgeBg, mythBadgeText, mythBox, mythText, truthBadgeBg, truthBadgeText, truthBox, truthText, handle);
     }
     
     function loadChecklistTemplate() {
