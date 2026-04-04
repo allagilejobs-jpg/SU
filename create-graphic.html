@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Graphic — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f1a;
+      color: #fff;
+      min-height: 100vh;
+    }
+    
+    .app {
+      display: grid;
+      grid-template-columns: 1fr 450px;
+      grid-template-rows: 60px 1fr;
+      height: 100vh;
+    }
+    
+    .header {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+    .header h1 { font-size: 18px; font-weight: 600; }
+    .header h1 span { color: #E8B86D; }
+    .header-actions { display: flex; gap: 12px; }
+    
+    .btn {
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: #27AE60; color: #fff; }
+    .btn-primary:hover { background: #219a52; }
+    .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.15); }
+    
+    .preview-area {
+      background: #0a0a12;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: auto;
+    }
+    .preview-container {
+      background: #1a1a2e;
+      border-radius: 16px;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.6);
+      overflow: hidden;
+    }
+    .preview-container iframe {
+      border: none;
+      display: block;
+    }
+    
+    .editor-panel {
+      background: #1a1a2e;
+      border-left: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .panel-section {
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .panel-section h3 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .template-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .template-btn {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 12px 8px;
+      color: #fff;
+      font-size: 11px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .template-btn:hover { border-color: rgba(232,184,109,0.5); background: rgba(232,184,109,0.1); }
+    .template-btn.active { border-color: #E8B86D; background: rgba(232,184,109,0.15); }
+    .template-btn .icon { font-size: 24px; display: block; margin-bottom: 4px; }
+    
+    .size-options {
+      display: flex;
+      gap: 8px;
+    }
+    .size-btn {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 10px;
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .size-btn:hover { border-color: rgba(74,144,164,0.5); }
+    .size-btn.active { border-color: #4A90A4; background: rgba(74,144,164,0.15); }
+    
+    .fields-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    
+    .field-group {
+      margin-bottom: 20px;
+    }
+    .field-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 8px;
+    }
+    .field-group label .icon { font-size: 16px; }
+    .field-group input,
+    .field-group textarea,
+    .field-group select {
+      width: 100%;
+      background: rgba(0,0,0,0.3);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 14px 16px;
+      color: #fff;
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .field-group textarea {
+      min-height: 80px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .field-group input:focus,
+    .field-group textarea:focus,
+    .field-group select:focus {
+      outline: none;
+      border-color: #E8B86D;
+      background: rgba(232,184,109,0.05);
+    }
+    .field-group .hint {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 6px;
+    }
+    
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    
+    .color-picker-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .color-swatch {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .color-swatch:hover { transform: scale(1.1); }
+    .color-swatch.active { border-color: #fff; }
+    
+    .status-bar {
+      padding: 16px 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      background: rgba(0,0,0,0.2);
+    }
+    .status { font-size: 13px; padding: 12px 16px; border-radius: 8px; display: none; }
+    .status.success { display: block; background: rgba(39,174,96,0.15); border: 1px solid rgba(39,174,96,0.3); color: #27AE60; }
+    .status.error { display: block; background: rgba(231,76,60,0.15); border: 1px solid rgba(231,76,60,0.3); color: #E74C3C; }
+    
+    .loading-overlay {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000; opacity: 0; pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .loading-overlay.active { opacity: 1; pointer-events: auto; }
+    .loading-overlay .spinner { font-size: 48px; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; grid-template-rows: 60px 350px 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-overlay" id="loadingOverlay">
+    <div style="text-align:center">
+      <div class="spinner">⏳</div>
+      <p style="margin-top:16px" id="loadingText">Generating...</p>
+    </div>
+  </div>
+
+  <div class="app">
+    <header class="header">
+      <h1>Create <span>New Graphic</span></h1>
+      <div class="header-actions">
+        <a href="calendar-60day.html" class="btn btn-secondary">← Calendar</a>
+        <button class="btn btn-primary" onclick="exportPNG()">📸 Export PNG</button>
+      </div>
+    </header>
+    
+    <main class="preview-area">
+      <div class="preview-container" id="previewContainer">
+        <div style="padding:60px;text-align:center;color:rgba(255,255,255,0.5)">
+          <div style="font-size:48px;margin-bottom:16px">🎨</div>
+          <p>Select a template to start</p>
+        </div>
+      </div>
+    </main>
+    
+    <aside class="editor-panel">
+      <div class="panel-section">
+        <h3>📐 Template</h3>
+        <div class="template-grid" id="templateGrid">
+          <button class="template-btn" onclick="selectTemplate('cover')"><span class="icon">🎬</span>Cover</button>
+          <button class="template-btn" onclick="selectTemplate('myth')"><span class="icon">❌</span>Myth</button>
+          <button class="template-btn" onclick="selectTemplate('checklist')"><span class="icon">✓</span>List</button>
+          <button class="template-btn" onclick="selectTemplate('vs')"><span class="icon">⚔️</span>VS</button>
+          <button class="template-btn" onclick="selectTemplate('stats')"><span class="icon">📊</span>Stats</button>
+          <button class="template-btn" onclick="selectTemplate('quote')"><span class="icon">💬</span>Quote</button>
+          <button class="template-btn" onclick="selectTemplate('cta')"><span class="icon">📢</span>CTA</button>
+          <button class="template-btn" onclick="selectTemplate('tips')"><span class="icon">💡</span>Tips</button>
+          <button class="template-btn" onclick="selectTemplate('content')"><span class="icon">📦</span>Content</button>
+        </div>
+      </div>
+      
+      <div class="panel-section">
+        <h3>📏 Size</h3>
+        <div class="size-options">
+          <button class="size-btn active" onclick="selectSize(1080,1350)" data-size="1080x1350">4:5 Carousel</button>
+          <button class="size-btn" onclick="selectSize(1080,1920)" data-size="1080x1920">9:16 Story</button>
+          <button class="size-btn" onclick="selectSize(1080,1080)" data-size="1080x1080">1:1 Square</button>
+        </div>
+      </div>
+      
+      <div class="fields-area" id="fieldsArea">
+        <div style="text-align:center;padding:40px;color:rgba(255,255,255,0.4)">
+          <p>Select a template above to see fields</p>
+        </div>
+      </div>
+      
+      <div class="status-bar">
+        <div class="status" id="statusMessage"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    // State
+    let currentTemplate = null;
+    let currentSize = { width: 1080, height: 1350 };
+    let currentHTML = '';
+    
+    // Template definitions with fields
+    const templates = {
+      cover: {
+        name: 'Cover Slide',
+        fields: [
+          { id: 'badge', label: 'Badge Text', icon: '🏷️', placeholder: '🚨 MYTH ALERT', type: 'text' },
+          { id: 'title', label: 'Main Title', icon: '📰', placeholder: '3 Things TikTok\nGets WRONG\nAbout Autism', type: 'textarea' },
+          { id: 'subtitle', label: 'Subtitle', icon: '📝', placeholder: 'A supporting line that gives context...', type: 'textarea' },
+          { id: 'cta', label: 'Swipe CTA', icon: '👉', placeholder: '👉 Swipe to learn more', type: 'text' },
+        ]
+      },
+      myth: {
+        name: 'Myth Buster',
+        fields: [
+          { id: 'mythNum', label: 'Myth Number', icon: '🔢', placeholder: 'Myth #1', type: 'text' },
+          { id: 'mythText', label: 'The Myth', icon: '❌', placeholder: '"Autistic people lack empathy"', type: 'textarea' },
+          { id: 'truthText', label: 'The Truth', icon: '✅', placeholder: 'Autistic people often experience empathy very deeply...', type: 'textarea' },
+        ]
+      },
+      checklist: {
+        name: 'Checklist',
+        fields: [
+          { id: 'title', label: 'Title', icon: '📋', placeholder: '🎧 Sensory Supports', type: 'text' },
+          { id: 'item1', label: 'Item 1', icon: '✓', placeholder: 'Noise-canceling headphones', type: 'text' },
+          { id: 'item2', label: 'Item 2', icon: '✓', placeholder: 'Scheduled sensory breaks', type: 'text' },
+          { id: 'item3', label: 'Item 3', icon: '✓', placeholder: 'Fidgets permitted', type: 'text' },
+          { id: 'item4', label: 'Item 4', icon: '✓', placeholder: 'Alternative seating', type: 'text' },
+          { id: 'item5', label: 'Item 5', icon: '✓', placeholder: 'Quiet space available', type: 'text' },
+          { id: 'item6', label: 'Item 6 (optional)', icon: '✓', placeholder: '', type: 'text' },
+        ]
+      },
+      vs: {
+        name: 'VS Compare',
+        fields: [
+          { id: 'title', label: 'Title', icon: '⚔️', placeholder: "What's the Difference?", type: 'text' },
+          { id: 'leftTitle', label: 'Left Title', icon: '🔴', placeholder: '😤 Tantrum', type: 'text' },
+          { id: 'leftItems', label: 'Left Points', icon: '📝', placeholder: '• Goal-oriented\n• Stops when goal met\n• Aware of audience', type: 'textarea' },
+          { id: 'rightTitle', label: 'Right Title', icon: '🔵', placeholder: '🌪️ Meltdown', type: 'text' },
+          { id: 'rightItems', label: 'Right Points', icon: '📝', placeholder: '• Sensory overload\n• Not goal-oriented\n• Needs recovery time', type: 'textarea' },
+          { id: 'footer', label: 'Footer', icon: '💬', placeholder: 'Both are valid. Understanding helps.', type: 'text' },
+        ]
+      },
+      stats: {
+        name: 'Statistics',
+        fields: [
+          { id: 'title', label: 'Title', icon: '📊', placeholder: '📊 Did You Know?', type: 'text' },
+          { id: 'stat', label: 'Big Number', icon: '🔢', placeholder: '85%', type: 'text' },
+          { id: 'description', label: 'Description', icon: '📝', placeholder: 'of college-educated autistic adults\nare unemployed or underemployed', type: 'textarea' },
+          { id: 'source', label: 'Source', icon: '📎', placeholder: 'Source: Research Study 2024', type: 'text' },
+        ]
+      },
+      quote: {
+        name: 'Quote',
+        fields: [
+          { id: 'quote', label: 'Quote Text', icon: '💬', placeholder: "You shouldn't have to perform neurotypicality just to be accepted.", type: 'textarea' },
+          { id: 'attribution', label: 'Attribution', icon: '✍️', placeholder: '— The Autistic Community', type: 'text' },
+        ]
+      },
+      cta: {
+        name: 'Call to Action',
+        fields: [
+          { id: 'emoji', label: 'Big Emoji', icon: '😀', placeholder: '💾', type: 'text' },
+          { id: 'title', label: 'Title', icon: '📰', placeholder: 'Save This Post!', type: 'text' },
+          { id: 'subtitle', label: 'Subtitle', icon: '📝', placeholder: 'Reference it when you need it most.', type: 'text' },
+          { id: 'button', label: 'Button Text', icon: '🔘', placeholder: '📩 DM "tips" for resources', type: 'text' },
+          { id: 'actions', label: 'Actions', icon: '👆', placeholder: '📤 Share  •  💬 Comment  •  ➕ Follow', type: 'text' },
+        ]
+      },
+      tips: {
+        name: 'Tips List',
+        fields: [
+          { id: 'title', label: 'Title', icon: '💡', placeholder: '💡 5 Quick Tips', type: 'text' },
+          { id: 'subtitle', label: 'Subtitle', icon: '📝', placeholder: 'Practical strategies you can use today', type: 'text' },
+          { id: 'tip1', label: 'Tip 1', icon: '1️⃣', placeholder: 'First tip goes here', type: 'text' },
+          { id: 'tip2', label: 'Tip 2', icon: '2️⃣', placeholder: 'Second tip goes here', type: 'text' },
+          { id: 'tip3', label: 'Tip 3', icon: '3️⃣', placeholder: 'Third tip goes here', type: 'text' },
+          { id: 'tip4', label: 'Tip 4', icon: '4️⃣', placeholder: 'Fourth tip goes here', type: 'text' },
+          { id: 'tip5', label: 'Tip 5', icon: '5️⃣', placeholder: 'Fifth tip goes here', type: 'text' },
+        ]
+      },
+      content: {
+        name: 'Content Box',
+        fields: [
+          { id: 'category', label: 'Category', icon: '🏷️', placeholder: 'EDUCATION', type: 'text' },
+          { id: 'emoji', label: 'Emoji', icon: '😀', placeholder: '📦', type: 'text' },
+          { id: 'title', label: 'Title', icon: '📰', placeholder: 'Content Title Here', type: 'text' },
+          { id: 'body', label: 'Body Text', icon: '📝', placeholder: 'This is where your main content goes.\n\nExplain key points and provide information.', type: 'textarea' },
+          { id: 'slideNum', label: 'Slide Number', icon: '🔢', placeholder: '1 of 5', type: 'text' },
+        ]
+      }
+    };
+    
+    function selectTemplate(type) {
+      currentTemplate = type;
+      
+      // Update button states
+      document.querySelectorAll('.template-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.onclick.toString().includes(`'${type}'`));
+      });
+      
+      // Render fields
+      renderFields();
+      
+      // Generate initial preview
+      updatePreview();
+    }
+    
+    function selectSize(width, height) {
+      currentSize = { width, height };
+      
+      // Update button states
+      document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.size === `${width}x${height}`);
+      });
+      
+      updatePreview();
+    }
+    
+    function renderFields() {
+      const template = templates[currentTemplate];
+      if (!template) return;
+      
+      const container = document.getElementById('fieldsArea');
+      let html = '';
+      
+      template.fields.forEach(field => {
+        html += `
+          <div class="field-group">
+            <label><span class="icon">${field.icon}</span> ${field.label}</label>
+            ${field.type === 'textarea' 
+              ? `<textarea id="${field.id}" placeholder="${field.placeholder}" oninput="updatePreview()">${field.placeholder}</textarea>`
+              : `<input type="text" id="${field.id}" placeholder="${field.placeholder}" value="${field.placeholder}" oninput="updatePreview()">`
+            }
+          </div>
+        `;
+      });
+      
+      container.innerHTML = html;
+    }
+    
+    function getFieldValue(id) {
+      const el = document.getElementById(id);
+      return el ? el.value : '';
+    }
+    
+    function generateHTML() {
+      if (!currentTemplate) return '';
+      
+      const w = currentSize.width;
+      const h = currentSize.height;
+      
+      // Base styles
+      const baseStyles = `
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+        body { 
+          width: ${w}px; height: ${h}px; 
+          font-family: 'Poppins', sans-serif; 
+          color: white;
+          background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+          padding: 60px;
+          position: relative;
+          overflow: hidden;
+        }
+        .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+        .bg-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; right: -100px; }
+        .bg-2 { width: 300px; height: 300px; background: #4A90A4; bottom: -50px; left: -50px; }
+        .handle { position: absolute; bottom: 40px; left: 0; right: 0; text-align: center; font-size: 16px; opacity: 0.4; }
+      `;
+      
+      let content = '';
+      
+      switch(currentTemplate) {
+        case 'cover':
+          content = `
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
+              <div style="background:#E8B86D;padding:12px 30px;border-radius:30px;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:40px;color:#1a1a2e">${getFieldValue('badge')}</div>
+              <div style="font-family:'Playfair Display',serif;font-size:${h > 1400 ? 72 : 60}px;font-weight:800;line-height:1.1;margin-bottom:30px;white-space:pre-line">${getFieldValue('title')}</div>
+              <div style="font-size:24px;opacity:0.85;margin-bottom:50px;max-width:800px;line-height:1.4">${getFieldValue('subtitle')}</div>
+              <div style="font-size:20px;color:#4A90A4">${getFieldValue('cta')}</div>
+            </div>
+          `;
+          break;
+          
+        case 'myth':
+          content = `
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
+              <div style="background:#E74C3C;padding:15px 40px;border-radius:35px;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:40px">❌ ${getFieldValue('mythNum')}</div>
+              <div style="background:rgba(231,76,60,0.15);border-left:6px solid #E74C3C;border-radius:20px;padding:30px 40px;margin-bottom:40px;max-width:900px">
+                <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;font-style:italic;line-height:1.3">${getFieldValue('mythText')}</div>
+              </div>
+              <div style="background:#27AE60;padding:15px 40px;border-radius:35px;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:30px">✅ The Truth</div>
+              <div style="background:rgba(39,174,96,0.12);border-radius:16px;padding:25px 35px;max-width:900px">
+                <div style="font-size:24px;line-height:1.5;opacity:0.95">${getFieldValue('truthText')}</div>
+              </div>
+            </div>
+          `;
+          break;
+          
+        case 'checklist':
+          const items = [1,2,3,4,5,6].map(i => getFieldValue(`item${i}`)).filter(x => x);
+          content = `
+            <div style="display:flex;flex-direction:column;height:100%">
+              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#E8B86D;text-align:center;margin-bottom:40px">${getFieldValue('title')}</div>
+              <div style="background:rgba(74,144,164,0.12);border:2px solid rgba(74,144,164,0.3);border-radius:20px;padding:40px;flex:1">
+                ${items.map(item => `
+                  <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.1)">
+                    <div style="color:#27AE60;font-size:28px;font-weight:bold">✓</div>
+                    <div style="font-size:24px">${item}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+          break;
+          
+        case 'vs':
+          content = `
+            <div style="display:flex;flex-direction:column;height:100%">
+              <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#E8B86D;text-align:center;margin-bottom:30px">${getFieldValue('title')}</div>
+              <div style="display:flex;gap:20px;flex:1">
+                <div style="flex:1;background:rgba(231,76,60,0.12);border:2px solid rgba(231,76,60,0.3);border-radius:20px;padding:30px">
+                  <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;text-align:center;margin-bottom:20px">${getFieldValue('leftTitle')}</div>
+                  <div style="font-size:20px;line-height:2;white-space:pre-line">${getFieldValue('leftItems')}</div>
+                </div>
+                <div style="display:flex;align-items:center">
+                  <div style="background:#E8B86D;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#1a1a2e">VS</div>
+                </div>
+                <div style="flex:1;background:rgba(74,144,164,0.12);border:2px solid rgba(74,144,164,0.3);border-radius:20px;padding:30px">
+                  <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;text-align:center;margin-bottom:20px">${getFieldValue('rightTitle')}</div>
+                  <div style="font-size:20px;line-height:2;white-space:pre-line">${getFieldValue('rightItems')}</div>
+                </div>
+              </div>
+              <div style="text-align:center;margin-top:30px;font-size:22px;color:#4A90A4">${getFieldValue('footer')}</div>
+            </div>
+          `;
+          break;
+          
+        case 'stats':
+          content = `
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
+              <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#E8B86D;margin-bottom:60px">${getFieldValue('title')}</div>
+              <div style="font-family:'Playfair Display',serif;font-size:160px;font-weight:800;line-height:1">${getFieldValue('stat')}</div>
+              <div style="font-size:28px;opacity:0.85;margin-top:30px;max-width:800px;line-height:1.5;white-space:pre-line">${getFieldValue('description')}</div>
+              <div style="font-size:16px;opacity:0.4;margin-top:40px">${getFieldValue('source')}</div>
+            </div>
+          `;
+          break;
+          
+        case 'quote':
+          content = `
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:40px">
+              <div style="font-family:'Playfair Display',serif;font-size:200px;color:#E8B86D;opacity:0.25;position:absolute;top:80px;left:60px">"</div>
+              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;font-style:italic;line-height:1.4;max-width:900px;white-space:pre-line">${getFieldValue('quote')}</div>
+              <div style="font-size:24px;color:#E8B86D;margin-top:40px">${getFieldValue('attribution')}</div>
+            </div>
+          `;
+          break;
+          
+        case 'cta':
+          content = `
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
+              <div style="font-size:120px;margin-bottom:40px">${getFieldValue('emoji')}</div>
+              <div style="font-family:'Playfair Display',serif;font-size:56px;font-weight:700;margin-bottom:20px">${getFieldValue('title')}</div>
+              <div style="font-size:24px;opacity:0.7;margin-bottom:50px">${getFieldValue('subtitle')}</div>
+              <div style="background:#E8B86D;padding:18px 40px;border-radius:40px;font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:50px">${getFieldValue('button')}</div>
+              <div style="font-size:20px;opacity:0.5">${getFieldValue('actions')}</div>
+            </div>
+          `;
+          break;
+          
+        case 'tips':
+          const tips = [1,2,3,4,5].map(i => getFieldValue(`tip${i}`)).filter(x => x);
+          content = `
+            <div style="display:flex;flex-direction:column;height:100%">
+              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#E8B86D;text-align:center">${getFieldValue('title')}</div>
+              <div style="font-size:22px;opacity:0.7;text-align:center;margin:20px 0 40px">${getFieldValue('subtitle')}</div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:20px">
+                ${tips.map((tip, i) => `
+                  <div style="display:flex;align-items:center;gap:20px">
+                    <div style="background:#E8B86D;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#1a1a2e;flex-shrink:0">${i+1}</div>
+                    <div style="font-size:24px">${tip}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+          break;
+          
+        case 'content':
+          content = `
+            <div style="display:flex;flex-direction:column;align-items:center;height:100%;text-align:center">
+              <div style="font-size:14px;font-weight:700;color:#4A90A4;text-transform:uppercase;letter-spacing:3px;margin-bottom:30px">${getFieldValue('category')}</div>
+              <div style="font-size:80px;margin-bottom:30px">${getFieldValue('emoji')}</div>
+              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#E8B86D;margin-bottom:30px">${getFieldValue('title')}</div>
+              <div style="background:rgba(74,144,164,0.12);border:2px solid rgba(74,144,164,0.3);border-radius:20px;padding:40px;flex:1;width:100%">
+                <div style="font-size:24px;line-height:1.6;white-space:pre-line">${getFieldValue('body')}</div>
+              </div>
+              <div style="font-size:14px;opacity:0.3;margin-top:20px">${getFieldValue('slideNum')}</div>
+            </div>
+          `;
+          break;
+      }
+      
+      return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>${baseStyles}</style>
+</head>
+<body>
+  <div class="bg-shape bg-1"></div>
+  <div class="bg-shape bg-2"></div>
+  ${content}
+  <div class="handle">@spectrum_unlocked</div>
+</body>
+</html>`;
+    }
+    
+    function updatePreview() {
+      currentHTML = generateHTML();
+      
+      const container = document.getElementById('previewContainer');
+      const scale = Math.min((window.innerHeight - 100) / currentSize.height, 0.45);
+      
+      container.innerHTML = `
+        <iframe 
+          id="previewFrame"
+          srcdoc="${currentHTML.replace(/"/g, '&quot;')}"
+          width="${currentSize.width}"
+          height="${currentSize.height}"
+          style="transform: scale(${scale}); transform-origin: top left;"
+        ></iframe>
+      `;
+      container.style.width = (currentSize.width * scale) + 'px';
+      container.style.height = (currentSize.height * scale) + 'px';
+    }
+    
+    async function exportPNG() {
+      if (!currentTemplate) {
+        showStatus('Select a template first', 'error');
+        return;
+      }
+      
+      showLoading('Rendering PNG...');
+      
+      try {
+        const filename = `${currentTemplate}-${Date.now()}.png`;
+        
+        const response = await fetch('http://localhost:3456/render', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            html: currentHTML,
+            outputPath: filename
+          })
+        });
+        
+        if (response.ok) {
+          hideLoading();
+          showStatus(`✅ Saved: ${filename}`, 'success');
+        } else {
+          throw new Error('Render failed');
+        }
+      } catch (err) {
+        hideLoading();
+        if (err.message.includes('Failed to fetch')) {
+          showStatus('Render server not running. It should auto-start on login.', 'error');
+        } else {
+          showStatus('Error: ' + err.message, 'error');
+        }
+      }
+    }
+    
+    function showStatus(msg, type) {
+      const el = document.getElementById('statusMessage');
+      el.textContent = msg;
+      el.className = 'status ' + type;
+    }
+    
+    function showLoading(text) {
+      document.getElementById('loadingText').textContent = text;
+      document.getElementById('loadingOverlay').classList.add('active');
+    }
+    
+    function hideLoading() {
+      document.getElementById('loadingOverlay').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
