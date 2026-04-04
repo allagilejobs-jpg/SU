@@ -2174,10 +2174,48 @@
       
       if (cat) {
         preview.style.display = 'block';
-        preview.innerHTML = `<strong>${cat.emoji} ${cat.title}</strong><br><span style="font-size:10px;opacity:0.7">Click a template to apply this category</span>`;
+        preview.innerHTML = `<strong>${cat.emoji} ${cat.title}</strong><br><span style="font-size:10px;opacity:0.7">Applying to canvas...</span>`;
+        
+        // Apply category to canvas
+        applyCategory(cat);
+        
+        // Update preview text
+        setTimeout(() => {
+          preview.innerHTML = `<strong>${cat.emoji} ${cat.title}</strong><br><span style="font-size:10px;opacity:0.7;color:#27AE60">✓ Applied!</span>`;
+        }, 300);
       } else {
         preview.style.display = 'none';
       }
+    }
+    
+    function applyCategory(cat) {
+      const objects = canvas.getObjects();
+      
+      objects.forEach(obj => {
+        if (obj.type !== 'i-text' && obj.type !== 'text') return;
+        
+        const text = (obj.text || '').toLowerCase();
+        const fontSize = obj.fontSize || 24;
+        
+        // Update category badge/label (small uppercase text near top)
+        if (text.includes('category') || (fontSize <= 18 && obj.top < 150 && text === text.toUpperCase())) {
+          obj.set('text', cat.title.toUpperCase());
+          obj.set('fill', cat.color);
+        }
+        
+        // Update title that contains category placeholder
+        if (text.includes('content title') || text.includes('sensory supports') || text.includes('quick tips') || text.includes('warning signs')) {
+          obj.set('text', `${cat.emoji} ${cat.title}`);
+        }
+        
+        // Update emoji placeholders
+        if (obj.text === '📦' || obj.text === '💡' || obj.text === '⚠️') {
+          obj.set('text', cat.emoji);
+        }
+      });
+      
+      canvas.renderAll();
+      saveCurrentSlide();
     }
     
     function clearCanvas() {
