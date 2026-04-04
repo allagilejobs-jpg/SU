@@ -732,7 +732,7 @@
           <pre id="captionPreview">Your caption will appear here when you load content from the calendar.</pre>
         </div>
         <div class="caption-box" style="margin-top:10px">
-          <h4>TikTok</h4>
+          <h4>TikTok <button class="btn btn-secondary" onclick="copyTikTokCaption()" style="float:right;padding:4px 10px;font-size:11px">📋 Copy</button></h4>
           <pre id="tiktokCaption">Your TikTok caption will appear here.</pre>
         </div>
       </div>
@@ -747,6 +747,9 @@
         <button class="modal-close" onclick="closeDaySelector()">×</button>
       </div>
       <div class="modal-body">
+        <div class="form-group" style="margin-bottom:20px">
+          <input type="text" class="form-control" id="daySearch" placeholder="🔍 Search days by title..." oninput="filterDays()">
+        </div>
         <div class="day-grid" id="dayGrid"></div>
       </div>
     </div>
@@ -1710,31 +1713,99 @@
     function copyCaption() {
       const caption = document.getElementById('captionPreview').textContent;
       navigator.clipboard.writeText(caption).then(() => {
-        showToast('Caption copied!');
+        showToast('Instagram caption copied!');
       }).catch(() => {
-        showToast('Failed to copy', 'error');
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = caption;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast('Caption copied!');
+      });
+    }
+    
+    function copyTikTokCaption() {
+      const caption = document.getElementById('tiktokCaption').textContent;
+      navigator.clipboard.writeText(caption).then(() => {
+        showToast('TikTok caption copied!');
+      }).catch(() => {
+        const textarea = document.createElement('textarea');
+        textarea.value = caption;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast('TikTok caption copied!');
       });
     }
     
     // ==================== DAY SELECTOR ====================
     function loadDayData() {
-      // Import day data from calendar (simplified version)
+      // Full 60-day calendar data
       dayData = {
-        1: { title: '3 Things TikTok Gets WRONG', folder: 'day-01-tiktok-myths', slides: 5 },
-        2: { title: 'Acceptance vs. Awareness', folder: 'day-02-acceptance-vs-awareness', slides: 5 },
-        3: { title: 'Glass Child Syndrome', folder: 'day-03-glass-child', slides: 6 },
-        4: { title: '5 Sensory Hacks', folder: 'day-04-sensory-hacks', slides: 7 },
-        5: { title: 'Late-Diagnosed Women', folder: 'day-05-late-diagnosis', slides: 5 },
-        6: { title: 'Autistic Burnout', folder: 'day-06-burnout', slides: 5 },
-        7: { title: 'April Kickoff!', folder: 'day-07-april-kickoff', slides: 4 },
-        8: { title: 'World Autism Day', folder: 'day-08-waad', slides: 6 },
-        9: { title: '5 Myths That Need to Die', folder: 'day-09-myths-die', slides: 7 },
-        10: { title: 'IEP Accommodations', folder: 'day-10-iep', slides: 6 },
-        11: { title: 'High-Masking Autism', folder: 'day-11-masking', slides: 6 },
-        12: { title: 'Self-Care for Parents', folder: 'day-12-selfcare', slides: 6 },
-        13: { title: 'The ABA Controversy', folder: 'day-13-aba', slides: 6 },
-        14: { title: 'Visual Supports', folder: 'day-14-visual', slides: 6 },
-        15: { title: 'Meltdown Support', folder: 'day-15-meltdown', slides: 6 }
+        1: { title: '3 Things TikTok Gets WRONG About Autism', folder: 'day-01-tiktok-myths', slides: 5, igCaption: "🚨 STOP scrolling TikTok for autism \"facts.\"\n\nA new study just found that over 50% of autism/ADHD content on social media is MISLEADING.\n\nHere are 3 myths that need to die 👇\n\n💾 Save this and share it with someone who needs accurate information.", igHashtags: "#autism #autismawareness #autismmom #autismfamily #neurodiversity #autismacceptance #autismfacts #mythbusters #autismparenting #autismcommunity", tiktokCaption: "🚨 3 things TikTok gets WRONG about autism (new study says 50% of content is misleading!)\n\n#autism #autismawareness #fyp #autismfacts #mythbusters" },
+        2: { title: 'Acceptance vs. Awareness — Why Language Matters', folder: 'day-02-acceptance-vs-awareness', slides: 5, igCaption: "🛑 Stop saying \"autism awareness.\"\n\nThe autistic community has moved on. Here's why ACCEPTANCE matters more.\n\nThe progression: Awareness → Acceptance → Inclusion → Appreciation\n\n💾 Save & share to spread acceptance.", igHashtags: "#autism #autismacceptance #autismawareness #neurodiversity #autismcommunity #actuallyautistic #differentnotless #autismparenting", tiktokCaption: "🛑 Why the autism community stopped saying \"awareness\"\n\nACCEPTANCE > AWARENESS\n\n#autism #autismacceptance #neurodivergent #fyp" },
+        3: { title: 'Glass Child Syndrome', folder: 'day-03-glass-child', slides: 6, igCaption: "🪟 Is your neurotypical child becoming invisible?\n\nLet's talk about GLASS CHILD SYNDROME.\n\nWhen one child has high support needs, their siblings often fade into the background.\n\nTag a sibling parent who needs this 💙", igHashtags: "#autism #autismfamily #autismparenting #siblings #glasschildsyndrome #specialneeds #autismmom #autismdad", tiktokCaption: "🪟 Is your NT child becoming INVISIBLE?\n\nGlass Child Syndrome: when siblings fade into the background.\n\n#autism #autismparenting #siblings #fyp" },
+        4: { title: '5 Sensory Hacks That Actually Work', folder: 'day-04-sensory-hacks', slides: 7, igCaption: "🎧😎🧸 5 SENSORY HACKS that actually work!\n\nMeltdown prevention starts here ⬇️\n\n1️⃣ Noise-canceling headphones\n2️⃣ Sunglasses indoors\n3️⃣ Fidget tools\n4️⃣ Visual timers\n5️⃣ Calm-down corner\n\n💾 Save this for your sensory toolkit!", igHashtags: "#autism #sensoryfriendly #sensoryprocessing #autismparenting #autismhacks #autismtips #occupationaltherapy", tiktokCaption: "🎧😎🧸 5 Sensory hacks that ACTUALLY work (OT-approved!)\n\n#autism #sensoryfriendly #autismhacks #fyp" },
+        5: { title: 'Late-Diagnosed Autism in Women', folder: 'day-05-late-diagnosis', slides: 5, igCaption: "💜 450% increase in adult autism diagnoses (ages 26-34).\n\nMost of them? Women.\n\nFor years, girls learned to mask, study social rules, and hide their struggles.\n\nIt's never too late to understand yourself.\n\n💾 Save & share for someone who needs this.", igHashtags: "#latediagnosedautistic #unmaskingautism #autisticwomen #autisticburnout #highmaskingautism #autism #neurodivergent", tiktokCaption: "💜 450% spike in adult autism diagnoses — most are WOMEN.\n\n#latediagnosedautistic #unmaskingautism #autisticwomen #fyp" },
+        6: { title: 'Autistic Burnout: Signs & Prevention', folder: 'day-06-burnout', slides: 5, igCaption: "🔥 AUTISTIC BURNOUT is real. And it's not what you think.\n\nIt's NOT laziness or just depression.\n\nIt IS neurological exhaustion from navigating a neurotypical world.\n\n💙 You're not broken. You're exhausted.\n\n💾 Save for when you or someone you love needs this.", igHashtags: "#autisticburnout #autism #autismawareness #autismparenting #neurodivergent #actuallyautistic #mentalhealth", tiktokCaption: "🔥 Autistic burnout is NOT laziness.\n\nSome experience first burnout at AGE 6.\n\n#autisticburnout #autism #neurodivergent #fyp" },
+        7: { title: 'Autism Acceptance Month Kickoff', folder: 'day-07-april-kickoff', slides: 4, igCaption: "♾️💙 IT'S AUTISM ACCEPTANCE MONTH! 💙♾️\n\nApril is here. A whole month of education, support, and celebration.\n\n➕ Follow so you don't miss anything\n🔔 Turn on notifications\n💾 Save this!\n\nSee you tomorrow for World Autism Acceptance Day! 💙", igHashtags: "#AutismAcceptanceMonth #autism #autismawareness #autismacceptance #april #neurodiversity #autismcommunity", tiktokCaption: "♾️💙 AUTISM ACCEPTANCE MONTH IS HERE!\n\nTurn on notifications — tomorrow is WORLD AUTISM DAY! 🌍\n\n#AutismAcceptanceMonth #autism #april #fyp" },
+        8: { title: 'World Autism Acceptance Day', folder: 'day-08-waad', slides: 6, igCaption: "♾️💙 WORLD AUTISM ACCEPTANCE DAY 💙♾️\n\nApril 2, 2026\n\nUN Theme: \"Autism and Humanity — Every Life Has Value\"\n\nToday we don't just spread awareness. We celebrate humanity.\n\n💙 Share this far and wide. Let's make today mean something.", igHashtags: "#WorldAutismDay #AutismAcceptance #AutismAndHumanity #WAAD2026 #autism #autismawareness #neurodiversity #differentnotless", tiktokCaption: "♾️💙 WORLD AUTISM ACCEPTANCE DAY 💙♾️\n\nUN Theme: \"Autism and Humanity — Every Life Has Value\"\n\n#WorldAutismDay #AutismAcceptance #WAAD2026 #fyp" },
+        9: { title: '5 Myths About Autism That Need to Die', folder: 'day-09-myths-die', slides: 7, igCaption: "💀 5 MYTHS about autism that need to DIE:\n\nYou've probably believed at least one of these ⬇️\n\n❌ Myth #1: \"Vaccines cause autism\"\n✅ Debunked by countless studies.\n\n❌ Myth #2: \"Autistic people lack empathy\"\n✅ Many feel TOO much empathy.\n\n❌ Myth #3: \"But you don't look autistic\"\n✅ Autism has no \"look.\"\n\n❌ Myth #4: \"Only boys can be autistic\"\n✅ Girls are massively underdiagnosed.\n\n❌ Myth #5: \"Autism can be cured\"\n✅ It's a lifelong neurotype, not a disease.\n\nWhich myth did YOU used to believe? 👇\n\n💾 Save this to share with someone who needs it", igHashtags: "#autism #autismmyths #autismawareness #autismacceptance #neurodiversity #actuallyautistic #autismfacts #autismcommunity #autismparenting #autismmom #autismdad #specialneeds #autismeducation #mythbusters", tiktokCaption: "💀 5 autism myths that need to DIE\n\nWhich one did you used to believe? 👇\n\n#autism #autismmyths #autismawareness #fyp #actuallyautistic" },
+        10: { title: 'Neurodiversity-Affirming IEP Accommodations', folder: 'day-10-iep', slides: 6, igCaption: "📋 NEURODIVERSITY-AFFIRMING IEP accommodations ✨\n\nYour child's IEP shouldn't teach them to mask. Here are accommodations that actually SUPPORT autistic learners ⬇️\n\n🎧 SENSORY SUPPORTS\n✓ Noise-canceling headphones\n✓ Sensory breaks as NEEDED (not earned)\n✓ Fidgets without restriction\n✓ Movement breaks every 20-30 min\n\n💬 COMMUNICATION\n✓ AAC always accessible\n✓ Written instructions\n✓ Extra processing time\n✓ NO forced eye contact\n\n📚 ACADEMIC FLEXIBILITY\n✓ Extended time on tests\n✓ Reduced homework\n✓ Alternative formats\n✓ Quiet testing space\n\n🤝 SOCIAL & EMOTIONAL\n✓ Safe person when overwhelmed\n✓ Break card (no questions asked)\n✓ Option for solo work\n✓ Transition warnings\n\n💾 Save this for your next IEP meeting!\n\nWhat accommodation changed everything for YOUR child? 👇\n\n📩 DM \"IEP\" for more advocacy tips", igHashtags: "#IEP #IEPmeeting #specialeducation #autism #autismparenting #autismadvocacy #neurodiversity #504plan #autismmom #autismdad #schoolaccommodations #autismfamily #educationadvocacy #specialneeds", tiktokCaption: "📋 IEP accommodations that actually SUPPORT your child (not teach them to mask)\n\nDM \"IEP\" for more tips!\n\n#IEP #autism #specialeducation #fyp #autismparenting #autismadvocacy" },
+        11: { title: 'High-Masking Autism: The Hidden Struggle', folder: 'day-11-masking', slides: 6, igCaption: "🎭 HIGH-MASKING AUTISM: The Hidden Struggle\n\n\"They look fine. They're falling apart inside.\"\n\nWhat is masking? ⬇️\n\nMasking is when autistic people suppress their natural traits to appear neurotypical.\n\n💔 THE COST:\n• Chronic exhaustion\n• Higher anxiety & depression\n• Loss of identity\n• Delayed diagnosis\n\nYou shouldn't have to perform to be accepted.\n\nDid this resonate? Share your experience 👇", igHashtags: "#highmaskingautism #autisticmasking #unmaskingautism #actuallyautistic #autisticwomen #latediagnosedautistic #autisticburnout #autism #neurodiversity #autismacceptance #autismcommunity", tiktokCaption: "🎭 High-masking autism: they look fine, but they're exhausted inside\n\nDid this resonate? 💜\n\n#highmaskingautism #unmaskingautism #actuallyautistic #fyp #autism" },
+        12: { title: 'Self-Care for Autism Parents', folder: 'day-12-selfcare', slides: 6, igCaption: "🧘‍♀️ SELF-CARE for autism parents that actually works\n\nNot bubble baths. REAL strategies ⬇️\n\n⏰ MICRO-BREAKS\nYou don't need an hour. Small moments add up.\n• 2 min alone in the bathroom\n• 5 min with headphones on\n• Deep breaths in the car\n• Coffee while it's still HOT\n\n🤝 FIND YOUR PEOPLE\nSupport groups aren't weakness — they're survival.\n\n🚫 SET BOUNDARIES\n\"No\" is a complete sentence.\n\n🙋 ASK FOR HELP\nThis is NOT weakness. It's wisdom.\n\nYou can't pour from an empty cup. 💕\n\nWhat's ONE thing you'll do for yourself today? 👇", igHashtags: "#autismparent #selfcare #autismmom #autismdad #parentburnout #caregiversupport #autism #specialneedsparenting #autismfamily #mentalhealthmatters #autismlife", tiktokCaption: "🧘‍♀️ Self-care for autism parents (not bubble baths — real stuff)\n\nWhat's your go-to? 💕\n\n#autism #selfcare #autismparent #fyp #parentburnout" },
+        13: { title: 'The ABA Controversy: What Parents Need to Know', folder: 'day-13-aba', slides: 6, igCaption: "🤔 THE ABA CONTROVERSY: What parents need to know\n\nIs ABA right for your child? Let's look at both sides ⬇️\n\n📋 WHAT IS ABA?\nApplied Behavior Analysis — the most researched autism intervention.\n\n⚠️ THE CONCERNS (from autistic adults):\n• Historical focus on compliance over wellbeing\n• Teaching masking, not acceptance\n• Suppressing harmless stims\n\n✓ THE OTHER SIDE:\n• Modern \"naturalistic\" ABA looks different\n• Some providers are neurodiversity-affirming\n• Can help with safety skills & communication\n\n❓ QUESTIONS TO ASK:\n• What's your approach to stimming?\n• How do you handle \"no\"?\n• Who sets the goals?\n\nYou know your child best. 💙\n\nWhat's your experience? Share (respectfully) 👇", igHashtags: "#ABA #ABAtherapy #autism #autismparenting #autismadvocacy #neurodiversity #actuallyautistic #autismcommunity #autismdebate #autismresources", tiktokCaption: "🤔 The ABA debate: here's both sides so you can decide\n\nWhat's your experience?\n\n#ABA #autism #autismparenting #fyp #neurodiversity" },
+        14: { title: 'Visual Supports That Actually Work', folder: 'day-14-visual', slides: 6, igCaption: "📋 VISUAL SUPPORTS that actually work!\n\nStop guessing. Start using these proven strategies ⬇️\n\n📅 VISUAL SCHEDULES\nShows what's happening and WHEN\n\n⏰ VISUAL TIMERS\nMakes time VISIBLE (not abstract)\n\n1️⃣➡️2️⃣ FIRST-THEN BOARDS\nSimple motivation tool\n\n🔘 CHOICE BOARDS\nEmpowers decision-making\n\nSmall tools, BIG impact! 💾\n\n📩 DM \"VISUALS\" for free templates\n\nWhich visual support works best for YOUR family? 👇", igHashtags: "#visualsupports #autism #autismparenting #autismresources #visualschedule #occupationaltherapy #autismmom #autismdad #autismtools #specialneeds #speechtherapy #AAC #autismtips", tiktokCaption: "📋 Visual supports that ACTUALLY work\n\nDM \"VISUALS\" for free templates! 💾\n\n#autism #visualsupports #autismparenting #fyp #autismtips" },
+        15: { title: 'Supporting Your Child Through Meltdowns', folder: 'day-15-meltdown', slides: 6, igCaption: "🌪️ Supporting your child through MELTDOWNS (during & after)\n\nIt's NOT a tantrum. Here's the difference ⬇️\n\n😤 TANTRUM:\n• Goal-oriented\n• Checks for audience\n• Can stop if need is met\n\n🌪️ MELTDOWN:\n• Overwhelm response\n• Neurological crisis\n• Can't just \"stop\"\n• NOT manipulation\n\n❌ DURING — DON'T:\n• Yell or raise voice\n• Demand eye contact\n• Say \"calm down\"\n\n✅ DURING — DO:\n• Stay calm (regulate yourself first)\n• Reduce sensory input\n• Give space if safe\n• Just BE there\n\n💙 AFTER:\n• Give recovery time\n• Don't lecture or punish\n• Reconnect when ready\n\nMeltdowns aren't misbehavior. They're a sign your child needs SUPPORT. 💙\n\n💾 Save this for when you need it\n\nWhat helps YOUR child? 👇", igHashtags: "#autism #meltdown #autismparenting #autismmeltdown #autismmom #autismdad #sensoryoverload #autismfamily #autismsupport #specialneeds #autismacceptance", tiktokCaption: "🌪️ Meltdown ≠ tantrum. Here's the difference + what to do\n\nWhat helps your child? 💙\n\n#autism #meltdown #autismparenting #fyp #autismsupport" },
+        // Days 16-60 abbreviated for space
+        16: { title: 'Feeding Challenges', folder: 'day-16-feeding', slides: 6 },
+        17: { title: 'Sleep Issues', folder: 'day-17-sleep', slides: 6 },
+        18: { title: 'Autism in Girls', folder: 'day-18-girls', slides: 6 },
+        19: { title: 'Community Spotlight', folder: 'day-19-community', slides: 4 },
+        20: { title: 'Potty Training', folder: 'day-20-potty', slides: 6 },
+        21: { title: 'AuDHD: Autism + ADHD', folder: 'day-21-audhd', slides: 6 },
+        22: { title: 'AAC and Communication', folder: 'day-22-aac', slides: 6 },
+        23: { title: 'School Accommodations', folder: 'day-23-accommodations', slides: 6 },
+        24: { title: 'Autism and Anxiety', folder: 'day-24-anxiety', slides: 6 },
+        25: { title: 'Events & Respite', folder: 'day-25-holidays-respite', slides: 6 },
+        26: { title: 'Week 3 Recap', folder: 'day-26-week3-recap', slides: 6 },
+        27: { title: 'Autism in Teens', folder: 'day-27-autism-teens', slides: 6 },
+        28: { title: 'Nature and Autism', folder: 'day-28-nature-autism', slides: 6 },
+        29: { title: 'Building Friendships', folder: 'day-29-building-friendships', slides: 6 },
+        30: { title: 'Late Diagnosis Adults', folder: 'day-30-late-diagnosis', slides: 6 },
+        31: { title: 'Glass Child Revisited', folder: 'day-31-glass-child', slides: 6 },
+        32: { title: 'Spring Weekend Activities', folder: 'day-32-weekend-spring', slides: 6 },
+        33: { title: 'April Reflection', folder: 'day-33-monthly-reflection', slides: 6 },
+        34: { title: 'After Autism Month', folder: 'day-34-transitioning', slides: 6 },
+        35: { title: 'Resource Toolkit', folder: 'day-35-resources-toolkit', slides: 7 },
+        36: { title: 'End of Autism Month', folder: 'day-36-end-autism-month-hero', slides: 7 },
+        37: { title: 'May Goals', folder: 'day-37-may-goals', slides: 5 },
+        38: { title: 'Summer Prep', folder: 'day-38-summer-prep', slides: 6 },
+        39: { title: 'Occupational Therapy', folder: 'day-39-therapy-ot', slides: 6 },
+        40: { title: 'Speech Therapy', folder: 'day-40-therapy-speech', slides: 6 },
+        41: { title: 'Physical Therapy', folder: 'day-41-physical-therapy', slides: 6 },
+        42: { title: 'Insurance Coverage', folder: 'day-42-insurance-coverage', slides: 6 },
+        43: { title: 'Extended Family Education', folder: 'day-43-family-education', slides: 6 },
+        44: { title: 'Marriage & Partnership', folder: 'day-44-marriage-autism', slides: 6 },
+        45: { title: 'Self-Care Deep Dive', folder: 'day-45-self-care', slides: 6 },
+        46: { title: 'Support System', folder: 'day-46-support-system', slides: 6 },
+        47: { title: 'Summer Camp Guide', folder: 'day-47-summer-camps', slides: 6 },
+        48: { title: 'Travel with Autism', folder: 'day-48-travel-autism', slides: 6 },
+        49: { title: 'ESY & Year-Round School', folder: 'day-49-year-round-school', slides: 6 },
+        50: { title: 'Building Independence', folder: 'day-50-building-independence', slides: 6 },
+        51: { title: 'Sensory Deep Dive', folder: 'day-51-sensory-deep-dive', slides: 6 },
+        52: { title: 'Executive Function', folder: 'day-52-executive-function', slides: 6 },
+        53: { title: 'Autism & Technology', folder: 'day-53-autism-technology', slides: 6 },
+        54: { title: 'Transitioning to Adulthood', folder: 'day-54-adulthood-transition', slides: 6 },
+        55: { title: 'Employment & Autism', folder: 'day-55-employment-autism', slides: 6 },
+        56: { title: 'Self-Advocacy Skills', folder: 'day-56-self-advocacy', slides: 6 },
+        57: { title: 'Acceptance at Work/School', folder: 'day-57-acceptance-work-school', slides: 6 },
+        58: { title: 'Mental Health & Autism', folder: 'day-58-mental-health', slides: 6 },
+        59: { title: 'Autistic Joy', folder: 'day-59-autistic-joy', slides: 6 },
+        60: { title: 'The Journey Continues', folder: 'day-60-journey-continues', slides: 7 }
       };
       
       populateDayGrid();
@@ -1758,10 +1829,21 @@
     
     function openDaySelector() {
       document.getElementById('dayModal').classList.add('active');
+      document.getElementById('daySearch').value = '';
+      filterDays();
     }
     
     function closeDaySelector() {
       document.getElementById('dayModal').classList.remove('active');
+    }
+    
+    function filterDays() {
+      const search = document.getElementById('daySearch').value.toLowerCase();
+      document.querySelectorAll('.day-card').forEach(card => {
+        const title = card.querySelector('.day-title').textContent.toLowerCase();
+        const num = card.querySelector('.day-num').textContent.toLowerCase();
+        card.style.display = (title.includes(search) || num.includes(search)) ? 'block' : 'none';
+      });
     }
     
     async function loadDayContent(dayNum) {
@@ -1779,7 +1861,7 @@
       slides = [];
       for (let i = 0; i < data.slides; i++) {
         slides.push({
-          title: `Slide ${i + 1}`,
+          title: i === 0 ? data.title : `Slide ${i + 1}`,
           subtitle: 'Content loaded from calendar'
         });
       }
@@ -1788,11 +1870,41 @@
       document.getElementById('mainTitle').value = data.title;
       document.getElementById('slideNumber').value = `1 of ${data.slides}`;
       
+      // Populate captions if available
+      if (data.igCaption) {
+        document.getElementById('captionPreview').textContent = data.igCaption + '\n\n' + (data.igHashtags || '');
+      }
+      if (data.tiktokCaption) {
+        document.getElementById('tiktokCaption').textContent = data.tiktokCaption;
+      }
+      
+      // Try to detect template type from day content
+      const title = data.title.toLowerCase();
+      if (title.includes('myth') || title.includes('wrong')) {
+        setTemplateType('myth');
+      } else if (title.includes('vs') || title.includes('compare')) {
+        setTemplateType('vs');
+      } else if (title.includes('list') || title.includes('hack') || title.includes('tip') || title.includes('iep') || title.includes('accommodation')) {
+        setTemplateType('list');
+      } else if (data.slides === 1 || title.includes('cta')) {
+        setTemplateType('cta');
+      } else {
+        setTemplateType('cover');
+      }
+      
       updateSlideTabs();
       renderTemplate();
       
       showLoading(false);
       showToast(`Loaded Day ${dayNum}: ${data.title}`);
+    }
+    
+    function setTemplateType(type) {
+      currentTemplate = type;
+      document.querySelectorAll('.template-card').forEach(c => {
+        c.classList.toggle('active', c.dataset.template === type);
+      });
+      updateEditorForTemplate();
     }
     
     // ==================== UI HELPERS ====================
