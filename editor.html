@@ -38,6 +38,33 @@
       font-weight: 700;
     }
     .header h1 span { color: #E8B86D; }
+    
+    /* Size Indicator */
+    .size-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(74,144,164,0.2);
+      border: 1px solid rgba(74,144,164,0.3);
+      padding: 8px 16px;
+      border-radius: 8px;
+    }
+    .size-indicator .size-label {
+      font-size: 14px;
+    }
+    .size-indicator .size-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: #4A90A4;
+    }
+    .size-indicator .size-ratio {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
     .header-actions {
       display: flex;
       gap: 10px;
@@ -565,6 +592,14 @@
         padding: 10px;
       }
       .header h1 { font-size: 16px; }
+      .size-indicator { 
+        padding: 6px 10px;
+        order: -1;
+        width: 100%;
+        justify-content: center;
+      }
+      .size-indicator .size-value { font-size: 12px; }
+      .size-indicator .size-ratio { font-size: 10px; padding: 3px 8px; }
       .header-actions {
         flex-wrap: wrap;
         justify-content: center;
@@ -645,6 +680,11 @@
     <header class="header">
       <button class="mobile-toggle" onclick="toggleMobileSidebar('left')">☰ Menu</button>
       <h1>Spectrum <span>Unlocked</span> Editor</h1>
+      <div class="size-indicator" id="sizeIndicator">
+        <span class="size-label">📐</span>
+        <span class="size-value" id="sizeValue">1080 × 1350</span>
+        <span class="size-ratio" id="sizeRatio">4:5</span>
+      </div>
       <div class="header-actions">
         <button class="btn btn-secondary" onclick="exportSlide()">📥 Export PNG</button>
         <button class="btn btn-secondary" onclick="exportAllSlides()">📦 Export All</button>
@@ -962,6 +1002,7 @@
       renderTemplateButtons();
       renderDayList();
       renderSlideTabs();
+      updateSizeIndicator();
       
       // Check for URL params
       const urlParams = new URLSearchParams(window.location.search);
@@ -2236,6 +2277,9 @@
         btn.classList.toggle('active', btn.dataset.size === `${width}x${height}`);
       });
       
+      // Update size indicator
+      updateSizeIndicator();
+      
       const maxDisplayHeight = window.innerHeight - 180;
       const maxDisplayWidth = window.innerWidth - 620;
       const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, 0.6);
@@ -2410,6 +2454,21 @@
     }
     
     // ============ UTILITIES ============
+    function updateSizeIndicator() {
+      const valueEl = document.getElementById('sizeValue');
+      const ratioEl = document.getElementById('sizeRatio');
+      
+      if (valueEl) valueEl.textContent = `${canvasWidth} × ${canvasHeight}`;
+      
+      if (ratioEl) {
+        let ratio = '4:5';
+        if (canvasWidth === 1080 && canvasHeight === 1920) ratio = '9:16';
+        else if (canvasWidth === 1080 && canvasHeight === 1080) ratio = '1:1';
+        else if (canvasWidth === 1080 && canvasHeight === 1350) ratio = '4:5';
+        ratioEl.textContent = ratio;
+      }
+    }
+    
     function rgbToHex(color) {
       if (!color) return '#ffffff';
       if (color.startsWith('#')) return color;
