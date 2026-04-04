@@ -2,6 +2,30 @@
 
 ## 2026-04-04
 
+### Added - Comprehensive Fabric.js Template Editor
+**Commits:** 7177b5d, 71c6bdb
+
+**Changes:**
+- Created full template editor at `/editor.html`
+- 8 template types: Cover, Myth-Buster, Checklist, VS Compare, Grid, CTA, Stats, Quote
+- Click-to-edit text directly on canvas
+- Dynamic list items (add/remove)
+- Multi-slide carousel support (1-15+ slides)
+- Color theme customization (background + accent)
+- Canvas size options (Instagram 1080×1350, TikTok 1080×1920, Square 1080×1080)
+- High-quality PNG export (single + all slides)
+- Full 60-day calendar data integration
+- Search/filter days by title
+- Caption copy buttons (Instagram + TikTok)
+- Auto-detect template type from content
+- Zoom controls
+- Responsive mobile view with sidebar toggles
+
+**Files affected:**
+- `editor.html` (new)
+
+---
+
 ### Added - Download functionality for 60-day calendar graphics
 **Commit:** 87e86f1
 
