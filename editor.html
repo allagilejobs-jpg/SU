@@ -631,9 +631,12 @@
       const slideNumPadded = slideNum.toString().padStart(2, '0');
       const htmlUrl = `content/${folder}/slide-${slideNumPadded}-${slideName}.html`;
       
+      // Show loading state
+      document.querySelector('.header h1').innerHTML = `<span style="color:#4A90A4">⏳ Loading Day ${dayNum}, Slide ${slideNum}...</span>`;
+      
       try {
         const response = await fetch(htmlUrl);
-        if (!response.ok) throw new Error('HTML not found');
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${htmlUrl}`);
         const html = await response.text();
         
         // Parse HTML to extract content
@@ -642,6 +645,7 @@
         
         // Detect template type from slide name or content
         const templateType = detectTemplateType(slideName, doc);
+        console.log(`Detected template type: ${templateType} for slide: ${slideName}`);
         
         // Load the appropriate template first
         loadTemplate(templateType);
@@ -650,16 +654,29 @@
         await applyContentFromHTML(doc, templateType);
         
         // Update UI to show what's loaded
-        document.querySelector('.header h1').innerHTML = `Editing: <span>Day ${dayNum} - Slide ${slideNum}</span>`;
+        document.querySelector('.header h1').innerHTML = `Editing: <span>Day ${dayNum} Slide ${slideNum}</span> <small style="opacity:0.5">(${templateType})</small>`;
+        
+        // Update slide tab name
+        slides[currentSlide].name = `Day ${dayNum} S${slideNum}`;
+        renderSlideTabs();
         
         console.log(`✅ Loaded Day ${dayNum}, Slide ${slideNum} (${templateType} template)`);
         
       } catch (err) {
-        console.warn('Could not load HTML template:', err);
-        // Fall back to detected template type
+        console.warn('Could not load HTML template:', err.message);
+        
+        // Fall back to detected template type based on slide name only
         const templateType = detectTemplateType(slideName, null);
         loadTemplate(templateType);
-        alert(`Loaded ${templateType} template. Edit the placeholder content.`);
+        
+        // Update UI
+        document.querySelector('.header h1').innerHTML = `New: <span>Day ${dayNum} Slide ${slideNum}</span> <small style="opacity:0.5">(${templateType})</small>`;
+        slides[currentSlide].name = `Day ${dayNum} S${slideNum}`;
+        renderSlideTabs();
+        
+        // Show helpful message
+        const msg = `Could not load original HTML (${err.message}).\n\nLoaded "${templateType}" template instead.\nEdit the placeholder content manually.`;
+        alert(msg);
       }
     }
     
@@ -673,18 +690,29 @@
       if (name.includes('vs') || name.includes('compare')) return 'vs';
       if (name.includes('stat') || name.includes('data')) return 'stats';
       if (name.includes('quote')) return 'quote';
-      if (name.includes('checklist') || name.includes('list')) return 'checklist';
-      if (name.includes('tip') || name.includes('hack')) return 'tipcards';
-      if (name.includes('sign') || name.includes('warning')) return 'signcards';
-      if (name.includes('grid')) return 'grid';
+      if (name.includes('checklist') || name.includes('list') || name.includes('sensory') || name.includes('academic') || name.includes('communication') || name.includes('social')) return 'checklist';
+      if (name.includes('sign') || name.includes('warning') || name.includes('dont') || name.includes('cost')) return 'signcards';
+      if (name.includes('tip') || name.includes('hack') || name === 'do' || name === 'dos' || name.includes('help') || name.includes('strategies') || name.includes('after')) return 'tipcards';
+      if (name.includes('grid') || name.includes('moments')) return 'grid';
       
-      // If doc available, detect from HTML content
+      // If doc available, detect from HTML content/classes
       if (doc) {
-        const bodyText = doc.body?.innerHTML || '';
-        if (bodyText.includes('MYTH') || bodyText.includes('TRUTH')) return 'myth';
-        if (bodyText.includes('✓') || bodyText.includes('checklist')) return 'checklist';
-        if (bodyText.includes('VS') || bodyText.includes('vs.')) return 'vs';
-        if (bodyText.includes('%') && /\d{2,3}%/.test(bodyText)) return 'stats';
+        const body = doc.body;
+        if (!body) return 'contentbox';
+        
+        // Check for specific CSS classes
+        if (body.querySelector('.myth-text, .myth-badge, .truth-text')) return 'myth';
+        if (body.querySelector('.vs-box, .vs-item, .vs-label')) return 'vs';
+        if (body.querySelector('.cta-box, .cta-text, .action-item')) return 'cta';
+        if (body.querySelector('.do-item, .dont-item, .dos, .donts')) return 'vs';
+        if (body.querySelector('.afters, .after-item')) return 'tipcards';
+        
+        // Check text content
+        const bodyText = body.innerHTML || '';
+        if (bodyText.includes('❌ MYTH') || bodyText.includes('✅ TRUTH') || bodyText.includes('The Truth')) return 'myth';
+        if (bodyText.includes('✓') && bodyText.split('✓').length > 3) return 'checklist';
+        if (/VS|vs\./i.test(bodyText) && body.querySelector('.tantrum, .meltdown')) return 'vs';
+        if (/\d{2,3}%/.test(bodyText)) return 'stats';
       }
       
       // Default to content box for general content slides
@@ -696,45 +724,86 @@
       const body = doc.body;
       if (!body) return;
       
-      // Get all text elements from the HTML
-      const textElements = [];
+      // Extract content based on actual HTML classes used
+      const extracted = {
+        badge: '',
+        title: '',
+        subtitle: '',
+        mythText: '',
+        truthText: '',
+        items: [],
+        ctaText: '',
+        footer: ''
+      };
       
-      // Extract headings
-      body.querySelectorAll('h1, h2, h3, .title, .heading').forEach(el => {
-        textElements.push({ type: 'heading', text: el.textContent.trim() });
-      });
+      // Extract by common classes used in templates
+      const badge = body.querySelector('.badge, .myth-badge, .truth-badge');
+      if (badge) extracted.badge = badge.textContent.trim();
       
-      // Extract paragraphs
-      body.querySelectorAll('p, .text, .content, .body').forEach(el => {
-        textElements.push({ type: 'body', text: el.textContent.trim() });
-      });
+      const title = body.querySelector('.main-title, .title, h1');
+      if (title) extracted.title = title.textContent.trim();
+      
+      const subtitle = body.querySelector('.subtitle, .hook, .question');
+      if (subtitle) extracted.subtitle = subtitle.textContent.trim();
+      
+      const mythText = body.querySelector('.myth-text');
+      if (mythText) extracted.mythText = mythText.textContent.trim().replace(/[""]/g, '"');
+      
+      const truthText = body.querySelector('.truth-text, .text');
+      if (truthText) extracted.truthText = truthText.textContent.trim();
       
       // Extract list items
-      body.querySelectorAll('li, .item, .list-item').forEach(el => {
-        textElements.push({ type: 'list', text: el.textContent.trim() });
+      body.querySelectorAll('.do-item, .dont-item, .after-item, .action-item, .vs-item li, li').forEach(el => {
+        const text = el.textContent.trim();
+        if (text && text.length > 2) extracted.items.push(text);
       });
+      
+      const ctaText = body.querySelector('.cta-text, .follow-text');
+      if (ctaText) extracted.ctaText = ctaText.textContent.trim();
+      
+      const handle = body.querySelector('.handle');
+      if (handle) extracted.footer = handle.textContent.trim();
+      
+      console.log('Extracted content:', extracted);
       
       // Now update canvas objects with extracted content
       const canvasObjects = canvas.getObjects();
-      let headingIndex = 0;
-      let bodyIndex = 0;
+      let itemIndex = 0;
       
       canvasObjects.forEach(obj => {
-        if (obj.type === 'i-text' || obj.type === 'text') {
-          // Try to match and replace placeholder text
-          const fontSize = obj.fontSize || 24;
-          
-          // Large text = headings
-          if (fontSize >= 40 && textElements.filter(t => t.type === 'heading')[headingIndex]) {
-            const content = textElements.filter(t => t.type === 'heading')[headingIndex];
-            obj.set('text', content.text);
-            headingIndex++;
+        if (obj.type !== 'i-text' && obj.type !== 'text') return;
+        
+        const currentText = obj.text || '';
+        const fontSize = obj.fontSize || 24;
+        const isItalic = obj.fontStyle === 'italic';
+        
+        // Match by content patterns
+        if (currentText.includes('MYTH') && extracted.badge) {
+          obj.set('text', extracted.badge);
+        }
+        else if (fontSize >= 60 && extracted.title) {
+          // Main title - large text
+          obj.set('text', extracted.title);
+        }
+        else if (currentText.includes('Autistic people') || currentText.includes('"') || isItalic) {
+          // Myth quote text
+          if (extracted.mythText) obj.set('text', extracted.mythText);
+        }
+        else if (currentText.includes('TRUTH') || currentText.includes('Truth')) {
+          // Keep as is or update badge
+        }
+        else if (fontSize >= 20 && fontSize < 40 && !currentText.includes('@') && !currentText.includes('Swipe')) {
+          // Body text
+          if (extracted.truthText && !obj._contentApplied) {
+            obj.set('text', extracted.truthText);
+            obj._contentApplied = true;
           }
-          // Medium/small text = body
-          else if (fontSize < 40 && fontSize >= 20 && textElements.filter(t => t.type === 'body')[bodyIndex]) {
-            const content = textElements.filter(t => t.type === 'body')[bodyIndex];
-            obj.set('text', content.text);
-            bodyIndex++;
+        }
+        else if (currentText.includes('Click to edit') || currentText.includes('tip')) {
+          // List items
+          if (extracted.items[itemIndex]) {
+            obj.set('text', extracted.items[itemIndex]);
+            itemIndex++;
           }
         }
       });
