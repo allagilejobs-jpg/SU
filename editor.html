@@ -8,7 +8,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
     :root {
       --bg-primary: #1a1a2e;
       --bg-secondary: #16213e;
@@ -17,1917 +16,1295 @@
       --accent-gold: #E8B86D;
       --accent-green: #27AE60;
       --accent-red: #E74C3C;
-      --text-primary: #ffffff;
-      --text-secondary: rgba(255,255,255,0.7);
-      --border-color: rgba(255,255,255,0.1);
+      --text-primary: #fff;
+      --text-muted: rgba(255,255,255,0.6);
+      --border: rgba(255,255,255,0.1);
     }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; }
     
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      min-height: 100vh;
-    }
+    /* Nav */
+    .nav { background: #0f0f1a; padding: 12px 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+    .nav a { color: #888; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; font-size: 13px; transition: all 0.2s; }
+    .nav a:hover, .nav a.active { background: var(--accent-teal); color: #fff; }
     
-    /* Navigation */
-    .main-nav {
-      background: #0f0f1a;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .main-nav a {
-      color: #aaa;
-      text-decoration: none;
-      padding: 8px 18px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 13px;
-      transition: all 0.2s;
-    }
-    .main-nav a:hover, .main-nav a.active {
-      background: var(--accent-teal);
-      color: white;
-    }
+    /* Layout */
+    .app { display: grid; grid-template-columns: 260px 1fr 280px; height: calc(100vh - 52px); }
+    @media (max-width: 1100px) { .app { grid-template-columns: 1fr; } .panel { display: none; } }
     
-    /* Editor Layout */
-    .editor-container {
-      display: grid;
-      grid-template-columns: 280px 1fr 320px;
-      min-height: calc(100vh - 60px);
-    }
-    
-    @media (max-width: 1200px) {
-      .editor-container {
-        grid-template-columns: 1fr;
-      }
-      .sidebar-left, .sidebar-right {
-        display: none;
-      }
-      .sidebar-left.mobile-open, .sidebar-right.mobile-open {
-        display: block;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 200;
-        overflow-y: auto;
-      }
-    }
-    
-    /* Sidebars */
-    .sidebar-left, .sidebar-right {
-      background: var(--bg-secondary);
-      border-right: 1px solid var(--border-color);
-      overflow-y: auto;
-      max-height: calc(100vh - 60px);
-    }
-    .sidebar-right {
-      border-right: none;
-      border-left: 1px solid var(--border-color);
-    }
-    
-    .sidebar-section {
-      padding: 20px;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .sidebar-section h3 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--accent-gold);
-      margin-bottom: 15px;
-    }
-    
-    /* Template Selector */
-    .template-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .template-card {
-      background: var(--bg-tertiary);
-      border: 2px solid transparent;
-      border-radius: 10px;
-      padding: 15px 10px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-size: 12px;
-    }
-    .template-card:hover {
-      border-color: var(--accent-teal);
-    }
-    .template-card.active {
-      border-color: var(--accent-gold);
-      background: rgba(232, 184, 109, 0.1);
-    }
-    .template-card .icon {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
+    .panel { background: var(--bg-secondary); overflow-y: auto; border-right: 1px solid var(--border); }
+    .panel:last-child { border-right: none; border-left: 1px solid var(--border); }
+    .panel-section { padding: 16px; border-bottom: 1px solid var(--border); }
+    .panel-section h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-gold); margin-bottom: 12px; }
     
     /* Canvas Area */
-    .canvas-area {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #0a0a15;
-      overflow: auto;
-    }
+    .canvas-area { background: #0a0a14; display: flex; flex-direction: column; align-items: center; padding: 20px; overflow: auto; }
+    .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; justify-content: center; }
+    .btn { padding: 10px 18px; border: none; border-radius: 8px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary { background: var(--accent-teal); color: #fff; }
+    .btn-success { background: var(--accent-green); color: #fff; }
+    .btn-gold { background: var(--accent-gold); color: #1a1a2e; }
+    .btn-secondary { background: var(--bg-tertiary); color: #fff; }
+    .btn-danger { background: var(--accent-red); color: #fff; }
+    .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
     
-    .canvas-wrapper {
-      background: #111;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    }
+    .canvas-wrap { background: #111; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    #c { border-radius: 8px; }
     
-    .canvas-controls {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+    /* Template Grid */
+    .tpl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .tpl-card { background: var(--bg-tertiary); border: 2px solid transparent; border-radius: 8px; padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.15s; font-size: 11px; }
+    .tpl-card:hover { border-color: var(--accent-teal); }
+    .tpl-card.active { border-color: var(--accent-gold); background: rgba(232,184,109,0.1); }
+    .tpl-card .icon { font-size: 24px; margin-bottom: 6px; }
     
-    /* Buttons */
-    .btn {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .btn-primary {
-      background: var(--accent-teal);
-      color: white;
-    }
-    .btn-primary:hover {
-      background: #3d7a8c;
-    }
-    .btn-success {
-      background: var(--accent-green);
-      color: white;
-    }
-    .btn-success:hover {
-      background: #229954;
-    }
-    .btn-gold {
-      background: var(--accent-gold);
-      color: var(--bg-primary);
-    }
-    .btn-gold:hover {
-      background: #d4a84b;
-    }
-    .btn-secondary {
-      background: var(--bg-tertiary);
-      color: white;
-    }
-    .btn-secondary:hover {
-      background: #1a4a70;
-    }
-    .btn-danger {
-      background: var(--accent-red);
-      color: white;
-    }
+    /* Slides */
+    .slides { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .slide-btn { width: 34px; height: 34px; border-radius: 6px; background: var(--bg-tertiary); border: 2px solid transparent; color: #fff; font-weight: 600; font-size: 12px; cursor: pointer; }
+    .slide-btn:hover { border-color: var(--accent-teal); }
+    .slide-btn.active { background: var(--accent-teal); }
+    .slide-btn.add { background: transparent; border: 2px dashed var(--border); }
+    .slide-btn.add:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
     
     /* Form Controls */
-    .form-group {
-      margin-bottom: 15px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 12px;
-      margin-bottom: 6px;
-      opacity: 0.8;
-    }
-    .form-control {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      background: var(--bg-tertiary);
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      font-size: 13px;
-    }
-    .form-control:focus {
-      outline: none;
-      border-color: var(--accent-teal);
-    }
-    textarea.form-control {
-      min-height: 80px;
-      resize: vertical;
-    }
-    select.form-control {
-      cursor: pointer;
-    }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-size: 11px; margin-bottom: 4px; color: var(--text-muted); }
+    .form-control { width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg-tertiary); color: #fff; font-family: 'Poppins', sans-serif; font-size: 12px; }
+    .form-control:focus { outline: none; border-color: var(--accent-teal); }
+    textarea.form-control { min-height: 60px; resize: vertical; }
     
-    /* Color Picker */
-    .color-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .color-swatch {
-      width: 32px;
-      height: 32px;
-      border-radius: 6px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: all 0.2s;
-    }
-    .color-swatch:hover, .color-swatch.active {
-      border-color: white;
-      transform: scale(1.1);
-    }
-    .color-swatch.custom {
-      background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
-      position: relative;
-    }
-    .color-input {
-      position: absolute;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-    }
+    /* Colors */
+    .color-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .swatch { width: 28px; height: 28px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
+    .swatch:hover, .swatch.active { border-color: #fff; transform: scale(1.1); }
+    .swatch.custom { background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); position: relative; overflow: hidden; }
+    .swatch.custom input { position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
     
-    /* Slide Tabs */
-    .slide-tabs {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 15px;
-    }
-    .slide-tab {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--bg-tertiary);
-      border: 2px solid transparent;
-      color: white;
-      font-weight: 600;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .slide-tab:hover {
-      border-color: var(--accent-teal);
-    }
-    .slide-tab.active {
-      background: var(--accent-teal);
-      border-color: var(--accent-teal);
-    }
-    .slide-tab.add {
-      background: transparent;
-      border: 2px dashed var(--border-color);
-    }
-    .slide-tab.add:hover {
-      border-color: var(--accent-gold);
-      color: var(--accent-gold);
-    }
+    /* List Items */
+    .list-row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
+    .list-row input { flex: 1; }
+    .list-row .del { width: 28px; height: 28px; border-radius: 4px; background: var(--bg-tertiary); border: none; color: #fff; cursor: pointer; font-size: 14px; }
+    .list-row .del:hover { background: var(--accent-red); }
     
-    /* List Items Editor */
-    .list-items {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .list-item-row {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-    .list-item-row input {
-      flex: 1;
-    }
-    .list-item-row .btn-icon {
-      width: 32px;
-      height: 32px;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      border-radius: 6px;
-      background: var(--bg-tertiary);
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-    .list-item-row .btn-icon:hover {
-      background: var(--accent-red);
-    }
-    .list-item-row .btn-icon.move {
-      cursor: grab;
-    }
-    .list-item-row .btn-icon.move:hover {
-      background: var(--accent-teal);
-    }
+    /* Caption */
+    .caption-box { background: var(--bg-tertiary); border-radius: 8px; padding: 12px; margin-top: 12px; }
+    .caption-box h4 { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .caption-box pre { font-family: 'Poppins', sans-serif; font-size: 11px; white-space: pre-wrap; word-wrap: break-word; max-height: 120px; overflow-y: auto; line-height: 1.5; color: var(--text-muted); }
+    .copy-btn { padding: 4px 8px; font-size: 10px; }
     
-    /* Caption Box */
-    .caption-box {
-      background: var(--bg-tertiary);
-      border-radius: 10px;
-      padding: 15px;
-      margin-top: 15px;
-    }
-    .caption-box h4 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      color: var(--accent-gold);
-    }
-    .caption-box pre {
-      font-family: 'Poppins', sans-serif;
-      font-size: 12px;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      max-height: 150px;
-      overflow-y: auto;
-      line-height: 1.6;
-    }
+    /* Modal */
+    .modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-bg.open { display: flex; }
+    .modal { background: var(--bg-secondary); border-radius: 16px; max-width: 900px; width: 100%; max-height: 85vh; overflow: hidden; }
+    .modal-head { padding: 16px 20px; background: var(--bg-tertiary); display: flex; justify-content: space-between; align-items: center; }
+    .modal-head h2 { font-size: 18px; }
+    .modal-close { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; color: #fff; font-size: 18px; cursor: pointer; }
+    .modal-body { padding: 16px 20px; overflow-y: auto; max-height: calc(85vh - 60px); }
+    .day-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+    .day-card { background: var(--bg-tertiary); border: 2px solid transparent; border-radius: 8px; padding: 12px; cursor: pointer; transition: all 0.15s; }
+    .day-card:hover { border-color: var(--accent-teal); }
+    .day-card .num { font-size: 20px; font-weight: 700; color: var(--accent-gold); }
+    .day-card .title { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
     
-    /* Day Selector Modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.8);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .modal-overlay.active {
-      display: flex;
-    }
-    .modal {
-      background: var(--bg-secondary);
-      border-radius: 16px;
-      max-width: 900px;
-      width: 100%;
-      max-height: 80vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .modal-header {
-      padding: 20px;
-      background: var(--bg-tertiary);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .modal-header h2 {
-      font-family: 'Playfair Display', serif;
-    }
-    .modal-close {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-    }
-    .modal-body {
-      padding: 20px;
-      overflow-y: auto;
-    }
-    .day-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 12px;
-    }
-    .day-card {
-      background: var(--bg-tertiary);
-      border: 2px solid transparent;
-      border-radius: 10px;
-      padding: 15px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .day-card:hover {
-      border-color: var(--accent-teal);
-    }
-    .day-card .day-num {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--accent-gold);
-    }
-    .day-card .day-title {
-      font-size: 12px;
-      opacity: 0.8;
-      margin-top: 5px;
-    }
+    /* Toast */
+    .toast { position: fixed; bottom: 20px; right: 20px; background: var(--accent-green); color: #fff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 13px; transform: translateY(100px); opacity: 0; transition: all 0.3s; z-index: 2000; }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.error { background: var(--accent-red); }
     
-    /* Zoom Controls */
-    .zoom-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: auto;
-    }
-    .zoom-controls button {
-      width: 32px;
-      height: 32px;
-      border-radius: 6px;
-      background: var(--bg-tertiary);
-      border: none;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .zoom-controls span {
-      font-size: 13px;
-      min-width: 50px;
-      text-align: center;
-    }
+    /* Zoom */
+    .zoom { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+    .zoom button { width: 28px; height: 28px; border-radius: 4px; background: var(--bg-tertiary); border: none; color: #fff; cursor: pointer; font-size: 16px; }
+    .zoom span { font-size: 12px; min-width: 40px; text-align: center; }
     
-    /* Toast Notifications */
-    .toast {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--accent-green);
-      color: white;
-      padding: 15px 25px;
-      border-radius: 10px;
-      font-weight: 600;
-      transform: translateY(100px);
-      opacity: 0;
-      transition: all 0.3s;
-      z-index: 2000;
-    }
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    .toast.error {
-      background: var(--accent-red);
-    }
+    /* Selection info */
+    .sel-info { background: rgba(232,184,109,0.1); border: 1px solid var(--accent-gold); border-radius: 8px; padding: 12px; margin-bottom: 12px; font-size: 11px; }
+    .sel-info strong { color: var(--accent-gold); }
     
-    /* Loading */
-    .loading {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.8);
-      z-index: 3000;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .loading.show {
-      display: flex;
-    }
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 4px solid var(--border-color);
-      border-top-color: var(--accent-gold);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    
-    /* Mobile Toggle */
-    .mobile-toggle {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 150;
-    }
-    @media (max-width: 1200px) {
-      .mobile-toggle {
-        display: flex;
-        gap: 10px;
-      }
-    }
+    /* Instructions */
+    .instructions { background: rgba(74,144,164,0.1); border-radius: 8px; padding: 12px; font-size: 11px; line-height: 1.6; color: var(--text-muted); }
+    .instructions strong { color: var(--accent-teal); }
   </style>
 </head>
 <body>
-  <nav class="main-nav">
+  <nav class="nav">
     <a href="index.html">🏠 Home</a>
-    <a href="calendar-60day.html">📅 60-Day Calendar</a>
+    <a href="calendar-60day.html">📅 60-Day</a>
     <a href="content/">📦 Content</a>
     <a href="editor.html" class="active">✨ Editor</a>
   </nav>
 
-  <div class="editor-container">
-    <!-- Left Sidebar - Templates -->
-    <div class="sidebar-left" id="sidebarLeft">
-      <div class="sidebar-section">
-        <h3>📋 Template Type</h3>
-        <div class="template-grid" id="templateGrid">
-          <div class="template-card active" data-template="cover">
-            <div class="icon">🎬</div>
-            <div>Cover</div>
-          </div>
-          <div class="template-card" data-template="myth">
-            <div class="icon">❌</div>
-            <div>Myth Buster</div>
-          </div>
-          <div class="template-card" data-template="list">
-            <div class="icon">✓</div>
-            <div>Checklist</div>
-          </div>
-          <div class="template-card" data-template="vs">
-            <div class="icon">⚔️</div>
-            <div>VS Compare</div>
-          </div>
-          <div class="template-card" data-template="grid">
-            <div class="icon">🔲</div>
-            <div>Grid Cards</div>
-          </div>
-          <div class="template-card" data-template="cta">
-            <div class="icon">📢</div>
-            <div>CTA Slide</div>
-          </div>
-          <div class="template-card" data-template="stats">
-            <div class="icon">📊</div>
-            <div>Stats</div>
-          </div>
-          <div class="template-card" data-template="quote">
-            <div class="icon">💬</div>
-            <div>Quote</div>
-          </div>
+  <div class="app">
+    <!-- LEFT PANEL -->
+    <div class="panel">
+      <div class="panel-section">
+        <h3>📋 Template</h3>
+        <div class="tpl-grid" id="tplGrid"></div>
+      </div>
+      <div class="panel-section">
+        <h3>📅 Load Content</h3>
+        <button class="btn btn-gold" style="width:100%" onclick="openModal()">📂 Select Day</button>
+      </div>
+      <div class="panel-section">
+        <h3>🎨 Slides</h3>
+        <div class="slides" id="slideTabs"></div>
+        <div style="display:flex;gap:6px">
+          <button class="btn btn-secondary" style="flex:1" onclick="addSlide()">+ Add</button>
+          <button class="btn btn-danger" style="flex:1" onclick="removeSlide()">− Remove</button>
         </div>
       </div>
-      
-      <div class="sidebar-section">
-        <h3>📅 Load from Calendar</h3>
-        <button class="btn btn-gold" onclick="openDaySelector()" style="width:100%">
-          📂 Select Day Content
-        </button>
+      <div class="panel-section">
+        <h3>📐 Canvas Size</h3>
+        <select class="form-control" id="canvasSize" onchange="resizeCanvas()">
+          <option value="1080x1350">Instagram (1080×1350)</option>
+          <option value="1080x1920">Stories/TikTok (1080×1920)</option>
+          <option value="1080x1080">Square (1080×1080)</option>
+        </select>
       </div>
-      
-      <div class="sidebar-section">
-        <h3>🎨 Carousel Slides</h3>
-        <div class="slide-tabs" id="slideTabs">
-          <button class="slide-tab active" data-slide="0">1</button>
-          <button class="slide-tab add" onclick="addSlide()">+</button>
-        </div>
-        <button class="btn btn-secondary" onclick="removeCurrentSlide()" style="width:100%; margin-top:10px">
-          🗑️ Remove Current Slide
-        </button>
+      <div class="panel-section instructions">
+        <strong>💡 How to Edit:</strong><br>
+        • <strong>Double-click</strong> text to edit inline<br>
+        • <strong>Click</strong> to select, then drag<br>
+        • <strong>Delete key</strong> removes selected<br>
+        • Use right panel to change colors/fonts
       </div>
     </div>
 
-    <!-- Main Canvas Area -->
+    <!-- CANVAS AREA -->
     <div class="canvas-area">
-      <div class="canvas-controls">
-        <button class="btn btn-success" onclick="downloadPNG()">
-          ⬇️ Download PNG
-        </button>
-        <button class="btn btn-primary" onclick="downloadAllSlides()">
-          📦 Download All Slides
-        </button>
-        <button class="btn btn-secondary" onclick="copyCaption()">
-          📋 Copy Caption
-        </button>
-        <button class="btn btn-secondary" onclick="resetCanvas()">
-          🔄 Reset
-        </button>
-        <div class="zoom-controls">
+      <div class="toolbar">
+        <button class="btn btn-success" onclick="downloadPNG()">⬇️ Download PNG</button>
+        <button class="btn btn-primary" onclick="downloadAllSlides()">📦 All Slides</button>
+        <button class="btn btn-secondary" onclick="addText()">T+ Add Text</button>
+        <button class="btn btn-secondary" onclick="deleteSelected()">🗑️ Delete</button>
+        <button class="btn btn-secondary" onclick="resetSlide()">🔄 Reset</button>
+        <div class="zoom">
           <button onclick="zoomOut()">−</button>
-          <span id="zoomLevel">50%</span>
+          <span id="zoomLvl">50%</span>
           <button onclick="zoomIn()">+</button>
         </div>
       </div>
-      
-      <div class="canvas-wrapper" id="canvasWrapper">
-        <canvas id="fabricCanvas"></canvas>
+      <div class="canvas-wrap" id="canvasWrap">
+        <canvas id="c"></canvas>
       </div>
     </div>
 
-    <!-- Right Sidebar - Properties -->
-    <div class="sidebar-right" id="sidebarRight">
-      <div class="sidebar-section">
-        <h3>✏️ Content</h3>
-        <div id="contentEditor">
-          <div class="form-group">
-            <label>Badge Text</label>
-            <input type="text" class="form-control" id="badgeText" value="🚨 Myth Alert" onchange="updateContent()">
-          </div>
-          <div class="form-group">
-            <label>Main Title</label>
-            <textarea class="form-control" id="mainTitle" onchange="updateContent()">3 Things TikTok Gets WRONG About Autism</textarea>
-          </div>
-          <div class="form-group">
-            <label>Subtitle</label>
-            <textarea class="form-control" id="subtitle" onchange="updateContent()">A new study found over 50% of autism content on social media is misleading.</textarea>
-          </div>
-          <div class="form-group">
-            <label>Emoji</label>
-            <input type="text" class="form-control" id="emojiInput" value="🚨" onchange="updateContent()">
-          </div>
+    <!-- RIGHT PANEL -->
+    <div class="panel">
+      <div class="panel-section">
+        <h3>🎯 Selection</h3>
+        <div class="sel-info" id="selInfo">
+          <strong>No selection</strong><br>Click an element on canvas to edit it
         </div>
-      </div>
-      
-      <div class="sidebar-section" id="listSection" style="display:none">
-        <h3>📝 List Items</h3>
-        <div class="list-items" id="listItems">
-          <div class="list-item-row">
-            <input type="text" class="form-control" value="Item 1" onchange="updateContent()">
-            <button class="btn-icon" onclick="removeListItem(this)">×</button>
+        <div id="selControls" style="display:none">
+          <div class="form-group">
+            <label>Text Content</label>
+            <textarea class="form-control" id="selText" rows="3" oninput="updateSelectedText()"></textarea>
           </div>
-        </div>
-        <button class="btn btn-secondary" onclick="addListItem()" style="width:100%; margin-top:10px">
-          + Add Item
-        </button>
-      </div>
-      
-      <div class="sidebar-section">
-        <h3>🎨 Colors</h3>
-        <div class="form-group">
-          <label>Background</label>
-          <div class="color-row">
-            <div class="color-swatch active" style="background: linear-gradient(135deg, #1a1a2e, #0f3460)" data-bg="default" onclick="setBgColor(this)"></div>
-            <div class="color-swatch" style="background: linear-gradient(135deg, #1a1a2e, #2d1f3d)" data-bg="purple" onclick="setBgColor(this)"></div>
-            <div class="color-swatch" style="background: linear-gradient(135deg, #1a2e1a, #0f3460)" data-bg="green" onclick="setBgColor(this)"></div>
-            <div class="color-swatch" style="background: linear-gradient(135deg, #2e1a1a, #3d1f1f)" data-bg="red" onclick="setBgColor(this)"></div>
-            <div class="color-swatch custom">
-              <input type="color" class="color-input" onchange="setCustomBg(this.value)">
+          <div class="form-group">
+            <label>Font Size: <span id="fontSizeVal">24</span>px</label>
+            <input type="range" class="form-control" id="fontSize" min="12" max="120" value="24" oninput="updateSelectedFontSize()">
+          </div>
+          <div class="form-group">
+            <label>Text Color</label>
+            <div class="color-row">
+              <div class="swatch active" style="background:#fff" data-color="#ffffff" onclick="setTextColor(this)"></div>
+              <div class="swatch" style="background:#E8B86D" data-color="#E8B86D" onclick="setTextColor(this)"></div>
+              <div class="swatch" style="background:#4A90A4" data-color="#4A90A4" onclick="setTextColor(this)"></div>
+              <div class="swatch" style="background:#27AE60" data-color="#27AE60" onclick="setTextColor(this)"></div>
+              <div class="swatch" style="background:#E74C3C" data-color="#E74C3C" onclick="setTextColor(this)"></div>
+              <div class="swatch custom"><input type="color" value="#ffffff" onchange="setTextColor(this, true)"></div>
             </div>
           </div>
+          <div class="form-group">
+            <label>Font Family</label>
+            <select class="form-control" id="fontFamily" onchange="updateSelectedFont()">
+              <option value="Poppins">Poppins</option>
+              <option value="Playfair Display">Playfair Display</option>
+              <option value="Arial">Arial</option>
+              <option value="Georgia">Georgia</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Font Weight</label>
+            <select class="form-control" id="fontWeight" onchange="updateSelectedWeight()">
+              <option value="400">Normal</option>
+              <option value="600">Semi-Bold</option>
+              <option value="700">Bold</option>
+              <option value="800">Extra Bold</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="panel-section">
+        <h3>🎨 Background</h3>
+        <div class="color-row" style="margin-bottom:10px">
+          <div class="swatch active" style="background:linear-gradient(135deg,#1a1a2e,#0f3460)" data-bg="default" onclick="setBg(this)"></div>
+          <div class="swatch" style="background:linear-gradient(135deg,#1a1a2e,#2d1f3d)" data-bg="purple" onclick="setBg(this)"></div>
+          <div class="swatch" style="background:linear-gradient(135deg,#0f2027,#203a43)" data-bg="ocean" onclick="setBg(this)"></div>
+          <div class="swatch" style="background:linear-gradient(135deg,#232526,#414345)" data-bg="dark" onclick="setBg(this)"></div>
+          <div class="swatch custom"><input type="color" value="#1a1a2e" onchange="setCustomBg(this.value)"></div>
         </div>
         <div class="form-group">
           <label>Accent Color</label>
           <div class="color-row">
-            <div class="color-swatch active" style="background: #E8B86D" data-accent="#E8B86D" onclick="setAccentColor(this)"></div>
-            <div class="color-swatch" style="background: #4A90A4" data-accent="#4A90A4" onclick="setAccentColor(this)"></div>
-            <div class="color-swatch" style="background: #27AE60" data-accent="#27AE60" onclick="setAccentColor(this)"></div>
-            <div class="color-swatch" style="background: #E74C3C" data-accent="#E74C3C" onclick="setAccentColor(this)"></div>
-            <div class="color-swatch" style="background: #9B59B6" data-accent="#9B59B6" onclick="setAccentColor(this)"></div>
+            <div class="swatch active" style="background:#E8B86D" data-accent="#E8B86D" onclick="setAccent(this)"></div>
+            <div class="swatch" style="background:#4A90A4" data-accent="#4A90A4" onclick="setAccent(this)"></div>
+            <div class="swatch" style="background:#27AE60" data-accent="#27AE60" onclick="setAccent(this)"></div>
+            <div class="swatch" style="background:#E74C3C" data-accent="#E74C3C" onclick="setAccent(this)"></div>
+            <div class="swatch" style="background:#9B59B6" data-accent="#9B59B6" onclick="setAccent(this)"></div>
           </div>
         </div>
       </div>
       
-      <div class="sidebar-section">
-        <h3>🔤 Typography</h3>
-        <div class="form-group">
-          <label>Title Font Size</label>
-          <input type="range" class="form-control" id="titleSize" min="36" max="80" value="62" onchange="updateTypography()">
-        </div>
-        <div class="form-group">
-          <label>Body Font Size</label>
-          <input type="range" class="form-control" id="bodySize" min="16" max="36" value="24" onchange="updateTypography()">
-        </div>
+      <div class="panel-section" id="listSection">
+        <h3>📝 Quick Add Elements</h3>
+        <button class="btn btn-secondary" style="width:100%;margin-bottom:6px" onclick="addBadge()">+ Badge</button>
+        <button class="btn btn-secondary" style="width:100%;margin-bottom:6px" onclick="addListItem()">+ List Item</button>
+        <button class="btn btn-secondary" style="width:100%;margin-bottom:6px" onclick="addShape()">+ Shape</button>
+        <button class="btn btn-secondary" style="width:100%" onclick="addEmoji()">+ Emoji</button>
       </div>
       
-      <div class="sidebar-section">
-        <h3>⚙️ Settings</h3>
-        <div class="form-group">
-          <label>Canvas Size</label>
-          <select class="form-control" id="canvasSize" onchange="changeCanvasSize()">
-            <option value="1080x1350">Instagram (1080×1350)</option>
-            <option value="1080x1920">TikTok/Reels (1080×1920)</option>
-            <option value="1080x1080">Square (1080×1080)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Handle</label>
-          <input type="text" class="form-control" id="handleText" value="@spectrum_unlocked" onchange="updateContent()">
-        </div>
-        <div class="form-group">
-          <label>Slide Number</label>
-          <input type="text" class="form-control" id="slideNumber" value="1 of 5" onchange="updateContent()">
-        </div>
-      </div>
-      
-      <div class="sidebar-section">
-        <h3>📱 Caption</h3>
+      <div class="panel-section">
+        <h3>📱 Captions</h3>
         <div class="caption-box">
-          <h4>Instagram</h4>
-          <pre id="captionPreview">Your caption will appear here when you load content from the calendar.</pre>
+          <h4>Instagram <button class="btn btn-secondary copy-btn" onclick="copyIG()">📋</button></h4>
+          <pre id="igCaption">Load a day to see caption</pre>
         </div>
-        <div class="caption-box" style="margin-top:10px">
-          <h4>TikTok <button class="btn btn-secondary" onclick="copyTikTokCaption()" style="float:right;padding:4px 10px;font-size:11px">📋 Copy</button></h4>
-          <pre id="tiktokCaption">Your TikTok caption will appear here.</pre>
+        <div class="caption-box">
+          <h4>TikTok <button class="btn btn-secondary copy-btn" onclick="copyTT()">📋</button></h4>
+          <pre id="ttCaption">Load a day to see caption</pre>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Day Selector Modal -->
-  <div class="modal-overlay" id="dayModal">
+  <!-- Day Modal -->
+  <div class="modal-bg" id="modal">
     <div class="modal">
-      <div class="modal-header">
+      <div class="modal-head">
         <h2>📅 Select Day Content</h2>
-        <button class="modal-close" onclick="closeDaySelector()">×</button>
+        <button class="modal-close" onclick="closeModal()">×</button>
       </div>
       <div class="modal-body">
-        <div class="form-group" style="margin-bottom:20px">
-          <input type="text" class="form-control" id="daySearch" placeholder="🔍 Search days by title..." oninput="filterDays()">
+        <div class="form-group">
+          <input type="text" class="form-control" id="daySearch" placeholder="🔍 Search..." oninput="filterDays()">
         </div>
         <div class="day-grid" id="dayGrid"></div>
       </div>
     </div>
   </div>
 
-  <!-- Mobile Toggles -->
-  <div class="mobile-toggle">
-    <button class="btn btn-primary" onclick="toggleSidebar('left')">📋</button>
-    <button class="btn btn-primary" onclick="toggleSidebar('right')">⚙️</button>
-  </div>
-
-  <!-- Toast -->
   <div class="toast" id="toast"></div>
-  
-  <!-- Loading -->
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
-    <div>Generating...</div>
-  </div>
 
-  <script>
-    // ==================== STATE ====================
-    let canvas;
-    let currentTemplate = 'cover';
-    let currentSlide = 0;
-    let slides = [{}];
-    let zoom = 0.5;
-    let canvasWidth = 1080;
-    let canvasHeight = 1350;
-    let currentAccent = '#E8B86D';
-    let currentBg = 'default';
-    let dayData = {}; // Will be populated from calendar
-    
-    // ==================== INITIALIZATION ====================
-    document.addEventListener('DOMContentLoaded', () => {
-      initCanvas();
-      initTemplateSelector();
-      loadDayData();
-      renderTemplate();
+<script>
+// ============ STATE ============
+let canvas;
+let W = 1080, H = 1350;
+let zoom = 0.5;
+let slides = [null]; // Store canvas JSON for each slide
+let currentSlide = 0;
+let accent = '#E8B86D';
+let bgType = 'default';
+
+const TEMPLATES = [
+  { id: 'cover', name: 'Cover', icon: '🎬' },
+  { id: 'myth', name: 'Myth Buster', icon: '❌' },
+  { id: 'list', name: 'Checklist', icon: '✓' },
+  { id: 'vs', name: 'VS Compare', icon: '⚔️' },
+  { id: 'grid', name: 'Grid Cards', icon: '🔲' },
+  { id: 'cta', name: 'CTA Slide', icon: '📢' },
+  { id: 'stats', name: 'Stats', icon: '📊' },
+  { id: 'quote', name: 'Quote', icon: '💬' }
+];
+
+const DAYS = {
+  1: { title: '3 Things TikTok Gets WRONG', folder: 'day-01-tiktok-myths', slides: 5, ig: "🚨 STOP scrolling TikTok for autism \"facts.\"\n\nA new study found 50%+ of autism content is MISLEADING.\n\n💾 Save & share!", tt: "🚨 3 things TikTok gets WRONG about autism #autism #fyp" },
+  2: { title: 'Acceptance vs Awareness', folder: 'day-02-acceptance-vs-awareness', slides: 5, ig: "🛑 Stop saying \"autism awareness.\"\n\nACCEPTANCE > AWARENESS\n\n💾 Save & share!", tt: "🛑 Why we say acceptance not awareness #autism #fyp" },
+  3: { title: 'Glass Child Syndrome', folder: 'day-03-glass-child', slides: 6, ig: "🪟 Is your NT child becoming invisible?\n\nGlass Child Syndrome: when siblings fade.\n\n💙 Tag a sibling parent", tt: "🪟 Glass Child Syndrome explained #autism #siblings #fyp" },
+  4: { title: '5 Sensory Hacks', folder: 'day-04-sensory-hacks', slides: 7, ig: "🎧😎 5 SENSORY HACKS that work!\n\n1️⃣ Headphones\n2️⃣ Sunglasses\n3️⃣ Fidgets\n4️⃣ Visual timers\n5️⃣ Calm corner\n\n💾 Save!", tt: "🎧 5 sensory hacks that ACTUALLY work #autism #sensory #fyp" },
+  5: { title: 'Late-Diagnosed Women', folder: 'day-05-late-diagnosis', slides: 5, ig: "💜 450% increase in adult autism diagnoses.\n\nMost are WOMEN.\n\nIt's never too late to understand yourself.", tt: "💜 450% spike in adult diagnoses — most are women #autism #latediagnosed #fyp" },
+  6: { title: 'Autistic Burnout', folder: 'day-06-burnout', slides: 5, ig: "🔥 AUTISTIC BURNOUT is real.\n\nNot laziness. Not depression.\n\nNeurological exhaustion.\n\n💙 You're not broken.", tt: "🔥 Autistic burnout is NOT laziness #autism #burnout #fyp" },
+  7: { title: 'April Kickoff', folder: 'day-07-april-kickoff', slides: 4, ig: "♾️💙 IT'S AUTISM ACCEPTANCE MONTH!\n\n➕ Follow\n🔔 Notifications ON\n💾 Save!", tt: "♾️💙 AUTISM ACCEPTANCE MONTH IS HERE! #autism #april #fyp" },
+  8: { title: 'World Autism Day', folder: 'day-08-waad', slides: 6, ig: "♾️💙 WORLD AUTISM ACCEPTANCE DAY\n\nApril 2, 2026\n\n\"Autism and Humanity — Every Life Has Value\"", tt: "♾️💙 WORLD AUTISM ACCEPTANCE DAY #WAAD2026 #autism #fyp" },
+  9: { title: '5 Myths That Need to Die', folder: 'day-09-myths-die', slides: 7, ig: "💀 5 MYTHS about autism:\n\n❌ Vaccines cause autism\n❌ No empathy\n❌ \"You don't look autistic\"\n❌ Only boys\n❌ Can be cured\n\n💾 Save!", tt: "💀 5 autism myths that need to DIE #autism #mythbusters #fyp" },
+  10: { title: 'IEP Accommodations', folder: 'day-10-iep', slides: 6, ig: "📋 NEURODIVERSITY-AFFIRMING IEP accommodations\n\n🎧 Sensory supports\n💬 Communication\n📚 Academic flexibility\n🤝 Social/emotional\n\n📩 DM \"IEP\" for tips!", tt: "📋 IEP accommodations that SUPPORT your child #IEP #autism #fyp" },
+  11: { title: 'High-Masking Autism', folder: 'day-11-masking', slides: 6, ig: "🎭 HIGH-MASKING AUTISM\n\n\"They look fine. They're falling apart inside.\"\n\nYou shouldn't have to perform to be accepted.", tt: "🎭 High-masking autism: the hidden struggle #autism #masking #fyp" },
+  12: { title: 'Self-Care for Parents', folder: 'day-12-selfcare', slides: 6, ig: "🧘‍♀️ SELF-CARE that actually works\n\nNot bubble baths. REAL strategies.\n\n💕 You can't pour from an empty cup.", tt: "🧘‍♀️ Self-care for autism parents (real stuff) #autism #selfcare #fyp" },
+  13: { title: 'ABA Controversy', folder: 'day-13-aba', slides: 6, ig: "🤔 THE ABA CONTROVERSY\n\nBoth sides explained.\n\nYou know your child best. 💙", tt: "🤔 The ABA debate: both sides #ABA #autism #fyp" },
+  14: { title: 'Visual Supports', folder: 'day-14-visual', slides: 6, ig: "📋 VISUAL SUPPORTS that work!\n\n📅 Schedules\n⏰ Timers\n1️⃣➡️2️⃣ First-Then\n🔘 Choice boards\n\n📩 DM \"VISUALS\" for templates!", tt: "📋 Visual supports that WORK #autism #visualsupports #fyp" },
+  15: { title: 'Meltdown Support', folder: 'day-15-meltdown', slides: 6, ig: "🌪️ MELTDOWN ≠ TANTRUM\n\nMeltdowns are overwhelm.\nNot manipulation.\n\n💙 Support, don't punish.", tt: "🌪️ Meltdown vs tantrum: the difference #autism #meltdown #fyp" },
+  16: { title: 'Feeding Challenges', folder: 'day-16-feeding', slides: 6 },
+  17: { title: 'Sleep Issues', folder: 'day-17-sleep', slides: 6 },
+  18: { title: 'Autism in Girls', folder: 'day-18-girls', slides: 6 },
+  19: { title: 'Community Spotlight', folder: 'day-19-community', slides: 4 },
+  20: { title: 'Potty Training', folder: 'day-20-potty', slides: 6 },
+  21: { title: 'AuDHD', folder: 'day-21-audhd', slides: 6 },
+  22: { title: 'AAC Communication', folder: 'day-22-aac', slides: 6 },
+  23: { title: 'School Accommodations', folder: 'day-23-accommodations', slides: 6 },
+  24: { title: 'Autism & Anxiety', folder: 'day-24-anxiety', slides: 6 },
+  25: { title: 'Events & Respite', folder: 'day-25-holidays-respite', slides: 6 },
+  26: { title: 'Week 3 Recap', folder: 'day-26-week3-recap', slides: 6 },
+  27: { title: 'Autism in Teens', folder: 'day-27-autism-teens', slides: 6 },
+  28: { title: 'Nature & Autism', folder: 'day-28-nature-autism', slides: 6 },
+  29: { title: 'Building Friendships', folder: 'day-29-building-friendships', slides: 6 },
+  30: { title: 'Late Diagnosis Adults', folder: 'day-30-late-diagnosis', slides: 6 },
+  31: { title: 'Glass Child Pt 2', folder: 'day-31-glass-child', slides: 6 },
+  32: { title: 'Spring Activities', folder: 'day-32-weekend-spring', slides: 6 },
+  33: { title: 'April Reflection', folder: 'day-33-monthly-reflection', slides: 6 },
+  34: { title: 'After Autism Month', folder: 'day-34-transitioning', slides: 6 },
+  35: { title: 'Resource Toolkit', folder: 'day-35-resources-toolkit', slides: 7 },
+  36: { title: 'Month Celebration', folder: 'day-36-end-autism-month-hero', slides: 7 },
+  37: { title: 'May Goals', folder: 'day-37-may-goals', slides: 5 },
+  38: { title: 'Summer Prep', folder: 'day-38-summer-prep', slides: 6 },
+  39: { title: 'OT Guide', folder: 'day-39-therapy-ot', slides: 6 },
+  40: { title: 'Speech Therapy', folder: 'day-40-therapy-speech', slides: 6 },
+  41: { title: 'Physical Therapy', folder: 'day-41-physical-therapy', slides: 6 },
+  42: { title: 'Insurance Coverage', folder: 'day-42-insurance-coverage', slides: 6 },
+  43: { title: 'Family Education', folder: 'day-43-family-education', slides: 6 },
+  44: { title: 'Marriage & Autism', folder: 'day-44-marriage-autism', slides: 6 },
+  45: { title: 'Self-Care Deep Dive', folder: 'day-45-self-care', slides: 6 },
+  46: { title: 'Support System', folder: 'day-46-support-system', slides: 6 },
+  47: { title: 'Summer Camps', folder: 'day-47-summer-camps', slides: 6 },
+  48: { title: 'Travel Tips', folder: 'day-48-travel-autism', slides: 6 },
+  49: { title: 'ESY / Year-Round', folder: 'day-49-year-round-school', slides: 6 },
+  50: { title: 'Building Independence', folder: 'day-50-building-independence', slides: 6 },
+  51: { title: 'Sensory Deep Dive', folder: 'day-51-sensory-deep-dive', slides: 6 },
+  52: { title: 'Executive Function', folder: 'day-52-executive-function', slides: 6 },
+  53: { title: 'Autism & Tech', folder: 'day-53-autism-technology', slides: 6 },
+  54: { title: 'Adulthood Transition', folder: 'day-54-adulthood-transition', slides: 6 },
+  55: { title: 'Employment', folder: 'day-55-employment-autism', slides: 6 },
+  56: { title: 'Self-Advocacy', folder: 'day-56-self-advocacy', slides: 6 },
+  57: { title: 'Work/School Acceptance', folder: 'day-57-acceptance-work-school', slides: 6 },
+  58: { title: 'Mental Health', folder: 'day-58-mental-health', slides: 6 },
+  59: { title: 'Autistic Joy', folder: 'day-59-autistic-joy', slides: 6 },
+  60: { title: 'Journey Continues', folder: 'day-60-journey-continues', slides: 7 }
+};
+
+// ============ INIT ============
+document.addEventListener('DOMContentLoaded', () => {
+  initCanvas();
+  renderTemplateGrid();
+  renderDayGrid();
+  renderSlideTabs();
+  loadTemplate('cover');
+});
+
+function initCanvas() {
+  canvas = new fabric.Canvas('c', {
+    width: W,
+    height: H,
+    backgroundColor: '#1a1a2e',
+    preserveObjectStacking: true,
+    selection: true
+  });
+  
+  applyZoom();
+  
+  // Selection events
+  canvas.on('selection:created', onSelect);
+  canvas.on('selection:updated', onSelect);
+  canvas.on('selection:cleared', onDeselect);
+  
+  // Double-click to edit text
+  canvas.on('mouse:dblclick', (e) => {
+    if (e.target && e.target.type === 'textbox') {
+      e.target.enterEditing();
+      e.target.selectAll();
+    }
+  });
+  
+  // Keyboard delete
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Delete' || e.key === 'Backspace') {
+      const el = document.activeElement;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+      deleteSelected();
+    }
+    if (e.key === 'Escape') closeModal();
+  });
+}
+
+function applyZoom() {
+  const wrap = document.getElementById('canvasWrap');
+  wrap.style.transform = `scale(${zoom})`;
+  wrap.style.transformOrigin = 'top center';
+  document.getElementById('zoomLvl').textContent = Math.round(zoom * 100) + '%';
+}
+
+function zoomIn() { zoom = Math.min(1, zoom + 0.1); applyZoom(); }
+function zoomOut() { zoom = Math.max(0.2, zoom - 0.1); applyZoom(); }
+
+// ============ SELECTION ============
+function onSelect(e) {
+  const obj = e.selected[0];
+  document.getElementById('selInfo').innerHTML = `<strong>Selected:</strong> ${obj.type}<br>Double-click text to edit inline`;
+  document.getElementById('selControls').style.display = 'block';
+  
+  if (obj.type === 'textbox' || obj.type === 'text') {
+    document.getElementById('selText').value = obj.text || '';
+    document.getElementById('fontSize').value = obj.fontSize || 24;
+    document.getElementById('fontSizeVal').textContent = obj.fontSize || 24;
+    document.getElementById('fontFamily').value = obj.fontFamily || 'Poppins';
+    document.getElementById('fontWeight').value = obj.fontWeight || '400';
+  }
+}
+
+function onDeselect() {
+  document.getElementById('selInfo').innerHTML = '<strong>No selection</strong><br>Click an element on canvas to edit it';
+  document.getElementById('selControls').style.display = 'none';
+}
+
+function updateSelectedText() {
+  const obj = canvas.getActiveObject();
+  if (obj && (obj.type === 'textbox' || obj.type === 'text')) {
+    obj.set('text', document.getElementById('selText').value);
+    canvas.renderAll();
+  }
+}
+
+function updateSelectedFontSize() {
+  const obj = canvas.getActiveObject();
+  const size = parseInt(document.getElementById('fontSize').value);
+  document.getElementById('fontSizeVal').textContent = size;
+  if (obj) {
+    obj.set('fontSize', size);
+    canvas.renderAll();
+  }
+}
+
+function updateSelectedFont() {
+  const obj = canvas.getActiveObject();
+  if (obj) {
+    obj.set('fontFamily', document.getElementById('fontFamily').value);
+    canvas.renderAll();
+  }
+}
+
+function updateSelectedWeight() {
+  const obj = canvas.getActiveObject();
+  if (obj) {
+    obj.set('fontWeight', document.getElementById('fontWeight').value);
+    canvas.renderAll();
+  }
+}
+
+function setTextColor(el, isCustom) {
+  const color = isCustom ? el.value : el.dataset.color;
+  if (!isCustom) {
+    el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+    el.classList.add('active');
+  }
+  const obj = canvas.getActiveObject();
+  if (obj) {
+    obj.set('fill', color);
+    canvas.renderAll();
+  }
+}
+
+function deleteSelected() {
+  const obj = canvas.getActiveObject();
+  if (obj) {
+    canvas.remove(obj);
+    canvas.discardActiveObject();
+    canvas.renderAll();
+    toast('Deleted');
+  }
+}
+
+// ============ BACKGROUND ============
+function setBg(el) {
+  el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+  bgType = el.dataset.bg;
+  drawBackground();
+}
+
+function setCustomBg(color) {
+  bgType = 'custom';
+  canvas.backgroundColor = color;
+  canvas.renderAll();
+}
+
+function setAccent(el) {
+  el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+  accent = el.dataset.accent;
+  // Update accent-colored elements
+  canvas.getObjects().forEach(obj => {
+    if (obj.isAccent) {
+      obj.set('fill', accent);
+    }
+  });
+  canvas.renderAll();
+}
+
+function drawBackground() {
+  // Remove old bg rect
+  const old = canvas.getObjects().find(o => o.isBgRect);
+  if (old) canvas.remove(old);
+  
+  const gradients = {
+    default: ['#1a1a2e', '#16213e', '#0f3460'],
+    purple: ['#1a1a2e', '#2d1f3d', '#1a1a2e'],
+    ocean: ['#0f2027', '#203a43', '#2c5364'],
+    dark: ['#232526', '#414345', '#232526']
+  };
+  
+  const colors = gradients[bgType] || gradients.default;
+  
+  const gradient = new fabric.Gradient({
+    type: 'linear',
+    coords: { x1: 0, y1: 0, x2: W, y2: H },
+    colorStops: [
+      { offset: 0, color: colors[0] },
+      { offset: 0.5, color: colors[1] },
+      { offset: 1, color: colors[2] }
+    ]
+  });
+  
+  const bgRect = new fabric.Rect({
+    left: 0, top: 0, width: W, height: H,
+    fill: gradient,
+    selectable: false,
+    evented: false,
+    isBgRect: true
+  });
+  
+  canvas.add(bgRect);
+  canvas.sendToBack(bgRect);
+  
+  // Decorative shapes
+  addDecorativeCircle(W - 200, -100, 300, accent, 0.08);
+  addDecorativeCircle(-80, H - 350, 200, '#4A90A4', 0.06);
+  
+  canvas.renderAll();
+}
+
+function addDecorativeCircle(x, y, r, color, opacity) {
+  const circle = new fabric.Circle({
+    left: x, top: y, radius: r,
+    fill: color,
+    opacity: opacity,
+    selectable: false,
+    evented: false,
+    isDecor: true
+  });
+  canvas.add(circle);
+  canvas.sendToBack(circle);
+}
+
+// ============ TEMPLATES ============
+function renderTemplateGrid() {
+  const grid = document.getElementById('tplGrid');
+  grid.innerHTML = TEMPLATES.map(t => `
+    <div class="tpl-card${t.id === 'cover' ? ' active' : ''}" data-tpl="${t.id}" onclick="loadTemplate('${t.id}')">
+      <div class="icon">${t.icon}</div>
+      <div>${t.name}</div>
+    </div>
+  `).join('');
+}
+
+function loadTemplate(id) {
+  document.querySelectorAll('.tpl-card').forEach(c => c.classList.toggle('active', c.dataset.tpl === id));
+  
+  canvas.clear();
+  drawBackground();
+  
+  switch(id) {
+    case 'cover': templateCover(); break;
+    case 'myth': templateMyth(); break;
+    case 'list': templateList(); break;
+    case 'vs': templateVS(); break;
+    case 'grid': templateGrid(); break;
+    case 'cta': templateCTA(); break;
+    case 'stats': templateStats(); break;
+    case 'quote': templateQuote(); break;
+  }
+  
+  canvas.renderAll();
+}
+
+function templateCover() {
+  // Badge
+  const badge = new fabric.Textbox('🚨 MYTH ALERT', {
+    left: W/2, top: 180, width: 300,
+    fontSize: 18, fontFamily: 'Poppins', fontWeight: '700',
+    fill: '#1a1a2e', textAlign: 'center',
+    backgroundColor: accent,
+    padding: 15,
+    originX: 'center'
+  });
+  badge.isAccent = true;
+  canvas.add(badge);
+  
+  // Title
+  const title = new fabric.Textbox('3 Things TikTok Gets\nWRONG About Autism', {
+    left: W/2, top: H/2 - 80, width: 900,
+    fontSize: 62, fontFamily: 'Playfair Display', fontWeight: '800',
+    fill: '#fff', textAlign: 'center',
+    originX: 'center', originY: 'center',
+    lineHeight: 1.15
+  });
+  canvas.add(title);
+  
+  // Subtitle
+  const sub = new fabric.Textbox('A new study found over 50% of autism content on social media is misleading. Let\'s set the record straight.', {
+    left: W/2, top: H/2 + 120, width: 800,
+    fontSize: 24, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.85)', textAlign: 'center',
+    originX: 'center', originY: 'center',
+    lineHeight: 1.4
+  });
+  canvas.add(sub);
+  
+  // Swipe CTA
+  const swipe = new fabric.Text('Swipe to learn more →', {
+    left: W/2, top: H - 180,
+    fontSize: 22, fontFamily: 'Poppins', fontWeight: '600',
+    fill: 'rgba(255,255,255,0.6)',
+    originX: 'center'
+  });
+  canvas.add(swipe);
+  
+  // Handle
+  const handle = new fabric.Text('@spectrum_unlocked', {
+    left: W/2, top: H - 50,
+    fontSize: 18, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.4)',
+    originX: 'center'
+  });
+  canvas.add(handle);
+}
+
+function templateMyth() {
+  // Myth badge
+  const mythBadge = new fabric.Text('❌ MYTH #1', {
+    left: W/2, top: 120,
+    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
+    fill: '#E74C3C',
+    originX: 'center'
+  });
+  canvas.add(mythBadge);
+  
+  // Myth box
+  const mythBox = new fabric.Rect({
+    left: W/2, top: 350, width: 900, height: 200,
+    fill: 'rgba(231,76,60,0.15)',
+    stroke: '#E74C3C', strokeWidth: 4,
+    rx: 20, ry: 20,
+    originX: 'center', originY: 'center',
+    selectable: false
+  });
+  canvas.add(mythBox);
+  
+  const mythText = new fabric.Textbox('"If you relate to these signs, you\'re definitely autistic"', {
+    left: W/2, top: 350, width: 850,
+    fontSize: 36, fontFamily: 'Playfair Display', fontWeight: '700',
+    fill: '#fff', textAlign: 'center',
+    originX: 'center', originY: 'center',
+    lineHeight: 1.3
+  });
+  canvas.add(mythText);
+  
+  // Truth badge
+  const truthBadge = new fabric.Text('✅ THE TRUTH', {
+    left: W/2, top: 520,
+    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
+    fill: '#27AE60',
+    originX: 'center'
+  });
+  canvas.add(truthBadge);
+  
+  // Truth box
+  const truthBox = new fabric.Rect({
+    left: W/2, top: 750, width: 900, height: 280,
+    fill: 'rgba(39,174,96,0.12)',
+    rx: 16, ry: 16,
+    originX: 'center', originY: 'center',
+    selectable: false
+  });
+  canvas.add(truthBox);
+  
+  const truthText = new fabric.Textbox('Many autism "signs" on TikTok are common human experiences. Self-diagnosis is valid for exploration, but professional evaluation is the only way to know for sure.', {
+    left: W/2, top: 750, width: 850,
+    fontSize: 24, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.95)', textAlign: 'center',
+    originX: 'center', originY: 'center',
+    lineHeight: 1.5
+  });
+  canvas.add(truthText);
+  
+  addFooter('1 of 3');
+}
+
+function templateList() {
+  // Title
+  const title = new fabric.Textbox('Sensory Supports', {
+    left: W/2, top: 100, width: 900,
+    fontSize: 48, fontFamily: 'Playfair Display', fontWeight: '800',
+    fill: accent, textAlign: 'center',
+    originX: 'center'
+  });
+  title.isAccent = true;
+  canvas.add(title);
+  
+  // Emoji
+  const emoji = new fabric.Text('🎧', {
+    left: W/2, top: 200,
+    fontSize: 80,
+    originX: 'center'
+  });
+  canvas.add(emoji);
+  
+  // List box
+  const listBox = new fabric.Rect({
+    left: W/2, top: 700, width: 900, height: 600,
+    fill: 'rgba(74,144,164,0.12)',
+    stroke: 'rgba(74,144,164,0.3)', strokeWidth: 2,
+    rx: 20, ry: 20,
+    originX: 'center', originY: 'center',
+    selectable: false
+  });
+  canvas.add(listBox);
+  
+  // List items
+  const items = [
+    'Noise-canceling headphones allowed',
+    'Sensory breaks as needed (not earned)',
+    'Fidgets permitted without restriction',
+    'Flexible seating options',
+    'Movement breaks every 20-30 min',
+    'Option for dim lighting or sunglasses'
+  ];
+  
+  items.forEach((item, i) => {
+    const text = new fabric.Textbox(`✓  ${item}`, {
+      left: 130, top: 450 + i * 55, width: 820,
+      fontSize: 24, fontFamily: 'Poppins',
+      fill: '#fff',
+      lineHeight: 1.4
     });
+    canvas.add(text);
+  });
+  
+  addFooter('1 of 4');
+}
+
+function templateVS() {
+  // Title
+  const title = new fabric.Textbox('Meltdown vs Tantrum', {
+    left: W/2, top: 100, width: 900,
+    fontSize: 48, fontFamily: 'Playfair Display', fontWeight: '800',
+    fill: accent, textAlign: 'center',
+    originX: 'center'
+  });
+  title.isAccent = true;
+  canvas.add(title);
+  
+  // Left box
+  const leftBox = new fabric.Rect({
+    left: 90, top: 220, width: 430, height: 500,
+    fill: 'rgba(231,76,60,0.12)',
+    stroke: 'rgba(231,76,60,0.3)', strokeWidth: 2,
+    rx: 20, ry: 20,
+    selectable: false
+  });
+  canvas.add(leftBox);
+  
+  const leftLabel = new fabric.Text('😤 TANTRUM', {
+    left: 305, top: 260,
+    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
+    fill: '#E74C3C',
+    originX: 'center'
+  });
+  canvas.add(leftLabel);
+  
+  const leftText = new fabric.Textbox('• Goal-oriented\n• Wants something specific\n• Checks for audience\n• Can stop if need met\n• Strategic behavior', {
+    left: 120, top: 320, width: 380,
+    fontSize: 20, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.9)',
+    lineHeight: 1.8
+  });
+  canvas.add(leftText);
+  
+  // Right box
+  const rightBox = new fabric.Rect({
+    left: 560, top: 220, width: 430, height: 500,
+    fill: 'rgba(74,144,164,0.12)',
+    stroke: 'rgba(74,144,164,0.3)', strokeWidth: 2,
+    rx: 20, ry: 20,
+    selectable: false
+  });
+  canvas.add(rightBox);
+  
+  const rightLabel = new fabric.Text('🌪️ MELTDOWN', {
+    left: 775, top: 260,
+    fontSize: 22, fontFamily: 'Poppins', fontWeight: '700',
+    fill: '#4A90A4',
+    originX: 'center'
+  });
+  canvas.add(rightLabel);
+  
+  const rightText = new fabric.Textbox('• Overwhelm response\n• Neurological crisis\n• No audience awareness\n• Can\'t just "stop"\n• NOT manipulation', {
+    left: 590, top: 320, width: 380,
+    fontSize: 20, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.9)',
+    lineHeight: 1.8
+  });
+  canvas.add(rightText);
+  
+  // VS circle
+  const vsCircle = new fabric.Circle({
+    left: W/2, top: 470, radius: 35,
+    fill: accent,
+    originX: 'center', originY: 'center'
+  });
+  vsCircle.isAccent = true;
+  canvas.add(vsCircle);
+  
+  const vsText = new fabric.Text('VS', {
+    left: W/2, top: 470,
+    fontSize: 22, fontFamily: 'Poppins', fontWeight: '800',
+    fill: '#1a1a2e',
+    originX: 'center', originY: 'center'
+  });
+  canvas.add(vsText);
+  
+  addFooter('1 of 5');
+}
+
+function templateGrid() {
+  const title = new fabric.Textbox('Moments of Autistic Joy', {
+    left: W/2, top: 100, width: 900,
+    fontSize: 46, fontFamily: 'Playfair Display', fontWeight: '800',
+    fill: accent, textAlign: 'center',
+    originX: 'center'
+  });
+  title.isAccent = true;
+  canvas.add(title);
+  
+  const items = [
+    { emoji: '📚', text: 'Getting lost in a special interest' },
+    { emoji: '🧸', text: 'Finding the PERFECT texture' },
+    { emoji: '🎧', text: 'A song that hits exactly right' },
+    { emoji: '🧩', text: 'When all the pieces click' },
+    { emoji: '🤗', text: 'Meeting someone who GETS you' },
+    { emoji: '🏠', text: 'Coming home and unmasking' }
+  ];
+  
+  items.forEach((item, i) => {
+    const col = i % 2;
+    const row = Math.floor(i / 2);
+    const x = 100 + col * 460;
+    const y = 220 + row * 200;
     
-    function initCanvas() {
-      canvas = new fabric.Canvas('fabricCanvas', {
-        width: canvasWidth,
-        height: canvasHeight,
-        backgroundColor: '#1a1a2e',
-        preserveObjectStacking: true
-      });
-      
-      updateCanvasZoom();
-      
-      // Enable text editing on double click
-      canvas.on('mouse:dblclick', (e) => {
-        if (e.target && e.target.type === 'textbox') {
-          canvas.setActiveObject(e.target);
-          e.target.enterEditing();
-        }
-      });
-      
-      // Sync form when text is edited
-      canvas.on('text:changed', (e) => {
-        syncFormFromCanvas();
-      });
-    }
-    
-    function initTemplateSelector() {
-      document.querySelectorAll('.template-card').forEach(card => {
-        card.addEventListener('click', () => {
-          document.querySelectorAll('.template-card').forEach(c => c.classList.remove('active'));
-          card.classList.add('active');
-          currentTemplate = card.dataset.template;
-          updateEditorForTemplate();
-          renderTemplate();
-        });
-      });
-    }
-    
-    // ==================== TEMPLATES ====================
-    function renderTemplate() {
-      canvas.clear();
-      
-      // Draw background
-      drawBackground();
-      
-      // Draw template-specific content
-      switch(currentTemplate) {
-        case 'cover': renderCoverTemplate(); break;
-        case 'myth': renderMythTemplate(); break;
-        case 'list': renderListTemplate(); break;
-        case 'vs': renderVSTemplate(); break;
-        case 'grid': renderGridTemplate(); break;
-        case 'cta': renderCTATemplate(); break;
-        case 'stats': renderStatsTemplate(); break;
-        case 'quote': renderQuoteTemplate(); break;
-      }
-      
-      // Draw footer
-      drawFooter();
-      
-      canvas.renderAll();
-    }
-    
-    function drawBackground() {
-      const bgColors = {
-        'default': { colors: ['#1a1a2e', '#16213e', '#0f3460'], angle: 165 },
-        'purple': { colors: ['#1a1a2e', '#2d1f3d', '#1a1a2e'], angle: 165 },
-        'green': { colors: ['#1a2e1a', '#16213e', '#0f3460'], angle: 165 },
-        'red': { colors: ['#2e1a1a', '#3d1f1f', '#2e1a1a'], angle: 165 }
-      };
-      
-      const bg = bgColors[currentBg] || bgColors['default'];
-      
-      // Create gradient
-      const gradient = new fabric.Gradient({
-        type: 'linear',
-        coords: { x1: 0, y1: 0, x2: canvasWidth, y2: canvasHeight },
-        colorStops: [
-          { offset: 0, color: bg.colors[0] },
-          { offset: 0.5, color: bg.colors[1] },
-          { offset: 1, color: bg.colors[2] }
-        ]
-      });
-      
-      const bgRect = new fabric.Rect({
-        left: 0,
-        top: 0,
-        width: canvasWidth,
-        height: canvasHeight,
-        fill: gradient,
-        selectable: false,
-        evented: false
-      });
-      canvas.add(bgRect);
-      
-      // Add decorative circles
-      const circle1 = new fabric.Circle({
-        left: canvasWidth - 150,
-        top: -150,
-        radius: 250,
-        fill: currentAccent,
-        opacity: 0.08,
-        selectable: false,
-        evented: false
-      });
-      canvas.add(circle1);
-      
-      const circle2 = new fabric.Circle({
-        left: -100,
-        top: canvasHeight - 400,
-        radius: 175,
-        fill: '#4A90A4',
-        opacity: 0.06,
-        selectable: false,
-        evented: false
-      });
-      canvas.add(circle2);
-    }
-    
-    function renderCoverTemplate() {
-      const badge = document.getElementById('badgeText').value;
-      const title = document.getElementById('mainTitle').value;
-      const subtitle = document.getElementById('subtitle').value;
-      const emoji = document.getElementById('emojiInput').value;
-      
-      // Badge
-      const badgeBg = new fabric.Rect({
-        left: canvasWidth/2,
-        top: 200,
-        width: badge.length * 18 + 60,
-        height: 50,
-        fill: currentAccent,
-        rx: 25,
-        ry: 25,
-        originX: 'center',
-        originY: 'center'
-      });
-      
-      const badgeText = new fabric.Textbox(badge, {
-        left: canvasWidth/2,
-        top: 200,
-        width: 400,
-        fontSize: 18,
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        fill: '#1a1a2e',
-        textAlign: 'center',
-        originX: 'center',
-        originY: 'center'
-      });
-      
-      const group1 = new fabric.Group([badgeBg, badgeText], {
-        left: canvasWidth/2,
-        top: 200,
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(group1);
-      
-      // Main Title
-      const titleText = new fabric.Textbox(title, {
-        left: canvasWidth/2,
-        top: canvasHeight/2 - 50,
-        width: 900,
-        fontSize: parseInt(document.getElementById('titleSize').value),
-        fontFamily: 'Playfair Display',
-        fontWeight: '800',
-        fill: 'white',
-        textAlign: 'center',
-        originX: 'center',
-        originY: 'center',
-        lineHeight: 1.15
-      });
-      canvas.add(titleText);
-      
-      // Subtitle
-      const subtitleText = new fabric.Textbox(subtitle, {
-        left: canvasWidth/2,
-        top: canvasHeight/2 + 150,
-        width: 800,
-        fontSize: parseInt(document.getElementById('bodySize').value),
-        fontFamily: 'Poppins',
-        fill: 'rgba(255,255,255,0.85)',
-        textAlign: 'center',
-        originX: 'center',
-        originY: 'center',
-        lineHeight: 1.4
-      });
-      canvas.add(subtitleText);
-      
-      // Swipe CTA
-      const swipeText = new fabric.Text('Swipe to learn more →', {
-        left: canvasWidth/2,
-        top: canvasHeight - 200,
-        fontSize: 22,
-        fontFamily: 'Poppins',
-        fontWeight: '600',
-        fill: 'rgba(255,255,255,0.7)',
-        originX: 'center'
-      });
-      canvas.add(swipeText);
-    }
-    
-    function renderMythTemplate() {
-      const title = document.getElementById('mainTitle').value;
-      const subtitle = document.getElementById('subtitle').value;
-      
-      // Myth Badge
-      const mythBadge = new fabric.Textbox('❌ MYTH', {
-        left: canvasWidth/2,
-        top: 150,
-        width: 200,
-        fontSize: 20,
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        fill: '#E74C3C',
-        textAlign: 'center',
-        originX: 'center'
-      });
-      canvas.add(mythBadge);
-      
-      // Myth Box
-      const mythBox = new fabric.Rect({
-        left: canvasWidth/2,
-        top: 380,
-        width: 900,
-        height: 200,
-        fill: 'rgba(231, 76, 60, 0.15)',
-        rx: 20,
-        ry: 20,
-        stroke: '#E74C3C',
-        strokeWidth: 4,
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(mythBox);
-      
-      const mythText = new fabric.Textbox(`"${title}"`, {
-        left: canvasWidth/2,
-        top: 380,
-        width: 850,
-        fontSize: 36,
-        fontFamily: 'Playfair Display',
-        fontWeight: '700',
-        fill: 'white',
-        textAlign: 'center',
-        originX: 'center',
-        originY: 'center',
-        lineHeight: 1.3
-      });
-      canvas.add(mythText);
-      
-      // Truth Badge
-      const truthBadge = new fabric.Textbox('✅ THE TRUTH', {
-        left: canvasWidth/2,
-        top: 560,
-        width: 250,
-        fontSize: 20,
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        fill: '#27AE60',
-        textAlign: 'center',
-        originX: 'center'
-      });
-      canvas.add(truthBadge);
-      
-      // Truth Box
-      const truthBox = new fabric.Rect({
-        left: canvasWidth/2,
-        top: 780,
-        width: 900,
-        height: 280,
-        fill: 'rgba(39, 174, 96, 0.12)',
-        rx: 16,
-        ry: 16,
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(truthBox);
-      
-      const truthText = new fabric.Textbox(subtitle, {
-        left: canvasWidth/2,
-        top: 780,
-        width: 850,
-        fontSize: 24,
-        fontFamily: 'Poppins',
-        fill: 'rgba(255,255,255,0.95)',
-        textAlign: 'center',
-        originX: 'center',
-        originY: 'center',
-        lineHeight: 1.5
-      });
-      canvas.add(truthText);
-    }
-    
-    function renderListTemplate() {
-      const title = document.getElementById('mainTitle').value;
-      const emoji = document.getElementById('emojiInput').value;
-      const items = getListItems();
-      
-      // Title
-      const titleText = new fabric.Textbox(title, {
-        left: canvasWidth/2,
-        top: 180,
-        width: 900,
-        fontSize: 48,
-        fontFamily: 'Playfair Display',
-        fontWeight: '800',
-        fill: currentAccent,
-        textAlign: 'center',
-        originX: 'center'
-      });
-      canvas.add(titleText);
-      
-      // Emoji
-      const emojiText = new fabric.Text(emoji, {
-        left: canvasWidth/2,
-        top: 280,
-        fontSize: 80,
-        originX: 'center'
-      });
-      canvas.add(emojiText);
-      
-      // List Box
-      const boxHeight = Math.max(400, items.length * 55 + 70);
-      const listBox = new fabric.Rect({
-        left: canvasWidth/2,
-        top: 400 + boxHeight/2,
-        width: 900,
-        height: boxHeight,
-        fill: 'rgba(74, 144, 164, 0.12)',
-        rx: 20,
-        ry: 20,
-        stroke: 'rgba(74, 144, 164, 0.3)',
-        strokeWidth: 2,
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(listBox);
-      
-      // List Items
-      items.forEach((item, index) => {
-        const itemText = new fabric.Text(`✓  ${item}`, {
-          left: 130,
-          top: 430 + index * 55,
-          fontSize: 24,
-          fontFamily: 'Poppins',
-          fill: 'white',
-          lineHeight: 1.5
-        });
-        canvas.add(itemText);
-      });
-    }
-    
-    function renderVSTemplate() {
-      const title = document.getElementById('mainTitle').value;
-      
-      // Title
-      const titleText = new fabric.Textbox(title, {
-        left: canvasWidth/2,
-        top: 120,
-        width: 900,
-        fontSize: 48,
-        fontFamily: 'Playfair Display',
-        fontWeight: '800',
-        fill: currentAccent,
-        textAlign: 'center',
-        originX: 'center'
-      });
-      canvas.add(titleText);
-      
-      // Left Box (Red)
-      const leftBox = new fabric.Rect({
-        left: 90,
-        top: 220,
-        width: 430,
-        height: 500,
-        fill: 'rgba(231, 76, 60, 0.12)',
-        rx: 20,
-        ry: 20,
-        stroke: 'rgba(231, 76, 60, 0.3)',
-        strokeWidth: 2
-      });
-      canvas.add(leftBox);
-      
-      const leftLabel = new fabric.Text('😤 OPTION A', {
-        left: 305,
-        top: 260,
-        fontSize: 22,
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        fill: '#E74C3C',
-        originX: 'center'
-      });
-      canvas.add(leftLabel);
-      
-      // Right Box (Teal)
-      const rightBox = new fabric.Rect({
-        left: 560,
-        top: 220,
-        width: 430,
-        height: 500,
-        fill: 'rgba(74, 144, 164, 0.12)',
-        rx: 20,
-        ry: 20,
-        stroke: 'rgba(74, 144, 164, 0.3)',
-        strokeWidth: 2
-      });
-      canvas.add(rightBox);
-      
-      const rightLabel = new fabric.Text('🌟 OPTION B', {
-        left: 775,
-        top: 260,
-        fontSize: 22,
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        fill: '#4A90A4',
-        originX: 'center'
-      });
-      canvas.add(rightLabel);
-      
-      // VS Circle
-      const vsCircle = new fabric.Circle({
-        left: canvasWidth/2,
-        top: 470,
-        radius: 35,
-        fill: currentAccent,
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(vsCircle);
-      
-      const vsText = new fabric.Text('VS', {
-        left: canvasWidth/2,
-        top: 470,
-        fontSize: 22,
-        fontFamily: 'Poppins',
-        fontWeight: '800',
-        fill: '#1a1a2e',
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(vsText);
-    }
-    
-    function renderGridTemplate() {
-      const title = document.getElementById('mainTitle').value;
-      const items = getListItems();
-      
-      // Title
-      const titleText = new fabric.Textbox(title, {
-        left: canvasWidth/2,
-        top: 120,
-        width: 900,
-        fontSize: 46,
-        fontFamily: 'Playfair Display',
-        fontWeight: '800',
-        fill: currentAccent,
-        textAlign: 'center',
-        originX: 'center'
-      });
-      canvas.add(titleText);
-      
-      // Grid of cards
-      const cols = 2;
-      const cardWidth = 430;
-      const cardHeight = 180;
-      const startX = 90;
-      const startY = 220;
-      const gapX = 40;
-      const gapY = 20;
-      
-      items.slice(0, 6).forEach((item, index) => {
-        const col = index % cols;
-        const row = Math.floor(index / cols);
-        const x = startX + col * (cardWidth + gapX);
-        const y = startY + row * (cardHeight + gapY);
-        
-        const card = new fabric.Rect({
-          left: x,
-          top: y,
-          width: cardWidth,
-          height: cardHeight,
-          fill: 'rgba(39, 174, 96, 0.1)',
-          rx: 18,
-          ry: 18,
-          stroke: 'rgba(39, 174, 96, 0.25)',
-          strokeWidth: 2
-        });
-        canvas.add(card);
-        
-        const cardText = new fabric.Textbox(item, {
-          left: x + cardWidth/2,
-          top: y + cardHeight/2,
-          width: cardWidth - 40,
-          fontSize: 20,
-          fontFamily: 'Poppins',
-          fill: 'white',
-          textAlign: 'center',
-          originX: 'center',
-          originY: 'center'
-        });
-        canvas.add(cardText);
-      });
-    }
-    
-    function renderCTATemplate() {
-      const title = document.getElementById('mainTitle').value;
-      const subtitle = document.getElementById('subtitle').value;
-      const emoji = document.getElementById('emojiInput').value;
-      
-      // Emoji
-      const emojiText = new fabric.Text(emoji || '💾', {
-        left: canvasWidth/2,
-        top: 200,
-        fontSize: 100,
-        originX: 'center'
-      });
-      canvas.add(emojiText);
-      
-      // Title
-      const titleText = new fabric.Textbox(title, {
-        left: canvasWidth/2,
-        top: 400,
-        width: 900,
-        fontSize: 52,
-        fontFamily: 'Playfair Display',
-        fontWeight: '800',
-        fill: 'white',
-        textAlign: 'center',
-        originX: 'center',
-        lineHeight: 1.2
-      });
-      canvas.add(titleText);
-      
-      // Subtitle
-      const subtitleText = new fabric.Textbox(subtitle, {
-        left: canvasWidth/2,
-        top: 550,
-        width: 800,
-        fontSize: 26,
-        fontFamily: 'Poppins',
-        fill: 'rgba(255,255,255,0.85)',
-        textAlign: 'center',
-        originX: 'center',
-        lineHeight: 1.5
-      });
-      canvas.add(subtitleText);
-      
-      // CTA Box
-      const ctaBox = new fabric.Rect({
-        left: canvasWidth/2,
-        top: 750,
-        width: 600,
-        height: 80,
-        fill: currentAccent,
-        rx: 20,
-        ry: 20,
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(ctaBox);
-      
-      const ctaText = new fabric.Text('📩 DM for more tips', {
-        left: canvasWidth/2,
-        top: 750,
-        fontSize: 26,
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        fill: '#1a1a2e',
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(ctaText);
-      
-      // Action items
-      const actions = ['📤 Share', '💬 Comment', '➕ Follow'];
-      actions.forEach((action, index) => {
-        const actionText = new fabric.Text(action, {
-          left: 200 + index * 280,
-          top: 900,
-          fontSize: 22,
-          fontFamily: 'Poppins',
-          fontWeight: '600',
-          fill: 'rgba(255,255,255,0.8)'
-        });
-        canvas.add(actionText);
-      });
-    }
-    
-    function renderStatsTemplate() {
-      const title = document.getElementById('mainTitle').value;
-      const subtitle = document.getElementById('subtitle').value;
-      
-      // Title
-      const titleText = new fabric.Textbox(title, {
-        left: canvasWidth/2,
-        top: 150,
-        width: 900,
-        fontSize: 42,
-        fontFamily: 'Playfair Display',
-        fontWeight: '800',
-        fill: currentAccent,
-        textAlign: 'center',
-        originX: 'center'
-      });
-      canvas.add(titleText);
-      
-      // Big stat number
-      const statNumber = new fabric.Text('85%', {
-        left: canvasWidth/2,
-        top: 450,
-        fontSize: 180,
-        fontFamily: 'Playfair Display',
-        fontWeight: '800',
-        fill: 'white',
-        originX: 'center',
-        originY: 'center'
-      });
-      canvas.add(statNumber);
-      
-      // Stat description
-      const statDesc = new fabric.Textbox(subtitle, {
-        left: canvasWidth/2,
-        top: 650,
-        width: 800,
-        fontSize: 28,
-        fontFamily: 'Poppins',
-        fill: 'rgba(255,255,255,0.85)',
-        textAlign: 'center',
-        originX: 'center',
-        lineHeight: 1.4
-      });
-      canvas.add(statDesc);
-    }
-    
-    function renderQuoteTemplate() {
-      const title = document.getElementById('mainTitle').value;
-      const subtitle = document.getElementById('subtitle').value;
-      
-      // Quote marks
-      const quoteOpen = new fabric.Text('"', {
-        left: 100,
-        top: 250,
-        fontSize: 200,
-        fontFamily: 'Playfair Display',
-        fill: currentAccent,
-        opacity: 0.3
-      });
-      canvas.add(quoteOpen);
-      
-      // Quote text
-      const quoteText = new fabric.Textbox(title, {
-        left: canvasWidth/2,
-        top: canvasHeight/2 - 50,
-        width: 850,
-        fontSize: 42,
-        fontFamily: 'Playfair Display',
-        fontWeight: '700',
-        fontStyle: 'italic',
-        fill: 'white',
-        textAlign: 'center',
-        originX: 'center',
-        originY: 'center',
-        lineHeight: 1.4
-      });
-      canvas.add(quoteText);
-      
-      // Attribution
-      const attribution = new fabric.Text(`— ${subtitle}`, {
-        left: canvasWidth/2,
-        top: canvasHeight/2 + 150,
-        fontSize: 24,
-        fontFamily: 'Poppins',
-        fill: currentAccent,
-        originX: 'center'
-      });
-      canvas.add(attribution);
-    }
-    
-    function drawFooter() {
-      const handle = document.getElementById('handleText').value;
-      const slideNum = document.getElementById('slideNumber').value;
-      
-      if (slideNum) {
-        const slideNumText = new fabric.Text(slideNum, {
-          left: canvasWidth/2,
-          top: canvasHeight - 80,
-          fontSize: 16,
-          fontFamily: 'Poppins',
-          fill: 'rgba(255,255,255,0.4)',
-          originX: 'center',
-          letterSpacing: 200
-        });
-        canvas.add(slideNumText);
-      }
-      
-      const handleText = new fabric.Text(handle, {
-        left: canvasWidth/2,
-        top: canvasHeight - 45,
-        fontSize: 18,
-        fontFamily: 'Poppins',
-        fill: 'rgba(255,255,255,0.5)',
-        originX: 'center'
-      });
-      canvas.add(handleText);
-    }
-    
-    // ==================== EDITOR HELPERS ====================
-    function updateEditorForTemplate() {
-      const listSection = document.getElementById('listSection');
-      listSection.style.display = ['list', 'grid'].includes(currentTemplate) ? 'block' : 'none';
-    }
-    
-    function updateContent() {
-      renderTemplate();
-    }
-    
-    function updateTypography() {
-      renderTemplate();
-    }
-    
-    function syncFormFromCanvas() {
-      // Sync edited text back to form (for persistence)
-    }
-    
-    function getListItems() {
-      const items = [];
-      document.querySelectorAll('#listItems input').forEach(input => {
-        if (input.value.trim()) items.push(input.value.trim());
-      });
-      return items.length ? items : ['Item 1', 'Item 2', 'Item 3'];
-    }
-    
-    function addListItem() {
-      const container = document.getElementById('listItems');
-      const row = document.createElement('div');
-      row.className = 'list-item-row';
-      row.innerHTML = `
-        <input type="text" class="form-control" value="New item" onchange="updateContent()">
-        <button class="btn-icon" onclick="removeListItem(this)">×</button>
-      `;
-      container.appendChild(row);
-      updateContent();
-    }
-    
-    function removeListItem(btn) {
-      btn.parentElement.remove();
-      updateContent();
-    }
-    
-    // ==================== COLORS ====================
-    function setBgColor(el) {
-      document.querySelectorAll('.color-row .color-swatch').forEach(s => s.classList.remove('active'));
-      el.classList.add('active');
-      currentBg = el.dataset.bg;
-      renderTemplate();
-    }
-    
-    function setCustomBg(color) {
-      currentBg = 'custom';
-      // Store custom color and re-render
-      renderTemplate();
-    }
-    
-    function setAccentColor(el) {
-      el.parentElement.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
-      el.classList.add('active');
-      currentAccent = el.dataset.accent;
-      renderTemplate();
-    }
-    
-    // ==================== CANVAS CONTROLS ====================
-    function updateCanvasZoom() {
-      const wrapper = document.getElementById('canvasWrapper');
-      wrapper.style.transform = `scale(${zoom})`;
-      wrapper.style.transformOrigin = 'top center';
-      document.getElementById('zoomLevel').textContent = Math.round(zoom * 100) + '%';
-    }
-    
-    function zoomIn() {
-      zoom = Math.min(1, zoom + 0.1);
-      updateCanvasZoom();
-    }
-    
-    function zoomOut() {
-      zoom = Math.max(0.2, zoom - 0.1);
-      updateCanvasZoom();
-    }
-    
-    function changeCanvasSize() {
-      const size = document.getElementById('canvasSize').value.split('x');
-      canvasWidth = parseInt(size[0]);
-      canvasHeight = parseInt(size[1]);
-      canvas.setDimensions({ width: canvasWidth, height: canvasHeight });
-      renderTemplate();
-    }
-    
-    function resetCanvas() {
-      document.getElementById('badgeText').value = '🚨 Myth Alert';
-      document.getElementById('mainTitle').value = '3 Things TikTok Gets WRONG About Autism';
-      document.getElementById('subtitle').value = 'A new study found over 50% of autism content on social media is misleading.';
-      document.getElementById('emojiInput').value = '🚨';
-      renderTemplate();
-      showToast('Canvas reset!');
-    }
-    
-    // ==================== SLIDES ====================
-    function updateSlideTabs() {
-      const container = document.getElementById('slideTabs');
-      container.innerHTML = '';
-      slides.forEach((_, index) => {
-        const btn = document.createElement('button');
-        btn.className = 'slide-tab' + (index === currentSlide ? ' active' : '');
-        btn.textContent = index + 1;
-        btn.onclick = () => switchSlide(index);
-        container.appendChild(btn);
-      });
-      const addBtn = document.createElement('button');
-      addBtn.className = 'slide-tab add';
-      addBtn.textContent = '+';
-      addBtn.onclick = addSlide;
-      container.appendChild(addBtn);
-    }
-    
-    function switchSlide(index) {
-      // Save current slide state
-      slides[currentSlide] = getCurrentSlideData();
-      currentSlide = index;
-      loadSlideData(slides[currentSlide]);
-      updateSlideTabs();
-      renderTemplate();
-    }
-    
-    function addSlide() {
-      slides.push({});
-      currentSlide = slides.length - 1;
-      updateSlideTabs();
-      renderTemplate();
-    }
-    
-    function removeCurrentSlide() {
-      if (slides.length <= 1) {
-        showToast('Cannot remove the only slide', 'error');
-        return;
-      }
-      slides.splice(currentSlide, 1);
-      currentSlide = Math.min(currentSlide, slides.length - 1);
-      updateSlideTabs();
-      renderTemplate();
-      showToast('Slide removed');
-    }
-    
-    function getCurrentSlideData() {
-      return {
-        template: currentTemplate,
-        badge: document.getElementById('badgeText').value,
-        title: document.getElementById('mainTitle').value,
-        subtitle: document.getElementById('subtitle').value,
-        emoji: document.getElementById('emojiInput').value
-      };
-    }
-    
-    function loadSlideData(data) {
-      if (!data || Object.keys(data).length === 0) return;
-      if (data.template) {
-        currentTemplate = data.template;
-        document.querySelectorAll('.template-card').forEach(c => {
-          c.classList.toggle('active', c.dataset.template === currentTemplate);
-        });
-      }
-      if (data.badge) document.getElementById('badgeText').value = data.badge;
-      if (data.title) document.getElementById('mainTitle').value = data.title;
-      if (data.subtitle) document.getElementById('subtitle').value = data.subtitle;
-      if (data.emoji) document.getElementById('emojiInput').value = data.emoji;
-    }
-    
-    // ==================== EXPORT ====================
-    function downloadPNG() {
-      showLoading(true);
-      setTimeout(() => {
-        const dataURL = canvas.toDataURL({
-          format: 'png',
-          quality: 1,
-          multiplier: 1
-        });
-        
-        const link = document.createElement('a');
-        const date = new Date().toISOString().split('T')[0];
-        link.download = `spectrum-unlocked-${currentTemplate}-slide${currentSlide + 1}-${date}.png`;
-        link.href = dataURL;
-        link.click();
-        
-        showLoading(false);
-        showToast('PNG downloaded!');
-      }, 100);
-    }
-    
-    async function downloadAllSlides() {
-      showLoading(true);
-      const originalSlide = currentSlide;
-      
-      for (let i = 0; i < slides.length; i++) {
-        switchSlide(i);
-        await new Promise(r => setTimeout(r, 200));
-        
-        const dataURL = canvas.toDataURL({ format: 'png', quality: 1 });
-        const link = document.createElement('a');
-        const date = new Date().toISOString().split('T')[0];
-        link.download = `spectrum-unlocked-slide${i + 1}-${date}.png`;
-        link.href = dataURL;
-        link.click();
-        
-        await new Promise(r => setTimeout(r, 300));
-      }
-      
-      switchSlide(originalSlide);
-      showLoading(false);
-      showToast(`Downloaded ${slides.length} slides!`);
-    }
-    
-    function copyCaption() {
-      const caption = document.getElementById('captionPreview').textContent;
-      navigator.clipboard.writeText(caption).then(() => {
-        showToast('Instagram caption copied!');
-      }).catch(() => {
-        // Fallback for older browsers
-        const textarea = document.createElement('textarea');
-        textarea.value = caption;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        showToast('Caption copied!');
-      });
-    }
-    
-    function copyTikTokCaption() {
-      const caption = document.getElementById('tiktokCaption').textContent;
-      navigator.clipboard.writeText(caption).then(() => {
-        showToast('TikTok caption copied!');
-      }).catch(() => {
-        const textarea = document.createElement('textarea');
-        textarea.value = caption;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        showToast('TikTok caption copied!');
-      });
-    }
-    
-    // ==================== DAY SELECTOR ====================
-    function loadDayData() {
-      // Full 60-day calendar data
-      dayData = {
-        1: { title: '3 Things TikTok Gets WRONG About Autism', folder: 'day-01-tiktok-myths', slides: 5, igCaption: "🚨 STOP scrolling TikTok for autism \"facts.\"\n\nA new study just found that over 50% of autism/ADHD content on social media is MISLEADING.\n\nHere are 3 myths that need to die 👇\n\n💾 Save this and share it with someone who needs accurate information.", igHashtags: "#autism #autismawareness #autismmom #autismfamily #neurodiversity #autismacceptance #autismfacts #mythbusters #autismparenting #autismcommunity", tiktokCaption: "🚨 3 things TikTok gets WRONG about autism (new study says 50% of content is misleading!)\n\n#autism #autismawareness #fyp #autismfacts #mythbusters" },
-        2: { title: 'Acceptance vs. Awareness — Why Language Matters', folder: 'day-02-acceptance-vs-awareness', slides: 5, igCaption: "🛑 Stop saying \"autism awareness.\"\n\nThe autistic community has moved on. Here's why ACCEPTANCE matters more.\n\nThe progression: Awareness → Acceptance → Inclusion → Appreciation\n\n💾 Save & share to spread acceptance.", igHashtags: "#autism #autismacceptance #autismawareness #neurodiversity #autismcommunity #actuallyautistic #differentnotless #autismparenting", tiktokCaption: "🛑 Why the autism community stopped saying \"awareness\"\n\nACCEPTANCE > AWARENESS\n\n#autism #autismacceptance #neurodivergent #fyp" },
-        3: { title: 'Glass Child Syndrome', folder: 'day-03-glass-child', slides: 6, igCaption: "🪟 Is your neurotypical child becoming invisible?\n\nLet's talk about GLASS CHILD SYNDROME.\n\nWhen one child has high support needs, their siblings often fade into the background.\n\nTag a sibling parent who needs this 💙", igHashtags: "#autism #autismfamily #autismparenting #siblings #glasschildsyndrome #specialneeds #autismmom #autismdad", tiktokCaption: "🪟 Is your NT child becoming INVISIBLE?\n\nGlass Child Syndrome: when siblings fade into the background.\n\n#autism #autismparenting #siblings #fyp" },
-        4: { title: '5 Sensory Hacks That Actually Work', folder: 'day-04-sensory-hacks', slides: 7, igCaption: "🎧😎🧸 5 SENSORY HACKS that actually work!\n\nMeltdown prevention starts here ⬇️\n\n1️⃣ Noise-canceling headphones\n2️⃣ Sunglasses indoors\n3️⃣ Fidget tools\n4️⃣ Visual timers\n5️⃣ Calm-down corner\n\n💾 Save this for your sensory toolkit!", igHashtags: "#autism #sensoryfriendly #sensoryprocessing #autismparenting #autismhacks #autismtips #occupationaltherapy", tiktokCaption: "🎧😎🧸 5 Sensory hacks that ACTUALLY work (OT-approved!)\n\n#autism #sensoryfriendly #autismhacks #fyp" },
-        5: { title: 'Late-Diagnosed Autism in Women', folder: 'day-05-late-diagnosis', slides: 5, igCaption: "💜 450% increase in adult autism diagnoses (ages 26-34).\n\nMost of them? Women.\n\nFor years, girls learned to mask, study social rules, and hide their struggles.\n\nIt's never too late to understand yourself.\n\n💾 Save & share for someone who needs this.", igHashtags: "#latediagnosedautistic #unmaskingautism #autisticwomen #autisticburnout #highmaskingautism #autism #neurodivergent", tiktokCaption: "💜 450% spike in adult autism diagnoses — most are WOMEN.\n\n#latediagnosedautistic #unmaskingautism #autisticwomen #fyp" },
-        6: { title: 'Autistic Burnout: Signs & Prevention', folder: 'day-06-burnout', slides: 5, igCaption: "🔥 AUTISTIC BURNOUT is real. And it's not what you think.\n\nIt's NOT laziness or just depression.\n\nIt IS neurological exhaustion from navigating a neurotypical world.\n\n💙 You're not broken. You're exhausted.\n\n💾 Save for when you or someone you love needs this.", igHashtags: "#autisticburnout #autism #autismawareness #autismparenting #neurodivergent #actuallyautistic #mentalhealth", tiktokCaption: "🔥 Autistic burnout is NOT laziness.\n\nSome experience first burnout at AGE 6.\n\n#autisticburnout #autism #neurodivergent #fyp" },
-        7: { title: 'Autism Acceptance Month Kickoff', folder: 'day-07-april-kickoff', slides: 4, igCaption: "♾️💙 IT'S AUTISM ACCEPTANCE MONTH! 💙♾️\n\nApril is here. A whole month of education, support, and celebration.\n\n➕ Follow so you don't miss anything\n🔔 Turn on notifications\n💾 Save this!\n\nSee you tomorrow for World Autism Acceptance Day! 💙", igHashtags: "#AutismAcceptanceMonth #autism #autismawareness #autismacceptance #april #neurodiversity #autismcommunity", tiktokCaption: "♾️💙 AUTISM ACCEPTANCE MONTH IS HERE!\n\nTurn on notifications — tomorrow is WORLD AUTISM DAY! 🌍\n\n#AutismAcceptanceMonth #autism #april #fyp" },
-        8: { title: 'World Autism Acceptance Day', folder: 'day-08-waad', slides: 6, igCaption: "♾️💙 WORLD AUTISM ACCEPTANCE DAY 💙♾️\n\nApril 2, 2026\n\nUN Theme: \"Autism and Humanity — Every Life Has Value\"\n\nToday we don't just spread awareness. We celebrate humanity.\n\n💙 Share this far and wide. Let's make today mean something.", igHashtags: "#WorldAutismDay #AutismAcceptance #AutismAndHumanity #WAAD2026 #autism #autismawareness #neurodiversity #differentnotless", tiktokCaption: "♾️💙 WORLD AUTISM ACCEPTANCE DAY 💙♾️\n\nUN Theme: \"Autism and Humanity — Every Life Has Value\"\n\n#WorldAutismDay #AutismAcceptance #WAAD2026 #fyp" },
-        9: { title: '5 Myths About Autism That Need to Die', folder: 'day-09-myths-die', slides: 7, igCaption: "💀 5 MYTHS about autism that need to DIE:\n\nYou've probably believed at least one of these ⬇️\n\n❌ Myth #1: \"Vaccines cause autism\"\n✅ Debunked by countless studies.\n\n❌ Myth #2: \"Autistic people lack empathy\"\n✅ Many feel TOO much empathy.\n\n❌ Myth #3: \"But you don't look autistic\"\n✅ Autism has no \"look.\"\n\n❌ Myth #4: \"Only boys can be autistic\"\n✅ Girls are massively underdiagnosed.\n\n❌ Myth #5: \"Autism can be cured\"\n✅ It's a lifelong neurotype, not a disease.\n\nWhich myth did YOU used to believe? 👇\n\n💾 Save this to share with someone who needs it", igHashtags: "#autism #autismmyths #autismawareness #autismacceptance #neurodiversity #actuallyautistic #autismfacts #autismcommunity #autismparenting #autismmom #autismdad #specialneeds #autismeducation #mythbusters", tiktokCaption: "💀 5 autism myths that need to DIE\n\nWhich one did you used to believe? 👇\n\n#autism #autismmyths #autismawareness #fyp #actuallyautistic" },
-        10: { title: 'Neurodiversity-Affirming IEP Accommodations', folder: 'day-10-iep', slides: 6, igCaption: "📋 NEURODIVERSITY-AFFIRMING IEP accommodations ✨\n\nYour child's IEP shouldn't teach them to mask. Here are accommodations that actually SUPPORT autistic learners ⬇️\n\n🎧 SENSORY SUPPORTS\n✓ Noise-canceling headphones\n✓ Sensory breaks as NEEDED (not earned)\n✓ Fidgets without restriction\n✓ Movement breaks every 20-30 min\n\n💬 COMMUNICATION\n✓ AAC always accessible\n✓ Written instructions\n✓ Extra processing time\n✓ NO forced eye contact\n\n📚 ACADEMIC FLEXIBILITY\n✓ Extended time on tests\n✓ Reduced homework\n✓ Alternative formats\n✓ Quiet testing space\n\n🤝 SOCIAL & EMOTIONAL\n✓ Safe person when overwhelmed\n✓ Break card (no questions asked)\n✓ Option for solo work\n✓ Transition warnings\n\n💾 Save this for your next IEP meeting!\n\nWhat accommodation changed everything for YOUR child? 👇\n\n📩 DM \"IEP\" for more advocacy tips", igHashtags: "#IEP #IEPmeeting #specialeducation #autism #autismparenting #autismadvocacy #neurodiversity #504plan #autismmom #autismdad #schoolaccommodations #autismfamily #educationadvocacy #specialneeds", tiktokCaption: "📋 IEP accommodations that actually SUPPORT your child (not teach them to mask)\n\nDM \"IEP\" for more tips!\n\n#IEP #autism #specialeducation #fyp #autismparenting #autismadvocacy" },
-        11: { title: 'High-Masking Autism: The Hidden Struggle', folder: 'day-11-masking', slides: 6, igCaption: "🎭 HIGH-MASKING AUTISM: The Hidden Struggle\n\n\"They look fine. They're falling apart inside.\"\n\nWhat is masking? ⬇️\n\nMasking is when autistic people suppress their natural traits to appear neurotypical.\n\n💔 THE COST:\n• Chronic exhaustion\n• Higher anxiety & depression\n• Loss of identity\n• Delayed diagnosis\n\nYou shouldn't have to perform to be accepted.\n\nDid this resonate? Share your experience 👇", igHashtags: "#highmaskingautism #autisticmasking #unmaskingautism #actuallyautistic #autisticwomen #latediagnosedautistic #autisticburnout #autism #neurodiversity #autismacceptance #autismcommunity", tiktokCaption: "🎭 High-masking autism: they look fine, but they're exhausted inside\n\nDid this resonate? 💜\n\n#highmaskingautism #unmaskingautism #actuallyautistic #fyp #autism" },
-        12: { title: 'Self-Care for Autism Parents', folder: 'day-12-selfcare', slides: 6, igCaption: "🧘‍♀️ SELF-CARE for autism parents that actually works\n\nNot bubble baths. REAL strategies ⬇️\n\n⏰ MICRO-BREAKS\nYou don't need an hour. Small moments add up.\n• 2 min alone in the bathroom\n• 5 min with headphones on\n• Deep breaths in the car\n• Coffee while it's still HOT\n\n🤝 FIND YOUR PEOPLE\nSupport groups aren't weakness — they're survival.\n\n🚫 SET BOUNDARIES\n\"No\" is a complete sentence.\n\n🙋 ASK FOR HELP\nThis is NOT weakness. It's wisdom.\n\nYou can't pour from an empty cup. 💕\n\nWhat's ONE thing you'll do for yourself today? 👇", igHashtags: "#autismparent #selfcare #autismmom #autismdad #parentburnout #caregiversupport #autism #specialneedsparenting #autismfamily #mentalhealthmatters #autismlife", tiktokCaption: "🧘‍♀️ Self-care for autism parents (not bubble baths — real stuff)\n\nWhat's your go-to? 💕\n\n#autism #selfcare #autismparent #fyp #parentburnout" },
-        13: { title: 'The ABA Controversy: What Parents Need to Know', folder: 'day-13-aba', slides: 6, igCaption: "🤔 THE ABA CONTROVERSY: What parents need to know\n\nIs ABA right for your child? Let's look at both sides ⬇️\n\n📋 WHAT IS ABA?\nApplied Behavior Analysis — the most researched autism intervention.\n\n⚠️ THE CONCERNS (from autistic adults):\n• Historical focus on compliance over wellbeing\n• Teaching masking, not acceptance\n• Suppressing harmless stims\n\n✓ THE OTHER SIDE:\n• Modern \"naturalistic\" ABA looks different\n• Some providers are neurodiversity-affirming\n• Can help with safety skills & communication\n\n❓ QUESTIONS TO ASK:\n• What's your approach to stimming?\n• How do you handle \"no\"?\n• Who sets the goals?\n\nYou know your child best. 💙\n\nWhat's your experience? Share (respectfully) 👇", igHashtags: "#ABA #ABAtherapy #autism #autismparenting #autismadvocacy #neurodiversity #actuallyautistic #autismcommunity #autismdebate #autismresources", tiktokCaption: "🤔 The ABA debate: here's both sides so you can decide\n\nWhat's your experience?\n\n#ABA #autism #autismparenting #fyp #neurodiversity" },
-        14: { title: 'Visual Supports That Actually Work', folder: 'day-14-visual', slides: 6, igCaption: "📋 VISUAL SUPPORTS that actually work!\n\nStop guessing. Start using these proven strategies ⬇️\n\n📅 VISUAL SCHEDULES\nShows what's happening and WHEN\n\n⏰ VISUAL TIMERS\nMakes time VISIBLE (not abstract)\n\n1️⃣➡️2️⃣ FIRST-THEN BOARDS\nSimple motivation tool\n\n🔘 CHOICE BOARDS\nEmpowers decision-making\n\nSmall tools, BIG impact! 💾\n\n📩 DM \"VISUALS\" for free templates\n\nWhich visual support works best for YOUR family? 👇", igHashtags: "#visualsupports #autism #autismparenting #autismresources #visualschedule #occupationaltherapy #autismmom #autismdad #autismtools #specialneeds #speechtherapy #AAC #autismtips", tiktokCaption: "📋 Visual supports that ACTUALLY work\n\nDM \"VISUALS\" for free templates! 💾\n\n#autism #visualsupports #autismparenting #fyp #autismtips" },
-        15: { title: 'Supporting Your Child Through Meltdowns', folder: 'day-15-meltdown', slides: 6, igCaption: "🌪️ Supporting your child through MELTDOWNS (during & after)\n\nIt's NOT a tantrum. Here's the difference ⬇️\n\n😤 TANTRUM:\n• Goal-oriented\n• Checks for audience\n• Can stop if need is met\n\n🌪️ MELTDOWN:\n• Overwhelm response\n• Neurological crisis\n• Can't just \"stop\"\n• NOT manipulation\n\n❌ DURING — DON'T:\n• Yell or raise voice\n• Demand eye contact\n• Say \"calm down\"\n\n✅ DURING — DO:\n• Stay calm (regulate yourself first)\n• Reduce sensory input\n• Give space if safe\n• Just BE there\n\n💙 AFTER:\n• Give recovery time\n• Don't lecture or punish\n• Reconnect when ready\n\nMeltdowns aren't misbehavior. They're a sign your child needs SUPPORT. 💙\n\n💾 Save this for when you need it\n\nWhat helps YOUR child? 👇", igHashtags: "#autism #meltdown #autismparenting #autismmeltdown #autismmom #autismdad #sensoryoverload #autismfamily #autismsupport #specialneeds #autismacceptance", tiktokCaption: "🌪️ Meltdown ≠ tantrum. Here's the difference + what to do\n\nWhat helps your child? 💙\n\n#autism #meltdown #autismparenting #fyp #autismsupport" },
-        // Days 16-60 abbreviated for space
-        16: { title: 'Feeding Challenges', folder: 'day-16-feeding', slides: 6 },
-        17: { title: 'Sleep Issues', folder: 'day-17-sleep', slides: 6 },
-        18: { title: 'Autism in Girls', folder: 'day-18-girls', slides: 6 },
-        19: { title: 'Community Spotlight', folder: 'day-19-community', slides: 4 },
-        20: { title: 'Potty Training', folder: 'day-20-potty', slides: 6 },
-        21: { title: 'AuDHD: Autism + ADHD', folder: 'day-21-audhd', slides: 6 },
-        22: { title: 'AAC and Communication', folder: 'day-22-aac', slides: 6 },
-        23: { title: 'School Accommodations', folder: 'day-23-accommodations', slides: 6 },
-        24: { title: 'Autism and Anxiety', folder: 'day-24-anxiety', slides: 6 },
-        25: { title: 'Events & Respite', folder: 'day-25-holidays-respite', slides: 6 },
-        26: { title: 'Week 3 Recap', folder: 'day-26-week3-recap', slides: 6 },
-        27: { title: 'Autism in Teens', folder: 'day-27-autism-teens', slides: 6 },
-        28: { title: 'Nature and Autism', folder: 'day-28-nature-autism', slides: 6 },
-        29: { title: 'Building Friendships', folder: 'day-29-building-friendships', slides: 6 },
-        30: { title: 'Late Diagnosis Adults', folder: 'day-30-late-diagnosis', slides: 6 },
-        31: { title: 'Glass Child Revisited', folder: 'day-31-glass-child', slides: 6 },
-        32: { title: 'Spring Weekend Activities', folder: 'day-32-weekend-spring', slides: 6 },
-        33: { title: 'April Reflection', folder: 'day-33-monthly-reflection', slides: 6 },
-        34: { title: 'After Autism Month', folder: 'day-34-transitioning', slides: 6 },
-        35: { title: 'Resource Toolkit', folder: 'day-35-resources-toolkit', slides: 7 },
-        36: { title: 'End of Autism Month', folder: 'day-36-end-autism-month-hero', slides: 7 },
-        37: { title: 'May Goals', folder: 'day-37-may-goals', slides: 5 },
-        38: { title: 'Summer Prep', folder: 'day-38-summer-prep', slides: 6 },
-        39: { title: 'Occupational Therapy', folder: 'day-39-therapy-ot', slides: 6 },
-        40: { title: 'Speech Therapy', folder: 'day-40-therapy-speech', slides: 6 },
-        41: { title: 'Physical Therapy', folder: 'day-41-physical-therapy', slides: 6 },
-        42: { title: 'Insurance Coverage', folder: 'day-42-insurance-coverage', slides: 6 },
-        43: { title: 'Extended Family Education', folder: 'day-43-family-education', slides: 6 },
-        44: { title: 'Marriage & Partnership', folder: 'day-44-marriage-autism', slides: 6 },
-        45: { title: 'Self-Care Deep Dive', folder: 'day-45-self-care', slides: 6 },
-        46: { title: 'Support System', folder: 'day-46-support-system', slides: 6 },
-        47: { title: 'Summer Camp Guide', folder: 'day-47-summer-camps', slides: 6 },
-        48: { title: 'Travel with Autism', folder: 'day-48-travel-autism', slides: 6 },
-        49: { title: 'ESY & Year-Round School', folder: 'day-49-year-round-school', slides: 6 },
-        50: { title: 'Building Independence', folder: 'day-50-building-independence', slides: 6 },
-        51: { title: 'Sensory Deep Dive', folder: 'day-51-sensory-deep-dive', slides: 6 },
-        52: { title: 'Executive Function', folder: 'day-52-executive-function', slides: 6 },
-        53: { title: 'Autism & Technology', folder: 'day-53-autism-technology', slides: 6 },
-        54: { title: 'Transitioning to Adulthood', folder: 'day-54-adulthood-transition', slides: 6 },
-        55: { title: 'Employment & Autism', folder: 'day-55-employment-autism', slides: 6 },
-        56: { title: 'Self-Advocacy Skills', folder: 'day-56-self-advocacy', slides: 6 },
-        57: { title: 'Acceptance at Work/School', folder: 'day-57-acceptance-work-school', slides: 6 },
-        58: { title: 'Mental Health & Autism', folder: 'day-58-mental-health', slides: 6 },
-        59: { title: 'Autistic Joy', folder: 'day-59-autistic-joy', slides: 6 },
-        60: { title: 'The Journey Continues', folder: 'day-60-journey-continues', slides: 7 }
-      };
-      
-      populateDayGrid();
-    }
-    
-    function populateDayGrid() {
-      const grid = document.getElementById('dayGrid');
-      grid.innerHTML = '';
-      
-      Object.entries(dayData).forEach(([day, data]) => {
-        const card = document.createElement('div');
-        card.className = 'day-card';
-        card.innerHTML = `
-          <div class="day-num">Day ${day}</div>
-          <div class="day-title">${data.title}</div>
-        `;
-        card.onclick = () => loadDayContent(day);
-        grid.appendChild(card);
-      });
-    }
-    
-    function openDaySelector() {
-      document.getElementById('dayModal').classList.add('active');
-      document.getElementById('daySearch').value = '';
-      filterDays();
-    }
-    
-    function closeDaySelector() {
-      document.getElementById('dayModal').classList.remove('active');
-    }
-    
-    function filterDays() {
-      const search = document.getElementById('daySearch').value.toLowerCase();
-      document.querySelectorAll('.day-card').forEach(card => {
-        const title = card.querySelector('.day-title').textContent.toLowerCase();
-        const num = card.querySelector('.day-num').textContent.toLowerCase();
-        card.style.display = (title.includes(search) || num.includes(search)) ? 'block' : 'none';
-      });
-    }
-    
-    async function loadDayContent(dayNum) {
-      closeDaySelector();
-      showLoading(true);
-      
-      const data = dayData[dayNum];
-      if (!data) {
-        showLoading(false);
-        showToast('Day not found', 'error');
-        return;
-      }
-      
-      // Reset slides
-      slides = [];
-      for (let i = 0; i < data.slides; i++) {
-        slides.push({
-          title: i === 0 ? data.title : `Slide ${i + 1}`,
-          subtitle: 'Content loaded from calendar'
-        });
-      }
-      
-      currentSlide = 0;
-      document.getElementById('mainTitle').value = data.title;
-      document.getElementById('slideNumber').value = `1 of ${data.slides}`;
-      
-      // Populate captions if available
-      if (data.igCaption) {
-        document.getElementById('captionPreview').textContent = data.igCaption + '\n\n' + (data.igHashtags || '');
-      }
-      if (data.tiktokCaption) {
-        document.getElementById('tiktokCaption').textContent = data.tiktokCaption;
-      }
-      
-      // Try to detect template type from day content
-      const title = data.title.toLowerCase();
-      if (title.includes('myth') || title.includes('wrong')) {
-        setTemplateType('myth');
-      } else if (title.includes('vs') || title.includes('compare')) {
-        setTemplateType('vs');
-      } else if (title.includes('list') || title.includes('hack') || title.includes('tip') || title.includes('iep') || title.includes('accommodation')) {
-        setTemplateType('list');
-      } else if (data.slides === 1 || title.includes('cta')) {
-        setTemplateType('cta');
-      } else {
-        setTemplateType('cover');
-      }
-      
-      updateSlideTabs();
-      renderTemplate();
-      
-      showLoading(false);
-      showToast(`Loaded Day ${dayNum}: ${data.title}`);
-    }
-    
-    function setTemplateType(type) {
-      currentTemplate = type;
-      document.querySelectorAll('.template-card').forEach(c => {
-        c.classList.toggle('active', c.dataset.template === type);
-      });
-      updateEditorForTemplate();
-    }
-    
-    // ==================== UI HELPERS ====================
-    function showToast(message, type = 'success') {
-      const toast = document.getElementById('toast');
-      toast.textContent = message;
-      toast.className = 'toast show' + (type === 'error' ? ' error' : '');
-      setTimeout(() => toast.classList.remove('show'), 3000);
-    }
-    
-    function showLoading(show) {
-      document.getElementById('loading').classList.toggle('show', show);
-    }
-    
-    function toggleSidebar(side) {
-      const sidebar = side === 'left' ? document.getElementById('sidebarLeft') : document.getElementById('sidebarRight');
-      sidebar.classList.toggle('mobile-open');
-    }
-    
-    // Close modal on escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeDaySelector();
+    const card = new fabric.Rect({
+      left: x, top: y, width: 420, height: 170,
+      fill: 'rgba(39,174,96,0.1)',
+      stroke: 'rgba(39,174,96,0.25)', strokeWidth: 2,
+      rx: 16, ry: 16,
+      selectable: false
     });
-  </script>
+    canvas.add(card);
+    
+    const emoji = new fabric.Text(item.emoji, {
+      left: x + 210, top: y + 50,
+      fontSize: 42,
+      originX: 'center'
+    });
+    canvas.add(emoji);
+    
+    const text = new fabric.Textbox(item.text, {
+      left: x + 210, top: y + 115, width: 380,
+      fontSize: 18, fontFamily: 'Poppins',
+      fill: '#fff', textAlign: 'center',
+      originX: 'center'
+    });
+    canvas.add(text);
+  });
+  
+  addFooter('2 of 5');
+}
+
+function templateCTA() {
+  const emoji = new fabric.Text('💾', {
+    left: W/2, top: 200,
+    fontSize: 100,
+    originX: 'center'
+  });
+  canvas.add(emoji);
+  
+  const title = new fabric.Textbox('Save This for Your Next\nIEP Meeting', {
+    left: W/2, top: 400, width: 900,
+    fontSize: 52, fontFamily: 'Playfair Display', fontWeight: '800',
+    fill: '#fff', textAlign: 'center',
+    originX: 'center',
+    lineHeight: 1.2
+  });
+  canvas.add(title);
+  
+  const sub = new fabric.Textbox('Accommodations should support your child — not teach them to hide who they are.', {
+    left: W/2, top: 580, width: 800,
+    fontSize: 24, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.85)', textAlign: 'center',
+    originX: 'center',
+    lineHeight: 1.5
+  });
+  canvas.add(sub);
+  
+  const ctaBox = new fabric.Rect({
+    left: W/2, top: 750, width: 600, height: 80,
+    fill: accent,
+    rx: 20, ry: 20,
+    originX: 'center', originY: 'center'
+  });
+  ctaBox.isAccent = true;
+  canvas.add(ctaBox);
+  
+  const ctaText = new fabric.Text('📩 DM "IEP" for more tips', {
+    left: W/2, top: 750,
+    fontSize: 26, fontFamily: 'Poppins', fontWeight: '700',
+    fill: '#1a1a2e',
+    originX: 'center', originY: 'center'
+  });
+  canvas.add(ctaText);
+  
+  const actions = ['📤 Share', '💬 Comment', '➕ Follow'];
+  actions.forEach((a, i) => {
+    const t = new fabric.Text(a, {
+      left: 180 + i * 300, top: 880,
+      fontSize: 22, fontFamily: 'Poppins', fontWeight: '600',
+      fill: 'rgba(255,255,255,0.7)'
+    });
+    canvas.add(t);
+  });
+  
+  addFooter();
+}
+
+function templateStats() {
+  const title = new fabric.Textbox('The Stats Don\'t Lie', {
+    left: W/2, top: 150, width: 900,
+    fontSize: 42, fontFamily: 'Playfair Display', fontWeight: '800',
+    fill: accent, textAlign: 'center',
+    originX: 'center'
+  });
+  title.isAccent = true;
+  canvas.add(title);
+  
+  const stat = new fabric.Text('85%', {
+    left: W/2, top: 450,
+    fontSize: 180, fontFamily: 'Playfair Display', fontWeight: '800',
+    fill: '#fff',
+    originX: 'center', originY: 'center'
+  });
+  canvas.add(stat);
+  
+  const desc = new fabric.Textbox('of autistic college graduates are unemployed or underemployed', {
+    left: W/2, top: 650, width: 800,
+    fontSize: 28, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.85)', textAlign: 'center',
+    originX: 'center',
+    lineHeight: 1.4
+  });
+  canvas.add(desc);
+  
+  addFooter('1 of 4');
+}
+
+function templateQuote() {
+  const quoteOpen = new fabric.Text('"', {
+    left: 100, top: 250,
+    fontSize: 200, fontFamily: 'Playfair Display',
+    fill: accent,
+    opacity: 0.3
+  });
+  quoteOpen.isAccent = true;
+  canvas.add(quoteOpen);
+  
+  const quote = new fabric.Textbox('You shouldn\'t have to perform to be accepted. You shouldn\'t have to hide who you are to be loved.', {
+    left: W/2, top: H/2 - 50, width: 850,
+    fontSize: 42, fontFamily: 'Playfair Display', fontWeight: '700',
+    fontStyle: 'italic',
+    fill: '#fff', textAlign: 'center',
+    originX: 'center', originY: 'center',
+    lineHeight: 1.4
+  });
+  canvas.add(quote);
+  
+  const attr = new fabric.Text('— Autistic Community', {
+    left: W/2, top: H/2 + 180,
+    fontSize: 24, fontFamily: 'Poppins',
+    fill: accent,
+    originX: 'center'
+  });
+  attr.isAccent = true;
+  canvas.add(attr);
+  
+  addFooter();
+}
+
+function addFooter(slideNum) {
+  if (slideNum) {
+    const num = new fabric.Text(slideNum, {
+      left: W/2, top: H - 80,
+      fontSize: 16, fontFamily: 'Poppins',
+      fill: 'rgba(255,255,255,0.4)',
+      originX: 'center'
+    });
+    canvas.add(num);
+  }
+  
+  const handle = new fabric.Text('@spectrum_unlocked', {
+    left: W/2, top: H - 45,
+    fontSize: 18, fontFamily: 'Poppins',
+    fill: 'rgba(255,255,255,0.5)',
+    originX: 'center'
+  });
+  canvas.add(handle);
+}
+
+// ============ ADD ELEMENTS ============
+function addText() {
+  const text = new fabric.Textbox('Double-click to edit', {
+    left: W/2, top: H/2, width: 400,
+    fontSize: 32, fontFamily: 'Poppins', fontWeight: '600',
+    fill: '#fff', textAlign: 'center',
+    originX: 'center', originY: 'center'
+  });
+  canvas.add(text);
+  canvas.setActiveObject(text);
+  canvas.renderAll();
+}
+
+function addBadge() {
+  const badge = new fabric.Textbox('📌 BADGE', {
+    left: W/2, top: 200, width: 200,
+    fontSize: 18, fontFamily: 'Poppins', fontWeight: '700',
+    fill: '#1a1a2e', textAlign: 'center',
+    backgroundColor: accent,
+    padding: 12,
+    originX: 'center'
+  });
+  badge.isAccent = true;
+  canvas.add(badge);
+  canvas.setActiveObject(badge);
+  canvas.renderAll();
+}
+
+function addListItem() {
+  const item = new fabric.Textbox('✓  New list item here', {
+    left: 130, top: H/2, width: 820,
+    fontSize: 24, fontFamily: 'Poppins',
+    fill: '#fff'
+  });
+  canvas.add(item);
+  canvas.setActiveObject(item);
+  canvas.renderAll();
+}
+
+function addShape() {
+  const rect = new fabric.Rect({
+    left: W/2, top: H/2, width: 200, height: 100,
+    fill: 'rgba(74,144,164,0.3)',
+    stroke: 'rgba(74,144,164,0.5)', strokeWidth: 2,
+    rx: 12, ry: 12,
+    originX: 'center', originY: 'center'
+  });
+  canvas.add(rect);
+  canvas.setActiveObject(rect);
+  canvas.renderAll();
+}
+
+function addEmoji() {
+  const emojis = ['💙', '✨', '🧠', '🎯', '💪', '🌟', '♾️', '🔥'];
+  const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+  const text = new fabric.Text(emoji, {
+    left: W/2, top: H/2,
+    fontSize: 80,
+    originX: 'center', originY: 'center'
+  });
+  canvas.add(text);
+  canvas.setActiveObject(text);
+  canvas.renderAll();
+}
+
+// ============ SLIDES ============
+function renderSlideTabs() {
+  const tabs = document.getElementById('slideTabs');
+  tabs.innerHTML = slides.map((_, i) => `
+    <button class="slide-btn${i === currentSlide ? ' active' : ''}" onclick="switchSlide(${i})">${i + 1}</button>
+  `).join('') + '<button class="slide-btn add" onclick="addSlide()">+</button>';
+}
+
+function saveCurrentSlide() {
+  slides[currentSlide] = canvas.toJSON(['isAccent', 'isBgRect', 'isDecor']);
+}
+
+function switchSlide(i) {
+  saveCurrentSlide();
+  currentSlide = i;
+  const data = slides[i];
+  if (data) {
+    canvas.loadFromJSON(data, () => canvas.renderAll());
+  } else {
+    loadTemplate('cover');
+  }
+  renderSlideTabs();
+}
+
+function addSlide() {
+  saveCurrentSlide();
+  slides.push(null);
+  currentSlide = slides.length - 1;
+  loadTemplate('cover');
+  renderSlideTabs();
+  toast(`Slide ${currentSlide + 1} added`);
+}
+
+function removeSlide() {
+  if (slides.length <= 1) {
+    toast('Cannot remove only slide', true);
+    return;
+  }
+  slides.splice(currentSlide, 1);
+  currentSlide = Math.min(currentSlide, slides.length - 1);
+  const data = slides[currentSlide];
+  if (data) {
+    canvas.loadFromJSON(data, () => canvas.renderAll());
+  } else {
+    loadTemplate('cover');
+  }
+  renderSlideTabs();
+  toast('Slide removed');
+}
+
+function resetSlide() {
+  loadTemplate(document.querySelector('.tpl-card.active').dataset.tpl);
+  toast('Slide reset');
+}
+
+// ============ CANVAS SIZE ============
+function resizeCanvas() {
+  const size = document.getElementById('canvasSize').value.split('x');
+  W = parseInt(size[0]);
+  H = parseInt(size[1]);
+  canvas.setDimensions({ width: W, height: H });
+  loadTemplate(document.querySelector('.tpl-card.active').dataset.tpl);
+  toast(`Canvas: ${W}×${H}`);
+}
+
+// ============ EXPORT ============
+function downloadPNG() {
+  const dataURL = canvas.toDataURL({ format: 'png', quality: 1, multiplier: 1 });
+  const link = document.createElement('a');
+  const date = new Date().toISOString().split('T')[0];
+  link.download = `spectrum-unlocked-slide${currentSlide + 1}-${date}.png`;
+  link.href = dataURL;
+  link.click();
+  toast('PNG downloaded!');
+}
+
+async function downloadAllSlides() {
+  saveCurrentSlide();
+  const original = currentSlide;
+  
+  for (let i = 0; i < slides.length; i++) {
+    if (slides[i]) {
+      await new Promise(resolve => {
+        canvas.loadFromJSON(slides[i], () => {
+          canvas.renderAll();
+          setTimeout(resolve, 100);
+        });
+      });
+    }
+    
+    const dataURL = canvas.toDataURL({ format: 'png', quality: 1 });
+    const link = document.createElement('a');
+    const date = new Date().toISOString().split('T')[0];
+    link.download = `spectrum-unlocked-slide${i + 1}-${date}.png`;
+    link.href = dataURL;
+    link.click();
+    
+    await new Promise(r => setTimeout(r, 300));
+  }
+  
+  if (slides[original]) {
+    canvas.loadFromJSON(slides[original], () => canvas.renderAll());
+  }
+  
+  toast(`Downloaded ${slides.length} slides!`);
+}
+
+// ============ DAY LOADER ============
+function renderDayGrid() {
+  const grid = document.getElementById('dayGrid');
+  grid.innerHTML = Object.entries(DAYS).map(([num, d]) => `
+    <div class="day-card" onclick="loadDay(${num})">
+      <div class="num">Day ${num}</div>
+      <div class="title">${d.title}</div>
+    </div>
+  `).join('');
+}
+
+function filterDays() {
+  const q = document.getElementById('daySearch').value.toLowerCase();
+  document.querySelectorAll('.day-card').forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(q) ? 'block' : 'none';
+  });
+}
+
+function loadDay(num) {
+  const d = DAYS[num];
+  if (!d) return;
+  
+  closeModal();
+  
+  // Setup slides
+  slides = [];
+  for (let i = 0; i < d.slides; i++) slides.push(null);
+  currentSlide = 0;
+  renderSlideTabs();
+  
+  // Load cover template with day title
+  loadTemplate('cover');
+  
+  // Update title on canvas
+  canvas.getObjects().forEach(obj => {
+    if (obj.type === 'textbox' && obj.fontSize > 50) {
+      obj.set('text', d.title);
+    }
+  });
+  canvas.renderAll();
+  
+  // Update captions
+  document.getElementById('igCaption').textContent = d.ig || 'No caption available';
+  document.getElementById('ttCaption').textContent = d.tt || 'No caption available';
+  
+  toast(`Loaded Day ${num}: ${d.title}`);
+}
+
+function openModal() { document.getElementById('modal').classList.add('open'); }
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+
+// ============ COPY ============
+function copyIG() {
+  navigator.clipboard.writeText(document.getElementById('igCaption').textContent);
+  toast('Instagram caption copied!');
+}
+function copyTT() {
+  navigator.clipboard.writeText(document.getElementById('ttCaption').textContent);
+  toast('TikTok caption copied!');
+}
+
+// ============ TOAST ============
+function toast(msg, isError) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (isError ? ' error' : '');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+</script>
 </body>
 </html>
