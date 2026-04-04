@@ -2,6 +2,22 @@
 
 ## 2026-04-04
 
+### Fixed - Font Rendering on PNG Export
+**Commit:** c72aa81
+
+**Issue:** Fonts (Playfair Display, Poppins) might not render correctly in downloaded PNGs
+
+**Fixed:**
+- Added `preloadFonts()` function that runs when editor loads
+- Preloads all font weights used (Playfair 600/700/800, Poppins 400-800)
+- Export functions now await `document.fonts.ready` before capturing
+- Force re-render of all text objects before export
+- Added timing delays to ensure canvas renders complete
+
+Fonts now reliably appear in exported PNG files!
+
+---
+
 ### Fixed - Missing Day 37 CTA Image
 **Commit:** c0813ac
 
