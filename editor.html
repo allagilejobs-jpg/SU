@@ -676,6 +676,14 @@
         transform: translateX(-50%);
         min-width: 200px;
       }
+      .canvas-area {
+        min-height: 400px;
+        padding: 10px;
+      }
+      .canvas-container {
+        max-width: 100%;
+        overflow: visible;
+      }
       .header-actions {
         flex-wrap: wrap;
         justify-content: center;
@@ -875,6 +883,10 @@
       <div class="slide-tabs" id="slideTabs"></div>
       <div class="canvas-container">
         <canvas id="canvas"></canvas>
+      </div>
+      <div id="loadingIndicator" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#E8B86D;">
+        <div style="font-size:48px;margin-bottom:16px;">⏳</div>
+        <div>Loading editor...</div>
       </div>
     </main>
     
@@ -1134,6 +1146,10 @@
         
         console.log('Editor ready!');
         
+        // Hide loading indicator
+        const loader = document.getElementById('loadingIndicator');
+        if (loader) loader.style.display = 'none';
+        
         window.addEventListener('beforeunload', (e) => {
           if (slides.length > 1 || (slides[0] && slides[0].json)) {
             e.preventDefault();
@@ -1142,7 +1158,14 @@
         });
       } catch (err) {
         console.error('Editor init failed:', err);
-        alert('Editor failed to load: ' + err.message);
+        const loader = document.getElementById('loadingIndicator');
+        if (loader) {
+          loader.innerHTML = `
+            <div style="font-size:48px;margin-bottom:16px;">❌</div>
+            <div style="color:#E74C3C;font-weight:600;">Failed to load</div>
+            <div style="font-size:12px;margin-top:8px;color:rgba(255,255,255,0.6);">${err.message}</div>
+          `;
+        }
       }
     });
     
