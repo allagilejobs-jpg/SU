@@ -376,10 +376,19 @@
       overflow-x: auto;
       padding-bottom: 10px;
     }
+    .modal-slides a {
+      flex-shrink: 0;
+    }
     .modal-slides img {
       height: 200px;
       width: auto;
       border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .modal-slides img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
     }
     .modal-caption {
       background: #0a1628;
@@ -840,8 +849,9 @@
         </div>
         <div class="modal-section">
           <div class="modal-actions">
-            <a class="modal-btn primary" id="modal-folder-link" href="#">📂 Open Folder</a>
-            <a class="modal-btn secondary" id="modal-captions-link" href="#">📝 View Captions</a>
+            <button class="modal-btn primary" id="modal-download-all" onclick="downloadAllSlides()">⬇️ Download All Slides</button>
+            <a class="modal-btn secondary" id="modal-folder-link" href="#" target="_blank">📂 Open Folder</a>
+            <a class="modal-btn secondary" id="modal-captions-link" href="#" target="_blank">📝 View Captions</a>
           </div>
         </div>
       </div>
@@ -1332,12 +1342,18 @@
       }
     };
 
+    let currentDayData = null;
+    let currentSlideUrls = [];
+
     function openDay(dayNum) {
       const data = dayData[dayNum];
       if (!data) {
         alert('Content coming soon! This day is planned but not yet built.');
         return;
       }
+      
+      currentDayData = data;
+      currentSlideUrls = [];
       
       document.getElementById('modal-day-num').textContent = dayNum;
       document.getElementById('modal-title').textContent = data.title;
@@ -1351,7 +1367,6 @@
       const slidesContainer = document.getElementById('modal-slides');
       slidesContainer.innerHTML = '';
       for (let i = 1; i <= data.slides; i++) {
-        const img = document.createElement('img');
         const slideNum = i.toString().padStart(2, '0');
         // Find the right slide name
         const slideNames = {
@@ -1373,15 +1388,66 @@
         };
         const names = slideNames[dayNum] || [];
         const slideName = names[i-1] || `slide-${slideNum}`;
-        img.src = `content/${data.folder}/slide-${slideNum}-${slideName}.png`;
-        img.alt = `Slide ${i}`;
+        const imgUrl = `content/${data.folder}/slide-${slideNum}-${slideName}.png`;
+        const fileName = `day-${dayNum}-slide-${slideNum}-${slideName}.png`;
+        
+        currentSlideUrls.push({ url: imgUrl, name: fileName });
+        
+        const link = document.createElement('a');
+        link.href = imgUrl;
+        link.download = fileName;
+        link.title = `Click to download Slide ${i}`;
+        
+        const img = document.createElement('img');
+        img.src = imgUrl;
+        img.alt = `Slide ${i} - Click to download`;
         img.onerror = function() {
-          this.src = `content/${data.folder}/slide-0${i}-cover.png`;
+          const fallbackUrl = `content/${data.folder}/slide-0${i}-cover.png`;
+          this.src = fallbackUrl;
+          link.href = fallbackUrl;
+          currentSlideUrls[i-1] = { url: fallbackUrl, name: fileName };
         };
-        slidesContainer.appendChild(img);
+        
+        link.appendChild(img);
+        slidesContainer.appendChild(link);
       }
       
       document.getElementById('modal').classList.add('active');
+    }
+
+    async function downloadAllSlides() {
+      if (!currentSlideUrls.length) return;
+      
+      const btn = document.getElementById('modal-download-all');
+      const originalText = btn.textContent;
+      btn.textContent = '⏳ Downloading...';
+      btn.disabled = true;
+      
+      for (let i = 0; i < currentSlideUrls.length; i++) {
+        const slide = currentSlideUrls[i];
+        try {
+          const response = await fetch(slide.url);
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = slide.name;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);
+          // Small delay between downloads
+          await new Promise(r => setTimeout(r, 300));
+        } catch (e) {
+          console.error('Failed to download:', slide.name, e);
+        }
+      }
+      
+      btn.textContent = '✅ Downloaded!';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 2000);
     }
 
     function closeModal(event) {
