@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Gallery — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f3460 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+    
+    /* Header */
+    .header {
+      background: rgba(26, 26, 46, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+    }
+    .header h1 span { color: #E8B86D; }
+    
+    .header-nav {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .nav-btn {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: inherit;
+    }
+    .nav-btn:hover { background: rgba(255,255,255,0.2); }
+    .nav-btn.primary {
+      background: #E8B86D;
+      color: #1a1a2e;
+    }
+    .nav-btn.primary:hover { background: #d4a85d; }
+    
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 24px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 16px;
+      color: #E8B86D;
+    }
+    
+    .hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+    }
+    
+    .template-count {
+      display: inline-block;
+      background: rgba(39, 174, 96, 0.2);
+      border: 1px solid rgba(39, 174, 96, 0.3);
+      color: #27AE60;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    
+    /* Gallery Grid */
+    .gallery {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 30px;
+    }
+    
+    /* Template Card */
+    .template-card {
+      background: rgba(26, 26, 46, 0.8);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .template-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    
+    .template-card.new {
+      border-color: rgba(39, 174, 96, 0.4);
+    }
+    
+    .new-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #27AE60;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    
+    /* Preview Area */
+    .template-preview {
+      position: relative;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      aspect-ratio: 4/5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 30px;
+    }
+    
+    .preview-canvas {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    /* Template-specific preview styles */
+    .preview-cover {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .preview-cover .badge {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .preview-cover .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .preview-cover .subtitle {
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+    }
+    .preview-cover .cta {
+      color: #4A90A4;
+      font-size: 11px;
+      margin-top: 20px;
+    }
+    
+    .preview-myth .myth-box {
+      background: rgba(231, 76, 60, 0.15);
+      border: 2px solid #E74C3C;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .preview-myth .myth-label {
+      color: #E74C3C;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .preview-myth .myth-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 14px;
+    }
+    .preview-myth .truth-box {
+      background: rgba(39, 174, 96, 0.15);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .preview-myth .truth-label {
+      color: #27AE60;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .preview-myth .truth-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .preview-checklist {
+      padding: 20px;
+    }
+    .preview-checklist .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #E8B86D;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .preview-checklist .list-box {
+      background: rgba(74, 144, 164, 0.15);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .preview-checklist .item {
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+      padding: 6px 0;
+    }
+    .preview-checklist .item::before {
+      content: '✓ ';
+      color: #27AE60;
+    }
+    
+    .preview-vs {
+      padding: 16px;
+    }
+    .preview-vs .vs-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #E8B86D;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .preview-vs .boxes {
+      display: flex;
+      gap: 12px;
+      position: relative;
+    }
+    .preview-vs .vs-box {
+      flex: 1;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+    .preview-vs .vs-box.left {
+      background: rgba(231, 76, 60, 0.15);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+    }
+    .preview-vs .vs-box.right {
+      background: rgba(74, 144, 164, 0.15);
+      border: 1px solid rgba(74, 144, 164, 0.3);
+    }
+    .preview-vs .vs-box .emoji { font-size: 24px; }
+    .preview-vs .vs-box .label {
+      font-size: 12px;
+      font-weight: 600;
+      margin: 8px 0;
+    }
+    .preview-vs .vs-box .items {
+      font-size: 9px;
+      color: rgba(255,255,255,0.7);
+      text-align: left;
+    }
+    .preview-vs .vs-badge {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #E8B86D;
+      color: #1a1a2e;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 800;
+    }
+    
+    .preview-grid {
+      padding: 16px;
+    }
+    .preview-grid .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #E8B86D;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .preview-grid .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .preview-grid .card {
+      background: rgba(39, 174, 96, 0.15);
+      border: 1px solid rgba(39, 174, 96, 0.25);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .preview-grid .card .emoji { font-size: 24px; }
+    .preview-grid .card .label {
+      font-size: 10px;
+      margin-top: 8px;
+      color: rgba(255,255,255,0.8);
+    }
+    
+    .preview-cta {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview-cta .emoji { font-size: 48px; margin-bottom: 16px; }
+    .preview-cta .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .preview-cta .subtitle {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 20px;
+    }
+    .preview-cta .btn {
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    
+    .preview-stats {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview-stats .label {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: #E8B86D;
+      margin-bottom: 20px;
+    }
+    .preview-stats .stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 800;
+    }
+    .preview-stats .desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+      margin-top: 16px;
+    }
+    
+    .preview-quote {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .preview-quote .quotemark {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 100px;
+      color: #E8B86D;
+      opacity: 0.2;
+      line-height: 1;
+    }
+    .preview-quote .text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.5;
+      padding: 0 20px;
+    }
+    .preview-quote .attribution {
+      color: #E8B86D;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+    
+    .preview-contentbox {
+      padding: 20px;
+      text-align: center;
+    }
+    .preview-contentbox .category {
+      color: #4A90A4;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .preview-contentbox .emoji {
+      font-size: 40px;
+      margin: 12px 0;
+    }
+    .preview-contentbox .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #E8B86D;
+      margin-bottom: 12px;
+    }
+    .preview-contentbox .box {
+      background: rgba(74, 144, 164, 0.15);
+      border: 1px solid rgba(74, 144, 164, 0.25);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .preview-contentbox .text {
+      font-size: 11px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+    
+    .preview-tips {
+      padding: 20px;
+    }
+    .preview-tips .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #E8B86D;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .preview-tips .tip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .preview-tips .num {
+      background: #E8B86D;
+      color: #1a1a2e;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .preview-tips .text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .preview-signs {
+      padding: 16px;
+    }
+    .preview-signs .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #E8B86D;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .preview-signs .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .preview-signs .card {
+      background: rgba(231, 76, 60, 0.15);
+      border: 1px solid rgba(231, 76, 60, 0.25);
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .preview-signs .card .emoji { font-size: 20px; }
+    .preview-signs .card .label {
+      font-size: 10px;
+      margin-top: 8px;
+      color: rgba(255,255,255,0.8);
+    }
+    
+    /* Card Info */
+    .template-info {
+      padding: 24px;
+    }
+    
+    .template-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    
+    .template-icon {
+      font-size: 32px;
+    }
+    
+    .template-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #E8B86D;
+    }
+    
+    .template-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    
+    .use-cases {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .use-case {
+      background: rgba(74, 144, 164, 0.2);
+      color: #4A90A4;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+    
+    .use-template-btn {
+      width: 100%;
+      background: #E8B86D;
+      color: #1a1a2e;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+    .use-template-btn:hover {
+      background: #d4a85d;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: #E8B86D;
+      text-decoration: none;
+    }
+    
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .header-content { justify-content: center; }
+      .header h1 { text-align: center; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1>Spectrum <span>Unlocked</span></h1>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-btn">🏠 Home</a>
+        <a href="calendar-60day.html" class="nav-btn">📅 Calendar</a>
+        <a href="editor.html" class="nav-btn primary">🎨 Open Editor</a>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <h2>Template Gallery</h2>
+    <p>Browse all available templates for your Spectrum Unlocked content. Each template is designed for specific content types to maximize engagement and readability.</p>
+    <div class="template-count">✨ 11 Templates Available</div>
+  </section>
+  
+  <section class="gallery">
+    <div class="gallery-grid">
+      
+      <!-- Cover Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-cover">
+            <div class="badge">🚨 MYTH ALERT</div>
+            <div class="title">3 Things<br>You Need<br>to Know</div>
+            <div class="subtitle">Important information awaits...</div>
+            <div class="cta">👉 Swipe to learn more</div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">🎬</span>
+            <span class="template-name">Cover</span>
+          </div>
+          <p class="template-desc">Eye-catching first slide to hook your audience. Features a bold title, subtitle, and call-to-action to swipe.</p>
+          <div class="use-cases">
+            <span class="use-case">Carousel openers</span>
+            <span class="use-case">Reel covers</span>
+            <span class="use-case">Series intros</span>
+          </div>
+          <a href="editor.html?template=cover" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Myth Buster Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-myth">
+            <div class="myth-box">
+              <div class="myth-label">❌ MYTH</div>
+              <div class="myth-text">"Common misconception that needs to be addressed"</div>
+            </div>
+            <div class="truth-box">
+              <div class="truth-label">✅ TRUTH</div>
+              <div class="truth-text">The actual facts that debunk this myth with clear explanation.</div>
+            </div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">❌</span>
+            <span class="template-name">Myth Buster</span>
+          </div>
+          <p class="template-desc">Debunk misconceptions with a clear myth vs truth format. Red box for the myth, green explanation for the truth.</p>
+          <div class="use-cases">
+            <span class="use-case">Busting stereotypes</span>
+            <span class="use-case">Correcting misinformation</span>
+          </div>
+          <a href="editor.html?template=myth" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Checklist Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-checklist">
+            <div class="title">🎧 Sensory Supports</div>
+            <div class="list-box">
+              <div class="item">Noise-canceling headphones</div>
+              <div class="item">Scheduled sensory breaks</div>
+              <div class="item">Fidgets permitted</div>
+              <div class="item">Alternative seating</div>
+              <div class="item">Quiet space available</div>
+            </div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">✅</span>
+            <span class="template-name">Checklist</span>
+          </div>
+          <p class="template-desc">Clean list format with checkmarks. Perfect for actionable items, accommodations, or step-by-step guides.</p>
+          <div class="use-cases">
+            <span class="use-case">Accommodation lists</span>
+            <span class="use-case">Tips & tricks</span>
+            <span class="use-case">How-to guides</span>
+          </div>
+          <a href="editor.html?template=checklist" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- VS Compare Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-vs">
+            <div class="vs-title">What's the Difference?</div>
+            <div class="boxes">
+              <div class="vs-box left">
+                <div class="emoji">😤</div>
+                <div class="label">Tantrum</div>
+                <div class="items">• Goal-oriented<br>• Can be controlled</div>
+              </div>
+              <div class="vs-badge">VS</div>
+              <div class="vs-box right">
+                <div class="emoji">🌪️</div>
+                <div class="label">Meltdown</div>
+                <div class="items">• Sensory overload<br>• Needs recovery</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">⚔️</span>
+            <span class="template-name">VS Compare</span>
+          </div>
+          <p class="template-desc">Side-by-side comparison with two boxes and a VS badge. Great for contrasting concepts or behaviors.</p>
+          <div class="use-cases">
+            <span class="use-case">Meltdown vs tantrum</span>
+            <span class="use-case">Do vs Don't</span>
+            <span class="use-case">Before/after</span>
+          </div>
+          <a href="editor.html?template=vs" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Grid Cards Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-grid">
+            <div class="title">✨ Moments of Joy</div>
+            <div class="grid">
+              <div class="card">
+                <div class="emoji">📚</div>
+                <div class="label">Special interests</div>
+              </div>
+              <div class="card">
+                <div class="emoji">🧸</div>
+                <div class="label">Comfort items</div>
+              </div>
+              <div class="card">
+                <div class="emoji">🎧</div>
+                <div class="label">Perfect playlist</div>
+              </div>
+              <div class="card">
+                <div class="emoji">🧩</div>
+                <div class="label">Routines</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">🔲</span>
+            <span class="template-name">Grid Cards</span>
+          </div>
+          <p class="template-desc">2x2 grid of cards with emojis and labels. Ideal for showcasing multiple related concepts at once.</p>
+          <div class="use-cases">
+            <span class="use-case">Types of...</span>
+            <span class="use-case">Examples</span>
+            <span class="use-case">Categories</span>
+          </div>
+          <a href="editor.html?template=grid" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- CTA Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-cta">
+            <div class="emoji">💾</div>
+            <div class="title">Save This Post!</div>
+            <div class="subtitle">Reference it when you need it.</div>
+            <div class="btn">📩 DM "tips" for more</div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">📢</span>
+            <span class="template-name">Call to Action</span>
+          </div>
+          <p class="template-desc">Engagement-focused slide with big emoji, title, and action button. End your carousels with this!</p>
+          <div class="use-cases">
+            <span class="use-case">Carousel endings</span>
+            <span class="use-case">Follow prompts</span>
+            <span class="use-case">DM triggers</span>
+          </div>
+          <a href="editor.html?template=cta" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Stats Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-stats">
+            <div class="label">📊 Did You Know?</div>
+            <div class="stat">85%</div>
+            <div class="desc">of autistic adults are<br>unemployed or underemployed</div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">📊</span>
+            <span class="template-name">Stats</span>
+          </div>
+          <p class="template-desc">Bold statistic display with a massive number and supporting text. Perfect for shocking or impactful data.</p>
+          <div class="use-cases">
+            <span class="use-case">Research stats</span>
+            <span class="use-case">Impact numbers</span>
+            <span class="use-case">Awareness facts</span>
+          </div>
+          <a href="editor.html?template=stats" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Quote Template -->
+      <div class="template-card">
+        <div class="template-preview">
+          <div class="preview-canvas preview-quote">
+            <div class="quotemark">"</div>
+            <div class="text">You shouldn't have to perform neurotypicality just to be accepted.</div>
+            <div class="attribution">— The Autistic Community</div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">💬</span>
+            <span class="template-name">Quote</span>
+          </div>
+          <p class="template-desc">Elegant quote display with decorative quotation mark and attribution. Great for community voices.</p>
+          <div class="use-cases">
+            <span class="use-case">Community quotes</span>
+            <span class="use-case">Affirmations</span>
+            <span class="use-case">Testimonials</span>
+          </div>
+          <a href="editor.html?template=quote" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Content Box Template (NEW) -->
+      <div class="template-card new">
+        <div class="template-preview">
+          <span class="new-badge">NEW</span>
+          <div class="preview-canvas preview-contentbox">
+            <div class="category">CATEGORY</div>
+            <div class="emoji">📦</div>
+            <div class="title">Content Title</div>
+            <div class="box">
+              <div class="text">This is where your main content goes. Explain key points and share insights with your audience.</div>
+            </div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">📦</span>
+            <span class="template-name">Content Box</span>
+          </div>
+          <p class="template-desc">Versatile general-purpose slide with emoji, title, and body text. Your go-to for explanatory content.</p>
+          <div class="use-cases">
+            <span class="use-case">Explanations</span>
+            <span class="use-case">Definitions</span>
+            <span class="use-case">Mid-carousel</span>
+          </div>
+          <a href="editor.html?template=contentbox" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Tip Cards Template (NEW) -->
+      <div class="template-card new">
+        <div class="template-preview">
+          <span class="new-badge">NEW</span>
+          <div class="preview-canvas preview-tips">
+            <div class="title">💡 5 Quick Tips</div>
+            <div class="tip"><div class="num">1</div><div class="text">First helpful tip</div></div>
+            <div class="tip"><div class="num">2</div><div class="text">Second helpful tip</div></div>
+            <div class="tip"><div class="num">3</div><div class="text">Third helpful tip</div></div>
+            <div class="tip"><div class="num">4</div><div class="text">Fourth helpful tip</div></div>
+            <div class="tip"><div class="num">5</div><div class="text">Fifth helpful tip</div></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">💡</span>
+            <span class="template-name">Tip Cards</span>
+          </div>
+          <p class="template-desc">Numbered tips list with circular badges. Perfect for actionable advice and quick strategies.</p>
+          <div class="use-cases">
+            <span class="use-case">Quick tips</span>
+            <span class="use-case">Strategies</span>
+            <span class="use-case">Numbered advice</span>
+          </div>
+          <a href="editor.html?template=tipcards" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+      <!-- Sign Cards Template (NEW) -->
+      <div class="template-card new">
+        <div class="template-preview">
+          <span class="new-badge">NEW</span>
+          <div class="preview-canvas preview-signs">
+            <div class="title">⚠️ Warning Signs</div>
+            <div class="grid">
+              <div class="card">
+                <div class="emoji">😰</div>
+                <div class="label">First sign</div>
+              </div>
+              <div class="card">
+                <div class="emoji">😔</div>
+                <div class="label">Second sign</div>
+              </div>
+              <div class="card">
+                <div class="emoji">😤</div>
+                <div class="label">Third sign</div>
+              </div>
+              <div class="card">
+                <div class="emoji">😢</div>
+                <div class="label">Fourth sign</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="template-info">
+          <div class="template-header">
+            <span class="template-icon">⚠️</span>
+            <span class="template-name">Sign Cards</span>
+          </div>
+          <p class="template-desc">2x2 warning signs grid. Use for red flags, symptoms, or things to watch out for.</p>
+          <div class="use-cases">
+            <span class="use-case">Warning signs</span>
+            <span class="use-case">Red flags</span>
+            <span class="use-case">Things to avoid</span>
+          </div>
+          <a href="editor.html?template=signcards" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <p>Spectrum Unlocked © 2026 • <a href="brand-guidelines.html">Brand Guidelines</a> • <a href="editor.html">Editor</a></p>
+  </footer>
+</body>
+</html>
