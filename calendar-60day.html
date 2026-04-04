@@ -1494,7 +1494,8 @@
         editBtn.onclick = function(e) {
           e.preventDefault();
           e.stopPropagation();
-          const editUrl = `editor.html?day=${dayNum}&slide=${i}&folder=${encodeURIComponent(data.folder)}&slideName=${encodeURIComponent(slideName)}`;
+          // Use HTML editor for exact-match editing
+          const editUrl = `html-editor.html?day=${dayNum}&slide=${i}&folder=${encodeURIComponent(data.folder)}&slides=${data.slides}`;
           window.open(editUrl, '_blank');
         };
         wrapper.appendChild(editBtn);
