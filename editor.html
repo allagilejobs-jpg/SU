@@ -1749,30 +1749,65 @@
     }
     
     function loadChecklistTemplate() {
+      // Title badge background
+      const titleBg = new fabric.Rect({
+        left: canvasWidth / 2 - 200, top: 70,
+        width: 400, height: 70,
+        fill: 'rgba(232, 184, 109, 0.15)',
+        stroke: COLORS.gold, strokeWidth: 2, rx: 35, ry: 35
+      });
+      
       const title = new fabric.IText('🎧 Sensory Supports', {
-        left: canvasWidth / 2, top: 100,
-        fontFamily: 'Playfair Display', fontSize: 48, fontWeight: '700',
-        fill: COLORS.gold, textAlign: 'center', originX: 'center'
+        left: canvasWidth / 2, top: 105,
+        fontFamily: 'Playfair Display', fontSize: 42, fontWeight: '700',
+        fill: COLORS.gold, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const container = new fabric.Rect({
-        left: 60, top: 200, width: canvasWidth - 120, height: 900,
+        left: 60, top: 180, width: canvasWidth - 120, height: 920,
         fill: 'rgba(74, 144, 164, 0.12)',
         stroke: 'rgba(74, 144, 164, 0.3)', strokeWidth: 2, rx: 20, ry: 20
       });
       
+      // Individual checklist items with backgrounds
       const items = [
-        '✓ Noise-canceling headphones allowed',
-        '✓ Scheduled sensory breaks',
-        '✓ Fidgets permitted in class',
-        '✓ Alternative seating options',
-        '✓ Reduced fluorescent lighting',
-        '✓ Quiet space for overwhelm'
+        'Noise-canceling headphones allowed',
+        'Scheduled sensory breaks',
+        'Fidgets permitted in class',
+        'Alternative seating options',
+        'Reduced fluorescent lighting',
+        'Quiet space for overwhelm'
       ];
       
-      const list = new fabric.IText(items.join('\n\n'), {
-        left: 100, top: 280,
-        fontFamily: 'Poppins', fontSize: 28, fill: COLORS.white, lineHeight: 1.8
+      items.forEach((item, i) => {
+        const y = 240 + i * 130;
+        
+        const itemBg = new fabric.Rect({
+          left: 90, top: y,
+          width: canvasWidth - 180, height: 100,
+          fill: 'rgba(39, 174, 96, 0.08)',
+          rx: 12, ry: 12
+        });
+        
+        const checkCircle = new fabric.Circle({
+          left: 130, top: y + 50,
+          radius: 22, fill: COLORS.green,
+          originX: 'center', originY: 'center'
+        });
+        
+        const checkMark = new fabric.Text('✓', {
+          left: 130, top: y + 50,
+          fontSize: 24, fill: COLORS.white, fontWeight: '700',
+          originX: 'center', originY: 'center'
+        });
+        
+        const itemText = new fabric.IText(item, {
+          left: 180, top: y + 50,
+          fontFamily: 'Poppins', fontSize: 26, fill: COLORS.white,
+          originY: 'center'
+        });
+        
+        canvas.add(itemBg, checkCircle, checkMark, itemText);
       });
       
       const handle = new fabric.Text('@spectrum_unlocked', {
@@ -1781,7 +1816,7 @@
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(title, container, list, handle);
+      canvas.add(titleBg, title, container, handle);
     }
     
     function loadVSTemplate() {
@@ -1945,28 +1980,58 @@
     }
     
     function loadStatsTemplate() {
+      // Title badge
+      const titleBg = new fabric.Rect({
+        left: canvasWidth / 2 - 150, top: 120,
+        width: 300, height: 60,
+        fill: COLORS.teal, rx: 30, ry: 30
+      });
+      
       const title = new fabric.IText('📊 Did You Know?', {
         left: canvasWidth / 2, top: 150,
-        fontFamily: 'Playfair Display', fontSize: 42, fontWeight: '700',
-        fill: COLORS.gold, textAlign: 'center', originX: 'center'
+        fontFamily: 'Poppins', fontSize: 24, fontWeight: '700',
+        fill: COLORS.white, textAlign: 'center', originX: 'center', originY: 'center'
+      });
+      
+      // Stat circle background
+      const statBg = new fabric.Circle({
+        left: canvasWidth / 2, top: 450,
+        radius: 180, fill: 'rgba(232, 184, 109, 0.15)',
+        stroke: COLORS.gold, strokeWidth: 4,
+        originX: 'center', originY: 'center'
       });
       
       const stat = new fabric.IText('85%', {
         left: canvasWidth / 2, top: 450,
-        fontFamily: 'Playfair Display', fontSize: 180, fontWeight: '800',
-        fill: COLORS.white, textAlign: 'center', originX: 'center'
+        fontFamily: 'Playfair Display', fontSize: 140, fontWeight: '800',
+        fill: COLORS.gold, textAlign: 'center', originX: 'center', originY: 'center'
+      });
+      
+      // Description box
+      const descBg = new fabric.Rect({
+        left: 100, top: 700,
+        width: canvasWidth - 200, height: 140,
+        fill: 'rgba(74, 144, 164, 0.15)',
+        rx: 16, ry: 16
       });
       
       const description = new fabric.IText('of college-educated autistic adults\nare unemployed or underemployed', {
-        left: canvasWidth / 2, top: 650,
-        fontFamily: 'Poppins', fontSize: 28,
-        fill: 'rgba(255,255,255,0.85)', textAlign: 'center', lineHeight: 1.5, originX: 'center'
+        left: canvasWidth / 2, top: 770,
+        fontFamily: 'Poppins', fontSize: 26,
+        fill: COLORS.white, textAlign: 'center', lineHeight: 1.5, originX: 'center', originY: 'center'
+      });
+      
+      // Source badge
+      const sourceBg = new fabric.Rect({
+        left: canvasWidth / 2 - 220, top: 900,
+        width: 440, height: 40,
+        fill: 'rgba(255,255,255,0.1)', rx: 20, ry: 20
       });
       
       const source = new fabric.IText('Source: Autism Speaks Employment Report', {
-        left: canvasWidth / 2, top: 820,
-        fontFamily: 'Poppins', fontSize: 16,
-        fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
+        left: canvasWidth / 2, top: 920,
+        fontFamily: 'Poppins', fontSize: 14,
+        fill: 'rgba(255,255,255,0.6)', textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const handle = new fabric.Text('@spectrum_unlocked', {
@@ -1975,25 +2040,47 @@
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(title, stat, description, source, handle);
+      canvas.add(titleBg, title, statBg, stat, descBg, description, sourceBg, source, handle);
     }
     
     function loadQuoteTemplate() {
-      const quoteMark = new fabric.Text('"', {
-        left: 80, top: 150,
-        fontFamily: 'Playfair Display', fontSize: 250, fill: COLORS.gold, opacity: 0.25
+      // Decorative quote marks
+      const quoteMarkLeft = new fabric.Text('"', {
+        left: 60, top: 200,
+        fontFamily: 'Playfair Display', fontSize: 300, fill: COLORS.gold, opacity: 0.2
+      });
+      
+      const quoteMarkRight = new fabric.Text('"', {
+        left: canvasWidth - 160, top: 700,
+        fontFamily: 'Playfair Display', fontSize: 300, fill: COLORS.gold, opacity: 0.2
+      });
+      
+      // Quote container
+      const quoteBg = new fabric.Rect({
+        left: 80, top: 350,
+        width: canvasWidth - 160, height: 400,
+        fill: 'rgba(232, 184, 109, 0.08)',
+        stroke: 'rgba(232, 184, 109, 0.2)', strokeWidth: 2,
+        rx: 20, ry: 20
       });
       
       const quote = new fabric.IText('You shouldn\'t have to\nperform neurotypicality\njust to be accepted.', {
-        left: canvasWidth / 2, top: 500,
-        fontFamily: 'Playfair Display', fontStyle: 'italic', fontSize: 48, fontWeight: '700',
-        fill: COLORS.white, textAlign: 'center', lineHeight: 1.4, originX: 'center'
+        left: canvasWidth / 2, top: 550,
+        fontFamily: 'Playfair Display', fontStyle: 'italic', fontSize: 44, fontWeight: '700',
+        fill: COLORS.white, textAlign: 'center', lineHeight: 1.4, originX: 'center', originY: 'center'
+      });
+      
+      // Attribution badge
+      const attrBg = new fabric.Rect({
+        left: canvasWidth / 2 - 160, top: 820,
+        width: 320, height: 50,
+        fill: COLORS.gold, rx: 25, ry: 25
       });
       
       const attribution = new fabric.IText('— The Autistic Community', {
-        left: canvasWidth / 2, top: 780,
-        fontFamily: 'Poppins', fontSize: 24,
-        fill: COLORS.gold, textAlign: 'center', originX: 'center'
+        left: canvasWidth / 2, top: 845,
+        fontFamily: 'Poppins', fontSize: 18, fontWeight: '600',
+        fill: COLORS.bgPrimary, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const handle = new fabric.Text('@spectrum_unlocked', {
@@ -2002,63 +2089,92 @@
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(quoteMark, quote, attribution, handle);
+      canvas.add(quoteMarkLeft, quoteMarkRight, quoteBg, quote, attrBg, attribution, handle);
     }
     
     function loadContentBoxTemplate() {
+      // Category badge with background
+      const badgeBg = new fabric.Rect({
+        left: canvasWidth / 2 - 80, top: 80,
+        width: 160, height: 36,
+        fill: COLORS.teal, rx: 18, ry: 18
+      });
+      
       const badge = new fabric.IText('CATEGORY', {
-        left: canvasWidth / 2, top: 100,
-        fontFamily: 'Poppins', fontSize: 16, fontWeight: '700',
-        fill: COLORS.teal, textAlign: 'center', originX: 'center'
+        left: canvasWidth / 2, top: 98,
+        fontFamily: 'Poppins', fontSize: 14, fontWeight: '700',
+        fill: COLORS.white, textAlign: 'center', originX: 'center', originY: 'center'
+      });
+      
+      // Emoji with glow effect
+      const emojiGlow = new fabric.Circle({
+        left: canvasWidth / 2, top: 200,
+        radius: 70, fill: 'rgba(232, 184, 109, 0.15)',
+        originX: 'center', originY: 'center'
       });
       
       const emoji = new fabric.Text('📦', {
-        left: canvasWidth / 2, top: 200, fontSize: 100, originX: 'center'
+        left: canvasWidth / 2, top: 200, fontSize: 80, originX: 'center', originY: 'center'
       });
       
       const title = new fabric.IText('Content Title Here', {
-        left: canvasWidth / 2, top: 340,
-        fontFamily: 'Playfair Display', fontSize: 52, fontWeight: '700',
+        left: canvasWidth / 2, top: 320,
+        fontFamily: 'Playfair Display', fontSize: 48, fontWeight: '700',
         fill: COLORS.gold, textAlign: 'center', originX: 'center'
       });
       
       const contentBox = new fabric.Rect({
-        left: 60, top: 440, width: canvasWidth - 120, height: 600,
+        left: 60, top: 400, width: canvasWidth - 120, height: 620,
         fill: 'rgba(74, 144, 164, 0.12)',
         stroke: 'rgba(74, 144, 164, 0.3)', strokeWidth: 2, rx: 20, ry: 20
       });
       
       const bodyText = new fabric.IText('This is where your main content goes.\n\nExplain the key points, provide information,\nor share insights with your audience.\n\nKeep paragraphs short and easy to read\non mobile screens.', {
-        left: canvasWidth / 2, top: 740,
-        fontFamily: 'Poppins', fontSize: 26,
-        fill: 'rgba(255,255,255,0.9)', textAlign: 'center', lineHeight: 1.6, originX: 'center'
+        left: canvasWidth / 2, top: 710,
+        fontFamily: 'Poppins', fontSize: 24,
+        fill: 'rgba(255,255,255,0.9)', textAlign: 'center', lineHeight: 1.6, originX: 'center', originY: 'center'
+      });
+      
+      // Slide number badge
+      const slideNumBg = new fabric.Rect({
+        left: canvasWidth / 2 - 40, top: canvasHeight - 100,
+        width: 80, height: 30,
+        fill: 'rgba(255,255,255,0.1)', rx: 15, ry: 15
       });
       
       const slideNum = new fabric.Text('1 of 5', {
-        left: canvasWidth / 2, top: canvasHeight - 90,
-        fontFamily: 'Poppins', fontSize: 14,
-        fill: 'rgba(255,255,255,0.3)', textAlign: 'center', originX: 'center'
+        left: canvasWidth / 2, top: canvasHeight - 85,
+        fontFamily: 'Poppins', fontSize: 13, fontWeight: '500',
+        fill: 'rgba(255,255,255,0.5)', textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const handle = new fabric.Text('@spectrum_unlocked', {
-        left: canvasWidth / 2, top: canvasHeight - 60,
+        left: canvasWidth / 2, top: canvasHeight - 50,
         fontFamily: 'Poppins', fontSize: 16,
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(badge, emoji, title, contentBox, bodyText, slideNum, handle);
+      canvas.add(badgeBg, badge, emojiGlow, emoji, title, contentBox, bodyText, slideNumBg, slideNum, handle);
     }
     
     function loadTipCardsTemplate() {
+      // Title with badge
+      const titleBg = new fabric.Rect({
+        left: canvasWidth / 2 - 160, top: 60,
+        width: 320, height: 60,
+        fill: 'rgba(232, 184, 109, 0.15)',
+        stroke: COLORS.gold, strokeWidth: 2, rx: 30, ry: 30
+      });
+      
       const title = new fabric.IText('💡 5 Quick Tips', {
-        left: canvasWidth / 2, top: 80,
-        fontFamily: 'Playfair Display', fontSize: 48, fontWeight: '700',
-        fill: COLORS.gold, textAlign: 'center', originX: 'center'
+        left: canvasWidth / 2, top: 90,
+        fontFamily: 'Playfair Display', fontSize: 40, fontWeight: '700',
+        fill: COLORS.gold, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const subtitle = new fabric.IText('Practical strategies you can use today', {
         left: canvasWidth / 2, top: 150,
-        fontFamily: 'Poppins', fontSize: 22,
+        fontFamily: 'Poppins', fontSize: 20,
         fill: 'rgba(255,255,255,0.7)', textAlign: 'center', originX: 'center'
       });
       
@@ -2070,28 +2186,36 @@
         { num: '5', text: 'Fifth tip goes here' }
       ];
       
-      const startY = 230, tipHeight = 150;
+      const startY = 210, tipHeight = 155;
       
       tips.forEach((tip, i) => {
         const y = startY + i * tipHeight;
         
+        // Row background
+        const rowBg = new fabric.Rect({
+          left: 70, top: y,
+          width: canvasWidth - 140, height: 130,
+          fill: 'rgba(39, 174, 96, 0.08)',
+          rx: 16, ry: 16
+        });
+        
         const circle = new fabric.Circle({
-          left: 100, top: y + 30, radius: 28,
+          left: 130, top: y + 65, radius: 32,
           fill: COLORS.gold, originX: 'center', originY: 'center'
         });
         
         const num = new fabric.Text(tip.num, {
-          left: 100, top: y + 30,
-          fontFamily: 'Poppins', fontSize: 24, fontWeight: '800',
+          left: 130, top: y + 65,
+          fontFamily: 'Poppins', fontSize: 26, fontWeight: '800',
           fill: COLORS.bgPrimary, originX: 'center', originY: 'center'
         });
         
         const tipText = new fabric.IText(tip.text, {
-          left: 160, top: y + 30,
-          fontFamily: 'Poppins', fontSize: 26, fill: COLORS.white, originY: 'center'
+          left: 190, top: y + 65,
+          fontFamily: 'Poppins', fontSize: 24, fill: COLORS.white, originY: 'center'
         });
         
-        canvas.add(circle, num, tipText);
+        canvas.add(rowBg, circle, num, tipText);
       });
       
       const handle = new fabric.Text('@spectrum_unlocked', {
@@ -2100,19 +2224,26 @@
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(title, subtitle, handle);
+      canvas.add(titleBg, title, subtitle, handle);
     }
     
     function loadSignCardsTemplate() {
+      // Title badge with warning icon
+      const titleBg = new fabric.Rect({
+        left: canvasWidth / 2 - 170, top: 60,
+        width: 340, height: 60,
+        fill: COLORS.red, rx: 30, ry: 30
+      });
+      
       const title = new fabric.IText('⚠️ Warning Signs', {
-        left: canvasWidth / 2, top: 80,
-        fontFamily: 'Playfair Display', fontSize: 48, fontWeight: '700',
-        fill: COLORS.gold, textAlign: 'center', originX: 'center'
+        left: canvasWidth / 2, top: 90,
+        fontFamily: 'Poppins', fontSize: 28, fontWeight: '700',
+        fill: COLORS.white, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const subtitle = new fabric.IText('Know what to look for', {
         left: canvasWidth / 2, top: 150,
-        fontFamily: 'Poppins', fontSize: 22,
+        fontFamily: 'Poppins', fontSize: 20,
         fill: 'rgba(255,255,255,0.7)', textAlign: 'center', originX: 'center'
       });
       
@@ -2123,7 +2254,7 @@
         { icon: '😢', text: 'Fourth warning sign' }
       ];
       
-      const startX = 80, startY = 220, cardWidth = 450, cardHeight = 220, gap = 30;
+      const startX = 80, startY = 210, cardWidth = 450, cardHeight = 240, gap = 30;
       
       signs.forEach((sign, i) => {
         const col = i % 2;
@@ -2134,26 +2265,42 @@
         const card = new fabric.Rect({
           left: x, top: y, width: cardWidth, height: cardHeight,
           fill: 'rgba(231, 76, 60, 0.12)',
-          stroke: 'rgba(231, 76, 60, 0.25)', strokeWidth: 2, rx: 16, ry: 16
+          stroke: 'rgba(231, 76, 60, 0.3)', strokeWidth: 2, rx: 20, ry: 20
+        });
+        
+        // Icon circle
+        const iconBg = new fabric.Circle({
+          left: x + cardWidth / 2, top: y + 80,
+          radius: 45, fill: 'rgba(231, 76, 60, 0.2)',
+          originX: 'center', originY: 'center'
         });
         
         const icon = new fabric.Text(sign.icon, {
-          left: x + cardWidth / 2, top: y + 60, fontSize: 50, originX: 'center'
+          left: x + cardWidth / 2, top: y + 80, fontSize: 50,
+          originX: 'center', originY: 'center'
         });
         
         const text = new fabric.IText(sign.text, {
-          left: x + cardWidth / 2, top: y + 150,
-          fontFamily: 'Poppins', fontSize: 22, fill: COLORS.white,
+          left: x + cardWidth / 2, top: y + 175,
+          fontFamily: 'Poppins', fontSize: 20, fill: COLORS.white,
           textAlign: 'center', originX: 'center'
         });
         
-        canvas.add(card, icon, text);
+        canvas.add(card, iconBg, icon, text);
       });
       
-      const footer = new fabric.IText('If you notice these, reach out for support', {
+      // Footer CTA
+      const footerBg = new fabric.Rect({
+        left: 100, top: canvasHeight - 180,
+        width: canvasWidth - 200, height: 60,
+        fill: 'rgba(74, 144, 164, 0.2)',
+        stroke: COLORS.teal, strokeWidth: 1, rx: 30, ry: 30
+      });
+      
+      const footer = new fabric.IText('💙 If you notice these, reach out for support', {
         left: canvasWidth / 2, top: canvasHeight - 150,
-        fontFamily: 'Poppins', fontSize: 20,
-        fill: COLORS.teal, textAlign: 'center', originX: 'center'
+        fontFamily: 'Poppins', fontSize: 18, fontWeight: '500',
+        fill: COLORS.teal, textAlign: 'center', originX: 'center', originY: 'center'
       });
       
       const handle = new fabric.Text('@spectrum_unlocked', {
@@ -2162,7 +2309,7 @@
         fill: 'rgba(255,255,255,0.4)', textAlign: 'center', originX: 'center'
       });
       
-      canvas.add(title, subtitle, footer, handle);
+      canvas.add(titleBg, title, subtitle, footerBg, footer, handle);
     }
     
     // ============ CATEGORY SYSTEM ============
