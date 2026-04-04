@@ -1406,9 +1406,10 @@
     }
     
     function initCanvas() {
-      const maxDisplayHeight = window.innerHeight - 180;
-      const maxDisplayWidth = window.innerWidth - 620;
-      const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, 0.6);
+      const isMobile = window.innerWidth <= 900;
+      const maxDisplayHeight = window.innerHeight - (isMobile ? 120 : 180);
+      const maxDisplayWidth = isMobile ? window.innerWidth - 40 : window.innerWidth - 620;
+      const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, isMobile ? 0.35 : 0.6);
       
       canvas = new fabric.Canvas('canvas', {
         width: canvasWidth * scale,
@@ -2383,9 +2384,10 @@
       // Update size indicator
       updateSizeIndicator();
       
-      const maxDisplayHeight = window.innerHeight - 180;
-      const maxDisplayWidth = window.innerWidth - 620;
-      const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, 0.6);
+      const isMobile = window.innerWidth <= 900;
+      const maxDisplayHeight = window.innerHeight - (isMobile ? 120 : 180);
+      const maxDisplayWidth = isMobile ? window.innerWidth - 40 : window.innerWidth - 620;
+      const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, isMobile ? 0.35 : 0.6);
       
       if (preserveContent) {
         // Save all non-background/decoration objects
