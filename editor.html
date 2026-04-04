@@ -48,6 +48,12 @@
       border: 1px solid rgba(74,144,164,0.3);
       padding: 8px 16px;
       border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .size-indicator:hover {
+      background: rgba(74,144,164,0.3);
     }
     .size-indicator .size-label {
       font-size: 14px;
@@ -64,6 +70,71 @@
       border-radius: 4px;
       font-size: 11px;
       font-weight: 700;
+    }
+    .size-indicator .size-arrow {
+      font-size: 10px;
+      color: rgba(255,255,255,0.5);
+      transition: transform 0.2s;
+    }
+    .size-indicator.open .size-arrow {
+      transform: rotate(180deg);
+    }
+    
+    /* Size Dropdown */
+    .size-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a1a2e;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 8px;
+      min-width: 220px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+    .size-indicator.open .size-dropdown {
+      display: block;
+    }
+    .size-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .size-option:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    .size-option .opt-ratio {
+      background: rgba(232,184,109,0.2);
+      color: #E8B86D;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      min-width: 45px;
+      text-align: center;
+    }
+    .size-option:hover .opt-ratio {
+      background: #E8B86D;
+      color: #1a1a2e;
+    }
+    .size-option .opt-details {
+      display: flex;
+      flex-direction: column;
+    }
+    .size-option .opt-details strong {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .size-option .opt-details small {
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
     }
     .header-actions {
       display: flex;
@@ -600,6 +671,11 @@
       }
       .size-indicator .size-value { font-size: 12px; }
       .size-indicator .size-ratio { font-size: 10px; padding: 3px 8px; }
+      .size-dropdown {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 200px;
+      }
       .header-actions {
         flex-wrap: wrap;
         justify-content: center;
@@ -680,10 +756,34 @@
     <header class="header">
       <button class="mobile-toggle" onclick="toggleMobileSidebar('left')">☰ Menu</button>
       <h1>Spectrum <span>Unlocked</span> Editor</h1>
-      <div class="size-indicator" id="sizeIndicator">
+      <div class="size-indicator" id="sizeIndicator" onclick="toggleSizeDropdown()">
         <span class="size-label">📐</span>
         <span class="size-value" id="sizeValue">1080 × 1350</span>
         <span class="size-ratio" id="sizeRatio">4:5</span>
+        <span class="size-arrow">▼</span>
+        <div class="size-dropdown" id="sizeDropdown">
+          <div class="size-option" onclick="event.stopPropagation(); selectSize(1080, 1350, '4:5', 'Instagram Carousel')">
+            <span class="opt-ratio">4:5</span>
+            <span class="opt-details">
+              <strong>Instagram Carousel</strong>
+              <small>1080 × 1350</small>
+            </span>
+          </div>
+          <div class="size-option" onclick="event.stopPropagation(); selectSize(1080, 1920, '9:16', 'TikTok / Reels')">
+            <span class="opt-ratio">9:16</span>
+            <span class="opt-details">
+              <strong>TikTok / Reels</strong>
+              <small>1080 × 1920</small>
+            </span>
+          </div>
+          <div class="size-option" onclick="event.stopPropagation(); selectSize(1080, 1080, '1:1', 'Square Post')">
+            <span class="opt-ratio">1:1</span>
+            <span class="opt-details">
+              <strong>Square Post</strong>
+              <small>1080 × 1080</small>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="header-actions">
         <button class="btn btn-secondary" onclick="exportSlide()">📥 Export PNG</button>
@@ -2452,6 +2552,25 @@
       document.querySelector('.sidebar-right').classList.remove('mobile-open');
       document.getElementById('mobileOverlay').classList.remove('active');
     }
+    
+    // ============ SIZE DROPDOWN ============
+    function toggleSizeDropdown() {
+      const indicator = document.getElementById('sizeIndicator');
+      indicator.classList.toggle('open');
+    }
+    
+    function selectSize(width, height, ratio, name) {
+      setCanvasSize(width, height);
+      document.getElementById('sizeIndicator').classList.remove('open');
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const indicator = document.getElementById('sizeIndicator');
+      if (indicator && !indicator.contains(e.target)) {
+        indicator.classList.remove('open');
+      }
+    });
     
     // ============ UTILITIES ============
     function updateSizeIndicator() {
