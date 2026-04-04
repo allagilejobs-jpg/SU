@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .bg-shape-2 { width: 300px; height: 300px; background: #27AE60; bottom: 150px; right: -80px; }
+    .header { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 48px; 
+      font-weight: 800; 
+      margin-bottom: 50px;
+    }
+    .highlight { color: #27AE60; }
+    .content-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 30px;
+      padding: 50px;
+      max-width: 900px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .definition {
+      font-size: 26px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+    .key-point {
+      background: rgba(39, 174, 96, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      border-left: 5px solid #27AE60;
+      text-align: left;
+    }
+    .key-point-label {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #27AE60;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .key-point-text {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="header">What is <span class="highlight">OT</span>?</div>
+  
+  <div class="content-box">
+    <div class="definition">
+      Occupational Therapy helps children develop the skills they need for everyday life: self-care, play, school tasks, and sensory processing.
+    </div>
+    
+    <div class="key-point">
+      <div class="key-point-label">The "Occupation" in OT</div>
+      <div class="key-point-text">
+        For kids, their "occupation" is being a kid. Playing, learning, eating, dressing, and exploring the world. OT helps them do all of it.
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

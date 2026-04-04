@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #4A90A4; top: -120px; right: -120px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #27AE60; bottom: 80px; left: -100px; }
+    .header { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 46px; 
+      font-weight: 800; 
+      margin-bottom: 45px;
+    }
+    .highlight { color: #27AE60; }
+    .checklist {
+      background: rgba(255,255,255,0.05);
+      border-radius: 30px;
+      padding: 45px;
+      max-width: 900px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .item:last-child { border-bottom: none; }
+    .checkbox {
+      width: 36px;
+      height: 36px;
+      border: 3px solid #27AE60;
+      border-radius: 8px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .check { color: #27AE60; font-size: 24px; font-weight: bold; }
+    .item-text {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="header">Summer <span class="highlight">Prep Checklist</span></div>
+  
+  <div class="checklist">
+    <div class="item">
+      <div class="checkbox"><span class="check">✓</span></div>
+      <span class="item-text">Create a visual summer schedule (keep some structure)</span>
+    </div>
+    
+    <div class="item">
+      <div class="checkbox"><span class="check">✓</span></div>
+      <span class="item-text">Research sensory-friendly camps or programs</span>
+    </div>
+    
+    <div class="item">
+      <div class="checkbox"><span class="check">✓</span></div>
+      <span class="item-text">Stock up on sensory tools (sunglasses, ear protection, fidgets)</span>
+    </div>
+    
+    <div class="item">
+      <div class="checkbox"><span class="check">✓</span></div>
+      <span class="item-text">Practice new summer routines before school ends</span>
+    </div>
+    
+    <div class="item">
+      <div class="checkbox"><span class="check">✓</span></div>
+      <span class="item-text">Identify "cool down" spaces at home for overwhelm</span>
+    </div>
+    
+    <div class="item">
+      <div class="checkbox"><span class="check">✓</span></div>
+      <span class="item-text">Plan quiet days between big activities</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

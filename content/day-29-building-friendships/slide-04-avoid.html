@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      max-width: 950px;
+    }
+    .card {
+      border-radius: 20px;
+      padding: 28px;
+      text-align: left;
+    }
+    .dont-card {
+      background: rgba(231, 76, 60, 0.12);
+      border: 2px solid rgba(231, 76, 60, 0.3);
+    }
+    .do-card {
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.3);
+    }
+    .card-header {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .dont-header { color: #E74C3C; }
+    .do-header { color: #27AE60; }
+    .card-text {
+      font-size: 19px;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Mindset Shift</div>
+  
+  <div class="title">Social Skills vs. Masking</div>
+  
+  <div class="grid">
+    <div class="card dont-card">
+      <div class="card-header dont-header">❌ Don't</div>
+      <div class="card-text">Force them to make eye contact if it's uncomfortable</div>
+    </div>
+    <div class="card do-card">
+      <div class="card-header do-header">✅ Do</div>
+      <div class="card-text">Let them connect in ways that feel natural to them</div>
+    </div>
+    
+    <div class="card dont-card">
+      <div class="card-header dont-header">❌ Don't</div>
+      <div class="card-text">Push them to "fit in" with neurotypical social norms</div>
+    </div>
+    <div class="card do-card">
+      <div class="card-header do-header">✅ Do</div>
+      <div class="card-text">Help them find spaces where they're accepted as they are</div>
+    </div>
+    
+    <div class="card dont-card">
+      <div class="card-header dont-header">❌ Don't</div>
+      <div class="card-text">Criticize how they play or interact</div>
+    </div>
+    <div class="card do-card">
+      <div class="card-header do-header">✅ Do</div>
+      <div class="card-text">Celebrate unique ways of connecting</div>
+    </div>
+    
+    <div class="card dont-card">
+      <div class="card-header dont-header">❌ Don't</div>
+      <div class="card-text">Measure success by number of friends</div>
+    </div>
+    <div class="card do-card">
+      <div class="card-header do-header">✅ Do</div>
+      <div class="card-text">Measure success by happiness and authentic connection</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 40px;
+    }
+    .content-box {
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .stat-row {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+    .stat-box {
+      flex: 1;
+      background: rgba(74, 144, 164, 0.15);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: #4A90A4;
+    }
+    .stat-text {
+      font-size: 16px;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+    .key-point {
+      font-size: 22px;
+      line-height: 1.5;
+      padding: 25px;
+      background: rgba(39, 174, 96, 0.12);
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .key-point strong { color: #27AE60; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">The Reality</div>
+  
+  <div class="title">The Numbers Don't Lie</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      Despite our skills and talents, autistic people face major barriers in workplaces and schools. The system wasn't built for us.
+    </div>
+    
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-number">85%</div>
+        <div class="stat-text">of college-educated autistic adults are unemployed or underemployed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">50%</div>
+        <div class="stat-text">of autistic students report bullying at school</div>
+      </div>
+    </div>
+    
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-number">70%</div>
+        <div class="stat-text">of autistic employees mask heavily at work</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">1 in 3</div>
+        <div class="stat-text">autistic workers have faced discrimination</div>
+      </div>
+    </div>
+    
+    <div class="key-point">
+      <strong>The problem isn't us:</strong> It's environments designed without neurodivergent people in mind. Real acceptance changes the system, not the person.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

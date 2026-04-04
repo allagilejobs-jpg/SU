@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 25px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 45px;
+    }
+    .quotes-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 900px;
+    }
+    .quote-card {
+      background: rgba(232, 184, 109, 0.12);
+      border-left: 4px solid #E8B86D;
+      border-radius: 0 15px 15px 0;
+      padding: 30px 35px;
+      text-align: left;
+    }
+    .quote-text { font-size: 22px; font-style: italic; line-height: 1.5; margin-bottom: 10px; }
+    .quote-author { font-size: 16px; opacity: 0.6; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Your Voices</div>
+  
+  <div class="title">What You Shared</div>
+  
+  <div class="quotes-container">
+    <div class="quote-card">
+      <div class="quote-text">"This community made me feel less alone in this journey. Thank you for showing up every day."</div>
+      <div class="quote-author">- A parent from our community</div>
+    </div>
+    
+    <div class="quote-card">
+      <div class="quote-text">"I finally understand my child better. The meltdown vs tantrum post changed everything."</div>
+      <div class="quote-author">- A new autism parent</div>
+    </div>
+    
+    <div class="quote-card">
+      <div class="quote-text">"Learning that acceptance is year-round, not just April. We're just getting started."</div>
+      <div class="quote-author">- A long-time follower</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .content-box {
+      background: rgba(74, 144, 164, 0.08);
+      border: 2px solid rgba(74, 144, 164, 0.2);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 22px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .step-num { 
+      background: #4A90A4;
+      color: #1a1a2e;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    .step-content strong { color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Denied Coverage?</div>
+  
+  <div class="title">How to Appeal</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      A denial is not the final answer. Many families win on appeal:
+    </div>
+    
+    <div class="step-item">
+      <span class="step-num">1</span>
+      <div class="step-content"><strong>Request denial in writing.</strong> Get the specific reason and policy language cited.</div>
+    </div>
+    
+    <div class="step-item">
+      <span class="step-num">2</span>
+      <div class="step-content"><strong>Review your policy.</strong> Look for autism mandates and medical necessity language.</div>
+    </div>
+    
+    <div class="step-item">
+      <span class="step-num">3</span>
+      <div class="step-content"><strong>Get supporting documentation.</strong> Letters from doctors, therapists, and evaluators.</div>
+    </div>
+    
+    <div class="step-item">
+      <span class="step-num">4</span>
+      <div class="step-content"><strong>File internal appeal.</strong> Follow their process exactly. Meet all deadlines.</div>
+    </div>
+    
+    <div class="step-item">
+      <span class="step-num">5</span>
+      <div class="step-content"><strong>External review.</strong> If internal appeal fails, request independent review.</div>
+    </div>
+    
+    <div class="step-item">
+      <span class="step-num">6</span>
+      <div class="step-content"><strong>File complaints.</strong> State insurance commissioner, CMS for Medicare/Medicaid.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

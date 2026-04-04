@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 30px;
+    }
+    .content-box {
+      background: rgba(39, 174, 96, 0.08);
+      border: 2px solid rgba(39, 174, 96, 0.2);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      opacity: 0.9;
+      text-align: center;
+    }
+    .tip-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 22px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      align-items: flex-start;
+    }
+    .tip-item:last-child { border-bottom: none; margin-bottom: 0; }
+    .tip-emoji { font-size: 36px; }
+    .tip-content { flex: 1; }
+    .tip-title { 
+      font-size: 20px; 
+      font-weight: 700; 
+      color: #27AE60;
+      margin-bottom: 6px;
+    }
+    .tip-desc { font-size: 18px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Healthy Use</div>
+  
+  <div class="title">Finding Balance</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      Tips for a healthy relationship with technology:
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-emoji">⏰</div>
+      <div class="tip-content">
+        <div class="tip-title">Set Time Boundaries</div>
+        <div class="tip-desc">Use timers and app limits. Hyperfocus can make hours disappear.</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-emoji">🌙</div>
+      <div class="tip-content">
+        <div class="tip-title">Protect Sleep</div>
+        <div class="tip-desc">Blue light filters and screen-free wind-down routines help.</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-emoji">🚶</div>
+      <div class="tip-content">
+        <div class="tip-title">Movement Breaks</div>
+        <div class="tip-desc">Set reminders to stand, stretch, or walk away from screens.</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-emoji">🎯</div>
+      <div class="tip-content">
+        <div class="tip-title">Intentional Use</div>
+        <div class="tip-desc">Choose what serves you. Curate feeds, mute noise, unfollow stress.</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-emoji">🤝</div>
+      <div class="tip-content">
+        <div class="tip-title">Online + Offline</div>
+        <div class="tip-desc">Online friends are real friends. In-person time is also important.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">5 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

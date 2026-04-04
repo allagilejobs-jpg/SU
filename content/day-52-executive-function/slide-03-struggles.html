@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 30px;
+    }
+    .content-box {
+      background: rgba(74, 144, 164, 0.08);
+      border: 2px solid rgba(74, 144, 164, 0.2);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      opacity: 0.9;
+      text-align: center;
+    }
+    .example-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 22px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      align-items: flex-start;
+    }
+    .example-item:last-child { border-bottom: none; margin-bottom: 0; }
+    .example-emoji { font-size: 36px; }
+    .example-content { flex: 1; }
+    .example-title { 
+      font-size: 20px; 
+      font-weight: 700; 
+      color: #4A90A4;
+      margin-bottom: 6px;
+    }
+    .example-desc { font-size: 18px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Real Life</div>
+  
+  <div class="title">What This Looks Like</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      Executive function challenges show up everywhere:
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🛋️</div>
+      <div class="example-content">
+        <div class="example-title">"I know I need to do it, but I can't start"</div>
+        <div class="example-desc">Task paralysis. The task feels impossible to begin even when you want to.</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">⏱️</div>
+      <div class="example-content">
+        <div class="example-title">"5 minutes" turns into 2 hours</div>
+        <div class="example-desc">Time blindness makes it genuinely hard to feel time passing.</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🔀</div>
+      <div class="example-content">
+        <div class="example-title">Transitions feel impossible</div>
+        <div class="example-desc">Switching tasks requires huge mental effort, even for simple things.</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🗂️</div>
+      <div class="example-content">
+        <div class="example-title">Everything feels equally urgent</div>
+        <div class="example-desc">Can't prioritize because nothing stands out as "do this first."</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🧠</div>
+      <div class="example-content">
+        <div class="example-title">Forgetting mid-task</div>
+        <div class="example-desc">Walking into a room and losing the reason. Constantly.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

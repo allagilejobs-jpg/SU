@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #E8B86D; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 300px; height: 300px; background: #4A90A4; bottom: 150px; left: -100px; }
+    .emoji { font-size: 80px; margin-bottom: 40px; }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      margin-bottom: 50px;
+      max-width: 850px;
+      line-height: 1.2;
+    }
+    .highlight { color: #E8B86D; }
+    .promises {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      text-align: left;
+      max-width: 750px;
+    }
+    .promise {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 24px;
+    }
+    .check { color: #27AE60; font-size: 32px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="emoji">🤝</div>
+  
+  <div class="title">
+    Our <span class="highlight">Promise</span> to You
+  </div>
+  
+  <div class="promises">
+    <div class="promise">
+      <span class="check">✓</span>
+      <span>Real talk, no toxic positivity</span>
+    </div>
+    <div class="promise">
+      <span class="check">✓</span>
+      <span>Evidence-based information</span>
+    </div>
+    <div class="promise">
+      <span class="check">✓</span>
+      <span>Autistic voices always centered</span>
+    </div>
+    <div class="promise">
+      <span class="check">✓</span>
+      <span>Community over perfection</span>
+    </div>
+    <div class="promise">
+      <span class="check">✓</span>
+      <span>Consistent support year-round</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">5 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #27AE60; top: -130px; right: -100px; }
+    .bg-shape-2 { width: 300px; height: 300px; background: #E8B86D; bottom: 150px; left: -80px; }
+    .header { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 46px; 
+      font-weight: 800; 
+      margin-bottom: 45px;
+    }
+    .highlight { color: #E8B86D; }
+    .tips-container {
+      max-width: 900px;
+    }
+    .tip {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px 35px;
+      margin-bottom: 20px;
+      border-left: 5px solid #4A90A4;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .tip-num {
+      background: #4A90A4;
+      color: #1a1a2e;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .tip-text {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="header">Survival <span class="highlight">Tips</span></div>
+  
+  <div class="tips-container">
+    <div class="tip">
+      <div class="tip-num">1</div>
+      <div class="tip-text">Start the summer schedule 1-2 weeks before school ends to ease the transition</div>
+    </div>
+    
+    <div class="tip">
+      <div class="tip-num">2</div>
+      <div class="tip-text">Build in "boring days" on purpose. Not every day needs to be an adventure.</div>
+    </div>
+    
+    <div class="tip">
+      <div class="tip-num">3</div>
+      <div class="tip-text">Keep bedtimes consistent (or close). Summer sleep chaos makes everything harder.</div>
+    </div>
+    
+    <div class="tip">
+      <div class="tip-num">4</div>
+      <div class="tip-text">Have an exit strategy for every outing. Know when and how to leave early if needed.</div>
+    </div>
+    
+    <div class="tip">
+      <div class="tip-num">5</div>
+      <div class="tip-text">Lower your expectations. Summer with autism is survival mode, and that's okay.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

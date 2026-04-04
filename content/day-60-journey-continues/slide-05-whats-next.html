@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 25px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 50px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 40px;
+    }
+    .next-items {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      max-width: 950px;
+    }
+    .next-item {
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid rgba(39, 174, 96, 0.25);
+      border-radius: 18px;
+      padding: 28px 32px;
+      text-align: left;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .next-icon {
+      font-size: 36px;
+      flex-shrink: 0;
+    }
+    .next-content {
+      flex: 1;
+    }
+    .next-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .next-text {
+      font-size: 18px;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+    .bottom-note {
+      background: rgba(232, 184, 109, 0.12);
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 950px;
+      margin-top: 25px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .bottom-note strong { color: #E8B86D; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Going Forward</div>
+  
+  <div class="title">What's Next?</div>
+  
+  <div class="next-items">
+    <div class="next-item">
+      <span class="next-icon">🔥</span>
+      <div class="next-content">
+        <div class="next-title">We're Not Stopping</div>
+        <div class="next-text">Spectrum Unlocked continues with more content, deeper dives, and new topics year-round.</div>
+      </div>
+    </div>
+    
+    <div class="next-item">
+      <span class="next-icon">📚</span>
+      <div class="next-content">
+        <div class="next-title">Explore the Archive</div>
+        <div class="next-text">Go back through all 60 days. Share the posts that resonate. Build your own autism education.</div>
+      </div>
+    </div>
+    
+    <div class="next-item">
+      <span class="next-icon">🗣️</span>
+      <div class="next-content">
+        <div class="next-title">Keep the Conversation Going</div>
+        <div class="next-text">Talk about autism at home, at work, with friends. Normalize these discussions.</div>
+      </div>
+    </div>
+    
+    <div class="next-item">
+      <span class="next-icon">✊</span>
+      <div class="next-content">
+        <div class="next-title">Advocate in Real Life</div>
+        <div class="next-text">Push for accommodations. Support autistic-led organizations. Amplify autistic voices.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bottom-note">
+    <strong>The goal:</strong> A world where autism acceptance isn't a month-long campaign, but everyday reality.
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

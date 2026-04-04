@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .intro {
+      font-size: 22px;
+      line-height: 1.5;
+      opacity: 0.9;
+      max-width: 900px;
+      margin-bottom: 35px;
+    }
+    .help-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 950px;
+      margin-bottom: 30px;
+    }
+    .help-card {
+      background: rgba(231, 76, 60, 0.10);
+      border: 2px solid rgba(231, 76, 60, 0.2);
+      border-radius: 18px;
+      padding: 25px;
+      text-align: left;
+    }
+    .help-icon { font-size: 32px; margin-bottom: 10px; }
+    .help-text { font-size: 18px; line-height: 1.4; opacity: 0.9; }
+    .solution-box {
+      background: rgba(39, 174, 96, 0.15);
+      border: 2px solid rgba(39, 174, 96, 0.3);
+      border-radius: 18px;
+      padding: 30px;
+      max-width: 950px;
+    }
+    .solution-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 15px;
+    }
+    .solution-list {
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">When to Get Help</div>
+  
+  <div class="title">Talk to a Professional If...</div>
+  
+  <div class="intro">
+    Sometimes environmental changes aren't enough. Seek help if you notice:
+  </div>
+  
+  <div class="help-grid">
+    <div class="help-card">
+      <div class="help-icon">⏰</div>
+      <div class="help-text">Takes more than 1 hour to fall asleep most nights</div>
+    </div>
+    <div class="help-card">
+      <div class="help-icon">🌙</div>
+      <div class="help-text">Wakes multiple times and can't self-soothe back to sleep</div>
+    </div>
+    <div class="help-card">
+      <div class="help-icon">😤</div>
+      <div class="help-text">Daytime behavior significantly affected by lack of sleep</div>
+    </div>
+    <div class="help-card">
+      <div class="help-icon">😰</div>
+      <div class="help-text">Sleep anxiety causing extreme bedtime distress</div>
+    </div>
+  </div>
+  
+  <div class="solution-box">
+    <div class="solution-title">👩‍⚕️ Who Can Help</div>
+    <div class="solution-list">
+      • Pediatrician (rule out medical issues)<br>
+      • Sleep specialist or neurologist<br>
+      • Occupational therapist (sensory strategies)<br>
+      • Behavioral therapist (sleep training modifications)
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

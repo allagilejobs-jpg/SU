@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .prep-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 950px;
+    }
+    .prep-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: left;
+    }
+    .prep-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .prep-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 12px;
+    }
+    .prep-text {
+      font-size: 17px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .timeline-box {
+      grid-column: 1 / -1;
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 10px;
+    }
+    .timeline-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 15px;
+    }
+    .timeline-items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .timeline-item {
+      text-align: center;
+      flex: 1;
+      min-width: 150px;
+    }
+    .timeline-when {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.6;
+      margin-bottom: 8px;
+    }
+    .timeline-what {
+      font-size: 16px;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Setting Up Success</div>
+  
+  <div class="title">Preparing Your Child</div>
+  
+  <div class="prep-grid">
+    <div class="prep-card">
+      <div class="prep-icon">📖</div>
+      <div class="prep-title">Social Stories</div>
+      <div class="prep-text">Create a story about camp: what to expect, the schedule, who will be there</div>
+    </div>
+    
+    <div class="prep-card">
+      <div class="prep-icon">📸</div>
+      <div class="prep-title">Visual Preview</div>
+      <div class="prep-text">Get photos of the location, counselors, and activities in advance</div>
+    </div>
+    
+    <div class="prep-card">
+      <div class="prep-icon">🎒</div>
+      <div class="prep-title">Comfort Kit</div>
+      <div class="prep-text">Pack familiar items: fidgets, headphones, favorite snack, comfort object</div>
+    </div>
+    
+    <div class="prep-card">
+      <div class="prep-icon">🚗</div>
+      <div class="prep-title">Practice Runs</div>
+      <div class="prep-text">Drive by the camp, do a tour, practice the morning routine</div>
+    </div>
+    
+    <div class="timeline-box">
+      <div class="timeline-title">📅 Prep Timeline</div>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-when">4 weeks out</div>
+          <div class="timeline-what">Start social stories</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-when">2 weeks out</div>
+          <div class="timeline-what">Visit the camp</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-when">1 week out</div>
+          <div class="timeline-what">Practice routine</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-when">Day before</div>
+          <div class="timeline-what">Pack together</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

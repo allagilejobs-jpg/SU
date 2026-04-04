@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 30px;
+    }
+    .steps-container {
+      max-width: 920px;
+      width: 100%;
+    }
+    .step-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 25px 30px;
+      margin-bottom: 18px;
+      text-align: left;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: #4A90A4;
+      color: #1a1a2e;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .step-content {
+      flex: 1;
+    }
+    .step-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .step-desc {
+      font-size: 17px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .script-box {
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 20px;
+    }
+    .script-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 12px;
+    }
+    .script-text {
+      font-size: 17px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Take Action</div>
+  
+  <div class="title">How to Advocate for ESY</div>
+  
+  <div class="steps-container">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">Start Early</div>
+        <div class="step-desc">Bring up ESY at the IEP meeting BEFORE spring. Don't wait until May.</div>
+      </div>
+    </div>
+    
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">Bring Data</div>
+        <div class="step-desc">Document regression after breaks. Videos, work samples, therapist notes.</div>
+      </div>
+    </div>
+    
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Request in Writing</div>
+        <div class="step-desc">Put your ESY request in a formal letter. Paper trails matter.</div>
+      </div>
+    </div>
+    
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <div class="step-title">Know Your Rights</div>
+        <div class="step-desc">ESY cannot be denied due to cost. The school must consider each child individually.</div>
+      </div>
+    </div>
+    
+    <div class="script-box">
+      <div class="script-title">💬 What to Say</div>
+      <div class="script-text">"I am formally requesting that the IEP team discuss ESY eligibility for my child based on documented regression after school breaks."</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

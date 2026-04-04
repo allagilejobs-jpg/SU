@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .steps-list {
+      max-width: 900px;
+      text-align: left;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: rgba(39, 174, 96, 0.1);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 18px;
+    }
+    .step-num {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #27AE60, #1E8449);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .step-content {
+      flex: 1;
+    }
+    .step-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #E8B86D;
+    }
+    .step-text {
+      font-size: 18px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Moving Forward</div>
+  
+  <div class="title">What Comes Next</div>
+  
+  <div class="steps-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">Learn About Autism</div>
+        <div class="step-text">Read books by autistic authors. Follow autistic creators. Learn from the community.</div>
+      </div>
+    </div>
+    
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">Find Community</div>
+        <div class="step-text">Connect with other late-diagnosed adults. Online groups, local meetups. You're not alone.</div>
+      </div>
+    </div>
+    
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Accommodate Yourself</div>
+        <div class="step-text">Start unmasking. Honor sensory needs. Build life around your neurology, not against it.</div>
+      </div>
+    </div>
+    
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <div class="step-title">Consider Therapy</div>
+        <div class="step-text">Find a neurodiversity-affirming therapist. Process grief. Build self-compassion.</div>
+      </div>
+    </div>
+    
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <div class="step-title">Be Patient</div>
+        <div class="step-text">Identity reconstruction takes time. There's no rush. You have the rest of your life.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

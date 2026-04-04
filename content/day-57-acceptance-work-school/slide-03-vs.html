@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 42px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .comparison {
+      display: flex;
+      gap: 30px;
+      max-width: 950px;
+    }
+    .column {
+      flex: 1;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: left;
+    }
+    .column.bad {
+      background: rgba(231, 76, 60, 0.12);
+      border: 2px solid rgba(231, 76, 60, 0.3);
+    }
+    .column.good {
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.3);
+    }
+    .column-header {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .column.bad .column-header { color: #E74C3C; }
+    .column.good .column-header { color: #27AE60; }
+    .item {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      padding-left: 30px;
+      position: relative;
+    }
+    .item::before {
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+    }
+    .column.bad .item::before { content: "❌"; }
+    .column.good .item::before { content: "✅"; }
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      padding: 0 10px;
+      color: #E8B86D;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Know the Difference</div>
+  
+  <div class="title">Awareness vs Acceptance</div>
+  
+  <div class="comparison">
+    <div class="column bad">
+      <div class="column-header">
+        <span>🚫</span>
+        <span>Performative Awareness</span>
+      </div>
+      <div class="item">Puzzle piece logos with no action</div>
+      <div class="item">"We accept everyone" but no accommodations</div>
+      <div class="item">Hiring autistic people, then not supporting them</div>
+      <div class="item">One autism month event, then silence</div>
+      <div class="item">Expecting us to "fit in" without changes</div>
+      <div class="item">Training about autism without autistic voices</div>
+      <div class="item">Treating requests as "special treatment"</div>
+    </div>
+    
+    <div class="divider">→</div>
+    
+    <div class="column good">
+      <div class="column-header">
+        <span>💚</span>
+        <span>Real Acceptance</span>
+      </div>
+      <div class="item">Proactive accommodations built in</div>
+      <div class="item">Flexible work arrangements for all</div>
+      <div class="item">Quiet spaces and sensory options</div>
+      <div class="item">Year-round inclusion efforts</div>
+      <div class="item">Changing systems, not people</div>
+      <div class="item">Autistic people in leadership and planning</div>
+      <div class="item">Accommodations seen as normal</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .support-list {
+      max-width: 900px;
+      text-align: left;
+    }
+    .support-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: rgba(74, 144, 164, 0.1);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 18px;
+    }
+    .support-num {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #4A90A4, #2C5F6E);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .support-content {
+      flex: 1;
+    }
+    .support-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #E8B86D;
+    }
+    .support-text {
+      font-size: 18px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">How To Help</div>
+  
+  <div class="title">Supporting Social Connection</div>
+  
+  <div class="support-list">
+    <div class="support-item">
+      <div class="support-num">1</div>
+      <div class="support-content">
+        <div class="support-title">Follow Their Interests</div>
+        <div class="support-text">LEGO club, coding camp, animal rescue volunteer work. Interest-based groups = natural connections.</div>
+      </div>
+    </div>
+    
+    <div class="support-item">
+      <div class="support-num">2</div>
+      <div class="support-content">
+        <div class="support-title">Structure Playdates</div>
+        <div class="support-text">Plan activities in advance. "Hanging out" is vague. "Build LEGOs for 1 hour" is clear.</div>
+      </div>
+    </div>
+    
+    <div class="support-item">
+      <div class="support-num">3</div>
+      <div class="support-content">
+        <div class="support-title">Keep Them Short</div>
+        <div class="support-text">1-2 hours max. End on a high note. Better to leave wanting more.</div>
+      </div>
+    </div>
+    
+    <div class="support-item">
+      <div class="support-num">4</div>
+      <div class="support-content">
+        <div class="support-title">Find Neurodivergent Peers</div>
+        <div class="support-text">Other autistic/ADHD kids often "get" each other instantly. Autism support groups are gold.</div>
+      </div>
+    </div>
+    
+    <div class="support-item">
+      <div class="support-num">5</div>
+      <div class="support-content">
+        <div class="support-title">Don't Force It</div>
+        <div class="support-text">If they're happy with one friend or alone time, respect that. Loneliness is internal, not external.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

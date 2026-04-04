@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .tips-container {
+      max-width: 950px;
+      text-align: left;
+    }
+    .tip-item {
+      background: rgba(39, 174, 96, 0.10);
+      border-left: 5px solid #27AE60;
+      padding: 22px 30px;
+      margin-bottom: 18px;
+      border-radius: 0 16px 16px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .tip-icon { font-size: 32px; flex-shrink: 0; }
+    .tip-content { flex: 1; }
+    .tip-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 6px;
+    }
+    .tip-desc {
+      font-size: 18px;
+      line-height: 1.4;
+      opacity: 0.85;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Practical Strategies</div>
+  
+  <div class="title">What Actually Helps</div>
+  
+  <div class="tips-container">
+    <div class="tip-item">
+      <div class="tip-icon">🍽️</div>
+      <div class="tip-content">
+        <div class="tip-title">Use Divided Plates</div>
+        <div class="tip-desc">Keep foods separated so they don't touch. This reduces visual overwhelm.</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-icon">📅</div>
+      <div class="tip-content">
+        <div class="tip-title">Same Foods, Same Time</div>
+        <div class="tip-desc">Predictability helps. Routine meals reduce anxiety around eating.</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-icon">👀</div>
+      <div class="tip-content">
+        <div class="tip-title">Remove Pressure</div>
+        <div class="tip-desc">No forcing, no "just one bite." Pressure increases food anxiety.</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-icon">🌉</div>
+      <div class="tip-content">
+        <div class="tip-title">Food Chaining</div>
+        <div class="tip-desc">Bridge from safe foods to new ones (e.g., fries to sweet potato fries).</div>
+      </div>
+    </div>
+    
+    <div class="tip-item">
+      <div class="tip-icon">🎮</div>
+      <div class="tip-content">
+        <div class="tip-title">Food Play</div>
+        <div class="tip-desc">Let them explore foods without eating: touch, smell, sort. No pressure.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .quote-container {
+      max-width: 900px;
+    }
+    .quote-card {
+      background: rgba(39, 174, 96, 0.1);
+      border-left: 5px solid #27AE60;
+      border-radius: 0 20px 20px 0;
+      padding: 30px 35px;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+    .quote-text {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      opacity: 0.95;
+    }
+    .quote-author {
+      font-size: 18px;
+      color: #27AE60;
+      font-weight: 600;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: #E8B86D;
+    }
+    .stat-label {
+      font-size: 16px;
+      opacity: 0.7;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Community Spotlight</div>
+  
+  <div class="title">Your Voices Matter 💚</div>
+  
+  <div class="quote-container">
+    <div class="quote-card">
+      <div class="quote-text">"This page helped me feel less alone. Finally, someone gets it."</div>
+      <div class="quote-author">- Community Member</div>
+    </div>
+    
+    <div class="quote-card">
+      <div class="quote-text">"I saved every single post. This is the info I wish I had years ago."</div>
+      <div class="quote-author">- Autism Parent</div>
+    </div>
+    
+    <div class="quote-card">
+      <div class="quote-text">"My husband finally understood after I showed him the meltdown post."</div>
+      <div class="quote-author">- Mom of 2</div>
+    </div>
+  </div>
+  
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-number">1000+</div>
+      <div class="stat-label">Saves This Week</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">500+</div>
+      <div class="stat-label">Comments</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100s</div>
+      <div class="stat-label">DMs</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .comparison {
+      display: flex;
+      gap: 25px;
+      max-width: 960px;
+    }
+    .side {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: left;
+    }
+    .side-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid;
+    }
+    .iep-title { color: #4A90A4; border-color: #4A90A4; }
+    .title-504 { color: #27AE60; border-color: #27AE60; }
+    .side-item {
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 14px;
+      padding-left: 22px;
+      position: relative;
+    }
+    .side-item::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #E8B86D;
+      font-size: 24px;
+      line-height: 1;
+    }
+    .info-box {
+      background: rgba(232, 184, 109, 0.1);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 25px;
+      max-width: 960px;
+    }
+    .info-text {
+      font-size: 20px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .info-text strong { color: #E8B86D; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Formal Options</div>
+  
+  <div class="title">IEP vs. 504 Plan</div>
+  
+  <div class="comparison">
+    <div class="side">
+      <div class="side-title iep-title">📋 IEP</div>
+      <div class="side-item">Individualized Education Program</div>
+      <div class="side-item">Requires disability that impacts learning</div>
+      <div class="side-item">Includes specialized instruction</div>
+      <div class="side-item">Annual goals and progress tracking</div>
+      <div class="side-item">More legal protections</div>
+      <div class="side-item">Full evaluation required</div>
+    </div>
+    <div class="side">
+      <div class="side-title title-504">📄 504 Plan</div>
+      <div class="side-item">Section 504 of Rehabilitation Act</div>
+      <div class="side-item">Broader eligibility</div>
+      <div class="side-item">Accommodations only (no special ed)</div>
+      <div class="side-item">Less paperwork</div>
+      <div class="side-item">Faster to get</div>
+      <div class="side-item">Still legally binding!</div>
+    </div>
+  </div>
+  
+  <div class="info-box">
+    <div class="info-text">
+      <strong>Pro tip:</strong> Some kids have BOTH! 504 plans can cover things IEPs don't, like health accommodations.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

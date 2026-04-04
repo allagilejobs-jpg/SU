@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 30px;
+    }
+    .section {
+      max-width: 950px;
+      margin-bottom: 25px;
+    }
+    .section-header {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 15px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .items-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .item {
+      background: rgba(39, 174, 96, 0.1);
+      border: 1px solid rgba(39, 174, 96, 0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .item-icon { font-size: 22px; }
+    .note-box {
+      background: rgba(232, 184, 109, 0.12);
+      border-radius: 16px;
+      padding: 20px 25px;
+      max-width: 950px;
+      margin-top: 15px;
+      text-align: left;
+    }
+    .note-box p {
+      font-size: 18px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .note-box strong { color: #E8B86D; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">What Actually Helps</div>
+  
+  <div class="title">Accommodations That Work</div>
+  
+  <div class="section">
+    <div class="section-header">
+      <span>💼</span>
+      <span>At Work</span>
+    </div>
+    <div class="items-grid">
+      <div class="item"><span class="item-icon">📝</span> Written instructions over verbal</div>
+      <div class="item"><span class="item-icon">🏠</span> Remote or hybrid options</div>
+      <div class="item"><span class="item-icon">🎧</span> Noise-canceling headphones allowed</div>
+      <div class="item"><span class="item-icon">💡</span> Adjustable lighting at desk</div>
+      <div class="item"><span class="item-icon">⏰</span> Flexible start times</div>
+      <div class="item"><span class="item-icon">🚪</span> Quiet space for breaks</div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section-header">
+      <span>🎓</span>
+      <span>At School</span>
+    </div>
+    <div class="items-grid">
+      <div class="item"><span class="item-icon">⏳</span> Extended time on tests</div>
+      <div class="item"><span class="item-icon">🪑</span> Preferential seating options</div>
+      <div class="item"><span class="item-icon">📋</span> Clear assignment rubrics</div>
+      <div class="item"><span class="item-icon">🚶</span> Movement breaks allowed</div>
+      <div class="item"><span class="item-icon">🎒</span> Sensory tools permitted</div>
+      <div class="item"><span class="item-icon">📧</span> Email instead of verbal instructions</div>
+    </div>
+  </div>
+  
+  <div class="note-box">
+    <p><strong>Remember:</strong> These aren't "special treatment." They're equal access. A ramp for a wheelchair user isn't a luxury. Neither are sensory accommodations.</p>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

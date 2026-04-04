@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 25px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 45px;
+    }
+    .comparison {
+      display: flex;
+      gap: 30px;
+      max-width: 950px;
+    }
+    .comparison-box {
+      flex: 1;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: left;
+    }
+    .box-april {
+      background: rgba(232, 184, 109, 0.1);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+    }
+    .box-yearround {
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid rgba(39, 174, 96, 0.3);
+    }
+    .box-title { 
+      font-size: 24px; 
+      font-weight: 700; 
+      margin-bottom: 20px;
+    }
+    .april-title { color: #E8B86D; }
+    .yearround-title { color: #27AE60; }
+    .box-list {
+      list-style: none;
+    }
+    .box-list li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+      line-height: 1.4;
+    }
+    .box-list li::before {
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+    }
+    .box-april .box-list li::before { content: "❌"; }
+    .box-yearround .box-list li::before { content: "✅"; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">The Truth</div>
+  
+  <div class="title">April Only vs. Year-Round</div>
+  
+  <div class="comparison">
+    <div class="comparison-box box-april">
+      <div class="box-title april-title">April Only</div>
+      <ul class="box-list">
+        <li>Post about autism for 30 days</li>
+        <li>Forget until next April</li>
+        <li>Surface-level awareness</li>
+        <li>Performative support</li>
+      </ul>
+    </div>
+    
+    <div class="comparison-box box-yearround">
+      <div class="box-title yearround-title">Year-Round</div>
+      <ul class="box-list">
+        <li>Consistent advocacy</li>
+        <li>Daily acceptance</li>
+        <li>Deep understanding</li>
+        <li>Real community</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

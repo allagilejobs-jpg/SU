@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .intro {
+      font-size: 24px;
+      line-height: 1.5;
+      opacity: 0.9;
+      max-width: 900px;
+      margin-bottom: 35px;
+    }
+    .warning-box {
+      background: rgba(231, 76, 60, 0.12);
+      border: 2px solid rgba(231, 76, 60, 0.3);
+      border-radius: 20px;
+      padding: 35px;
+      max-width: 900px;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .warning-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #E74C3C;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .warning-list {
+      list-style: none;
+    }
+    .warning-list li {
+      font-size: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .warning-list li:last-child { border-bottom: none; }
+    .pro-box {
+      background: rgba(74, 144, 164, 0.15);
+      border: 2px solid rgba(74, 144, 164, 0.3);
+      border-radius: 20px;
+      padding: 30px 35px;
+      max-width: 900px;
+    }
+    .pro-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 12px;
+    }
+    .pro-text {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">When to Get Support</div>
+  
+  <div class="title">Seek Professional Help If...</div>
+  
+  <div class="intro">
+    Some feeding challenges need expert support. Watch for these signs:
+  </div>
+  
+  <div class="warning-box">
+    <div class="warning-title">⚠️ Red Flags</div>
+    <ul class="warning-list">
+      <li>📉 Weight loss or failure to gain weight appropriately</li>
+      <li>🍎 Eating fewer than 10-15 different foods total</li>
+      <li>😰 Extreme distress, gagging, or vomiting around food</li>
+      <li>💊 Nutritional deficiencies (fatigue, pallor, hair loss)</li>
+      <li>🚫 Dropping foods without adding new ones</li>
+    </ul>
+  </div>
+  
+  <div class="pro-box">
+    <div class="pro-title">👩‍⚕️ Who Can Help</div>
+    <div class="pro-text">
+      Feeding therapists, occupational therapists, pediatric dietitians, and SOS (Sequential Oral Sensory) trained specialists.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .content-box {
+      background: rgba(39, 174, 96, 0.08);
+      border: 2px solid rgba(39, 174, 96, 0.2);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .benefits-list {
+      list-style: none;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 22px;
+      font-size: 21px;
+      line-height: 1.4;
+    }
+    .benefit-emoji { font-size: 28px; }
+    .benefit-title { color: #E8B86D; font-weight: 700; }
+    .key-point {
+      font-size: 22px;
+      line-height: 1.5;
+      padding: 20px 25px;
+      background: rgba(74, 144, 164, 0.12);
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .key-point strong { color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">The Science</div>
+  
+  <div class="title">Why Nature Helps 🌿</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      Research shows nature exposure benefits everyone, but for autistic individuals, the effects can be particularly powerful:
+    </div>
+    
+    <ul class="benefits-list">
+      <li class="benefit-item">
+        <span class="benefit-emoji">🧠</span>
+        <span><span class="benefit-title">Reduces cortisol</span> - Stress hormones drop significantly after just 20 minutes outdoors</span>
+      </li>
+      <li class="benefit-item">
+        <span class="benefit-emoji">🔊</span>
+        <span><span class="benefit-title">Natural soundscape</span> - Wind, water, and birds provide gentler auditory input than urban noise</span>
+      </li>
+      <li class="benefit-item">
+        <span class="benefit-emoji">👁️</span>
+        <span><span class="benefit-title">Soft visual input</span> - Greens and natural patterns are calming to the visual system</span>
+      </li>
+      <li class="benefit-item">
+        <span class="benefit-emoji">🏃</span>
+        <span><span class="benefit-title">Proprioceptive regulation</span> - Uneven terrain, climbing, and movement naturally regulate the body</span>
+      </li>
+    </ul>
+    
+    <div class="key-point">
+      <strong>Key insight:</strong> Nature doesn't demand social performance. It's one of the few places to just BE.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

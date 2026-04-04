@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 960px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: left;
+      border-left: 4px solid #27AE60;
+    }
+    .card-emoji {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .card-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 16px;
+      line-height: 1.4;
+      opacity: 0.85;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Before the Event</div>
+  
+  <div class="title">Event Prep Tips</div>
+  
+  <div class="grid">
+    <div class="card">
+      <div class="card-emoji">📸</div>
+      <div class="card-title">Preview the Location</div>
+      <div class="card-desc">Show photos/videos of where you're going. Visit ahead if possible.</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">📝</div>
+      <div class="card-title">Social Story</div>
+      <div class="card-desc">Write a simple story about what will happen, who will be there.</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">🎒</div>
+      <div class="card-title">Pack the Kit</div>
+      <div class="card-desc">Headphones, fidgets, safe snacks, comfort item, noise/escape plan.</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">⏰</div>
+      <div class="card-title">Set a Time Limit</div>
+      <div class="card-desc">Decide in advance how long you'll stay. Leave before meltdown point.</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">🚪</div>
+      <div class="card-title">Scout Quiet Spaces</div>
+      <div class="card-desc">Know where the calm zones are before you arrive.</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">👋</div>
+      <div class="card-title">Prep the Exit</div>
+      <div class="card-desc">Have a code word for "I need to leave." No explanations needed.</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">👨‍👩‍👧</div>
+      <div class="card-title">Brief Family</div>
+      <div class="card-desc">Tell relatives what helps. Give them a quick "dos and don'ts."</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">🍕</div>
+      <div class="card-title">Bring Safe Foods</div>
+      <div class="card-desc">Don't count on event food. Bring what your child will actually eat.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

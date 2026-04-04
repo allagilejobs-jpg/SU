@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .list {
+      max-width: 920px;
+      text-align: left;
+    }
+    .item {
+      background: rgba(74, 144, 164, 0.1);
+      border-left: 5px solid #4A90A4;
+      padding: 22px 28px;
+      border-radius: 0 16px 16px 0;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .item-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    .item-content {
+      flex: 1;
+    }
+    .item-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 6px;
+    }
+    .item-desc {
+      font-size: 19px;
+      line-height: 1.4;
+      opacity: 0.9;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">During the Event</div>
+  
+  <div class="title">Survival Strategies</div>
+  
+  <div class="list">
+    <div class="item">
+      <div class="item-icon">⏱️</div>
+      <div class="item-content">
+        <div class="item-title">Take Regulation Breaks</div>
+        <div class="item-desc">Every 30 min, check in. Step outside, use the quiet space, reset.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon">🛡️</div>
+      <div class="item-content">
+        <div class="item-title">Be the Buffer</div>
+        <div class="item-desc">Intercept overwhelming relatives. "They need space right now."</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon">🎯</div>
+      <div class="item-content">
+        <div class="item-title">Let Them Parallel Play</div>
+        <div class="item-desc">Playing alone near others is valid. Don't force interaction.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon">📱</div>
+      <div class="item-content">
+        <div class="item-title">Screens Are Okay</div>
+        <div class="item-desc">Tablet time at a party = regulation tool. Ignore the judgment.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon">🚗</div>
+      <div class="item-content">
+        <div class="item-title">Leave When You Need To</div>
+        <div class="item-desc">Before the meltdown, not after. Your child's needs > others' expectations.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 40px;
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 950px;
+    }
+    .card {
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 20px;
+      padding: 25px 30px;
+      text-align: left;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .card-icon {
+      font-size: 36px;
+      flex-shrink: 0;
+    }
+    .card-content {
+      flex: 1;
+    }
+    .card-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 8px;
+    }
+    .card-text {
+      font-size: 18px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .bottom-note {
+      background: rgba(74, 144, 164, 0.15);
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 950px;
+      margin-top: 20px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .bottom-note strong { color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">For Allies</div>
+  
+  <div class="title">How to Be Supportive</div>
+  
+  <div class="cards">
+    <div class="card">
+      <span class="card-icon">👂</span>
+      <div class="card-content">
+        <div class="card-title">Listen First, Assume Nothing</div>
+        <div class="card-text">Every autistic person is different. Ask what helps instead of guessing.</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="card-icon">🔊</span>
+      <div class="card-content">
+        <div class="card-title">Amplify, Don't Speak Over</div>
+        <div class="card-text">Support autistic voices. Don't become the spokesperson.</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="card-icon">🛡️</span>
+      <div class="card-content">
+        <div class="card-title">Advocate When We Can't</div>
+        <div class="card-text">Push for policy changes. Challenge ableism when you see it.</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="card-icon">📚</span>
+      <div class="card-content">
+        <div class="card-title">Educate Yourself</div>
+        <div class="card-text">Follow autistic creators. Read our perspectives, not just "expert" opinions about us.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bottom-note">
+    <strong>The best allies:</strong> Create space, share power, and keep learning. Acceptance is an ongoing practice, not a checkbox.
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

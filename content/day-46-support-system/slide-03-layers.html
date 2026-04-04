@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .layers-container {
+      width: 100%;
+      max-width: 920px;
+    }
+    .layer {
+      border-radius: 20px;
+      padding: 25px 30px;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+    .layer-1 {
+      background: linear-gradient(135deg, rgba(39, 174, 96, 0.25), rgba(39, 174, 96, 0.1));
+      border: 2px solid rgba(39, 174, 96, 0.4);
+    }
+    .layer-2 {
+      background: linear-gradient(135deg, rgba(74, 144, 164, 0.25), rgba(74, 144, 164, 0.1));
+      border: 2px solid rgba(74, 144, 164, 0.4);
+    }
+    .layer-3 {
+      background: linear-gradient(135deg, rgba(232, 184, 109, 0.25), rgba(232, 184, 109, 0.1));
+      border: 2px solid rgba(232, 184, 109, 0.4);
+    }
+    .layer-4 {
+      background: linear-gradient(135deg, rgba(155, 89, 182, 0.25), rgba(155, 89, 182, 0.1));
+      border: 2px solid rgba(155, 89, 182, 0.4);
+    }
+    .layer-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    .layer-icon { font-size: 30px; }
+    .layer-title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .layer-1 .layer-title { color: #27AE60; }
+    .layer-2 .layer-title { color: #4A90A4; }
+    .layer-3 .layer-title { color: #E8B86D; }
+    .layer-4 .layer-title { color: #9B59B6; }
+    .layer-desc {
+      font-size: 18px;
+      opacity: 0.85;
+      line-height: 1.4;
+      padding-left: 45px;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">The Framework</div>
+  
+  <div class="title">4 Layers of Support</div>
+  
+  <div class="layers-container">
+    <div class="layer layer-1">
+      <div class="layer-header">
+        <span class="layer-icon">💚</span>
+        <span class="layer-title">Inner Circle: Who GETS It</span>
+      </div>
+      <div class="layer-desc">Other autism parents, close family who truly understand. These are your 2AM people.</div>
+    </div>
+    
+    <div class="layer layer-2">
+      <div class="layer-header">
+        <span class="layer-icon">🔵</span>
+        <span class="layer-title">Practical Support</span>
+      </div>
+      <div class="layer-desc">Respite care, trusted sitters, neighbors who can help in a pinch. Action over words.</div>
+    </div>
+    
+    <div class="layer layer-3">
+      <div class="layer-header">
+        <span class="layer-icon">🟡</span>
+        <span class="layer-title">Professional Village</span>
+      </div>
+      <div class="layer-desc">Therapists, doctors, teachers, advocates. Your child's care team is YOUR team too.</div>
+    </div>
+    
+    <div class="layer layer-4">
+      <div class="layer-header">
+        <span class="layer-icon">💜</span>
+        <span class="layer-title">Online Community</span>
+      </div>
+      <div class="layer-desc">Facebook groups, Instagram, forums. 24/7 understanding when you need it most.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

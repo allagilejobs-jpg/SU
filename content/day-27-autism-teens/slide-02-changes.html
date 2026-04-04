@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .content-box {
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .changes-list {
+      list-style: none;
+    }
+    .change-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+      font-size: 21px;
+      line-height: 1.4;
+    }
+    .change-emoji { font-size: 28px; }
+    .change-title { color: #4A90A4; font-weight: 700; }
+    .key-point {
+      font-size: 22px;
+      line-height: 1.5;
+      padding: 20px 25px;
+      background: rgba(39, 174, 96, 0.12);
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .key-point strong { color: #27AE60; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">What's Different</div>
+  
+  <div class="title">Physical Changes + Autism</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      Puberty brings major sensory and emotional shifts. For autistic teens, these can feel overwhelming:
+    </div>
+    
+    <ul class="changes-list">
+      <li class="change-item">
+        <span class="change-emoji">🌡️</span>
+        <span><span class="change-title">Sensory overload intensifies</span> - hormones amplify sensitivity to textures, sounds, smells</span>
+      </li>
+      <li class="change-item">
+        <span class="change-emoji">🎢</span>
+        <span><span class="change-title">Emotional regulation harder</span> - already challenging, now with hormonal mood swings</span>
+      </li>
+      <li class="change-item">
+        <span class="change-emoji">👕</span>
+        <span><span class="change-title">Body changes feel jarring</span> - new sensations, new clothes needed, body awareness shifts</span>
+      </li>
+      <li class="change-item">
+        <span class="change-emoji">😰</span>
+        <span><span class="change-title">Anxiety may spike</span> - uncertainty about what's "normal" and what's not</span>
+      </li>
+    </ul>
+    
+    <div class="key-point">
+      <strong>Remember:</strong> All of this is temporary. With support, autistic teens can navigate puberty successfully.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

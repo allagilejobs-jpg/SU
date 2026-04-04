@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #E8B86D; top: -150px; left: -150px; }
+    .bg-shape-2 { width: 300px; height: 300px; background: #27AE60; bottom: 150px; right: -100px; }
+    .emoji { font-size: 80px; margin-bottom: 40px; }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      max-width: 850px;
+      line-height: 1.2;
+    }
+    .highlight { color: #E8B86D; }
+    .quote-box {
+      background: rgba(232, 184, 109, 0.15);
+      border-left: 5px solid #E8B86D;
+      padding: 35px 45px;
+      margin: 30px 0;
+      text-align: left;
+      max-width: 850px;
+      border-radius: 0 15px 15px 0;
+    }
+    .quote-text {
+      font-size: 26px;
+      font-style: italic;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .bottom-text {
+      font-size: 22px;
+      opacity: 0.8;
+      margin-top: 30px;
+      max-width: 750px;
+      line-height: 1.5;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="emoji">💭</div>
+  
+  <div class="title">
+    The <span class="highlight">Reality Check</span>
+  </div>
+  
+  <div class="quote-box">
+    <div class="quote-text">
+      "Some weekends, the best activity is staying home in pajamas. And that's a win too."
+    </div>
+  </div>
+  
+  <div class="bottom-text">
+    Not every weekend needs to be packed with outings. Rest is productive. Regulation matters more than Instagram-worthy moments.
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">5 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

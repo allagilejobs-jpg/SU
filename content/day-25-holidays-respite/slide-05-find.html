@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #27AE60; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .list {
+      max-width: 920px;
+      text-align: left;
+    }
+    .item {
+      background: rgba(232, 184, 109, 0.08);
+      border-left: 5px solid #E8B86D;
+      padding: 22px 28px;
+      border-radius: 0 16px 16px 0;
+      margin-bottom: 18px;
+    }
+    .item-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .item-desc {
+      font-size: 19px;
+      line-height: 1.4;
+      opacity: 0.9;
+    }
+    .note {
+      background: rgba(74, 144, 164, 0.15);
+      border-radius: 16px;
+      padding: 22px;
+      margin-top: 20px;
+      max-width: 920px;
+    }
+    .note-text {
+      font-size: 20px;
+      line-height: 1.5;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Where to Look</div>
+  
+  <div class="title">Finding Respite Care</div>
+  
+  <div class="list">
+    <div class="item">
+      <div class="item-title">🏛️ State/County Programs</div>
+      <div class="item-desc">Many states offer funded respite through Medicaid waivers. Ask your case manager.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">🏢 Disability Organizations</div>
+      <div class="item-desc">The Arc, Easter Seals, Autism Society chapters often provide or connect to respite.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">👨‍👩‍👧 Family and Friends</div>
+      <div class="item-desc">Train a trusted person. Even 2 hours makes a difference.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">⛪ Faith Communities</div>
+      <div class="item-desc">Some churches offer "parents night out" programs with trained volunteers.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">🏕️ Specialized Camps</div>
+      <div class="item-desc">Day camps or overnight camps for kids with disabilities = respite for you.</div>
+    </div>
+  </div>
+  
+  <div class="note">
+    <div class="note-text">Start small. A few hours. Build up as your child adjusts to new caregivers.</div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

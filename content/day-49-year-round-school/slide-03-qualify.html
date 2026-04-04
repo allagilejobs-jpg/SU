@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 30px;
+    }
+    .qualify-container {
+      max-width: 920px;
+      width: 100%;
+    }
+    .qualify-item {
+      background: rgba(39, 174, 96, 0.1);
+      border-left: 4px solid #27AE60;
+      border-radius: 0 16px 16px 0;
+      padding: 22px 28px;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+    .qualify-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 8px;
+    }
+    .qualify-desc {
+      font-size: 18px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .warning-box {
+      background: rgba(232, 184, 109, 0.12);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 25px;
+    }
+    .warning-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 12px;
+    }
+    .warning-text {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Eligibility</div>
+  
+  <div class="title">Who Qualifies?</div>
+  
+  <div class="qualify-container">
+    <div class="qualify-item">
+      <div class="qualify-title">📉 Regression</div>
+      <div class="qualify-desc">Child loses skills during breaks (e.g., communication, reading, self-help skills)</div>
+    </div>
+    
+    <div class="qualify-item">
+      <div class="qualify-title">⏱️ Recoupment Time</div>
+      <div class="qualify-desc">Takes longer than peers to regain lost skills after breaks</div>
+    </div>
+    
+    <div class="qualify-item">
+      <div class="qualify-title">🧠 Critical Learning Period</div>
+      <div class="qualify-desc">Child is at a crucial stage where interruption would be harmful</div>
+    </div>
+    
+    <div class="qualify-item">
+      <div class="qualify-title">🔄 Severe Behaviors</div>
+      <div class="qualify-desc">Behaviors that emerge or worsen during breaks and affect learning</div>
+    </div>
+    
+    <div class="qualify-item">
+      <div class="qualify-title">📊 Nature of Disability</div>
+      <div class="qualify-desc">The severity of disability makes ongoing services essential</div>
+    </div>
+    
+    <div class="warning-box">
+      <div class="warning-title">⚠️ Document Everything</div>
+      <div class="warning-text">Keep notes on skills lost after weekends, breaks, and summer. Data is your best advocate.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

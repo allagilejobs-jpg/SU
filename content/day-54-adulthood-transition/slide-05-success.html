@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .content-box {
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      opacity: 0.9;
+      text-align: center;
+    }
+    .success-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 22px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      align-items: flex-start;
+    }
+    .success-item:last-child { border-bottom: none; margin-bottom: 0; }
+    .success-emoji { font-size: 36px; }
+    .success-content { flex: 1; }
+    .success-title { 
+      font-size: 20px; 
+      font-weight: 700; 
+      color: #E8B86D;
+      margin-bottom: 6px;
+    }
+    .success-desc { font-size: 18px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Reframe</div>
+  
+  <div class="title">Success Looks Different</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      Rethinking what "success" means for autistic adults:
+    </div>
+    
+    <div class="success-item">
+      <div class="success-emoji">🏠</div>
+      <div class="success-content">
+        <div class="success-title">Living Situations Vary</div>
+        <div class="success-desc">Living with family, supported housing, or solo are all valid paths.</div>
+      </div>
+    </div>
+    
+    <div class="success-item">
+      <div class="success-emoji">⏰</div>
+      <div class="success-content">
+        <div class="success-title">Timelines Are Flexible</div>
+        <div class="success-desc">There's no deadline for "adulting." Development continues throughout life.</div>
+      </div>
+    </div>
+    
+    <div class="success-item">
+      <div class="success-emoji">💼</div>
+      <div class="success-content">
+        <div class="success-title">Work Looks Different</div>
+        <div class="success-desc">Part-time, remote, self-employment, or day programs all count.</div>
+      </div>
+    </div>
+    
+    <div class="success-item">
+      <div class="success-emoji">🤝</div>
+      <div class="success-content">
+        <div class="success-title">Interdependence Is Normal</div>
+        <div class="success-desc">Everyone needs support. Asking for help is a skill, not a failure.</div>
+      </div>
+    </div>
+    
+    <div class="success-item">
+      <div class="success-emoji">✨</div>
+      <div class="success-content">
+        <div class="success-title">Quality of Life Matters Most</div>
+        <div class="success-desc">Happiness, connection, and purpose over external achievements.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">5 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

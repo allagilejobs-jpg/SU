@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.1; }
+    .bg-shape-1 { width: 600px; height: 600px; background: linear-gradient(135deg, #E8B86D, #F39C12); top: -200px; right: -200px; }
+    .bg-shape-2 { width: 450px; height: 450px; background: linear-gradient(135deg, #27AE60, #2ECC71); bottom: 50px; left: -150px; }
+    .bg-shape-3 { width: 350px; height: 350px; background: linear-gradient(135deg, #4A90A4, #5DADE2); top: 250px; left: -100px; }
+    .badge { 
+      background: linear-gradient(135deg, #E8B86D 0%, #F39C12 50%, #27AE60 100%); 
+      color: #1a1a2e;
+      padding: 14px 40px; 
+      border-radius: 30px; 
+      font-size: 20px; 
+      font-weight: 800; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      margin-bottom: 40px;
+    }
+    .emoji-row { font-size: 80px; margin-bottom: 35px; }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 68px; 
+      font-weight: 800; 
+      line-height: 1.1; 
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
+    .highlight { color: #E8B86D; }
+    .highlight-green { color: #27AE60; }
+    .highlight-teal { color: #4A90A4; }
+    .subtitle {
+      font-size: 30px;
+      opacity: 0.9;
+      margin-bottom: 50px;
+      max-width: 850px;
+      line-height: 1.4;
+    }
+    .day-badge {
+      background: rgba(255,255,255,0.1);
+      padding: 15px 40px;
+      border-radius: 40px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.7;
+      margin-top: 20px;
+    }
+    .arrow { font-size: 30px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 22px; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+  
+  <div class="badge">Day 60 - Finale</div>
+  
+  <div class="emoji-row">🌟 🚀 ✨</div>
+  
+  <div class="main-title">
+    The <span class="highlight">Journey</span> <span class="highlight-green">Continues</span>
+  </div>
+  
+  <div class="subtitle">
+    60 days of learning, growing, and celebrating autistic identity. What a ride.
+  </div>
+  
+  <div class="swipe-cta">
+    <span>Swipe for our final message</span>
+    <span class="arrow">→</span>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

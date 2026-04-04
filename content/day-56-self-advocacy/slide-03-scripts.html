@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .script-card {
+      background: rgba(74, 144, 164, 0.1);
+      border: 2px solid rgba(74, 144, 164, 0.25);
+      border-radius: 20px;
+      padding: 30px 35px;
+      max-width: 950px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .script-label {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #E8B86D;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .script-text {
+      font-size: 22px;
+      line-height: 1.5;
+      font-style: italic;
+      opacity: 0.95;
+    }
+    .script-text::before { content: '"'; color: #4A90A4; font-size: 28px; }
+    .script-text::after { content: '"'; color: #4A90A4; font-size: 28px; }
+    .tip-box {
+      background: rgba(232, 184, 109, 0.12);
+      border-radius: 16px;
+      padding: 25px 30px;
+      max-width: 950px;
+      margin-top: 15px;
+    }
+    .tip-box p {
+      font-size: 20px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .tip-box strong { color: #E8B86D; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Copy These</div>
+  
+  <div class="title">Scripts You Can Use</div>
+  
+  <div class="script-card">
+    <div class="script-label">At Work or School</div>
+    <div class="script-text">I work best when I have written instructions. Can you send that in an email?</div>
+  </div>
+  
+  <div class="script-card">
+    <div class="script-label">At the Doctor</div>
+    <div class="script-text">I need extra time to process questions. Please give me a moment before expecting a response.</div>
+  </div>
+  
+  <div class="script-card">
+    <div class="script-label">With Friends/Family</div>
+    <div class="script-text">I care about you, but I need to recharge alone right now. It's not personal.</div>
+  </div>
+  
+  <div class="script-card">
+    <div class="script-label">In Loud Environments</div>
+    <div class="script-text">The noise level is overwhelming for me. Can we move somewhere quieter?</div>
+  </div>
+  
+  <div class="tip-box">
+    <p><strong>Pro tip:</strong> Practice these scripts before you need them. Write them down. Having words ready reduces the pressure in the moment.</p>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

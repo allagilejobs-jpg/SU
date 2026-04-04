@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #E8B86D; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .cards {
+      max-width: 940px;
+    }
+    .card {
+      background: rgba(74, 144, 164, 0.1);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .card-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 12px;
+    }
+    .card-desc {
+      font-size: 20px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .warning-box {
+      background: rgba(232, 184, 109, 0.15);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 20px;
+    }
+    .warning-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .warning-text {
+      font-size: 19px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Professional Help</div>
+  
+  <div class="title">When to Seek Support</div>
+  
+  <div class="cards">
+    <div class="card">
+      <div class="card-title">🔍 Find Autism-Informed Therapists</div>
+      <div class="card-desc">Not all anxiety treatment works for autism. CBT may need modifications. Look for neurodiversity-affirming providers.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">💊 Medication Can Help</div>
+      <div class="card-desc">SSRIs or other medications can be part of the plan. Work with a psychiatrist who understands autism.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧘 OT for Sensory Regulation</div>
+      <div class="card-desc">Occupational therapy helps build sensory strategies that prevent anxiety from building up.</div>
+    </div>
+  </div>
+  
+  <div class="warning-box">
+    <div class="warning-title">⚠️ Seek Help If You See:</div>
+    <div class="warning-text">School refusal, self-harm, isolation, panic attacks, physical symptoms (stomach aches, headaches), loss of skills, or talk of hopelessness.</div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

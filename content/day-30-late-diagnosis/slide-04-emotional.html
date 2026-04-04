@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .emotions-list {
+      max-width: 900px;
+    }
+    .emotion-card {
+      background: rgba(232, 184, 109, 0.1);
+      border-left: 5px solid #E8B86D;
+      border-radius: 0 16px 16px 0;
+      padding: 25px 30px;
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .emotion-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 8px;
+    }
+    .emotion-text {
+      font-size: 19px;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+    .validation-box {
+      background: linear-gradient(135deg, rgba(39, 174, 96, 0.15), rgba(39, 174, 96, 0.08));
+      border: 2px solid rgba(39, 174, 96, 0.3);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 900px;
+      margin-top: 25px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">The Emotional Journey</div>
+  
+  <div class="title">What Comes After Diagnosis</div>
+  
+  <div class="emotions-list">
+    <div class="emotion-card">
+      <div class="emotion-name">Relief</div>
+      <div class="emotion-text">"There's a reason I struggled. It wasn't a character flaw."</div>
+    </div>
+    
+    <div class="emotion-card">
+      <div class="emotion-name">Grief</div>
+      <div class="emotion-text">"What would my life have been like with earlier support?"</div>
+    </div>
+    
+    <div class="emotion-card">
+      <div class="emotion-name">Anger</div>
+      <div class="emotion-text">"Why didn't anyone catch this? Why did I have to suffer?"</div>
+    </div>
+    
+    <div class="emotion-card">
+      <div class="emotion-name">Identity Shift</div>
+      <div class="emotion-text">"Who am I really? What's 'me' and what's masking?"</div>
+    </div>
+    
+    <div class="emotion-card">
+      <div class="emotion-name">Acceptance</div>
+      <div class="emotion-text">"I can finally understand myself and live more authentically."</div>
+    </div>
+  </div>
+  
+  <div class="validation-box">
+    💚 All of these feelings are valid. The journey isn't linear. Give yourself grace.
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

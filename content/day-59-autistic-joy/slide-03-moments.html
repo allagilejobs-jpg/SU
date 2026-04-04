@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .moments-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 950px;
+    }
+    .moment-card {
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid rgba(39, 174, 96, 0.25);
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+    }
+    .moment-emoji {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+    .moment-text {
+      font-size: 18px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+      background: rgba(232, 184, 109, 0.12);
+      border: 2px solid rgba(232, 184, 109, 0.25);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .full-width .moment-text { font-size: 20px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Relatable?</div>
+  
+  <div class="title">Moments of Autistic Joy</div>
+  
+  <div class="moments-grid">
+    <div class="moment-card">
+      <div class="moment-emoji">📚</div>
+      <div class="moment-text">Getting lost for hours in a special interest</div>
+    </div>
+    
+    <div class="moment-card">
+      <div class="moment-emoji">🧸</div>
+      <div class="moment-text">Finding the PERFECT texture</div>
+    </div>
+    
+    <div class="moment-card">
+      <div class="moment-emoji">🎧</div>
+      <div class="moment-text">A song that hits exactly right every single time</div>
+    </div>
+    
+    <div class="moment-card">
+      <div class="moment-emoji">🧩</div>
+      <div class="moment-text">When all the pieces click into place</div>
+    </div>
+    
+    <div class="moment-card">
+      <div class="moment-emoji">🤗</div>
+      <div class="moment-text">Meeting someone who just GETS you</div>
+    </div>
+    
+    <div class="moment-card">
+      <div class="moment-emoji">🏠</div>
+      <div class="moment-text">Coming home and finally unmasking</div>
+    </div>
+    
+    <div class="moment-card">
+      <div class="moment-emoji">✋</div>
+      <div class="moment-text">Hand flapping because you're just SO happy</div>
+    </div>
+    
+    <div class="moment-card">
+      <div class="moment-emoji">🔁</div>
+      <div class="moment-text">Rewatching your comfort show for the 47th time</div>
+    </div>
+    
+    <div class="moment-card full-width">
+      <div class="moment-emoji">💫</div>
+      <div class="moment-text">Infodumping to someone who actually wants to listen, and they're genuinely interested</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

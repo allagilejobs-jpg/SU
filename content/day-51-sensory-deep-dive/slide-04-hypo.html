@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 30px;
+    }
+    .content-box {
+      background: rgba(39, 174, 96, 0.08);
+      border: 2px solid rgba(39, 174, 96, 0.2);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      opacity: 0.9;
+      text-align: center;
+    }
+    .example-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 22px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      align-items: flex-start;
+    }
+    .example-item:last-child { border-bottom: none; margin-bottom: 0; }
+    .example-emoji { font-size: 36px; }
+    .example-content { flex: 1; }
+    .example-title { 
+      font-size: 20px; 
+      font-weight: 700; 
+      color: #27AE60;
+      margin-bottom: 6px;
+    }
+    .example-desc { font-size: 18px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Undersensitivity</div>
+  
+  <div class="title">Hyposensitivity</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      When the volume is turned down and you need MORE input:
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🤗</div>
+      <div class="example-content">
+        <div class="example-title">Craves Deep Pressure</div>
+        <div class="example-desc">Seeking tight hugs, weighted blankets, or being squeezed feels regulating.</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🌀</div>
+      <div class="example-content">
+        <div class="example-title">Needs to Move</div>
+        <div class="example-desc">Spinning, jumping, crashing into things to feel where body is in space.</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🌶️</div>
+      <div class="example-content">
+        <div class="example-title">Seeks Strong Flavors</div>
+        <div class="example-desc">Craving very spicy, sour, or intense tastes to actually taste food.</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🔉</div>
+      <div class="example-content">
+        <div class="example-title">May Not Hear Name</div>
+        <div class="example-desc">Not ignoring you, but genuinely not registering sounds sometimes.</div>
+      </div>
+    </div>
+    
+    <div class="example-item">
+      <div class="example-emoji">🩹</div>
+      <div class="example-content">
+        <div class="example-title">Doesn't Notice Pain</div>
+        <div class="example-desc">Injuries may go unnoticed because pain signals don't register fully.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

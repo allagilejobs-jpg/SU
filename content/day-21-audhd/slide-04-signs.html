@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; bottom: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 960px;
+    }
+    .sign-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: left;
+      border-left: 4px solid #E8B86D;
+    }
+    .sign-emoji {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .sign-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .sign-desc {
+      font-size: 17px;
+      line-height: 1.4;
+      opacity: 0.85;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Common Experiences</div>
+  
+  <div class="title">Signs of AuDHD</div>
+  
+  <div class="signs-grid">
+    <div class="sign-card">
+      <div class="sign-emoji">🔄</div>
+      <div class="sign-title">Hyperfocus Loops</div>
+      <div class="sign-desc">Intense special interests that shift unpredictably, cycling back months later</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-emoji">😤</div>
+      <div class="sign-title">Emotional Whiplash</div>
+      <div class="sign-desc">Big feelings that come fast, hit hard, and confuse everyone including yourself</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-emoji">🛋️</div>
+      <div class="sign-title">Paralysis Paradox</div>
+      <div class="sign-desc">Wanting to do ALL the things but frozen, unable to start any of them</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-emoji">🎭</div>
+      <div class="sign-title">Double Masking</div>
+      <div class="sign-desc">Hiding both conditions at once. Exhausting doesn't begin to describe it</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-emoji">⏰</div>
+      <div class="sign-title">Time Blindness + Rigidity</div>
+      <div class="sign-desc">Losing track of time while also panicking when schedules change</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-emoji">🔋</div>
+      <div class="sign-title">Burnout Cycles</div>
+      <div class="sign-desc">Extreme energy bursts followed by complete shutdowns. Repeat.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

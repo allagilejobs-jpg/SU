@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; bottom: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 950px;
+    }
+    .impact-card {
+      background: rgba(74, 144, 164, 0.12);
+      border: 2px solid rgba(74, 144, 164, 0.25);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: left;
+    }
+    .impact-emoji { font-size: 36px; margin-bottom: 12px; }
+    .impact-title { font-size: 20px; font-weight: 700; color: #E8B86D; margin-bottom: 10px; }
+    .impact-text { font-size: 17px; opacity: 0.85; line-height: 1.4; }
+    .note-box {
+      background: rgba(232, 184, 109, 0.1);
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 950px;
+      margin-top: 25px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Why It Matters</div>
+  
+  <div class="title">The Long-Term Impact</div>
+  
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-emoji">😰</div>
+      <div class="impact-title">Anxiety</div>
+      <div class="impact-text">Hypervigilance about others' emotions. Always sensing the room.</div>
+    </div>
+    
+    <div class="impact-card">
+      <div class="impact-emoji">🤷</div>
+      <div class="impact-title">Low Self-Worth</div>
+      <div class="impact-text">Internalizing that their needs don't matter as much.</div>
+    </div>
+    
+    <div class="impact-card">
+      <div class="impact-emoji">🧹</div>
+      <div class="impact-title">People-Pleasing</div>
+      <div class="impact-text">Learning to prioritize everyone else's comfort over their own.</div>
+    </div>
+    
+    <div class="impact-card">
+      <div class="impact-emoji">😶</div>
+      <div class="impact-title">Difficulty Expressing Needs</div>
+      <div class="impact-text">Never learned it was okay to ask for attention.</div>
+    </div>
+    
+    <div class="impact-card">
+      <div class="impact-emoji">😤</div>
+      <div class="impact-title">Hidden Resentment</div>
+      <div class="impact-text">Anger toward sibling or parents that feels "not allowed."</div>
+    </div>
+    
+    <div class="impact-card">
+      <div class="impact-emoji">🏆</div>
+      <div class="impact-title">Overachievement</div>
+      <div class="impact-text">Trying to earn attention through excellence and perfectionism.</div>
+    </div>
+  </div>
+  
+  <div class="note-box">
+    💔 These patterns can follow them into adulthood, affecting relationships and self-image.
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

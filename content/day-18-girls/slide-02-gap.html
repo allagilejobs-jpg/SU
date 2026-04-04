@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 40px;
+    }
+    .stat-container {
+      max-width: 900px;
+    }
+    .stat-box {
+      background: rgba(231, 76, 60, 0.12);
+      border: 2px solid rgba(231, 76, 60, 0.25);
+      border-radius: 20px;
+      padding: 35px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 72px;
+      font-weight: 800;
+      color: #E74C3C;
+      line-height: 1;
+    }
+    .stat-text {
+      font-size: 24px;
+      margin-top: 15px;
+      opacity: 0.9;
+    }
+    .fact-box {
+      background: rgba(155, 89, 182, 0.12);
+      border-left: 5px solid #9B59B6;
+      padding: 25px 30px;
+      border-radius: 0 16px 16px 0;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .fact-text {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+    .fact-text strong { color: #9B59B6; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">The Diagnosis Gap</div>
+  
+  <div class="title">Why Girls Get Missed</div>
+  
+  <div class="stat-container">
+    <div class="stat-box">
+      <div class="stat-number">4-5 years</div>
+      <div class="stat-text">later on average girls are diagnosed compared to boys</div>
+    </div>
+    
+    <div class="fact-box">
+      <div class="fact-text"><strong>The old ratio was 4:1</strong> (boys to girls). New research shows it's closer to <strong>3:1 or even 2:1</strong> when girls aren't missed.</div>
+    </div>
+    
+    <div class="fact-box">
+      <div class="fact-text"><strong>Diagnostic criteria were developed</strong> by studying mostly white boys. Girls present differently.</div>
+    </div>
+    
+    <div class="fact-box">
+      <div class="fact-text"><strong>Girls are better at masking</strong> from an early age, copying peers to blend in socially.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

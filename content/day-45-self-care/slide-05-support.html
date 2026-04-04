@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .content-box {
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .intro {
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      opacity: 0.9;
+      text-align: center;
+    }
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .support-item {
+      background: rgba(39, 174, 96, 0.12);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .support-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .support-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 10px;
+    }
+    .support-text {
+      font-size: 17px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .key-message {
+      background: rgba(74, 144, 164, 0.15);
+      border-left: 5px solid #4A90A4;
+      padding: 20px 25px;
+      border-radius: 0 16px 16px 0;
+      margin-top: 25px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .key-message strong { color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Building Your Village</div>
+  
+  <div class="title">Support That Works</div>
+  
+  <div class="content-box">
+    <div class="intro">
+      You can't pour from an empty cup. Here's how to refill it.
+    </div>
+    
+    <div class="support-grid">
+      <div class="support-item">
+        <div class="support-icon">👥</div>
+        <div class="support-title">Find Your People</div>
+        <div class="support-text">Online groups, local support, parents who GET IT</div>
+      </div>
+      
+      <div class="support-item">
+        <div class="support-icon">📅</div>
+        <div class="support-title">Schedule Respite</div>
+        <div class="support-text">Regular breaks, not just emergencies</div>
+      </div>
+      
+      <div class="support-item">
+        <div class="support-icon">🗣️</div>
+        <div class="support-title">Ask for Help</div>
+        <div class="support-text">Specific requests work better than hints</div>
+      </div>
+      
+      <div class="support-item">
+        <div class="support-icon">💼</div>
+        <div class="support-title">Professional Support</div>
+        <div class="support-text">Therapy for YOU, not just your child</div>
+      </div>
+    </div>
+    
+    <div class="key-message">
+      <strong>Truth:</strong> Asking for help is not weakness. It's survival strategy.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

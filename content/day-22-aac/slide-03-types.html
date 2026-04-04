@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .types-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 960px;
+    }
+    .type-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: left;
+      border-top: 4px solid #E8B86D;
+    }
+    .type-emoji {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+    .type-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .type-desc {
+      font-size: 17px;
+      line-height: 1.4;
+      opacity: 0.85;
+    }
+    .type-examples {
+      font-size: 15px;
+      color: #4A90A4;
+      margin-top: 8px;
+      font-style: italic;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Options to Explore</div>
+  
+  <div class="title">Types of AAC</div>
+  
+  <div class="types-grid">
+    <div class="type-card">
+      <div class="type-emoji">📱</div>
+      <div class="type-title">High-Tech AAC</div>
+      <div class="type-desc">Tablets and devices with speech-generating apps</div>
+      <div class="type-examples">TouchChat, Proloquo2Go, LAMP Words for Life</div>
+    </div>
+    <div class="type-card">
+      <div class="type-emoji">📋</div>
+      <div class="type-title">Low-Tech AAC</div>
+      <div class="type-desc">Picture boards, PECS cards, communication books</div>
+      <div class="type-examples">No batteries needed, always available</div>
+    </div>
+    <div class="type-card">
+      <div class="type-emoji">🤟</div>
+      <div class="type-title">Sign Language</div>
+      <div class="type-desc">ASL, modified signs, or personalized gestures</div>
+      <div class="type-examples">Can be used alongside other AAC</div>
+    </div>
+    <div class="type-card">
+      <div class="type-emoji">✋</div>
+      <div class="type-title">Unaided AAC</div>
+      <div class="type-desc">Body language, facial expressions, gestures, pointing</div>
+      <div class="type-examples">Already communication - honor it!</div>
+    </div>
+    <div class="type-card">
+      <div class="type-emoji">✏️</div>
+      <div class="type-title">Writing/Typing</div>
+      <div class="type-desc">Letter boards, keyboards, spelling apps</div>
+      <div class="type-examples">Great for those who can spell</div>
+    </div>
+    <div class="type-card">
+      <div class="type-emoji">🎨</div>
+      <div class="type-title">Core Word Systems</div>
+      <div class="type-desc">Focus on most-used words for sentence building</div>
+      <div class="type-examples">50 words = 80% of what we say!</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 18px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .recap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 950px;
+    }
+    .recap-card {
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: left;
+    }
+    .recap-emoji {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .recap-topic {
+      font-size: 17px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 5px;
+    }
+    .recap-desc {
+      font-size: 14px;
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.25);
+      text-align: center;
+      padding: 25px;
+    }
+    .full-width .recap-topic { color: #27AE60; font-size: 20px; }
+    .full-width .recap-desc { font-size: 16px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Looking Back</div>
+  
+  <div class="title">What We Covered</div>
+  
+  <div class="recap-grid">
+    <div class="recap-card">
+      <div class="recap-emoji">🧠</div>
+      <div class="recap-topic">Understanding Autism</div>
+      <div class="recap-desc">The spectrum, neurodiversity, and breaking stereotypes</div>
+    </div>
+    
+    <div class="recap-card">
+      <div class="recap-emoji">🔋</div>
+      <div class="recap-topic">Managing Energy</div>
+      <div class="recap-desc">Burnout, meltdowns, shutdowns, and recovery</div>
+    </div>
+    
+    <div class="recap-card">
+      <div class="recap-emoji">🎭</div>
+      <div class="recap-topic">Masking & Identity</div>
+      <div class="recap-desc">The cost of hiding, late diagnosis, and self-discovery</div>
+    </div>
+    
+    <div class="recap-card">
+      <div class="recap-emoji">🌟</div>
+      <div class="recap-topic">Autistic Strengths</div>
+      <div class="recap-desc">Pattern recognition, focus, honesty, and creativity</div>
+    </div>
+    
+    <div class="recap-card">
+      <div class="recap-emoji">🌀</div>
+      <div class="recap-topic">Sensory & Stimming</div>
+      <div class="recap-desc">Sensory processing and self-regulation tools</div>
+    </div>
+    
+    <div class="recap-card">
+      <div class="recap-emoji">💼</div>
+      <div class="recap-topic">Work & School</div>
+      <div class="recap-desc">Accommodations, advocacy, and acceptance</div>
+    </div>
+    
+    <div class="recap-card">
+      <div class="recap-emoji">💜</div>
+      <div class="recap-topic">Mental Health</div>
+      <div class="recap-desc">The connection, barriers, and what actually helps</div>
+    </div>
+    
+    <div class="recap-card">
+      <div class="recap-emoji">✨</div>
+      <div class="recap-topic">Autistic Joy</div>
+      <div class="recap-desc">Celebrating the wonder that comes with our brains</div>
+    </div>
+    
+    <div class="recap-card full-width">
+      <div class="recap-emoji">🌈</div>
+      <div class="recap-topic">60 Days of Autism Acceptance</div>
+      <div class="recap-desc">From awareness to action. From tolerance to celebration. From surviving to thriving.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">1 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

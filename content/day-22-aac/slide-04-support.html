@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; bottom: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .tips-list {
+      max-width: 920px;
+      text-align: left;
+    }
+    .tip-item {
+      background: rgba(74, 144, 164, 0.1);
+      border-left: 5px solid #4A90A4;
+      padding: 22px 28px;
+      border-radius: 0 16px 16px 0;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .tip-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    .tip-content {
+      flex: 1;
+    }
+    .tip-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 6px;
+    }
+    .tip-desc {
+      font-size: 19px;
+      line-height: 1.4;
+      opacity: 0.9;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">How to Help</div>
+  
+  <div class="title">Supporting AAC Success</div>
+  
+  <div class="tips-list">
+    <div class="tip-item">
+      <div class="tip-icon">🗣️</div>
+      <div class="tip-content">
+        <div class="tip-title">Model, Model, Model</div>
+        <div class="tip-desc">Use AAC yourself when talking to your child. Show them how it works!</div>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-icon">🌍</div>
+      <div class="tip-content">
+        <div class="tip-title">AAC Everywhere</div>
+        <div class="tip-desc">Keep it accessible always - not just for "practice time." Communication is 24/7.</div>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-icon">⏳</div>
+      <div class="tip-content">
+        <div class="tip-title">Wait Time is Magic</div>
+        <div class="tip-desc">Give 10-15 seconds after asking. Processing takes time.</div>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-icon">🎉</div>
+      <div class="tip-content">
+        <div class="tip-title">Honor ALL Communication</div>
+        <div class="tip-desc">Respond to gestures, sounds, and behaviors. They're talking to you.</div>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-icon">🚫</div>
+      <div class="tip-content">
+        <div class="tip-title">Don't Require Speech</div>
+        <div class="tip-desc">Never withhold AAC to "make them talk." That's like taking away someone's wheelchair.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

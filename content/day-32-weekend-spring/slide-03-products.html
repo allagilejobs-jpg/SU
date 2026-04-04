@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 950px;
+    }
+    .product-card {
+      background: rgba(232, 184, 109, 0.12);
+      border: 2px solid rgba(232, 184, 109, 0.25);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: left;
+    }
+    .product-emoji { font-size: 40px; margin-bottom: 15px; }
+    .product-title { font-size: 22px; font-weight: 700; color: #E8B86D; margin-bottom: 10px; }
+    .product-text { font-size: 17px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Parent Tested</div>
+  
+  <div class="title">Products That Actually Help</div>
+  
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-emoji">🎧</div>
+      <div class="product-title">Noise-Reducing Headphones</div>
+      <div class="product-text">Essential for outings. Loop, Mack's, or kids' versions available.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-emoji">🧸</div>
+      <div class="product-title">Portable Fidgets</div>
+      <div class="product-text">Small, quiet fidgets for waiting rooms, car rides, and transitions.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-emoji">🎒</div>
+      <div class="product-title">Comfort Kit Bag</div>
+      <div class="product-text">Snacks, headphones, fidgets, comfort item, visual schedule. Always packed.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-emoji">🌡️</div>
+      <div class="product-title">Weighted Lap Pad</div>
+      <div class="product-text">Portable calming tool for car rides, restaurants, and appointments.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-emoji">🕶️</div>
+      <div class="product-title">Sunglasses/Blue Light Glasses</div>
+      <div class="product-text">Reduce visual overwhelm outdoors and in bright stores.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-emoji">📱</div>
+      <div class="product-title">AAC App or Device</div>
+      <div class="product-text">Communication access anywhere. TouchChat, Proloquo2Go, LAMP Words.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

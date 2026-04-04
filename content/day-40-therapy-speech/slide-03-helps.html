@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #4A90A4; top: -120px; right: -120px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #27AE60; bottom: 80px; left: -100px; }
+    .header { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 44px; 
+      font-weight: 800; 
+      margin-bottom: 45px;
+    }
+    .highlight { color: #4A90A4; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 920px;
+    }
+    .area {
+      background: rgba(255,255,255,0.05);
+      border-radius: 25px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    .area-icon { font-size: 45px; margin-bottom: 12px; }
+    .area-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #E8B86D;
+    }
+    .area-desc {
+      font-size: 16px;
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="header">What Speech Therapy <span class="highlight">Addresses</span></div>
+  
+  <div class="grid">
+    <div class="area">
+      <div class="area-icon">🗣️</div>
+      <div class="area-name">Expressive Language</div>
+      <div class="area-desc">Putting words together, asking questions, telling stories</div>
+    </div>
+    
+    <div class="area">
+      <div class="area-icon">👂</div>
+      <div class="area-name">Receptive Language</div>
+      <div class="area-desc">Understanding what others say, following directions</div>
+    </div>
+    
+    <div class="area">
+      <div class="area-icon">🤝</div>
+      <div class="area-name">Pragmatic/Social Skills</div>
+      <div class="area-desc">Conversation, turn-taking, reading social cues</div>
+    </div>
+    
+    <div class="area">
+      <div class="area-icon">📱</div>
+      <div class="area-name">AAC (Alternative Comm)</div>
+      <div class="area-desc">Sign language, picture boards, speech devices</div>
+    </div>
+    
+    <div class="area">
+      <div class="area-icon">🔤</div>
+      <div class="area-name">Articulation</div>
+      <div class="area-desc">Clear pronunciation, being understood by others</div>
+    </div>
+    
+    <div class="area">
+      <div class="area-icon">🍎</div>
+      <div class="area-name">Feeding/Swallowing</div>
+      <div class="area-desc">Oral motor skills, safe swallowing, food textures</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

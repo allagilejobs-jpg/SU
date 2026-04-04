@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; bottom: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .list {
+      max-width: 920px;
+      text-align: left;
+    }
+    .item {
+      background: rgba(232, 184, 109, 0.08);
+      border-left: 5px solid #E8B86D;
+      padding: 22px 28px;
+      border-radius: 0 16px 16px 0;
+      margin-bottom: 18px;
+    }
+    .item-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .item-desc {
+      font-size: 19px;
+      line-height: 1.4;
+      opacity: 0.9;
+    }
+    .highlight-box {
+      background: rgba(74, 144, 164, 0.15);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-top: 25px;
+      max-width: 920px;
+    }
+    .highlight-text {
+      font-size: 22px;
+      line-height: 1.5;
+      font-style: italic;
+    }
+    .highlight-text strong { color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Hidden Options</div>
+  
+  <div class="title">Things You Can Ask For</div>
+  
+  <div class="list">
+    <div class="item">
+      <div class="item-title">📚 Reduced Homework</div>
+      <div class="item-desc">Quality over quantity. Ask for modified assignments that show mastery without burnout.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">🗓️ Advance Notice of Subs</div>
+      <div class="item-desc">Text or email when there's a substitute teacher so you can prepare your child.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">🧪 Alternative Assessments</div>
+      <div class="item-desc">Oral tests, projects instead of written exams, portfolio-based grading.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">🚌 Transportation Support</div>
+      <div class="item-desc">Smaller bus, specific seat, headphones allowed, aide support.</div>
+    </div>
+    <div class="item">
+      <div class="item-title">🎭 Modified Participation</div>
+      <div class="item-desc">Alternative to presentations, exemption from certain activities, quiet role options.</div>
+    </div>
+  </div>
+  
+  <div class="highlight-box">
+    <div class="highlight-text">
+      <strong>Remember:</strong> If you don't ask, the answer is always no. Schools often have flexibility they don't advertise.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

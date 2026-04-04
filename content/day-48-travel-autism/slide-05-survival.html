@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .survival-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 950px;
+    }
+    .survival-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 25px;
+      text-align: left;
+    }
+    .survival-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .survival-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 10px;
+    }
+    .survival-text {
+      font-size: 16px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .mindset-box {
+      grid-column: 1 / -1;
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .mindset-text {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .mindset-text strong { color: #27AE60; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">While You're There</div>
+  
+  <div class="title">Survival Strategies</div>
+  
+  <div class="survival-grid">
+    <div class="survival-card">
+      <div class="survival-icon">⏰</div>
+      <div class="survival-title">Build In Downtime</div>
+      <div class="survival-text">One activity, one break. Don't over-schedule each day.</div>
+    </div>
+    
+    <div class="survival-card">
+      <div class="survival-icon">🏠</div>
+      <div class="survival-title">Create "Home Base"</div>
+      <div class="survival-text">Set up hotel room with familiar items. Make it a safe space.</div>
+    </div>
+    
+    <div class="survival-card">
+      <div class="survival-icon">🍽️</div>
+      <div class="survival-title">Food Strategy</div>
+      <div class="survival-text">Bring safe foods. Research restaurants in advance. Pack snacks.</div>
+    </div>
+    
+    <div class="survival-card">
+      <div class="survival-icon">🚪</div>
+      <div class="survival-title">Exit Plan Ready</div>
+      <div class="survival-text">Know where the exits and quiet spots are at every location.</div>
+    </div>
+    
+    <div class="survival-card">
+      <div class="survival-icon">📱</div>
+      <div class="survival-title">Backup Entertainment</div>
+      <div class="survival-text">Downloaded shows, games, audiobooks for wait times.</div>
+    </div>
+    
+    <div class="survival-card">
+      <div class="survival-icon">💪</div>
+      <div class="survival-title">Lower Expectations</div>
+      <div class="survival-text">Success = everyone survived. That's it. That's the goal.</div>
+    </div>
+    
+    <div class="mindset-box">
+      <div class="mindset-text"><strong>Remember:</strong> Some moments will be hard. Some will be magical. Both are okay.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

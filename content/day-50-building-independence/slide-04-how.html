@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 30px;
+    }
+    .methods-container {
+      max-width: 920px;
+      width: 100%;
+    }
+    .method-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 18px;
+      text-align: left;
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+    }
+    .method-icon {
+      font-size: 42px;
+      flex-shrink: 0;
+    }
+    .method-content {
+      flex: 1;
+    }
+    .method-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 8px;
+    }
+    .method-desc {
+      font-size: 18px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Strategies</div>
+  
+  <div class="title">How to Teach</div>
+  
+  <div class="methods-container">
+    <div class="method-card">
+      <div class="method-icon">🔗</div>
+      <div class="method-content">
+        <div class="method-title">Task Analysis</div>
+        <div class="method-desc">Break big tasks into tiny steps. Teach one step at a time. Chain them together.</div>
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <div class="method-icon">📸</div>
+      <div class="method-content">
+        <div class="method-title">Visual Supports</div>
+        <div class="method-desc">Picture schedules, video modeling, checklists. Show, don't just tell.</div>
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <div class="method-icon">🔄</div>
+      <div class="method-content">
+        <div class="method-title">Backward Chaining</div>
+        <div class="method-desc">Do most of the task, let them complete the last step. Build backward to full independence.</div>
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <div class="method-icon">👐</div>
+      <div class="method-content">
+        <div class="method-title">Prompt Fading</div>
+        <div class="method-desc">Start with hand-over-hand, fade to gestures, then verbal cues, then independence.</div>
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <div class="method-icon">🎯</div>
+      <div class="method-content">
+        <div class="method-title">Practice in Context</div>
+        <div class="method-desc">Practice money at real stores, not just worksheets. Real-world learning sticks.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

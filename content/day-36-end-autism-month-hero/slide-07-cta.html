@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.1; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #4A90A4; top: -200px; right: -200px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #E8B86D; bottom: -150px; left: -150px; }
+    .emoji { font-size: 80px; margin-bottom: 40px; }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 52px; 
+      font-weight: 800; 
+      margin-bottom: 50px;
+      line-height: 1.2;
+    }
+    .highlight { color: #E8B86D; }
+    .highlight-teal { color: #4A90A4; }
+    .cta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+    .cta-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    .cta-icon { font-size: 36px; }
+    .bottom-text {
+      font-size: 26px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 22px; font-weight: 600; color: #4A90A4; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="emoji">💙</div>
+  
+  <div class="title">
+    <span class="highlight">Stay With Us</span>
+  </div>
+  
+  <div class="cta-list">
+    <div class="cta-item">
+      <span class="cta-icon">💬</span>
+      <span>Share your favorite moment</span>
+    </div>
+    <div class="cta-item">
+      <span class="cta-icon">💾</span>
+      <span>Save this celebration</span>
+    </div>
+    <div class="cta-item">
+      <span class="cta-icon">🔔</span>
+      <span>Turn on notifications</span>
+    </div>
+  </div>
+  
+  <div class="bottom-text">
+    <span class="highlight">Autism acceptance</span> is <span class="highlight-teal">every single day</span> 💙
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

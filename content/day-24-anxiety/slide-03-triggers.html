@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 960px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: left;
+      border-top: 4px solid #E8B86D;
+    }
+    .card-emoji {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 17px;
+      line-height: 1.4;
+      opacity: 0.85;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Common Causes</div>
+  
+  <div class="title">Anxiety Triggers in Autism</div>
+  
+  <div class="grid">
+    <div class="card">
+      <div class="card-emoji">🔊</div>
+      <div class="card-title">Sensory Overload</div>
+      <div class="card-desc">Too much noise, light, touch, or smells overwhelm the nervous system</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">🔄</div>
+      <div class="card-title">Unexpected Changes</div>
+      <div class="card-desc">Schedule shifts, new routes, surprise visitors, plan changes</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">👥</div>
+      <div class="card-title">Social Uncertainty</div>
+      <div class="card-desc">Not knowing the "rules," fear of saying wrong things, rejection</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">🎭</div>
+      <div class="card-title">Masking Exhaustion</div>
+      <div class="card-desc">The stress of hiding autistic traits builds up over time</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">❓</div>
+      <div class="card-title">Uncertainty</div>
+      <div class="card-desc">Not knowing what's next, unclear expectations, ambiguity</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">⏰</div>
+      <div class="card-title">Transitions</div>
+      <div class="card-desc">Moving between activities, places, or mindsets takes extra energy</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">📱</div>
+      <div class="card-title">Demand Overload</div>
+      <div class="card-desc">Too many tasks, expectations, or requests at once</div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">💭</div>
+      <div class="card-title">Interoception Issues</div>
+      <div class="card-desc">Can't identify body signals - anxiety shows up as stomach pain</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

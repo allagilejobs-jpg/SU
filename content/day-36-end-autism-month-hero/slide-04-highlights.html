@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 42px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 950px;
+    }
+    .highlight-card {
+      background: rgba(74, 144, 164, 0.12);
+      border: 2px solid rgba(74, 144, 164, 0.25);
+      border-radius: 18px;
+      padding: 22px;
+      text-align: left;
+    }
+    .highlight-emoji { font-size: 32px; margin-bottom: 10px; }
+    .highlight-title { font-size: 18px; font-weight: 700; color: #4A90A4; margin-bottom: 6px; }
+    .highlight-text { font-size: 15px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Month Highlights</div>
+  
+  <div class="title">What We Explored</div>
+  
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <div class="highlight-emoji">🌍</div>
+      <div class="highlight-title">World Autism Day</div>
+      <div class="highlight-text">Celebrated every life's value</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-emoji">🧠</div>
+      <div class="highlight-title">Meltdowns vs Tantrums</div>
+      <div class="highlight-text">Understanding the difference</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-emoji">📚</div>
+      <div class="highlight-title">IEP Advocacy</div>
+      <div class="highlight-text">Fighting for accommodations</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-emoji">⚡</div>
+      <div class="highlight-title">AuDHD Life</div>
+      <div class="highlight-text">When autism meets ADHD</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-emoji">🗣️</div>
+      <div class="highlight-title">AAC and Communication</div>
+      <div class="highlight-text">Every voice matters</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-emoji">👧</div>
+      <div class="highlight-title">Autism in Girls</div>
+      <div class="highlight-text">The missed signs</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-emoji">💪</div>
+      <div class="highlight-title">Parent Self-Care</div>
+      <div class="highlight-text">You matter too</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-emoji">👶</div>
+      <div class="highlight-title">Late Diagnosis</div>
+      <div class="highlight-text">Never too late to understand</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 7</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

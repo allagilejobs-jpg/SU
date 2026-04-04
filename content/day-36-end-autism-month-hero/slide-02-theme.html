@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #4A90A4; top: -150px; left: -150px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 30px;
+    }
+    .quote-box {
+      background: rgba(74, 144, 164, 0.15);
+      border: 3px solid rgba(74, 144, 164, 0.4);
+      border-radius: 25px;
+      padding: 50px;
+      max-width: 900px;
+    }
+    .un-label {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      opacity: 0.6;
+      margin-bottom: 25px;
+    }
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 30px;
+    }
+    .highlight { color: #E8B86D; }
+    .highlight-teal { color: #4A90A4; }
+    .message {
+      font-size: 22px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">2026 UN Theme</div>
+  
+  <div class="quote-box">
+    <div class="un-label">World Autism Day Theme</div>
+    <div class="quote-text">
+      "<span class="highlight">Autism</span> and <span class="highlight-teal">Humanity</span>: Every Life Has Value"
+    </div>
+    <div class="message">
+      This month, we celebrated the humanity in every autistic person. We challenged stereotypes, shared real stories, and built a community grounded in acceptance.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 7</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

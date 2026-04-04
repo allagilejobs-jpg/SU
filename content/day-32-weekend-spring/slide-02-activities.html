@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .activities-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+    }
+    .activity-card {
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.25);
+      border-radius: 20px;
+      padding: 25px 35px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      text-align: left;
+    }
+    .activity-emoji { font-size: 45px; }
+    .activity-content { flex: 1; }
+    .activity-title { font-size: 24px; font-weight: 700; color: #27AE60; margin-bottom: 8px; }
+    .activity-text { font-size: 18px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Spring Activities</div>
+  
+  <div class="title">Outdoor Fun, Less Overwhelm</div>
+  
+  <div class="activities-list">
+    <div class="activity-card">
+      <div class="activity-emoji">🌿</div>
+      <div class="activity-content">
+        <div class="activity-title">Nature Walks (Early Morning)</div>
+        <div class="activity-text">Beat the crowds. Quiet trails, sensory input from nature, no waiting in lines.</div>
+      </div>
+    </div>
+    
+    <div class="activity-card">
+      <div class="activity-emoji">💧</div>
+      <div class="activity-content">
+        <div class="activity-title">Water Play at Home</div>
+        <div class="activity-text">Sensory bins, sprinklers, water tables. All the fun without the pool chaos.</div>
+      </div>
+    </div>
+    
+    <div class="activity-card">
+      <div class="activity-emoji">🎨</div>
+      <div class="activity-content">
+        <div class="activity-title">Outdoor Art Projects</div>
+        <div class="activity-text">Chalk, painting, nature crafts. Fresh air + creativity = regulated kid.</div>
+      </div>
+    </div>
+    
+    <div class="activity-card">
+      <div class="activity-emoji">🏕️</div>
+      <div class="activity-content">
+        <div class="activity-title">Backyard Camping</div>
+        <div class="activity-text">All the adventure, bathroom nearby, escape plan if needed.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

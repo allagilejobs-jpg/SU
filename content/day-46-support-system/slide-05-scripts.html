@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .scripts-container {
+      max-width: 920px;
+      width: 100%;
+    }
+    .script-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .script-context {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.6;
+      margin-bottom: 12px;
+    }
+    .script-text {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 1.4;
+      padding: 20px;
+      background: rgba(74, 144, 164, 0.15);
+      border-left: 4px solid #4A90A4;
+      border-radius: 0 12px 12px 0;
+    }
+    .script-1 .script-text { border-left-color: #27AE60; background: rgba(39, 174, 96, 0.15); }
+    .script-2 .script-text { border-left-color: #4A90A4; background: rgba(74, 144, 164, 0.15); }
+    .script-3 .script-text { border-left-color: #E8B86D; background: rgba(232, 184, 109, 0.15); }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Copy These</div>
+  
+  <div class="title">Scripts That Work</div>
+  
+  <div class="scripts-container">
+    <div class="script-card script-1">
+      <div class="script-context">🤝 Reaching out to another parent</div>
+      <div class="script-text">"Hey, I noticed you're also in the autism world. Would you want to grab coffee sometime? I could really use someone who gets it."</div>
+    </div>
+    
+    <div class="script-card script-2">
+      <div class="script-context">👨‍👩‍👧 Asking family for help</div>
+      <div class="script-text">"I need 2 hours on Saturday. Can you watch [child]? Here's exactly what you need to know: [specific needs]. I'll have my phone on."</div>
+    </div>
+    
+    <div class="script-card script-3">
+      <div class="script-context">🚫 Setting boundaries</div>
+      <div class="script-text">"I appreciate you caring, but what I need right now isn't advice. Just someone to listen. Can you do that?"</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

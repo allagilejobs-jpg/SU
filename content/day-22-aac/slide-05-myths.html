@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #E8B86D; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .myths-list {
+      max-width: 920px;
+      text-align: left;
+    }
+    .myth-item {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    .myth-false {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .myth-x {
+      background: #e74c3c;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+    .myth-text {
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+    .truth-text {
+      font-size: 20px;
+      line-height: 1.4;
+      padding-left: 44px;
+      color: #27AE60;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Busting Myths</div>
+  
+  <div class="title">AAC Myths vs. Truth</div>
+  
+  <div class="myths-list">
+    <div class="myth-item">
+      <div class="myth-false">
+        <div class="myth-x">X</div>
+        <div class="myth-text">"AAC will stop my child from learning to talk"</div>
+      </div>
+      <div class="truth-text">✓ Research shows AAC supports and often increases speech development</div>
+    </div>
+    <div class="myth-item">
+      <div class="myth-false">
+        <div class="myth-x">X</div>
+        <div class="myth-text">"They need to try talking first"</div>
+      </div>
+      <div class="truth-text">✓ No prerequisites. Communication is a right, not a reward.</div>
+    </div>
+    <div class="myth-item">
+      <div class="myth-false">
+        <div class="myth-x">X</div>
+        <div class="myth-text">"AAC is only for people who can't speak at all"</div>
+      </div>
+      <div class="truth-text">✓ Many people use AAC alongside speech for different situations</div>
+    </div>
+    <div class="myth-item">
+      <div class="myth-false">
+        <div class="myth-x">X</div>
+        <div class="myth-text">"They're too young for AAC"</div>
+      </div>
+      <div class="truth-text">✓ Babies communicate before speech. AAC can start early!</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

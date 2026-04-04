@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .content-box {
+      background: rgba(39, 174, 96, 0.08);
+      border: 2px solid rgba(39, 174, 96, 0.2);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 950px;
+      text-align: left;
+    }
+    .therapy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .therapy-item {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .therapy-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 10px;
+    }
+    .therapy-desc {
+      font-size: 17px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .note {
+      margin-top: 25px;
+      padding: 20px;
+      background: rgba(232, 184, 109, 0.1);
+      border-radius: 12px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .note strong { color: #E8B86D; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Commonly Covered</div>
+  
+  <div class="title">Therapies to Request</div>
+  
+  <div class="content-box">
+    <div class="therapy-grid">
+      <div class="therapy-item">
+        <div class="therapy-name">🗣️ Speech Therapy</div>
+        <div class="therapy-desc">Language, communication, AAC, feeding</div>
+      </div>
+      
+      <div class="therapy-item">
+        <div class="therapy-name">🧩 OT</div>
+        <div class="therapy-desc">Sensory, fine motor, daily living skills</div>
+      </div>
+      
+      <div class="therapy-item">
+        <div class="therapy-name">💪 Physical Therapy</div>
+        <div class="therapy-desc">Gross motor, balance, coordination</div>
+      </div>
+      
+      <div class="therapy-item">
+        <div class="therapy-name">🧠 ABA Therapy</div>
+        <div class="therapy-desc">Behavior support (check provider philosophy)</div>
+      </div>
+      
+      <div class="therapy-item">
+        <div class="therapy-name">👥 Social Skills</div>
+        <div class="therapy-desc">Group therapy, pragmatic language</div>
+      </div>
+      
+      <div class="therapy-item">
+        <div class="therapy-name">💭 Mental Health</div>
+        <div class="therapy-desc">Counseling, anxiety, autism-informed therapy</div>
+      </div>
+    </div>
+    
+    <div class="note">
+      <strong>Pro tip:</strong> Get a prescription from your pediatrician or developmental pediatrician. This strengthens your case for coverage.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

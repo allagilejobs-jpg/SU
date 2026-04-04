@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .orgs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 900px;
+      width: 100%;
+    }
+    .org-card {
+      background: rgba(74, 144, 164, 0.12);
+      border: 2px solid rgba(74, 144, 164, 0.25);
+      border-radius: 20px;
+      padding: 22px 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+    }
+    .org-emoji { font-size: 36px; }
+    .org-content { flex: 1; }
+    .org-title { font-size: 22px; font-weight: 700; color: #4A90A4; margin-bottom: 6px; }
+    .org-text { font-size: 16px; opacity: 0.85; line-height: 1.4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Organizations</div>
+  
+  <div class="title">Trusted Autism Organizations</div>
+  
+  <div class="orgs-list">
+    <div class="org-card">
+      <div class="org-emoji">🏛️</div>
+      <div class="org-content">
+        <div class="org-title">ASAN (Autistic Self Advocacy Network)</div>
+        <div class="org-text">Run by and for autistic people. Policy, resources, advocacy.</div>
+      </div>
+    </div>
+    
+    <div class="org-card">
+      <div class="org-emoji">🌐</div>
+      <div class="org-content">
+        <div class="org-title">Autism Society of America</div>
+        <div class="org-text">Education, advocacy, support. Local chapters nationwide.</div>
+      </div>
+    </div>
+    
+    <div class="org-card">
+      <div class="org-emoji">🧠</div>
+      <div class="org-content">
+        <div class="org-title">Autism Science Foundation</div>
+        <div class="org-text">Evidence-based research and resources for families.</div>
+      </div>
+    </div>
+    
+    <div class="org-card">
+      <div class="org-emoji">💬</div>
+      <div class="org-content">
+        <div class="org-title">Communication FIRST</div>
+        <div class="org-text">Advocacy for people who use AAC and nonspeaking individuals.</div>
+      </div>
+    </div>
+    
+    <div class="org-card">
+      <div class="org-emoji">🎓</div>
+      <div class="org-content">
+        <div class="org-title">Wrightslaw</div>
+        <div class="org-text">Special education law and advocacy. IEP resources.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 7</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

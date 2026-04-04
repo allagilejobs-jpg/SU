@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -80px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #4A90A4; bottom: 100px; right: -100px; }
+    .header { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 44px; 
+      font-weight: 800; 
+      margin-bottom: 45px;
+    }
+    .highlight { color: #4A90A4; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 900px;
+    }
+    .activity {
+      background: rgba(255,255,255,0.05);
+      border-radius: 25px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    .activity-icon { font-size: 50px; margin-bottom: 15px; }
+    .activity-name {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #E8B86D;
+    }
+    .activity-desc {
+      font-size: 17px;
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="header">Low-Stress <span class="highlight">Summer Activities</span></div>
+  
+  <div class="grid">
+    <div class="activity">
+      <div class="activity-icon">🌊</div>
+      <div class="activity-name">Water Play at Home</div>
+      <div class="activity-desc">Splash pads, sprinklers, water tables. No crowded pools needed.</div>
+    </div>
+    
+    <div class="activity">
+      <div class="activity-icon">🌙</div>
+      <div class="activity-name">Early Bird Outings</div>
+      <div class="activity-desc">Hit parks and beaches early before heat and crowds arrive.</div>
+    </div>
+    
+    <div class="activity">
+      <div class="activity-icon">🎨</div>
+      <div class="activity-name">Indoor Creative Time</div>
+      <div class="activity-desc">Art projects, building sets, sensory bins during hot afternoons.</div>
+    </div>
+    
+    <div class="activity">
+      <div class="activity-icon">🌿</div>
+      <div class="activity-name">Nature Walks</div>
+      <div class="activity-desc">Shaded trails, bug hunting, rock collecting. Calming sensory input.</div>
+    </div>
+    
+    <div class="activity">
+      <div class="activity-icon">📚</div>
+      <div class="activity-name">Library Programs</div>
+      <div class="activity-desc">Free, air-conditioned, often sensory-friendly story times.</div>
+    </div>
+    
+    <div class="activity">
+      <div class="activity-icon">🎬</div>
+      <div class="activity-name">Sensory Movies</div>
+      <div class="activity-desc">Many theaters offer sensory-friendly screenings in summer.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

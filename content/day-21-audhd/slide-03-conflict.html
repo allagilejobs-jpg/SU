@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .comparison {
+      display: flex;
+      gap: 30px;
+      max-width: 960px;
+    }
+    .side {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: left;
+    }
+    .side-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid;
+    }
+    .autism-title { color: #E8B86D; border-color: #E8B86D; }
+    .adhd-title { color: #4A90A4; border-color: #4A90A4; }
+    .side-item {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+    }
+    .side-item::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      opacity: 0.6;
+    }
+    .conflict-box {
+      background: rgba(232, 184, 109, 0.1);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 30px;
+      max-width: 960px;
+    }
+    .conflict-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 15px;
+    }
+    .conflict-text {
+      font-size: 22px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">The Internal Tug-of-War</div>
+  
+  <div class="title">When Two Brains Conflict</div>
+  
+  <div class="comparison">
+    <div class="side">
+      <div class="side-title autism-title">🧩 Autism Says</div>
+      <div class="side-item">I need routine and sameness</div>
+      <div class="side-item">I want to dive deep into one topic</div>
+      <div class="side-item">Change is distressing</div>
+      <div class="side-item">I need to plan everything</div>
+      <div class="side-item">Sensory input is overwhelming</div>
+    </div>
+    <div class="side">
+      <div class="side-title adhd-title">⚡ ADHD Says</div>
+      <div class="side-item">I'm bored, I need novelty NOW</div>
+      <div class="side-item">Ooh, new interest! Forget the old one</div>
+      <div class="side-item">Spontaneity is exciting</div>
+      <div class="side-item">Plans? What plans?</div>
+      <div class="side-item">I need MORE stimulation</div>
+    </div>
+  </div>
+  
+  <div class="conflict-box">
+    <div class="conflict-title">⚡ The Result?</div>
+    <div class="conflict-text">
+      A constant internal battle. Craving routine but getting bored by it. Needing stimulation but getting overwhelmed. It's exhausting.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">2 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

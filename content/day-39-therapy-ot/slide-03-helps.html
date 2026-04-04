@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #E8B86D; top: -120px; right: -120px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #27AE60; bottom: 80px; left: -100px; }
+    .header { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 46px; 
+      font-weight: 800; 
+      margin-bottom: 45px;
+    }
+    .highlight { color: #E8B86D; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 920px;
+    }
+    .skill {
+      background: rgba(255,255,255,0.05);
+      border-radius: 25px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    .skill-icon { font-size: 45px; margin-bottom: 12px; }
+    .skill-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #4A90A4;
+    }
+    .skill-desc {
+      font-size: 16px;
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="header">What OT <span class="highlight">Helps With</span></div>
+  
+  <div class="grid">
+    <div class="skill">
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">Fine Motor Skills</div>
+      <div class="skill-desc">Writing, cutting, buttoning, using utensils, tying shoes</div>
+    </div>
+    
+    <div class="skill">
+      <div class="skill-icon">🌡️</div>
+      <div class="skill-name">Sensory Processing</div>
+      <div class="skill-desc">Managing sensitivity to sounds, textures, lights, movement</div>
+    </div>
+    
+    <div class="skill">
+      <div class="skill-icon">🚿</div>
+      <div class="skill-name">Self-Care</div>
+      <div class="skill-desc">Bathing, brushing teeth, getting dressed independently</div>
+    </div>
+    
+    <div class="skill">
+      <div class="skill-icon">😤</div>
+      <div class="skill-name">Emotional Regulation</div>
+      <div class="skill-desc">Calming strategies, handling frustration, managing big feelings</div>
+    </div>
+    
+    <div class="skill">
+      <div class="skill-icon">🏃</div>
+      <div class="skill-name">Gross Motor & Balance</div>
+      <div class="skill-desc">Coordination, body awareness, playground skills</div>
+    </div>
+    
+    <div class="skill">
+      <div class="skill-icon">🍽️</div>
+      <div class="skill-name">Feeding</div>
+      <div class="skill-desc">Texture aversions, expanding food variety, mealtime skills</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

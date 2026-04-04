@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #4A90A4;
+      margin-bottom: 35px;
+    }
+    .lessons-list {
+      max-width: 900px;
+      text-align: left;
+    }
+    .lesson-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: rgba(74, 144, 164, 0.1);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+    }
+    .lesson-num {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #4A90A4, #2C5F6E);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .lesson-content {
+      flex: 1;
+    }
+    .lesson-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #E8B86D;
+    }
+    .lesson-text {
+      font-size: 18px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Key Takeaways</div>
+  
+  <div class="title">Lessons From Week 3</div>
+  
+  <div class="lessons-list">
+    <div class="lesson-item">
+      <div class="lesson-num">1</div>
+      <div class="lesson-content">
+        <div class="lesson-title">Behavior Is Communication</div>
+        <div class="lesson-text">Meltdowns, food refusal, sleep struggles - all tell us something important</div>
+      </div>
+    </div>
+    
+    <div class="lesson-item">
+      <div class="lesson-num">2</div>
+      <div class="lesson-content">
+        <div class="lesson-title">Timelines Vary</div>
+        <div class="lesson-text">Potty training, milestones, progress - your child's timeline is THEIR timeline</div>
+      </div>
+    </div>
+    
+    <div class="lesson-item">
+      <div class="lesson-num">3</div>
+      <div class="lesson-content">
+        <div class="lesson-title">Girls Are Often Missed</div>
+        <div class="lesson-text">Autism presents differently and we need to look beyond stereotypes</div>
+      </div>
+    </div>
+    
+    <div class="lesson-item">
+      <div class="lesson-num">4</div>
+      <div class="lesson-content">
+        <div class="lesson-title">Co-occurring Conditions Matter</div>
+        <div class="lesson-text">AuDHD is common - understanding both parts helps the whole child</div>
+      </div>
+    </div>
+    
+    <div class="lesson-item">
+      <div class="lesson-num">5</div>
+      <div class="lesson-content">
+        <div class="lesson-title">Community Is Everything</div>
+        <div class="lesson-text">You are not alone. We are in this together.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 950px;
+    }
+    .find-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: left;
+    }
+    .card-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 12px;
+    }
+    .card-list {
+      list-style: none;
+    }
+    .card-list li {
+      font-size: 17px;
+      opacity: 0.85;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .card-list li::before {
+      content: "•";
+      color: #4A90A4;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .tip-box {
+      grid-column: 1 / -1;
+      background: rgba(74, 144, 164, 0.15);
+      border: 2px solid rgba(74, 144, 164, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .tip-text {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .tip-text strong { color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Action Steps</div>
+  
+  <div class="title">Where to Find Your People</div>
+  
+  <div class="content-grid">
+    <div class="find-card">
+      <div class="card-icon">💻</div>
+      <div class="card-title">Online</div>
+      <ul class="card-list">
+        <li>Facebook autism parent groups</li>
+        <li>Instagram communities</li>
+        <li>Reddit r/Autism_Parenting</li>
+        <li>Discord servers</li>
+      </ul>
+    </div>
+    
+    <div class="find-card">
+      <div class="card-icon">🏥</div>
+      <div class="card-title">Through Services</div>
+      <ul class="card-list">
+        <li>Therapy waiting rooms</li>
+        <li>Support groups at clinics</li>
+        <li>School parent groups</li>
+        <li>Autism organizations</li>
+      </ul>
+    </div>
+    
+    <div class="find-card">
+      <div class="card-icon">🏘️</div>
+      <div class="card-title">Local</div>
+      <ul class="card-list">
+        <li>Special needs sports leagues</li>
+        <li>Sensory-friendly events</li>
+        <li>Library programs</li>
+        <li>Church/community groups</li>
+      </ul>
+    </div>
+    
+    <div class="find-card">
+      <div class="card-icon">💡</div>
+      <div class="card-title">Start Your Own</div>
+      <ul class="card-list">
+        <li>Start a local meetup</li>
+        <li>Create an online group</li>
+        <li>Reach out first</li>
+        <li>Be the friend you need</li>
+      </ul>
+    </div>
+    
+    <div class="tip-box">
+      <div class="tip-text"><strong>Pro tip:</strong> Start with ONE connection. Quality over quantity.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">3 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #9B59B6; top: -100px; right: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 35px;
+    }
+    .reminder-container {
+      max-width: 900px;
+    }
+    .reminder-card {
+      background: rgba(155, 89, 182, 0.12);
+      border: 2px solid rgba(155, 89, 182, 0.25);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .reminder-emoji { font-size: 50px; margin-bottom: 15px; }
+    .reminder-text {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    .reminder-text strong { color: #9B59B6; }
+    .quote-box {
+      background: rgba(232, 184, 109, 0.15);
+      border-radius: 20px;
+      padding: 35px;
+      margin-top: 20px;
+    }
+    .quote-text {
+      font-size: 26px;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    .quote-author {
+      font-size: 18px;
+      opacity: 0.7;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Remember</div>
+  
+  <div class="title">Patience Over Pressure</div>
+  
+  <div class="reminder-container">
+    <div class="reminder-card">
+      <div class="reminder-emoji">📅</div>
+      <div class="reminder-text">Many autistic children aren't fully trained until <strong>ages 5-8 or later</strong>. That's okay.</div>
+    </div>
+    
+    <div class="reminder-card">
+      <div class="reminder-emoji">🔄</div>
+      <div class="reminder-text"><strong>Regression happens.</strong> Stress, changes, or illness can cause setbacks. It doesn't mean you failed.</div>
+    </div>
+    
+    <div class="reminder-card">
+      <div class="reminder-emoji">⏸️</div>
+      <div class="reminder-text">It's okay to <strong>take breaks</strong>. If it's causing extreme distress, pause and try again later.</div>
+    </div>
+    
+    <div class="quote-box">
+      <div class="quote-text">"No child has ever walked into kindergarten wearing diapers forever. They get there when they're ready."</div>
+      <div class="quote-author">A parent who's been there</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

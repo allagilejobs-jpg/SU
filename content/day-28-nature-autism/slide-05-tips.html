@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; bottom: -100px; left: -100px; }
+    .label { 
+      font-size: 16px; 
+      text-transform: uppercase; 
+      letter-spacing: 4px; 
+      opacity: 0.5;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; 
+      font-weight: 800; 
+      color: #27AE60;
+      margin-bottom: 35px;
+    }
+    .tips-container {
+      max-width: 900px;
+    }
+    .tip-card {
+      background: rgba(39, 174, 96, 0.1);
+      border-left: 5px solid #27AE60;
+      border-radius: 0 16px 16px 0;
+      padding: 25px 30px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .tip-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .tip-text {
+      font-size: 19px;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+    .reality-box {
+      background: rgba(232, 184, 109, 0.12);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 25px;
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="label">Make It Work</div>
+  
+  <div class="title">Tips for Success 🌳</div>
+  
+  <div class="tips-container">
+    <div class="tip-card">
+      <div class="tip-title">Start Small</div>
+      <div class="tip-text">5 minutes in the backyard counts. Build up gradually. Don't force hour-long hikes.</div>
+    </div>
+    
+    <div class="tip-card">
+      <div class="tip-title">Go During Off-Peak Times</div>
+      <div class="tip-text">Avoid crowded parks. Early mornings or weekdays are often quieter and calmer.</div>
+    </div>
+    
+    <div class="tip-card">
+      <div class="tip-title">Bring Sensory Supports</div>
+      <div class="tip-text">Sunglasses, headphones, fidgets, sunscreen they'll tolerate. Prepare for success.</div>
+    </div>
+    
+    <div class="tip-card">
+      <div class="tip-title">Follow Their Lead</div>
+      <div class="tip-text">If they want to stare at ants for 30 minutes, that's nature time. Let it happen.</div>
+    </div>
+    
+    <div class="tip-card">
+      <div class="tip-title">Have an Exit Plan</div>
+      <div class="tip-text">Know where the car is. Have a signal for "I need to leave." Reduce pressure.</div>
+    </div>
+  </div>
+  
+  <div class="reality-box">
+    💡 It won't be Instagram-perfect. That's okay. Any time outside is beneficial time.
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 5</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

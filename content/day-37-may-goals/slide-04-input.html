@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 450px; height: 450px; background: #27AE60; top: -150px; left: -150px; }
+    .bg-shape-2 { width: 300px; height: 300px; background: #4A90A4; bottom: 150px; right: -100px; }
+    .emoji { font-size: 80px; margin-bottom: 40px; }
+    .title { 
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; 
+      font-weight: 800; 
+      margin-bottom: 40px;
+      max-width: 850px;
+      line-height: 1.2;
+    }
+    .highlight { color: #27AE60; }
+    .highlight-teal { color: #4A90A4; }
+    .questions-box {
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.25);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+    }
+    .question {
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .question:last-child { margin-bottom: 0; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .slide-num { font-size: 16px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 8px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="emoji">🗣️</div>
+  
+  <div class="title">
+    <span class="highlight">Your Input</span> <span class="highlight-teal">Matters</span>
+  </div>
+  
+  <div class="questions-box">
+    <div class="question">What topics do you want to see in May?</div>
+    <div class="question">What's your biggest struggle right now?</div>
+    <div class="question">What resources would help you most?</div>
+  </div>
+  
+  <div class="footer">
+    <div class="slide-num">4 of 6</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
