@@ -4,72 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brand Guidelines — Spectrum Unlocked</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      /* Core Brand Colors */
       --bg-deep: #0f0f1a;
       --bg-primary: #1a1a2e;
       --bg-secondary: #16213e;
       --bg-tertiary: #0f3460;
-      
-      /* Accent Colors */
-      --accent-gold: #E8B86D;
-      --accent-teal: #4A90A4;
-      --accent-green: #27AE60;
-      --accent-red: #E74C3C;
-      --accent-purple: #9B59B6;
-      
-      /* Text Colors */
-      --text-primary: #ffffff;
+      --gold: #E8B86D;
+      --teal: #4A90A4;
+      --green: #27AE60;
+      --red: #E74C3C;
+      --text: #ffffff;
       --text-secondary: rgba(255,255,255,0.85);
       --text-muted: rgba(255,255,255,0.6);
       --text-subtle: rgba(255,255,255,0.4);
-      
-      /* Borders */
       --border: rgba(255,255,255,0.1);
-      --border-accent: rgba(255,255,255,0.2);
     }
-    
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--bg-primary);
-      color: var(--text-primary);
+      color: var(--text);
       line-height: 1.6;
     }
     
-    /* Navigation */
+    /* Nav */
     .nav {
       background: var(--bg-deep);
-      padding: 14px 24px;
+      padding: 14px 20px;
       display: flex;
-      justify-content: center;
-      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
+      gap: 12px;
       position: sticky;
       top: 0;
       z-index: 100;
       border-bottom: 1px solid var(--border);
     }
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
     .nav a {
       color: #888;
       text-decoration: none;
-      padding: 8px 18px;
+      padding: 8px 16px;
       border-radius: 20px;
       font-weight: 600;
       font-size: 13px;
       transition: all 0.2s;
     }
     .nav a:hover, .nav a.active {
-      background: var(--accent-teal);
+      background: var(--teal);
       color: #fff;
+    }
+    .editor-btn {
+      background: var(--gold);
+      color: var(--bg-primary);
+      padding: 10px 24px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .editor-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(232,184,109,0.3);
     }
     
     /* Hero */
     .hero {
       background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
-      padding: 80px 24px;
+      padding: 60px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -77,398 +90,371 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -150px;
-      right: -150px;
-      width: 400px;
-      height: 400px;
-      background: var(--accent-gold);
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: var(--gold);
       border-radius: 50%;
       opacity: 0.08;
     }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -100px;
-      left: -100px;
-      width: 300px;
-      height: 300px;
-      background: var(--accent-teal);
-      border-radius: 50%;
-      opacity: 0.06;
-    }
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
+      font-size: clamp(2rem, 6vw, 3.5rem);
       font-weight: 800;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       position: relative;
     }
-    .hero h1 span { color: var(--accent-gold); }
+    .hero h1 span { color: var(--gold); }
     .hero p {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       color: var(--text-secondary);
-      max-width: 600px;
+      max-width: 550px;
       margin: 0 auto;
       position: relative;
     }
-    .hero .version {
-      display: inline-block;
-      background: var(--accent-teal);
-      color: #fff;
-      padding: 6px 16px;
+    .hero .meta {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero .badge {
+      background: var(--teal);
+      padding: 6px 14px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
-      margin-top: 24px;
-      position: relative;
+    }
+    .hero .updated {
+      color: var(--text-subtle);
+      font-size: 12px;
+      padding: 6px 0;
     }
     
     /* Container */
     .container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
     
     /* Section */
     .section {
-      padding: 80px 0;
+      padding: 60px 0;
       border-bottom: 1px solid var(--border);
     }
     .section:last-child { border-bottom: none; }
-    
     .section-header {
-      text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
-    .section-header .badge {
+    .section-badge {
       display: inline-block;
       background: rgba(232,184,109,0.15);
-      color: var(--accent-gold);
-      padding: 8px 20px;
-      border-radius: 20px;
-      font-size: 12px;
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 15px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
     }
     .section-header h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
     .section-header p {
       color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1rem;
+      max-width: 600px;
+      font-size: 15px;
     }
     
-    /* Cards */
-    .card {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      margin-bottom: 24px;
-    }
-    .card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .card h3 .icon {
-      font-size: 1.5rem;
-    }
-    .card p {
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-    
-    /* Color Grid */
+    /* Color Palette */
     .color-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
     }
     .color-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
     }
     .color-swatch {
-      height: 120px;
-      display: flex;
-      align-items: flex-end;
-      padding: 16px;
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      margin: 0 auto 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-    .color-swatch span {
-      background: rgba(0,0,0,0.5);
-      padding: 4px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      font-family: monospace;
-    }
-    .color-info {
-      padding: 20px;
-    }
-    .color-info h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .color-info p {
+    .color-card h4 {
       font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-    .color-info .usage {
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--text-subtle);
-    }
-    .color-info .usage strong {
-      color: var(--text-secondary);
-    }
-    
-    /* Typography Showcase */
-    .type-showcase {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      margin-bottom: 32px;
-    }
-    .type-row {
-      display: flex;
-      align-items: baseline;
-      gap: 32px;
-      padding: 24px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .type-row:last-child { border-bottom: none; }
-    .type-meta {
-      min-width: 200px;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    .type-meta strong {
-      display: block;
-      color: var(--accent-gold);
-      font-size: 14px;
+      font-weight: 600;
       margin-bottom: 4px;
     }
-    .type-sample {
-      flex: 1;
+    .color-card code {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--bg-deep);
+      padding: 2px 8px;
+      border-radius: 4px;
     }
-    .type-sample.display {
-      font-family: 'Playfair Display', serif;
+    .color-card .use {
+      font-size: 10px;
+      color: var(--text-subtle);
+      margin-top: 8px;
+      line-height: 1.4;
     }
     
-    /* Template Cards */
-    .template-grid {
+    /* Typography */
+    .type-showcase {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
+      margin-bottom: 32px;
     }
-    .template-card {
+    .type-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
+      border-radius: 12px;
+      padding: 24px;
     }
-    .template-preview {
-      height: 200px;
-      background: linear-gradient(135deg, var(--bg-primary), var(--bg-tertiary));
+    .type-card h3 {
+      font-size: 14px;
+      color: var(--gold);
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
+      gap: 8px;
+    }
+    .type-sample {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .type-sample:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .type-sample .label {
+      font-size: 10px;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .type-sample .preview {
+      color: var(--text);
+    }
+    .type-sample .preview.playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    .type-sample .preview.poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    /* Bullet List */
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+    }
+    .bullet-list li {
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    .bullet-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    /* Template Mockups */
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .mockup-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .mockup-preview {
+      aspect-ratio: 4/5;
+      max-height: 400px;
+      background: linear-gradient(165deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       position: relative;
       overflow: hidden;
     }
-    .template-preview .preview-content {
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
-    .template-preview::before {
+    .mockup-preview::before {
       content: '';
       position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 150px;
-      height: 150px;
-      background: var(--accent-gold);
+      top: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      background: var(--gold);
       border-radius: 50%;
-      opacity: 0.1;
+      opacity: 0.08;
     }
-    .template-body {
-      padding: 24px;
+    .mockup-info {
+      padding: 20px;
     }
-    .template-body h4 {
-      font-size: 1.1rem;
+    .mockup-info h4 {
+      font-size: 15px;
       font-weight: 700;
       margin-bottom: 8px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
-    .template-body p {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      line-height: 1.6;
-    }
-    .template-specs {
-      background: var(--bg-tertiary);
-      border-radius: 10px;
-      padding: 16px;
+    .mockup-info p {
       font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
-    .template-specs dt {
-      color: var(--text-subtle);
-      margin-bottom: 4px;
-    }
-    .template-specs dd {
-      color: var(--text-secondary);
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-    .template-specs dd:last-child { margin-bottom: 0; }
     
-    /* Spacing Guide */
-    .spacing-visual {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      margin-bottom: 32px;
+    /* Myth Mockup */
+    .myth-label {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
-    .spacing-row {
+    .myth-label.red { color: var(--red); }
+    .myth-label.green { color: var(--green); }
+    .myth-box {
+      background: rgba(231,76,60,0.12);
+      border-left: 3px solid var(--red);
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+    .myth-box p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .truth-box {
+      background: rgba(39,174,96,0.12);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .truth-box p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    
+    /* Checklist Mockup */
+    .checklist-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .checklist-container {
+      background: rgba(74,144,164,0.12);
+      border: 1px solid rgba(74,144,164,0.25);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .checklist-item {
       display: flex;
       align-items: center;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-    .spacing-row:last-child { margin-bottom: 0; }
-    .spacing-box {
-      background: var(--accent-teal);
-      opacity: 0.3;
-      border-radius: 4px;
-    }
-    .spacing-label {
-      min-width: 120px;
+      gap: 10px;
+      padding: 8px 0;
       font-size: 13px;
+      color: var(--text-secondary);
     }
-    .spacing-label strong {
-      display: block;
-      color: var(--accent-gold);
-      margin-bottom: 2px;
+    .checklist-item .check {
+      color: var(--green);
+      font-weight: bold;
     }
-    .spacing-label span {
-      color: var(--text-muted);
+    
+    /* Specs Table */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .spec-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .spec-card h5 {
       font-size: 11px;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .spec-card .value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .spec-card .desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
     }
     
     /* Logic Cards */
     .logic-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
     }
     .logic-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-    }
-    .logic-card .number {
-      width: 40px;
-      height: 40px;
-      background: var(--accent-gold);
-      color: var(--bg-primary);
       border-radius: 10px;
+      padding: 20px;
+    }
+    .logic-card .num {
+      width: 28px;
+      height: 28px;
+      background: var(--gold);
+      color: var(--bg-primary);
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 18px;
-      margin-bottom: 16px;
-    }
-    .logic-card h4 {
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: 14px;
       margin-bottom: 12px;
     }
+    .logic-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
     .logic-card p {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-    
-    /* Code Block */
-    .code-block {
-      background: var(--bg-deep);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 24px;
-      font-family: 'Monaco', 'Consolas', monospace;
-      font-size: 13px;
-      overflow-x: auto;
-      margin: 16px 0;
-    }
-    .code-block .comment { color: var(--text-subtle); }
-    .code-block .property { color: var(--accent-teal); }
-    .code-block .value { color: var(--accent-gold); }
-    
-    /* Two Column */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-    @media (max-width: 800px) {
-      .two-col { grid-template-columns: 1fr; }
-    }
-    
-    /* Table */
-    .spec-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-    }
-    .spec-table th, .spec-table td {
-      padding: 14px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    .spec-table th {
-      color: var(--text-subtle);
-      font-weight: 600;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .spec-table td {
-      color: var(--text-secondary);
-    }
-    .spec-table tr:last-child td { border-bottom: none; }
-    .spec-table code {
-      background: var(--bg-tertiary);
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-family: monospace;
       font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
     
     /* Footer */
@@ -478,63 +464,43 @@
       text-align: center;
       border-top: 1px solid var(--border);
     }
+    .footer-cta {
+      margin-bottom: 24px;
+    }
     .footer p {
       color: var(--text-muted);
       font-size: 13px;
     }
     .footer a {
-      color: var(--accent-teal);
+      color: var(--teal);
       text-decoration: none;
     }
     
-    /* Utility */
-    .text-gold { color: var(--accent-gold); }
-    .text-teal { color: var(--accent-teal); }
-    .text-green { color: var(--accent-green); }
-    .text-red { color: var(--accent-red); }
-    .mt-4 { margin-top: 32px; }
-    .mb-4 { margin-bottom: 32px; }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .nav { justify-content: center; }
+      .section { padding: 40px 0; }
+      .mockup-preview { padding: 16px; }
+    }
   </style>
 </head>
 <body>
   <nav class="nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="calendar-60day.html">📅 60-Day</a>
-    <a href="editor.html">✨ Editor</a>
-    <a href="brand-guidelines.html" class="active">📐 Brand</a>
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="calendar-60day.html">📅 Calendar</a>
+      <a href="brand-guidelines.html" class="active">📐 Brand</a>
+    </div>
+    <a href="editor.html" class="editor-btn">✨ Open Editor</a>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
     <h1>Spectrum <span>Unlocked</span></h1>
-    <p>Official Brand Guidelines — The complete design system for creating consistent, accessible, and impactful autism advocacy content.</p>
-    <div class="version">Version 1.0 — April 2026</div>
-  </section>
-
-  <!-- Brand Overview -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge">Section 01</div>
-        <h2>Brand Overview</h2>
-        <p>Spectrum Unlocked creates educational content about autism for parents, caregivers, and the neurodivergent community.</p>
-      </div>
-      
-      <div class="two-col">
-        <div class="card">
-          <h3><span class="icon">🎯</span> Mission</h3>
-          <p>To provide accurate, neurodiversity-affirming information about autism. We educate, support, and celebrate — moving beyond outdated "awareness" toward true acceptance and understanding.</p>
-        </div>
-        <div class="card">
-          <h3><span class="icon">💙</span> Core Values</h3>
-          <p><strong>Acceptance over awareness.</strong> We center autistic voices, avoid harmful stereotypes, and present autism as a natural neurological variation — not a disease to be cured.</p>
-        </div>
-      </div>
-      
-      <div class="card mt-4">
-        <h3><span class="icon">✨</span> Visual Identity Philosophy</h3>
-        <p>The "Spectrum" in our name inspires our visual language. We use a <strong>gradient-based color system</strong> that represents the diversity of autism experiences — no single color defines it. Our dark, professional aesthetic conveys credibility while remaining warm and approachable. Gold accents symbolize value and illumination (unlocking knowledge), while teal represents calm, trust, and the neurodiversity movement.</p>
-      </div>
+    <p>Brand guidelines for consistent, accessible autism advocacy content.</p>
+    <div class="meta">
+      <span class="badge">Version 1.0</span>
+      <span class="updated">Last Updated: April 4, 2026</span>
     </div>
   </section>
 
@@ -542,78 +508,59 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="badge">Section 02</div>
+        <div class="section-badge">Colors</div>
         <h2>Color Palette</h2>
-        <p>A carefully chosen palette that balances accessibility, emotional resonance, and brand recognition across all social platforms.</p>
+        <p>Accessible colors that balance credibility with warmth. All meet WCAG AA contrast standards.</p>
       </div>
       
-      <h3 class="text-gold mb-4" style="font-size:1.1rem">Primary Backgrounds</h3>
+      <h4 style="color:var(--gold);font-size:13px;margin-bottom:16px;font-weight:600">🎨 Primary Backgrounds</h4>
+      <div class="color-grid" style="margin-bottom:32px">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#1a1a2e"></div>
+          <h4>Deep Navy</h4>
+          <code>#1a1a2e</code>
+          <p class="use">Main canvas background</p>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#16213e"></div>
+          <h4>Midnight Blue</h4>
+          <code>#16213e</code>
+          <p class="use">Gradient midpoint</p>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#0f3460"></div>
+          <h4>Ocean Deep</h4>
+          <code>#0f3460</code>
+          <p class="use">Gradient endpoint</p>
+        </div>
+      </div>
+      
+      <h4 style="color:var(--gold);font-size:13px;margin-bottom:16px;font-weight:600">✨ Accent Colors</h4>
       <div class="color-grid">
         <div class="color-card">
-          <div class="color-swatch" style="background: #1a1a2e"><span>#1a1a2e</span></div>
-          <div class="color-info">
-            <h4>Deep Navy</h4>
-            <p>Primary background color. Dark enough for high contrast with white text, warm enough to feel approachable (not cold black).</p>
-            <div class="usage"><strong>Usage:</strong> Main canvas background, card backgrounds</div>
-          </div>
+          <div class="color-swatch" style="background:#E8B86D"></div>
+          <h4>Gold</h4>
+          <code>#E8B86D</code>
+          <p class="use">Primary accent, headlines, CTAs</p>
         </div>
         <div class="color-card">
-          <div class="color-swatch" style="background: #16213e"><span>#16213e</span></div>
-          <div class="color-info">
-            <h4>Midnight Blue</h4>
-            <p>Secondary background for depth. Creates subtle layering in gradients and UI elements.</p>
-            <div class="usage"><strong>Usage:</strong> Gradient midpoint, sidebar backgrounds</div>
-          </div>
+          <div class="color-swatch" style="background:#4A90A4"></div>
+          <h4>Teal</h4>
+          <code>#4A90A4</code>
+          <p class="use">Links, info boxes, secondary</p>
         </div>
         <div class="color-card">
-          <div class="color-swatch" style="background: #0f3460"><span>#0f3460</span></div>
-          <div class="color-info">
-            <h4>Ocean Deep</h4>
-            <p>Tertiary background with more blue saturation. Adds visual interest without competing with content.</p>
-            <div class="usage"><strong>Usage:</strong> Gradient endpoint, decorative elements</div>
-          </div>
-        </div>
-      </div>
-      
-      <h3 class="text-gold mb-4 mt-4" style="font-size:1.1rem">Accent Colors</h3>
-      <div class="color-grid">
-        <div class="color-card">
-          <div class="color-swatch" style="background: #E8B86D"><span>#E8B86D</span></div>
-          <div class="color-info">
-            <h4>Gold — Primary Accent</h4>
-            <p>Represents illumination, value, and "unlocking" knowledge. High contrast on dark backgrounds. Warm and inviting.</p>
-            <div class="usage"><strong>Usage:</strong> Headlines, badges, CTA buttons, important text highlights</div>
-          </div>
+          <div class="color-swatch" style="background:#27AE60"></div>
+          <h4>Green</h4>
+          <code>#27AE60</code>
+          <p class="use">Truth, success, positive</p>
         </div>
         <div class="color-card">
-          <div class="color-swatch" style="background: #4A90A4"><span>#4A90A4</span></div>
-          <div class="color-info">
-            <h4>Teal — Secondary Accent</h4>
-            <p>Associated with neurodiversity movement. Calming, trustworthy, professional. Good for secondary actions.</p>
-            <div class="usage"><strong>Usage:</strong> Links, secondary buttons, info boxes, checklist items</div>
-          </div>
+          <div class="color-swatch" style="background:#E74C3C"></div>
+          <h4>Red</h4>
+          <code>#E74C3C</code>
+          <p class="use">Myths, warnings, alerts</p>
         </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #27AE60"><span>#27AE60</span></div>
-          <div class="color-info">
-            <h4>Green — Success/Positive</h4>
-            <p>Universal "positive" color. Used for truths, correct information, success states, and affirmations.</p>
-            <div class="usage"><strong>Usage:</strong> "Truth" boxes, checkmarks, positive messaging, joy content</div>
-          </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #E74C3C"><span>#E74C3C</span></div>
-          <div class="color-info">
-            <h4>Red — Warning/Myth</h4>
-            <p>Draws attention to myths, misconceptions, and things to avoid. Used sparingly for impact.</p>
-            <div class="usage"><strong>Usage:</strong> "Myth" badges, warnings, "don't do" lists, alerts</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card mt-4">
-        <h3><span class="icon">♿</span> Accessibility Rationale</h3>
-        <p>All text colors meet <strong>WCAG AA standards</strong> for contrast against our dark backgrounds. White text (#FFFFFF) on #1a1a2e achieves a contrast ratio of <strong>13.5:1</strong>. Gold (#E8B86D) on dark backgrounds achieves <strong>7.2:1</strong>. We avoid pure black (#000000) as it creates harsh contrast that can cause visual strain, especially for neurodivergent viewers with sensory sensitivities.</p>
       </div>
     </div>
   </section>
@@ -622,530 +569,261 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="badge">Section 03</div>
-        <h2>Typography System</h2>
-        <p>Two carefully paired fonts optimized for social media readability and brand recognition.</p>
-      </div>
-      
-      <div class="two-col mb-4">
-        <div class="card">
-          <h3><span class="icon">🔤</span> Playfair Display</h3>
-          <p><strong>Role:</strong> Display headlines, main titles, quotes<br>
-          <strong>Weights:</strong> 600, 700, 800<br>
-          <strong>Style:</strong> Serif with high contrast strokes</p>
-          <p class="mt-4" style="color:var(--text-muted);font-size:13px"><strong>Why chosen:</strong> Adds elegance and authority. The serif style conveys credibility and professionalism — important for educational content. High-contrast letterforms remain readable at large sizes on mobile screens.</p>
-        </div>
-        <div class="card">
-          <h3><span class="icon">🔤</span> Poppins</h3>
-          <p><strong>Role:</strong> Body text, UI, captions, lists<br>
-          <strong>Weights:</strong> 400, 500, 600, 700, 800<br>
-          <strong>Style:</strong> Geometric sans-serif</p>
-          <p class="mt-4" style="color:var(--text-muted);font-size:13px"><strong>Why chosen:</strong> Highly legible at all sizes. Geometric forms are friendly and modern. Excellent x-height improves readability on small mobile screens. Google Font ensures consistent rendering across devices.</p>
-        </div>
+        <div class="section-badge">Typography</div>
+        <h2>Font System</h2>
+        <p>Two fonts optimized for mobile readability and brand recognition.</p>
       </div>
       
       <div class="type-showcase">
-        <h3 class="text-gold" style="margin-bottom:24px">Type Scale</h3>
-        
-        <div class="type-row">
-          <div class="type-meta">
-            <strong>Hero Title</strong>
-            Playfair Display 800<br>
-            62–72px / 1.1 line-height
+        <div class="type-card">
+          <h3>🔤 Playfair Display</h3>
+          <div class="type-sample">
+            <div class="label">Extra Bold 800 — 48px</div>
+            <div class="preview playfair" style="font-size:36px;font-weight:800">Aa Bb Cc</div>
           </div>
-          <div class="type-sample display" style="font-size:48px;font-weight:800">
-            3 Things TikTok Gets WRONG
+          <div class="type-sample">
+            <div class="label">Bold 700 — 32px</div>
+            <div class="preview playfair" style="font-size:28px;font-weight:700">Spectrum Unlocked</div>
           </div>
+          <div class="type-sample">
+            <div class="label">Italic 600 — 24px</div>
+            <div class="preview playfair" style="font-size:22px;font-weight:600;font-style:italic">"Quote text example"</div>
+          </div>
+          <ul class="bullet-list" style="margin-top:16px">
+            <li>Headlines, main titles, quotes</li>
+            <li>Elegant serif with authority</li>
+            <li>High contrast for large sizes</li>
+          </ul>
         </div>
         
-        <div class="type-row">
-          <div class="type-meta">
-            <strong>Section Title</strong>
-            Playfair Display 700<br>
-            42–48px / 1.15 line-height
+        <div class="type-card">
+          <h3>🔤 Poppins</h3>
+          <div class="type-sample">
+            <div class="label">Bold 700 — 24px</div>
+            <div class="preview poppins" style="font-size:22px;font-weight:700">Aa Bb Cc</div>
           </div>
-          <div class="type-sample display" style="font-size:36px;font-weight:700">
-            Sensory Supports
+          <div class="type-sample">
+            <div class="label">Semibold 600 — 18px</div>
+            <div class="preview poppins" style="font-size:17px;font-weight:600">Section Heading</div>
           </div>
-        </div>
-        
-        <div class="type-row">
-          <div class="type-meta">
-            <strong>Subtitle</strong>
-            Poppins 400<br>
-            24–28px / 1.4 line-height
+          <div class="type-sample">
+            <div class="label">Regular 400 — 16px</div>
+            <div class="preview poppins" style="font-size:15px;font-weight:400;color:var(--text-secondary)">Body text for readability on mobile screens.</div>
           </div>
-          <div class="type-sample" style="font-size:24px;color:var(--text-secondary)">
-            A new study found over 50% of autism content is misleading.
-          </div>
-        </div>
-        
-        <div class="type-row">
-          <div class="type-meta">
-            <strong>Body Text</strong>
-            Poppins 400<br>
-            20–24px / 1.5 line-height
-          </div>
-          <div class="type-sample" style="font-size:20px;color:var(--text-secondary)">
-            Accommodations should support your child — not teach them to hide who they are.
-          </div>
-        </div>
-        
-        <div class="type-row">
-          <div class="type-meta">
-            <strong>List Items</strong>
-            Poppins 400<br>
-            20–24px / 1.6 line-height
-          </div>
-          <div class="type-sample" style="font-size:20px">
-            ✓ Noise-canceling headphones allowed in class
-          </div>
-        </div>
-        
-        <div class="type-row">
-          <div class="type-meta">
-            <strong>Badge/Label</strong>
-            Poppins 700<br>
-            16–20px / uppercase / 2–4px tracking
-          </div>
-          <div class="type-sample" style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--accent-gold)">
-            🚨 MYTH ALERT
-          </div>
-        </div>
-        
-        <div class="type-row">
-          <div class="type-meta">
-            <strong>Footer/Handle</strong>
-            Poppins 400<br>
-            16–18px / 40–50% opacity
-          </div>
-          <div class="type-sample" style="font-size:16px;color:var(--text-subtle)">
-            @spectrum_unlocked
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <h3><span class="icon">📱</span> Social Media Readability Logic</h3>
-        <p>Typography choices are optimized for <strong>mobile-first viewing</strong>. Instagram carousels are typically viewed on phones at small sizes, so we use:</p>
-        <ul style="margin-top:16px;color:var(--text-secondary);padding-left:20px;line-height:2">
-          <li><strong>Large headlines (62px+)</strong> — Readable even in thumbnail previews</li>
-          <li><strong>High contrast</strong> — White/gold on dark backgrounds</li>
-          <li><strong>Short line lengths</strong> — Max 800px text width prevents eye strain</li>
-          <li><strong>Generous line-height (1.4–1.6)</strong> — Improves readability for neurodivergent audiences</li>
-          <li><strong>Limited font weights</strong> — Clear visual hierarchy without confusion</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Template Style Rules -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge">Section 04</div>
-        <h2>Template Style Rules</h2>
-        <p>Specific guidelines for each of the 8 template types used in the editor and 60-day calendar.</p>
-      </div>
-      
-      <div class="template-grid">
-        <!-- Cover -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="background:var(--accent-gold);color:var(--bg-primary);padding:6px 16px;border-radius:15px;font-size:11px;font-weight:700;display:inline-block;margin-bottom:12px">🚨 BADGE</div>
-              <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:800">Main Title Here</div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>🎬 Cover Slide</h4>
-            <p>Opening slide that hooks viewers. Uses bold badge, large title, and "swipe to learn" CTA.</p>
-            <dl class="template-specs">
-              <dt>Title Font</dt>
-              <dd>Playfair Display 800, 62–72px</dd>
-              <dt>Badge</dt>
-              <dd>Gold background, dark text, rounded pill</dd>
-              <dt>Required Elements</dt>
-              <dd>Badge, Title, Subtitle, Swipe CTA, Handle</dd>
-            </dl>
-          </div>
-        </div>
-        
-        <!-- Myth Buster -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="color:var(--accent-red);font-weight:700;font-size:12px;margin-bottom:8px">❌ MYTH</div>
-              <div style="background:rgba(231,76,60,0.2);padding:12px;border-radius:8px;border-left:3px solid var(--accent-red);font-size:13px;margin-bottom:12px">"The myth goes here"</div>
-              <div style="color:var(--accent-green);font-weight:700;font-size:12px">✅ TRUTH</div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>❌ Myth Buster</h4>
-            <p>Debunks misconceptions with clear myth/truth contrast. Red for myths, green for truths.</p>
-            <dl class="template-specs">
-              <dt>Myth Box</dt>
-              <dd>Red border-left (4px), red tinted background (15% opacity)</dd>
-              <dt>Truth Box</dt>
-              <dd>Green tinted background (12% opacity), no border</dd>
-              <dt>Typography</dt>
-              <dd>Myth in Playfair italic, Truth in Poppins regular</dd>
-            </dl>
-          </div>
-        </div>
-        
-        <!-- Checklist -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="color:var(--accent-gold);font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin-bottom:12px">🎧 Sensory Supports</div>
-              <div style="text-align:left;font-size:12px;line-height:2">
-                ✓ Headphones allowed<br>
-                ✓ Sensory breaks<br>
-                ✓ Fidgets permitted
-              </div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>✓ Checklist / List</h4>
-            <p>Structured information in scannable list format. Uses teal-tinted container box.</p>
-            <dl class="template-specs">
-              <dt>Container</dt>
-              <dd>Teal background (12% opacity), 2px teal border (30% opacity), 20px radius</dd>
-              <dt>Check Mark</dt>
-              <dd>Green ✓ or teal ✓, 24px body size</dd>
-              <dt>Line Height</dt>
-              <dd>1.6–1.8 for readability</dd>
-            </dl>
-          </div>
-        </div>
-        
-        <!-- VS Compare -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="display:flex;gap:8px;align-items:center">
-                <div style="background:rgba(231,76,60,0.2);padding:8px 12px;border-radius:8px;font-size:10px">😤 Tantrum</div>
-                <div style="background:var(--accent-gold);color:var(--bg-primary);width:24px;height:24px;border-radius:50%;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center">VS</div>
-                <div style="background:rgba(74,144,164,0.2);padding:8px 12px;border-radius:8px;font-size:10px">🌪️ Meltdown</div>
-              </div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>⚔️ VS Compare</h4>
-            <p>Side-by-side comparison of two concepts. Left box uses red, right uses teal.</p>
-            <dl class="template-specs">
-              <dt>Left Box</dt>
-              <dd>Red tinted (12%), red border (30%), 20px radius</dd>
-              <dt>Right Box</dt>
-              <dd>Teal tinted (12%), teal border (30%), 20px radius</dd>
-              <dt>VS Circle</dt>
-              <dd>Gold fill, centered between boxes, 35px radius</dd>
-            </dl>
-          </div>
-        </div>
-        
-        <!-- Grid Cards -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-                <div style="background:rgba(39,174,96,0.15);padding:10px;border-radius:6px;font-size:10px;text-align:center">📚<br>Item 1</div>
-                <div style="background:rgba(39,174,96,0.15);padding:10px;border-radius:6px;font-size:10px;text-align:center">🧸<br>Item 2</div>
-                <div style="background:rgba(39,174,96,0.15);padding:10px;border-radius:6px;font-size:10px;text-align:center">🎧<br>Item 3</div>
-                <div style="background:rgba(39,174,96,0.15);padding:10px;border-radius:6px;font-size:10px;text-align:center">🧩<br>Item 4</div>
-              </div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>🔲 Grid Cards</h4>
-            <p>Multiple items in card grid layout. Great for "moments," "tips," or "examples."</p>
-            <dl class="template-specs">
-              <dt>Grid</dt>
-              <dd>2 columns, 18–20px gap</dd>
-              <dt>Card Style</dt>
-              <dd>Green tinted (10%), green border (25%), 16px radius</dd>
-              <dt>Card Content</dt>
-              <dd>Centered emoji (42px) + text (18px)</dd>
-            </dl>
-          </div>
-        </div>
-        
-        <!-- CTA -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="font-size:32px;margin-bottom:8px">💾</div>
-              <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;margin-bottom:12px">Save This!</div>
-              <div style="background:var(--accent-gold);color:var(--bg-primary);padding:8px 16px;border-radius:12px;font-size:11px;font-weight:700">📩 DM for tips</div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>📢 CTA Slide</h4>
-            <p>Final slide driving engagement — save, share, comment, follow. Uses prominent CTA button.</p>
-            <dl class="template-specs">
-              <dt>Main Emoji</dt>
-              <dd>100px, centered</dd>
-              <dt>CTA Button</dt>
-              <dd>Gold fill, 20px radius, Poppins 700, dark text</dd>
-              <dt>Action Row</dt>
-              <dd>"📤 Share • 💬 Comment • ➕ Follow" at 22px, 70% opacity</dd>
-            </dl>
-          </div>
-        </div>
-        
-        <!-- Stats -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:800">85%</div>
-              <div style="font-size:11px;color:var(--text-muted);max-width:150px">of autistic grads are underemployed</div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>📊 Stats</h4>
-            <p>Highlights a powerful statistic. Large number creates immediate impact.</p>
-            <dl class="template-specs">
-              <dt>Stat Number</dt>
-              <dd>Playfair Display 800, 160–180px, white</dd>
-              <dt>Description</dt>
-              <dd>Poppins 400, 28px, 85% opacity, centered below</dd>
-              <dt>Title</dt>
-              <dd>Gold, 42px, above the number</dd>
-            </dl>
-          </div>
-        </div>
-        
-        <!-- Quote -->
-        <div class="template-card">
-          <div class="template-preview">
-            <div class="preview-content">
-              <div style="font-size:48px;color:var(--accent-gold);opacity:0.3;position:absolute;left:20px;top:20px">"</div>
-              <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;padding:0 20px">"You shouldn't have to perform to be accepted."</div>
-              <div style="color:var(--accent-gold);font-size:11px;margin-top:12px">— Community</div>
-            </div>
-          </div>
-          <div class="template-body">
-            <h4>💬 Quote</h4>
-            <p>Inspirational or impactful quote. Uses decorative quotation mark and attribution.</p>
-            <dl class="template-specs">
-              <dt>Quote Mark</dt>
-              <dd>Playfair Display, 200px, gold at 30% opacity, top-left</dd>
-              <dt>Quote Text</dt>
-              <dd>Playfair Display 700 italic, 42px, centered</dd>
-              <dt>Attribution</dt>
-              <dd>Poppins 400, 24px, gold, em-dash prefix</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Layout & Spacing -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge">Section 05</div>
-        <h2>Layout, Spacing & Composition</h2>
-        <p>Consistent spacing creates visual rhythm and ensures content is digestible on mobile screens.</p>
-      </div>
-      
-      <div class="card mb-4">
-        <h3><span class="icon">📐</span> Canvas Dimensions</h3>
-        <table class="spec-table">
-          <thead>
-            <tr>
-              <th>Format</th>
-              <th>Dimensions</th>
-              <th>Aspect Ratio</th>
-              <th>Use Case</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Instagram Carousel</strong></td>
-              <td><code>1080 × 1350</code></td>
-              <td>4:5</td>
-              <td>Primary format for educational carousels</td>
-            </tr>
-            <tr>
-              <td><strong>Stories / Reels / TikTok</strong></td>
-              <td><code>1080 × 1920</code></td>
-              <td>9:16</td>
-              <td>Vertical video frames, story graphics</td>
-            </tr>
-            <tr>
-              <td><strong>Square</strong></td>
-              <td><code>1080 × 1080</code></td>
-              <td>1:1</td>
-              <td>Cross-platform, feed posts</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="spacing-visual">
-        <h3 class="text-gold" style="margin-bottom:24px">Spacing Scale</h3>
-        
-        <div class="spacing-row">
-          <div class="spacing-label"><strong>60px</strong><span>Canvas Padding</span></div>
-          <div class="spacing-box" style="width:60px;height:30px"></div>
-          <span style="color:var(--text-muted);font-size:12px">Safe zone from all edges</span>
-        </div>
-        
-        <div class="spacing-row">
-          <div class="spacing-label"><strong>40px</strong><span>Section Gap</span></div>
-          <div class="spacing-box" style="width:40px;height:30px"></div>
-          <span style="color:var(--text-muted);font-size:12px">Between major content blocks</span>
-        </div>
-        
-        <div class="spacing-row">
-          <div class="spacing-label"><strong>30px</strong><span>Element Gap</span></div>
-          <div class="spacing-box" style="width:30px;height:30px"></div>
-          <span style="color:var(--text-muted);font-size:12px">Between badge and title, title and subtitle</span>
-        </div>
-        
-        <div class="spacing-row">
-          <div class="spacing-label"><strong>20px</strong><span>Inner Padding</span></div>
-          <div class="spacing-box" style="width:20px;height:30px"></div>
-          <span style="color:var(--text-muted);font-size:12px">Inside cards and boxes</span>
-        </div>
-        
-        <div class="spacing-row">
-          <div class="spacing-label"><strong>12px</strong><span>Tight Gap</span></div>
-          <div class="spacing-box" style="width:12px;height:30px"></div>
-          <span style="color:var(--text-muted);font-size:12px">Between icon and label, list items</span>
-        </div>
-      </div>
-      
-      <div class="two-col">
-        <div class="card">
-          <h3><span class="icon">🎯</span> Visual Hierarchy</h3>
-          <ol style="color:var(--text-secondary);padding-left:20px;line-height:2">
-            <li><strong>Badge/Label</strong> — Small, top, draws initial attention</li>
-            <li><strong>Hero Title</strong> — Largest element, main message</li>
-            <li><strong>Supporting Content</strong> — Body text, lists, explanations</li>
-            <li><strong>CTA / Footer</strong> — Action items and branding</li>
-          </ol>
-        </div>
-        <div class="card">
-          <h3><span class="icon">🔵</span> Decorative Elements</h3>
-          <p style="margin-bottom:12px">Subtle gradient circles add depth without distraction:</p>
-          <ul style="color:var(--text-secondary);padding-left:20px;line-height:2">
-            <li><strong>Top-right:</strong> Gold circle, 300px radius, 8% opacity</li>
-            <li><strong>Bottom-left:</strong> Teal circle, 200px radius, 6% opacity</li>
-            <li>Circles extend beyond canvas edges (bleed)</li>
-            <li>Never selectable or interactive</li>
+          <ul class="bullet-list" style="margin-top:16px">
+            <li>Body text, UI, lists, badges</li>
+            <li>Geometric sans-serif, friendly</li>
+            <li>Excellent x-height for mobile</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Logic & Reasoning -->
+  <!-- Template Examples -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="badge">Section 06</div>
-        <h2>Logic & Reasoning</h2>
-        <p>The strategic thinking behind every major design decision — ensuring the editor can consistently recreate and extend 60-day calendar graphics.</p>
+        <div class="section-badge">Templates</div>
+        <h2>Visual Examples</h2>
+        <p>Canvas-based templates built with Fabric.js. Double-click text to edit, drag to move, export as PNG.</p>
+      </div>
+      
+      <div class="mockup-grid">
+        <!-- Myth Buster -->
+        <div class="mockup-card">
+          <div class="mockup-preview">
+            <div class="myth-label red">❌ MYTH</div>
+            <div class="myth-box">
+              <p>"Autistic people lack empathy."</p>
+            </div>
+            <div class="myth-label green">✅ TRUTH</div>
+            <div class="truth-box">
+              <p>Autistic people often experience empathy <strong>very deeply</strong>. They may express it differently, but emotional empathy is frequently intense.</p>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <h4>❌ Myth Buster</h4>
+            <p>Red-tinted myth box with left border. Green-tinted truth box. Clear visual contrast between misconception and fact.</p>
+          </div>
+        </div>
+        
+        <!-- Checklist -->
+        <div class="mockup-card">
+          <div class="mockup-preview">
+            <div class="checklist-title">🎧 Sensory Supports</div>
+            <div class="checklist-container">
+              <div class="checklist-item"><span class="check">✓</span> Noise-canceling headphones</div>
+              <div class="checklist-item"><span class="check">✓</span> Scheduled sensory breaks</div>
+              <div class="checklist-item"><span class="check">✓</span> Fidgets permitted</div>
+              <div class="checklist-item"><span class="check">✓</span> Alternative seating</div>
+              <div class="checklist-item"><span class="check">✓</span> Quiet space available</div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <h4>✓ Checklist</h4>
+            <p>Teal-tinted container with subtle border. Green checkmarks. Scannable list format for practical information.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top:32px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:20px">
+        <h4 style="font-size:14px;margin-bottom:12px">📐 All 8 Templates</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">🎬 Cover</span>
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">❌ Myth Buster</span>
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">✓ Checklist</span>
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">⚔️ VS Compare</span>
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">🔲 Grid Cards</span>
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">📢 CTA</span>
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">📊 Stats</span>
+          <span style="background:var(--bg-deep);padding:8px 14px;border-radius:8px;font-size:12px">💬 Quote</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Canvas Specs -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Specs</div>
+        <h2>Canvas & Spacing</h2>
+        <p>Dimensions and spacing rules for consistent graphics.</p>
+      </div>
+      
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h5>Instagram Carousel</h5>
+          <div class="value">1080 × 1350</div>
+          <div class="desc">4:5 ratio — Primary format</div>
+        </div>
+        <div class="spec-card">
+          <h5>Stories / TikTok</h5>
+          <div class="value">1080 × 1920</div>
+          <div class="desc">9:16 ratio — Vertical video</div>
+        </div>
+        <div class="spec-card">
+          <h5>Square</h5>
+          <div class="value">1080 × 1080</div>
+          <div class="desc">1:1 ratio — Cross-platform</div>
+        </div>
+        <div class="spec-card">
+          <h5>Canvas Padding</h5>
+          <div class="value">60px</div>
+          <div class="desc">Safe zone from edges</div>
+        </div>
+        <div class="spec-card">
+          <h5>Section Gap</h5>
+          <div class="value">40px</div>
+          <div class="desc">Between content blocks</div>
+        </div>
+        <div class="spec-card">
+          <h5>Border Radius</h5>
+          <div class="value">16–20px</div>
+          <div class="desc">Rounded corners on boxes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Logic -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Logic</div>
+        <h2>Design Decisions</h2>
+        <p>Why each choice matters for accessibility and engagement.</p>
       </div>
       
       <div class="logic-grid">
         <div class="logic-card">
-          <div class="number">1</div>
+          <div class="num">1</div>
           <h4>Dark Mode Default</h4>
-          <p>Dark backgrounds reduce eye strain for viewers scrolling at night (peak Instagram time). Also creates premium, professional feel that differentiates from bright, cluttered competitor content. High contrast ensures accessibility.</p>
+          <p>Reduces eye strain for evening scrolling. Premium feel. High contrast for accessibility.</p>
         </div>
-        
         <div class="logic-card">
-          <div class="number">2</div>
+          <div class="num">2</div>
           <h4>Gradient Backgrounds</h4>
-          <p>The gradient represents the "spectrum" — no flat, single color. Adds visual depth and prevents monotony across 60+ graphics. The 165° angle (top-left to bottom-right) creates natural reading flow.</p>
+          <p>"Spectrum" concept — no flat color. Adds depth, prevents monotony across 60+ graphics.</p>
         </div>
-        
         <div class="logic-card">
-          <div class="number">3</div>
-          <h4>Gold as Primary Accent</h4>
-          <p>Gold connotes value, warmth, and "unlocking" knowledge. It pops on dark backgrounds without the harshness of pure yellow. Doesn't conflict with autism awareness colors (blue/rainbow) — intentionally distinct.</p>
+          <div class="num">3</div>
+          <h4>Gold Accent</h4>
+          <p>Symbolizes "unlocking" knowledge. Warm, inviting. Distinct from autism awareness blue.</p>
         </div>
-        
         <div class="logic-card">
-          <div class="number">4</div>
-          <h4>Semantic Color Coding</h4>
-          <p>Red = myths/warnings (universal danger signal). Green = truths/positives (universal success). Teal = neutral info/lists. This instant recognition reduces cognitive load for viewers.</p>
+          <div class="num">4</div>
+          <h4>Semantic Colors</h4>
+          <p>Red = myths/warnings. Green = truths. Teal = neutral info. Instant recognition.</p>
         </div>
-        
         <div class="logic-card">
-          <div class="number">5</div>
-          <h4>Two-Font System</h4>
-          <p>Limiting to 2 fonts (serif display + sans-serif body) creates cohesion across 60 days. More fonts would create inconsistency. Pairing rules: Playfair for headlines/quotes, Poppins for everything else.</p>
+          <div class="num">5</div>
+          <h4>Large Headlines</h4>
+          <p>62–72px titles readable in Instagram thumbnails. Users decide to swipe based on first slide.</p>
         </div>
-        
         <div class="logic-card">
-          <div class="number">6</div>
-          <h4>Oversized Headlines</h4>
-          <p>62–72px titles ensure readability in Instagram's small carousel preview thumbnails. Users decide to swipe based on the first slide — the title must be instantly readable at any size.</p>
-        </div>
-        
-        <div class="logic-card">
-          <div class="number">7</div>
-          <h4>Consistent Box Styling</h4>
-          <p>All content boxes use the same formula: colored tint (10–15% opacity) + matching border (25–30% opacity) + 16–20px border-radius. This consistency lets viewers instantly recognize "this is a content block."</p>
-        </div>
-        
-        <div class="logic-card">
-          <div class="number">8</div>
-          <h4>Template Modularity</h4>
-          <p>8 templates cover all content types in the 60-day calendar. Each template is a reusable pattern that can be filled with any content. This ensures visual consistency while allowing content variety.</p>
-        </div>
-        
-        <div class="logic-card">
-          <div class="number">9</div>
-          <h4>Footer Branding</h4>
-          <p>Handle (@spectrum_unlocked) appears on every slide at 40–50% opacity — visible but not distracting. Slide numbers (1 of 5) help viewers track progress and encourage swiping to completion.</p>
-        </div>
-        
-        <div class="logic-card">
-          <div class="number">10</div>
-          <h4>Emoji Integration</h4>
-          <p>Native emoji render consistently across all devices and add personality without requiring custom icons. They're universally understood and increase engagement. Placed prominently (80–100px) for visual anchoring.</p>
-        </div>
-        
-        <div class="logic-card">
-          <div class="number">11</div>
-          <h4>Fabric.js Choice</h4>
-          <p>Fabric.js enables true canvas editing (click-to-edit, drag, resize) while exporting clean PNGs at exact dimensions. HTML/CSS screenshots would have font rendering inconsistencies; Fabric.js ensures pixel-perfect output.</p>
-        </div>
-        
-        <div class="logic-card">
-          <div class="number">12</div>
-          <h4>Multi-Slide Architecture</h4>
-          <p>Storing each slide as JSON enables saving/loading carousel state, batch exports, and future database storage. Slides are independent but share style variables (accent color, background) for cohesion.</p>
+          <div class="num">6</div>
+          <h4>Two-Font Limit</h4>
+          <p>Playfair for impact, Poppins for readability. Consistency across 60 days of content.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Editor Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Editor</div>
+        <h2>Canvas Editor Features</h2>
+        <p>Built with Fabric.js for true interactive editing.</p>
+      </div>
       
-      <div class="card mt-4">
-        <h3><span class="icon">🔗</span> Consistency Guarantee</h3>
-        <p>Every design decision documented here is implemented in the editor's code. When users create new graphics, they automatically inherit these brand rules through:</p>
-        <ul style="margin-top:16px;color:var(--text-secondary);padding-left:20px;line-height:2">
-          <li><strong>Template presets</strong> — Pre-built layouts with correct spacing, fonts, and colors</li>
-          <li><strong>Color swatches</strong> — Only brand-approved colors in the picker</li>
-          <li><strong>Font dropdowns</strong> — Limited to Poppins and Playfair Display</li>
-          <li><strong>Size constraints</strong> — Canvas locked to 1080px width</li>
-          <li><strong>Default values</strong> — All elements start with brand-compliant styling</li>
-        </ul>
-        <p style="margin-top:16px">This means anyone using the editor will produce graphics that match the 60-day calendar — even without reading these guidelines.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px">
+        <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:16px">
+          <h4 style="font-size:13px;margin-bottom:8px">🖱️ Interactive Canvas</h4>
+          <ul class="bullet-list">
+            <li>Double-click text to edit inline</li>
+            <li>Drag any element to reposition</li>
+            <li>Corner handles to resize</li>
+            <li>Delete key removes selected</li>
+          </ul>
+        </div>
+        <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:16px">
+          <h4 style="font-size:13px;margin-bottom:8px">🎨 Properties Panel</h4>
+          <ul class="bullet-list">
+            <li>Font family selector</li>
+            <li>Size, weight, color controls</li>
+            <li>Quick color swatches</li>
+            <li>Position X/Y inputs</li>
+          </ul>
+        </div>
+        <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:16px">
+          <h4 style="font-size:13px;margin-bottom:8px">📥 Export Options</h4>
+          <ul class="bullet-list">
+            <li>PNG at exact 1080px dimensions</li>
+            <li>Export single or all slides</li>
+            <li>Save project as JSON</li>
+            <li>Multi-slide carousel support</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>Spectrum Unlocked Brand Guidelines v1.0 — April 2026</p>
-    <p style="margin-top:8px"><a href="editor.html">Open Template Editor</a> · <a href="calendar-60day.html">View 60-Day Calendar</a></p>
+    <div class="footer-cta">
+      <a href="editor.html" class="editor-btn" style="display:inline-flex;font-size:16px;padding:14px 32px">
+        ✨ Open Template Editor
+      </a>
+    </div>
+    <p>Spectrum Unlocked Brand Guidelines v1.0</p>
+    <p style="margin-top:6px">
+      <a href="calendar-60day.html">View 60-Day Calendar</a> · 
+      <a href="index.html">Back to Home</a>
+    </p>
   </footer>
 </body>
 </html>
-
