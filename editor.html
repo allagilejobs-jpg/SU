@@ -1096,33 +1096,54 @@
     
     // ============ INITIALIZATION ============
     document.addEventListener('DOMContentLoaded', async () => {
-      await preloadFonts();
-      initCanvas();
-      initPreviewCanvas();
-      renderTemplateButtons();
-      renderDayList();
-      renderSlideTabs();
-      updateSizeIndicator();
-      
-      // Check for URL params
-      const urlParams = new URLSearchParams(window.location.search);
-      const dayNum = urlParams.get('day');
-      const slideNum = urlParams.get('slide');
-      const folder = urlParams.get('folder');
-      const slideName = urlParams.get('slideName');
-      
-      if (dayNum && folder && slideName) {
-        await loadFromCalendar(dayNum, slideNum, folder, slideName);
-      } else {
-        loadTemplate('cover');
-      }
-      
-      window.addEventListener('beforeunload', (e) => {
-        if (slides.length > 1 || (slides[0] && slides[0].json)) {
-          e.preventDefault();
-          e.returnValue = 'You have unsaved work. Are you sure you want to leave?';
+      try {
+        console.log('Editor init starting...');
+        console.log('Window size:', window.innerWidth, 'x', window.innerHeight);
+        
+        // Check if Fabric.js loaded
+        if (typeof fabric === 'undefined') {
+          throw new Error('Fabric.js failed to load');
         }
-      });
+        console.log('Fabric.js version:', fabric.version);
+        
+        await preloadFonts();
+        console.log('Fonts loaded');
+        
+        initCanvas();
+        console.log('Canvas initialized');
+        
+        initPreviewCanvas();
+        renderTemplateButtons();
+        renderDayList();
+        renderSlideTabs();
+        updateSizeIndicator();
+        console.log('UI initialized');
+        
+        // Check for URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const dayNum = urlParams.get('day');
+        const slideNum = urlParams.get('slide');
+        const folder = urlParams.get('folder');
+        const slideName = urlParams.get('slideName');
+        
+        if (dayNum && folder && slideName) {
+          await loadFromCalendar(dayNum, slideNum, folder, slideName);
+        } else {
+          loadTemplate('cover');
+        }
+        
+        console.log('Editor ready!');
+        
+        window.addEventListener('beforeunload', (e) => {
+          if (slides.length > 1 || (slides[0] && slides[0].json)) {
+            e.preventDefault();
+            e.returnValue = 'You have unsaved work. Are you sure you want to leave?';
+          }
+        });
+      } catch (err) {
+        console.error('Editor init failed:', err);
+        alert('Editor failed to load: ' + err.message);
+      }
     });
     
     function renderTemplateButtons() {
@@ -1407,13 +1428,20 @@
     
     function initCanvas() {
       const isMobile = window.innerWidth <= 900;
-      const maxDisplayHeight = window.innerHeight - (isMobile ? 120 : 180);
-      const maxDisplayWidth = isMobile ? window.innerWidth - 40 : window.innerWidth - 620;
-      const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, isMobile ? 0.35 : 0.6);
+      const maxDisplayHeight = Math.max(window.innerHeight - (isMobile ? 120 : 180), 200);
+      const maxDisplayWidth = Math.max(isMobile ? window.innerWidth - 40 : window.innerWidth - 620, 200);
+      let scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, isMobile ? 0.35 : 0.6);
+      
+      // Ensure scale is valid
+      if (!scale || scale <= 0 || isNaN(scale)) {
+        scale = 0.25;
+      }
+      
+      console.log('Canvas scale:', scale, 'Mobile:', isMobile, 'MaxW:', maxDisplayWidth, 'MaxH:', maxDisplayHeight);
       
       canvas = new fabric.Canvas('canvas', {
-        width: canvasWidth * scale,
-        height: canvasHeight * scale,
+        width: Math.max(canvasWidth * scale, 100),
+        height: Math.max(canvasHeight * scale, 100),
         backgroundColor: '#1a1a2e',
         preserveObjectStacking: true
       });
