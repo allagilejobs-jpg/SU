@@ -57,7 +57,7 @@ const server = http.createServer(async (req, res) => {
         
         // Render with Playwright at detected size
         console.log(`Rendering: ${outputPath} (${width}x${height})`);
-        execSync(`npx playwright screenshot --viewport-size=${width},${height} "${tempHtml}" "${fullOutputPath}"`, {
+        execSync(`/opt/homebrew/bin/npx playwright screenshot --viewport-size=${width},${height} "${tempHtml}" "${fullOutputPath}"`, {
           cwd: BASE_DIR,
           stdio: 'inherit'
         });
