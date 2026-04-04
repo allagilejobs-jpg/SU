@@ -519,12 +519,37 @@
     ];
     
     // ============ INITIALIZATION ============
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Preload fonts before initializing canvas
+      await preloadFonts();
       initCanvas();
       renderDayList();
       renderSlideTabs();
       loadTemplate('cover');
     });
+    
+    async function preloadFonts() {
+      // Use Font Loading API to ensure fonts are ready
+      if (document.fonts) {
+        try {
+          // Load all weights we use
+          await Promise.all([
+            document.fonts.load('600 48px "Playfair Display"'),
+            document.fonts.load('700 48px "Playfair Display"'),
+            document.fonts.load('800 48px "Playfair Display"'),
+            document.fonts.load('400 16px "Poppins"'),
+            document.fonts.load('500 16px "Poppins"'),
+            document.fonts.load('600 16px "Poppins"'),
+            document.fonts.load('700 16px "Poppins"'),
+            document.fonts.load('800 16px "Poppins"')
+          ]);
+          console.log('✅ Fonts loaded successfully');
+        } catch (e) {
+          console.warn('Font loading warning:', e);
+        }
+        await document.fonts.ready;
+      }
+    }
     
     function initCanvas() {
       // Calculate display scale (fit in viewport)
@@ -1994,7 +2019,35 @@
     }
     
     // ============ EXPORT ============
-    function exportSlide() {
+    async function ensureFontsLoaded() {
+      // Wait for Google Fonts to be fully loaded
+      if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+      }
+      // Extra safety: explicitly check our fonts
+      const fontChecks = [
+        new FontFace('Playfair Display', 'url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.woff2)'),
+        new FontFace('Poppins', 'url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2)')
+      ];
+      // Give fonts a moment to render on canvas
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    
+    async function exportSlide() {
+      // Ensure fonts are loaded before export
+      await ensureFontsLoaded();
+      
+      // Force re-render all text objects to use loaded fonts
+      canvas.getObjects().forEach(obj => {
+        if (obj.type === 'i-text' || obj.type === 'text' || obj.type === 'textbox') {
+          obj.set('dirty', true);
+        }
+      });
+      canvas.renderAll();
+      
+      // Small delay to ensure render is complete
+      await new Promise(resolve => setTimeout(resolve, 50));
+      
       // Reset zoom for export
       const originalZoom = canvas.getZoom();
       canvas.setZoom(1);
@@ -2019,15 +2072,28 @@
       link.click();
     }
     
-    function exportAllSlides() {
+    async function exportAllSlides() {
       saveCurrentSlide();
       
-      slides.forEach((slide, i) => {
+      // Ensure fonts are loaded first
+      await ensureFontsLoaded();
+      
+      for (let i = 0; i < slides.length; i++) {
+        const slide = slides[i];
         if (slide.json) {
-          // Load slide
-          canvas.loadFromJSON(slide.json, () => {
-            // Export after load
-            setTimeout(() => {
+          await new Promise(resolve => {
+            canvas.loadFromJSON(slide.json, async () => {
+              // Force re-render text with fonts
+              canvas.getObjects().forEach(obj => {
+                if (obj.type === 'i-text' || obj.type === 'text' || obj.type === 'textbox') {
+                  obj.set('dirty', true);
+                }
+              });
+              canvas.renderAll();
+              
+              // Wait for render
+              await new Promise(r => setTimeout(r, 150));
+              
               const originalZoom = canvas.getZoom();
               canvas.setZoom(1);
               canvas.setWidth(canvasWidth);
@@ -2043,10 +2109,14 @@
               link.download = `spectrum-slide-${i + 1}.png`;
               link.href = dataURL;
               link.click();
-            }, 100);
+              
+              // Small delay between downloads
+              await new Promise(r => setTimeout(r, 300));
+              resolve();
+            });
           });
         }
-      });
+      }
     }
     
     function saveProject() {
