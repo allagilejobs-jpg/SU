@@ -1368,7 +1368,7 @@
       slidesContainer.innerHTML = '';
       for (let i = 1; i <= data.slides; i++) {
         const slideNum = i.toString().padStart(2, '0');
-        // Find the right slide name
+        // Find the right slide name for all 60 days
         const slideNames = {
           1: ['cover', 'myth1', 'myth2', 'myth3', 'cta'],
           2: ['cover', 'awareness', 'acceptance', 'progression', 'cta'],
@@ -1384,7 +1384,52 @@
           12: ['cover', 'micro', 'people', 'boundaries', 'help', 'cta'],
           13: ['cover', 'what', 'concerns', 'other', 'questions', 'cta'],
           14: ['cover', 'schedule', 'timer', 'first', 'choice', 'cta'],
-          15: ['cover', 'vs', 'dont', 'do', 'after', 'cta']
+          15: ['cover', 'vs', 'dont', 'do', 'after', 'cta'],
+          16: ['cover', 'why', 'sensory', 'helps', 'help', 'cta'],
+          17: ['cover', 'why', 'environment', 'routine', 'help', 'cta'],
+          18: ['cover', 'gap', 'signs', 'more', 'next', 'cta'],
+          19: ['cover', 'wins', 'questions', 'cta'],
+          20: ['cover', 'why', 'readiness', 'strategies', 'patience', 'cta'],
+          21: ['cover', 'what', 'conflict', 'signs', 'strengths', 'cta'],
+          22: ['cover', 'what', 'types', 'support', 'myths', 'cta'],
+          23: ['cover', 'formal', 'informal', 'ask', 'tips', 'cta'],
+          24: ['cover', 'why', 'triggers', 'helps', 'support', 'cta'],
+          25: ['cover', 'events', 'during', 'respite', 'find', 'cta'],
+          26: ['cover', 'highlights', 'community', 'lessons', 'preview', 'cta'],
+          27: ['cover', 'changes', 'social', 'support', 'strengths', 'cta'],
+          28: ['cover', 'why', 'sensory', 'activities', 'tips', 'cta'],
+          29: ['cover', 'different', 'support', 'avoid', 'magic', 'cta'],
+          30: ['cover', 'why', 'signs', 'emotional', 'next', 'cta'],
+          31: ['cover', 'what', 'impact', 'help', 'conversation', 'cta'],
+          32: ['cover', 'activities', 'products', 'tips', 'reality', 'cta'],
+          33: ['cover', 'highlights', 'community', 'lessons', 'gratitude', 'cta'],
+          34: ['cover', 'reality', 'actions', 'resources', 'reminder', 'cta'],
+          35: ['cover', 'organizations', 'books', 'apps', 'podcasts', 'community', 'cta'],
+          36: ['cover', 'theme', 'stats', 'highlights', 'forward', 'gratitude', 'cta'],
+          37: ['cover', 'themes', 'community', 'input', 'promise'],
+          38: ['cover', 'why', 'checklist', 'activities', 'tips', 'cta'],
+          39: ['cover', 'what', 'helps', 'signs', 'session', 'cta'],
+          40: ['cover', 'myth', 'helps', 'signs', 'aac', 'cta'],
+          41: ['cover', 'what', 'signs', 'expect', 'tips', 'cta'],
+          42: ['cover', 'types', 'covered', 'denied', 'tips', 'cta'],
+          43: ['cover', 'why', 'scripts', 'educate', 'boundaries', 'cta'],
+          44: ['cover', 'truth', 'challenges', 'strategies', 'help', 'cta'],
+          45: ['cover', 'truth', 'micro', 'boundaries', 'support', 'cta'],
+          46: ['cover', 'reality', 'layers', 'where', 'scripts', 'cta'],
+          47: ['cover', 'types', 'questions', 'prep', 'redflags', 'cta'],
+          48: ['cover', 'before', 'flying', 'destination', 'survival', 'cta'],
+          49: ['cover', 'what', 'qualify', 'advocate', 'alternatives', 'cta'],
+          50: ['cover', 'mindset', 'skills', 'how', 'tips', 'cta'],
+          51: ['cover', 'senses', 'hyper', 'hypo', 'support', 'cta'],
+          52: ['cover', 'what', 'struggles', 'strategies', 'tools', 'cta'],
+          53: ['cover', 'why', 'support', 'community', 'balance', 'cta'],
+          54: ['cover', 'cliff', 'skills', 'planning', 'success', 'cta'],
+          55: ['cover', 'reality', 'strengths', 'accommodations', 'tips', 'cta'],
+          56: ['cover', 'why', 'scripts', 'tips', 'affirmations', 'cta'],
+          57: ['cover', 'reality', 'vs', 'accommodations', 'allies', 'cta'],
+          58: ['cover', 'connection', 'challenges', 'helps', 'affirmations', 'cta'],
+          59: ['cover', 'what', 'moments', 'protect', 'affirmations', 'cta'],
+          60: ['cover', 'recap', 'learned', 'thanks', 'whats-next', 'affirmations', 'cta']
         };
         const names = slideNames[dayNum] || [];
         const slideName = names[i-1] || `slide-${slideNum}`;
