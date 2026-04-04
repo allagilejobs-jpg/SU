@@ -2369,7 +2369,10 @@
     }
     
     // ============ CANVAS SIZE ============
-    function setCanvasSize(width, height) {
+    function setCanvasSize(width, height, preserveContent = true) {
+      const oldWidth = canvasWidth;
+      const oldHeight = canvasHeight;
+      
       canvasWidth = width;
       canvasHeight = height;
       
@@ -2384,13 +2387,60 @@
       const maxDisplayWidth = window.innerWidth - 620;
       const scale = Math.min(maxDisplayWidth / canvasWidth, maxDisplayHeight / canvasHeight, 0.6);
       
-      canvas.setWidth(canvasWidth * scale);
-      canvas.setHeight(canvasHeight * scale);
-      canvas.setZoom(scale);
-      
-      clearCanvas();
-      drawBackground();
-      loadTemplate('cover');
+      if (preserveContent) {
+        // Save all non-background/decoration objects
+        const contentObjects = [];
+        canvas.getObjects().forEach(obj => {
+          if (!obj.isBackground && !obj.isDecoration) {
+            // Clone the object data
+            contentObjects.push({
+              json: obj.toJSON(['isBackground', 'isDecoration']),
+              // Store relative position (0-1 range)
+              relativeLeft: obj.left / oldWidth,
+              relativeTop: obj.top / oldHeight,
+              // Store absolute position too
+              absoluteLeft: obj.left,
+              absoluteTop: obj.top
+            });
+          }
+        });
+        
+        // Clear and redraw background at new size
+        clearCanvas();
+        
+        canvas.setWidth(canvasWidth * scale);
+        canvas.setHeight(canvasHeight * scale);
+        canvas.setZoom(scale);
+        
+        drawBackground();
+        
+        // Restore content objects at their original absolute positions
+        // (no stretching - they stay where they were)
+        contentObjects.forEach(item => {
+          fabric.util.enlivenObjects([item.json], (objects) => {
+            objects.forEach(obj => {
+              // Keep absolute position - no stretching
+              obj.set({
+                left: item.absoluteLeft,
+                top: item.absoluteTop
+              });
+              canvas.add(obj);
+            });
+            canvas.renderAll();
+          });
+        });
+        
+        saveCurrentSlide();
+      } else {
+        // Fresh canvas (used on initial load)
+        canvas.setWidth(canvasWidth * scale);
+        canvas.setHeight(canvasHeight * scale);
+        canvas.setZoom(scale);
+        
+        clearCanvas();
+        drawBackground();
+        loadTemplate('cover');
+      }
     }
     
     // ============ EXPORT ============
