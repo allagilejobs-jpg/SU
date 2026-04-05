@@ -862,8 +862,13 @@
       </div>
       <div class="modal-body">
         <div class="modal-section" id="modal-slides-section">
-          <h3>Slides Preview</h3>
+          <h3>📸 Carousel Slides (1080x1350)</h3>
           <div class="modal-slides" id="modal-slides"></div>
+        </div>
+        <div class="modal-section" id="modal-reel-section" style="display:none;">
+          <h3>🎬 Reel Slides (1080x1920)</h3>
+          <div class="modal-slides" id="modal-reel-slides"></div>
+          <div class="modal-caption" id="modal-reel-caption" style="margin-top:15px;"></div>
         </div>
         <div class="modal-section">
           <h3>📸 Instagram Caption</h3>
@@ -1396,7 +1401,39 @@
       for (let i = 1; i <= data.slides; i++) {
         const slideNum = i.toString().padStart(2, '0');
         // Find the right slide name for all 60 days
-        const slideNames = {
+        // Reel data for days that have slideshow reels
+    const reelData = {
+      2: {
+        title: "Acceptance vs Awareness",
+        folder: "day-02-acceptance-reel",
+        slides: 5,
+        slideNames: ['hook', 'awareness', 'acceptance', 'progression', 'cta'],
+        tiktokCaption: "🛑 STOP saying autism awareness!\n\nHere's why ACCEPTANCE matters more 👇\n\n#autism #autismacceptance #neurodivergent #fyp"
+      },
+      4: {
+        title: "5 Sensory Hacks (Reel Version)",
+        folder: "day-04-sensory-hacks-reel",
+        slides: 7,
+        slideNames: ['hook', 'hack1', 'hack2', 'hack3', 'hack4', 'hack5', 'cta'],
+        tiktokCaption: "🧠✨ 5 Sensory Hacks That ACTUALLY Work\n\nOT-approved tips every autism parent needs 👇\n\n#autism #sensoryfriendly #autismhacks #fyp #autismparenting"
+      },
+      10: {
+        title: "IEP Accommodations (Reel Version)",
+        folder: "day-10-iep-reel",
+        slides: 6,
+        slideNames: ['hook', 'sensory', 'communication', 'academic', 'social', 'cta'],
+        tiktokCaption: "📋 IEP Accommodations That Actually Help\n\nYour child's IEP shouldn't teach them to mask 👇\n\n#IEP #autism #specialeducation #fyp #autismadvocacy"
+      },
+      17: {
+        title: "Sleep Issues (Reel Version)",
+        folder: "day-17-sleep-reel",
+        slides: 5,
+        slideNames: ['hook', 'why', 'environment', 'routine', 'cta'],
+        tiktokCaption: "😴💤 Sleep Issues in Autism\n\nMelatonin isn't the only answer 👇\n\n#autism #autismsleep #sleeptips #sensory #fyp"
+      }
+    };
+
+    const slideNames = {
           1: ['cover', 'myth1', 'myth2', 'myth3', 'cta'],
           2: ['cover', 'awareness', 'acceptance', 'progression', 'cta'],
           3: ['cover', 'what', 'signs', 'impact', 'help', 'cta'],
@@ -1501,6 +1538,46 @@
         wrapper.appendChild(editBtn);
         
         slidesContainer.appendChild(wrapper);
+      }
+      
+      // Check if this day has reel content
+      const reelSection = document.getElementById('modal-reel-section');
+      const reelSlidesContainer = document.getElementById('modal-reel-slides');
+      const reelCaptionEl = document.getElementById('modal-reel-caption');
+      
+      if (reelData[dayNum]) {
+        const reel = reelData[dayNum];
+        reelSection.style.display = 'block';
+        reelSlidesContainer.innerHTML = '';
+        
+        for (let i = 1; i <= reel.slides; i++) {
+          const slideNum = i.toString().padStart(2, '0');
+          const slideName = reel.slideNames[i-1] || `slide-${slideNum}`;
+          const imgUrl = `content/${reel.folder}/slide-${slideNum}-${slideName}.png`;
+          const fileName = `reel-day-${dayNum}-slide-${slideNum}-${slideName}.png`;
+          
+          const wrapper = document.createElement('div');
+          wrapper.className = 'slide-wrapper';
+          
+          const link = document.createElement('a');
+          link.href = imgUrl;
+          link.download = fileName;
+          link.title = `Click to download Reel Slide ${i}`;
+          
+          const img = document.createElement('img');
+          img.src = imgUrl;
+          img.alt = `Reel Slide ${i}`;
+          img.style.height = '250px'; // Taller for 9:16 ratio
+          img.onerror = function() { this.style.display = 'none'; };
+          
+          link.appendChild(img);
+          wrapper.appendChild(link);
+          reelSlidesContainer.appendChild(wrapper);
+        }
+        
+        reelCaptionEl.textContent = reel.tiktokCaption || '';
+      } else {
+        reelSection.style.display = 'none';
       }
       
       document.getElementById('modal').classList.add('active');

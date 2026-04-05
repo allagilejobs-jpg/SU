@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #0d1b2a 50%, #0a1628 100%);
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      position: relative;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 50px;
+    }
+    .reasons {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .reason {
+      background: rgba(74,144,164,0.12);
+      border-left: 5px solid #4A90A4;
+      padding: 30px 40px;
+      border-radius: 0 20px 20px 0;
+      font-size: 36px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    .reason-icon { font-size: 50px; }
+    .brand {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      font-size: 24px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="title">Why Sleep Is Hard</div>
+    <div class="reasons">
+      <div class="reason"><span class="reason-icon">🧠</span> Different melatonin production</div>
+      <div class="reason"><span class="reason-icon">⚡</span> Sensory sensitivities at bedtime</div>
+      <div class="reason"><span class="reason-icon">😰</span> Anxiety and racing thoughts</div>
+      <div class="reason"><span class="reason-icon">🔄</span> Difficulty with transitions</div>
+      <div class="reason"><span class="reason-icon">🌡️</span> Temperature regulation issues</div>
+    </div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

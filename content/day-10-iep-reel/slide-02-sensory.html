@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      position: relative;
+    }
+    .category {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .cat-icon {
+      font-size: 70px;
+    }
+    .cat-label {
+      font-size: 48px;
+      font-weight: 800;
+      color: #E8B86D;
+    }
+    .items {
+      background: rgba(74,144,164,0.15);
+      border-radius: 25px;
+      padding: 50px;
+    }
+    .item {
+      font-size: 38px;
+      padding: 25px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .item:last-child { border-bottom: none; }
+    .check { color: #27AE60; font-size: 36px; }
+    .brand {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      font-size: 24px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="category">
+      <span class="cat-icon">🎧</span>
+      <span class="cat-label">Sensory Supports</span>
+    </div>
+    <div class="items">
+      <div class="item"><span class="check">✓</span> Noise-canceling headphones</div>
+      <div class="item"><span class="check">✓</span> Sensory breaks as NEEDED (not earned)</div>
+      <div class="item"><span class="check">✓</span> Fidgets without restriction</div>
+      <div class="item"><span class="check">✓</span> Movement breaks every 20-30 min</div>
+      <div class="item"><span class="check">✓</span> Flexible seating options</div>
+    </div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

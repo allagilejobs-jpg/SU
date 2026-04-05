@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #0d1b2a 50%, #0a1628 100%);
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      position: relative;
+    }
+    .label {
+      font-size: 28px;
+      font-weight: 700;
+      color: #27AE60;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 50px;
+    }
+    .title span { color: #E8B86D; }
+    .routine {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 36px;
+    }
+    .step-num {
+      width: 60px;
+      height: 60px;
+      background: #4A90A4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .step-text {
+      background: rgba(74,144,164,0.12);
+      padding: 25px 35px;
+      border-radius: 15px;
+      flex: 1;
+    }
+    .brand {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      font-size: 24px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="label">TIP #2</div>
+    <div class="title">Create a <span>Visual Routine</span></div>
+    <div class="routine">
+      <div class="step"><div class="step-num">1</div><div class="step-text">🛁 Bath/shower</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-text">👕 Pajamas on</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-text">🪥 Brush teeth</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-text">📖 Read 2 books</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-text">🤗 Goodnight hugs</div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-text">💤 Lights out</div></div>
+    </div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
