@@ -1,7 +1,7 @@
 # ARCHITECTURE.md - Technical Documentation
 ## Spectrum Unlocked Content System
 
-**Last Updated:** April 5, 2026
+**Last Updated:** April 5, 2026 (Reel System Added)
 
 ---
 
@@ -21,12 +21,20 @@
 │   ├── day-01-tiktok-myths/
 │   ├── day-02-acceptance-vs-awareness/
 │   ├── ...
-│   └── day-XX-topic/
-│       ├── slide-01-cover.html   # HTML template
-│       ├── slide-01-cover.png    # Rendered PNG
-│       ├── slide-02-*.html/png
+│   ├── day-XX-topic/             # CAROUSEL content
+│   │   ├── slide-01-cover.html   # HTML template
+│   │   ├── slide-01-cover.png    # Rendered PNG (1080x1350)
+│   │   ├── slide-02-*.html/png
+│   │   ├── ...
+│   │   └── captions.md           # Platform captions
+│   │
+│   └── day-XX-topic-reel/        # REEL content (separate folder!)
+│       ├── slide-01-hook.html    # Hook slide (9:16 vertical)
+│       ├── slide-01-hook.png     # Rendered PNG (1080x1920)
+│       ├── slide-02-*.html/png   # Content slides
 │       ├── ...
-│       └── captions.md           # Platform captions
+│       ├── slide-XX-cta.html/png # CTA slide
+│       └── captions.md           # Reel-specific captions
 │
 ├── graphics/                     # Standalone graphics (non-calendar)
 ├── research/                     # Content research files
@@ -429,11 +437,86 @@ When creating content for a new day:
 ## 12. Quick Reference
 
 ### Slide Dimensions
-| Platform | Size | Ratio |
-|----------|------|-------|
-| Instagram Carousel | 1080 x 1350 | 4:5 |
-| Instagram Story | 1080 x 1920 | 9:16 |
-| TikTok | 1080 x 1920 | 9:16 |
+| Platform | Size | Ratio | Use Case |
+|----------|------|-------|----------|
+| Instagram Carousel | 1080 x 1350 | 4:5 | Carousels, feed posts |
+| Instagram Reel | 1080 x 1920 | 9:16 | Reels, Stories |
+| TikTok | 1080 x 1920 | 9:16 | TikTok videos |
+
+---
+
+## 13. Reel Content System
+
+### Why Reels?
+Reels repurpose carousel topics into vertical video format for higher reach. Each reel uses the same topic but with:
+- 9:16 vertical format (1080x1920)
+- More visual/animated potential
+- Video-first captions and hooks
+
+### Reel Folder Structure
+Reels live alongside carousels with a `-reel` suffix:
+```
+content/
+├── day-21-audhd/           # Original carousel (1080x1350)
+├── day-21-audhd-reel/      # Reel version (1080x1920)
+├── day-24-anxiety/         # Original carousel
+├── day-24-anxiety-reel/    # Reel version
+```
+
+### Reel Slide Naming Convention
+```
+day-XX-topic-reel/
+├── slide-01-hook.html      # Opening hook (grab attention)
+├── slide-01-hook.png
+├── slide-02-what.html      # Define the topic
+├── slide-02-what.png
+├── slide-03-signs.html     # Signs/symptoms/examples
+├── slide-03-signs.png
+├── slide-04-tips.html      # Tips/helps (optional)
+├── slide-04-tips.png
+├── slide-05-cta.html       # Call to action
+├── slide-05-cta.png
+└── captions.md             # Reel-specific captions
+```
+
+### Reel Slide Types
+| Slide | Purpose | Content |
+|-------|---------|---------|
+| Hook | Stop the scroll | Bold question, relatable statement, "POV:" |
+| What | Define topic | Simple explanation, key concept |
+| Signs | Evidence | List of signs, symptoms, examples |
+| Tips/Helps | Actionable | What helps, strategies, advice |
+| CTA | Engage | Follow, save, comment prompt |
+
+### Rendering Reels
+```bash
+# Single reel slide
+npx playwright screenshot --viewport-size=1080,1920 slide-01-hook.html slide-01-hook.png
+
+# All slides in a reel folder
+for f in slide-*.html; do
+  npx playwright screenshot --viewport-size=1080,1920 "$f" "${f%.html}.png"
+done
+```
+
+### Reel vs Carousel Comparison
+| Aspect | Carousel | Reel |
+|--------|----------|------|
+| Dimensions | 1080x1350 (4:5) | 1080x1920 (9:16) |
+| Folder suffix | none | `-reel` |
+| Slide count | 5-7 typical | 4-6 typical |
+| First slide | Cover (title) | Hook (question/POV) |
+| Best for | Education, lists | Quick tips, relatable content |
+| Platform | Instagram + TikTok | TikTok + Instagram Reels |
+
+### Creating Reel Content
+1. **Choose a day** that already has carousel content
+2. **Create reel folder**: `day-XX-topic-reel/`
+3. **Adapt the content** for vertical format
+4. **Write hook-first** - The first slide must grab attention
+5. **Keep it punchy** - Less text per slide than carousels
+6. **Render at 1080x1920**
+7. **Create captions.md** with reel-specific hooks
 
 ### Color Palette
 | Color | Hex | RGB |

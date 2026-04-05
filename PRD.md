@@ -54,16 +54,24 @@ This repo is the **content creation and management system** for Spectrum Unlocke
 
 ### Content Types
 
-#### Graphics Needed (Carousels)
+#### Carousels (1080x1350, 4:5)
 - Educational slideshows (5-7 slides typically)
 - Myth-busters, tips, guides, explainers
-- These are the PRIMARY content we create in this repo
+- Folder: `content/day-XX-topic/`
+- PRIMARY content format
 
-#### No Graphics Needed (Video)
+#### Reel Slides (1080x1920, 9:16)
+- Vertical format for TikTok + Instagram Reels
+- Repurposed carousel topics in video format
+- Folder: `content/day-XX-topic-reel/` (separate from carousel!)
+- Hook-first structure (grab attention immediately)
+- Can be used as static slides OR as video frames
+
+#### Filmed Video (No Graphics)
 - Reels/TikToks (talking head, POV, storytime)
 - Stories (polls, Q&As, casual)
 - Vlogs (authentic, unpolished)
-- These are filmed, not designed
+- These are filmed, not designed in this repo
 
 ### Daily Posting Schedule
 The master calendar (`content-calendar-60day.md`) has 2-3 posts per day:
@@ -84,9 +92,12 @@ Each carousel typically has:
 3. **CTA slide** - Call to action (save, share, follow, comment)
 
 ### Slide Dimensions
-- **Instagram Carousel:** 1080 x 1350px (4:5 ratio)
-- **Instagram Story:** 1080 x 1920px (9:16 ratio)
-- **TikTok (if static):** 1080 x 1920px
+| Format | Dimensions | Ratio | Folder Pattern |
+|--------|------------|-------|----------------|
+| Instagram Carousel | 1080 x 1350 | 4:5 | `day-XX-topic/` |
+| Reel Slides | 1080 x 1920 | 9:16 | `day-XX-topic-reel/` |
+| Instagram Story | 1080 x 1920 | 9:16 | - |
+| TikTok (static) | 1080 x 1920 | 9:16 | `day-XX-topic-reel/` |
 
 ---
 

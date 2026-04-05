@@ -1,5 +1,50 @@
 # Changelog - Spectrum Unlocked
 
+## 2026-04-05
+
+### Added - Reel Content System
+**New Feature:** Vertical reel slides (1080x1920) alongside existing carousels
+
+**What Changed:**
+- Created reel folders with `-reel` suffix convention
+- Reel slides use 9:16 vertical format for TikTok/Instagram Reels
+- Carousels remain in original folders (NOT overwritten)
+
+**New Reel Content:**
+- `content/day-21-audhd-reel/` - AuDHD: When Autism Meets ADHD (6 slides)
+- `content/day-24-anxiety-reel/` - Autism & Anxiety (6 slides)
+
+**Folder Structure Logic:**
+```
+content/
+├── day-21-audhd/           # Carousel (1080x1350) - UNCHANGED
+├── day-21-audhd-reel/      # Reel (1080x1920) - NEW
+├── day-24-anxiety/         # Carousel - UNCHANGED
+├── day-24-anxiety-reel/    # Reel - NEW
+```
+
+**Reel Slide Naming:**
+- `slide-01-hook` - Opening hook (grab attention)
+- `slide-02-what` - Define the topic
+- `slide-03-signs` - Signs/symptoms
+- `slide-04-tips` / `slide-04-helps` - Actionable advice
+- `slide-XX-cta` - Call to action
+
+**Documentation Updated:**
+- ARCHITECTURE.md - Added Section 13: Reel Content System
+- PRD.md - Updated Content Types and Slide Dimensions
+- CHANGELOG.md - This entry
+
+**Files Added:**
+- `content/day-21-audhd-reel/*.html` (6 templates)
+- `content/day-21-audhd-reel/*.png` (6 rendered slides)
+- `content/day-21-audhd-reel/captions.md`
+- `content/day-24-anxiety-reel/*.html` (6 templates)
+- `content/day-24-anxiety-reel/*.png` (6 rendered slides)
+- `content/day-24-anxiety-reel/captions.md`
+
+---
+
 ## 2026-04-04
 
 ### Added - One-Click Edit from Calendar
