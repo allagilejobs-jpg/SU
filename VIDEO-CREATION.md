@@ -274,13 +274,137 @@ done
 
 ## Step 2: Get Background Music
 
-Sources for royalty-free music:
-- [Pixabay Music](https://pixabay.com/music/)
-- [Uppbeat](https://uppbeat.io/)
-- [YouTube Audio Library](https://studio.youtube.com/channel/audio)
-- TikTok/Instagram built-in (add after upload)
+### Royalty-Free Music Sources
 
-Save as MP3 (e.g., `inspiring-piano.mp3`)
+#### 1. Pixabay Music (FREE - No Attribution Required)
+**URL:** https://pixabay.com/music/
+
+**Why use it:**
+- 100% free for commercial use
+- No attribution required
+- No sign-up needed to download
+- Large library of high-quality tracks
+
+**How to use:**
+1. Go to https://pixabay.com/music/
+2. Use search: "inspiring piano", "emotional", "uplifting", "corporate"
+3. Filter by: Mood, Genre, Duration
+4. Click track to preview
+5. Click "Download" → Choose quality (MP3)
+6. Save to your project folder
+
+**Best search terms for Spectrum Unlocked:**
+- "inspiring piano" - emotional/awareness content
+- "gentle acoustic" - soft educational content
+- "uplifting corporate" - professional feel
+- "emotional cinematic" - impactful moments
+- "soft ambient" - calm, supportive content
+
+---
+
+#### 2. Uppbeat (FREE Tier Available)
+**URL:** https://uppbeat.io/
+
+**Why use it:**
+- Curated for content creators
+- High-quality tracks
+- 10 free downloads/month (free tier)
+- Clear licensing
+
+**How to use:**
+1. Create free account at uppbeat.io
+2. Browse by mood/genre
+3. Download (credits refresh monthly)
+4. Attribution required for free tier
+
+---
+
+#### 3. YouTube Audio Library (FREE)
+**URL:** https://studio.youtube.com/channel/audio
+
+**Why use it:**
+- Free for any YouTube/social content
+- Large selection
+- Filter by mood, genre, duration
+- Some require attribution, some don't
+
+**How to use:**
+1. Sign into YouTube Studio
+2. Go to Audio Library (left menu)
+3. Filter: Free Music → Mood → Duration
+4. Check license (attribution required?)
+5. Download MP3
+
+---
+
+#### 4. Epidemic Sound (PAID - Best Quality)
+**URL:** https://www.epidemicsound.com/
+
+**Why use it:**
+- Highest quality library
+- Used by major creators
+- Full commercial license
+- $15/month personal plan
+
+---
+
+#### 5. Artlist (PAID - Unlimited)
+**URL:** https://artlist.io/
+
+**Why use it:**
+- Unlimited downloads
+- High-quality cinematic music
+- Full commercial license
+- ~$10/month billed annually
+
+---
+
+#### 6. TikTok/Instagram Built-In Music
+**When to use:**
+- Quick posts without custom video
+- Want trending sounds
+- Don't need external video file
+
+**How to use:**
+1. Upload your video (without music)
+2. Add sound from TikTok/Instagram library
+3. Sync timing in app
+4. Post directly
+
+**Limitation:** Can't download video with this audio
+
+---
+
+### Music Selection Guide
+
+| Content Type | Mood | Search Terms |
+|--------------|------|--------------|
+| Awareness days | Emotional, hopeful | "inspiring piano", "emotional cinematic" |
+| Educational | Calm, focused | "soft ambient", "gentle acoustic" |
+| Tips/hacks | Upbeat, energetic | "uplifting corporate", "positive" |
+| Personal stories | Emotional, intimate | "sad piano", "emotional strings" |
+| Celebrations | Happy, triumphant | "happy upbeat", "celebration" |
+
+### Duration Matching
+
+For a 24-second video (6 slides × 4 seconds):
+- Find music 25-60 seconds long
+- FFmpeg `-shortest` flag will trim to video length
+- Longer tracks work fine (auto-trimmed)
+
+### File Format
+- Download as **MP3** (most compatible)
+- Bitrate: 192kbps or higher
+- Save to project folder as: `background-music.mp3` or descriptive name like `inspiring-piano.mp3`
+
+---
+
+### Example: Day 8 WAAD Music
+**File:** `inspiring-piano.mp3`
+**Source:** Pixabay Music
+**Search term:** "inspiring piano"
+**Duration:** 79 seconds (trimmed to 24s by FFmpeg)
+**License:** Free, no attribution required
 
 ---
 
