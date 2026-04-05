@@ -999,6 +999,214 @@
     </div>
   </section>
 
+  <!-- Reels & Video -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Reels</div>
+        <h2>Reel Design System</h2>
+        <p>Vertical video content (9:16) for TikTok and Instagram Reels.</p>
+      </div>
+      
+      <!-- Reel Dimensions -->
+      <div style="margin-bottom:40px">
+        <h3 style="font-size:16px;margin-bottom:16px;color:var(--gold)">📐 Reel Specifications</h3>
+        <div class="specs-grid">
+          <div class="spec-card">
+            <h5>Reel Slides</h5>
+            <div class="value">1080 × 1920</div>
+            <div class="desc">9:16 ratio — Vertical</div>
+          </div>
+          <div class="spec-card">
+            <h5>Frame Rate</h5>
+            <div class="value">30 fps</div>
+            <div class="desc">Standard video</div>
+          </div>
+          <div class="spec-card">
+            <h5>Slide Duration</h5>
+            <div class="value">3–5 sec</div>
+            <div class="desc">Per slide typical</div>
+          </div>
+          <div class="spec-card">
+            <h5>Total Length</h5>
+            <div class="value">24–45 sec</div>
+            <div class="desc">Ideal reel length</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Folder Naming -->
+      <div style="margin-bottom:40px">
+        <h3 style="font-size:16px;margin-bottom:16px;color:var(--gold)">📁 Folder Structure</h3>
+        <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:20px;font-family:monospace;font-size:13px;line-height:1.8">
+          <div style="color:var(--text-muted)">content/</div>
+          <div>&nbsp;&nbsp;├── day-21-audhd/<span style="color:var(--teal);margin-left:20px">← Carousel (1080×1350)</span></div>
+          <div>&nbsp;&nbsp;├── <span style="color:var(--gold)">day-21-audhd-reel/</span><span style="color:var(--gold);margin-left:20px">← Reel (1080×1920)</span></div>
+          <div>&nbsp;&nbsp;├── day-24-anxiety/</div>
+          <div>&nbsp;&nbsp;└── <span style="color:var(--gold)">day-24-anxiety-reel/</span></div>
+        </div>
+        <p style="font-size:12px;color:var(--text-muted);margin-top:12px">
+          Reels use <code style="background:var(--bg-deep);padding:2px 6px;border-radius:4px">-reel</code> suffix. Carousels and reels coexist — never overwrite.
+        </p>
+      </div>
+      
+      <!-- Slide Types -->
+      <div style="margin-bottom:40px">
+        <h3 style="font-size:16px;margin-bottom:16px;color:var(--gold)">🎬 Reel Slide Types</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+          <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:16px">
+            <div style="font-size:24px;margin-bottom:8px">🪝</div>
+            <h4 style="font-size:13px;font-weight:700;margin-bottom:4px">Hook</h4>
+            <p style="font-size:11px;color:var(--text-muted)">slide-01-hook — Stops the scroll. Bold question or POV statement.</p>
+          </div>
+          <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:16px">
+            <div style="font-size:24px;margin-bottom:8px">📖</div>
+            <h4 style="font-size:13px;font-weight:700;margin-bottom:4px">Content</h4>
+            <p style="font-size:11px;color:var(--text-muted)">slide-02-what, slide-03-signs — Main information slides.</p>
+          </div>
+          <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:16px">
+            <div style="font-size:24px;margin-bottom:8px">💡</div>
+            <h4 style="font-size:13px;font-weight:700;margin-bottom:4px">Tips</h4>
+            <p style="font-size:11px;color:var(--text-muted)">slide-04-helps — Actionable advice with number badges.</p>
+          </div>
+          <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:16px">
+            <div style="font-size:24px;margin-bottom:8px">📢</div>
+            <h4 style="font-size:13px;font-weight:700;margin-bottom:4px">CTA</h4>
+            <p style="font-size:11px;color:var(--text-muted)">slide-XX-cta — Follow, save, comment prompts.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gold Standard Elements -->
+      <div style="margin-bottom:40px">
+        <h3 style="font-size:16px;margin-bottom:16px;color:var(--gold)">⭐ Gold Standard Design (Day 4 Reference)</h3>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">All reels must include these elements:</p>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+          <div style="background:var(--bg-secondary);border:2px solid var(--gold);border-radius:12px;padding:20px">
+            <h4 style="font-size:14px;color:var(--gold);margin-bottom:12px">✨ Decorative Circles</h4>
+            <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px">Background depth using ::before and ::after pseudo-elements</p>
+            <pre style="background:var(--bg-deep);padding:12px;border-radius:8px;font-size:10px;overflow-x:auto;color:var(--text-muted)">.slide::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: #E8B86D;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.slide::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: #4A90A4;
+  border-radius: 50%;
+  opacity: 0.1;
+}</pre>
+          </div>
+          
+          <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:20px">
+            <h4 style="font-size:14px;color:var(--teal);margin-bottom:12px">📋 Required Elements</h4>
+            <ul class="bullet-list" style="font-size:12px">
+              <li><strong>Large emoji:</strong> 100–150px font-size</li>
+              <li><strong>Number badges:</strong> Gold circle, top-right corner</li>
+              <li><strong>Tip boxes:</strong> Teal border, rounded corners</li>
+              <li><strong>Gold highlights:</strong> Key words in #E8B86D</li>
+              <li><strong>Swipe indicator:</strong> "Swipe →" at bottom, teal color</li>
+              <li><strong>Brand handle:</strong> @spectrum_unlocked at bottom</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Typography for Reels -->
+      <div style="margin-bottom:40px">
+        <h3 style="font-size:16px;margin-bottom:16px;color:var(--gold)">🔤 Reel Typography</h3>
+        <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+          <table style="width:100%;border-collapse:collapse;font-size:13px">
+            <thead>
+              <tr style="background:var(--bg-deep)">
+                <th style="padding:12px 16px;text-align:left;font-weight:600">Element</th>
+                <th style="padding:12px 16px;text-align:left;font-weight:600">Size</th>
+                <th style="padding:12px 16px;text-align:left;font-weight:600">Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-top:1px solid var(--border)">
+                <td style="padding:12px 16px">Hook text</td>
+                <td style="padding:12px 16px;color:var(--gold)">64–72px</td>
+                <td style="padding:12px 16px">800</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border)">
+                <td style="padding:12px 16px">Slide title</td>
+                <td style="padding:12px 16px;color:var(--gold)">56–64px</td>
+                <td style="padding:12px 16px">800</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border)">
+                <td style="padding:12px 16px">Description</td>
+                <td style="padding:12px 16px;color:var(--teal)">36–42px</td>
+                <td style="padding:12px 16px">400–600</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border)">
+                <td style="padding:12px 16px">Tip box text</td>
+                <td style="padding:12px 16px;color:var(--teal)">28–32px</td>
+                <td style="padding:12px 16px">600</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border)">
+                <td style="padding:12px 16px">Emoji</td>
+                <td style="padding:12px 16px;color:var(--green)">100–150px</td>
+                <td style="padding:12px 16px">—</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border)">
+                <td style="padding:12px 16px">Brand handle</td>
+                <td style="padding:12px 16px">24px</td>
+                <td style="padding:12px 16px">600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Video Production -->
+      <div style="margin-bottom:20px">
+        <h3 style="font-size:16px;margin-bottom:16px;color:var(--gold)">🎥 Video Production Methods</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+          <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:20px">
+            <h4 style="font-size:14px;margin-bottom:8px">🎙️ Method 1: Voiceover + Captions</h4>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Narrated video with burned-in subtitles. Best for educational content.</p>
+            <ul class="bullet-list" style="font-size:11px">
+              <li>ElevenLabs TTS for voiceover</li>
+              <li>Slide timing synced to narration</li>
+              <li>SRT file for captions</li>
+              <li>FFmpeg for compilation</li>
+            </ul>
+          </div>
+          <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:20px">
+            <h4 style="font-size:14px;margin-bottom:8px">🎵 Method 2: Background Music</h4>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Slideshow with music track. Best for emotional/awareness content.</p>
+            <ul class="bullet-list" style="font-size:11px">
+              <li>Royalty-free music (Pixabay)</li>
+              <li>Even slide timing (4s each)</li>
+              <li>No captions needed</li>
+              <li>FFmpeg for compilation</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:16px;background:rgba(232,184,109,0.1);border:1px solid rgba(232,184,109,0.2);border-radius:10px;padding:16px">
+          <p style="font-size:12px;color:var(--text-secondary)">
+            📄 <strong>Full documentation:</strong> <a href="VIDEO-CREATION.md" style="color:var(--gold)">VIDEO-CREATION.md</a> — Complete FFmpeg commands, music sources, and step-by-step guides.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Design Logic -->
   <section class="section">
     <div class="container">
