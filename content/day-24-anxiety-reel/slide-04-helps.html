@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    .slide {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    
+    .title {
+      font-size: 56px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 60px;
+    }
+    
+    .tip-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 950px;
+    }
+    
+    .tip-box {
+      background: rgba(74, 144, 164, 0.2);
+      border: 2px solid #4A90A4;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .tip-emoji {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+    
+    .tip-text {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    
+    .brand {
+      position: absolute;
+      bottom: 40px;
+      font-size: 24px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="title">What Actually Helps</div>
+    <div class="tip-grid">
+      <div class="tip-box">
+        <div class="tip-emoji">📋</div>
+        <div class="tip-text">Predictable routines</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-emoji">⏰</div>
+        <div class="tip-text">Transition warnings</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-emoji">🏠</div>
+        <div class="tip-text">Safe space to decompress</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-emoji">🧸</div>
+        <div class="tip-text">Comfort objects</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-emoji">💬</div>
+        <div class="tip-text">Visual supports</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-emoji">🧘</div>
+        <div class="tip-text">Sensory regulation tools</div>
+      </div>
+    </div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

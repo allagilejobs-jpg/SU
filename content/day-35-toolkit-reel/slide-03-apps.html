@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    .slide {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    
+    .category {
+      font-size: 28px;
+      font-weight: 600;
+      color: #4A90A4;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    
+    .title {
+      font-size: 56px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 50px;
+    }
+    
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      max-width: 900px;
+    }
+    
+    .app-box {
+      background: rgba(74, 144, 164, 0.2);
+      border: 2px solid #4A90A4;
+      border-radius: 20px;
+      padding: 25px;
+    }
+    
+    .app-name {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    .app-desc {
+      font-size: 24px;
+      opacity: 0.8;
+    }
+    
+    .brand {
+      position: absolute;
+      bottom: 40px;
+      font-size: 24px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="category">Category 2</div>
+    <div class="title">📱 Helpful Apps</div>
+    <div class="app-grid">
+      <div class="app-box">
+        <div class="app-name">Proloquo2Go</div>
+        <div class="app-desc">AAC communication</div>
+      </div>
+      <div class="app-box">
+        <div class="app-name">First Then Visual</div>
+        <div class="app-desc">Visual schedules</div>
+      </div>
+      <div class="app-box">
+        <div class="app-name">Calm</div>
+        <div class="app-desc">Anxiety/sleep</div>
+      </div>
+      <div class="app-box">
+        <div class="app-name">Choiceworks</div>
+        <div class="app-desc">Daily routines</div>
+      </div>
+      <div class="app-box">
+        <div class="app-name">Social Stories</div>
+        <div class="app-desc">Create custom stories</div>
+      </div>
+      <div class="app-box">
+        <div class="app-name">Time Timer</div>
+        <div class="app-desc">Visual time management</div>
+      </div>
+    </div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

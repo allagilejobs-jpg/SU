@@ -151,6 +151,7 @@
       overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s;
       cursor: pointer;
+      position: relative;
     }
     .day-card:hover {
       transform: translateY(-3px);
@@ -258,6 +259,18 @@
     }
     .status-dot.ready { background: #27AE60; }
     .status-dot.planned { background: #E8B86D; }
+    .reel-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 10px;
+      z-index: 5;
+    }
     .legend {
       display: flex;
       justify-content: center;
@@ -553,6 +566,7 @@
 
           <!-- Day 2 -->
           <div class="day-card ready" onclick="openDay(2)">
+            <span class="reel-badge">🎬 Reel</span>
             <div class="day-top">
               <div class="day-num">2</div>
               <div class="day-info">
@@ -593,6 +607,7 @@
 
           <!-- Day 4 -->
           <div class="day-card ready" onclick="openDay(4)">
+            <span class="reel-badge">🎬 Reel</span>
             <div class="day-top">
               <div class="day-num">4</div>
               <div class="day-info">
@@ -726,6 +741,7 @@
           </div>
 
           <div class="day-card ready" onclick="openDay(10)">
+            <span class="reel-badge">🎬 Reel</span>
             <div class="day-top">
               <div class="day-num">10</div>
               <div class="day-info">
@@ -791,7 +807,7 @@
           <div class="day-card ready" onclick="openDay(14)"><div class="day-top"><div class="day-num">14</div><div class="day-info"><div class="weekday">Tuesday</div><div class="date">Apr 8</div></div></div><div class="day-content"><div class="day-title">Visual Supports</div><div class="day-hook">Templates</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides ready</span></div></div>
           <div class="day-card ready" onclick="openDay(15)"><div class="day-top"><div class="day-num">15</div><div class="day-info"><div class="weekday">Wednesday</div><div class="date">Apr 9</div></div></div><div class="day-content"><div class="day-title">Meltdown Support</div><div class="day-hook">During & after</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides ready</span></div></div>
           <div class="day-card"><div class="day-top"><div class="day-num">16</div><div class="day-info"><div class="weekday">Thursday</div><div class="date">Apr 10</div></div></div><div class="day-content"><div class="day-title">Feeding Challenges</div><div class="day-hook">Beyond picky</div></div><div class="day-status"><span class="status-dot planned"></span><span>Planned</span></div></div>
-          <div class="day-card"><div class="day-top"><div class="day-num">17</div><div class="day-info"><div class="weekday">Friday</div><div class="date">Apr 11</div></div></div><div class="day-content"><div class="day-title">Sleep Issues</div><div class="day-hook">What helps</div></div><div class="day-status"><span class="status-dot planned"></span><span>Planned</span></div></div>
+          <div class="day-card ready" onclick="openDay(17)"><span class="reel-badge">🎬 Reel</span><div class="day-top"><div class="day-num">17</div><div class="day-info"><div class="weekday">Friday</div><div class="date">Apr 11</div></div></div><div class="day-content"><div class="day-title">Sleep Issues</div><div class="day-hook">What helps</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides + reel ready</span></div></div>
           <div class="day-card"><div class="day-top"><div class="day-num">18</div><div class="day-info"><div class="weekday">Saturday</div><div class="date">Apr 12</div></div></div><div class="day-content"><div class="day-title">Autism in Girls</div><div class="day-hook">Often missed</div></div><div class="day-status"><span class="status-dot planned"></span><span>Planned</span></div></div>
           <div class="day-card"><div class="day-top"><div class="day-num">19</div><div class="day-info"><div class="weekday">Sunday</div><div class="date">Apr 13</div></div></div><div class="day-content"><div class="day-title">Community Spotlight</div><div class="day-hook">Your stories</div></div><div class="day-status"><span class="status-dot planned"></span><span>Planned</span></div></div>
         </div>
