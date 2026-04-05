@@ -285,4 +285,107 @@ ffmpeg -i slideshow.mp4 -i audio.mp3 -c:v copy -c:a aac -shortest output.mp4
 
 ---
 
+---
+
+## Alternative: Video with Background Music (No Voiceover)
+
+For reels that use background music instead of voiceover narration.
+
+### Example: Day 8 WAAD Reel
+**Location:** `/SU/content/day-08-waad-reel/`
+
+**Files:**
+```
+day-08-waad-reel/
+├── slide-01-cover.png through slide-06-cta.png
+├── inspiring-piano.mp3           # Background music
+├── waad-reel.mp4                  # Video without music
+├── waad-reel-with-music.mp4      # Final video with music
+└── captions.md
+```
+
+### Process
+
+**Step 1: Create slideshow video (no audio)**
+```bash
+ffmpeg -y \
+  -loop 1 -t 4 -i slide-01-cover.png \
+  -loop 1 -t 4 -i slide-02-humanity.png \
+  -loop 1 -t 4 -i slide-03-value.png \
+  -loop 1 -t 4 -i slide-04-acceptance.png \
+  -loop 1 -t 4 -i slide-05-pledge.png \
+  -loop 1 -t 4 -i slide-06-cta.png \
+  -filter_complex "\
+    [0:v]fps=30,format=yuv420p[v0]; \
+    [1:v]fps=30,format=yuv420p[v1]; \
+    [2:v]fps=30,format=yuv420p[v2]; \
+    [3:v]fps=30,format=yuv420p[v3]; \
+    [4:v]fps=30,format=yuv420p[v4]; \
+    [5:v]fps=30,format=yuv420p[v5]; \
+    [v0][v1][v2][v3][v4][v5]concat=n=6:v=1:a=0[outv]" \
+  -map "[outv]" \
+  -c:v libx264 -profile:v high -preset medium -crf 18 \
+  -pix_fmt yuv420p -movflags +faststart \
+  waad-reel.mp4
+```
+
+**Step 2: Add background music**
+```bash
+ffmpeg -y \
+  -i waad-reel.mp4 \
+  -i inspiring-piano.mp3 \
+  -c:v copy \
+  -c:a aac -b:a 192k -ar 44100 -ac 2 \
+  -shortest \
+  -movflags +faststart \
+  waad-reel-with-music.mp4
+```
+
+### Slide Timing for Music-Based Reels
+Without voiceover, timing is more flexible:
+- **Even timing:** 4 seconds per slide × 6 slides = 24 seconds
+- **Or vary for emphasis:** Cover 3s, content 4-5s each, CTA 4s
+
+### Music Sources
+- Royalty-free music libraries (Pixabay, Uppbeat, Artlist)
+- TikTok/Instagram built-in music (add after upload)
+- Create ambiance with genre: inspiring piano, lo-fi, upbeat
+
+### Video Specs (Same as Voiceover Version)
+- Resolution: 1080x1920 (9:16)
+- Frame rate: 30fps
+- Codec: H.264 High Profile
+- Audio: AAC 192kbps, 44100Hz stereo
+
+---
+
+## Quick Commands Reference
+
+### Create slideshow from PNGs (no audio)
+```bash
+# 6 slides, 4 seconds each
+ffmpeg -y \
+  -loop 1 -t 4 -i slide-01.png \
+  -loop 1 -t 4 -i slide-02.png \
+  -loop 1 -t 4 -i slide-03.png \
+  -loop 1 -t 4 -i slide-04.png \
+  -loop 1 -t 4 -i slide-05.png \
+  -loop 1 -t 4 -i slide-06.png \
+  -filter_complex "[0:v][1:v][2:v][3:v][4:v][5:v]concat=n=6:v=1:a=0,fps=30,format=yuv420p[v]" \
+  -map "[v]" -c:v libx264 -crf 18 -movflags +faststart \
+  slideshow.mp4
+```
+
+### Add music to existing video
+```bash
+ffmpeg -i video.mp4 -i music.mp3 -c:v copy -c:a aac -shortest output.mp4
+```
+
+### Add voiceover to existing video
+```bash
+ffmpeg -i video.mp4 -i voiceover.mp3 -c:v copy -c:a aac -shortest output.mp4
+```
+
+---
+
 *This process creates professional-quality video reels from static slide templates.*
