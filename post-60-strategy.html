@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-60 Day Strategy — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-deep: #0f0f1a;
+      --bg-primary: #1a1a2e;
+      --bg-secondary: #16213e;
+      --bg-tertiary: #0f3460;
+      --gold: #E8B86D;
+      --teal: #4A90A4;
+      --green: #27AE60;
+      --red: #E74C3C;
+      --purple: #9B59B6;
+      --orange: #E67E22;
+      --text: #ffffff;
+      --text-secondary: rgba(255,255,255,0.85);
+      --text-muted: rgba(255,255,255,0.6);
+      --text-subtle: rgba(255,255,255,0.4);
+      --border: rgba(255,255,255,0.1);
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    /* Nav */
+    .nav {
+      background: var(--bg-deep);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      color: #888;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    .nav a:hover, .nav a.active {
+      background: var(--teal);
+      color: #fff;
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+      padding: 60px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: var(--gold);
+      border-radius: 50%;
+      opacity: 0.08;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 250px;
+      height: 250px;
+      background: var(--teal);
+      border-radius: 50%;
+      opacity: 0.08;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hero .dates {
+      margin-top: 20px;
+      display: inline-block;
+      background: var(--teal);
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Section */
+    .section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child { border-bottom: none; }
+    .section-header {
+      margin-bottom: 40px;
+    }
+    .section-badge {
+      display: inline-block;
+      background: rgba(232,184,109,0.15);
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 15px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 600px;
+      font-size: 15px;
+    }
+    
+    /* Cards */
+    .card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    /* Phase Cards */
+    .phase-card {
+      background: var(--bg-secondary);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 24px;
+    }
+    .phase-card.active {
+      border-color: var(--gold);
+    }
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .phase-num {
+      width: 50px;
+      height: 50px;
+      background: var(--gold);
+      color: var(--bg-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .phase-title h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .phase-title .dates {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    
+    /* Pillar Grid */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .pillar-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .pillar-card .emoji {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+    .pillar-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .pillar-card .day {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .pillar-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    /* Series Grid */
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .series-card {
+      background: var(--bg-deep);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .series-card .day-tag {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .series-card h5 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .series-card p {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    
+    /* Season Grid */
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .season-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .season-header {
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .season-header.summer { background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%); color: #fff; }
+    .season-header.fall { background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%); color: #fff; }
+    .season-header.winter { background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%); color: #fff; }
+    .season-header.spring { background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%); color: #fff; }
+    .season-body {
+      padding: 20px;
+    }
+    .season-body ul {
+      list-style: none;
+    }
+    .season-body li {
+      font-size: 13px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+    .season-body li:last-child { border-bottom: none; }
+    .season-body li::before {
+      content: '→';
+      color: var(--gold);
+      margin-right: 8px;
+    }
+    
+    /* Repurpose */
+    .repurpose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .repurpose-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .repurpose-card .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .repurpose-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .repurpose-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    /* Stats */
+    .stats-bar {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat .num {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .stat .label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    .timeline-item h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .timeline-item .date {
+      font-size: 12px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .timeline-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Bullet list */
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .bullet-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    /* Highlight box */
+    .highlight-box {
+      background: rgba(232,184,109,0.1);
+      border: 1px solid rgba(232,184,109,0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .highlight-box h4 {
+      font-size: 14px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .highlight-box p {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="calendar-60day.html">60-Day Calendar</a>
+      <a href="brand-guidelines.html">Brand</a>
+      <a href="post-60-strategy.html" class="active">Post-60 Strategy</a>
+      <a href="editor.html">Editor</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Post-60 Day <span>Strategy</span></h1>
+    <p>Sustainable content plan after the Autism Acceptance Month campaign ends. Keep momentum without burnout.</p>
+    <div class="dates">📅 Starting May 25, 2026</div>
+    
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="num">3</div>
+        <div class="label">Posts/Week</div>
+      </div>
+      <div class="stat">
+        <div class="num">4</div>
+        <div class="label">Content Pillars</div>
+      </div>
+      <div class="stat">
+        <div class="num">5</div>
+        <div class="label">Recurring Series</div>
+      </div>
+      <div class="stat">
+        <div class="num">∞</div>
+        <div class="label">Evergreen Topics</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Overview</div>
+        <h2>The Transition</h2>
+        <p>Moving from campaign mode to sustainable content creation.</p>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+        <div class="card">
+          <h3>❌ What We're Leaving Behind</h3>
+          <ul class="bullet-list" style="margin-top:12px">
+            <li>Daily posting pressure (2-3 posts/day)</li>
+            <li>Campaign urgency mindset</li>
+            <li>Rigid 60-day schedule</li>
+            <li>Heavy production workload</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>✅ What We're Building</h3>
+          <ul class="bullet-list" style="margin-top:12px">
+            <li>Sustainable 3 posts/week rhythm</li>
+            <li>Content pillars for variety</li>
+            <li>Recurring series for consistency</li>
+            <li>Community-driven content</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phases -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Phases</div>
+        <h2>Post-Campaign Roadmap</h2>
+        <p>Two phases to transition from campaign to evergreen content.</p>
+      </div>
+      
+      <!-- Phase 4 -->
+      <div class="phase-card active">
+        <div class="phase-header">
+          <div class="phase-num">4</div>
+          <div class="phase-title">
+            <h3>Summer Rhythm</h3>
+            <div class="dates">May 25 – August 31, 2026 (14 weeks)</div>
+          </div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+          <div>
+            <h4 style="color:var(--gold);margin-bottom:12px">📅 Posting Schedule</h4>
+            <ul class="bullet-list">
+              <li><strong>Monday:</strong> Educational content</li>
+              <li><strong>Wednesday:</strong> Practical tips</li>
+              <li><strong>Friday:</strong> Community/emotional</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:var(--gold);margin-bottom:12px">🎬 Reels</h4>
+            <ul class="bullet-list">
+              <li>1 reel per week (repurposed from 60-day)</li>
+              <li>Best performers get video treatment</li>
+              <li>New summer-specific reels</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:var(--gold);margin-bottom:12px">📆 Monthly Themes</h4>
+            <ul class="bullet-list">
+              <li><strong>June:</strong> Summer Prep & Transitions</li>
+              <li><strong>July:</strong> Sensory Summer Activities</li>
+              <li><strong>August:</strong> Back-to-School Prep</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Phase 5 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-num">5</div>
+          <div class="phase-title">
+            <h3>Evergreen Engine</h3>
+            <div class="dates">September 2026 onwards</div>
+          </div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+          <div>
+            <h4 style="color:var(--teal);margin-bottom:12px">📅 Posting Schedule</h4>
+            <ul class="bullet-list">
+              <li>2-3 posts per week</li>
+              <li>Recurring series format</li>
+              <li>Flexible based on engagement</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:var(--teal);margin-bottom:12px">🤝 Community Focus</h4>
+            <ul class="bullet-list">
+              <li>Follower Q&A features</li>
+              <li>User story spotlights</li>
+              <li>Collaboration with creators</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:var(--teal);margin-bottom:12px">📈 Growth Strategy</h4>
+            <ul class="bullet-list">
+              <li>Analyze top performers</li>
+              <li>Double down on what works</li>
+              <li>Seasonal content bursts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Pillars -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Pillars</div>
+        <h2>Content Pillars</h2>
+        <p>Four core themes to rotate through each week.</p>
+      </div>
+      
+      <div class="pillar-grid">
+        <div class="pillar-card" style="border-left:4px solid var(--gold)">
+          <div class="emoji">🎓</div>
+          <h4>Education</h4>
+          <div class="day">Monday</div>
+          <p>Myths, explainers, research, definitions, awareness</p>
+        </div>
+        <div class="pillar-card" style="border-left:4px solid var(--teal)">
+          <div class="emoji">💡</div>
+          <h4>Practical Tips</h4>
+          <div class="day">Wednesday</div>
+          <p>Hacks, tools, strategies, step-by-step guides</p>
+        </div>
+        <div class="pillar-card" style="border-left:4px solid var(--green)">
+          <div class="emoji">❤️</div>
+          <h4>Community</h4>
+          <div class="day">Friday</div>
+          <p>Stories, wins, Q&A, emotional support, connection</p>
+        </div>
+        <div class="pillar-card" style="border-left:4px solid var(--purple)">
+          <div class="emoji">🎬</div>
+          <h4>Reels</h4>
+          <div class="day">Rotating</div>
+          <p>Video content, repurposed carousels, trending formats</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recurring Series -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Series</div>
+        <h2>Recurring Series</h2>
+        <p>Named series build anticipation and habit. Pick 2-3 to start.</p>
+      </div>
+      
+      <div class="series-grid">
+        <div class="series-card">
+          <div class="day-tag" style="color:var(--red)">Monday</div>
+          <h5>🚫 Myth Monday</h5>
+          <p>Bust one autism myth weekly with facts</p>
+        </div>
+        <div class="series-card">
+          <div class="day-tag" style="color:var(--orange)">Tuesday</div>
+          <h5>💡 Tip Tuesday</h5>
+          <p>One actionable tip in carousel format</p>
+        </div>
+        <div class="series-card">
+          <div class="day-tag" style="color:var(--green)">Wednesday</div>
+          <h5>🏆 Win Wednesday</h5>
+          <p>Community shares victories big & small</p>
+        </div>
+        <div class="series-card">
+          <div class="day-tag" style="color:var(--teal)">Thursday</div>
+          <h5>🩺 Therapy Thursday</h5>
+          <p>OT, Speech, PT spotlights & tips</p>
+        </div>
+        <div class="series-card">
+          <div class="day-tag" style="color:var(--purple)">Friday</div>
+          <h5>💬 Real Talk Friday</h5>
+          <p>Honest parent moments, no filter</p>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h4>💡 Pro Tip</h4>
+        <p>Don't launch all 5 series at once. Start with 2-3, see what resonates, then add more. Consistency beats variety.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Content -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Seasonal</div>
+        <h2>Seasonal Content Calendar</h2>
+        <p>Key moments and themes throughout the year.</p>
+      </div>
+      
+      <div class="season-grid">
+        <div class="season-card">
+          <div class="season-header summer">☀️ Summer (Jun–Aug)</div>
+          <div class="season-body">
+            <ul>
+              <li>Schedule disruption survival</li>
+              <li>Summer camp deep dives</li>
+              <li>Travel with autism tips</li>
+              <li>Sibling dynamics during break</li>
+              <li>Outdoor sensory activities</li>
+              <li>Screen time boundaries</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <div class="season-header fall">🍂 Fall (Sep–Nov)</div>
+          <div class="season-body">
+            <ul>
+              <li>Back-to-school IEP prep</li>
+              <li>New teacher communication</li>
+              <li>Halloween sensory tips</li>
+              <li>Thanksgiving family survival</li>
+              <li>Routine re-establishment</li>
+              <li>School accommodations check</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <div class="season-header winter">❄️ Winter (Dec–Feb)</div>
+          <div class="season-body">
+            <ul>
+              <li>Holiday sensory survival</li>
+              <li>Gift guides for autistic kids</li>
+              <li>Family gathering scripts</li>
+              <li>Year-end reflection</li>
+              <li>Winter break routines</li>
+              <li>New year goal setting</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <div class="season-header spring">🌸 Spring (Mar–May)</div>
+          <div class="season-body">
+            <ul>
+              <li>Autism Acceptance Month prep</li>
+              <li>IEP annual review prep</li>
+              <li>Spring break planning</li>
+              <li>End-of-year transitions</li>
+              <li>Summer planning ahead</li>
+              <li>ESY (Extended School Year)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repurposing -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Repurpose</div>
+        <h2>Repurpose the 60 Days</h2>
+        <p>Your existing content is gold. Here's how to maximize it.</p>
+      </div>
+      
+      <div class="repurpose-grid">
+        <div class="repurpose-card">
+          <div class="icon">🔄</div>
+          <h4>Carousel → Reel</h4>
+          <p>Turn top-performing carousels into video reels with voiceover or music.</p>
+        </div>
+        <div class="repurpose-card">
+          <div class="icon">📚</div>
+          <h4>Compilation Posts</h4>
+          <p>Combine related days into "Ultimate Guide" mega-carousels.</p>
+        </div>
+        <div class="repurpose-card">
+          <div class="icon">🔁</div>
+          <h4>Repost Winners</h4>
+          <p>Best performers can be reposted 3-6 months later with minor updates.</p>
+        </div>
+        <div class="repurpose-card">
+          <div class="icon">📝</div>
+          <h4>Blog/Email Content</h4>
+          <p>Expand carousels into long-form blog posts or email newsletters.</p>
+        </div>
+        <div class="repurpose-card">
+          <div class="icon">🎙️</div>
+          <h4>Audio Content</h4>
+          <p>Turn educational carousels into podcast episodes or audio tips.</p>
+        </div>
+        <div class="repurpose-card">
+          <div class="icon">✨</div>
+          <h4>2026 Editions</h4>
+          <p>Update with new info, stats, or perspectives for fresh content.</p>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h4>📊 Top Performers to Repurpose First</h4>
+        <p>After the campaign ends, identify the top 10 posts by saves, shares, and engagement. These are your first candidates for reel conversion and reposting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Driven -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Community</div>
+        <h2>Community-Driven Content</h2>
+        <p>Let your followers guide what you create.</p>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+        <div class="card">
+          <h3>📊 Monthly Polls</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Use Instagram polls to ask "What topic should I cover next?" Give 4 options, create the winner.</p>
+        </div>
+        <div class="card">
+          <h3>❓ Q&A Carousels</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Collect questions via DMs or question stickers. Answer 5-7 in a carousel format.</p>
+        </div>
+        <div class="card">
+          <h3>🌟 Story Features</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Feature follower wins, tips, and experiences. Builds community and provides content.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Creator Collabs</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Partner with other autism creators for joint posts, takeovers, or shared series.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Implementation Timeline -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Timeline</div>
+        <h2>Implementation Timeline</h2>
+        <p>Week-by-week transition from campaign to sustainable rhythm.</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Week 1 (May 25-31)</h4>
+          <div class="date">Transition Week</div>
+          <p>Rest, analyze 60-day performance, identify top 10 posts. Plan June content. 2 posts only.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Week 2-4 (June)</h4>
+          <div class="date">Summer Prep Theme</div>
+          <p>3 posts/week rhythm begins. Launch 2 recurring series. First repurposed reel.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Week 5-8 (July)</h4>
+          <div class="date">Sensory Summer Theme</div>
+          <p>Continue rhythm. Add community Q&A. 1 reel/week. Evaluate what's working.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Week 9-14 (August)</h4>
+          <div class="date">Back-to-School Theme</div>
+          <p>Ramp up slightly for B2S content burst. Plan fall calendar. Refine series based on data.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>September onwards</h4>
+          <div class="date">Evergreen Engine</div>
+          <p>Settled rhythm. Data-driven content decisions. Community collaborations. Planning for next April.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Metrics</div>
+        <h2>Success Metrics</h2>
+        <p>How to measure if the strategy is working.</p>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+        <div class="card" style="text-align:center">
+          <div style="font-size:32px;margin-bottom:8px">💾</div>
+          <h4>Saves</h4>
+          <p style="font-size:12px;color:var(--text-muted)">Primary metric — indicates value</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:32px;margin-bottom:8px">↗️</div>
+          <h4>Shares</h4>
+          <p style="font-size:12px;color:var(--text-muted)">Reach expansion indicator</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:32px;margin-bottom:8px">💬</div>
+          <h4>Comments</h4>
+          <p style="font-size:12px;color:var(--text-muted)">Community engagement depth</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:32px;margin-bottom:8px">📈</div>
+          <h4>Follower Growth</h4>
+          <p style="font-size:12px;color:var(--text-muted)">Sustainable, not spiky</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:32px;margin-bottom:8px">📩</div>
+          <h4>DMs</h4>
+          <p style="font-size:12px;color:var(--text-muted)">Connection & questions</p>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h4>🎯 Realistic Goals</h4>
+        <p><strong>Phase 4:</strong> Maintain engagement rate from campaign period. 10-20% follower growth over summer.<br>
+        <strong>Phase 5:</strong> Steady 5-10% monthly growth. High save rate on educational content. Active DM conversations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Spectrum Unlocked — Post-60 Day Content Strategy</p>
+    <p style="margin-top:8px">
+      <a href="calendar-60day.html">View 60-Day Calendar</a> · 
+      <a href="brand-guidelines.html">Brand Guidelines</a> · 
+      <a href="index.html">Home</a>
+    </p>
+  </footer>
+</body>
+</html>
