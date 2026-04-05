@@ -89,6 +89,12 @@
     .swipe::after {
       content: '→';
       font-size: 36px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
     }
     
     .brand {

@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -20,36 +20,53 @@
       text-align: center;
       position: relative;
     }
-    
-    .title {
-      font-size: 52px;
+
+    .number {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+      background: #E8B86D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
       font-weight: 800;
-      color: #E8B86D;
+      color: #1a1a2e;
+    }
+
+    .emoji {
+      font-size: 150px;
       margin-bottom: 50px;
     }
-    
-    .subtitle {
+
+    .title {
+      font-size: 64px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    }
+
+    .description {
+      font-size: 38px;
+      line-height: 1.5;
+      max-width: 900px;
+      opacity: 0.95;
+    }
+
+    .tip-box {
+      margin-top: 50px;
+      background: rgba(74, 144, 164, 0.2);
+      border: 3px solid #4A90A4;
+      border-radius: 20px;
+      padding: 30px 50px;
       font-size: 32px;
-      color: #4A90A4;
-      margin-bottom: 40px;
+      font-weight: 600;
     }
-    
-    .idea-list {
-      text-align: left;
-      font-size: 34px;
-      line-height: 2.2;
-    }
-    
-    .idea {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-    }
-    
-    .emoji {
-      font-size: 34px;
-    }
-    
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -61,14 +78,14 @@
 </head>
 <body>
   <div class="slide">
-    <div class="title">Start Small Today</div>
-    <div class="subtitle">Pick ONE to work on this week:</div>
-    <div class="idea-list">
-      <div class="idea"><span class="emoji">🪥</span> Brushing teeth independently</div>
-      <div class="idea"><span class="emoji">👕</span> Choosing their own clothes</div>
-      <div class="idea"><span class="emoji">🍽️</span> Putting dishes in the sink</div>
-      <div class="idea"><span class="emoji">🎒</span> Packing their own bag</div>
-      <div class="idea"><span class="emoji">📞</span> Ordering food (with support)</div>
+    <div class="number">4</div>
+    <div class="emoji">&#x1F680;</div>
+    <div class="title">Start This<br>Week</div>
+    <div class="description">
+      Pick one morning routine step to teach. Create a visual checklist for it. Practice together for 3 days. Let them try alone with you nearby. Celebrate the effort.
+    </div>
+    <div class="tip-box">
+      &#x1F4A1; Independence grows in inches, not leaps
     </div>
     <div class="brand">@spectrum_unlocked</div>
   </div>

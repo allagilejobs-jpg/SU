@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -20,40 +20,53 @@
       text-align: center;
       position: relative;
     }
-    
-    .title {
-      font-size: 52px;
+
+    .number {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+      background: #E8B86D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
       font-weight: 800;
-      color: #E8B86D;
+      color: #1a1a2e;
+    }
+
+    .emoji {
+      font-size: 150px;
       margin-bottom: 50px;
     }
-    
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-      max-width: 950px;
+
+    .title {
+      font-size: 64px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 30px;
+      line-height: 1.2;
     }
-    
-    .box {
+
+    .description {
+      font-size: 38px;
+      line-height: 1.5;
+      max-width: 900px;
+      opacity: 0.95;
+    }
+
+    .tip-box {
+      margin-top: 50px;
       background: rgba(74, 144, 164, 0.2);
-      border: 2px solid #4A90A4;
+      border: 3px solid #4A90A4;
       border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-    }
-    
-    .box-emoji {
-      font-size: 50px;
-      margin-bottom: 15px;
-    }
-    
-    .box-text {
-      font-size: 28px;
+      padding: 30px 50px;
+      font-size: 32px;
       font-weight: 600;
-      line-height: 1.3;
     }
-    
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -65,32 +78,14 @@
 </head>
 <body>
   <div class="slide">
-    <div class="title">Areas to Build</div>
-    <div class="grid">
-      <div class="box">
-        <div class="box-emoji">🚿</div>
-        <div class="box-text">Self-care routines</div>
-      </div>
-      <div class="box">
-        <div class="box-emoji">🏠</div>
-        <div class="box-text">Household tasks</div>
-      </div>
-      <div class="box">
-        <div class="box-emoji">💰</div>
-        <div class="box-text">Money basics</div>
-      </div>
-      <div class="box">
-        <div class="box-emoji">🚌</div>
-        <div class="box-text">Transportation</div>
-      </div>
-      <div class="box">
-        <div class="box-emoji">🗣️</div>
-        <div class="box-text">Self-advocacy</div>
-      </div>
-      <div class="box">
-        <div class="box-emoji">📱</div>
-        <div class="box-text">Tech/safety skills</div>
-      </div>
+    <div class="number">2</div>
+    <div class="emoji">&#x1F3AF;</div>
+    <div class="title">Key Areas to<br>Build Skills</div>
+    <div class="description">
+      Self-care: dressing, hygiene, feeding. Household: simple chores, tidying up. Money: basic concepts, paying. Transportation: safety, navigation. Self-advocacy: expressing needs.
+    </div>
+    <div class="tip-box">
+      &#x1F4A1; Pick ONE area to focus on this month
     </div>
     <div class="brand">@spectrum_unlocked</div>
   </div>

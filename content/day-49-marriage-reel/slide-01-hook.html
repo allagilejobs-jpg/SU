@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -21,7 +21,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .slide::before {
       content: '';
       position: absolute;
@@ -33,7 +33,7 @@
       border-radius: 50%;
       opacity: 0.1;
     }
-    
+
     .slide::after {
       content: '';
       position: absolute;
@@ -45,27 +45,27 @@
       border-radius: 50%;
       opacity: 0.1;
     }
-    
+
     .emoji-top {
       font-size: 120px;
       margin-bottom: 40px;
       position: relative;
       z-index: 1;
     }
-    
+
     .hook {
-      font-size: 64px;
+      font-size: 72px;
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 40px;
       position: relative;
       z-index: 1;
     }
-    
+
     .hook span {
       color: #E8B86D;
     }
-    
+
     .subtext {
       font-size: 36px;
       opacity: 0.9;
@@ -74,7 +74,7 @@
       position: relative;
       z-index: 1;
     }
-    
+
     .swipe {
       position: absolute;
       bottom: 100px;
@@ -85,12 +85,18 @@
       font-weight: 600;
       color: #4A90A4;
     }
-    
+
     .swipe::after {
-      content: '→';
+      content: '\2192';
       font-size: 36px;
+      animation: bounce 1s infinite;
     }
-    
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -104,13 +110,14 @@
   <div class="slide">
     <div class="emoji-top">💑🧠</div>
     <div class="hook">
-      <span>Marriage & Autism</span><br>
-      Parenting
+      <span>Your Marriage</span><br>
+      After an Autism<br>
+      Diagnosis
     </div>
     <div class="subtext">
-      Your partnership matters. Here's how to protect it.
+      The strain is real. So is the hope.
     </div>
-    <div class="swipe">Swipe for real talk</div>
+    <div class="swipe">Swipe for tips</div>
     <div class="brand">@spectrum_unlocked</div>
   </div>
 </body>

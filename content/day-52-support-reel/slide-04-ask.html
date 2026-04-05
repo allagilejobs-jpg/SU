@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -20,31 +20,53 @@
       text-align: center;
       position: relative;
     }
-    
-    .title {
-      font-size: 52px;
+
+    .number {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+      background: #E8B86D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
       font-weight: 800;
-      color: #E8B86D;
+      color: #1a1a2e;
+    }
+
+    .emoji {
+      font-size: 150px;
       margin-bottom: 50px;
     }
-    
-    .content {
-      font-size: 40px;
-      line-height: 1.6;
-      max-width: 900px;
-      margin-bottom: 40px;
+
+    .title {
+      font-size: 64px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 30px;
+      line-height: 1.2;
     }
-    
-    .highlight-box {
-      background: rgba(39, 174, 96, 0.2);
-      border: 3px solid #27AE60;
-      border-radius: 25px;
-      padding: 40px 50px;
-      font-size: 34px;
+
+    .description {
+      font-size: 38px;
       line-height: 1.5;
       max-width: 900px;
+      opacity: 0.95;
     }
-    
+
+    .tip-box {
+      margin-top: 50px;
+      background: rgba(74, 144, 164, 0.2);
+      border: 3px solid #4A90A4;
+      border-radius: 20px;
+      padding: 30px 50px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -56,12 +78,14 @@
 </head>
 <body>
   <div class="slide">
-    <div class="title">The Hardest Part</div>
-    <div class="content">
-      Asking for help feels vulnerable. But people WANT to help. They just don't know how.
+    <div class="number">3</div>
+    <div class="emoji">🙋</div>
+    <div class="title">The Hardest Part:<br>Asking for Help</div>
+    <div class="description">
+      Be specific: "Can you watch him Tuesday at 3?" instead of "I need help." People want to help but don't know how. Accepting help is not weakness. Start small.
     </div>
-    <div class="highlight-box">
-      💡 Be specific: "Can you pick up groceries?" works better than "I need help"
+    <div class="tip-box">
+      💡 A specific ask gets a faster yes
     </div>
     <div class="brand">@spectrum_unlocked</div>
   </div>

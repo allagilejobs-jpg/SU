@@ -8,22 +8,27 @@
     .slide { width: 1080px; height: 1920px; background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%); padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif; color: white; text-align: center; position: relative; overflow: hidden; }
     .slide::before { content: ''; position: absolute; top: -150px; right: -150px; width: 400px; height: 400px; background: #E8B86D; border-radius: 50%; opacity: 0.1; }
     .slide::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 300px; height: 300px; background: #4A90A4; border-radius: 50%; opacity: 0.1; }
-    .emoji-top { font-size: 120px; margin-bottom: 40px; position: relative; z-index: 1; }
-    .hook { font-size: 68px; font-weight: 800; line-height: 1.1; margin-bottom: 40px; position: relative; z-index: 1; }
-    .hook span { color: #E8B86D; }
-    .subtext { font-size: 36px; opacity: 0.9; max-width: 800px; line-height: 1.4; position: relative; z-index: 1; }
-    .swipe { position: absolute; bottom: 100px; display: flex; align-items: center; gap: 15px; font-size: 28px; font-weight: 600; color: #4A90A4; }
-    .swipe::after { content: '→'; font-size: 36px; animation: bounce 1s infinite; }
-    @keyframes bounce { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
+    .recap-title { font-size: 48px; font-weight: 800; color: #E8B86D; margin-bottom: 50px; position: relative; z-index: 1; }
+    .recap-list { list-style: none; margin-bottom: 60px; position: relative; z-index: 1; }
+    .recap-list li { font-size: 36px; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+    .recap-list li::before { content: '✓'; color: #E8B86D; font-weight: 800; font-size: 40px; }
+    .cta-main { font-size: 56px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; position: relative; z-index: 1; }
+    .cta-main span { color: #E8B86D; }
+    .cta-sub { font-size: 40px; font-weight: 600; color: #4A90A4; position: relative; z-index: 1; }
     .brand { position: absolute; bottom: 40px; font-size: 24px; font-weight: 600; opacity: 0.6; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="emoji-top">👧💔👦</div>
-    <div class="hook"><span>The Glass Child:</span><br>Don't Let Siblings<br>Become Invisible</div>
-    <div class="subtext">What every autism parent needs to hear</div>
-    <div class="swipe">Swipe to understand</div>
+    <div class="recap-title">What We Covered</div>
+    <ul class="recap-list">
+      <li>The science behind it</li>
+      <li>Every sense benefits</li>
+      <li>Easy wins to start</li>
+      <li>Tips to make it work</li>
+    </ul>
+    <div class="cta-main"><span>What outdoor spot</span><br>calms your child?</div>
+    <div class="cta-sub">Tell us below! 👇</div>
     <div class="brand">@spectrum_unlocked</div>
   </div>
 </body>

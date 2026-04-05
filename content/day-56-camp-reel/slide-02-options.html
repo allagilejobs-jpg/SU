@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -20,38 +20,53 @@
       text-align: center;
       position: relative;
     }
-    
-    .title {
-      font-size: 52px;
+
+    .number {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+      background: #E8B86D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
       font-weight: 800;
-      color: #E8B86D;
+      color: #1a1a2e;
+    }
+
+    .emoji {
+      font-size: 150px;
       margin-bottom: 50px;
     }
-    
-    .option {
-      background: rgba(74, 144, 164, 0.2);
-      border: 2px solid #4A90A4;
-      border-radius: 20px;
-      padding: 30px 40px;
-      margin-bottom: 25px;
-      width: 100%;
-      max-width: 900px;
-      text-align: left;
-    }
-    
-    .option-title {
-      font-size: 36px;
-      font-weight: 700;
+
+    .title {
+      font-size: 64px;
+      font-weight: 800;
       color: #E8B86D;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
+      line-height: 1.2;
     }
-    
-    .option-text {
-      font-size: 30px;
-      line-height: 1.4;
-      opacity: 0.9;
+
+    .description {
+      font-size: 38px;
+      line-height: 1.5;
+      max-width: 900px;
+      opacity: 0.95;
     }
-    
+
+    .tip-box {
+      margin-top: 50px;
+      background: rgba(74, 144, 164, 0.2);
+      border: 3px solid #4A90A4;
+      border-radius: 20px;
+      padding: 30px 50px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -63,18 +78,14 @@
 </head>
 <body>
   <div class="slide">
-    <div class="title">Camp Options</div>
-    <div class="option">
-      <div class="option-title">🎯 Specialized Camps</div>
-      <div class="option-text">Designed specifically for autistic kids. Trained staff, built-in supports.</div>
+    <div class="number">1</div>
+    <div class="emoji">🎯</div>
+    <div class="title">3 Types of<br>Camp to Consider</div>
+    <div class="description">
+      Specialized: designed for autistic kids, trained staff. Inclusive: mainstream with accommodations. Therapeutic: OT, speech, social skills built in.
     </div>
-    <div class="option">
-      <div class="option-title">🤝 Inclusive Camps</div>
-      <div class="option-text">Mainstream camps with inclusion programs. May offer 1:1 aides.</div>
-    </div>
-    <div class="option">
-      <div class="option-title">🌿 Therapeutic Camps</div>
-      <div class="option-text">OT, speech, or social skills focused. Learning while having fun!</div>
+    <div class="tip-box">
+      💡 There's no one right answer. It depends on your child.
     </div>
     <div class="brand">@spectrum_unlocked</div>
   </div>

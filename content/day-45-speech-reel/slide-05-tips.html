@@ -5,7 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -20,33 +20,53 @@
       text-align: center;
       position: relative;
     }
-    
-    .title {
-      font-size: 52px;
+
+    .number {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+      background: #E8B86D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
       font-weight: 800;
-      color: #E8B86D;
+      color: #1a1a2e;
+    }
+
+    .emoji {
+      font-size: 150px;
       margin-bottom: 50px;
     }
-    
-    .tip-list {
-      text-align: left;
-      font-size: 34px;
-      line-height: 2;
+
+    .title {
+      font-size: 64px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    }
+
+    .description {
+      font-size: 38px;
+      line-height: 1.5;
       max-width: 900px;
+      opacity: 0.95;
     }
-    
-    .tip-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 15px;
+
+    .tip-box {
+      margin-top: 50px;
+      background: rgba(74, 144, 164, 0.2);
+      border: 3px solid #4A90A4;
+      border-radius: 20px;
+      padding: 30px 50px;
+      font-size: 32px;
+      font-weight: 600;
     }
-    
-    .tip-icon {
-      color: #27AE60;
-      font-size: 34px;
-    }
-    
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -58,14 +78,14 @@
 </head>
 <body>
   <div class="slide">
-    <div class="title">Maximizing Speech Therapy</div>
-    <div class="tip-list">
-      <div class="tip-item"><span class="tip-icon">✓</span> Practice at home (carryover is key!)</div>
-      <div class="tip-item"><span class="tip-icon">✓</span> Ask for home activities</div>
-      <div class="tip-item"><span class="tip-icon">✓</span> Observe sessions when possible</div>
-      <div class="tip-item"><span class="tip-icon">✓</span> Share what works at home</div>
-      <div class="tip-item"><span class="tip-icon">✓</span> Be patient with progress</div>
-      <div class="tip-item"><span class="tip-icon">✓</span> Celebrate ALL communication!</div>
+    <div class="number">4</div>
+    <div class="emoji">💡</div>
+    <div class="title">Maximizing<br>Speech Therapy</div>
+    <div class="description">
+      Practice at home daily (even 5 minutes). Use visual supports consistently. Record sessions to review later. Communicate with the school SLP too. Be patient with progress.
+    </div>
+    <div class="tip-box">
+      💡 Consistency at home multiplies therapy results
     </div>
     <div class="brand">@spectrum_unlocked</div>
   </div>

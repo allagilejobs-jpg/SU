@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -20,31 +20,53 @@
       text-align: center;
       position: relative;
     }
-    
-    .title {
-      font-size: 52px;
+
+    .number {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+      background: #E8B86D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
       font-weight: 800;
-      color: #E8B86D;
+      color: #1a1a2e;
+    }
+
+    .emoji {
+      font-size: 150px;
       margin-bottom: 50px;
     }
-    
-    .list {
-      text-align: left;
-      font-size: 34px;
-      line-height: 2;
+
+    .title {
+      font-size: 64px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 30px;
+      line-height: 1.2;
     }
-    
-    .list-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 10px;
+
+    .description {
+      font-size: 38px;
+      line-height: 1.5;
+      max-width: 900px;
+      opacity: 0.95;
     }
-    
-    .emoji {
-      font-size: 34px;
+
+    .tip-box {
+      margin-top: 50px;
+      background: rgba(74, 144, 164, 0.2);
+      border: 3px solid #4A90A4;
+      border-radius: 20px;
+      padding: 30px 50px;
+      font-size: 32px;
+      font-weight: 600;
     }
-    
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -56,15 +78,14 @@
 </head>
 <body>
   <div class="slide">
-    <div class="title">Questions to Ask</div>
-    <div class="list">
-      <div class="list-item"><span class="emoji">❓</span> Staff-to-camper ratio?</div>
-      <div class="list-item"><span class="emoji">❓</span> Training on autism/sensory needs?</div>
-      <div class="list-item"><span class="emoji">❓</span> Quiet spaces available?</div>
-      <div class="list-item"><span class="emoji">❓</span> How are meltdowns handled?</div>
-      <div class="list-item"><span class="emoji">❓</span> Can I provide a sensory profile?</div>
-      <div class="list-item"><span class="emoji">❓</span> Communication with parents?</div>
-      <div class="list-item"><span class="emoji">❓</span> Food accommodations?</div>
+    <div class="number">2</div>
+    <div class="emoji">❓</div>
+    <div class="title">Questions to<br>Ask First</div>
+    <div class="description">
+      What's the staff-to-camper ratio? How do they handle meltdowns? Can my child take sensory breaks? What training do counselors receive? Can we visit beforehand?
+    </div>
+    <div class="tip-box">
+      💡 A good camp welcomes ALL your questions
     </div>
     <div class="brand">@spectrum_unlocked</div>
   </div>

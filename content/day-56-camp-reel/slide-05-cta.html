@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     .slide {
       width: 1080px;
       height: 1920px;
@@ -20,24 +20,34 @@
       text-align: center;
       position: relative;
     }
-    
-    .emoji-top {
-      font-size: 100px;
+
+    .recap {
+      font-size: 32px;
+      font-weight: 600;
+      color: #4A90A4;
       margin-bottom: 40px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
-    
-    .message {
-      font-size: 48px;
+
+    .list {
+      text-align: left;
+      font-size: 40px;
+      line-height: 2;
+      margin-bottom: 60px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .check {
+      color: #27AE60;
       font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 50px;
-      max-width: 900px;
     }
-    
-    .message span {
-      color: #E8B86D;
-    }
-    
+
     .cta-box {
       background: linear-gradient(135deg, #E8B86D 0%, #d4a85d 100%);
       color: #1a1a2e;
@@ -45,37 +55,37 @@
       border-radius: 30px;
       margin-bottom: 50px;
     }
-    
+
     .cta-box .main {
-      font-size: 44px;
+      font-size: 48px;
       font-weight: 800;
       margin-bottom: 15px;
     }
-    
+
     .cta-box .sub {
       font-size: 32px;
       font-weight: 600;
       opacity: 0.9;
     }
-    
+
     .actions {
       display: flex;
       gap: 60px;
       font-size: 36px;
       font-weight: 600;
     }
-    
+
     .action {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
     }
-    
+
     .action-icon {
       font-size: 60px;
     }
-    
+
     .brand {
       position: absolute;
       bottom: 40px;
@@ -87,13 +97,15 @@
 </head>
 <body>
   <div class="slide">
-    <div class="emoji-top">⛺💙</div>
-    <div class="message">
-      The right camp can be <span>magical</span>. The wrong one can be traumatic. Do your research!
+    <div class="recap">Quick Recap</div>
+    <div class="list">
+      <div class="list-item"><span class="check">✓</span> Types of camps</div>
+      <div class="list-item"><span class="check">✓</span> Questions to ask</div>
+      <div class="list-item"><span class="check">✓</span> How to prepare</div>
     </div>
     <div class="cta-box">
-      <div class="main">Any camp recommendations?</div>
-      <div class="sub">Share in the comments! 🏕️</div>
+      <div class="main">Has your child been to camp?</div>
+      <div class="sub">Share your experience! 👇</div>
     </div>
     <div class="actions">
       <div class="action">
