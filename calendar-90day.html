@@ -1866,8 +1866,24 @@
       }
     };
 
-    const reelData = {};
-let currentDayData = null;
+    const reelData = {
+      62: { title: "Sensory Summer Activities (Reel)", folder: "day-62-sensory-summer-reel", slides: 5, slideNames: ['hook','water','nature','art','cta'], tiktokCaption: "5 FREE sensory-friendly summer activities! Calming, engaging, costs nothing.\n\n#autism #sensoryfriendly #autismparenting #fyp" },
+      65: { title: "AAC Everywhere (Reel)", folder: "day-65-aac-summer-reel", slides: 6, slideNames: ['hook','why','pool','park','tips','cta'], tiktokCaption: "AAC doesn't stop at the front door. Here's how to take it everywhere this summer.\n\n#autism #AAC #communication #autismparenting #fyp" },
+      67: { title: "ESY Summer Services (Reel)", folder: "day-67-esy-reel", slides: 5, slideNames: ['hook','what','qualify','advocate','cta'], tiktokCaption: "ESY: Summer services are FREE under IDEA. Did you know?\n\n#autism #IEP #ESY #autismparenting #fyp" },
+      71: { title: "Marriage and Autism (Reel)", folder: "day-71-marriage-reel", slides: 6, slideNames: ['hook','truth','signs','strategies','help','cta'], tiktokCaption: "Your marriage after an autism diagnosis. The strain is real. So is the hope.\n\n#autism #marriage #autismparenting #fyp" },
+      73: { title: "Airport Travel (Reel)", folder: "day-73-airport-reel", slides: 5, slideNames: ['hook','before','security','flight','cta'], tiktokCaption: "Flying with an autistic child? Real strategies that actually work.\n\n#autism #travel #autismparenting #fyp" },
+      75: { title: "Independence Real Talk (Reel)", folder: "day-75-independence-quote-reel", slides: 3, slideNames: ['hook','quote','cta'], tiktokCaption: "Independence doesn't mean doing it alone. It means having the right support to do it yourself.\n\n#autism #independence #autismparenting #fyp" },
+      77: { title: "Calm-Down Corner (Reel)", folder: "day-77-calm-corner-reel", slides: 5, slideNames: ['hook','what','essentials','rules','cta'], tiktokCaption: "5 essentials for a calm-down corner your kid will actually use.\n\n#autism #sensory #autismparenting #fyp" },
+      81: { title: "IEP Win Friday (Reel)", folder: "day-81-iep-win-reel", slides: 3, slideNames: ['hook','quote','cta'], tiktokCaption: "A year ago I didn't know what an IEP was. Now I run the meeting. You will too.\n\n#autism #IEP #autismparenting #fyp" },
+      83: { title: "4 IEP Rights Phrases (Reel)", folder: "day-83-iep-phrases-reel", slides: 6, slideNames: ['hook','phrase1','phrase2','phrase3','phrase4','cta'], tiktokCaption: "4 phrases that protect your IEP rights. Use these in every meeting.\n\n#autism #IEP #advocacy #autismparenting #fyp" },
+      86: { title: "Sensory Seeking VS Avoiding (Reel)", folder: "day-86-sensory-vs-reel", slides: 5, slideNames: ['hook','seeking','avoiding','both','cta'], tiktokCaption: "Sensory seeking vs avoiding. Two opposite needs, one nervous system.\n\n#autism #sensory #autismparenting #fyp" },
+      87: { title: "Back-to-School Checklist (Reel)", folder: "day-87-back-to-school-reel", slides: 6, slideNames: ['hook','iep','teacher','sensory','routine','cta'], tiktokCaption: "Back-to-school checklist for autism parents. 5 must-dos before Day 1.\n\n#autism #backtoschool #IEP #autismparenting #fyp" },
+      91: { title: "After-School Meltdowns (Reel)", folder: "day-91-afterschool-meltdowns-reel", slides: 6, slideNames: ['hook','why','signs','strategies','prevention','cta'], tiktokCaption: "The after-school meltdown is real. Why it happens and what helps.\n\n#autism #meltdown #autismparenting #fyp" },
+      94: { title: "Day 1 Accommodations (Reel)", folder: "day-94-accommodations-reel", slides: 5, slideNames: ['hook','accommodation1','accommodation2','accommodation3','cta'], tiktokCaption: "4 quick wins to request before Day 1 of school.\n\n#autism #IEP #accommodations #autismparenting #fyp" },
+      98: { title: "90-Day Recap (Reel)", folder: "day-98-recap-reel", slides: 5, slideNames: ['hook','stats','highlights','community','cta'], tiktokCaption: "90 days. 38 posts. One community. Look what we built together.\n\n#autism #autismparenting #community #fyp" }
+    };
+
+    let currentDayData = null;
     let currentSlideUrls = [];
 
     function openDay(dayNum) {
