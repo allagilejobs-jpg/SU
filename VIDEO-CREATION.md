@@ -536,4 +536,280 @@ ffprobe -v quiet -print_format json -show_format -show_streams video.mp4
 
 ---
 
-*Both methods create professional TikTok/Instagram Reels from static slide templates.*
+# Method 3: Karaoke-Style Captions
+
+Word-by-word animated captions where each word highlights as it's spoken. Premium TikTok style.
+
+**Example:** Sensory Hacks with karaoke captions (`/Monthly/su/tiktok/captioned/`)
+
+## What You Get
+- MP4 video with animated word-by-word captions
+- Current word highlighted in gold with glow
+- Spoken words turn white
+- Upcoming words dimmed
+- Synced perfectly to voiceover
+
+---
+
+## The Karaoke Style
+
+### Caption Styling
+```css
+/* Current word (highlighted) */
+color: #E8B86D;
+font-weight: 800;
+transform: scale(1.1);
+display: inline-block;
+text-shadow: 0 0 30px rgba(232,184,109,0.6);
+
+/* Already spoken words */
+color: white;
+
+/* Upcoming words (not yet spoken) */
+color: rgba(255,255,255,0.4);
+```
+
+### Visual Effect
+```
+"Keep noise-canceling headphones in your bag"
+      ↓ (word 3 highlighted)
+"Keep noise-canceling HEADPHONES in your bag"
+                      ^^^^^^^^
+                      Gold + Glow + Scaled
+```
+
+---
+
+## Process Overview
+
+1. **Transcribe voiceover** → Get word-level timestamps
+2. **Create phrase segments** → Group words by timing
+3. **Generate frames** → One PNG per word state
+4. **Concat with FFmpeg** → Stitch frames + audio
+
+---
+
+## Step 1: Define Phrases with Timing
+
+Create a phrases array with start/end times and words:
+
+```javascript
+const phrases = [
+  { start: 0, end: 3, slide: 'cover', words: ['Sensory', 'hacks', 'that', 'actually', 'work.'] },
+  { start: 3, end: 4, slide: 'slide1', words: ['Number', 'one.'] },
+  { start: 4, end: 9, slide: 'slide1', words: ['Keep', 'noise-canceling', 'headphones', 'in', 'your', 'bag', 'at', 'all', 'times.'] },
+  // ... more phrases
+];
+```
+
+---
+
+## Step 2: Word Highlight Function
+
+```javascript
+function generateWordHTML(words, highlightIndex) {
+  return words.map((word, i) => {
+    if (i === highlightIndex) {
+      // Current word - gold with glow
+      return `<span style="color:#E8B86D;font-weight:800;transform:scale(1.1);display:inline-block;text-shadow:0 0 30px rgba(232,184,109,0.6);">${word}</span>`;
+    } else if (i < highlightIndex) {
+      // Already spoken - white
+      return `<span style="color:white;">${word}</span>`;
+    } else {
+      // Upcoming - dimmed
+      return `<span style="color:rgba(255,255,255,0.4);">${word}</span>`;
+    }
+  }).join(' ');
+}
+```
+
+---
+
+## Step 3: Generate Frame HTML
+
+```javascript
+function generateHTML(slideContent, wordsHTML) {
+  return `<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  width:1080px;
+  height:1920px;
+  font-family:'Poppins',sans-serif;
+  color:white;
+  background:linear-gradient(165deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);
+  position:relative;
+}
+.caption-area{
+  position:absolute;
+  bottom:300px;
+  left:60px;
+  right:60px;
+  text-align:center;
+}
+.caption-text{
+  font-size:48px;
+  font-weight:600;
+  line-height:1.6;
+  text-shadow:3px 3px 8px rgba(0,0,0,0.9);
+}
+</style></head>
+<body>
+${slideContent}
+<div class="caption-area">
+  <div class="caption-text">${wordsHTML}</div>
+</div>
+</body></html>`;
+}
+```
+
+---
+
+## Step 4: Render All Frames
+
+```javascript
+const { chromium } = require('playwright');
+
+async function renderFrames() {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  await page.setViewportSize({ width: 1080, height: 1920 });
+  
+  let segments = [];
+  let segNum = 0;
+  
+  for (const phrase of phrases) {
+    const duration = phrase.end - phrase.start;
+    const secPerWord = duration / phrase.words.length;
+    
+    for (let wordIdx = 0; wordIdx < phrase.words.length; wordIdx++) {
+      const wordsHTML = generateWordHTML(phrase.words, wordIdx);
+      const html = generateHTML(slideContents[phrase.slide], wordsHTML);
+      
+      // Save HTML
+      fs.writeFileSync(`karaoke/seg_${segNum}.html`, html);
+      
+      // Screenshot
+      await page.goto('file://' + `karaoke/seg_${segNum}.html`);
+      await page.screenshot({ path: `karaoke/seg_${segNum}.png` });
+      
+      segments.push({ file: `seg_${segNum}.png`, duration: secPerWord });
+      segNum++;
+    }
+  }
+  
+  await browser.close();
+  return segments;
+}
+```
+
+---
+
+## Step 5: Generate FFmpeg Concat File
+
+```javascript
+function generateConcatFile(segments) {
+  let concat = '';
+  segments.forEach(seg => {
+    concat += `file 'karaoke/${seg.file}'\n`;
+    concat += `duration ${seg.duration}\n`;
+  });
+  // Add last file again (ffmpeg quirk)
+  concat += `file 'karaoke/${segments[segments.length-1].file}'\n`;
+  
+  fs.writeFileSync('concat.txt', concat);
+}
+```
+
+**concat.txt example:**
+```
+file 'karaoke/seg_0.png'
+duration 0.6
+file 'karaoke/seg_1.png'
+duration 0.6
+file 'karaoke/seg_2.png'
+duration 0.6
+...
+```
+
+---
+
+## Step 6: Compile Video with FFmpeg
+
+```bash
+ffmpeg -y \
+  -f concat -safe 0 -i concat.txt \
+  -i voiceover.mp3 \
+  -c:v libx264 -profile:v high -preset medium -crf 18 \
+  -c:a aac -b:a 192k \
+  -pix_fmt yuv420p \
+  -movflags +faststart \
+  -shortest \
+  karaoke-output.mp4
+```
+
+---
+
+## Folder Structure
+
+```
+captioned/
+├── generate-karaoke-v2.js    # Main script
+├── karaoke/                   # Generated frames
+│   ├── seg_000.html
+│   ├── seg_000.png
+│   ├── seg_001.html
+│   ├── seg_001.png
+│   └── ...
+├── concat.txt                 # FFmpeg concat file
+├── voiceover.mp3              # Audio
+└── karaoke-output.mp4         # Final video
+```
+
+---
+
+## Quick Run Commands
+
+```bash
+# Install dependencies
+npm install playwright
+npx playwright install chromium
+
+# Generate frames
+node generate-karaoke-v2.js
+
+# Compile video
+ffmpeg -f concat -safe 0 -i concat.txt -i voiceover.mp3 \
+  -c:v libx264 -c:a aac -shortest karaoke-output.mp4
+```
+
+---
+
+## Tips
+
+1. **Timing accuracy** — Get word-level timestamps from Whisper or manual transcription
+2. **Font size** — 48px works well for readability on mobile
+3. **Caption position** — `bottom: 300px` keeps captions above TikTok UI
+4. **Glow intensity** — Adjust `text-shadow` blur radius for more/less glow
+5. **Frame count** — Expect 50-100+ frames for a 30-60 second video
+
+---
+
+## When to Use Karaoke Style
+
+| Use Karaoke | Use Regular Captions |
+|-------------|---------------------|
+| High-production content | Quick turnaround |
+| Educational explainers | Simple tips |
+| Trending audio remakes | Background music reels |
+| Want premium look | Time-constrained |
+
+---
+
+*Karaoke captions take more effort but create highly engaging, premium-feeling content.*
+
+---
+
+*All three methods create professional TikTok/Instagram Reels from static slide templates.*
