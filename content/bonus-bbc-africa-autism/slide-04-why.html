@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E8B86D; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #4A90A4; bottom: -120px; left: -120px; }
+    .number {
+      position: absolute; top: 40px; right: 40px;
+      width: 70px; height: 70px;
+      background: #E8B86D; color: #1a1a2e;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; font-weight: 800;
+    }
+    .label {
+      font-size: 16px; font-weight: 700;
+      color: #4A90A4;
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px; font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 45px;
+      line-height: 1.1;
+    }
+    .reasons {
+      max-width: 900px;
+      width: 100%;
+      text-align: left;
+    }
+    .reason {
+      display: flex; align-items: flex-start; gap: 22px;
+      background: rgba(74, 144, 164, 0.12);
+      border-left: 5px solid #4A90A4;
+      border-radius: 12px;
+      padding: 22px 28px;
+      margin-bottom: 18px;
+    }
+    .reason-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 800;
+      color: #E8B86D;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .reason-content {
+      flex: 1;
+    }
+    .reason-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 6px;
+    }
+    .reason-desc {
+      font-size: 20px;
+      line-height: 1.35;
+      opacity: 0.9;
+    }
+    .footer { position: absolute; bottom: 30px; }
+    .handle { font-size: 16px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="number">3</div>
+
+  <div class="label">Why It Happens</div>
+  <div class="title">The Brutal Reality</div>
+
+  <div class="reasons">
+    <div class="reason">
+      <div class="reason-num">01</div>
+      <div class="reason-content">
+        <div class="reason-title">No Diagnosis</div>
+        <div class="reason-desc">In many African countries, "autism" has no word in local languages. Families don't know what they're facing.</div>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="reason-num">02</div>
+      <div class="reason-content">
+        <div class="reason-title">No Services</div>
+        <div class="reason-desc">Therapy, schools, and respite care are rare or nonexistent. Families have no lifeline.</div>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="reason-num">03</div>
+      <div class="reason-content">
+        <div class="reason-title">Deep Stigma</div>
+        <div class="reason-desc">Autism is often blamed on witchcraft or curses. Children are hidden to protect families from shame.</div>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="reason-num">04</div>
+      <div class="reason-content">
+        <div class="reason-title">No Support</div>
+        <div class="reason-desc">Parents carry it alone. No village. No resources. No one to call when things get hard.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>

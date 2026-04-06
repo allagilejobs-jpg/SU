@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E8B86D; top: -150px; left: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #27AE60; bottom: -120px; right: -120px; }
+    .number {
+      position: absolute; top: 40px; right: 40px;
+      width: 70px; height: 70px;
+      background: #E8B86D; color: #1a1a2e;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; font-weight: 800;
+    }
+    .label {
+      font-size: 16px; font-weight: 700;
+      color: #4A90A4;
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px; font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 35px;
+      line-height: 1.1;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: rgba(232, 184, 109, 0.1);
+      border: 2px solid rgba(232, 184, 109, 0.4);
+      border-radius: 16px;
+      padding: 25px 22px;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      font-weight: 900;
+      color: #E8B86D;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 18px;
+      line-height: 1.3;
+      opacity: 0.92;
+    }
+    .callout {
+      background: rgba(39, 174, 96, 0.12);
+      border: 2px solid rgba(39, 174, 96, 0.4);
+      border-radius: 16px;
+      padding: 22px 30px;
+      font-size: 22px;
+      line-height: 1.4;
+      max-width: 900px;
+      font-style: italic;
+    }
+    .callout strong { color: #27AE60; font-style: normal; }
+    .footer { position: absolute; bottom: 30px; }
+    .handle { font-size: 16px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="number">4</div>
+
+  <div class="label">The Bigger Picture</div>
+  <div class="title">Millions Unseen</div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num">1 in 100</div>
+      <div class="stat-label">Children globally are autistic (WHO)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">&lt; 10%</div>
+      <div class="stat-label">In low-income countries ever get a diagnosis</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Autism-trained specialists in many African regions</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">Most</div>
+      <div class="stat-label">Families receive zero formal support or respite</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>That boy in the room isn't an outlier.</strong> He's what invisibility looks like.
+  </div>
+
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>

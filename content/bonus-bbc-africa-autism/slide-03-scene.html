@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: left; padding: 80px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E74C3C; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #1a1a2e; bottom: -120px; left: -120px; }
+    .number {
+      position: absolute; top: 40px; right: 40px;
+      width: 70px; height: 70px;
+      background: #E8B86D; color: #1a1a2e;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; font-weight: 800;
+    }
+    .label {
+      font-size: 16px; font-weight: 700;
+      color: #E74C3C;
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px; font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 40px;
+      line-height: 1.1;
+    }
+    .scene-text {
+      font-size: 28px;
+      line-height: 1.55;
+      max-width: 900px;
+      opacity: 0.98;
+    }
+    .scene-text p { margin-bottom: 22px; }
+    .scene-text .highlight {
+      color: #E8B86D;
+      font-weight: 700;
+      font-style: italic;
+    }
+    .scene-text .break {
+      color: #E74C3C;
+      font-weight: 700;
+    }
+    .footer { position: absolute; bottom: 30px; left: 80px; }
+    .handle { font-size: 16px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="number">2</div>
+
+  <div class="label">The Scene</div>
+  <div class="title">A Boy. A Room.<br>A Locked Door.</div>
+
+  <div class="scene-text">
+    <p>There's a moment in this documentary where the camera finds a boy.</p>
+    <p>He's been locked in a room. <span class="highlight">Not because anyone hated him.</span></p>
+    <p>Because his family had no other option. <span class="break">No services. No respite. No one who understood.</span></p>
+    <p>I haven't stopped thinking about him.</p>
+  </div>
+
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>
