@@ -11,6 +11,15 @@
     .main-nav { background: #0f0f1a; padding: 15px 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
     .main-nav a { color: #aaa; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
     .main-nav a:hover, .main-nav a.active { background: #4A90A4; color: white; }
+    .nav-dropdown { position: relative; }
+    .dropdown-toggle { cursor: pointer; }
+    .dropdown-menu { display: none; position: absolute; right: 0; top: 100%; background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px; padding: 15px; min-width: 280px; max-height: 70vh; overflow-y: auto; z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+    .nav-dropdown:hover .dropdown-menu, .dropdown-menu:hover { display: block; }
+    .dropdown-group { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #2a2a4a; }
+    .dropdown-group:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .dropdown-label { color: #E8B86D; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
+    .dropdown-menu a { display: block; color: #ccc; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+    .dropdown-menu a:hover { background: #4A90A4; color: white; }
     .header { background: linear-gradient(135deg, #8E44AD 0%, #5B2C6F 100%); padding: 30px 20px; text-align: center; }
     .header h1 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px; }
     .header p { opacity: 0.9; }
@@ -45,6 +54,56 @@
   <a href="template-gallery.html">🖼️ Templates</a>
   <a href="brand-guidelines.html">📋 Brand</a>
   <a href="guides.html">📖 Guides</a>
+  <div class="nav-dropdown">
+    <a href="#" class="dropdown-toggle">📂 All Pages ▾</a>
+    <div class="dropdown-menu">
+      <div class="dropdown-group">
+        <div class="dropdown-label">Calendars</div>
+        <a href="calendar-30day.html">📅 30-Day Calendar</a>
+        <a href="calendar-60day.html">📅 60-Day Calendar</a>
+        <a href="calendar-90day.html">📅 90-Day Calendar</a>
+        <a href="post-60-strategy.html">📊 Post-60 Strategy</a>
+      </div>
+      <div class="dropdown-group">
+        <div class="dropdown-label">Create & Edit</div>
+        <a href="editor.html">🎨 Fabric.js Editor</a>
+        <a href="html-editor.html">💻 HTML Editor</a>
+        <a href="create.html">✨ Create New</a>
+        <a href="create-graphic.html">🖌️ Create Graphic</a>
+      </div>
+      <div class="dropdown-group">
+        <div class="dropdown-label">Templates</div>
+        <a href="template-gallery.html">🖼️ Template Gallery</a>
+        <a href="spotlight-series.html">⭐ Spotlight Series</a>
+        <a href="spotlight-templates.html">⭐ Spotlight Templates</a>
+        <a href="story-templates.html">📱 Story Templates</a>
+        <a href="carousel.html">🎠 Carousel Builder</a>
+        <a href="carousel-iep.html">📋 IEP Carousel</a>
+        <a href="carousel-therapy.html">🧩 Therapy Carousel</a>
+        <a href="sensory-hack-template.html">🧠 Sensory Hack Template</a>
+      </div>
+      <div class="dropdown-group">
+        <div class="dropdown-label">Content</div>
+        <a href="content-hub.html">📁 Content Hub</a>
+        <a href="sensory-hacks/index.html">🧠 Sensory Hacks (10)</a>
+        <a href="story-monday.html">📱 Monday Story</a>
+      </div>
+      <div class="dropdown-group">
+        <div class="dropdown-label">Brand & Guides</div>
+        <a href="brand-guidelines.html">📋 Brand Guidelines</a>
+        <a href="guides.html">📖 Guides</a>
+      </div>
+      <div class="dropdown-group">
+        <div class="dropdown-label">Docs & Research</div>
+        <a href="docs/content-calendar.html">📄 Content Calendar Doc</a>
+        <a href="docs/email-sequence.html">📧 Email Sequence</a>
+        <a href="docs/outreach-list.html">🤝 Outreach List</a>
+        <a href="docs/seo-audit.html">🔍 SEO Audit</a>
+        <a href="docs/social-posts.html">📣 Social Posts</a>
+        <a href="research/index.html">🔬 Research Hub</a>
+      </div>
+    </div>
+  </div>
 </nav>
 <div class="header">
   <div class="badge">Day 17 — Carousel Post</div>
