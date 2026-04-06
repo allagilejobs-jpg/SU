@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>90-Day Content Calendar — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    .header {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 50%, #0f3460 100%);
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .header p { opacity: 0.9; font-size: 1.2rem; margin-bottom: 20px; }
+    .header .dates {
+      background: rgba(255,255,255,0.1);
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+    .phase-nav {
+      background: #16213e;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #0f3460;
+      position: sticky;
+      top: 60px;
+      z-index: 99;
+    }
+    .phase-btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #0f3460;
+      color: #aaa;
+    }
+    .phase-btn:hover, .phase-btn.active {
+      background: #E8B86D;
+      color: #1a1a2e;
+    }
+    .phase-btn.phase-1.active { background: #4A90A4; color: white; }
+    .phase-btn.phase-2.active { background: #E8B86D; color: #1a1a2e; }
+    .phase-btn.phase-3.active { background: #27AE60; color: white; }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    .phase-section {
+      margin-bottom: 50px;
+    }
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px 25px;
+      background: #16213e;
+      border-radius: 16px;
+    }
+    .phase-badge {
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .phase-1 .phase-badge { background: #4A90A4; }
+    .phase-2 .phase-badge { background: #E8B86D; color: #1a1a2e; }
+    .phase-3 .phase-badge { background: #27AE60; }
+    .phase-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+    }
+    .phase-dates {
+      margin-left: auto;
+      opacity: 0.6;
+      font-size: 14px;
+    }
+    .week-section {
+      margin-bottom: 35px;
+    }
+    .week-header {
+      font-size: 16px;
+      font-weight: 600;
+      color: #E8B86D;
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-left: 3px solid #E8B86D;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 800px) {
+      .calendar-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .calendar-grid { grid-template-columns: 1fr; }
+    }
+    .day-card {
+      background: #16213e;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+    .day-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .day-card.hero {
+      border: 2px solid #E8B86D;
+      grid-column: span 2;
+    }
+    .day-card.ready {
+      border: 2px solid #27AE60;
+    }
+    .day-card.ready .day-num { background: #27AE60; }
+    .day-top {
+      padding: 12px 15px;
+      background: #0f3460;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .day-num {
+      width: 32px;
+      height: 32px;
+      background: #4A90A4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .day-card.hero .day-num {
+      background: #E8B86D;
+      color: #1a1a2e;
+    }
+    .day-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .day-info .weekday {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .day-info .date {
+      font-size: 11px;
+      opacity: 0.6;
+    }
+    .platform-badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .platform-badge.both { background: rgba(74, 144, 164, 0.3); }
+    .platform-badge.tiktok { background: rgba(0,0,0,0.3); }
+    .platform-badge.instagram { background: rgba(193, 53, 132, 0.3); }
+    .day-content {
+      padding: 12px 15px;
+    }
+    .day-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #E8B86D;
+      margin-bottom: 5px;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .day-hook {
+      font-size: 11px;
+      opacity: 0.7;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .day-status {
+      padding: 8px 15px;
+      background: #0a1628;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .status-dot.ready { background: #27AE60; }
+    .status-dot.planned { background: #E8B86D; }
+    .reel-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 10px;
+      z-index: 5;
+    }
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      background: #16213e;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .legend-dot.ready { background: #27AE60; }
+    .legend-dot.planned { background: #E8B86D; }
+    .legend-dot.hero { background: #E8B86D; border: 2px solid #E8B86D; }
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 25px;
+      background: #16213e;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #E8B86D;
+    }
+    .stat-label {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal {
+      background: #16213e;
+      border-radius: 20px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-header {
+      padding: 25px;
+      background: #0f3460;
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .modal-header .day-num {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+    .modal-header h2 {
+      flex: 1;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+    }
+    .modal-close {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 25px;
+    }
+    .modal-section {
+      margin-bottom: 25px;
+    }
+    .modal-section h3 {
+      color: #E8B86D;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .modal-slides {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+    .modal-slides a {
+      flex-shrink: 0;
+    }
+    .modal-slides img {
+      height: 200px;
+      width: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .modal-slides .slide-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .modal-slides .edit-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: #E8B86D;
+      color: #1a1a2e;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.2s;
+      font-family: inherit;
+      z-index: 10;
+    }
+    .modal-slides .slide-wrapper:hover .edit-btn {
+      opacity: 1;
+    }
+    .modal-slides .edit-btn:hover {
+      background: #d4a85d;
+      transform: scale(1.05);
+    }
+    .modal-slides img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+    .modal-caption {
+      background: #0a1628;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      position: relative;
+    }
+    .modal-caption .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #4A90A4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .modal-caption .copy-btn:hover {
+      background: #3a7a94;
+    }
+    .caption-stats {
+      display: flex;
+      gap: 15px;
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .caption-stats .char-count { color: #27AE60; }
+    .caption-stats .char-count.warn { color: #F39C12; }
+    .caption-stats .char-count.over { color: #E74C3C; }
+    .caption-stats .hashtag-count { color: #4A90A4; }
+    .caption-stats .hashtag-count.low { color: #F39C12; }
+    .caption-stats .hashtag-count.high { color: #E74C3C; }
+    .modal-hashtags {
+      color: #4A90A4;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+    .modal-actions {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .modal-btn {
+      flex: 1;
+      min-width: 150px;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      text-align: center;
+    }
+    .modal-btn.primary {
+      background: #27AE60;
+      color: white;
+    }
+    .modal-btn.secondary {
+      background: #0f3460;
+      color: #eee;
+    }
+    @media (max-width: 600px) {
+      .header h1 { font-size: 2rem; }
+      .phase-header { flex-direction: column; text-align: center; }
+      .phase-dates { margin-left: 0; }
+      .modal-header h2 { font-size: 1.1rem; }
+      .day-card.hero { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="calendar-60day.html">60-Day Calendar</a>
+    <a href="calendar-90day.html" class="active">90-Day Calendar</a>
+    <a href="editor.html">Editor</a>
+    <a href="brand-guidelines.html">Brand</a>
+    <a href="guides.html">Guides</a>
+  </nav>
+
+  <header class="header">
+    <h1>90-Day Content Calendar</h1>
+    <p>June 1 &ndash; August 29, 2026 &bull; 3 Posts/Week &bull; Days 61-98</p>
+    <div class="dates">June 1 &ndash; August 29, 2026</div>
+  </header>
+
+  <div class="phase-nav">
+    <button class="phase-btn phase-1 active" onclick="scrollToPhase(1)">June: Summer Survival</button>
+    <button class="phase-btn phase-2" onclick="scrollToPhase(2)">July: Building Independence</button>
+    <button class="phase-btn phase-3" onclick="scrollToPhase(3)">August: Back to School</button>
+  </div>
+
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-num">38</div>
+        <div class="stat-label">Posts</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">14</div>
+        <div class="stat-label">Weeks</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">~190</div>
+        <div class="stat-label">Slides</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">13</div>
+        <div class="stat-label">Reels</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot ready"></div>
+        <span>Ready to Post</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot planned"></div>
+        <span>Planned</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot hero"></div>
+        <span>Hero Content</span>
+      </div>
+      <div class="legend-item">
+        <span class="reel-badge" style="position:static;">Reel</span>
+        <span>Reel Included</span>
+      </div>
+    </div>
+
+    <!-- PHASE 1: JUNE -->
+    <div class="phase-section" id="phase-1">
+      <div class="phase-header phase-1">
+        <span class="phase-badge">June</span>
+        <span class="phase-title">Summer Survival</span>
+        <span class="phase-dates">Jun 1-30 (13 posts)</span>
+      </div>
+
+      <!-- Week 1 -->
+      <div class="week-section">
+        <div class="week-header">Week 1: Jun 1-5</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(61)">
+            <div class="day-top">
+              <div class="day-num">61</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jun 1</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Summer Schedule Survival Guide</div>
+              <div class="day-hook">Routine tips</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(62)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">62</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jun 3</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">5 Sensory-Friendly Summer Activities</div>
+              <div class="day-hook">Free activities</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(63)">
+            <div class="day-top">
+              <div class="day-num">63</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jun 5</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">The hardest transition isn't September. It's June.</div>
+              <div class="day-hook">Real talk</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 2 -->
+      <div class="week-section">
+        <div class="week-header">Week 2: Jun 8-12</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(64)">
+            <div class="day-top">
+              <div class="day-num">64</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jun 8</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Myth: If they can talk, they don't need AAC</div>
+              <div class="day-hook">Myth buster</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(65)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">65</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jun 10</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">AAC at the Pool, Park, and Playground</div>
+              <div class="day-hook">Communication everywhere</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(66)">
+            <div class="day-top">
+              <div class="day-num">66</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jun 12</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">He doesn't need to 'get used to it.'</div>
+              <div class="day-hook">Real talk</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 3 -->
+      <div class="week-section">
+        <div class="week-header">Week 3: Jun 15-19</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(67)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">67</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jun 15</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">ESY: Does Your Child Qualify?</div>
+              <div class="day-hook">Summer services</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(68)">
+            <div class="day-top">
+              <div class="day-num">68</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jun 17</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Free Resource: Sensory Profile Worksheet</div>
+              <div class="day-hook">Free download</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>4 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(69)">
+            <div class="day-top">
+              <div class="day-num">69</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jun 19</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Nobody ever asks the parent how they're doing.</div>
+              <div class="day-hook">Real talk</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 4 -->
+      <div class="week-section">
+        <div class="week-header">Week 4: Jun 22-26</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(70)">
+            <div class="day-top">
+              <div class="day-num">70</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jun 22</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Myth: ABA is the only evidence-based therapy</div>
+              <div class="day-hook">Myth buster</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(71)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">71</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jun 24</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Autism and Marriage: What Nobody Talks About</div>
+              <div class="day-hook">Family dynamics</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(72)">
+            <div class="day-top">
+              <div class="day-num">72</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jun 26</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Some days the win is that everyone survived.</div>
+              <div class="day-hook">Win Friday</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 5 -->
+      <div class="week-section">
+        <div class="week-header">Week 5: Jun 29-30</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(73)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">73</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jun 29</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Traveling with an Autistic Child: Airport Edition</div>
+              <div class="day-hook">Travel tips</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 2: JULY -->
+    <div class="phase-section" id="phase-2">
+      <div class="phase-header phase-2">
+        <span class="phase-badge">July</span>
+        <span class="phase-title">Building Independence</span>
+        <span class="phase-dates">Jul 1-31 (13 posts)</span>
+      </div>
+
+      <!-- Week 6 -->
+      <div class="week-section">
+        <div class="week-header">Week 6: Jul 1-3</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(74)">
+            <div class="day-top">
+              <div class="day-num">74</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jul 1</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Teaching Life Skills Without Power Struggles</div>
+              <div class="day-hook">Independence</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(75)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">75</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jul 3</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Independence doesn't mean doing it alone.</div>
+              <div class="day-hook">Real talk + July 4th</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides + reel planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 7 -->
+      <div class="week-section">
+        <div class="week-header">Week 7: Jul 7-11</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(76)">
+            <div class="day-top">
+              <div class="day-num">76</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jul 7</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Speech Therapy at Home</div>
+              <div class="day-hook">Home strategies</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(77)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">77</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jul 9</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">How to Build a Calm-Down Corner</div>
+              <div class="day-hook">Sensory space</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(78)">
+            <div class="day-top">
+              <div class="day-num">78</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jul 11</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">I stopped trying to fix my child.</div>
+              <div class="day-hook">Real talk</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 8 -->
+      <div class="week-section">
+        <div class="week-header">Week 8: Jul 14-18</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(79)">
+            <div class="day-top">
+              <div class="day-num">79</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jul 14</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Myth: Your child is too smart for an IEP</div>
+              <div class="day-hook">Myth buster</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(80)">
+            <div class="day-top">
+              <div class="day-num">80</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jul 16</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Free Resource: IEP Meeting Checklist</div>
+              <div class="day-hook">Free download</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>4 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(81)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">81</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jul 18</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">A year ago I didn't know what an IEP was.</div>
+              <div class="day-hook">Win Friday</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides + reel planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 9 -->
+      <div class="week-section">
+        <div class="week-header">Week 9: Jul 21-25</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(82)">
+            <div class="day-top">
+              <div class="day-num">82</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jul 21</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Autism and Anxiety: The Connection</div>
+              <div class="day-hook">Hidden connection</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(83)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">83</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jul 23</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">4 Phrases That Protect Your IEP Rights</div>
+              <div class="day-hook">Know your rights</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(84)">
+            <div class="day-top">
+              <div class="day-num">84</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Jul 25</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Parents report 3x higher stress</div>
+              <div class="day-hook">Stat</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 10 -->
+      <div class="week-section">
+        <div class="week-header">Week 10: Jul 28-31</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(85)">
+            <div class="day-top">
+              <div class="day-num">85</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Jul 28</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Workplace Accommodations Your Teen Should Know</div>
+              <div class="day-hook">Transition planning</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(86)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">86</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Jul 30</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Sensory Seeking VS Sensory Avoiding</div>
+              <div class="day-hook">Compare</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3: AUGUST -->
+    <div class="phase-section" id="phase-3">
+      <div class="phase-header phase-3">
+        <span class="phase-badge">August</span>
+        <span class="phase-title">Back to School</span>
+        <span class="phase-dates">Aug 4-29 (12 posts)</span>
+      </div>
+
+      <!-- Week 11 -->
+      <div class="week-section">
+        <div class="week-header">Week 11: Aug 4-8</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(87)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">87</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Aug 4</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Ultimate Back-to-School Checklist</div>
+              <div class="day-hook">B2S prep</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(88)">
+            <div class="day-top">
+              <div class="day-num">88</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Aug 6</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Getting to Know My Child Letter</div>
+              <div class="day-hook">Teacher intro</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(89)">
+            <div class="day-top">
+              <div class="day-num">89</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Aug 8</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">August anxiety is real.</div>
+              <div class="day-hook">Real talk</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 12 -->
+      <div class="week-section">
+        <div class="week-header">Week 12: Aug 11-15</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(90)">
+            <div class="day-top">
+              <div class="day-num">90</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Aug 11</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Myth: IEP and 504 are basically the same</div>
+              <div class="day-hook">Myth buster</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(91)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">91</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Aug 13</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">After-School Meltdowns</div>
+              <div class="day-hook">After-school crash</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>6 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(92)">
+            <div class="day-top">
+              <div class="day-num">92</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Aug 15</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">The IEP is not a suggestion.</div>
+              <div class="day-hook">Win Friday</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 13 -->
+      <div class="week-section">
+        <div class="week-header">Week 13: Aug 18-22</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(93)">
+            <div class="day-top">
+              <div class="day-num">93</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Aug 18</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">When School Isn't Following the IEP</div>
+              <div class="day-hook">Advocacy</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(94)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">94</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Aug 20</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">4 Accommodations to Request Before Day 1</div>
+              <div class="day-hook">Quick wins</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(95)">
+            <div class="day-top">
+              <div class="day-num">95</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Aug 22</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">You are not a difficult parent.</div>
+              <div class="day-hook">Real talk</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>3 slides planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 14 -->
+      <div class="week-section">
+        <div class="week-header">Week 14: Aug 25-29</div>
+        <div class="calendar-grid">
+          <div class="day-card" onclick="openDay(96)">
+            <div class="day-top">
+              <div class="day-num">96</div>
+              <div class="day-info">
+                <div class="weekday">Monday</div>
+                <div class="date">Aug 25</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Build a Relationship with New Teacher</div>
+              <div class="day-hook">School start</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card" onclick="openDay(97)">
+            <div class="day-top">
+              <div class="day-num">97</div>
+              <div class="day-info">
+                <div class="weekday">Wednesday</div>
+                <div class="date">Aug 27</div>
+              </div>
+              <span class="platform-badge both">IG+TT</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">Free Resource: School Email Templates</div>
+              <div class="day-hook">Free download</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>4 slides planned</span>
+            </div>
+          </div>
+
+          <div class="day-card hero" onclick="openDay(98)">
+            <span class="reel-badge">Reel</span>
+            <div class="day-top">
+              <div class="day-num">98</div>
+              <div class="day-info">
+                <div class="weekday">Friday</div>
+                <div class="date">Aug 29</div>
+              </div>
+              <span class="platform-badge both">IG+TT HERO</span>
+            </div>
+            <div class="day-content">
+              <div class="day-title">90-Day Recap: Everything We Built</div>
+              <div class="day-hook">Celebration</div>
+            </div>
+            <div class="day-status">
+              <span class="status-dot ready"></span>
+              <span>5 slides + reel planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="day-num" id="modal-day-num">61</div>
+        <h2 id="modal-title">Day Title</h2>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section" id="modal-slides-section">
+          <h3>Carousel Slides (1080x1350)</h3>
+          <div class="modal-slides" id="modal-slides"></div>
+        </div>
+        <div class="modal-section" id="modal-reel-section" style="display:none;">
+          <h3>Reel Slides (1080x1920)</h3>
+          <div class="modal-slides" id="modal-reel-slides"></div>
+          <div class="modal-caption" id="modal-reel-caption" style="margin-top:15px;"></div>
+        </div>
+        <div class="modal-section">
+          <h3>Instagram Caption</h3>
+          <div class="modal-caption" id="modal-ig-caption">
+            <button class="copy-btn" onclick="copyCaption('modal-ig-caption')">Copy</button>
+          </div>
+          <div class="caption-stats" id="ig-caption-stats"></div>
+          <div class="modal-hashtags" id="modal-ig-hashtags"></div>
+        </div>
+        <div class="modal-section">
+          <h3>TikTok Caption</h3>
+          <div class="modal-caption" id="modal-tiktok-caption">
+            <button class="copy-btn" onclick="copyCaption('modal-tiktok-caption')">Copy</button>
+          </div>
+          <div class="caption-stats" id="tiktok-caption-stats"></div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-actions">
+            <button class="modal-btn primary" id="modal-download-all" onclick="downloadAllSlides()">Download All Slides</button>
+            <a class="modal-btn secondary" id="modal-folder-link" href="#" target="_blank">Open Folder</a>
+            <a class="modal-btn secondary" id="modal-captions-link" href="#" target="_blank">View Captions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const dayData = {
+      61: {
+        title: "Summer Schedule Survival Guide",
+        folder: "day-61-summer-schedule",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Summer is coming and routines are about to vanish. Here's how to survive it.\n\nThe end of the school year doesn't just mean freedom. For autism families, it means the structure your child depends on disappears overnight.\n\nSwipe for 3 routine tips that actually work when everything feels chaotic. These aren't Pinterest-perfect schedules. They're real strategies from real parents.\n\nSave this for June 1st. You'll need it.\n\nWhich tip resonates most? Drop it below.",
+        igHashtags: "#autismparenting #summerschedule #autismroutine #autismfamily #specialneedsparenting #autismmom #autismdad #summersurvival #neurodivergent #autismlife #routinetips #autismacceptance #sensoryprocessing #autismcommunity #spectrumunlocked",
+        tiktokCaption: "Summer schedule survival for autism families. The structure disappears but the need doesn't. 3 tips that actually work.\n\n#autism #autismparenting #summerschedule #neurodivergent #autismtiktok #fyp"
+      },
+      62: {
+        title: "5 Sensory-Friendly Summer Activities",
+        folder: "day-62-sensory-summer",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Summer activities don't have to be overwhelming. Here are 5 that are FREE and sensory-friendly.\n\nNot every kid thrives at crowded water parks or loud festivals. That doesn't mean summer has to be boring. These activities are calming, engaging, and cost nothing.\n\nFrom nature walks to water table play, these ideas work for seekers AND avoiders. Swipe through for all 5.\n\nTag a parent who needs sensory-friendly summer ideas.",
+        igHashtags: "#sensoryfriendly #autismactivities #sensoryplay #autismparenting #autismsummer #specialneedsparenting #sensoryprocessing #autismfamily #neurodivergent #sensorykids #autismlife #autismacceptance #autismcommunity #summeractivities #spectrumunlocked",
+        tiktokCaption: "5 sensory-friendly summer activities that are totally FREE. Works for seekers AND avoiders.\n\n#autism #sensory #sensoryfriendly #autismparenting #summeractivities #fyp"
+      },
+      63: {
+        title: "The hardest transition isn't September. It's June.",
+        folder: "day-63-june-transition",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "Everyone talks about the back-to-school transition. Nobody talks about June.\n\nThe sudden loss of routine. The therapists on break. The sibling dynamics shifting. The guilt of not having a Pinterest-worthy summer plan.\n\nJune is hard. You're allowed to say that. You're allowed to grieve the structure. And you're allowed to take it one day at a time.\n\nDrop a heart if June hits different for your family.",
+        igHashtags: "#autismparenting #realtalk #autismmom #autismdad #specialneedsparenting #autismfamily #summerbreak #autismlife #parentingtruth #neurodivergent #autismacceptance #autismcommunity #youarenotalone #spectrumunlocked #itsokaytonotbeokay",
+        tiktokCaption: "Everyone talks about the back-to-school transition. Nobody talks about June. The real hard part starts now.\n\n#autism #autismparenting #realtalk #summerbreak #fyp"
+      },
+      64: {
+        title: "Myth: If they can talk, they don't need AAC",
+        folder: "day-64-aac-myth",
+        slides: 5,
+        slideNames: ['cover', 'myth', 'truth', 'context', 'cta'],
+        igCaption: "MYTH: If your child can talk, they don't need AAC.\n\nTRUTH: AAC isn't a replacement for speech. It's a bridge. A backup. A tool for when words get stuck.\n\nMany verbal autistic children lose access to speech during stress, meltdowns, or shutdown. AAC gives them a way to communicate when their voice can't. That's not giving up. That's giving them more.\n\nSwipe to learn the truth. Share with someone who needs to hear this.",
+        igHashtags: "#AAC #augmentativecommunication #autismcommunication #autismmyth #mythbuster #autismparenting #speechtherapy #autismfamily #specialneedsparenting #neurodivergent #autismacceptance #autismadvocacy #autismcommunity #spectrumunlocked #communicationmatters",
+        tiktokCaption: "MYTH: If they can talk they don't need AAC. TRUTH: AAC is a bridge, not a replacement. It gives them communication when words get stuck.\n\n#autism #AAC #mythbuster #autismparenting #fyp"
+      },
+      65: {
+        title: "AAC at the Pool, Park, and Playground",
+        folder: "day-65-aac-everywhere",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "Communication doesn't stop at the front door. Neither should AAC.\n\nSummer means new environments. Pools, parks, playgrounds, vacation spots. And your child still needs a way to say 'more,' 'stop,' 'help,' and 'I want.'\n\nSwipe for practical tips on taking AAC everywhere this summer. From waterproof options to low-tech backups, we've got you covered.\n\nSave this for your summer AAC toolkit.",
+        igHashtags: "#AAC #augmentativecommunication #autismcommunication #autismparenting #summerAAC #autismfamily #specialneedsparenting #communicationeverywhere #neurodivergent #autismacceptance #autismadvocacy #speechtherapy #autismcommunity #spectrumunlocked #communicationmatters",
+        tiktokCaption: "AAC doesn't stop at the front door. Here's how to take communication everywhere this summer. Pool, park, playground.\n\n#autism #AAC #communication #autismparenting #summer #fyp"
+      },
+      66: {
+        title: "He doesn't need to 'get used to it.'",
+        folder: "day-66-get-used-to-it",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "\"He just needs to get used to it.\"\n\nNo. He doesn't. Forcing sensory exposure doesn't build tolerance. It builds trauma.\n\nYour child's nervous system isn't being dramatic. It's working differently. And the people who say 'they'll get used to it' don't see the meltdown in the car on the way home.\n\nYou don't have to push through to prove anything. Accommodation is not weakness. It's wisdom.\n\nType 'HEARD' if you needed this today.",
+        igHashtags: "#autismparenting #sensoryprocessing #autismacceptance #realtalk #autismmom #autismdad #specialneedsparenting #neurodivergent #sensoryfriendly #autismfamily #autismadvocacy #itsnotbehavior #autismcommunity #spectrumunlocked #accommodation",
+        tiktokCaption: "\"He just needs to get used to it.\" No. He doesn't. Forcing sensory exposure builds trauma, not tolerance.\n\n#autism #sensory #realtalk #autismparenting #fyp"
+      },
+      67: {
+        title: "ESY: Does Your Child Qualify?",
+        folder: "day-67-esy-qualify",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Extended School Year (ESY) could be the difference between progress and regression this summer.\n\nBut most parents don't know it exists, don't know their child qualifies, or get told 'we don't offer that' when they ask. Swipe to learn what ESY is, who qualifies, and exactly what to say at your next IEP meeting.\n\nKnowledge is power. Save this and share it.\n\nHave you ever been offered ESY? Tell us below.",
+        igHashtags: "#ESY #extendedschoolyear #IEP #specialeducation #autismparenting #autismschool #autismfamily #autismadvocacy #specialneedsparenting #neurodivergent #autismrights #autismacceptance #iepadvocacy #autismcommunity #spectrumunlocked",
+        tiktokCaption: "ESY: Extended School Year services. Does your child qualify? Most parents don't even know this exists.\n\n#autism #ESY #IEP #specialeducation #autismparenting #fyp"
+      },
+      68: {
+        title: "Free Resource: Sensory Profile Worksheet",
+        folder: "day-68-sensory-profile",
+        slides: 4,
+        slideNames: ['cover', 'preview', 'details', 'cta'],
+        igCaption: "FREE RESOURCE: Sensory Profile Worksheet for your child.\n\nUnderstanding your child's sensory needs is the foundation of everything. This printable worksheet helps you map their sensory preferences, triggers, and comfort zones.\n\nUse it at home, share it with therapists, or bring it to your next IEP meeting. Knowing the sensory profile changes the game.\n\nLink in bio. Save this post and come back to download.",
+        igHashtags: "#freeresource #sensoryprofile #sensoryprocessing #autismparenting #autismresource #sensoryfriendly #autismfamily #specialneedsparenting #neurodivergent #occupationaltherapy #autismacceptance #autismcommunity #sensoryneeds #spectrumunlocked #freedownload",
+        tiktokCaption: "FREE sensory profile worksheet for your child. Map their sensory preferences, triggers, and comfort zones. Link in bio.\n\n#autism #sensory #freeresource #autismparenting #fyp"
+      },
+      69: {
+        title: "Nobody ever asks the parent how they're doing.",
+        folder: "day-69-parent-check-in",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "\"How is he doing in therapy?\" \"How is she adjusting to school?\" \"How are his behaviors?\"\n\nNobody ever asks: How are YOU doing?\n\nYou coordinate therapies, fight for services, manage meltdowns, research everything, and pour every drop of energy into your child's world. And then someone asks how your kid is doing. Not you. Never you.\n\nSo here it is: How are you? Really? Drop a word below. Just one word. We're listening.",
+        igHashtags: "#autismparenting #parentmentalhealth #selfcare #autismmom #autismdad #specialneedsparenting #autismfamily #caregiversupport #neurodivergent #youmatter #autismacceptance #parentburnout #autismcommunity #spectrumunlocked #itsokaytonotbeokay",
+        tiktokCaption: "\"How is he doing?\" \"How is she in school?\" Nobody ever asks the parent how THEY'RE doing. So... how are you?\n\n#autism #autismparenting #realtalk #parentmentalhealth #fyp"
+      },
+      70: {
+        title: "Myth: ABA is the only evidence-based therapy",
+        folder: "day-70-aba-myth",
+        slides: 5,
+        slideNames: ['cover', 'myth', 'truth', 'context', 'cta'],
+        igCaption: "MYTH: ABA is the ONLY evidence-based therapy for autism.\n\nTRUTH: Multiple therapies have strong evidence behind them. OT, speech therapy, DIR/Floortime, CBT adapted for autism, and more.\n\nABA has the most published research, but that doesn't make it the only option or the right fit for every child. Your child deserves a toolbox, not a one-size-fits-all approach.\n\nSwipe to learn the truth. Save this for when someone tells you there's 'only one way.'",
+        igHashtags: "#autismmyth #mythbuster #ABA #autismtherapy #autismparenting #evidencebased #specialneedsparenting #autismfamily #neurodivergent #autismacceptance #occupationaltherapy #speechtherapy #autismadvocacy #autismcommunity #spectrumunlocked",
+        tiktokCaption: "MYTH: ABA is the only evidence-based therapy. TRUTH: OT, speech, DIR/Floortime, CBT all have strong evidence too.\n\n#autism #ABA #mythbuster #therapy #autismparenting #fyp"
+      },
+      71: {
+        title: "Autism and Marriage: What Nobody Talks About",
+        folder: "day-71-autism-marriage",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "We need to talk about what happens to marriages after an autism diagnosis.\n\nThe grief hits at different speeds. One parent dives into research while the other is still processing. Date nights become IEP meetings. Intimacy disappears under exhaustion. You become co-case-managers instead of partners.\n\nThis isn't about blame. It's about awareness. Swipe for the things nobody says out loud, and the strategies that actually help.\n\nTag your partner. Start the conversation.",
+        igHashtags: "#autismmarriage #autismfamily #marriageandautism #autismparenting #specialneedsmarriage #autismmom #autismdad #autismrelationships #neurodivergent #autismacceptance #familydynamics #autismcommunity #spectrumunlocked #parentingpartnership #strongertogether",
+        tiktokCaption: "What happens to marriages after an autism diagnosis? Nobody talks about this. The grief, the exhaustion, the disconnect. Let's change that.\n\n#autism #marriage #autismparenting #realtalk #fyp"
+      },
+      72: {
+        title: "Some days the win is that everyone survived.",
+        folder: "day-72-survival-win",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "Not every day has breakthroughs. Not every day has progress you can measure.\n\nSome days the win is that everyone ate something. That nobody got hurt. That you made it to bedtime. That you didn't lose it even though you were close.\n\nThat's still a win. Stop minimizing it.\n\nDrop a victory from this week. Even a tiny one. Especially a tiny one.",
+        igHashtags: "#autismparenting #winfriday #smallwins #autismmom #autismdad #specialneedsparenting #autismfamily #parentingwins #neurodivergent #autismacceptance #survivalmode #autismcommunity #spectrumunlocked #youaredoingenough #celebrateprogress",
+        tiktokCaption: "Some days the win is that everyone survived. And that's still a win. Stop minimizing it.\n\n#autism #autismparenting #winfriday #realtalk #fyp"
+      },
+      73: {
+        title: "Traveling with an Autistic Child: Airport Edition",
+        folder: "day-73-airport-travel",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Airports weren't designed for autistic brains. But you can make them work.\n\nThe noise, the crowds, the unpredictable delays, the sensory overload of security. It's a lot for anyone. For an autistic child, it can feel impossible.\n\nBut with the right prep, it doesn't have to be. Swipe for our airport survival guide: from TSA Cares to noise-canceling headphones to the secret trick that makes boarding easier.\n\nSave this before your next trip. You'll thank yourself.",
+        igHashtags: "#autismtravel #travelingwithautism #autismparenting #autismfamily #sensoryfriendly #autismtips #specialneedsparenting #airporttravel #neurodivergent #autismacceptance #travelwithkids #autismcommunity #spectrumunlocked #tsacares #familytravel",
+        tiktokCaption: "Traveling with an autistic child through the airport? Here's your survival guide. TSA Cares, sensory prep, and the boarding trick.\n\n#autism #travel #airport #autismparenting #sensoryfriendly #fyp"
+      },
+      74: {
+        title: "Teaching Life Skills Without Power Struggles",
+        folder: "day-74-life-skills",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "Independence starts with life skills. But teaching them doesn't have to be a battle.\n\nForget the power struggles and the meltdowns over brushing teeth. There are better ways. Visual task analysis, backward chaining, natural motivation, and meeting them where they are.\n\nSwipe for strategies that build independence without breaking the relationship. Every skill mastered is a step toward their future.\n\nWhich life skill is your current project? Tell us below.",
+        igHashtags: "#lifeskills #autismindependence #autismparenting #teachinglifeskills #autismfamily #specialneedsparenting #independentliving #neurodivergent #autismacceptance #dailylivingskills #autismcommunity #spectrumunlocked #functionalskills #buildingindependence #autismtips",
+        tiktokCaption: "Teaching life skills without power struggles. Visual task analysis, backward chaining, and meeting them where they are.\n\n#autism #lifeskills #independence #autismparenting #fyp"
+      },
+      75: {
+        title: "Independence doesn't mean doing it alone.",
+        folder: "day-75-independence-reframe",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "Happy July 4th weekend. Let's talk about what independence really means.\n\nIndependence isn't doing everything by yourself. It's having the tools, supports, and confidence to navigate your world. For some that means AAC. For others it means a job coach. For many it means a community that actually gets it.\n\nTrue independence is access, not isolation.\n\nShare this with someone who needs to reframe independence today.",
+        igHashtags: "#independence #autismacceptance #july4th #autismparenting #autismfamily #neurodivergent #autismindependence #realtalk #specialneedsparenting #autismadvocacy #autismcommunity #spectrumunlocked #differentnotless #accessmatters #autismpride",
+        tiktokCaption: "Independence doesn't mean doing it alone. It means having the tools and supports to navigate your world. Happy 4th.\n\n#autism #independence #july4th #realtalk #fyp"
+      },
+      76: {
+        title: "Speech Therapy at Home",
+        folder: "day-76-speech-home",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "You don't need to be an SLP to support your child's communication at home.\n\nSpeech therapy doesn't end when the session ends. The strategies your child's therapist uses can be woven into everyday moments. Mealtime, bath time, play time.\n\nSwipe for 3 home strategies that boost communication without flashcards or pressure. Your home is the best therapy room there is.\n\nTag a parent who needs these tips.",
+        igHashtags: "#speechtherapy #speechathome #autismcommunication #autismparenting #speechlanguage #autismfamily #specialneedsparenting #communicationmatters #neurodivergent #autismacceptance #SLP #autismcommunity #spectrumunlocked #languagedevelopment #homestrategies",
+        tiktokCaption: "Speech therapy at home. 3 strategies you can do during meals, bath time, and play. No flashcards needed.\n\n#autism #speechtherapy #communication #autismparenting #fyp"
+      },
+      77: {
+        title: "How to Build a Calm-Down Corner",
+        folder: "day-77-calm-corner",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Every home needs a calm-down corner. Here's how to build one that actually gets used.\n\nA calm-down corner isn't a time-out spot. It's a regulation station. A safe space your child can go to BEFORE the meltdown peaks. Swipe for what to include, where to put it, and how to introduce it so your child actually wants to use it.\n\nThe goal isn't to stop emotions. It's to give them a safe place to feel them.\n\nDoes your family have one? Share your setup below.",
+        igHashtags: "#calmdowncorner #sensoryspace #autismparenting #selfregulation #autismfamily #sensoryfriendly #specialneedsparenting #emotionregulation #neurodivergent #autismacceptance #sensoryroom #autismcommunity #spectrumunlocked #calmingstrategies #sensorytoolkit",
+        tiktokCaption: "How to build a calm-down corner that actually gets used. It's not a time-out spot. It's a regulation station.\n\n#autism #sensory #calmdowncorner #autismparenting #fyp"
+      },
+      78: {
+        title: "I stopped trying to fix my child.",
+        folder: "day-78-stop-fixing",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "I spent years trying to fix something that wasn't broken.\n\nMore therapy. More goals. More 'catching up.' More comparing to milestones that weren't made for my kid. Until I realized: my child isn't broken. The world just isn't built for them.\n\nWhen I stopped trying to fix and started trying to understand, everything changed. Not them. Me.\n\nIf this hits home, save it. Share it. Let someone else know they can let go too.",
+        igHashtags: "#autismacceptance #realtalk #autismparenting #notbroken #autismmom #autismdad #specialneedsparenting #neurodivergent #autismfamily #differentnotless #autismadvocacy #autismcommunity #spectrumunlocked #unconditionalacceptance #autismpride",
+        tiktokCaption: "I spent years trying to fix something that wasn't broken. When I stopped fixing and started understanding, everything changed.\n\n#autism #acceptance #realtalk #autismparenting #fyp"
+      },
+      79: {
+        title: "Myth: Your child is too smart for an IEP",
+        folder: "day-79-iep-smart-myth",
+        slides: 5,
+        slideNames: ['cover', 'myth', 'truth', 'context', 'cta'],
+        igCaption: "MYTH: Your child is too smart for an IEP.\n\nTRUTH: Intelligence has NOTHING to do with eligibility. An IEP is about educational need, not IQ.\n\nGifted autistic kids still struggle with executive function, social communication, sensory overload, and emotional regulation. Being 'smart' doesn't mean they don't need support. It means their needs are invisible to people who aren't looking.\n\nSwipe for the truth. Save this for your next IEP meeting.",
+        igHashtags: "#IEP #autismmyth #mythbuster #specialeducation #autismparenting #giftedautistic #twiceexceptional #autismfamily #specialneedsparenting #neurodivergent #autismacceptance #iepadvocacy #autismcommunity #spectrumunlocked #autismrights",
+        tiktokCaption: "\"Your child is too smart for an IEP.\" WRONG. Intelligence has nothing to do with eligibility. IEPs are about NEED.\n\n#autism #IEP #mythbuster #specialeducation #autismparenting #fyp"
+      },
+      80: {
+        title: "Free Resource: IEP Meeting Checklist",
+        folder: "day-80-iep-checklist",
+        slides: 4,
+        slideNames: ['cover', 'preview', 'details', 'cta'],
+        igCaption: "FREE RESOURCE: IEP Meeting Checklist\n\nWalking into an IEP meeting unprepared is like going to court without evidence. This checklist covers everything: what to bring, what to ask, what to document, and what to say if they push back.\n\nPrint it. Bring it. Use it. Your child's education depends on you being ready.\n\nLink in bio to download. Save this post as a reminder.",
+        igHashtags: "#IEP #iepmeeting #freeresource #specialeducation #autismparenting #iepadvocacy #autismfamily #specialneedsparenting #parentadvocacy #neurodivergent #autismacceptance #autismrights #autismcommunity #spectrumunlocked #freedownload",
+        tiktokCaption: "FREE IEP meeting checklist. What to bring, what to ask, and what to say when they push back. Link in bio.\n\n#autism #IEP #freeresource #specialeducation #autismparenting #fyp"
+      },
+      81: {
+        title: "A year ago I didn't know what an IEP was.",
+        folder: "day-81-iep-journey",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "A year ago I didn't know what an IEP was. Today I fight for one.\n\nA year ago I didn't know what accommodations meant. Today I request them in writing. A year ago I sat quietly in meetings. Today I record them.\n\nLook how far you've come. You didn't go to school for this. You learned it because you had to. Because nobody else was going to fight for your child.\n\nThat's not just parenting. That's advocacy. And it matters.\n\nDrop your biggest advocacy win below.",
+        igHashtags: "#autismadvocacy #iepadvocacy #autismparenting #parentadvocate #autismmom #autismdad #specialneedsparenting #autismfamily #neurodivergent #autismacceptance #winfriday #autismcommunity #spectrumunlocked #iepfight #strongparent",
+        tiktokCaption: "A year ago I didn't know what an IEP was. Today I fight for one. Look how far you've come.\n\n#autism #IEP #advocacy #autismparenting #winfriday #fyp"
+      },
+      82: {
+        title: "Autism and Anxiety: The Connection",
+        folder: "day-82-autism-anxiety",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "Up to 80% of autistic people experience anxiety. It's not a separate issue. It's deeply connected.\n\nAnxiety in autism looks different. It might be rigid routines, avoidance, meltdowns, shutdowns, or physical symptoms like stomach aches. Many autistic kids can't name the feeling. They just feel overwhelmed all the time.\n\nSwipe to understand the hidden connection and what actually helps. This changes how you support your child.\n\nSave this. Share it with your child's team.",
+        igHashtags: "#autismanxiety #anxietyandautism #autismparenting #autismmentalhealth #autismfamily #specialneedsparenting #anxietyawareness #neurodivergent #autismacceptance #executivefunction #autismcommunity #spectrumunlocked #mentalhealth #anxietyrelief #autismsupport",
+        tiktokCaption: "80% of autistic people experience anxiety. But it looks different. Rigid routines, avoidance, meltdowns. Here's the hidden connection.\n\n#autism #anxiety #mentalhealth #autismparenting #fyp"
+      },
+      83: {
+        title: "4 Phrases That Protect Your IEP Rights",
+        folder: "day-83-iep-phrases",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Know your rights. Use your words. Protect your child.\n\nThese 4 phrases are your armor in any IEP meeting. They're legally backed, professionally appropriate, and powerful enough to shift the entire conversation.\n\n1. \"I'd like that in writing.\"\n2. \"I don't agree. Please note my objection.\"\n3. \"What data supports that decision?\"\n4. \"I'm requesting an Independent Educational Evaluation.\"\n\nSwipe for when and how to use each one. Save this before your next meeting.",
+        igHashtags: "#IEP #iepadvocacy #parentrights #specialeducation #autismparenting #ieptips #autismfamily #specialneedsparenting #parentadvocacy #neurodivergent #autismacceptance #autismrights #autismcommunity #spectrumunlocked #knowyourrights",
+        tiktokCaption: "4 phrases that protect your IEP rights. Use them at your next meeting. They change everything.\n\n#autism #IEP #advocacy #parentrights #specialeducation #fyp"
+      },
+      84: {
+        title: "Parents report 3x higher stress",
+        folder: "day-84-parent-stress",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "Research shows autism parents experience 3x higher stress than parents of neurotypical children.\n\nThat's not a personality flaw. That's a systemic failure. Not enough support. Not enough respite. Not enough understanding.\n\nIf you're exhausted, burnt out, or running on empty, it's not because you're weak. It's because you're carrying more than anyone was designed to carry alone.\n\nYou deserve support. Full stop.",
+        igHashtags: "#autismparenting #parentstress #parentburnout #autismmom #autismdad #specialneedsparenting #autismfamily #caregiversupport #neurodivergent #autismacceptance #selfcare #autismcommunity #spectrumunlocked #youmatter #mentalhealth",
+        tiktokCaption: "Parents of autistic children report 3x higher stress. That's not weakness. That's a systemic failure in support.\n\n#autism #parentstress #autismparenting #realtalk #fyp"
+      },
+      85: {
+        title: "Workplace Accommodations Your Teen Should Know",
+        folder: "day-85-workplace-accommodations",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "Transition planning isn't just about college. It's about the workplace too.\n\nYour teen has the right to accommodations at work under the ADA. Noise-canceling headphones, written instructions, flexible scheduling, sensory-friendly spaces. But they need to know WHAT to ask for and HOW.\n\nSwipe for workplace accommodations every autistic teen should know about before their first job. Start the conversation now.\n\nTag a parent of a teen who needs to see this.",
+        igHashtags: "#transitionplanning #workplaceaccommodations #autismtransition #autismparenting #autismadult #ADA #autismfamily #specialneedsparenting #autismemployment #neurodivergent #autismacceptance #autismatwork #autismcommunity #spectrumunlocked #autismteen",
+        tiktokCaption: "Workplace accommodations your autistic teen should know about BEFORE their first job. ADA rights, what to ask for, and how.\n\n#autism #workplace #accommodations #transition #autismparenting #fyp"
+      },
+      86: {
+        title: "Sensory Seeking VS Sensory Avoiding",
+        folder: "day-86-seeking-vs-avoiding",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Sensory seeking and sensory avoiding are two sides of the same coin. Many kids do BOTH.\n\nSeekers crash, climb, spin, and touch everything. Avoiders cover ears, refuse certain textures, and flee from crowds. But here's the thing most people miss: the same child can be a seeker in one sense and an avoider in another.\n\nSwipe to understand the difference and how to support both. This changes everything.\n\nWhich does your child lean toward? Tell us below.",
+        igHashtags: "#sensoryseeking #sensoryavoiding #sensoryprocessing #autismparenting #sensoryfriendly #autismfamily #specialneedsparenting #occupationaltherapy #neurodivergent #autismacceptance #sensorykids #autismcommunity #spectrumunlocked #sensoryneeds #sensoryregulation",
+        tiktokCaption: "Sensory seeking VS sensory avoiding. Most kids do BOTH. Here's the difference and how to support each one.\n\n#autism #sensory #sensoryseeking #sensoryavoiding #autismparenting #fyp"
+      },
+      87: {
+        title: "Ultimate Back-to-School Checklist",
+        folder: "day-87-b2s-checklist",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "Back-to-school season is HERE. And for autism families, it takes more than shopping for supplies.\n\nThis is your ultimate checklist. From IEP review to teacher meetings to sensory prep to social stories. Everything you need to set your child up for the smoothest possible start.\n\nSwipe through all the steps. Save this. Print it. Check things off as you go. You've got this.\n\nWhat's your biggest back-to-school worry? Drop it below.",
+        igHashtags: "#backtoschool #b2s #autismparenting #autismschool #iepprep #autismfamily #specialneedsparenting #schoolprep #neurodivergent #autismacceptance #autismchecklist #autismcommunity #spectrumunlocked #schoolready #newschoolyear",
+        tiktokCaption: "Ultimate back-to-school checklist for autism families. IEP review, teacher meetings, sensory prep, and more. Save this.\n\n#autism #backtoschool #autismparenting #IEP #b2s #fyp"
+      },
+      88: {
+        title: "Getting to Know My Child Letter",
+        folder: "day-88-teacher-letter",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "The IEP tells the school what to do. This letter tells the teacher who your child IS.\n\nBefore the first day, send a 'Getting to Know My Child' letter to the new teacher. Include what makes your child laugh, what helps when they're overwhelmed, their strengths, their triggers, and the things no document captures.\n\nSwipe for a template and tips. This letter can change the entire school year.\n\nHave you sent one before? How did it go? Tell us below.",
+        igHashtags: "#backtoschool #teacherletter #autismparenting #autismschool #autismfamily #specialneedsparenting #newteacher #neurodivergent #autismacceptance #parentadvocacy #autismcommunity #spectrumunlocked #schoolyear #iepsupport #knowmychild",
+        tiktokCaption: "Send this letter to your child's new teacher before day 1. It tells them WHO your child is beyond the IEP.\n\n#autism #backtoschool #teacher #autismparenting #iep #fyp"
+      },
+      89: {
+        title: "August anxiety is real.",
+        folder: "day-89-august-anxiety",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "August anxiety is real. And it hits parents AND kids.\n\nWill the new teacher understand? Will the IEP be followed? Will there be meltdowns in the hallway? Will they make friends? Will someone be kind?\n\nThe questions loop on repeat. The worry starts now, even though school doesn't start for weeks. You're not overreacting. You're preparing. There's a difference.\n\nDrop an emoji if August anxiety has entered the chat for your family.",
+        igHashtags: "#autismparenting #augustanxiety #backtoschool #autismmom #autismdad #specialneedsparenting #autismfamily #schoolanxiety #neurodivergent #autismacceptance #parentanxiety #autismcommunity #spectrumunlocked #realtalk #anxietyisreal",
+        tiktokCaption: "August anxiety is real. Will the teacher understand? Will the IEP be followed? You're not overreacting. You're preparing.\n\n#autism #augustanxiety #backtoschool #autismparenting #fyp"
+      },
+      90: {
+        title: "Myth: IEP and 504 are basically the same",
+        folder: "day-90-iep-504-myth",
+        slides: 5,
+        slideNames: ['cover', 'myth', 'truth', 'context', 'cta'],
+        igCaption: "MYTH: An IEP and a 504 plan are basically the same thing.\n\nTRUTH: They are fundamentally different. An IEP is under IDEA, provides specialized instruction, has legal protections, and includes measurable goals. A 504 is under Section 504, provides accommodations only, and has fewer enforcement mechanisms.\n\nKnowing the difference could be the difference between your child getting real support or just a piece of paper.\n\nSwipe to learn which one your child actually needs. Save this.",
+        igHashtags: "#IEP #504plan #autismmyth #mythbuster #specialeducation #autismparenting #iepvs504 #autismfamily #specialneedsparenting #parentadvocacy #neurodivergent #autismacceptance #autismrights #autismcommunity #spectrumunlocked",
+        tiktokCaption: "IEP and 504 are NOT the same. One provides specialized instruction. The other is just accommodations. Know the difference.\n\n#autism #IEP #504plan #mythbuster #specialeducation #fyp"
+      },
+      91: {
+        title: "After-School Meltdowns",
+        folder: "day-91-afterschool-meltdowns",
+        slides: 6,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'content4', 'cta'],
+        igCaption: "They hold it together all day. And then they walk through the door and fall apart.\n\nAfter-school meltdowns aren't bad behavior. They're the crash after hours of masking, sensory overload, and social exhaustion. Your home is their safe space. You are their safe person.\n\nSwipe for what's really happening and what helps. This changes how you respond to the 3:30pm storm.\n\nDoes this happen in your house? Tell us your after-school routine below.",
+        igHashtags: "#afterschoolmeltdown #autismmeltdown #autismparenting #maskingautism #autismfamily #specialneedsparenting #schoolcrash #neurodivergent #autismacceptance #emotionregulation #autismcommunity #spectrumunlocked #sensoroverload #autismschool #safespace",
+        tiktokCaption: "After-school meltdowns explained. They held it together all day. You're their safe space to fall apart. Here's what helps.\n\n#autism #meltdown #afterschool #autismparenting #masking #fyp"
+      },
+      92: {
+        title: "The IEP is not a suggestion.",
+        folder: "day-92-iep-not-suggestion",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "Say it louder for the schools in the back: THE IEP IS NOT A SUGGESTION.\n\nIt is a legally binding document. Every accommodation, every service, every goal must be implemented. 'We don't have the resources' is not a valid excuse. 'We forgot' is not acceptable.\n\nIf it's in the IEP, it must be provided. Period. You have the right to enforce it.\n\nShare this with every parent heading into a new school year. They need to know.",
+        igHashtags: "#IEP #iepadvocacy #autismadvocacy #autismparenting #specialeducation #autismfamily #specialneedsparenting #parentrights #neurodivergent #autismacceptance #ieplaw #autismcommunity #spectrumunlocked #winfriday #autismrights",
+        tiktokCaption: "The IEP is not a suggestion. It's a legally binding document. Every service must be provided. Period.\n\n#autism #IEP #advocacy #specialeducation #autismparenting #fyp"
+      },
+      93: {
+        title: "When School Isn't Following the IEP",
+        folder: "day-93-iep-compliance",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "What do you do when the school isn't following the IEP? You escalate. Professionally.\n\nStep 1: Document everything in writing. Step 2: Request a meeting. Step 3: File a state complaint if needed. Step 4: Know your right to an attorney.\n\nMost schools respond when they realize the parent knows the process. Swipe for the exact steps and what to say at each stage.\n\nSave this. You might need it sooner than you think.",
+        igHashtags: "#IEP #iepcompliance #autismadvocacy #autismparenting #specialeducation #autismfamily #specialneedsparenting #parentadvocacy #neurodivergent #autismacceptance #iepfight #autismcommunity #spectrumunlocked #autismrights #knowyourrights",
+        tiktokCaption: "School not following the IEP? Here's how to escalate. Document, request meetings, file complaints. Know the process.\n\n#autism #IEP #advocacy #specialeducation #autismparenting #fyp"
+      },
+      94: {
+        title: "4 Accommodations to Request Before Day 1",
+        folder: "day-94-day1-accommodations",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "Don't wait until there's a problem. Request these accommodations BEFORE the first day of school.\n\n1. Early classroom tour (before the rush)\n2. Sensory breaks written into the schedule\n3. A safe person and safe space identified\n4. Communication plan between home and school\n\nThese aren't extras. They're the foundation for a successful year. Swipe for details on each and exactly how to request them.\n\nTag a parent prepping for the new school year.",
+        igHashtags: "#accommodations #backtoschool #autismparenting #IEP #autismfamily #specialneedsparenting #schoolprep #neurodivergent #autismacceptance #ieptips #autismcommunity #spectrumunlocked #newschoolyear #autismschool #quickwins",
+        tiktokCaption: "4 accommodations to request BEFORE day 1 of school. Don't wait for a problem. Set your child up now.\n\n#autism #backtoschool #accommodations #IEP #autismparenting #fyp"
+      },
+      95: {
+        title: "You are not a difficult parent.",
+        folder: "day-95-not-difficult",
+        slides: 3,
+        slideNames: ['cover', 'quote', 'cta'],
+        igCaption: "You are not a difficult parent. You are a parent dealing with a difficult system.\n\nWhen you ask questions, you're being thorough. When you push back, you're advocating. When you request documentation, you're protecting your child. When you show up informed, you're being responsible.\n\nDifficult parents don't exist. Informed parents do. And they scare systems that rely on parents not knowing their rights.\n\nShare this with a parent who needs to hear it today.",
+        igHashtags: "#autismadvocacy #parentadvocacy #autismparenting #notdifficult #autismmom #autismdad #specialneedsparenting #autismfamily #iepadvocacy #neurodivergent #autismacceptance #autismrights #autismcommunity #spectrumunlocked #realtalk",
+        tiktokCaption: "You're not a difficult parent. You're a parent dealing with a difficult system. Informed parents scare broken systems.\n\n#autism #advocacy #autismparenting #realtalk #parentrights #fyp"
+      },
+      96: {
+        title: "Build a Relationship with New Teacher",
+        folder: "day-96-teacher-relationship",
+        slides: 5,
+        slideNames: ['cover', 'tip1', 'tip2', 'tip3', 'cta'],
+        igCaption: "The relationship you build with your child's teacher in the first two weeks sets the tone for the entire year.\n\nLead with partnership, not confrontation. Share what works. Ask what they need. Offer to be a resource, not just a problem-reporter. Most teachers WANT to help. They just don't always know how.\n\nSwipe for 3 strategies to start the relationship right. This investment pays off all year.\n\nWhat's your best teacher relationship tip? Share below.",
+        igHashtags: "#backtoschool #teacherrelationship #autismparenting #autismschool #autismfamily #specialneedsparenting #newteacher #neurodivergent #autismacceptance #parentteacher #autismcommunity #spectrumunlocked #schoolstart #collaboration #iepsupport",
+        tiktokCaption: "Build the relationship with the new teacher in week 1. Lead with partnership, not confrontation. 3 strategies that work.\n\n#autism #backtoschool #teacher #autismparenting #school #fyp"
+      },
+      97: {
+        title: "Free Resource: School Email Templates",
+        folder: "day-97-email-templates",
+        slides: 4,
+        slideNames: ['cover', 'preview', 'details', 'cta'],
+        igCaption: "FREE RESOURCE: School Email Templates\n\nDon't know what to write to the school? We've got you covered. These templates cover everything:\n\nRequesting an IEP meeting. Reporting non-compliance. Introducing your child to a new teacher. Following up after a meeting. Requesting evaluations.\n\nProfessional, firm, and ready to send. Link in bio to download all templates.\n\nSave this post. You'll need these all year.",
+        igHashtags: "#freeresource #emailtemplates #IEP #specialeducation #autismparenting #iepadvocacy #autismfamily #specialneedsparenting #parentadvocacy #neurodivergent #autismacceptance #autismrights #autismcommunity #spectrumunlocked #freedownload",
+        tiktokCaption: "FREE school email templates. IEP meetings, non-compliance, teacher intros, follow-ups. Professional and ready to send.\n\n#autism #IEP #freeresource #specialeducation #autismparenting #fyp"
+      },
+      98: {
+        title: "90-Day Recap: Everything We Built",
+        folder: "day-98-90day-recap",
+        slides: 5,
+        slideNames: ['cover', 'content1', 'content2', 'content3', 'cta'],
+        igCaption: "DAY 98. We made it. 90 days of showing up, learning, and building a community.\n\nLook at what we've done together:\n38 posts covering communication, advocacy, sensory support, IEP rights, self-care, marriage, travel, transition planning, and so much more.\n\n13 reels bringing these topics to life.\n3 free resources you can use forever.\nCountless conversations that changed perspectives.\n\nThis isn't the end. This is the foundation. Everything we built here continues. The content stays. The community grows. The advocacy doesn't stop.\n\nThank you for being here. Thank you for sharing. Thank you for fighting for your kids.\n\nWhat was YOUR favorite post from the 90 days? Drop it below. Let's celebrate together.\n\nSave the series. Share it. Keep coming back.",
+        igHashtags: "#autismacceptance #autismcommunity #90daychallenge #autismparenting #autismfamily #neurodivergent #autismadvocacy #specialneedsparenting #autismpride #differentnotless #autismlove #celebrateautism #autismcommunity #spectrumunlocked #thejourneycontinues",
+        tiktokCaption: "90 days. 38 posts. 13 reels. 3 free resources. Countless conversations. We built something real. Thank you for being here.\n\n#autism #90days #autismcommunity #autismparenting #celebration #fyp"
+      }
+    };
+
+    const reelData = {
+      62: {
+        title: "Sensory-Friendly Summer Activities",
+        folder: "day-62-sensory-summer-reel",
+        slides: 5,
+        slideNames: ['hook', 'activity1', 'activity2', 'activity3', 'cta'],
+        tiktokCaption: "5 sensory-friendly summer activities that cost NOTHING. Seekers and avoiders welcome.\n\n#autism #sensory #summer #sensoryfriendly #autismparenting #fyp"
+      },
+      65: {
+        title: "AAC Everywhere (Reel)",
+        folder: "day-65-aac-everywhere-reel",
+        slides: 5,
+        slideNames: ['hook', 'pool', 'park', 'playground', 'cta'],
+        tiktokCaption: "AAC at the pool, park, and playground. Communication doesn't stop at the door.\n\n#autism #AAC #communication #summer #autismparenting #fyp"
+      },
+      67: {
+        title: "ESY Explained (Reel)",
+        folder: "day-67-esy-reel",
+        slides: 5,
+        slideNames: ['hook', 'what', 'qualify', 'ask', 'cta'],
+        tiktokCaption: "ESY: Extended School Year. Does your child qualify? Most parents don't know this exists.\n\n#autism #ESY #IEP #specialeducation #autismparenting #fyp"
+      },
+      71: {
+        title: "Autism and Marriage (Reel)",
+        folder: "day-71-marriage-reel",
+        slides: 6,
+        slideNames: ['hook', 'grief', 'disconnect', 'reconnect', 'strategies', 'cta'],
+        tiktokCaption: "What happens to marriages after an autism diagnosis? The real talk nobody is having.\n\n#autism #marriage #autismparenting #realtalk #couples #fyp"
+      },
+      73: {
+        title: "Airport Travel Tips (Reel)",
+        folder: "day-73-airport-reel",
+        slides: 5,
+        slideNames: ['hook', 'prep', 'security', 'boarding', 'cta'],
+        tiktokCaption: "Airport travel with an autistic child. TSA Cares, sensory prep, and the boarding trick.\n\n#autism #travel #airport #autismparenting #sensoryfriendly #fyp"
+      },
+      75: {
+        title: "Independence Reframed (Reel)",
+        folder: "day-75-independence-reel",
+        slides: 5,
+        slideNames: ['hook', 'myth', 'truth', 'examples', 'cta'],
+        tiktokCaption: "Independence doesn't mean doing it alone. Happy 4th. Here's a reframe.\n\n#autism #independence #july4th #realtalk #autismparenting #fyp"
+      },
+      77: {
+        title: "Calm-Down Corner (Reel)",
+        folder: "day-77-calm-corner-reel",
+        slides: 5,
+        slideNames: ['hook', 'what', 'items', 'introduce', 'cta'],
+        tiktokCaption: "How to build a calm-down corner that your kid will actually USE. It's not a time-out spot.\n\n#autism #sensory #calmdown #regulation #autismparenting #fyp"
+      },
+      81: {
+        title: "IEP Journey (Reel)",
+        folder: "day-81-iep-journey-reel",
+        slides: 5,
+        slideNames: ['hook', 'before', 'now', 'growth', 'cta'],
+        tiktokCaption: "A year ago I didn't know what an IEP was. Now I fight for one. Look how far you've come.\n\n#autism #IEP #advocacy #growth #autismparenting #fyp"
+      },
+      83: {
+        title: "IEP Rights Phrases (Reel)",
+        folder: "day-83-iep-phrases-reel",
+        slides: 6,
+        slideNames: ['hook', 'phrase1', 'phrase2', 'phrase3', 'phrase4', 'cta'],
+        tiktokCaption: "4 phrases that protect your IEP rights. Use them at your next meeting.\n\n#autism #IEP #rights #advocacy #specialeducation #fyp"
+      },
+      86: {
+        title: "Seeking vs Avoiding (Reel)",
+        folder: "day-86-seeking-avoiding-reel",
+        slides: 5,
+        slideNames: ['hook', 'seeking', 'avoiding', 'both', 'cta'],
+        tiktokCaption: "Sensory seeking vs sensory avoiding. Most kids do BOTH. Here's the difference.\n\n#autism #sensory #sensoryseeking #sensoryavoiding #autismparenting #fyp"
+      },
+      87: {
+        title: "Back-to-School Checklist (Reel)",
+        folder: "day-87-b2s-reel",
+        slides: 6,
+        slideNames: ['hook', 'iep', 'teacher', 'sensory', 'social', 'cta'],
+        tiktokCaption: "Ultimate back-to-school checklist for autism families. Don't miss any of these steps.\n\n#autism #backtoschool #b2s #autismparenting #checklist #fyp"
+      },
+      91: {
+        title: "After-School Meltdowns (Reel)",
+        folder: "day-91-meltdown-reel",
+        slides: 6,
+        slideNames: ['hook', 'why', 'masking', 'crash', 'helps', 'cta'],
+        tiktokCaption: "After-school meltdowns explained. They held it together all day. Home is where they can finally let go.\n\n#autism #meltdown #afterschool #masking #autismparenting #fyp"
+      },
+      94: {
+        title: "Day 1 Accommodations (Reel)",
+        folder: "day-94-accommodations-reel",
+        slides: 6,
+        slideNames: ['hook', 'tour', 'breaks', 'safeperson', 'communication', 'cta'],
+        tiktokCaption: "4 accommodations to request before day 1 of school. Don't wait for a crisis.\n\n#autism #accommodations #backtoschool #IEP #autismparenting #fyp"
+      },
+      98: {
+        title: "90-Day Recap (Reel)",
+        folder: "day-98-recap-reel",
+        slides: 5,
+        slideNames: ['hook', 'highlights', 'stats', 'thankyou', 'cta'],
+        tiktokCaption: "90 days. 38 posts. 13 reels. We built something incredible together. Thank you.\n\n#autism #90days #community #autismparenting #celebration #fyp"
+      }
+    };
+
+    let currentDayData = null;
+    let currentSlideUrls = [];
+
+    function openDay(dayNum) {
+      const data = dayData[dayNum];
+      if (!data) {
+        alert('Content coming soon! This day is planned but not yet built.');
+        return;
+      }
+
+      currentDayData = data;
+      currentSlideUrls = [];
+
+      document.getElementById('modal-day-num').textContent = dayNum;
+      document.getElementById('modal-title').textContent = data.title;
+
+      // Set captions (preserve copy buttons)
+      const igCaptionEl = document.getElementById('modal-ig-caption');
+      const tiktokCaptionEl = document.getElementById('modal-tiktok-caption');
+      igCaptionEl.childNodes[0].textContent = data.igCaption;
+      tiktokCaptionEl.childNodes[0].textContent = data.tiktokCaption;
+
+      document.getElementById('modal-ig-hashtags').textContent = data.igHashtags;
+
+      // Update character & hashtag counters
+      updateCaptionStats(data.igCaption, data.igHashtags, 'ig-caption-stats');
+      updateCaptionStats(data.tiktokCaption, '', 'tiktok-caption-stats');
+
+      document.getElementById('modal-folder-link').href = `content/${data.folder}/`;
+      document.getElementById('modal-captions-link').href = `content/${data.folder}/captions.md`;
+
+      // Load slides
+      const slidesContainer = document.getElementById('modal-slides');
+      slidesContainer.innerHTML = '';
+      const names = data.slideNames || [];
+      for (let i = 1; i <= data.slides; i++) {
+        const slideNum = i.toString().padStart(2, '0');
+        const slideName = names[i-1] || `slide-${slideNum}`;
+        const imgUrl = `content/${data.folder}/slide-${slideNum}-${slideName}.png`;
+        const fileName = `day-${dayNum}-slide-${slideNum}-${slideName}.png`;
+
+        currentSlideUrls.push({ url: imgUrl, name: fileName });
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'slide-wrapper';
+
+        const link = document.createElement('a');
+        link.href = imgUrl;
+        link.download = fileName;
+        link.title = `Click to download Slide ${i}`;
+
+        const img = document.createElement('img');
+        img.src = imgUrl;
+        img.alt = `Slide ${i} - Click to download`;
+        img.onerror = function() {
+          this.style.display = 'none';
+        };
+
+        link.appendChild(img);
+        wrapper.appendChild(link);
+
+        // Add edit button
+        const editBtn = document.createElement('button');
+        editBtn.className = 'edit-btn';
+        editBtn.textContent = 'Edit';
+        editBtn.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const editUrl = `html-editor.html?day=${dayNum}&slide=${i}&folder=${encodeURIComponent(data.folder)}&slides=${data.slides}`;
+          window.open(editUrl, '_blank');
+        };
+        wrapper.appendChild(editBtn);
+
+        slidesContainer.appendChild(wrapper);
+      }
+
+      // Check if this day has reel content
+      const reelSection = document.getElementById('modal-reel-section');
+      const reelSlidesContainer = document.getElementById('modal-reel-slides');
+      const reelCaptionEl = document.getElementById('modal-reel-caption');
+
+      if (reelData[dayNum]) {
+        const reel = reelData[dayNum];
+        reelSection.style.display = 'block';
+        reelSlidesContainer.innerHTML = '';
+
+        for (let i = 1; i <= reel.slides; i++) {
+          const slideNum = i.toString().padStart(2, '0');
+          const slideName = reel.slideNames[i-1] || `slide-${slideNum}`;
+          const imgUrl = `content/${reel.folder}/slide-${slideNum}-${slideName}.png`;
+          const fileName = `reel-day-${dayNum}-slide-${slideNum}-${slideName}.png`;
+
+          const wrapper = document.createElement('div');
+          wrapper.className = 'slide-wrapper';
+
+          const link = document.createElement('a');
+          link.href = imgUrl;
+          link.download = fileName;
+          link.title = `Click to download Reel Slide ${i}`;
+
+          const img = document.createElement('img');
+          img.src = imgUrl;
+          img.alt = `Reel Slide ${i}`;
+          img.style.height = '250px';
+          img.onerror = function() { this.style.display = 'none'; };
+
+          link.appendChild(img);
+          wrapper.appendChild(link);
+          reelSlidesContainer.appendChild(wrapper);
+        }
+
+        reelCaptionEl.textContent = reel.tiktokCaption || '';
+      } else {
+        reelSection.style.display = 'none';
+      }
+
+      document.getElementById('modal').classList.add('active');
+    }
+
+    function copyCaption(elementId) {
+      const el = document.getElementById(elementId);
+      const text = el.childNodes[0].textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = el.querySelector('.copy-btn');
+        const original = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#27AE60';
+        setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 2000);
+      });
+    }
+
+    function updateCaptionStats(text, hashtags, statsElId) {
+      const statsEl = document.getElementById(statsElId);
+      const charLen = text.length;
+      let charClass = 'char-count';
+      if (charLen > 2200) charClass += ' over';
+      else if (charLen >= 2000) charClass += ' warn';
+
+      const allText = text + (hashtags ? ' ' + hashtags : '');
+      const hashtagMatches = allText.match(/#\w+/g) || [];
+      const hashtagNum = hashtagMatches.length;
+      let htClass = 'hashtag-count';
+      if (hashtagNum < 3) htClass += ' low';
+      else if (hashtagNum > 5) htClass += ' high';
+
+      statsEl.innerHTML = `<span class="${charClass}">${charLen} chars</span><span class="${htClass}">${hashtagNum} hashtags</span>`;
+    }
+
+    async function downloadAllSlides() {
+      if (!currentSlideUrls.length) return;
+
+      const btn = document.getElementById('modal-download-all');
+      const originalText = btn.textContent;
+      btn.textContent = 'Downloading...';
+      btn.disabled = true;
+
+      for (let i = 0; i < currentSlideUrls.length; i++) {
+        const slide = currentSlideUrls[i];
+        try {
+          const response = await fetch(slide.url);
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = slide.name;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);
+          await new Promise(r => setTimeout(r, 300));
+        } catch (e) {
+          console.error('Failed to download:', slide.name, e);
+        }
+      }
+
+      btn.textContent = 'Downloaded!';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 2000);
+    }
+
+    function closeModal(event) {
+      if (!event || event.target.id === 'modal') {
+        document.getElementById('modal').classList.remove('active');
+      }
+    }
+
+    function scrollToPhase(phase) {
+      document.querySelectorAll('.phase-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.phase-btn.phase-${phase}`).classList.add('active');
+      document.getElementById(`phase-${phase}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Close modal on escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Initialize caption text nodes
+    document.addEventListener('DOMContentLoaded', () => {
+      const igCaption = document.getElementById('modal-ig-caption');
+      const tiktokCaption = document.getElementById('modal-tiktok-caption');
+      // Ensure text node is first child
+      if (igCaption.childNodes[0].nodeType !== 3) {
+        igCaption.insertBefore(document.createTextNode(''), igCaption.firstChild);
+      }
+      if (tiktokCaption.childNodes[0].nodeType !== 3) {
+        tiktokCaption.insertBefore(document.createTextNode(''), tiktokCaption.firstChild);
+      }
+    });
+  </script>
+</body>
+</html>

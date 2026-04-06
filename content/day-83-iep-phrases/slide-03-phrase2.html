@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; right: -100px; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 16px; opacity: 0.4; letter-spacing: 2px; }
+    .cards {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 960px;
+    }
+    .card {
+      border-radius: 24px; padding: 35px; text-align: center;
+    }
+    .card-top {
+      background: rgba(74, 144, 164, 0.1);
+      border: 2px solid rgba(74, 144, 164, 0.3);
+    }
+    .card-bottom {
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+    }
+    .phrase-num {
+      background: linear-gradient(135deg, #E8B86D 0%, #F39C12 100%);
+      color: #1a1a2e;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; font-weight: 800;
+      margin: 0 auto 20px;
+    }
+    .phrase-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px; font-weight: 700;
+      color: #E8B86D;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+    .why-text {
+      font-size: 19px; line-height: 1.45;
+      opacity: 0.85;
+    }
+    .why-text strong { color: #4A90A4; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="slide-num">2 / 4</div>
+
+  <div class="cards">
+    <div class="card card-top">
+      <div class="phrase-num">2</div>
+      <div class="phrase-text">"Show me the data."</div>
+      <div class="why-text">Schools must track progress with <strong>measurable data</strong>. If they can't show you data, the goals aren't being monitored. You have the right to see it.</div>
+    </div>
+    <div class="card card-bottom">
+      <div class="phrase-num">3</div>
+      <div class="phrase-text">"I'd like to bring an advocate."</div>
+      <div class="why-text">You have the legal right to bring <strong>anyone to support you</strong> — an advocate, friend, or family member. This levels the playing field.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

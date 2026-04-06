@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 94 - Accommodations Before Day 1 | CTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1350px; overflow: hidden; }
+  .slide {
+    width: 1080px; height: 1350px;
+    background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;
+    padding: 60px 70px;
+  }
+  .cta-box {
+    background: linear-gradient(135deg, #E8B86D, #d4a85d);
+    border-radius: 30px; padding: 60px 50px; text-align: center;
+    max-width: 900px; width: 100%;
+  }
+  .cta-question {
+    font-size: 36px; font-weight: 800; color: #1a1a2e;
+    margin-bottom: 15px; line-height: 1.3;
+  }
+  .cta-sub {
+    font-size: 22px; color: rgba(26,26,46,0.7); margin-bottom: 40px; line-height: 1.5;
+  }
+  .action-row { display: flex; justify-content: center; gap: 50px; }
+  .action-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .action-item .icon { font-size: 40px; }
+  .action-item .label {
+    font-size: 18px; font-weight: 700; color: #1a1a2e;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 0; right: 0; text-align: center;
+    color: rgba(255,255,255,0.3); font-size: 16px; font-weight: 600; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="cta-box">
+    <div class="cta-question">Which accommodation is your priority?</div>
+    <div class="cta-sub">Save this list and bring it to your next IEP meeting.</div>
+    <div class="action-row">
+      <div class="action-item"><div class="icon">💾</div><div class="label">Save</div></div>
+      <div class="action-item"><div class="icon">🔄</div><div class="label">Share</div></div>
+      <div class="action-item"><div class="icon">➕</div><div class="label">Follow</div></div>
+    </div>
+  </div>
+  <div class="brand">@spectrum_unlocked</div>
+</div>
+</body>
+</html>

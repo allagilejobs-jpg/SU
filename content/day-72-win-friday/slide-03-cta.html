@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide { width: 1080px; height: 1350px; background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%); padding: 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif; color: white; text-align: center; position: relative; overflow: hidden; }
+    .slide::before { content: ''; position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: #E8B86D; border-radius: 50%; opacity: 0.08; }
+    .slide::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 200px; height: 200px; background: #4A90A4; border-radius: 50%; opacity: 0.06; }
+    .cta-box { background: linear-gradient(135deg, rgba(232, 184, 109, 0.2), rgba(232, 184, 109, 0.05)); border: 2px solid #E8B86D; border-radius: 24px; padding: 50px 40px; max-width: 900px; position: relative; z-index: 1; margin-bottom: 40px; }
+    .cta-question { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 800; color: #E8B86D; margin-bottom: 20px; line-height: 1.2; }
+    .cta-text { font-size: 24px; opacity: 0.9; line-height: 1.5; }
+    .action-row { display: flex; gap: 40px; margin-bottom: 40px; position: relative; z-index: 1; }
+    .action-item { font-size: 20px; font-weight: 700; color: #4A90A4; display: flex; align-items: center; gap: 8px; }
+    .brand { position: absolute; bottom: 30px; font-size: 16px; font-weight: 600; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="cta-box">
+      <div class="cta-question">What's YOUR win this week?</div>
+      <div class="cta-text">Big or small — drop it below. We're celebrating ALL of them. 🏆</div>
+    </div>
+    <div class="action-row">
+      <div class="action-item">💾 Save this</div>
+      <div class="action-item">🔁 Share with a parent</div>
+      <div class="action-item">➕ Follow for more</div>
+    </div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

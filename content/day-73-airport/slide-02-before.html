@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide { width: 1080px; height: 1350px; background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%); padding: 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif; color: white; text-align: center; position: relative; }
+    .slide-num { position: absolute; top: 30px; right: 30px; font-size: 16px; opacity: 0.4; }
+    .card { background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 40px; max-width: 900px; width: 100%; }
+    .card-emoji { font-size: 70px; margin-bottom: 15px; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 800; color: #E8B86D; margin-bottom: 20px; }
+    .checklist { text-align: left; }
+    .checklist-item { font-size: 22px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: flex-start; gap: 12px; }
+    .checklist-item:last-child { border-bottom: none; }
+    .check-icon { color: #27AE60; font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .brand { position: absolute; bottom: 30px; font-size: 16px; font-weight: 600; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide-num">2 / 5</div>
+    <div class="card">
+      <div class="card-emoji">📋</div>
+      <div class="card-title">Before the Trip</div>
+      <div class="checklist">
+        <div class="checklist-item"><span class="check-icon">✓</span> Watch YouTube videos of airports and planes together</div>
+        <div class="checklist-item"><span class="check-icon">✓</span> Create a visual social story about the trip</div>
+        <div class="checklist-item"><span class="check-icon">✓</span> Contact the airline about disability assistance</div>
+        <div class="checklist-item"><span class="check-icon">✓</span> Request TSA Cares helpline (855-787-2227) for screening support</div>
+        <div class="checklist-item"><span class="check-icon">✓</span> Pack a sensory kit: headphones, fidgets, chewy, comfort item</div>
+        <div class="checklist-item"><span class="check-icon">✓</span> Practice wearing headphones and sitting in a small space</div>
+      </div>
+    </div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

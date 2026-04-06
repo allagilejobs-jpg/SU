@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 88 - Getting to Know My Child Letter | Template</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1350px; overflow: hidden; }
+  .slide {
+    width: 1080px; height: 1350px;
+    background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;
+    padding: 60px 70px;
+  }
+  .slide-num {
+    position: absolute; top: 40px; right: 50px;
+    color: rgba(255,255,255,0.2); font-size: 18px; font-weight: 700;
+  }
+  .emoji { font-size: 80px; margin-bottom: 25px; }
+  .title {
+    font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700;
+    color: #E8B86D; text-align: center; margin-bottom: 30px; line-height: 1.2;
+  }
+  .template-box {
+    background: rgba(232, 184, 109, 0.08); border: 2px solid rgba(232, 184, 109, 0.25);
+    border-radius: 24px; padding: 40px 45px; max-width: 880px; width: 100%;
+  }
+  .template-section {
+    margin-bottom: 22px; padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .template-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .section-label {
+    font-size: 18px; font-weight: 700; color: #E8B86D;
+    text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;
+  }
+  .section-text {
+    font-size: 21px; color: rgba(255,255,255,0.7); line-height: 1.5; font-style: italic;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 0; right: 0; text-align: center;
+    color: rgba(255,255,255,0.3); font-size: 16px; font-weight: 600; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="slide-num">4 / 5</div>
+  <div class="emoji">📋</div>
+  <div class="title">Template Structure</div>
+  <div class="template-box">
+    <div class="template-section">
+      <div class="section-label">Opening</div>
+      <div class="section-text">"Hi [Teacher], I'm [Name]'s parent. I wanted to share a few things about them..."</div>
+    </div>
+    <div class="template-section">
+      <div class="section-label">Who They Are</div>
+      <div class="section-text">Personality, interests, what makes them smile</div>
+    </div>
+    <div class="template-section">
+      <div class="section-label">What Helps</div>
+      <div class="section-text">Strategies, accommodations, calming techniques</div>
+    </div>
+    <div class="template-section">
+      <div class="section-label">What's Hard</div>
+      <div class="section-text">Triggers, sensory challenges, transitions</div>
+    </div>
+    <div class="template-section">
+      <div class="section-label">Closing</div>
+      <div class="section-text">"I'm looking forward to working together this year. Please reach out anytime."</div>
+    </div>
+  </div>
+  <div class="brand">@spectrum_unlocked</div>
+</div>
+</body>
+</html>

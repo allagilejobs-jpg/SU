@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 96 - New Teacher Relationship | First Approach</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1350px; overflow: hidden; }
+  .slide {
+    width: 1080px; height: 1350px;
+    background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;
+    padding: 60px 70px;
+  }
+  .slide-num {
+    position: absolute; top: 40px; right: 50px;
+    color: rgba(255,255,255,0.2); font-size: 18px; font-weight: 700;
+  }
+  .emoji { font-size: 80px; margin-bottom: 25px; }
+  .title {
+    font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700;
+    color: #E8B86D; text-align: center; margin-bottom: 30px; line-height: 1.2;
+  }
+  .content-box {
+    background: rgba(74, 144, 164, 0.12); border: 2px solid rgba(74, 144, 164, 0.3);
+    border-radius: 24px; padding: 35px 40px; max-width: 880px; width: 100%;
+  }
+  .item {
+    display: flex; align-items: flex-start; gap: 18px; margin-bottom: 22px;
+  }
+  .item:last-child { margin-bottom: 0; }
+  .item .bullet { font-size: 28px; flex-shrink: 0; }
+  .item .text { font-size: 24px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+  .item .text strong { color: #4A90A4; }
+  .brand {
+    position: absolute; bottom: 40px; left: 0; right: 0; text-align: center;
+    color: rgba(255,255,255,0.3); font-size: 16px; font-weight: 600; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="slide-num">1 / 4</div>
+  <div class="emoji">🤝</div>
+  <div class="title">The First Approach</div>
+  <div class="content-box">
+    <div class="item">
+      <div class="bullet">💛</div>
+      <div class="text"><strong>Assume good intent.</strong> Most teachers want to help. They may just not know how yet.</div>
+    </div>
+    <div class="item">
+      <div class="bullet">⭐</div>
+      <div class="text"><strong>Lead with strengths.</strong> Tell them what your child is great at before you list the challenges.</div>
+    </div>
+    <div class="item">
+      <div class="bullet">📧</div>
+      <div class="text"><strong>Reach out first.</strong> Don't wait for back-to-school night. Send a warm email before day one.</div>
+    </div>
+    <div class="item">
+      <div class="bullet">🙏</div>
+      <div class="text"><strong>Express gratitude early.</strong> "Thank you for taking the time to learn about my child" goes a long way.</div>
+    </div>
+  </div>
+  <div class="brand">@spectrum_unlocked</div>
+</div>
+</body>
+</html>

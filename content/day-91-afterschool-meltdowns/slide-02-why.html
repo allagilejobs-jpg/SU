@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 91 - After-School Meltdowns | Why They Happen</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1350px; overflow: hidden; }
+  .slide {
+    width: 1080px; height: 1350px;
+    background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;
+    padding: 60px 70px;
+  }
+  .slide-num {
+    position: absolute; top: 40px; right: 50px;
+    color: rgba(255,255,255,0.2); font-size: 18px; font-weight: 700;
+  }
+  .emoji { font-size: 80px; margin-bottom: 25px; }
+  .title {
+    font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700;
+    color: #E8B86D; text-align: center; margin-bottom: 30px; line-height: 1.2;
+  }
+  .description {
+    font-size: 24px; color: rgba(255,255,255,0.7); text-align: center;
+    max-width: 800px; line-height: 1.5; margin-bottom: 30px;
+  }
+  .content-box {
+    background: rgba(74, 144, 164, 0.12); border: 2px solid rgba(74, 144, 164, 0.3);
+    border-radius: 24px; padding: 35px 40px; max-width: 880px; width: 100%;
+  }
+  .reason {
+    display: flex; align-items: flex-start; gap: 18px; margin-bottom: 22px;
+  }
+  .reason:last-child { margin-bottom: 0; }
+  .reason .icon { font-size: 36px; flex-shrink: 0; }
+  .reason .text { font-size: 24px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+  .reason .text strong { color: #4A90A4; }
+  .brand {
+    position: absolute; bottom: 40px; left: 0; right: 0; text-align: center;
+    color: rgba(255,255,255,0.3); font-size: 16px; font-weight: 600; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="slide-num">1 / 5</div>
+  <div class="emoji">🧠</div>
+  <div class="title">Why They Happen</div>
+  <div class="description">Your child isn't misbehaving. They're decompressing.</div>
+  <div class="content-box">
+    <div class="reason">
+      <div class="icon">🎭</div>
+      <div class="text"><strong>Masking all day</strong> — Holding it together at school takes enormous energy. Home is where the mask comes off.</div>
+    </div>
+    <div class="reason">
+      <div class="icon">🔊</div>
+      <div class="text"><strong>Sensory overload</strong> — Fluorescent lights, noise, crowds, scratchy clothes. By 3pm, their system is maxed out.</div>
+    </div>
+    <div class="reason">
+      <div class="icon">🔋</div>
+      <div class="text"><strong>Demand fatigue</strong> — Following rules, sitting still, switching tasks all day depletes every reserve they have.</div>
+    </div>
+  </div>
+  <div class="brand">@spectrum_unlocked</div>
+</div>
+</body>
+</html>

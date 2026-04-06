@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; left: -100px; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 16px; opacity: 0.4; letter-spacing: 2px; }
+    .phrase-num {
+      background: linear-gradient(135deg, #E8B86D 0%, #F39C12 100%);
+      color: #1a1a2e;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; font-weight: 800;
+      margin-bottom: 40px;
+    }
+    .phrase-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px; font-weight: 800;
+      color: #E8B86D;
+      line-height: 1.2;
+      margin-bottom: 40px;
+      max-width: 850px;
+      padding: 30px 40px;
+      background: rgba(232, 184, 109, 0.08);
+      border: 2px solid rgba(232, 184, 109, 0.2);
+      border-radius: 20px;
+    }
+    .why-title {
+      font-size: 20px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 3px;
+      color: #4A90A4; margin-bottom: 20px;
+    }
+    .why-text {
+      font-size: 24px; line-height: 1.5;
+      opacity: 0.9; max-width: 800px;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="slide-num">1 / 4</div>
+
+  <div class="phrase-num">1</div>
+
+  <div class="phrase-text">
+    "Put that in writing."
+  </div>
+
+  <div class="why-title">Why It's Powerful</div>
+  <div class="why-text">
+    If the school won't put a decision or refusal in writing, they know it won't hold up. Written documentation creates accountability and a paper trail you can reference later.
+  </div>
+
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

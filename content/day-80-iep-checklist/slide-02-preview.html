@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #27AE60; top: -100px; right: -100px; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 16px; opacity: 0.4; letter-spacing: 2px; }
+    .free-tag {
+      background: #27AE60;
+      color: white;
+      padding: 8px 20px; border-radius: 20px;
+      font-size: 14px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-top: 20px; margin-bottom: 25px;
+    }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px; font-weight: 800;
+      color: #E8B86D; margin-bottom: 30px;
+    }
+    .preview-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+      border-radius: 24px;
+      padding: 35px; max-width: 900px; text-align: left;
+    }
+    .preview-title {
+      font-size: 22px; font-weight: 700;
+      color: #E8B86D; margin-bottom: 20px;
+      text-align: center;
+    }
+    .section-label {
+      font-size: 18px; font-weight: 700;
+      color: #4A90A4; margin-top: 20px; margin-bottom: 12px;
+      text-transform: uppercase; letter-spacing: 2px;
+    }
+    .check-row {
+      display: flex; align-items: center; gap: 15px;
+      font-size: 20px; margin-bottom: 10px; opacity: 0.85;
+    }
+    .checkbox {
+      width: 24px; height: 24px;
+      border: 2px solid rgba(232, 184, 109, 0.5);
+      border-radius: 6px; flex-shrink: 0;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="slide-num">1 / 3</div>
+
+  <div class="free-tag">PREVIEW</div>
+
+  <div class="title">What's Inside</div>
+
+  <div class="preview-box">
+    <div class="preview-title">IEP Meeting Prep Checklist</div>
+
+    <div class="section-label">Before the Meeting</div>
+    <div class="check-row"><div class="checkbox"></div> Review current IEP goals and progress</div>
+    <div class="check-row"><div class="checkbox"></div> Write your parent concerns statement</div>
+    <div class="check-row"><div class="checkbox"></div> Gather work samples and data</div>
+    <div class="check-row"><div class="checkbox"></div> Prepare questions for the team</div>
+
+    <div class="section-label">During the Meeting</div>
+    <div class="check-row"><div class="checkbox"></div> Request Prior Written Notice for decisions</div>
+    <div class="check-row"><div class="checkbox"></div> Take notes or bring a support person</div>
+    <div class="check-row"><div class="checkbox"></div> Don't sign anything you haven't read</div>
+
+    <div class="section-label">After the Meeting</div>
+    <div class="check-row"><div class="checkbox"></div> Send follow-up email confirming decisions</div>
+    <div class="check-row"><div class="checkbox"></div> Set calendar reminders for deadlines</div>
+  </div>
+
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

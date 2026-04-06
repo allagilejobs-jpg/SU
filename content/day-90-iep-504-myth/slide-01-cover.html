@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 90 - IEP vs 504 Myth | Cover</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1350px; overflow: hidden; }
+  .slide {
+    width: 1080px; height: 1350px;
+    background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;
+  }
+  .slide::before {
+    content: ''; position: absolute; top: -80px; right: -80px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: #E8B86D; opacity: 0.08;
+  }
+  .slide::after {
+    content: ''; position: absolute; bottom: -60px; left: -60px;
+    width: 200px; height: 200px; border-radius: 50%;
+    background: #4A90A4; opacity: 0.06;
+  }
+  .badge {
+    background: rgba(231, 76, 60, 0.2); border: 1px solid rgba(231, 76, 60, 0.4);
+    padding: 10px 28px; border-radius: 50px; color: #E74C3C;
+    font-size: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 30px; position: relative; z-index: 1;
+  }
+  .day-label {
+    color: rgba(255,255,255,0.5); font-size: 18px; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px;
+    position: relative; z-index: 1;
+  }
+  .emoji-row { font-size: 60px; margin-bottom: 25px; position: relative; z-index: 1; }
+  .main-title {
+    font-family: 'Playfair Display', serif; font-size: 62px; font-weight: 700;
+    color: #FFFFFF; text-align: center; line-height: 1.2;
+    max-width: 850px; margin-bottom: 20px; position: relative; z-index: 1;
+  }
+  .main-title span { color: #E8B86D; }
+  .subtitle {
+    font-size: 24px; color: rgba(255,255,255,0.7); text-align: center;
+    max-width: 700px; line-height: 1.5; margin-bottom: 50px;
+    position: relative; z-index: 1;
+  }
+  .swipe-indicator {
+    display: flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.4); font-size: 16px; font-weight: 600;
+    position: relative; z-index: 1;
+  }
+  .swipe-indicator span { font-size: 20px; }
+  .brand {
+    position: absolute; bottom: 40px; left: 0; right: 0; text-align: center;
+    color: rgba(255,255,255,0.3); font-size: 16px; font-weight: 600; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="badge">Myth Buster</div>
+  <div class="day-label">Day 90 of 90</div>
+  <div class="emoji-row">🚫📄⚖️</div>
+  <div class="main-title">IEP vs 504:<br><span>Myth Busted</span></div>
+  <div class="subtitle">They are NOT the same thing. Here's what you need to know.</div>
+  <div class="swipe-indicator">Swipe for the truth <span>&rarr;</span></div>
+  <div class="brand">@spectrum_unlocked</div>
+</div>
+</body>
+</html>

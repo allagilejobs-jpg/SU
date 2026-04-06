@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 300px; height: 300px; background: #E74C3C; top: -80px; left: -80px; }
+    .bg-shape-2 { width: 300px; height: 300px; background: #4A90A4; top: -80px; right: -80px; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 16px; opacity: 0.4; letter-spacing: 2px; }
+    .vs-circle {
+      width: 100px; height: 100px;
+      background: linear-gradient(135deg, #E8B86D 0%, #F39C12 100%);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px; font-weight: 800;
+      color: #1a1a2e;
+      margin-top: 20px; margin-bottom: 30px;
+    }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 800;
+      color: #E8B86D; margin-bottom: 30px;
+    }
+    .description {
+      font-size: 24px; line-height: 1.5; opacity: 0.9;
+      margin-bottom: 30px; max-width: 900px;
+    }
+    .split-box {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 950px;
+      border-radius: 20px; overflow: hidden; margin-bottom: 30px;
+    }
+    .split-left {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid rgba(231, 76, 60, 0.25);
+      border-right: none;
+      border-radius: 20px 0 0 20px;
+      padding: 25px; text-align: left;
+    }
+    .split-right {
+      background: rgba(74, 144, 164, 0.1);
+      border: 2px solid rgba(74, 144, 164, 0.25);
+      border-left: none;
+      border-radius: 0 20px 20px 0;
+      padding: 25px; text-align: left;
+    }
+    .split-title {
+      font-size: 18px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    .split-left .split-title { color: #E74C3C; }
+    .split-right .split-title { color: #4A90A4; }
+    .split-point {
+      font-size: 18px; line-height: 1.4;
+      margin-bottom: 10px; opacity: 0.85;
+    }
+    .highlight-box {
+      background: rgba(232, 184, 109, 0.12);
+      border-radius: 16px; padding: 25px;
+      text-align: center; font-size: 22px;
+      line-height: 1.5; max-width: 950px;
+    }
+    .highlight-box strong { color: #E8B86D; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="slide-num">3 / 4</div>
+
+  <div class="vs-circle">VS</div>
+
+  <div class="title">Many Kids Do BOTH</div>
+
+  <div class="description">
+    It's not either/or. A child can seek input in one area and avoid it in another — sometimes on the same day.
+  </div>
+
+  <div class="split-box">
+    <div class="split-left">
+      <div class="split-title">Seeking</div>
+      <div class="split-point">⚡ Craves deep pressure hugs</div>
+      <div class="split-point">⚡ Loves loud music</div>
+      <div class="split-point">⚡ Jumps and crashes constantly</div>
+      <div class="split-point">⚡ Seeks strong flavors</div>
+    </div>
+    <div class="split-right">
+      <div class="split-title">Avoiding</div>
+      <div class="split-point">🛡️ Can't stand light touch</div>
+      <div class="split-point">🛡️ Covers ears in crowds</div>
+      <div class="split-point">🛡️ Hates certain textures</div>
+      <div class="split-point">🛡️ Avoids bright lights</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>This is why one-size-fits-all sensory strategies don't work. An OT can create a personalized sensory diet for YOUR child.</strong>
+  </div>
+
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
