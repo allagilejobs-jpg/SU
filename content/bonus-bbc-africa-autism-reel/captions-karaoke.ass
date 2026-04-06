@@ -1,0 +1,23 @@
+[Script Info]
+Title: Karaoke Captions - Life on the Spectrum
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial Black,56,&H00FFFFFF,&H006DB8E8,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,4,2,2,60,60,280,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.00,Default,,0,0,0,,{\kf30}I {\kf30}just {\kf30}watched {\kf30}a {\kf30}BBC {\kf30}documentary {\kf30}about {\kf30}autism {\kf30}in {\kf30}Africa
+Dialogue: 0,0:00:03.00,0:00:06.00,Default,,0,0,0,,{\kf50}It's {\kf50}called {\kf50}Life {\kf50}on {\kf50}the {\kf50}Spectrum
+Dialogue: 0,0:00:06.00,0:00:09.50,Default,,0,0,0,,{\kf58}There's {\kf58}one {\kf58}scene {\kf58}I {\kf58}can't {\kf58}unsee
+Dialogue: 0,0:00:09.50,0:00:13.00,Default,,0,0,0,,{\kf50}A {\kf50}boy. {\kf50}A {\kf50}room. {\kf50}A {\kf50}locked {\kf50}door.
+Dialogue: 0,0:00:13.00,0:00:16.00,Default,,0,0,0,,{\kf60}Not {\kf60}because {\kf60}anyone {\kf60}hated {\kf60}him
+Dialogue: 0,0:00:16.00,0:00:18.00,Default,,0,0,0,,{\kf25}His {\kf25}family {\kf25}just {\kf25}had {\kf25}no {\kf25}one {\kf25}who {\kf25}understood
+Dialogue: 0,0:00:18.00,0:00:22.00,Default,,0,0,0,,{\kf33}In {\kf33}most {\kf33}of {\kf33}Africa, {\kf33}less {\kf33}than {\kf33}ten {\kf33}percent {\kf33}ever {\kf33}get {\kf33}a {\kf33}diagnosis
+Dialogue: 0,0:00:22.00,0:00:25.00,Default,,0,0,0,,{\kf75}Watch {\kf75}it. {\kf75}Share {\kf75}it.
+Dialogue: 0,0:00:25.00,0:00:27.00,Default,,0,0,0,,{\kf66}Don't {\kf66}look {\kf66}away.
