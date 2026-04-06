@@ -44,6 +44,9 @@
     .card-day.phase1 { background: #4A90A4; }
     .card-day.phase2 { background: #E8B86D; color: #1a1a2e; }
     .card-day.phase3 { background: #27AE60; }
+    .card-day.phase4 { background: #4A90A4; }
+    .card-day.phase5 { background: #E8B86D; color: #1a1a2e; }
+    .card-day.phase6 { background: #27AE60; }
     .card-meta h3 { font-size: 13px; font-weight: 600; }
     .card-meta span { font-size: 11px; opacity: 0.6; }
     .card-slides { display: flex; gap: 2px; padding: 2px; background: #0a1628; }
@@ -94,13 +97,13 @@
 
   <header class="header">
     <h1>📦 Content Hub</h1>
-    <p>All 60 days of Autism Acceptance content — ready to download</p>
+    <p>All 98 days of content (60-day campaign + 90-day post-campaign)</p>
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-num" id="statDays">60</div><div class="stat-label">Days</div></div>
-    <div class="stat"><div class="stat-num" id="statGraphics">383</div><div class="stat-label">Graphics</div></div>
-    <div class="stat"><div class="stat-num" id="statCarousels">60</div><div class="stat-label">Carousels</div></div>
+    <div class="stat"><div class="stat-num" id="statDays">98</div><div class="stat-label">Days</div></div>
+    <div class="stat"><div class="stat-num" id="statGraphics">530</div><div class="stat-label">Graphics</div></div>
+    <div class="stat"><div class="stat-num" id="statCarousels">98</div><div class="stat-label">Carousels</div></div>
   </div>
 
   <div class="filter-bar">
@@ -108,6 +111,9 @@
     <button class="filter-btn" data-phase="1">Phase 1 (1-6)</button>
     <button class="filter-btn" data-phase="2">Phase 2 (7-36)</button>
     <button class="filter-btn" data-phase="3">Phase 3 (37-60)</button>
+    <button class="filter-btn" data-phase="4">June (61-73)</button>
+    <button class="filter-btn" data-phase="5">July (74-86)</button>
+    <button class="filter-btn" data-phase="6">August (87-98)</button>
   </div>
 
   <div class="container">
@@ -138,68 +144,106 @@
   </div>
 
   <script>
-    // Content Data - All 60 Days
+    // Content Data - All 98 Days
     const contentData = [
-      { day: 1, title: "3 Things TikTok Gets WRONG", folder: "day-01-tiktok-myths", slides: ['cover', 'myth1', 'myth2', 'myth3', 'cta'], topic: "Myth Busting", date: "March 26", phase: 1 },
-      { day: 2, title: "Acceptance vs Awareness", folder: "day-02-acceptance-vs-awareness", slides: ['cover', 'awareness', 'acceptance', 'progression', 'cta'], topic: "Education", date: "March 27", phase: 1 },
-      { day: 3, title: "Glass Child Syndrome", folder: "day-03-glass-child", slides: ['cover', 'what', 'signs', 'impact', 'help', 'cta'], topic: "Family", date: "March 28", phase: 1 },
-      { day: 4, title: "5 Sensory Hacks", folder: "day-04-sensory-hacks", slides: ['cover', 'hack1', 'hack2', 'hack3', 'hack4', 'hack5', 'cta'], topic: "Practical", date: "March 29", phase: 1 },
-      { day: 5, title: "Late Diagnosis Stories", folder: "day-05-late-diagnosis", slides: ['cover', 'why', 'signs', 'journey', 'cta'], topic: "Stories", date: "March 30", phase: 1 },
-      { day: 6, title: "Burnout Prevention", folder: "day-06-burnout", slides: ['cover', 'what', 'signs', 'prevention', 'cta'], topic: "Wellness", date: "March 31", phase: 1 },
-      { day: 7, title: "April Kickoff", folder: "day-07-april-kickoff", slides: ['cover', 'why', 'coming', 'cta'], topic: "Awareness", date: "April 1", phase: 2 },
-      { day: 8, title: "World Autism Awareness Day", folder: "day-08-waad", slides: ['cover', 'humanity', 'value', 'acceptance', 'pledge', 'cta'], topic: "Awareness", date: "April 2", phase: 2 },
-      { day: 9, title: "5 Myths That Need to Die", folder: "day-09-myths-die", slides: ['cover', 'myth1', 'myth2', 'myth3', 'myth4', 'myth5', 'cta'], topic: "Myth Busting", date: "April 3", phase: 2 },
-      { day: 10, title: "IEP Accommodations Guide", folder: "day-10-iep", slides: ['cover', 'sensory', 'communication', 'academic', 'social', 'cta'], topic: "Practical", date: "April 4", phase: 2 },
-      { day: 11, title: "Masking & The Cost", folder: "day-11-masking", slides: ['cover', 'what', 'why', 'cost', 'signs', 'cta'], topic: "Education", date: "April 5", phase: 2 },
-      { day: 12, title: "Self-Care Saturdays", folder: "day-12-selfcare", slides: ['cover', 'micro', 'people', 'boundaries', 'help', 'cta'], topic: "Wellness", date: "April 6", phase: 2 },
-      { day: 13, title: "ABA Controversy", folder: "day-13-aba", slides: ['cover', 'what', 'concerns', 'other', 'questions', 'cta'], topic: "Education", date: "April 7", phase: 2 },
-      { day: 14, title: "Visual Supports", folder: "day-14-visual", slides: ['cover', 'schedule', 'timer', 'first', 'choice', 'cta'], topic: "Practical", date: "April 8", phase: 2 },
-      { day: 15, title: "Meltdown vs Tantrum", folder: "day-15-meltdown", slides: ['cover', 'vs', 'dont', 'do', 'after', 'cta'], topic: "Education", date: "April 9", phase: 2 },
-      { day: 16, title: "Sensory Safe Spaces", folder: "day-16-safe-spaces", slides: ['cover', 'why', 'sensory', 'helps', 'help', 'cta'], topic: "Practical", date: "April 10", phase: 2 },
-      { day: 17, title: "Routines & Transitions", folder: "day-17-routines", slides: ['cover', 'why', 'environment', 'routine', 'help', 'cta'], topic: "Practical", date: "April 11", phase: 2 },
-      { day: 18, title: "Girls & Women with Autism", folder: "day-18-women", slides: ['cover', 'gap', 'signs', 'more', 'next', 'cta'], topic: "Education", date: "April 12", phase: 2 },
-      { day: 19, title: "Weekend Wins", folder: "day-19-weekend", slides: ['cover', 'wins', 'questions', 'cta'], topic: "Community", date: "April 13", phase: 2 },
-      { day: 20, title: "Potty Training", folder: "day-20-potty", slides: ['cover', 'why', 'readiness', 'strategies', 'patience', 'cta'], topic: "Practical", date: "April 14", phase: 2 },
-      { day: 21, title: "AuDHD Explained", folder: "day-21-audhd", slides: ['cover', 'what', 'conflict', 'signs', 'strengths', 'cta'], topic: "Education", date: "April 15", phase: 2 },
-      { day: 22, title: "Anxiety & Autism", folder: "day-22-anxiety", slides: ['cover', 'what', 'types', 'support', 'myths', 'cta'], topic: "Mental Health", date: "April 16", phase: 2 },
-      { day: 23, title: "Asking for Help", folder: "day-23-help", slides: ['cover', 'formal', 'informal', 'ask', 'tips', 'cta'], topic: "Practical", date: "April 17", phase: 2 },
-      { day: 24, title: "Emotional Regulation", folder: "day-24-emotional", slides: ['cover', 'why', 'triggers', 'helps', 'support', 'cta'], topic: "Education", date: "April 18", phase: 2 },
-      { day: 25, title: "Weekend Events", folder: "day-25-events", slides: ['cover', 'events', 'during', 'respite', 'find', 'cta'], topic: "Community", date: "April 19", phase: 2 },
-      { day: 26, title: "Week 3 Recap", folder: "day-26-recap", slides: ['cover', 'highlights', 'community', 'lessons', 'preview', 'cta'], topic: "Recap", date: "April 20", phase: 2 },
-      { day: 27, title: "Puberty & Autism", folder: "day-27-puberty", slides: ['cover', 'changes', 'social', 'support', 'strengths', 'cta'], topic: "Health", date: "April 21", phase: 2 },
-      { day: 28, title: "Siblings Deep Dive", folder: "day-28-siblings", slides: ['cover', 'why', 'sensory', 'activities', 'tips', 'cta'], topic: "Family", date: "April 22", phase: 2 },
-      { day: 29, title: "Supporting Differently", folder: "day-29-support", slides: ['cover', 'different', 'support', 'avoid', 'magic', 'cta'], topic: "Education", date: "April 23", phase: 2 },
-      { day: 30, title: "Late Diagnosis Adults", folder: "day-30-late-diagnosis", slides: ['cover', 'why', 'signs', 'emotional', 'next', 'cta'], topic: "Stories", date: "April 24", phase: 2 },
-      { day: 31, title: "Disclosure at School", folder: "day-31-disclosure", slides: ['cover', 'what', 'impact', 'help', 'conversation', 'cta'], topic: "Practical", date: "April 25", phase: 2 },
-      { day: 32, title: "Spring Weekend Fun", folder: "day-32-weekend-spring", slides: ['cover', 'activities', 'products', 'tips', 'reality', 'cta'], topic: "Lifestyle", date: "April 26", phase: 2 },
-      { day: 33, title: "Monthly Reflection", folder: "day-33-monthly-reflection", slides: ['cover', 'highlights', 'community', 'lessons', 'gratitude', 'cta'], topic: "Recap", date: "April 27", phase: 2 },
-      { day: 34, title: "Transitioning Forward", folder: "day-34-transitioning", slides: ['cover', 'reality', 'actions', 'resources', 'reminder', 'cta'], topic: "Transition", date: "April 28", phase: 2 },
-      { day: 35, title: "Resources Toolkit", folder: "day-35-resources-toolkit", slides: ['cover', 'organizations', 'books', 'apps', 'podcasts', 'community', 'cta'], topic: "Resources", date: "April 29", phase: 2 },
-      { day: 36, title: "End of April Hero", folder: "day-36-end-autism-month-hero", slides: ['cover', 'theme', 'stats', 'highlights', 'forward', 'gratitude', 'cta'], topic: "Celebration", date: "April 30", phase: 2 },
-      { day: 37, title: "May Goals", folder: "day-37-may-goals", slides: ['cover', 'themes', 'community', 'input', 'promise'], topic: "Planning", date: "May 1", phase: 3 },
-      { day: 38, title: "Summer Prep", folder: "day-38-summer-prep", slides: ['cover', 'why', 'checklist', 'activities', 'tips', 'cta'], topic: "Practical", date: "May 2", phase: 3 },
-      { day: 39, title: "Occupational Therapy", folder: "day-39-therapy-ot", slides: ['cover', 'what', 'helps', 'signs', 'session', 'cta'], topic: "Therapy", date: "May 3", phase: 3 },
-      { day: 40, title: "Speech Therapy", folder: "day-40-therapy-speech", slides: ['cover', 'myth', 'helps', 'signs', 'aac', 'cta'], topic: "Therapy", date: "May 4", phase: 3 },
-      { day: 41, title: "Physical Therapy", folder: "day-41-physical-therapy", slides: ['cover', 'what', 'signs', 'expect', 'tips', 'cta'], topic: "Therapy", date: "May 5", phase: 3 },
-      { day: 42, title: "Insurance Coverage", folder: "day-42-insurance-coverage", slides: ['cover', 'types', 'covered', 'denied', 'tips', 'cta'], topic: "Practical", date: "May 6", phase: 3 },
-      { day: 43, title: "Educating Family", folder: "day-43-family-education", slides: ['cover', 'why', 'scripts', 'educate', 'boundaries', 'cta'], topic: "Family", date: "May 7", phase: 3 },
-      { day: 44, title: "Marriage & Autism", folder: "day-44-marriage-autism", slides: ['cover', 'truth', 'challenges', 'strategies', 'help', 'cta'], topic: "Relationships", date: "May 8", phase: 3 },
-      { day: 45, title: "Self-Care Deep Dive", folder: "day-45-self-care", slides: ['cover', 'truth', 'micro', 'boundaries', 'support', 'cta'], topic: "Wellness", date: "May 9", phase: 3 },
-      { day: 46, title: "Building Support Systems", folder: "day-46-support-system", slides: ['cover', 'reality', 'layers', 'where', 'scripts', 'cta'], topic: "Community", date: "May 10", phase: 3 },
-      { day: 47, title: "Summer Camps", folder: "day-47-summer-camps", slides: ['cover', 'types', 'questions', 'prep', 'redflags', 'cta'], topic: "Practical", date: "May 11", phase: 3 },
-      { day: 48, title: "Travel with Autism", folder: "day-48-travel-autism", slides: ['cover', 'before', 'flying', 'destination', 'survival', 'cta'], topic: "Lifestyle", date: "May 12", phase: 3 },
-      { day: 49, title: "Year-Round School", folder: "day-49-year-round-school", slides: ['cover', 'what', 'qualify', 'advocate', 'alternatives', 'cta'], topic: "Education", date: "May 13", phase: 3 },
-      { day: 50, title: "Building Independence", folder: "day-50-building-independence", slides: ['cover', 'mindset', 'skills', 'how', 'tips', 'cta'], topic: "Life Skills", date: "May 14", phase: 3 },
-      { day: 51, title: "Sensory Deep Dive", folder: "day-51-sensory-deep-dive", slides: ['cover', 'senses', 'hyper', 'hypo', 'support', 'cta'], topic: "Education", date: "May 15", phase: 3 },
-      { day: 52, title: "Executive Function", folder: "day-52-executive-function", slides: ['cover', 'what', 'struggles', 'strategies', 'tools', 'cta'], topic: "Education", date: "May 16", phase: 3 },
-      { day: 53, title: "Autism & Technology", folder: "day-53-autism-technology", slides: ['cover', 'why', 'support', 'community', 'balance', 'cta'], topic: "Lifestyle", date: "May 17", phase: 3 },
-      { day: 54, title: "Adulthood Transition", folder: "day-54-adulthood-transition", slides: ['cover', 'cliff', 'skills', 'planning', 'success', 'cta'], topic: "Transition", date: "May 18", phase: 3 },
-      { day: 55, title: "Employment & Autism", folder: "day-55-employment-autism", slides: ['cover', 'reality', 'strengths', 'accommodations', 'tips', 'cta'], topic: "Career", date: "May 19", phase: 3 },
-      { day: 56, title: "Self-Advocacy", folder: "day-56-self-advocacy", slides: ['cover', 'why', 'scripts', 'tips', 'affirmations', 'cta'], topic: "Skills", date: "May 20", phase: 3 },
-      { day: 57, title: "Acceptance at Work/School", folder: "day-57-acceptance-work-school", slides: ['cover', 'reality', 'vs', 'accommodations', 'allies', 'cta'], topic: "Advocacy", date: "May 21", phase: 3 },
-      { day: 58, title: "Mental Health", folder: "day-58-mental-health", slides: ['cover', 'connection', 'challenges', 'helps', 'affirmations', 'cta'], topic: "Mental Health", date: "May 22", phase: 3 },
-      { day: 59, title: "Autistic Joy", folder: "day-59-autistic-joy", slides: ['cover', 'what', 'moments', 'protect', 'affirmations', 'cta'], topic: "Celebration", date: "May 23", phase: 3 },
-      { day: 60, title: "The Journey Continues", folder: "day-60-journey-continues", slides: ['cover', 'recap', 'learned', 'thanks', 'whats-next', 'affirmations', 'cta'], topic: "Closing", date: "May 24", phase: 3 }
+      { day: 1, title: "3 Things TikTok Gets WRONG", folder: "day-01-tiktok-myths", slides: ['cover','myth1','myth2','myth3','cta'], topic: "Myth Busting", date: "March 26", phase: 1 },
+      { day: 2, title: "Acceptance vs Awareness", folder: "day-02-acceptance-vs-awareness", slides: ['cover','awareness','acceptance','progression','cta'], topic: "Education", date: "March 27", phase: 1 },
+      { day: 3, title: "Glass Child Syndrome", folder: "day-03-glass-child", slides: ['cover','what','signs','impact','help','cta'], topic: "Family", date: "March 28", phase: 1 },
+      { day: 4, title: "5 Sensory Hacks", folder: "day-04-sensory-hacks", slides: ['cover','hack1','hack2','hack3','hack4','hack5','cta'], topic: "Practical", date: "March 29", phase: 1 },
+      { day: 5, title: "Late Diagnosis Stories", folder: "day-05-late-diagnosis", slides: ['cover','why','signs','journey','cta'], topic: "Stories", date: "March 30", phase: 1 },
+      { day: 6, title: "Burnout Prevention", folder: "day-06-burnout", slides: ['cover','what','signs','prevention','cta'], topic: "Wellness", date: "March 31", phase: 1 },
+      { day: 7, title: "April Kickoff", folder: "day-07-april-kickoff", slides: ['cover','why','coming','cta'], topic: "Awareness", date: "April 1", phase: 2 },
+      { day: 8, title: "World Autism Awareness Day", folder: "day-08-waad", slides: ['cover','humanity','value','acceptance','pledge','cta'], topic: "Awareness", date: "April 2", phase: 2 },
+      { day: 9, title: "5 Myths That Need to Die", folder: "day-09-myths-die", slides: ['cover','myth1','myth2','myth3','myth4','myth5','cta'], topic: "Myth Busting", date: "April 3", phase: 2 },
+      { day: 10, title: "IEP Accommodations Guide", folder: "day-10-iep", slides: ['cover','sensory','communication','academic','social','cta'], topic: "Practical", date: "April 4", phase: 2 },
+      { day: 11, title: "Masking & The Cost", folder: "day-11-masking", slides: ['cover','what','why','cost','signs','cta'], topic: "Education", date: "April 5", phase: 2 },
+      { day: 12, title: "Self-Care Saturdays", folder: "day-12-selfcare", slides: ['cover','micro','people','boundaries','help','cta'], topic: "Wellness", date: "April 6", phase: 2 },
+      { day: 13, title: "ABA Controversy", folder: "day-13-aba", slides: ['cover','what','concerns','other','questions','cta'], topic: "Education", date: "April 7", phase: 2 },
+      { day: 14, title: "Visual Supports", folder: "day-14-visual", slides: ['cover','schedule','timer','first','choice','cta'], topic: "Practical", date: "April 8", phase: 2 },
+      { day: 15, title: "Meltdown vs Tantrum", folder: "day-15-meltdown", slides: ['cover','vs','dont','do','after','cta'], topic: "Education", date: "April 9", phase: 2 },
+      { day: 16, title: "Sensory Safe Spaces", folder: "day-16-feeding", slides: ['cover','why','sensory','helps','help','cta'], topic: "Practical", date: "April 10", phase: 2 },
+      { day: 17, title: "Routines & Transitions", folder: "day-17-sleep", slides: ['cover','why','environment','routine','help','cta'], topic: "Practical", date: "April 11", phase: 2 },
+      { day: 18, title: "Girls & Women with Autism", folder: "day-18-girls", slides: ['cover','gap','signs','more','next','cta'], topic: "Education", date: "April 12", phase: 2 },
+      { day: 19, title: "Weekend Wins", folder: "day-19-community", slides: ['cover','wins','questions','cta'], topic: "Community", date: "April 13", phase: 2 },
+      { day: 20, title: "Potty Training", folder: "day-20-potty", slides: ['cover','why','readiness','strategies','patience','cta'], topic: "Practical", date: "April 14", phase: 2 },
+      { day: 21, title: "AuDHD Explained", folder: "day-21-audhd", slides: ['cover','what','conflict','signs','strengths','cta'], topic: "Education", date: "April 15", phase: 2 },
+      { day: 22, title: "Anxiety & Autism", folder: "day-22-aac", slides: ['cover','what','types','support','myths','cta'], topic: "Mental Health", date: "April 16", phase: 2 },
+      { day: 23, title: "Asking for Help", folder: "day-23-accommodations", slides: ['cover','formal','informal','ask','tips','cta'], topic: "Practical", date: "April 17", phase: 2 },
+      { day: 24, title: "Emotional Regulation", folder: "day-24-anxiety", slides: ['cover','why','triggers','helps','support','cta'], topic: "Education", date: "April 18", phase: 2 },
+      { day: 25, title: "Weekend Events", folder: "day-25-holidays-respite", slides: ['cover','events','during','respite','find','cta'], topic: "Community", date: "April 19", phase: 2 },
+      { day: 26, title: "Week 3 Recap", folder: "day-26-week3-recap", slides: ['cover','highlights','community','lessons','preview','cta'], topic: "Recap", date: "April 20", phase: 2 },
+      { day: 27, title: "Puberty & Autism", folder: "day-27-autism-teens", slides: ['cover','changes','social','support','strengths','cta'], topic: "Health", date: "April 21", phase: 2 },
+      { day: 28, title: "Siblings Deep Dive", folder: "day-28-nature-autism", slides: ['cover','why','sensory','activities','tips','cta'], topic: "Family", date: "April 22", phase: 2 },
+      { day: 29, title: "Supporting Differently", folder: "day-29-building-friendships", slides: ['cover','different','support','avoid','magic','cta'], topic: "Education", date: "April 23", phase: 2 },
+      { day: 30, title: "Late Diagnosis Adults", folder: "day-30-late-diagnosis", slides: ['cover','why','signs','emotional','next','cta'], topic: "Stories", date: "April 24", phase: 2 },
+      { day: 31, title: "Disclosure at School", folder: "day-31-glass-child", slides: ['cover','what','impact','help','conversation','cta'], topic: "Practical", date: "April 25", phase: 2 },
+      { day: 32, title: "Spring Weekend Fun", folder: "day-32-weekend-spring", slides: ['cover','activities','products','tips','reality','cta'], topic: "Lifestyle", date: "April 26", phase: 2 },
+      { day: 33, title: "Monthly Reflection", folder: "day-33-monthly-reflection", slides: ['cover','highlights','community','lessons','gratitude','cta'], topic: "Recap", date: "April 27", phase: 2 },
+      { day: 34, title: "Transitioning Forward", folder: "day-34-transitioning", slides: ['cover','reality','actions','resources','reminder','cta'], topic: "Transition", date: "April 28", phase: 2 },
+      { day: 35, title: "Resources Toolkit", folder: "day-35-resources-toolkit", slides: ['cover','organizations','books','apps','podcasts','community','cta'], topic: "Resources", date: "April 29", phase: 2 },
+      { day: 36, title: "End of April Hero", folder: "day-36-end-autism-month-hero", slides: ['cover','theme','stats','highlights','forward','gratitude','cta'], topic: "Celebration", date: "April 30", phase: 2 },
+      { day: 37, title: "May Goals", folder: "day-37-may-goals", slides: ['cover','themes','community','input','promise','cta'], topic: "Planning", date: "May 1", phase: 3 },
+      { day: 38, title: "Summer Prep", folder: "day-38-summer-prep", slides: ['cover','why','checklist','activities','tips','cta'], topic: "Practical", date: "May 2", phase: 3 },
+      { day: 39, title: "Occupational Therapy", folder: "day-39-therapy-ot", slides: ['cover','what','helps','signs','session','cta'], topic: "Therapy", date: "May 3", phase: 3 },
+      { day: 40, title: "Speech Therapy", folder: "day-40-therapy-speech", slides: ['cover','myth','helps','signs','aac','cta'], topic: "Therapy", date: "May 4", phase: 3 },
+      { day: 41, title: "Physical Therapy", folder: "day-41-physical-therapy", slides: ['cover','what','signs','expect','tips','cta'], topic: "Therapy", date: "May 5", phase: 3 },
+      { day: 42, title: "Insurance Coverage", folder: "day-42-insurance-coverage", slides: ['cover','types','covered','denied','tips','cta'], topic: "Practical", date: "May 6", phase: 3 },
+      { day: 43, title: "Educating Family", folder: "day-43-family-education", slides: ['cover','why','scripts','educate','boundaries','cta'], topic: "Family", date: "May 7", phase: 3 },
+      { day: 44, title: "Marriage & Autism", folder: "day-44-marriage-autism", slides: ['cover','truth','challenges','strategies','help','cta'], topic: "Relationships", date: "May 8", phase: 3 },
+      { day: 45, title: "Self-Care Deep Dive", folder: "day-45-self-care", slides: ['cover','truth','micro','boundaries','support','cta'], topic: "Wellness", date: "May 9", phase: 3 },
+      { day: 46, title: "Building Support Systems", folder: "day-46-support-system", slides: ['cover','reality','layers','where','scripts','cta'], topic: "Community", date: "May 10", phase: 3 },
+      { day: 47, title: "Summer Camps", folder: "day-47-summer-camps", slides: ['cover','types','questions','prep','redflags','cta'], topic: "Practical", date: "May 11", phase: 3 },
+      { day: 48, title: "Travel with Autism", folder: "day-48-travel-autism", slides: ['cover','before','flying','destination','survival','cta'], topic: "Lifestyle", date: "May 12", phase: 3 },
+      { day: 49, title: "Year-Round School", folder: "day-49-year-round-school", slides: ['cover','what','qualify','advocate','alternatives','cta'], topic: "Education", date: "May 13", phase: 3 },
+      { day: 50, title: "Building Independence", folder: "day-50-building-independence", slides: ['cover','mindset','skills','how','tips','cta'], topic: "Life Skills", date: "May 14", phase: 3 },
+      { day: 51, title: "Sensory Deep Dive", folder: "day-51-sensory-deep-dive", slides: ['cover','senses','hyper','hypo','support','cta'], topic: "Education", date: "May 15", phase: 3 },
+      { day: 52, title: "Executive Function", folder: "day-52-executive-function", slides: ['cover','what','struggles','strategies','tools','cta'], topic: "Education", date: "May 16", phase: 3 },
+      { day: 53, title: "Autism & Technology", folder: "day-53-autism-technology", slides: ['cover','why','support','community','balance','cta'], topic: "Lifestyle", date: "May 17", phase: 3 },
+      { day: 54, title: "Adulthood Transition", folder: "day-54-adulthood-transition", slides: ['cover','cliff','skills','planning','success','cta'], topic: "Transition", date: "May 18", phase: 3 },
+      { day: 55, title: "Employment & Autism", folder: "day-55-employment-autism", slides: ['cover','reality','strengths','accommodations','tips','cta'], topic: "Career", date: "May 19", phase: 3 },
+      { day: 56, title: "Self-Advocacy", folder: "day-56-self-advocacy", slides: ['cover','why','scripts','tips','affirmations','cta'], topic: "Skills", date: "May 20", phase: 3 },
+      { day: 57, title: "Acceptance at Work/School", folder: "day-57-acceptance-work-school", slides: ['cover','reality','vs','accommodations','allies','cta'], topic: "Advocacy", date: "May 21", phase: 3 },
+      { day: 58, title: "Mental Health", folder: "day-58-mental-health", slides: ['cover','connection','challenges','helps','affirmations','cta'], topic: "Mental Health", date: "May 22", phase: 3 },
+      { day: 59, title: "Autistic Joy", folder: "day-59-autistic-joy", slides: ['cover','what','moments','protect','affirmations','cta'], topic: "Celebration", date: "May 23", phase: 3 },
+      { day: 60, title: "The Journey Continues", folder: "day-60-journey-continues", slides: ['cover','recap','learned','thanks','whats-next','affirmations','cta'], topic: "Closing", date: "May 24", phase: 3 },
+      { day: 61, title: "Summer Schedule Survival Guide", folder: "day-61-summer-schedule", slides: ['cover','tip1','tip2','tip3','cta'], topic: "Routines", date: "June 1", phase: 4 },
+      { day: 62, title: "5 Sensory Summer Activities", folder: "day-62-sensory-summer", slides: ['cover','activity1','activity2','activity3','cta'], topic: "Sensory", date: "June 3", phase: 4 },
+      { day: 63, title: "June Transition Real Talk", folder: "day-63-june-transition", slides: ['cover','quote','cta'], topic: "Quote", date: "June 5", phase: 4 },
+      { day: 64, title: "AAC Myth Buster", folder: "day-64-aac-myth", slides: ['cover','myth','truth','context','cta'], topic: "Myth", date: "June 8", phase: 4 },
+      { day: 65, title: "AAC Everywhere", folder: "day-65-aac-summer", slides: ['cover','why','pool','park','tips','cta'], topic: "Communication", date: "June 10", phase: 4 },
+      { day: 66, title: "Adapt Real Talk", folder: "day-66-adapt", slides: ['cover','quote','cta'], topic: "Quote", date: "June 12", phase: 4 },
+      { day: 67, title: "ESY Summer Services", folder: "day-67-esy", slides: ['cover','what','qualify','advocate','cta'], topic: "School", date: "June 15", phase: 4 },
+      { day: 68, title: "Sensory Profile Worksheet", folder: "day-68-sensory-worksheet", slides: ['cover','preview','details','cta'], topic: "Resource", date: "June 17", phase: 4 },
+      { day: 69, title: "Parent Self-Care", folder: "day-69-parent-care", slides: ['cover','quote','cta'], topic: "Quote", date: "June 19", phase: 4 },
+      { day: 70, title: "ABA Myth Buster", folder: "day-70-aba-myth", slides: ['cover','myth','truth','context','cta'], topic: "Myth", date: "June 22", phase: 4 },
+      { day: 71, title: "Marriage and Autism", folder: "day-71-marriage", slides: ['cover','truth','signs','strategies','help','cta'], topic: "Family", date: "June 24", phase: 4 },
+      { day: 72, title: "Win Friday", folder: "day-72-win-friday", slides: ['cover','quote','cta'], topic: "Quote", date: "June 26", phase: 4 },
+      { day: 73, title: "Airport Travel Tips", folder: "day-73-airport", slides: ['cover','before','security','flight','cta'], topic: "Travel", date: "June 29", phase: 4 },
+      { day: 74, title: "Teaching Life Skills", folder: "day-74-life-skills", slides: ['cover','mindset','skills','strategies','tips','cta'], topic: "Independence", date: "July 1", phase: 5 },
+      { day: 75, title: "Independence Real Talk", folder: "day-75-independence-quote", slides: ['cover','quote','cta'], topic: "Quote", date: "July 3", phase: 5 },
+      { day: 76, title: "Speech Therapy at Home", folder: "day-76-speech-home", slides: ['cover','tip1','tip2','tip3','cta'], topic: "Therapy", date: "July 7", phase: 5 },
+      { day: 77, title: "Calm-Down Corner", folder: "day-77-calm-corner", slides: ['cover','what','essentials','rules','cta'], topic: "Sensory", date: "July 9", phase: 5 },
+      { day: 78, title: "Understanding Real Talk", folder: "day-78-understand-quote", slides: ['cover','quote','cta'], topic: "Quote", date: "July 11", phase: 5 },
+      { day: 79, title: "IEP Myth Buster", folder: "day-79-iep-myth", slides: ['cover','myth','truth','context','cta'], topic: "Myth", date: "July 14", phase: 5 },
+      { day: 80, title: "IEP Meeting Checklist", folder: "day-80-iep-checklist", slides: ['cover','preview','details','cta'], topic: "Resource", date: "July 16", phase: 5 },
+      { day: 81, title: "IEP Win Friday", folder: "day-81-iep-win", slides: ['cover','quote','cta'], topic: "Quote", date: "July 18", phase: 5 },
+      { day: 82, title: "Autism and Anxiety", folder: "day-82-anxiety", slides: ['cover','connection','signs','strategies','support','cta'], topic: "Mental Health", date: "July 21", phase: 5 },
+      { day: 83, title: "IEP Rights Phrases", folder: "day-83-iep-phrases", slides: ['cover','phrase1','phrase2','phrase3','cta'], topic: "Advocacy", date: "July 23", phase: 5 },
+      { day: 84, title: "Parent Stress Stat", folder: "day-84-stress-stat", slides: ['cover','stat','cta'], topic: "Stat", date: "July 25", phase: 5 },
+      { day: 85, title: "Workplace Accommodations", folder: "day-85-workplace", slides: ['cover','rights','accommodations','disclosure','tips','cta'], topic: "Transition", date: "July 28", phase: 5 },
+      { day: 86, title: "Sensory Seeking vs Avoiding", folder: "day-86-sensory-vs", slides: ['cover','seeking','avoiding','both','cta'], topic: "Sensory", date: "July 30", phase: 5 },
+      { day: 87, title: "Back-to-School Checklist", folder: "day-87-back-to-school", slides: ['cover','iep','teacher','sensory','routine','cta'], topic: "School", date: "August 4", phase: 6 },
+      { day: 88, title: "Getting to Know My Child Letter", folder: "day-88-child-letter", slides: ['cover','why','include','tone','template','cta'], topic: "School", date: "August 6", phase: 6 },
+      { day: 89, title: "August Anxiety", folder: "day-89-august-anxiety", slides: ['cover','quote','cta'], topic: "Quote", date: "August 8", phase: 6 },
+      { day: 90, title: "IEP vs 504 Myth", folder: "day-90-iep-504-myth", slides: ['cover','myth','truth','context','cta'], topic: "Myth", date: "August 11", phase: 6 },
+      { day: 91, title: "After-School Meltdowns", folder: "day-91-afterschool-meltdowns", slides: ['cover','why','signs','strategies','prevention','cta'], topic: "Behavior", date: "August 13", phase: 6 },
+      { day: 92, title: "IEP Legal Document", folder: "day-92-iep-legal", slides: ['cover','quote','cta'], topic: "Quote", date: "August 15", phase: 6 },
+      { day: 93, title: "School Not Following IEP", folder: "day-93-iep-compliance", slides: ['cover','document','escalate','rights','cta'], topic: "Advocacy", date: "August 18", phase: 6 },
+      { day: 94, title: "Day 1 Accommodations", folder: "day-94-accommodations", slides: ['cover','accommodation1','accommodation2','accommodation3','cta'], topic: "Advocacy", date: "August 20", phase: 6 },
+      { day: 95, title: "Informed Parent", folder: "day-95-informed-parent", slides: ['cover','quote','cta'], topic: "Quote", date: "August 22", phase: 6 },
+      { day: 96, title: "New Teacher Relationship", folder: "day-96-new-teacher", slides: ['cover','approach','meeting','ongoing','cta'], topic: "School", date: "August 25", phase: 6 },
+      { day: 97, title: "School Email Templates", folder: "day-97-email-templates", slides: ['cover','preview','details','cta'], topic: "Resource", date: "August 27", phase: 6 },
+      { day: 98, title: "90-Day Recap", folder: "day-98-recap", slides: ['cover','stats','highlights','community','cta'], topic: "Celebration", date: "August 29", phase: 6 }
     ];
 
     let currentData = null;
