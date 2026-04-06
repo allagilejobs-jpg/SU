@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1920px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #0a0a15 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px 60px;
+      position: relative; overflow: hidden;
+    }
+    body::before {
+      content: ''; position: absolute;
+      top: -150px; right: -150px;
+      width: 400px; height: 400px;
+      background: #E8B86D; border-radius: 50%;
+      opacity: 0.08;
+    }
+    body::after {
+      content: ''; position: absolute;
+      bottom: -100px; left: -100px;
+      width: 350px; height: 350px;
+      background: #E74C3C; border-radius: 50%;
+      opacity: 0.08;
+    }
+    .label {
+      font-size: 26px; font-weight: 700;
+      color: #4A90A4;
+      text-transform: uppercase; letter-spacing: 4px;
+      margin-bottom: 40px;
+      position: relative; z-index: 1;
+    }
+    .big-stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 240px; font-weight: 900;
+      color: #E8B86D;
+      line-height: 0.9;
+      margin-bottom: 20px;
+      position: relative; z-index: 1;
+    }
+    .stat-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px; font-weight: 800;
+      color: #E74C3C;
+      line-height: 1.1;
+      margin-bottom: 60px;
+      position: relative; z-index: 1;
+    }
+    .description {
+      font-size: 38px;
+      line-height: 1.4;
+      max-width: 900px;
+      opacity: 0.92;
+      position: relative; z-index: 1;
+      margin-bottom: 40px;
+    }
+    .description strong { color: #E8B86D; }
+    .quote {
+      background: rgba(232, 184, 109, 0.1);
+      border: 2px solid rgba(232, 184, 109, 0.4);
+      border-radius: 20px;
+      padding: 28px 40px;
+      font-size: 32px;
+      font-style: italic;
+      max-width: 900px;
+      line-height: 1.4;
+      position: relative; z-index: 1;
+    }
+    .footer { position: absolute; bottom: 60px; }
+    .handle { font-size: 24px; opacity: 0.5; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="label">The Reality</div>
+
+  <div class="big-stat">&lt;10%</div>
+  <div class="stat-label">ever get a<br>diagnosis</div>
+
+  <div class="description">
+    In low-income countries, <strong>most autistic children</strong><br>
+    are never seen, never diagnosed, never supported.
+  </div>
+
+  <div class="quote">
+    He isn't an outlier.<br>
+    He's what invisibility looks like.
+  </div>
+
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1920px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #0a0a15 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px 60px;
+      position: relative; overflow: hidden;
+    }
+    body::before {
+      content: ''; position: absolute;
+      top: -150px; left: -150px;
+      width: 400px; height: 400px;
+      background: #4A90A4; border-radius: 50%;
+      opacity: 0.08;
+    }
+    body::after {
+      content: ''; position: absolute;
+      bottom: -100px; right: -100px;
+      width: 350px; height: 350px;
+      background: #E8B86D; border-radius: 50%;
+      opacity: 0.08;
+    }
+    .label {
+      font-size: 26px; font-weight: 700;
+      color: #4A90A4;
+      text-transform: uppercase; letter-spacing: 4px;
+      margin-bottom: 40px;
+      position: relative; z-index: 1;
+    }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 78px; font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 55px;
+      line-height: 1.1;
+      position: relative; z-index: 1;
+    }
+    .yt-card {
+      background: #0d0d14;
+      border: 4px solid rgba(232, 184, 109, 0.5);
+      border-radius: 22px;
+      max-width: 900px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+      position: relative; z-index: 1;
+    }
+    .yt-thumb {
+      background: linear-gradient(135deg, #0a0a15 0%, #0f3460 100%);
+      aspect-ratio: 16 / 9;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .yt-play {
+      width: 130px; height: 130px;
+      background: rgba(255, 0, 0, 0.95);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 40px rgba(255,0,0,0.5);
+    }
+    .yt-play::before {
+      content: '';
+      border-left: 42px solid white;
+      border-top: 26px solid transparent;
+      border-bottom: 26px solid transparent;
+      margin-left: 10px;
+    }
+    .yt-brand {
+      position: absolute; top: 26px; left: 28px;
+      color: #ff0000; font-weight: 900; font-size: 32px;
+      letter-spacing: 1px;
+    }
+    .yt-info { padding: 34px 38px; text-align: left; }
+    .yt-title {
+      font-size: 34px; font-weight: 700;
+      color: white;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .yt-channel {
+      font-size: 24px; color: #aaa;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .yt-channel::before {
+      content: ''; width: 10px; height: 10px;
+      background: #4A90A4; border-radius: 50%;
+    }
+    .link {
+      margin-top: 40px;
+      font-size: 30px;
+      color: #E8B86D;
+      font-weight: 700;
+      position: relative; z-index: 1;
+    }
+    .footer { position: absolute; bottom: 60px; }
+    .handle { font-size: 24px; opacity: 0.5; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="label">Watch It Here</div>
+  <div class="title">Life on the<br>Spectrum</div>
+
+  <div class="yt-card">
+    <div class="yt-thumb">
+      <div class="yt-brand">▶ YouTube</div>
+      <div class="yt-play"></div>
+    </div>
+    <div class="yt-info">
+      <div class="yt-title">Life on the Spectrum — BBC Africa Eye Documentary</div>
+      <div class="yt-channel">BBC News Africa</div>
+    </div>
+  </div>
+
+  <div class="link">Link in bio →</div>
+
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>
