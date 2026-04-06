@@ -1,8 +1,8 @@
 # VIDEO-CREATION.md - Reel Production Guide
 
-**Last Updated:** April 5, 2026
+**Last Updated:** April 6, 2026
 
-Two methods for creating video reels from slide templates.
+Three methods for creating video reels from slide templates.
 
 ---
 
