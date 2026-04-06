@@ -15,6 +15,32 @@
       min-height: 100vh;
     }
     
+    /* Nav */
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+
     /* Layout */
     .app {
       display: grid;
@@ -731,6 +757,16 @@
   </style>
 </head>
 <body>
+  <nav class="main-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="calendar-30day.html">📅 30-Day</a>
+    <a href="calendar-60day.html">📅 60-Day</a>
+    <a href="calendar-90day.html">📅 90-Day</a>
+    <a href="editor.html" class="active">🎨 Editor</a>
+    <a href="template-gallery.html">🖼️ Templates</a>
+    <a href="brand-guidelines.html">📋 Brand</a>
+    <a href="guides.html">📖 Guides</a>
+  </nav>
   <div class="app">
     <!-- Mobile Overlay -->
     <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileSidebars()"></div>

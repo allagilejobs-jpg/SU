@@ -16,14 +16,16 @@
     }
     
     .main-nav {
-      background: #1a1a2e;
+      background: #0f0f1a;
       padding: 15px 20px;
       display: flex;
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    
     .main-nav a {
       color: #aaa;
       text-decoration: none;
@@ -33,13 +35,7 @@
       font-size: 14px;
       transition: all 0.2s;
     }
-    
-    .main-nav a:hover {
-      background: #4A90A4;
-      color: white;
-    }
-    
-    .main-nav a.active {
+    .main-nav a:hover, .main-nav a.active {
       background: #4A90A4;
       color: white;
     }
@@ -278,13 +274,13 @@
   
   <nav class="main-nav">
     <a href="index.html" class="active">🏠 Home</a>
-    <a href="calendar-60day.html">📅 60-Day Calendar</a>
-    <a href="calendar-90day.html">📅 90-Day Calendar</a>
-    <a href="content/">📦 Content Hub</a>
-    <a href="editor.html">✨ Editor</a>
-    <a href="brand-guidelines.html">📐 Brand</a>
+    <a href="calendar-30day.html">📅 30-Day</a>
+    <a href="calendar-60day.html">📅 60-Day</a>
+    <a href="calendar-90day.html">📅 90-Day</a>
+    <a href="editor.html">🎨 Editor</a>
+    <a href="template-gallery.html">🖼️ Templates</a>
+    <a href="brand-guidelines.html">📋 Brand</a>
     <a href="guides.html">📖 Guides</a>
-    <a href="research/">🔍 Research</a>
   </nav>
   
   <div class="hero">
@@ -418,7 +414,7 @@
         <div class="doc-card">
           <div class="doc-icon">📅</div>
           <div class="doc-info">
-            <h3><a href="calendar.html" style="color:#2C5F6E;text-decoration:none;">30-Day Content Calendar</a></h3>
+            <h3><a href="calendar-30day.html" style="color:#2C5F6E;text-decoration:none;">30-Day Content Calendar</a></h3>
             <p>Full month of planned content with themes and posting schedule</p>
           </div>
         </div>

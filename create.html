@@ -23,8 +23,10 @@
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    
     .main-nav a {
       color: #aaa;
       text-decoration: none;
@@ -34,7 +36,6 @@
       font-size: 14px;
       transition: all 0.2s;
     }
-    
     .main-nav a:hover, .main-nav a.active {
       background: #4A90A4;
       color: white;
@@ -323,10 +324,14 @@
 <body>
 
 <nav class="main-nav">
-  <a href="index.html">🏠 Dashboard</a>
-    <a href="content-hub.html">📁 Content</a>
-  <a href="calendar.html">📅 Calendar</a>
-  <a href="editor.html">✏️ Template Editor</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="calendar-30day.html">📅 30-Day</a>
+  <a href="calendar-60day.html">📅 60-Day</a>
+  <a href="calendar-90day.html">📅 90-Day</a>
+  <a href="editor.html">🎨 Editor</a>
+  <a href="template-gallery.html">🖼️ Templates</a>
+  <a href="brand-guidelines.html">📋 Brand</a>
+  <a href="guides.html">📖 Guides</a>
 </nav>
 
 <div class="header">
@@ -348,7 +353,7 @@
     </div>
     <div class="actions">
       <button class="btn btn-both" onclick="downloadAndCopy()">🚀 Download & Copy — Ready to Post!</button>
-      <a href="calendar.html" class="btn btn-back">← Back</a>
+      <a href="calendar-30day.html" class="btn btn-back">← Back</a>
     </div>
     <div class="actions" style="padding-top: 0;">
       <button class="btn btn-download" onclick="downloadGraphic()" style="flex: 1;">📥 PNG Only</button>
@@ -935,7 +940,7 @@ function init() {
   
   if (!data) {
     document.getElementById('headerTitle').textContent = 'Day not found';
-    document.getElementById('templateContainer').innerHTML = '<p style="color:#888;">This day has no content or is a rest day. <a href="calendar.html" style="color:#4A90A4;">Go back to calendar</a></p>';
+    document.getElementById('templateContainer').innerHTML = '<p style="color:#888;">This day has no content or is a rest day. <a href="calendar-30day.html" style="color:#4A90A4;">Go back to calendar</a></p>';
     return;
   }
   

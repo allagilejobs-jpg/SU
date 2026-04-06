@@ -8,7 +8,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
-    .main-nav { background: #0f0f1a; padding: 15px 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .main-nav { background: #0f0f1a; padding: 15px 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
     .main-nav a { color: #aaa; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
     .main-nav a:hover, .main-nav a.active { background: #4A90A4; color: white; }
     .header { background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); padding: 30px 20px; text-align: center; }
@@ -37,9 +37,14 @@
 </head>
 <body>
 <nav class="main-nav">
-  <a href="index.html">🏠 Dashboard</a>
-  <a href="calendar.html">📅 30-Day Calendar</a>
-  <a href="editor.html">✏️ Template Editor</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="calendar-30day.html">📅 30-Day</a>
+  <a href="calendar-60day.html">📅 60-Day</a>
+  <a href="calendar-90day.html">📅 90-Day</a>
+  <a href="editor.html">🎨 Editor</a>
+  <a href="template-gallery.html">🖼️ Templates</a>
+  <a href="brand-guidelines.html">📋 Brand</a>
+  <a href="guides.html">📖 Guides</a>
 </nav>
 <div class="header">
   <div class="badge">Day 25 — Carousel Post</div>
@@ -80,7 +85,7 @@ Full comparison guide at spectrumunlocked.com/resources 📋
 
 <span class="hashtags">#AutismTherapy #ABA #SpeechTherapy #OccupationalTherapy #AutismParent #AutismSupport</span></div>
   </div>
-  <div style="text-align: center;"><a href="calendar.html" class="btn" style="background: #2a2a4a; color: #aaa;">← Back to Calendar</a></div>
+  <div style="text-align: center;"><a href="calendar-30day.html" class="btn" style="background: #2a2a4a; color: #aaa;">← Back to Calendar</a></div>
 </div>
 <div class="toast" id="toast">✓ Copied!</div>
 <script>

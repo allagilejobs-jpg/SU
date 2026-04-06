@@ -15,56 +15,31 @@
       min-height: 100vh;
     }
     
-    /* Header */
-    .header {
-      background: rgba(26, 26, 46, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding: 16px 24px;
+    /* Nav */
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
       position: sticky;
       top: 0;
       z-index: 100;
     }
-    
-    .header-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    
-    .header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-    }
-    .header h1 span { color: #E8B86D; }
-    
-    .header-nav {
-      display: flex;
-      gap: 12px;
-    }
-    
-    .nav-btn {
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
+    .main-nav a {
+      color: #aaa;
       text-decoration: none;
-      font-family: inherit;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
     }
-    .nav-btn:hover { background: rgba(255,255,255,0.2); }
-    .nav-btn.primary {
-      background: #E8B86D;
-      color: #1a1a2e;
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
     }
-    .nav-btn.primary:hover { background: #d4a85d; }
     
     /* Hero Section */
     .hero {
@@ -602,16 +577,16 @@
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="header-content">
-      <h1>Spectrum <span>Unlocked</span></h1>
-      <nav class="header-nav">
-        <a href="index.html" class="nav-btn">🏠 Home</a>
-        <a href="calendar-60day.html" class="nav-btn">📅 Calendar</a>
-        <a href="editor.html" class="nav-btn primary">🎨 Open Editor</a>
-      </nav>
-    </div>
-  </header>
+  <nav class="main-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="calendar-30day.html">📅 30-Day</a>
+    <a href="calendar-60day.html">📅 60-Day</a>
+    <a href="calendar-90day.html">📅 90-Day</a>
+    <a href="editor.html">🎨 Editor</a>
+    <a href="template-gallery.html" class="active">🖼️ Templates</a>
+    <a href="brand-guidelines.html">📋 Brand</a>
+    <a href="guides.html">📖 Guides</a>
+  </nav>
   
   <section class="hero">
     <h2>Template Gallery</h2>
