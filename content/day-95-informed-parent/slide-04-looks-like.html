@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E8B86D; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #4A90A4; bottom: -100px; left: -100px; }
+    .number {
+      position: absolute; top: 50px; right: 50px;
+      width: 80px; height: 80px;
+      background: #E8B86D; color: #1a1a2e;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 38px; font-weight: 800;
+    }
+    .emoji { font-size: 90px; margin-bottom: 25px; }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px; font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 35px;
+      line-height: 1.1;
+    }
+    .tip-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 900px;
+    }
+    .tip-card {
+      background: rgba(74, 144, 164, 0.15);
+      border: 2px solid rgba(74, 144, 164, 0.45);
+      border-radius: 16px;
+      padding: 22px 18px;
+      text-align: left;
+    }
+    .tip-icon { font-size: 38px; display: block; margin-bottom: 10px; }
+    .tip-title { font-size: 20px; font-weight: 700; color: #E8B86D; margin-bottom: 6px; }
+    .tip-desc { font-size: 17px; line-height: 1.35; opacity: 0.92; }
+    .footer { position: absolute; bottom: 30px; }
+    .handle { font-size: 16px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="number">2</div>
+
+  <div class="emoji">📋</div>
+  <div class="title">What Informed<br>Looks Like</div>
+
+  <div class="tip-grid">
+    <div class="tip-card">
+      <span class="tip-icon">📖</span>
+      <div class="tip-title">Reads the IEP</div>
+      <div class="tip-desc">Cover to cover. Knows what's promised vs delivered.</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">✉️</span>
+      <div class="tip-title">Documents Everything</div>
+      <div class="tip-desc">In writing. Email confirms verbal conversations.</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">⚖️</span>
+      <div class="tip-title">Knows the Laws</div>
+      <div class="tip-desc">IDEA, FAPE, 504, ADA. Rights aren't favors.</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">📊</span>
+      <div class="tip-title">Brings the Data</div>
+      <div class="tip-desc">Progress reports, work samples, evaluations.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
