@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E74C3C; top: -150px; left: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #E8B86D; bottom: -100px; right: -100px; }
+    .number {
+      position: absolute; top: 50px; right: 50px;
+      width: 80px; height: 80px;
+      background: #E8B86D; color: #1a1a2e;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 38px; font-weight: 800;
+    }
+    .emoji { font-size: 110px; margin-bottom: 30px; }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px; font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 30px;
+      line-height: 1.1;
+    }
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 900px;
+      margin-bottom: 30px;
+    }
+    .sign-card {
+      background: rgba(231, 76, 60, 0.12);
+      border: 2px solid rgba(231, 76, 60, 0.4);
+      border-radius: 16px;
+      padding: 22px 18px;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+    .sign-emoji { font-size: 36px; display: block; margin-bottom: 8px; }
+    .footer { position: absolute; bottom: 35px; }
+    .handle { font-size: 18px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="number">2</div>
+
+  <div class="emoji">⚠️</div>
+  <div class="title">Burnout Warning<br>Signs</div>
+
+  <div class="signs-grid">
+    <div class="sign-card"><span class="sign-emoji">😶</span>Emotionally numb or detached</div>
+    <div class="sign-card"><span class="sign-emoji">😡</span>Snapping at small things</div>
+    <div class="sign-card"><span class="sign-emoji">🛌</span>Exhausted even after rest</div>
+    <div class="sign-card"><span class="sign-emoji">💭</span>Forgetting basic tasks</div>
+    <div class="sign-card"><span class="sign-emoji">🤒</span>Getting sick more often</div>
+    <div class="sign-card"><span class="sign-emoji">😢</span>Crying without warning</div>
+  </div>
+
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
