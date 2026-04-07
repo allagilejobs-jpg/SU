@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Photo area - top portion */
+    .photo-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 750px;
+      background: linear-gradient(180deg, #2a2a4a 0%, #1a1a2e 100%);
+    }
+    
+    /* Circular photo cutout placeholder */
+    .photo-circle {
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: #3a3a5a;
+      border: 4px solid #4A90A4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 14px;
+    }
+    
+    /* Main photo placeholder */
+    .photo-main {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      width: 600px;
+      height: 600px;
+      background: linear-gradient(135deg, #3a3a5a 0%, #2a2a4a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 16px;
+    }
+    
+    /* Headline section */
+    .headline-section {
+      position: absolute;
+      bottom: 120px;
+      left: 0;
+      right: 0;
+      padding: 40px 50px;
+      text-align: center;
+    }
+    
+    .headline {
+      font-size: 52px;
+      font-weight: 900;
+      color: white;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+    
+    .headline .highlight {
+      color: #E8B86D;
+    }
+    
+    /* Brand footer */
+    .brand-footer {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .brand-main {
+      font-size: 24px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 1px;
+    }
+    
+    .brand-sub {
+      font-size: 18px;
+      font-weight: 700;
+      color: #4A90A4;
+      letter-spacing: 1px;
+    }
+    
+    .swipe-arrow {
+      width: 70px;
+      height: 35px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 20px;
+    }
+    
+    /* Slide indicator */
+    .slide-indicator {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: rgba(0,0,0,0.5);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 16px;
+      color: white;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="photo-area"></div>
+  
+  <div class="photo-circle">[OT Genasis<br>with son]</div>
+  <div class="photo-main">[OT Genasis<br>portrait]</div>
+  
+  <div class="slide-indicator">1/4</div>
+  
+  <div class="headline-section">
+    <div class="headline">
+      RAPPER <span class="highlight">OT GENASIS</span><br>
+      OPENS UP ABOUT HIS<br>
+      SON'S AUTISM DIAGNOSIS
+    </div>
+  </div>
+  
+  <div class="brand-footer">
+    <div class="brand">
+      <div class="brand-main">SPECTRUM</div>
+      <div class="brand-sub">UNLOCKED</div>
+    </div>
+    <div class="swipe-arrow">→</div>
+  </div>
+</body>
+</html>
