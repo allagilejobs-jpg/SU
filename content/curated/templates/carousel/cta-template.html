@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    /* 
+     * CAROUSEL CTA TEMPLATE - 1080x1350
+     * No variables to replace - use as-is
+     */
+    
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Decorative circles */
+    body::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 400px;
+      height: 400px;
+      background: #E8B86D;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    body::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      background: #4A90A4;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    
+    /* Brand - top center */
+    .brand {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    
+    .brand-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #4A90A4 0%, #E8B86D 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin: 0 auto 15px;
+    }
+    
+    .brand-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 3px;
+    }
+    
+    .brand-sub {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4A90A4;
+      letter-spacing: 4px;
+      margin-top: 5px;
+    }
+    
+    /* Main content - centered */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+    }
+    
+    .main-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 50px;
+    }
+    
+    .main-text em {
+      color: #E8B86D;
+      font-style: normal;
+    }
+    
+    /* Action icons */
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+    
+    .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .action-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+    
+    .action-label {
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 1px;
+    }
+    
+    /* Follow CTA */
+    .follow-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: linear-gradient(135deg, #4A90A4 0%, #3a7a8a 100%);
+      padding: 20px 50px;
+      border-radius: 50px;
+    }
+    
+    .follow-text {
+      font-size: 22px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 2px;
+    }
+    
+    .follow-icon {
+      font-size: 24px;
+    }
+    
+    /* Bottom tagline */
+    .tagline {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    
+    .tagline-text {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 10px;
+    }
+    
+    .tagline-handle {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+    }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <div class="brand-icon">🧩</div>
+    <div class="brand-main">SPECTRUM</div>
+    <div class="brand-sub">UNLOCKED</div>
+  </div>
+  
+  <div class="content">
+    <div class="main-text">
+      If this <em>resonated</em><br>with you...
+    </div>
+    
+    <div class="actions">
+      <div class="action">
+        <div class="action-icon">❤️</div>
+        <div class="action-label">LIKE</div>
+      </div>
+      <div class="action">
+        <div class="action-icon">🔖</div>
+        <div class="action-label">SAVE</div>
+      </div>
+      <div class="action">
+        <div class="action-icon">📤</div>
+        <div class="action-label">SHARE</div>
+      </div>
+    </div>
+    
+    <div class="follow-cta">
+      <span class="follow-text">FOLLOW FOR MORE</span>
+      <span class="follow-icon">→</span>
+    </div>
+  </div>
+  
+  <div class="tagline">
+    <div class="tagline-text">Real stories. Real voices. Real community.</div>
+    <div class="tagline-handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
