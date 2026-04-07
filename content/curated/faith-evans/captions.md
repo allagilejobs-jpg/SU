@@ -6,14 +6,35 @@
 
 ---
 
-## 📦 Carousel Structure (4 slides)
+## 📦 CAROUSEL Version (4 slides — all 1080x1350)
 
 | Slide | Format | File | Content |
 |-------|--------|------|---------|
-| 1 | Cover (1080x1350) | `cover-slide.png` | Faith Evans photo + headline "I Begged for My Son's Diagnosis" |
-| 2 | Video (1080x1920, 73s) | `FINAL-clip-01-begging.mp4` | "I had to BEG for a diagnosis" — the doctor told her to wait |
-| 3 | Video (1080x1920, 85s) | `FINAL-clip-02-advocate.mp4` | "Why I started Ryder's Room" — community + first advocate |
-| 4 | Ending (1080x1350) | `ending-slide.png` | CTA + Faith's mission + follow prompt |
+| 1 | Cover image | `cover-slide.png` | Faith Evans photo + "I Begged for My Son's Diagnosis" |
+| 2 | Video (73s) | `FINAL-carousel-clip-01.mp4` | "I had to BEG for a diagnosis" |
+| 3 | Video (85s) | `FINAL-carousel-clip-02.mp4` | "Why I started Ryder's Room" |
+| 4 | Ending image | `ending-slide.png` | CTA + Faith's mission + follow prompts |
+
+✅ All slides 1080x1350 — no cropping inside Instagram carousel
+
+---
+
+## 🎬 REEL Version (1 single video — 1080x1920)
+
+| File | Length | Description |
+|------|--------|-------------|
+| `FINAL-reel-combined.mp4` | 2:38 (158s) | Both clips back-to-back, branded, vertical |
+
+✅ Ready to upload as a single Reel
+
+---
+
+## 🎬 Standalone Vertical Versions (if you want separate Reels)
+
+| File | Length | Description |
+|------|--------|-------------|
+| `FINAL-clip-01-begging.mp4` | 73s | Just the begging clip (1080x1920) |
+| `FINAL-clip-02-advocate.mp4` | 85s | Just the advocate clip (1080x1920) |
 
 ---
 
