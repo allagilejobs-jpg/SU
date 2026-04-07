@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1080px; height: 1350px; background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%); font-family: 'Poppins', sans-serif; color: white; padding: 80px 60px; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    body::before { content: ''; position: absolute; top: -180px; right: -180px; width: 550px; height: 550px; background: #E8B86D; border-radius: 50%; opacity: 0.1; }
+    body::after { content: ''; position: absolute; bottom: -130px; left: -130px; width: 400px; height: 400px; background: #4A90A4; border-radius: 50%; opacity: 0.1; }
+    .brand { position: absolute; top: 50px; left: 50px; }
+    .brand-main { font-size: 28px; font-weight: 900; color: white; letter-spacing: 1px; }
+    .brand-sub { font-size: 20px; font-weight: 700; color: #E8B86D; letter-spacing: 2px; }
+    .label { font-size: 22px; font-weight: 700; color: #4A90A4; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 35px; position: relative; z-index: 1; }
+    .main-msg { font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 900; line-height: 1.1; margin-bottom: 30px; max-width: 920px; position: relative; z-index: 1; }
+    .main-msg .em { color: #E8B86D; font-style: italic; }
+    .sub-msg { font-size: 26px; line-height: 1.5; max-width: 880px; opacity: 0.9; margin-bottom: 40px; position: relative; z-index: 1; }
+    .actions { display: flex; gap: 50px; position: relative; z-index: 1; margin-bottom: 35px; }
+    .action { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 22px; font-weight: 700; }
+    .action-icon { font-size: 50px; }
+    .cta-box { background: linear-gradient(135deg, #E8B86D 0%, #d4a85d 100%); color: #1a1a2e; padding: 22px 45px; border-radius: 16px; position: relative; z-index: 1; }
+    .cta-text { font-size: 26px; font-weight: 800; }
+    .footer { position: absolute; bottom: 50px; }
+    .handle { font-size: 22px; font-weight: 700; color: #E8B86D; }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <div class="brand-main">SPECTRUM</div>
+    <div class="brand-sub">UNLOCKED</div>
+  </div>
+  <div class="label">Holly's Mission</div>
+  <div class="main-msg">Autism is for <span class="em">life.</span><br>So is love.</div>
+  <div class="sub-msg">Holly co-founded HollyRod Foundation to support families living with autism. Twenty years of advocacy. Still showing up.</div>
+  <div class="actions">
+    <div class="action"><span class="action-icon">💾</span><span>Save</span></div>
+    <div class="action"><span class="action-icon">📤</span><span>Share</span></div>
+    <div class="action"><span class="action-icon">➕</span><span>Follow</span></div>
+  </div>
+  <div class="cta-box"><div class="cta-text">Tag an autism mom</div></div>
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>
