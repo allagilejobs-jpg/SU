@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{
+      width: 1080px; height: 1920px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #0a0a15 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 100px 70px;
+      position: relative; overflow: hidden;
+    }}
+    body::before {{ content: ''; position: absolute; top: -150px; right: -150px; width: 400px; height: 400px; background: #E8B86D; border-radius: 50%; opacity: 0.07; }}
+    body::after {{ content: ''; position: absolute; bottom: -100px; left: -100px; width: 350px; height: 350px; background: #4A90A4; border-radius: 50%; opacity: 0.07; }}
+    .label {{ font-size: 24px; font-weight: 700; color: #4A90A4; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 50px; position: relative; z-index: 1; }}
+    .main-text {{ font-family: 'Playfair Display', serif; font-size: 80px; font-weight: 800; line-height: 1.15; max-width: 950px; position: relative; z-index: 1; }}
+    .main-text .em {{ color: #E8B86D; font-style: italic; }}
+    .sub-text {{ font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; font-style: italic; line-height: 1.3; max-width: 950px; opacity: 0.9; margin-top: 35px; position: relative; z-index: 1; }}
+    .quote-mark {{ font-family: 'Playfair Display', serif; font-size: 200px; color: #E8B86D; opacity: 0.4; line-height: 0.6; margin-bottom: 20px; position: relative; z-index: 1; }}
+    .footer {{ position: absolute; bottom: 60px; }}
+    .handle {{ font-size: 24px; opacity: 0.5; font-weight: 600; }}
+  </style>
+</head>
+<body>
+  <div class="main-text">Eventually I drove home.</div>
+  <div class="sub-text">He ran to the door. Same smile. Same kid.</div>
+
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>
