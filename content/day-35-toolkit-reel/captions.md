@@ -1,3 +1,17 @@
+# Day 35: Resources Toolkit
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Every autism parent needs this.
+Websites, apps, books, community — save it.
+#autism #autismresources #autismparenting #autismtoolkit #fyp
+
+**Character count:** 138
+
+---
+
 # Day 35 - Tuesday, April 29, 2026
 ## 🎬 REEL | Your Autism Parent Toolkit
 

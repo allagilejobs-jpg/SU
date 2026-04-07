@@ -1,3 +1,17 @@
+# Day 28: Nature and Sensory Benefits
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Nature is free therapy.
+Why the outdoors calms autistic kids — comment your favorite spot.
+#autism #sensoryfriendly #earthday #autismparenting #fyp
+
+**Character count:** 145
+
+---
+
 # Day 28 - Tuesday, April 22, 2026 (Earth Day)
 ## 🎬 REEL | Nature & Autism: Free Therapy Outside
 

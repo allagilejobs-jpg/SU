@@ -1,7 +1,18 @@
-# Day 49 - Week 8
-## 🎬 REEL | Marriage & Autism Parenting
+# Day 49: Marriage & Autism Parenting
 
 ---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Marriage feels impossible right now?
+You're not failing. Try these 3 things tonight. Share with your partner.
+#autism #autismparenting #marriage #relationships
+
+**Character count:** 149
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 ## 📱 TikTok Caption
 

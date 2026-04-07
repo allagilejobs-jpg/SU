@@ -1,3 +1,17 @@
+# Day 4: 5 Sensory Hacks That Actually Work
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+5 sensory hacks OTs swear by.
+Which one will you try first? Comment below.
+#autism #sensoryhacks #autismparenting #sensoryprocessing #fyp
+
+**Character count:** 136
+
+---
+
 # Day 4 - Saturday, March 29, 2026
 ## 🎬 REEL | Slideshow Format
 

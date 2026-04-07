@@ -1,7 +1,18 @@
-# Day 56 - Week 9
-## 🎬 REEL | Summer Camp for Autistic Kids
+# Day 56: Summer Camps for Autistic Kids
 
 ---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+The right camp is magic.
+The wrong one is trauma. Ask these questions before you book. Save this.
+#autism #summercamp #autismparenting #specialneeds
+
+**Character count:** 146
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 ## 📱 TikTok Caption
 

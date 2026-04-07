@@ -1,7 +1,18 @@
-# Day 45 - Week 7
-## 🎬 REEL | Speech Therapy: Beyond Just Talking
+# Day 45: Speech Therapy & AAC
 
 ---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Speech therapy isn't just talking.
+It's communication in every form - including AAC. Save for your next session.
+#autism #speechtherapy #aac #slp
+
+**Character count:** 140
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 ## 📱 TikTok Caption
 

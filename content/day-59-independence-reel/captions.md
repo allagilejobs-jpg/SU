@@ -1,7 +1,18 @@
-# Day 59 - Week 9
-## 🎬 REEL | Building Independence
+# Day 59: Building Independence
 
 ---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Independence isn't doing it alone.
+It's having skills with support. Pick ONE to start building today.
+#autism #autismparenting #lifeskills #independence
+
+**Character count:** 144
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 ## 📱 TikTok Caption
 

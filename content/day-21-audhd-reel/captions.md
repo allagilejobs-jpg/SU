@@ -1,3 +1,17 @@
+# Day 21: AuDHD — Autism + ADHD
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Your brain has two operating systems.
+AuDHD is real — comment "ME" if you get it.
+#audhd #autism #adhd #neurodivergent #fyp
+
+**Character count:** 124
+
+---
+
 # Day 21 - Tuesday, April 15, 2026
 ## 🎬 REEL | The AuDHD Experience
 

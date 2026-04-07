@@ -1,4 +1,18 @@
-# Bonus Reel: Life on the Spectrum (BBC Africa Eye)
+# Bonus: BBC Africa Eye - Life on the Spectrum
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+A boy. A room. A locked door.
+One BBC Africa Eye scene I can't unsee. Watch the full doc - link in bio.
+#autism #autismafrica #bbcafricaeye #globalautism
+
+**Character count:** 150
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 **Source:** https://youtu.be/oWE5ZKv08gA
 **Producer:** BBC News Africa / BBC Africa Eye

@@ -1,3 +1,17 @@
+# Day 2: Acceptance vs Awareness
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Stop saying autism awareness.
+Here's why the community moved on — save this.
+#autism #autismacceptance #neurodivergent #actuallyautistic #fyp
+
+**Character count:** 137
+
+---
+
 # Day 2 - Thursday, March 27, 2026
 ## 🎬 REEL | Slideshow Format (9:16)
 

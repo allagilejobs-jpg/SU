@@ -1,3 +1,17 @@
+# Day 8: World Autism Acceptance Day
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Today, we choose acceptance.
+World Autism Day 2026 — take the pledge with me.
+#WorldAutismDay #AutismAcceptance #autism #WAAD2026 #fyp
+
+**Character count:** 135
+
+---
+
 # Day 8 - April 2, 2026 ⭐ WORLD AUTISM ACCEPTANCE DAY
 ## 🔄 Both Platforms | HERO CONTENT
 

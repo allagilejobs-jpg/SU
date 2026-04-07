@@ -1,3 +1,17 @@
+# Day 10: IEP Accommodations
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Your child's IEP shouldn't teach masking.
+Save this before your next meeting.
+#IEP #autism #specialeducation #autismparenting #fyp
+
+**Character count:** 131
+
+---
+
 # Day 10 - Friday, April 4, 2026
 ## 🎬 REEL | Slideshow Format (9:16)
 

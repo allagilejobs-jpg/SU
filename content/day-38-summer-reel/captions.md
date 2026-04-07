@@ -1,7 +1,18 @@
-# Day 38 - Friday, May 2, 2026
-## 🎬 REEL | Summer Prep for Autism Families
+# Day 38: Summer Prep for Autism Families
 
 ---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Summer break feels like chaos?
+6 weeks without school doesn't have to break you. Save these 4 survival tips.
+#autism #autismparenting #summerbreak #autismmom
+
+**Character count:** 148
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 ## 📱 TikTok Caption
 

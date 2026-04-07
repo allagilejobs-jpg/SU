@@ -1,7 +1,18 @@
-# Day 52 - Week 8
-## 🎬 REEL | Building Your Support System
+# Day 52: Building Your Support System
 
 ---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+You were never meant to do this alone.
+4 types of support every autism parent needs. Tag your village below.
+#autism #autismparenting #community #autismmom
+
+**Character count:** 148
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 ## 📱 TikTok Caption
 

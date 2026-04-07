@@ -1,7 +1,18 @@
-# Day 42 - Week 7
-## 🎬 REEL | OT Deep Dive: What It Really Is
+# Day 42: Occupational Therapy Deep Dive
 
 ---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+They're not just playing.
+OT is working on sensory, motor, and life skills. Save this before your next session.
+#autism #ot #occupationaltherapy #autismtherapy
+
+**Character count:** 151
+
+---
+
+## 📱 FEED CAPTION (Carousel/Image Posts)
 
 ## 📱 TikTok Caption
 

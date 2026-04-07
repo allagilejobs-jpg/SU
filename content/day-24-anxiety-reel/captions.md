@@ -1,3 +1,17 @@
+# Day 24: Autism and Anxiety
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+84% of autistic people feel this.
+Anxiety + autism explained — share with someone who needs it.
+#autism #anxiety #neurodivergent #autismparenting #fyp
+
+**Character count:** 149
+
+---
+
 # Day 24 - Friday, April 18, 2026
 ## 🎬 REEL | Autism & Anxiety: The Hidden Connection
 

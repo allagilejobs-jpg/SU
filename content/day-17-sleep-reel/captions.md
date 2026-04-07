@@ -1,3 +1,17 @@
+# Day 17: Sleep Issues in Autism
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+Melatonin isn't the only answer.
+80% of autistic kids struggle with sleep — save this.
+#autism #autismsleep #sensory #autismparenting #fyp
+
+**Character count:** 142
+
+---
+
 # Day 17 - Friday, April 11, 2026
 ## 🎬 REEL | Slideshow Format (9:16)
 

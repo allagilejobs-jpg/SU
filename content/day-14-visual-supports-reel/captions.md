@@ -1,3 +1,17 @@
+# Day 14: Visual Supports That Work
+
+---
+
+## 🎬 REEL CAPTION (Instagram Reels)
+
+5 visual supports that actually work.
+DM "VISUALS" for free templates.
+#autism #visualsupports #autismhacks #autismparenting #fyp
+
+**Character count:** 131
+
+---
+
 # Day 14 - Tuesday, April 8, 2026
 ## 🎬 REEL | Visual Supports That Actually Work
 
