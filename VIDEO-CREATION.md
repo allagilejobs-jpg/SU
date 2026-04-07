@@ -443,6 +443,87 @@ Or: 2 original + 1 curated per week
 
 ---
 
+## Full-Service Content Sourcing (Ask Claude)
+
+Claude can handle the entire curated clips workflow end-to-end:
+
+### What Claude Can Do
+
+| Step | Task | Automated? |
+|------|------|------------|
+| 1 | Search for compelling content | ✅ |
+| 2 | Download from URL | ✅ |
+| 3 | Transcribe and review | ✅ |
+| 4 | Identify best 30-60 sec clip | ✅ |
+| 5 | Trim to segment | ✅ |
+| 6 | Crop to vertical 9:16 | ✅ |
+| 7 | Add credit overlay | ✅ |
+| 8 | Deliver final video + caption | ✅ |
+
+### How to Request
+
+**Option 1: Topic-Based Request**
+```
+"Find me a curated clip about [TOPIC]"
+
+Topics:
+- Diagnosis journey stories
+- Parent advocacy / fighting for services
+- Autistic adult perspectives
+- Therapy tips (OT, speech, ABA debates)
+- Sensory strategies
+- School/IEP battles
+- Emotional support / burnout
+- Early intervention
+- Meltdown support
+- Sibling experiences
+```
+
+**Option 2: Source-Based Request**
+```
+"Find a good clip from [SOURCE]"
+
+Sources:
+- Specific Instagram account (@username)
+- YouTube channel name
+- Podcast name
+- Specific video URL
+```
+
+**Option 3: Full Auto**
+```
+"Find me a curated clip to post today — your choice"
+```
+
+### What You'll Receive
+
+1. **Final video file** (1080x1920, ready to post)
+2. **Suggested caption** with:
+   - Hook/commentary
+   - Proper credit to original creator
+   - Relevant hashtags
+3. **Source info** (original URL, creator handle)
+
+### Example Requests
+
+```
+"Find me a clip about a parent fighting for their child's diagnosis"
+
+"Pull something from @autism_feed's recent posts"
+
+"Find a good autism podcast clip about early intervention"
+
+"Get me a curated clip for today — something emotional/relatable"
+```
+
+### Turnaround
+
+- Simple clips: ~5 minutes
+- With transcription review: ~10 minutes
+- Content search + full processing: ~15 minutes
+
+---
+
 # Method 1: Voiceover Reel with Captions
 
 Full narrated video with burned-in subtitles. Best for educational content.
