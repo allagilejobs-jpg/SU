@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    /* 
+     * CAROUSEL VIDEO TEMPLATE - NO GREEN SCREEN
+     * Video area is same color as background - overlay on top of video
+     */
+    
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: transparent;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Top bar - solid, covers top of video */
+    .top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(180deg, #1a1a2e 0%, #1a1a2e 80%, rgba(26,26,46,0.8) 100%);
+      padding: 40px 60px;
+    }
+    
+    /* Decorative circle - top */
+    .top-bar::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 400px;
+      height: 400px;
+      background: #E8B86D;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #4A90A4 0%, #E8B86D 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    
+    .brand-text .brand-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 2px;
+    }
+    
+    .brand-text .brand-sub {
+      font-size: 12px;
+      font-weight: 600;
+      color: #4A90A4;
+      letter-spacing: 3px;
+    }
+    
+    .headline {
+      font-size: 26px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.25;
+    }
+    
+    .headline .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      color: #E8B86D;
+    }
+    
+    /* Side bars - cover video edges */
+    .side-left {
+      position: absolute;
+      top: 200px;
+      left: 0;
+      width: 60px;
+      height: 780px;
+      background: #1a1a2e;
+    }
+    .side-right {
+      position: absolute;
+      top: 200px;
+      right: 0;
+      width: 60px;
+      height: 780px;
+      background: #1a1a2e;
+    }
+    
+    /* Frame border - just visual */
+    .video-frame {
+      position: absolute;
+      top: 196px;
+      left: 56px;
+      right: 56px;
+      height: 788px;
+      border: 2px solid rgba(74,144,164,0.4);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+    
+    /* Bottom bar - solid, covers bottom of video */
+    .bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 190px;
+      background: linear-gradient(0deg, #1a1a2e 0%, #1a1a2e 80%, rgba(26,26,46,0.8) 100%);
+      padding: 25px 60px;
+    }
+    
+    /* Decorative circle - bottom */
+    .bottom-bar::before {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      background: #4A90A4;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    
+    .person-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #E8B86D;
+      margin-bottom: 6px;
+    }
+    
+    .context {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 15px;
+    }
+    
+    .credit {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
+    
+    .handle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #4A90A4;
+    }
+    
+    .swipe {
+      position: absolute;
+      bottom: 30px;
+      right: 60px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #4A90A4;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="brand">
+      <div class="brand-icon">🧩</div>
+      <div class="brand-text">
+        <div class="brand-main">SPECTRUM</div>
+        <div class="brand-sub">UNLOCKED</div>
+      </div>
+    </div>
+    <div class="headline">
+      <span class="name">OT Genasis</span> Opens Up About<br>His Son's Autism Diagnosis
+    </div>
+  </div>
+  
+  <div class="side-left"></div>
+  <div class="side-right"></div>
+  <div class="video-frame"></div>
+  
+  <div class="bottom-bar">
+    <div class="person-name">OT GENASIS</div>
+    <div class="context">On raising his son with autism</div>
+    <div class="credit">🎥 The Therapist</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+  
+  <div class="swipe">Swipe →</div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(180deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Decorative glows */
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74,144,164,0.2) 0%, transparent 70%);
+    }
+    .glow-1 { width: 500px; height: 500px; top: -150px; left: -150px; }
+    .glow-2 { width: 400px; height: 400px; bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(232,184,109,0.15) 0%, transparent 70%); }
+    
+    /* Brand */
+    .brand {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    
+    .accent-line {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #4A90A4, #E8B86D);
+      border-radius: 2px;
+      margin: 0 auto 20px;
+    }
+    
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 4px;
+    }
+    
+    .brand-tag {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4A90A4;
+      letter-spacing: 5px;
+      margin-top: 5px;
+    }
+    
+    /* Main content */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+    }
+    
+    .main-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 50px;
+    }
+    
+    .main-text em {
+      color: #E8B86D;
+      font-style: normal;
+    }
+    
+    /* Action icons */
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    
+    .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .action-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+    
+    .action-label {
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 1px;
+    }
+    
+    /* Follow CTA */
+    .follow-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: linear-gradient(135deg, #4A90A4 0%, #3a7a8a 100%);
+      padding: 20px 50px;
+      border-radius: 50px;
+      margin-top: 20px;
+    }
+    
+    .follow-text {
+      font-size: 22px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 2px;
+    }
+    
+    .follow-icon {
+      font-size: 24px;
+    }
+    
+    /* Bottom tagline */
+    .tagline {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    
+    .tagline-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+    }
+    
+    .tagline-handle {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  
+  <div class="brand">
+    <div class="accent-line"></div>
+    <div class="brand-name">SPECTRUM</div>
+    <div class="brand-tag">UNLOCKED</div>
+  </div>
+  
+  <div class="content">
+    <div class="main-text">
+      If this <em>resonated</em><br>with you...
+    </div>
+    
+    <div class="actions">
+      <div class="action">
+        <div class="action-icon">❤️</div>
+        <div class="action-label">LIKE</div>
+      </div>
+      <div class="action">
+        <div class="action-icon">🔖</div>
+        <div class="action-label">SAVE</div>
+      </div>
+      <div class="action">
+        <div class="action-icon">📤</div>
+        <div class="action-label">SHARE</div>
+      </div>
+    </div>
+    
+    <div class="follow-cta">
+      <span class="follow-text">FOLLOW FOR MORE</span>
+      <span class="follow-icon">→</span>
+    </div>
+  </div>
+  
+  <div class="tagline">
+    <div class="tagline-text">Real stories. Real voices. Real community.</div>
+    <div class="tagline-handle">@spectrum.unlocked</div>
+  </div>
+</body>
+</html>

@@ -441,10 +441,29 @@ ffmpeg -y -i FINAL.mp4 -c:v libx264 -preset medium -crf 30 -c:a aac -b:a 128k -m
 
 ## Completed Examples
 
-| Celebrity | Quote | Source | Location |
-|-----------|-------|--------|----------|
-| OT Genasis | "Maybe He Chose You" | The Therapist (VICELAND) | `content/curated/ot-genasis/` |
-| Holly/RJ Peete | "Do I Have Autism Still?" | OWN | `content/curated/holly-peete/` |
+| Celebrity | Quote | Source | Location | Carousel Ready |
+|-----------|-------|--------|----------|----------------|
+| OT Genasis | "Maybe He Chose You" / "Opens Up About His Son's Autism Diagnosis" | The Therapist (VICELAND) | `content/curated/ot-genasis/` | ✅ Yes |
+| Holly Robinson Peete | "Do I Have Autism Still?" (Her son RJ asked) | OWN | `content/curated/holly-peete/` | ✅ Yes |
+
+### Carousel Files (Ready to Post)
+
+**OT Genasis:**
+- `carousel-cover-FINAL.png` - Cover slide with SWIPE button
+- `carousel-video-FINAL.mp4` - Video with branding (1080x1350, has cover frame)
+- `carousel-cta-FINAL.png` - CTA slide
+
+**Holly Robinson Peete:**
+- `carousel-cover-FINAL.png` - Cover slide (clarifies it's about her son RJ)
+- `carousel-video-FINAL.mp4` - Video with branding (1080x1350, has cover frame)  
+- `carousel-cta-FINAL.png` - CTA slide
+
+### Brand Guidelines Learned (2026-04-07)
+- **NEVER use puzzle logo (🧩)** - not part of Spectrum Unlocked brand
+- Branding: "SPECTRUM" white, "UNLOCKED" teal/green below
+- Colors: Navy #1a1a2e, Gold #E8B86D, Teal #4A90A4, Green #5fd4a8
+- Fonts: Poppins (primary), Playfair Display (accents)
+- Handle: @spectrum_unlocked (with underscore) or @spectrum.unlocked (with dot)
 
 ---
 
