@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .decorative-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    .circle-1 {
+      width: 400px;
+      height: 400px;
+      background: #4A90A4;
+      top: -100px;
+      right: -100px;
+    }
+    .circle-2 {
+      width: 300px;
+      height: 300px;
+      background: #E8B86D;
+      bottom: -50px;
+      left: -50px;
+    }
+    
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 180px;
+      color: #4A90A4;
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: -40px;
+    }
+    
+    .main-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.4;
+      max-width: 900px;
+      margin-bottom: 50px;
+    }
+    
+    .highlight {
+      color: #E8B86D;
+    }
+    
+    .subtext {
+      font-size: 32px;
+      font-weight: 400;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      max-width: 800px;
+    }
+    
+    .brand {
+      position: absolute;
+      bottom: 60px;
+      font-size: 24px;
+      font-weight: 500;
+      color: #4A90A4;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="decorative-circle circle-1"></div>
+  <div class="decorative-circle circle-2"></div>
+  
+  <div class="quote-mark">"</div>
+  
+  <div class="main-text">
+    I had to <span class="highlight">beg</span> for a written diagnosis<br>
+    just to access early intervention.
+  </div>
+  
+  <div class="subtext">
+    I already knew something was different.<br>
+    I just needed someone to put it on paper<br>
+    so I could get my son the help he needed.
+  </div>
+  
+  <div class="brand">SPECTRUM UNLOCKED</div>
+</body>
+</html>
