@@ -68,19 +68,27 @@ ffmpeg -y -i /tmp/video.mp4 -ss 00:04:27 -t 00:01:28 -c copy /path/to/clip.mp4
 
 ---
 
-### Step 4: Crop to 9:16 Vertical
+### Step 4: Pad to 9:16 Vertical (IMPORTANT!)
+
+**DO NOT CROP** - cropping cuts off people in interview videos!
+
+Use **padding** to keep the full video visible:
 
 ```bash
 ffmpeg -y -i clip.mp4 \
-  -vf "crop=ih*9/16:ih,scale=1080:1920" \
+  -vf "scale=1080:-1,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=#1a1a2e" \
   -c:a copy \
   vertical.mp4
 ```
 
 **What this does:**
-1. `crop=ih*9/16:ih` - Center-crops to 9:16 aspect ratio
-2. `scale=1080:1920` - Scales to standard Reel dimensions
-3. `-c:a copy` - Keeps original audio
+1. `scale=1080:-1` - Scale width to 1080, keep aspect ratio
+2. `pad=1080:1920:...` - Add dark padding to make 9:16
+3. `(ow-iw)/2:(oh-ih)/2` - Center the video
+4. `color=#1a1a2e` - Dark background color (matches Spectrum Unlocked brand)
+5. `-c:a copy` - Keeps original audio
+
+**Result:** Full video visible with dark bars above/below
 
 ---
 
@@ -392,8 +400,8 @@ grep -i -n "autism" /tmp/celeb.srt
 mkdir -p /Users/aramide/clawd/SU/content/curated/celeb-name
 ffmpeg -y -i /tmp/celeb.mp4 -ss 00:02:30 -t 00:01:00 -c copy /Users/aramide/clawd/SU/content/curated/celeb-name/clip.mp4
 
-# 5. Crop to vertical
-ffmpeg -y -i clip.mp4 -vf "crop=ih*9/16:ih,scale=1080:1920" -c:a copy vertical.mp4
+# 5. Pad to vertical (DO NOT CROP - use padding!)
+ffmpeg -y -i clip.mp4 -vf "scale=1080:-1,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=#1a1a2e" -c:a copy vertical.mp4
 
 # 6. Create overlay HTML, then render
 npx playwright screenshot --viewport-size=1080,1920 brand-overlay.html brand-overlay.png
