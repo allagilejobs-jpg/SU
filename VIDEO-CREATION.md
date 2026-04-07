@@ -1,8 +1,201 @@
 # VIDEO-CREATION.md - Reel Production Guide
 
-**Last Updated:** April 6, 2026
+**Last Updated:** April 7, 2026
 
-Three methods for creating video reels from slide templates.
+Three methods for creating video reels from slide templates, plus tools for extracting and transcribing existing content.
+
+---
+
+# Extract & Transcribe from Instagram/TikTok
+
+Download and transcribe existing reels for inspiration, repurposing, or script reference.
+
+## Required Tools
+
+### yt-dlp (Video Downloader)
+```bash
+# Install via pip
+pip install yt-dlp
+
+# Or via Homebrew (macOS)
+brew install yt-dlp
+```
+
+### Whisper (AI Transcription)
+```bash
+# Install via pip
+pip install openai-whisper
+
+# Requires ffmpeg
+brew install ffmpeg
+```
+
+---
+
+## Step 1: Download the Video
+
+### Instagram Reel
+```bash
+yt-dlp -f best -o "/tmp/insta_reel.mp4" "https://www.instagram.com/reel/ABC123xyz/"
+```
+
+### TikTok Video
+```bash
+yt-dlp -f best -o "/tmp/tiktok_video.mp4" "https://www.tiktok.com/@username/video/1234567890"
+```
+
+### YouTube Short
+```bash
+yt-dlp -f best -o "/tmp/yt_short.mp4" "https://youtube.com/shorts/ABC123"
+```
+
+**Options:**
+| Flag | Purpose |
+|------|---------|
+| `-f best` | Download best quality |
+| `-o "path"` | Output file path |
+| `-f bestaudio` | Audio only |
+| `--extract-audio` | Convert to audio |
+
+---
+
+## Step 2: Transcribe with Whisper
+
+### Basic Transcription
+```bash
+whisper /tmp/insta_reel.mp4 --model base --output_format txt --output_dir /tmp
+```
+
+### With Timestamps (SRT)
+```bash
+whisper /tmp/insta_reel.mp4 --model base --output_format srt --output_dir /tmp
+```
+
+### Higher Accuracy
+```bash
+whisper /tmp/insta_reel.mp4 --model medium --output_format txt --output_dir /tmp
+```
+
+**Whisper Models:**
+| Model | Speed | Accuracy | VRAM |
+|-------|-------|----------|------|
+| `tiny` | Fastest | Low | ~1GB |
+| `base` | Fast | Good | ~1GB |
+| `small` | Medium | Better | ~2GB |
+| `medium` | Slow | High | ~5GB |
+| `large` | Slowest | Highest | ~10GB |
+
+---
+
+## Step 3: Read the Transcript
+
+```bash
+# Plain text
+cat /tmp/insta_reel.txt
+
+# With timestamps (SRT)
+cat /tmp/insta_reel.srt
+```
+
+### SRT Format Example
+```srt
+1
+00:00:00,000 --> 00:00:03,500
+Sensory hacks that actually work.
+
+2
+00:00:03,500 --> 00:00:06,200
+Number one: noise-canceling headphones.
+
+3
+00:00:06,200 --> 00:00:10,800
+Keep a pair in your bag at all times.
+```
+
+---
+
+## Complete Example: Instagram Reel
+
+```bash
+# 1. Download
+yt-dlp -f best -o "/tmp/reel.mp4" "https://www.instagram.com/reel/ABC123/"
+
+# 2. Transcribe to SRT (with timestamps)
+whisper /tmp/reel.mp4 --model base --output_format srt --output_dir /tmp
+
+# 3. Also get plain text
+whisper /tmp/reel.mp4 --model base --output_format txt --output_dir /tmp
+
+# 4. View results
+cat /tmp/reel.txt
+cat /tmp/reel.srt
+```
+
+---
+
+## Extract Audio Only
+
+If you just need the audio track:
+
+```bash
+# Download as audio
+yt-dlp -f bestaudio -x --audio-format mp3 -o "/tmp/audio.mp3" "REEL_URL"
+
+# Or extract from downloaded video
+ffmpeg -i /tmp/reel.mp4 -vn -acodec mp3 /tmp/audio.mp3
+```
+
+---
+
+## Troubleshooting
+
+### "Post isn't available"
+- Link is broken or private
+- Try getting a fresh link
+- Video may have been deleted
+
+### Hangs Forever
+- ❌ Don't use `--cookies-from-browser` — it hangs
+- ✅ Works on public reels without authentication
+
+### Rate Limited
+- Wait a few minutes between downloads
+- Use a VPN if blocked
+
+### Whisper Out of Memory
+- Use a smaller model (`tiny` or `base`)
+- Or transcribe shorter clips
+
+---
+
+## Use Cases
+
+| Task | Workflow |
+|------|----------|
+| **Inspiration** | Download trending reels → transcribe → analyze hooks |
+| **Repurposing** | Download your old content → get transcript → create new version |
+| **Competitor Analysis** | Download competitor reels → transcribe → study format |
+| **Script Reference** | Download similar content → transcribe → use as template |
+| **Karaoke Captions** | Download video → transcribe with timestamps → use for word timing |
+
+---
+
+## Quick Reference
+
+```bash
+# Instagram Reel → Text
+yt-dlp -f best -o "/tmp/reel.mp4" "REEL_URL"
+whisper /tmp/reel.mp4 --model base --output_format txt --output_dir /tmp
+cat /tmp/reel.txt
+
+# Instagram Reel → SRT (timestamps)
+yt-dlp -f best -o "/tmp/reel.mp4" "REEL_URL"
+whisper /tmp/reel.mp4 --model base --output_format srt --output_dir /tmp
+cat /tmp/reel.srt
+
+# TikTok → Audio Only
+yt-dlp -f bestaudio -x --audio-format mp3 -o "/tmp/audio.mp3" "TIKTOK_URL"
+```
 
 ---
 
