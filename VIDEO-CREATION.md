@@ -2,7 +2,7 @@
 
 **Last Updated:** April 7, 2026
 
-Three methods for creating video reels from slide templates, plus tools for extracting and transcribing existing content.
+Three methods for creating video reels from slide templates, plus tools for extracting, transcribing, and curating existing content.
 
 ---
 
@@ -196,6 +196,250 @@ cat /tmp/reel.srt
 # TikTok → Audio Only
 yt-dlp -f bestaudio -x --audio-format mp3 -o "/tmp/audio.mp3" "TIKTOK_URL"
 ```
+
+---
+
+# Curated Clips Workflow
+
+Repurpose content from podcasts, interviews, and other creators. Clip, crop, credit, post.
+
+## The Strategy
+
+Many successful accounts (like `@autism_feed`) grow by curating valuable content:
+1. Find compelling source content
+2. Extract the best 30-60 second clip
+3. Crop to vertical 9:16 format
+4. Post with proper credit
+
+**Content mix:** 70% original, 30% curated
+
+---
+
+## Step 1: Find Source Content
+
+| Source Type | Where to Find |
+|-------------|---------------|
+| Podcasts | Spotify, Apple Podcasts, YouTube |
+| Interviews | YouTube, Facebook Lives |
+| Other creators | TikTok, Instagram Reels |
+| Webinars | Expert talks, conferences |
+| Documentaries | Clips with educational value |
+
+**Search terms:**
+- "autism parent interview"
+- "neurodiversity podcast"
+- "autistic adult perspective"
+- "autism therapist explains"
+
+---
+
+## Step 2: Download the Source
+
+```bash
+# YouTube/Instagram/TikTok
+yt-dlp -f best -o "source.mp4" "VIDEO_URL"
+
+# Audio-only (for podcasts)
+yt-dlp -f bestaudio -x --audio-format mp3 -o "source.mp3" "PODCAST_URL"
+```
+
+---
+
+## Step 3: Find the Best Clip
+
+Watch/listen and note timestamps of compelling moments:
+- Strong emotional hooks
+- Relatable parent experiences
+- Expert insights
+- Controversial takes
+- "Aha moment" explanations
+
+**Ideal clip length:** 30-60 seconds
+
+---
+
+## Step 4: Trim the Clip
+
+```bash
+# Basic trim: start at 1:30, duration 45 seconds
+ffmpeg -i source.mp4 -ss 00:01:30 -t 00:00:45 -c copy clip.mp4
+```
+
+**Parameters:**
+| Flag | Purpose | Example |
+|------|---------|---------|
+| `-ss` | Start time | `00:01:30` (1 min 30 sec) |
+| `-t` | Duration | `00:00:45` (45 seconds) |
+| `-to` | End time | `00:02:15` (alternative to -t) |
+
+---
+
+## Step 5: Crop to Vertical (9:16)
+
+### Center Crop (Most Common)
+```bash
+ffmpeg -i clip.mp4 \
+  -vf "crop=ih*9/16:ih,scale=1080:1920" \
+  -c:a copy vertical.mp4
+```
+
+### Left-Aligned Crop
+```bash
+ffmpeg -i clip.mp4 \
+  -vf "crop=ih*9/16:ih:0:0,scale=1080:1920" \
+  -c:a copy vertical.mp4
+```
+
+### Right-Aligned Crop
+```bash
+ffmpeg -i clip.mp4 \
+  -vf "crop=ih*9/16:ih:iw-ih*9/16:0,scale=1080:1920" \
+  -c:a copy vertical.mp4
+```
+
+### Custom Position (x offset)
+```bash
+# Crop with specific x position (e.g., focus on right speaker)
+ffmpeg -i clip.mp4 \
+  -vf "crop=ih*9/16:ih:500:0,scale=1080:1920" \
+  -c:a copy vertical.mp4
+```
+
+---
+
+## Step 6: Add Credit Overlay
+
+### Text Credit at Bottom
+```bash
+ffmpeg -i vertical.mp4 \
+  -vf "drawtext=text='📹 @originalcreator':fontfile=/System/Library/Fonts/Helvetica.ttc:fontsize=36:fontcolor=white:x=60:y=1750:shadowcolor=black:shadowx=2:shadowy=2" \
+  -c:a copy credited.mp4
+```
+
+### Credit with Source Name
+```bash
+ffmpeg -i vertical.mp4 \
+  -vf "drawtext=text='🎙️ The Autism Podcast':fontsize=32:fontcolor=white:x=60:y=1720:shadowcolor=black:shadowx=2:shadowy=2,drawtext=text='📹 @hosthandle':fontsize=32:fontcolor=white:x=60:y=1770:shadowcolor=black:shadowx=2:shadowy=2" \
+  -c:a copy credited.mp4
+```
+
+---
+
+## All-in-One Command
+
+Trim + Crop + Credit in a single command:
+
+```bash
+ffmpeg -i source.mp4 -ss 00:01:30 -t 00:00:45 \
+  -vf "crop=ih*9/16:ih,scale=1080:1920,drawtext=text='📹 @originalcreator':fontsize=36:fontcolor=white:x=60:y=1750:shadowcolor=black:shadowx=2:shadowy=2" \
+  -c:a aac -b:a 192k \
+  -movflags +faststart \
+  final_clip.mp4
+```
+
+---
+
+## Step 7: Write Caption with Credit
+
+**Caption format:**
+```
+[Your hook/commentary]
+
+[Optional: your thoughts on the clip]
+
+🎥 Credit: @originalcreator
+📺 Source: [Podcast/Channel Name]
+
+#autism #autismparenting #neurodiversity #fyp
+```
+
+**Example:**
+```
+This mom fought for her son's diagnosis when doctors said "wait it out" 💪
+
+Early intervention matters. Trust your instincts.
+
+🎥 Credit: @autism_mom_journey
+📺 Source: The Autism Parenting Podcast
+
+#autism #autismdiagnosis #earlyintervention #autismparenting #fyp
+```
+
+---
+
+## Quick Reference Commands
+
+```bash
+# Download
+yt-dlp -f best -o "source.mp4" "URL"
+
+# Trim (start at 1:30, 45 sec)
+ffmpeg -i source.mp4 -ss 00:01:30 -t 00:00:45 -c copy clip.mp4
+
+# Crop to vertical
+ffmpeg -i clip.mp4 -vf "crop=ih*9/16:ih,scale=1080:1920" -c:a copy vertical.mp4
+
+# Add credit text
+ffmpeg -i vertical.mp4 -vf "drawtext=text='📹 @creator':fontsize=36:fontcolor=white:x=60:y=1750:shadowcolor=black:shadowx=2:shadowy=2" -c:a copy final.mp4
+
+# All-in-one
+ffmpeg -i source.mp4 -ss 00:01:30 -t 00:00:45 \
+  -vf "crop=ih*9/16:ih,scale=1080:1920,drawtext=text='📹 @creator':fontsize=36:fontcolor=white:x=60:y=1750:shadowcolor=black:shadowx=2:shadowy=2" \
+  -c:a aac final.mp4
+```
+
+---
+
+## Ethical Guidelines
+
+### ✅ Do
+- Always credit the original creator
+- Tag them in your post
+- Ask permission when possible (especially for smaller creators)
+- Add your own commentary/value
+- Share their original post to your stories
+
+### ❌ Don't
+- Claim content as your own
+- Crop out their watermarks/handles
+- Repost without any attribution
+- Monetize others' content directly
+- Repost content they've asked not to be shared
+
+---
+
+## Content Sources to Follow
+
+**Podcasts:**
+- The Autism Parenting Podcast
+- Neurodiversity Podcast
+- Autism in the Adult
+- The Stimming Pool
+
+**YouTube Channels:**
+- Autism Family
+- Purple Ella
+- Yo Samdy Sam (autistic adult)
+- Paige Layle
+
+**Instagram Accounts:**
+- @autism_feed (curation account example)
+- @theautismmom
+- @fidgets.and.fries
+- @neurodivergent_lou
+
+---
+
+## Posting Schedule
+
+**Recommended mix:**
+| Day | Content Type |
+|-----|--------------|
+| Mon | Original carousel |
+| Wed | Curated clip |
+| Fri | Original carousel/reel |
+
+Or: 2 original + 1 curated per week
 
 ---
 
