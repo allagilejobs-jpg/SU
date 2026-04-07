@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 70px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.07; }
+    .bg-shape-1 { width: 550px; height: 550px; background: #E8B86D; top: -180px; right: -180px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #4A90A4; bottom: -130px; left: -130px; }
+    .container {
+      background: rgba(255,255,255,0.04);
+      border: 2px solid rgba(232, 184, 109, 0.3);
+      border-radius: 24px;
+      padding: 60px 70px;
+      max-width: 920px;
+      position: relative; z-index: 1;
+      backdrop-filter: blur(10px);
+    }
+    .header {
+      background: linear-gradient(135deg, #E8B86D 0%, #d4a85d 100%);
+      color: #1a1a2e;
+      padding: 18px 35px;
+      border-radius: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 50px;
+      display: inline-block;
+      line-height: 1.2;
+    }
+    .body-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1.4;
+      white-space: pre-line;
+    }
+    .footer { position: absolute; bottom: 40px; }
+    .handle { font-size: 22px; opacity: 0.55; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+
+  <div class="container">
+    <div class="header">FJ's Entire Menu</div>
+    <div class="body-text">Chicken nuggets.
+Plain pasta.
+Goldfish crackers.
+Applesauce.
+Banana.
+
+That's it.
+That's the whole list.</div>
+  </div>
+
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>

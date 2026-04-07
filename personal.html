@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Posts — FJ Stories — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+    }
+    .main-nav {
+      background: #0f0f1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active {
+      background: #4A90A4;
+      color: white;
+    }
+    .nav-dropdown { position: relative; }
+    .dropdown-toggle { cursor: pointer; }
+    .dropdown-menu {
+      display: none; position: absolute; right: 0; top: 100%;
+      background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px;
+      padding: 15px; min-width: 280px; max-height: 70vh; overflow-y: auto;
+      z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .nav-dropdown:hover .dropdown-menu, .dropdown-menu:hover { display: block; }
+    .dropdown-group { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #2a2a4a; }
+    .dropdown-group:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .dropdown-label { color: #E8B86D; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
+    .dropdown-menu a { display: block; color: #ccc; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+    .dropdown-menu a:hover { background: #4A90A4; color: white; }
+
+    .header {
+      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 50%, #0f3460 100%);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+    }
+    .header h1 span { color: #E8B86D; font-style: italic; }
+    .header p { opacity: 0.9; font-size: 1.15rem; max-width: 700px; margin: 0 auto 20px; line-height: 1.5; }
+    .header .badge {
+      background: rgba(255,255,255,0.12);
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 50px 20px; }
+
+    .intro {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 30px 35px;
+      margin-bottom: 40px;
+      border-left: 4px solid #E8B86D;
+    }
+    .intro h2 { font-family: 'Playfair Display', serif; color: #E8B86D; margin-bottom: 12px; font-size: 1.5rem; }
+    .intro p { line-height: 1.6; opacity: 0.9; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .post-card {
+      background: #16213e;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 2px solid transparent;
+    }
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      border-color: #E8B86D;
+    }
+    .post-card.template-quote { border-left: 4px solid #E8B86D; }
+    .post-card.template-content_box { border-left: 4px solid #4A90A4; }
+
+    .post-image {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: #0a1628;
+      position: relative;
+    }
+    .post-image img { width: 100%; height: 100%; object-fit: cover; }
+    .post-num {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(232, 184, 109, 0.95);
+      color: #1a1a2e;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .template-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.7);
+      color: #E8B86D;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .post-info { padding: 20px 22px; }
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .post-preview {
+      font-size: 13px;
+      opacity: 0.7;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: #16213e;
+      border-radius: 20px;
+      max-width: 900px;
+      width: 100%;
+      overflow: hidden;
+      margin: auto;
+    }
+    .modal-header {
+      padding: 25px 30px;
+      background: #0f3460;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .modal-num {
+      width: 50px; height: 50px;
+      background: #E8B86D;
+      color: #1a1a2e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .modal-header h2 {
+      flex: 1;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: white;
+    }
+    .modal-close {
+      width: 40px; height: 40px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .modal-body { padding: 30px; }
+    .modal-image {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .modal-image img {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .modal-btn {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 10px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: opacity 0.2s;
+    }
+    .modal-btn:hover { opacity: 0.85; }
+    .modal-btn.primary { background: #E8B86D; color: #1a1a2e; }
+    .modal-btn.secondary { background: #4A90A4; color: white; }
+
+    .modal-section { margin-bottom: 25px; }
+    .modal-section h3 {
+      color: #E8B86D;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .caption-box {
+      background: #0f3460;
+      border-radius: 12px;
+      padding: 20px 22px;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .copy-btn {
+      margin-top: 8px;
+      padding: 6px 14px;
+      background: #4A90A4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .stat-line {
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 4px;
+    }
+    @media (max-width: 600px) {
+      .header h1 { font-size: 2rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="calendar-30day.html">📅 30-Day</a>
+    <a href="calendar-60day.html">📅 60-Day</a>
+    <a href="calendar-90day.html">📅 90-Day</a>
+    <a href="personal.html" class="active">💛 Personal</a>
+    <a href="editor.html">🎨 Editor</a>
+    <a href="brand-guidelines.html">📋 Brand</a>
+    <a href="guides.html">📖 Guides</a>
+    <div class="nav-dropdown">
+      <a href="#" class="dropdown-toggle">📂 All Pages ▾</a>
+      <div class="dropdown-menu">
+        <div class="dropdown-group">
+          <div class="dropdown-label">Calendars</div>
+          <a href="calendar-30day.html">📅 30-Day Calendar</a>
+          <a href="calendar-60day.html">📅 60-Day Calendar</a>
+          <a href="calendar-90day.html">📅 90-Day Calendar</a>
+          <a href="personal.html">💛 Personal (FJ Stories)</a>
+          <a href="post-60-strategy.html">📊 Post-60 Strategy</a>
+        </div>
+        <div class="dropdown-group">
+          <div class="dropdown-label">Create & Edit</div>
+          <a href="editor.html">🎨 Fabric.js Editor</a>
+          <a href="html-editor.html">💻 HTML Editor</a>
+          <a href="create.html">✨ Create New</a>
+          <a href="create-graphic.html">🖌️ Create Graphic</a>
+        </div>
+        <div class="dropdown-group">
+          <div class="dropdown-label">Brand & Guides</div>
+          <a href="brand-guidelines.html">📋 Brand Guidelines</a>
+          <a href="guides.html">📖 Guides</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header">
+    <h1>Personal Posts — <span>FJ Stories</span></h1>
+    <p>10 deeply personal moments from FJ's autism journey. Real stories, real feelings, no photos required.</p>
+    <div class="badge">💛 Authentic • Vulnerable • Connecting</div>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <h2>About These Posts</h2>
+      <p>These posts use the <strong>Quote</strong> and <strong>Content Box</strong> templates with no photos of FJ or family needed. The personal detail comes from describing specific moments other autism parents instantly recognize. Each has a graphic, a long-form Instagram caption, and a short reel caption ready to copy-paste.</p>
+    </div>
+
+    <div class="grid" id="postGrid"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-num" id="modalNum">1</div>
+        <h2 id="modalTitle">Title</h2>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-actions">
+          <a id="modalDownload" href="#" download class="modal-btn primary">⬇️ Download Graphic</a>
+          <button class="modal-btn secondary" onclick="copyText('modalCaption')">📋 Copy Feed Caption</button>
+          <button class="modal-btn secondary" onclick="copyText('modalReelCaption')">📋 Copy Reel Caption</button>
+        </div>
+
+        <div class="modal-section">
+          <h3>📱 Feed Caption (Long-form)</h3>
+          <div class="caption-box" id="modalCaption"></div>
+          <div class="stat-line" id="modalCaptionStats"></div>
+        </div>
+
+        <div class="modal-section">
+          <h3>🎬 Reel Caption (Short)</h3>
+          <div class="caption-box" id="modalReelCaption"></div>
+          <div class="stat-line" id="modalReelStats"></div>
+        </div>
+
+        <div class="modal-section">
+          <h3>🎨 Template & Graphic Text</h3>
+          <div class="caption-box" id="modalGraphicText"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const POSTS = [
+      {id:1,slug:"counting",title:"The Counting",template:"Quote",graphic:"He counts to 100 before breakfast. Every morning. In the same order. In the same rhythm. And I've stopped trying to interrupt it.",caption:"FJ counts to 100 every morning before he'll eat breakfast. Same cadence. Same volume. Same spot on the kitchen floor.\n\nFor a while, I tried to redirect him. \"FJ, your eggs are ready.\" \"FJ, come sit down.\" He'd start over from 1 every time I interrupted.\n\nOne morning I just let him finish. 97, 98, 99, 100. He looked up, walked to the table, and ate.\n\nThat was the day I stopped seeing his routines as problems to solve and started seeing them as things that help him prepare for the world. He wasn't ignoring me. He was getting ready.\n\nIf your child has a routine that drives you crazy, try sitting with it for a week instead of fighting it. You might find out it's doing something important that you can't see.\n\n#AutismParent #AutismAcceptance #NeurodivergentKids #AutismLife",reel:"He counts to 100 before breakfast.\nI stopped fighting it. Here's what happened.\n#autismparent #autism #neurodivergentkids"},
+      {id:2,slug:"parking-lot",title:"The Parking Lot",template:"Quote",graphic:"I sat in the parking lot for 20 minutes after the evaluation. I didn't cry. I didn't call anyone. I just sat there.",caption:"The day FJ was diagnosed, I drove to the parking lot of a grocery store I never go to and sat there.\n\nI didn't cry. I wasn't ready for that yet. I wasn't angry. I wasn't relieved. I was just still. Like my brain needed to buffer before it could process what I'd just heard.\n\nI looked at my phone. I almost Googled \"autism prognosis.\" I put it down. I almost called my mom. I put the phone down again.\n\nEventually I drove home. FJ was with his grandma. He ran to the door when I walked in, same as always. Same smile. Same kid.\n\nNothing had changed about him. Everything had changed about how I understood him.\n\nIf you're in that parking lot right now - metaphorically or literally - you don't have to do anything. You don't have to have a plan. You just have to get home.\n\n#AutismDiagnosis #AutismParent #YouAreNotAlone #AutismAcceptance",reel:"If you're in that parking lot right now...\nYou don't have to have a plan. You just have to get home.\n#autismdiagnosis #autismparent #youarenotalone"},
+      {id:3,slug:"birthday-party",title:"The Birthday Party",template:"Content Box",graphic:"He covered his ears the moment we walked in. I knew. But I tried anyway.",caption:"We got invited to a birthday party last month. I spent 30 minutes prepping FJ. Visual schedule. Social story. Noise-canceling headphones in the bag.\n\nWe walked in. Music was loud. Kids were screaming. Balloons were popping. FJ covered his ears immediately. I picked him up. \"Let's try for a few minutes.\"\n\nHe lasted 12 minutes. Most of it on my lap with his face in my chest. When another kid popped a balloon 3 feet from us, we were done.\n\nOn the drive home I felt the guilt hit. Why did I even try? Why can't he just enjoy a party? Why am I upset about something he doesn't even care about?\n\nThen I checked the rearview mirror. He was calm. Humming to himself. Looking out the window. He wasn't upset. I was.\n\nThe party wasn't a failure. My expectation was the failure. He told me exactly what he needed - less noise, less chaos, more space. I just wasn't listening at first.\n\nWe'll try again. Shorter. Quieter. On his terms.\n\n#SensoryOverload #AutismParent #AutismLife #SensoryProcessing",reel:"12 minutes. That's how long we lasted.\nThe party wasn't the failure. My expectations were.\n#autismparent #sensoryoverload #autismlife"},
+      {id:4,slug:"3am-google",title:"The 3am Google Search",template:"Quote",graphic:"At 3am I had 47 tabs open. Half contradicted each other. A third were trying to sell me something.",caption:"Three weeks after FJ's diagnosis, I was up at 3am with my phone under the covers so I wouldn't wake anyone.\n\n47 tabs open. ABA therapy pros and cons. Early intervention success rates. \"Will my autistic child ever talk?\" \"Autism prognosis level 2.\" Reddit threads. Medical studies I didn't understand. A $400 course promising breakthroughs.\n\nI felt worse with every tab I opened.\n\nHere's what I know now that I didn't know at 3am: the internet at midnight is not your friend. You can't tell the difference between good information and garbage when you're exhausted and terrified. And the algorithm feeds you more of whatever makes you anxious because anxious people keep clicking.\n\nI built spectrumunlocked.com so the next parent at 3am lands somewhere calm instead of somewhere that profits off their fear.\n\nIf you're reading this at 3am - close the tabs. Your child is the same person they'll be tomorrow morning. The research will wait. Go to sleep.\n\n#AutismDiagnosis #AutismParent #NewlyDiagnosed #AutismAcceptance",reel:"47 tabs open at 3am.\nThe internet at midnight is not your friend.\n#autismparent #autismdiagnosis #newlydiagnosed"},
+      {id:5,slug:"five-foods",title:"The Five Foods",template:"Content Box",graphic:"Chicken nuggets. Plain pasta. Goldfish crackers. Applesauce. Banana. That's it. That's the whole list.",caption:"FJ eats 5 foods. Not 5 categories. Five specific foods prepared in a specific way.\n\nChicken nuggets - one brand only. Plain pasta - no sauce, not even butter. Goldfish crackers - original flavor, don't even think about the pizza ones. Applesauce - one specific pouch brand. Banana - only if it has zero brown spots.\n\nFor months I tried to expand his diet. \"Just try one bite.\" He gagged. \"It tastes the same!\" It didn't to him. \"He'll eat when he's hungry enough.\" He didn't.\n\nThen his OT explained something that changed my perspective: for many autistic kids, food isn't just taste. It's texture, temperature, color, smell, and how it feels in their mouth all at once. A \"new food\" isn't just unfamiliar. It's a full sensory event that his nervous system treats as a threat.\n\nWe stopped the food battles. We keep his safe foods available. We put new foods on the table without pressure. Sometimes he touches them. Twice he licked something new. That's progress measured in months, not meals.\n\nIf your child eats 3 foods or 5 foods or 10 foods, they're eating. That's enough right now.\n\n#AutismPickyEating #AutismParent #SensoryProcessing #AutismLife",reel:"5 foods. That's FJ's entire menu.\nIf your kid eats anything, they're eating. That's enough.\n#autismparent #autismpickyeating #sensoryprocessing"},
+      {id:6,slug:"explanation",title:"The Explanation",template:"Quote",graphic:"My mom asked why he doesn't look at her when she talks to him. I explained it for the third time.",caption:"My mom loves FJ. She adores him. And she asks the same question every visit.\n\n\"Why won't he look at me?\"\n\nThe first time, I explained: eye contact is physically uncomfortable for many autistic people. He's not being rude. He's actually listening better when he's not forced to look at you.\n\nThe second time, I explained it again with more patience.\n\nThe third time, I was tired. And I said something I probably shouldn't have: \"Mom, if someone shined a flashlight in your eyes and said 'now concentrate,' could you? That's what eye contact feels like for him.\"\n\nShe hasn't asked again. And she's started talking to him while he plays instead of trying to get him to look up first. He responds more now.\n\nSometimes the people who love your child the most are the ones who need the most education. That's not because they don't care. It's because they grew up in a world that defined connection differently.\n\nBe patient with them. But also be clear.\n\n#AutismFamily #AutismParent #AutismAcceptance #AutismAwareness",reel:"\"Why won't he look at me?\"\nHere's what I told her the third time she asked.\n#autismfamily #autismparent #autismacceptance"},
+      {id:7,slug:"small-win",title:"The Small Win",template:"Quote",graphic:"He pointed at the dog today. Just pointed. And I almost cried in the middle of the sidewalk.",caption:"If you don't live this life, you won't understand why I almost cried on a sidewalk because a 4-year-old pointed at a dog.\n\nPointing is a milestone most parents never think about. Their kid points at 9 months. At 12 months. At everything. It just happens.\n\nFJ didn't point. Not at 12 months. Not at 18. Not at 2. Not at 3. We worked on it in speech therapy for months. Hand-over-hand. Modeling. Pointing at everything ourselves until we looked ridiculous.\n\nToday, walking down the street, a dog passed us. FJ stopped. Extended his finger. Pointed. Looked at me. Looked back at the dog.\n\nThat's joint attention. That's him saying \"Dad, do you see what I see? Isn't that cool?\" That's connection.\n\nThe milestones that matter in our house aren't on any chart. They're the ones we fought for. And when they come, they hit differently because we know exactly what it took to get here.\n\nCelebrate the small wins. They're not small.\n\n#AutismParent #AutismWins #AutismAcceptance #CelebrateDifferences",reel:"He pointed at a dog. Just pointed.\nIf you know, you know. The small wins aren't small.\n#autismparent #autismwins #celebratedifferences"},
+      {id:8,slug:"target-meltdown",title:"The Meltdown at Target",template:"Content Box",graphic:"He was on the floor. Everyone was staring. One woman shook her head. Another one said 'hang in there, dad.'",caption:"Aisle 7. Target. 4:47pm on a Tuesday.\n\nFJ was on the floor. Not screaming for a toy. Not throwing a tantrum because I said no. His nervous system hit a wall. The lights, the beeping registers, the intercom, the strangers - it all stacked up and his brain said \"done.\"\n\nI got on the floor with him. Didn't talk. Didn't pick him up. Just sat there.\n\nA woman walked past and shook her head. I saw it. I felt it. I used to let that destroy me.\n\nThen another woman, a few aisles over, caught my eye and said quietly: \"Hang in there, dad.\"\n\nFive words. No advice. No judgment. Just acknowledgment.\n\nI think about her a lot. I never got her name. But she taught me something: you don't need to fix it for someone. You just need to let them know you see them.\n\nIf you see a parent on the floor of Target with a screaming child, you have two choices. One costs you nothing and means everything.\n\n#AutismMeltdown #AutismParent #SensoryOverload #AutismAcceptance",reel:"Aisle 7. Target. 4:47pm.\nFive words from a stranger changed everything.\n#autismparent #autismmeltdown #sensoryoverload"},
+      {id:9,slug:"things-he-teaches",title:"The Things He Teaches Me",template:"Quote",graphic:"My 4-year-old is teaching me things no one else could.",caption:"Things FJ has taught me this year:\n\nThat you can love something by lining it up perfectly instead of playing with it the way the box says you should.\n\nThat the world is louder than I ever realized, and the people who navigate it with sensitive nervous systems are braver than anyone gives them credit for.\n\nThat \"I love you\" doesn't always sound like words. Sometimes it sounds like counting to 100. Sometimes it looks like bringing me the same book for the 30th time because sharing it with me is his version of connection.\n\nThat progress isn't a straight line. Last week he used a new word. This week he stopped using it. Next month it might come back. That's not regression. That's how development actually works when you stop comparing it to a chart.\n\nThat I was measuring his life against a template that was never designed for him. And the life he's building - his way, on his timeline - is worth more than any version I imagined before I knew him.\n\nHe doesn't need to be more like other kids. I needed to be more like his dad.\n\n#AutismParent #AutismAcceptance #CelebrateDifferences #NeurodivergentKids",reel:"Things my 4-year-old has taught me this year.\nHe doesn't need to be more like other kids. I needed to be more like his dad.\n#autismparent #autismacceptance"},
+      {id:10,slug:"one-year-later",title:"One Year Later",template:"Quote",graphic:"One year since the diagnosis. Here's what I've learned.",caption:"One year ago, FJ was diagnosed with autism at age 3. Here's what I've learned since then.\n\nThe diagnosis didn't change my son. It changed my understanding of him. Every confusing behavior suddenly had an explanation. The counting, the rigidity, the meltdowns - they weren't defiance. They were communication.\n\nThe systems aren't built for us. Insurance fights, therapy waitlists, IEP meetings where you're outnumbered - every step requires advocacy. Nobody hands you a roadmap. You build it yourself.\n\nOther parents are the best resource. Not the internet. Not the doctors. The parents who are 6 months ahead of you and willing to share what they learned. Find them. They'll save you months of confusion.\n\nSelf-care isn't optional. I burned out at month 4. Stopped sleeping. Stopped calling friends. Started resenting the therapy schedule. I had to learn that I can't pour from an empty cup, and that taking care of myself is part of taking care of him.\n\nAnd the biggest lesson: autism is not a tragedy. It's a different way of being human. My son is funny, brilliant, determined, and sees the world in ways I never would have noticed without him. The life I imagined for him before the diagnosis was smaller than the one he's actually living.\n\nThis is Spectrum Unlocked. I built it because I couldn't find what I needed. Everything on the site is free. If one parent finds it and feels less alone, that's enough.\n\nLink in bio.\n\n#AutismParent #AutismAcceptance #AutismDiagnosis #AutismJourney",reel:"One year since FJ's diagnosis.\n5 things I wish I knew that first day.\n#autismparent #autismdiagnosis #autismjourney"}
+    ];
+
+    function renderGrid() {
+      const grid = document.getElementById('postGrid');
+      grid.innerHTML = '';
+      POSTS.forEach(post => {
+        const folder = `post-${String(post.id).padStart(2,'0')}-${post.slug}`;
+        const card = document.createElement('div');
+        card.className = `post-card template-${post.template.toLowerCase().replace(' ','_')}`;
+        card.onclick = () => openModal(post);
+        card.innerHTML = `
+          <div class="post-image">
+            <img src="content/personal/${folder}/slide-01.png" alt="${post.title}">
+            <div class="post-num">${post.id}</div>
+            <div class="template-badge">${post.template}</div>
+          </div>
+          <div class="post-info">
+            <div class="post-title">${post.title}</div>
+            <div class="post-preview">${post.graphic.substring(0, 100)}...</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function openModal(post) {
+      const folder = `post-${String(post.id).padStart(2,'0')}-${post.slug}`;
+      const imgUrl = `content/personal/${folder}/slide-01.png`;
+      document.getElementById('modalNum').textContent = post.id;
+      document.getElementById('modalTitle').textContent = post.title;
+      document.getElementById('modalImage').src = imgUrl;
+      document.getElementById('modalImage').alt = post.title;
+      document.getElementById('modalDownload').href = imgUrl;
+      document.getElementById('modalDownload').setAttribute('download', `${folder}.png`);
+      document.getElementById('modalCaption').textContent = post.caption;
+      document.getElementById('modalReelCaption').textContent = post.reel;
+      document.getElementById('modalGraphicText').textContent = `Template: ${post.template}\n\n${post.graphic}`;
+
+      const cChars = post.caption.length;
+      const cTags = (post.caption.match(/#\w+/g) || []).length;
+      document.getElementById('modalCaptionStats').textContent = `${cChars} chars · ${cTags} hashtags`;
+
+      const rChars = post.reel.length;
+      const rTags = (post.reel.match(/#\w+/g) || []).length;
+      document.getElementById('modalReelStats').textContent = `${rChars} chars · ${rTags} hashtags`;
+
+      document.getElementById('modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(event) {
+      if (!event || event.target.id === 'modal') {
+        document.getElementById('modal').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function copyText(elementId) {
+      const text = document.getElementById(elementId).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target;
+        const original = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#27AE60';
+        setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 2000);
+      });
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    renderGrid();
+  </script>
+</body>
+</html>
