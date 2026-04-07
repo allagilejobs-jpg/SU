@@ -867,7 +867,7 @@
       <div class="week-section">
         <div class="week-header">Week 2: April 7-13</div>
         <div class="calendar-grid">
-          <div class="day-card ready" onclick="openDay(13)"><div class="day-top"><div class="day-num">13</div><div class="day-info"><div class="weekday">Monday</div><div class="date">Apr 7</div></div></div><div class="day-content"><div class="day-title">ABA Controversy</div><div class="day-hook">Both sides</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides ready</span></div></div>
+          <div class="day-card ready" onclick="openDay(13)"><span class="reel-badge">🎬 Reel</span><div class="day-top"><div class="day-num">13</div><div class="day-info"><div class="weekday">Monday</div><div class="date">Apr 7</div></div></div><div class="day-content"><div class="day-title">ABA Controversy</div><div class="day-hook">Both sides</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides + reel</span></div></div>
           <div class="day-card ready" onclick="openDay(14)"><span class="reel-badge">🎬 Reel</span><div class="day-top"><div class="day-num">14</div><div class="day-info"><div class="weekday">Tuesday</div><div class="date">Apr 8</div></div></div><div class="day-content"><div class="day-title">Visual Supports</div><div class="day-hook">Templates</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides + reel</span></div></div>
           <div class="day-card ready" onclick="openDay(15)"><div class="day-top"><div class="day-num">15</div><div class="day-info"><div class="weekday">Wednesday</div><div class="date">Apr 9</div></div></div><div class="day-content"><div class="day-title">Meltdown Support</div><div class="day-hook">During & after</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides ready</span></div></div>
           <div class="day-card ready" onclick="openDay(16)"><div class="day-top"><div class="day-num">16</div><div class="day-info"><div class="weekday">Thursday</div><div class="date">Apr 10</div></div></div><div class="day-content"><div class="day-title">Feeding Challenges</div><div class="day-hook">Beyond picky</div></div><div class="day-status"><span class="status-dot ready"></span><span>6 slides ready</span></div></div>
@@ -979,9 +979,19 @@
           <div class="modal-slides" id="modal-slides"></div>
         </div>
         <div class="modal-section" id="modal-reel-section" style="display:none;">
-          <h3>🎬 Reel Slides (1080x1920)</h3>
+          <h3>🎬 Reel (1080x1920)</h3>
+          <div id="modal-reel-video-wrapper" style="margin-bottom:15px;display:none;">
+            <video id="modal-reel-video" controls style="max-width:300px;border-radius:12px;background:#000;"></video>
+            <div style="margin-top:10px;">
+              <a id="modal-reel-download" href="#" download class="modal-btn primary" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#E8B86D;color:#1a1a2e;text-decoration:none;border-radius:8px;font-weight:700;font-size:13px;">⬇️ Download Reel Video (MP4)</a>
+            </div>
+          </div>
           <div class="modal-slides" id="modal-reel-slides"></div>
-          <div class="modal-caption" id="modal-reel-caption" style="margin-top:15px;"></div>
+          <div style="margin-top:15px;">
+            <div style="color:#E8B86D;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">🎬 Reel Caption</div>
+            <div class="modal-caption" id="modal-reel-caption" style="white-space:pre-wrap;"></div>
+            <button onclick="copyReelCaption()" style="margin-top:8px;padding:6px 14px;background:#4A90A4;color:white;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;">📋 Copy Reel Caption</button>
+          </div>
         </div>
         <div class="modal-section">
           <h3>📸 Instagram Caption</h3>
@@ -1516,6 +1526,13 @@
         slideNames: ['hook', 'sensory', 'communication', 'academic', 'social', 'cta'],
         tiktokCaption: "📋 IEP Accommodations That Actually Help\n\nYour child's IEP shouldn't teach them to mask 👇\n\n#IEP #autism #specialeducation #fyp #autismadvocacy"
       },
+      13: {
+        title: "ABA Controversy (Reel Version)",
+        folder: "day-13-aba-reel",
+        slides: 7,
+        slideNames: ['hook', 'what', 'concerns', 'other', 'questions', 'trust', 'cta'],
+        tiktokCaption: "ABA therapy. Both sides. No spin.\nSave this before you decide what's right for your child.\n#autism #ABA #autismparent #neurodivergent #fyp"
+      },
       14: {
         title: "Visual Supports (Reel Version)",
         folder: "day-14-visual-supports-reel",
@@ -1759,35 +1776,56 @@
         const reel = reelData[dayNum];
         reelSection.style.display = 'block';
         reelSlidesContainer.innerHTML = '';
-        
+
+        // Show video player if MP4 exists
+        const videoWrapper = document.getElementById('modal-reel-video-wrapper');
+        const videoEl = document.getElementById('modal-reel-video');
+        const videoDownload = document.getElementById('modal-reel-download');
+        const videoUrl = `content/${reel.folder}/FINAL-${reel.folder}.mp4`;
+
+        // Try to fetch the video to see if it exists
+        fetch(videoUrl, { method: 'HEAD' })
+          .then(r => {
+            if (r.ok) {
+              videoWrapper.style.display = 'block';
+              videoEl.src = videoUrl;
+              videoDownload.href = videoUrl;
+              videoDownload.setAttribute('download', `day-${dayNum}-reel.mp4`);
+            } else {
+              videoWrapper.style.display = 'none';
+            }
+          })
+          .catch(() => { videoWrapper.style.display = 'none'; });
+
         for (let i = 1; i <= reel.slides; i++) {
           const slideNum = i.toString().padStart(2, '0');
           const slideName = reel.slideNames[i-1] || `slide-${slideNum}`;
           const imgUrl = `content/${reel.folder}/slide-${slideNum}-${slideName}.png`;
           const fileName = `reel-day-${dayNum}-slide-${slideNum}-${slideName}.png`;
-          
+
           const wrapper = document.createElement('div');
           wrapper.className = 'slide-wrapper';
-          
+
           const link = document.createElement('a');
           link.href = imgUrl;
           link.download = fileName;
           link.title = `Click to download Reel Slide ${i}`;
-          
+
           const img = document.createElement('img');
           img.src = imgUrl;
           img.alt = `Reel Slide ${i}`;
           img.style.height = '250px'; // Taller for 9:16 ratio
           img.onerror = function() { this.style.display = 'none'; };
-          
+
           link.appendChild(img);
           wrapper.appendChild(link);
           reelSlidesContainer.appendChild(wrapper);
         }
-        
+
         reelCaptionEl.textContent = reel.tiktokCaption || '';
       } else {
         reelSection.style.display = 'none';
+        document.getElementById('modal-reel-video-wrapper').style.display = 'none';
       }
       
       document.getElementById('modal').classList.add('active');
@@ -1826,6 +1864,18 @@
         btn.textContent = originalText;
         btn.disabled = false;
       }, 2000);
+    }
+
+    function copyReelCaption() {
+      const text = document.getElementById('modal-reel-caption').textContent;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target;
+        const original = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#27AE60';
+        setTimeout(() => { btn.textContent = original; btn.style.background = '#4A90A4'; }, 2000);
+      });
     }
 
     function closeModal(event) {
