@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 
 const BASE = 'C:/Users/Solomon/Desktop/SU/content/curated';
-const artists = ['holly-peete', 'ot-genasis', 'faith-evans'];
+const artists = ['holly-peete', 'ot-genasis', 'faith-evans', 'dan-orlovsky-madden'];
 const designs = ['a1-magazine', 'a2-minimalist', 'a3-split'];
 
 const browser = await chromium.launch();

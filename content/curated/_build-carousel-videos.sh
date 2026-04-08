@@ -13,7 +13,7 @@ set -e
 
 # Step 1 - build 1080x1350 brand overlays from the 1920 ones by cropping
 #          the top 1350 pixels (all brand content is in the top ~420px)
-for slug in holly-peete ot-genasis faith-evans; do
+for slug in holly-peete ot-genasis faith-evans dan-orlovsky-madden; do
   DIR="content/curated/$slug"
   if [ -f "$DIR/brand-overlay-v2.png" ]; then
     ffmpeg -y -i "$DIR/brand-overlay-v2.png" \
@@ -26,17 +26,22 @@ done
 # Step 2 - build the video slides
 build_carousel_video() {
   local DIR="$1"
-  local CROP_X="$2"   # 0 = center, 400 = left-bias for Faith
+  local CROP_X="$2"   # "center" | number (left-bias) | "prefit" (source already 1080x1920)
 
   local SRC="$DIR/_source-synced.mp4"
   local OVERLAY="$DIR/carousel-v2/brand-overlay-carousel.png"
   local OUT="$DIR/carousel-v2/slide-2-video.mp4"
 
-  local CROP_EXPR
-  if [ "$CROP_X" = "center" ]; then
-    CROP_EXPR="crop=1080:1350:(in_w-1080)/2:0"
+  # Filter chain differs for prefit sources (Dan/Madden) where the source
+  # is already 1080x1920 blur-fit — we just center-crop vertically to 1350
+  # without any scaling, preserving the blur-fit composition.
+  local SCALE_CROP
+  if [ "$CROP_X" = "prefit" ]; then
+    SCALE_CROP="crop=1080:1350:0:(in_h-1350)/2"
+  elif [ "$CROP_X" = "center" ]; then
+    SCALE_CROP="scale=-2:1350,crop=1080:1350:(in_w-1080)/2:0"
   else
-    CROP_EXPR="crop=1080:1350:${CROP_X}:0"
+    SCALE_CROP="scale=-2:1350,crop=1080:1350:${CROP_X}:0"
   fi
 
   echo ">>> $OUT (crop_x=$CROP_X) <<<"
@@ -45,7 +50,7 @@ build_carousel_video() {
 
   ffmpeg -y -i "_source-synced.mp4" -i "carousel-v2/brand-overlay-carousel.png" \
     -filter_complex "
-      [0:v]scale=-2:1350,${CROP_EXPR},setsar=1,format=yuv420p[cropped];
+      [0:v]${SCALE_CROP},setsar=1,format=yuv420p[cropped];
       [cropped][1:v]overlay=0:0[branded];
       [branded]ass=styles/karaoke-brand.ass:fontsdir=../fonts,format=yuv420p[vout]
     " \
@@ -60,6 +65,7 @@ build_carousel_video() {
   ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration -of csv=p=0 "$OUT"
 }
 
-build_carousel_video "content/curated/holly-peete"  "center"
-build_carousel_video "content/curated/ot-genasis"   "center"
-build_carousel_video "content/curated/faith-evans"  "400"
+build_carousel_video "content/curated/holly-peete"       "center"
+build_carousel_video "content/curated/ot-genasis"        "center"
+build_carousel_video "content/curated/faith-evans"       "400"
+build_carousel_video "content/curated/dan-orlovsky-madden" "prefit"

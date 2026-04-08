@@ -1,0 +1,7 @@
+# Dan Orlovsky + Madden best-of cut plan - segments in seconds
+# start end  label
+42.0   52.0   hook-drawing
+72.0   84.0   art-wall-bond
+222.0  232.0  couch-voice
+584.0  612.0  quote-and-breakdown
+625.0  632.0  aftermath-smile

@@ -63,6 +63,20 @@ ARTISTS = [
         "cta_sub": "Faith Evans built Ryder's Room Inc. so no autism parent has to navigate the fight for a diagnosis alone.",
         "cta_button": "Tag an autism parent",
     },
+    {
+        "slug": "dan-orlovsky-madden",
+        "name": "Madden Orlovsky",
+        "name_upper": "MADDEN ORLOVSKY",
+        "source": "via ESPN NFL Live",
+        "cover_headline_lines": ['"Mom,', 'I Love You."'],
+        "quote_main": '"Mom, I love you."',
+        "quote_attribution": "14-year-old Madden Orlovsky on NFL Live",
+        "photo": "cover-photo.png",
+        "cta_label": "MADDEN'S STORY",
+        "cta_main": 'Autism is <em>love,</em><br>spoken out loud.',
+        "cta_sub": "14-year-old Madden Orlovsky told his family he loved them on national TV. His dad Dan couldn't hold it together. Neither could anyone watching.",
+        "cta_button": "Tag a dad",
+    },
 ]
 
 FONT_LINK = '<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900:ital@0;1&display=swap" rel="stylesheet">'

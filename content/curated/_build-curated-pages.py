@@ -287,6 +287,48 @@ If you're early in this journey: there are parents 6 months ahead of you who are
             ('<span class="meta">Carousel ready</span>'),
         ],
     },
+    {
+        "slug": "dan-orlovsky-madden",
+        "name_main": "Dan & Madden",
+        "name_em":   "Orlovsky",
+        "name_full": "Dan & Madden Orlovsky",
+        "source":    "via ESPN NFL Live",
+        "quote":     '"Mom, I love you. Hunter, you\'re my favorite twin." — 14-year-old Madden Orlovsky speaking directly to his family on NFL Live for World Autism Awareness Day 2026.',
+        "reel_file": "FINAL-reel-v3.mp4",
+        "reel_size": "~20 MB",
+        "reel_len":  "1:12",
+        "reel_desc": "5-beat best-of cut from Dan Orlovsky\'s 12-minute NFL Live segment with his 14-year-old autistic son Madden. Context → art wall → couch interview → THE QUOTE + Dan\'s on-air breakdown → aftermath smile. Uniform blur-fit crop preserves the ESPN split-screen layout so Dan\'s tearful reaction shot survives intact — the emotional peak would have been destroyed by a standard center crop.",
+        "reel_status": "ready",
+        "carousel": [
+            {"file": "carousel-v2/slide-1-cover.png",  "kind": "image", "title": "Cover",        "desc": "Madden on couch + play cue (1080×1350)"},
+            {"file": "carousel-v2/slide-2-video.mp4",  "kind": "video", "title": "Branded clip", "desc": "5-beat best-of with karaoke captions (67s)"},
+            {"file": "carousel-v2/slide-3-quote.png",  "kind": "image", "title": "Quote card",   "desc": "Big Playfair Display pull quote"},
+            {"file": "carousel-v2/slide-4-cta.png",    "kind": "image", "title": "CTA / Ending", "desc": "Save / Share / Follow + Tag prompt"},
+        ],
+        "reel_caption": '''"Mom, I love you."
+14-year-old Madden Orlovsky spoke directly to his family on NFL Live for World Autism Day. His dad Dan couldn't hold it together. Neither could anyone watching. 💛
+#autismparent #danorlovsky #worldautismday #autismdad #nfl''',
+        "feed_caption": '''"Mom, I love you. Hunter, you're my favorite twin. Noah, I do like you. And Lennon, you're a good sister."
+
+That's what 14-year-old Madden Orlovsky said directly into the camera on ESPN's NFL Live this April 2nd — World Autism Awareness Day — sitting next to his father Dan, the former Detroit Lions QB and current ESPN analyst.
+
+Madden is one of identical triplets, autistic, a die-hard Philadelphia Eagles fan, and — according to himself — someone with "great artwork, great coloring, great handwriting." His drawings decorated the NFL Live studio all morning.
+
+When Dan asked his son if he could tell the camera something he loves, Madden didn't hesitate. He named every person in his family. His dad broke down on air. The entire NFL Live set joined him. Magic Johnson reposted it. Ric Flair reposted it. Pat McAfee had Dan on the next day to talk about it.
+
+This is what autism parenting looks like when the world finally gets to see it: a kid with his own voice, his own art, his own love language, telling everyone he cares about exactly how much they matter.
+
+Autism isn't silent. We just haven't been listening.
+
+🎥 Dan & Madden Orlovsky on ESPN's NFL Live
+💛 World Autism Awareness Day 2026
+
+#AutismDad #DanOrlovsky #MaddenOrlovsky #AutismAwareness #NFL #AutismParent #AutismFamily #WorldAutismDay #AutismAcceptance #Neurodivergent''',
+        "badges": [
+            ('<span class="meta gold">Reel ready</span>'),
+            ('<span class="meta">Carousel ready</span>'),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------

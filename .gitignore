@@ -30,6 +30,8 @@ content/curated/faith-evans/_source-landscape.webm
 # from the original YouTube source. This keeps the repo under GitHub's
 # size limits and avoids the 100MB single-file limit.
 content/curated/*/_source-landscape.mp4
+content/curated/*/_source-landscape.webm
+content/curated/*/_source-landscape-crf22.mp4
 
 # Carousel debug frames
 content/curated/*/carousel-v2/_check-*.png

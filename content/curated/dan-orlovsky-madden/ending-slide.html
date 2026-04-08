@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1920px;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      font-family: 'Poppins', sans-serif; color: white;
+      padding: 140px 80px;
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+    }
+    body::before {
+      content: ''; position: absolute; top: -240px; right: -240px;
+      width: 760px; height: 760px;
+      background: #E8B86D; border-radius: 50%; opacity: 0.1;
+    }
+    body::after {
+      content: ''; position: absolute; bottom: -180px; left: -180px;
+      width: 560px; height: 560px;
+      background: #4A90A4; border-radius: 50%; opacity: 0.1;
+    }
+    .brand { position: absolute; top: 90px; left: 60px; }
+    .brand-main { font-size: 42px; font-weight: 900; color: white; letter-spacing: 2px; }
+    .brand-sub  { font-size: 26px; font-weight: 800; color: #4A90A4; letter-spacing: 6px; margin-top: -4px; }
+    .label {
+      font-size: 30px; font-weight: 700; color: #4A90A4;
+      text-transform: uppercase; letter-spacing: 6px;
+      margin-bottom: 50px;
+      position: relative; z-index: 1;
+    }
+    .main-msg {
+      font-family: 'Playfair Display', serif;
+      font-size: 100px; font-weight: 900; line-height: 1.05;
+      margin-bottom: 50px;
+      max-width: 920px;
+      position: relative; z-index: 1;
+    }
+    .main-msg .em { color: #E8B86D; font-style: italic; }
+    .sub-msg {
+      font-size: 34px; font-weight: 500; line-height: 1.45;
+      max-width: 880px; opacity: 0.92;
+      margin-bottom: 70px;
+      position: relative; z-index: 1;
+    }
+    .actions {
+      display: flex; gap: 80px;
+      position: relative; z-index: 1;
+      margin-bottom: 60px;
+    }
+    .action {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      font-size: 28px; font-weight: 700;
+    }
+    .action-icon { font-size: 70px; }
+    .cta-box {
+      background: linear-gradient(135deg, #E8B86D 0%, #d4a85d 100%);
+      color: #1a1a2e;
+      padding: 32px 64px;
+      border-radius: 22px;
+      position: relative; z-index: 1;
+      box-shadow: 0 12px 40px rgba(232,184,109,0.35);
+    }
+    .cta-text { font-size: 38px; font-weight: 900; }
+    .footer { position: absolute; bottom: 90px; }
+    .handle { font-size: 32px; font-weight: 700; color: #E8B86D; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <div class="brand-main">SPECTRUM</div>
+    <div class="brand-sub">UNLOCKED</div>
+  </div>
+  <div class="label">Madden's Story</div>
+  <div class="main-msg">Autism is <span class="em">love,</span><br>spoken out loud.</div>
+  <div class="sub-msg">14-year-old Madden Orlovsky told his family he loved them on national TV. His dad Dan couldn't hold it together. Neither could anyone watching.</div>
+  <div class="actions">
+    <div class="action"><span class="action-icon">&#128190;</span><span>Save</span></div>
+    <div class="action"><span class="action-icon">&#128228;</span><span>Share</span></div>
+    <div class="action"><span class="action-icon">&#10133;</span><span>Follow</span></div>
+  </div>
+  <div class="cta-box"><div class="cta-text">Tag a dad</div></div>
+  <div class="footer"><div class="handle">@spectrum_unlocked</div></div>
+</body>
+</html>

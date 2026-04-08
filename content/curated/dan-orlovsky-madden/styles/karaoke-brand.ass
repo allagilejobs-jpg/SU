@@ -1,0 +1,148 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Karaoke,Poppins,68,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,2,0,1,4,2,5,80,80,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.04,0:00:00.28,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}And {\1c&H008C7B6B&}last {\1c&H008C7B6B&}year {\1c&H008C7B6B&}was {\1c&H008C7B6B&}the
+Dialogue: 0,0:00:00.28,0:00:00.50,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H006DB8E8&}last {\1c&H008C7B6B&}year {\1c&H008C7B6B&}was {\1c&H008C7B6B&}the
+Dialogue: 0,0:00:00.50,0:00:00.80,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H00FFFFFF&}last {\1c&H006DB8E8&}year {\1c&H008C7B6B&}was {\1c&H008C7B6B&}the
+Dialogue: 0,0:00:00.80,0:00:01.02,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H00FFFFFF&}last {\1c&H00FFFFFF&}year {\1c&H006DB8E8&}was {\1c&H008C7B6B&}the
+Dialogue: 0,0:00:01.02,0:00:01.14,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H00FFFFFF&}last {\1c&H00FFFFFF&}year {\1c&H00FFFFFF&}was {\1c&H006DB8E8&}the
+Dialogue: 0,0:00:01.14,0:00:01.38,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}first {\1c&H008C7B6B&}year {\1c&H008C7B6B&}obviously {\1c&H008C7B6B&}that {\1c&H008C7B6B&}we
+Dialogue: 0,0:00:01.38,0:00:01.72,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}first {\1c&H006DB8E8&}year {\1c&H008C7B6B&}obviously {\1c&H008C7B6B&}that {\1c&H008C7B6B&}we
+Dialogue: 0,0:00:01.72,0:00:02.04,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}first {\1c&H00FFFFFF&}year {\1c&H006DB8E8&}obviously {\1c&H008C7B6B&}that {\1c&H008C7B6B&}we
+Dialogue: 0,0:00:02.04,0:00:02.34,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}first {\1c&H00FFFFFF&}year {\1c&H00FFFFFF&}obviously {\1c&H006DB8E8&}that {\1c&H008C7B6B&}we
+Dialogue: 0,0:00:02.34,0:00:02.48,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}first {\1c&H00FFFFFF&}year {\1c&H00FFFFFF&}obviously {\1c&H00FFFFFF&}that {\1c&H006DB8E8&}we
+Dialogue: 0,0:00:02.48,0:00:02.68,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}did {\1c&H008C7B6B&}this {\1c&H008C7B6B&}and {\1c&H008C7B6B&}it {\1c&H008C7B6B&}was
+Dialogue: 0,0:00:02.68,0:00:02.94,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}did {\1c&H006DB8E8&}this {\1c&H008C7B6B&}and {\1c&H008C7B6B&}it {\1c&H008C7B6B&}was
+Dialogue: 0,0:00:02.94,0:00:03.80,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}did {\1c&H00FFFFFF&}this {\1c&H006DB8E8&}and {\1c&H008C7B6B&}it {\1c&H008C7B6B&}was
+Dialogue: 0,0:00:03.80,0:00:03.90,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}did {\1c&H00FFFFFF&}this {\1c&H00FFFFFF&}and {\1c&H006DB8E8&}it {\1c&H008C7B6B&}was
+Dialogue: 0,0:00:03.90,0:00:03.98,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}did {\1c&H00FFFFFF&}this {\1c&H00FFFFFF&}and {\1c&H00FFFFFF&}it {\1c&H006DB8E8&}was
+Dialogue: 0,0:00:03.98,0:00:04.14,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}a {\1c&H008C7B6B&}very {\1c&H008C7B6B&}cool {\1c&H008C7B6B&}moment.
+Dialogue: 0,0:00:04.14,0:00:04.50,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}a {\1c&H006DB8E8&}very {\1c&H008C7B6B&}cool {\1c&H008C7B6B&}moment.
+Dialogue: 0,0:00:04.50,0:00:04.88,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}a {\1c&H00FFFFFF&}very {\1c&H006DB8E8&}cool {\1c&H008C7B6B&}moment.
+Dialogue: 0,0:00:04.88,0:00:06.70,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}a {\1c&H00FFFFFF&}very {\1c&H00FFFFFF&}cool {\1c&H006DB8E8&}moment.
+Dialogue: 0,0:00:07.46,0:00:07.46,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}And {\1c&H008C7B6B&}Madden's {\1c&H008C7B6B&}been {\1c&H008C7B6B&}working {\1c&H008C7B6B&}hard
+Dialogue: 0,0:00:07.46,0:00:07.88,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H006DB8E8&}Madden's {\1c&H008C7B6B&}been {\1c&H008C7B6B&}working {\1c&H008C7B6B&}hard
+Dialogue: 0,0:00:07.88,0:00:07.98,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H00FFFFFF&}Madden's {\1c&H006DB8E8&}been {\1c&H008C7B6B&}working {\1c&H008C7B6B&}hard
+Dialogue: 0,0:00:07.98,0:00:08.30,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H00FFFFFF&}Madden's {\1c&H00FFFFFF&}been {\1c&H006DB8E8&}working {\1c&H008C7B6B&}hard
+Dialogue: 0,0:00:08.30,0:00:08.70,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}And {\1c&H00FFFFFF&}Madden's {\1c&H00FFFFFF&}been {\1c&H00FFFFFF&}working {\1c&H006DB8E8&}hard
+Dialogue: 0,0:00:08.70,0:00:08.96,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}at {\1c&H008C7B6B&}new {\1c&H008C7B6B&}drawing, {\1c&H008C7B6B&}always {\1c&H008C7B6B&}individual
+Dialogue: 0,0:00:08.96,0:00:09.40,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}at {\1c&H006DB8E8&}new {\1c&H008C7B6B&}drawing, {\1c&H008C7B6B&}always {\1c&H008C7B6B&}individual
+Dialogue: 0,0:00:09.40,0:00:10.02,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}at {\1c&H00FFFFFF&}new {\1c&H006DB8E8&}drawing, {\1c&H008C7B6B&}always {\1c&H008C7B6B&}individual
+Dialogue: 0,0:00:10.02,0:00:10.44,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}at {\1c&H00FFFFFF&}new {\1c&H00FFFFFF&}drawing, {\1c&H006DB8E8&}always {\1c&H008C7B6B&}individual
+Dialogue: 0,0:00:10.44,0:00:11.38,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}at {\1c&H00FFFFFF&}new {\1c&H00FFFFFF&}drawing, {\1c&H00FFFFFF&}always {\1c&H006DB8E8&}individual
+Dialogue: 0,0:00:11.38,0:00:12.02,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}characters {\1c&H008C7B6B&}and {\1c&H008C7B6B&}buddies. {\1c&H008C7B6B&}I {\1c&H008C7B6B&}think
+Dialogue: 0,0:00:12.02,0:00:12.32,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}characters {\1c&H006DB8E8&}and {\1c&H008C7B6B&}buddies. {\1c&H008C7B6B&}I {\1c&H008C7B6B&}think
+Dialogue: 0,0:00:12.32,0:00:13.74,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}characters {\1c&H00FFFFFF&}and {\1c&H006DB8E8&}buddies. {\1c&H008C7B6B&}I {\1c&H008C7B6B&}think
+Dialogue: 0,0:00:13.74,0:00:13.74,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}characters {\1c&H00FFFFFF&}and {\1c&H00FFFFFF&}buddies. {\1c&H006DB8E8&}I {\1c&H008C7B6B&}think
+Dialogue: 0,0:00:13.74,0:00:13.80,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}characters {\1c&H00FFFFFF&}and {\1c&H00FFFFFF&}buddies. {\1c&H00FFFFFF&}I {\1c&H006DB8E8&}think
+Dialogue: 0,0:00:13.80,0:00:13.96,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}he's {\1c&H008C7B6B&}got {\1c&H008C7B6B&}logos {\1c&H008C7B6B&}of {\1c&H008C7B6B&}every
+Dialogue: 0,0:00:13.96,0:00:14.16,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}he's {\1c&H006DB8E8&}got {\1c&H008C7B6B&}logos {\1c&H008C7B6B&}of {\1c&H008C7B6B&}every
+Dialogue: 0,0:00:14.16,0:00:14.60,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}he's {\1c&H00FFFFFF&}got {\1c&H006DB8E8&}logos {\1c&H008C7B6B&}of {\1c&H008C7B6B&}every
+Dialogue: 0,0:00:14.60,0:00:15.08,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}he's {\1c&H00FFFFFF&}got {\1c&H00FFFFFF&}logos {\1c&H006DB8E8&}of {\1c&H008C7B6B&}every
+Dialogue: 0,0:00:15.08,0:00:15.40,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}he's {\1c&H00FFFFFF&}got {\1c&H00FFFFFF&}logos {\1c&H00FFFFFF&}of {\1c&H006DB8E8&}every
+Dialogue: 0,0:00:15.40,0:00:15.72,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}team {\1c&H008C7B6B&}in {\1c&H008C7B6B&}the {\1c&H008C7B6B&}NFL. {\1c&H008C7B6B&}He
+Dialogue: 0,0:00:15.72,0:00:15.88,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}team {\1c&H006DB8E8&}in {\1c&H008C7B6B&}the {\1c&H008C7B6B&}NFL. {\1c&H008C7B6B&}He
+Dialogue: 0,0:00:15.88,0:00:16.02,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}team {\1c&H00FFFFFF&}in {\1c&H006DB8E8&}the {\1c&H008C7B6B&}NFL. {\1c&H008C7B6B&}He
+Dialogue: 0,0:00:16.02,0:00:16.48,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}team {\1c&H00FFFFFF&}in {\1c&H00FFFFFF&}the {\1c&H006DB8E8&}NFL. {\1c&H008C7B6B&}He
+Dialogue: 0,0:00:16.48,0:00:16.48,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}team {\1c&H00FFFFFF&}in {\1c&H00FFFFFF&}the {\1c&H00FFFFFF&}NFL. {\1c&H006DB8E8&}He
+Dialogue: 0,0:00:16.48,0:00:16.64,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}drew {\1c&H008C7B6B&}the {\1c&H008C7B6B&}NFL {\1c&H008C7B6B&}logo {\1c&H008C7B6B&}for
+Dialogue: 0,0:00:16.64,0:00:16.82,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}drew {\1c&H006DB8E8&}the {\1c&H008C7B6B&}NFL {\1c&H008C7B6B&}logo {\1c&H008C7B6B&}for
+Dialogue: 0,0:00:16.82,0:00:17.52,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}drew {\1c&H00FFFFFF&}the {\1c&H006DB8E8&}NFL {\1c&H008C7B6B&}logo {\1c&H008C7B6B&}for
+Dialogue: 0,0:00:17.52,0:00:17.78,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}drew {\1c&H00FFFFFF&}the {\1c&H00FFFFFF&}NFL {\1c&H006DB8E8&}logo {\1c&H008C7B6B&}for
+Dialogue: 0,0:00:17.78,0:00:18.04,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}drew {\1c&H00FFFFFF&}the {\1c&H00FFFFFF&}NFL {\1c&H00FFFFFF&}logo {\1c&H006DB8E8&}for
+Dialogue: 0,0:00:18.04,0:00:18.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}every {\1c&H008C7B6B&}team {\1c&H008C7B6B&}as {\1c&H008C7B6B&}well. {\1c&H008C7B6B&}And
+Dialogue: 0,0:00:18.24,0:00:18.48,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}every {\1c&H006DB8E8&}team {\1c&H008C7B6B&}as {\1c&H008C7B6B&}well. {\1c&H008C7B6B&}And
+Dialogue: 0,0:00:18.48,0:00:18.58,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}every {\1c&H00FFFFFF&}team {\1c&H006DB8E8&}as {\1c&H008C7B6B&}well. {\1c&H008C7B6B&}And
+Dialogue: 0,0:00:18.58,0:00:19.70,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}every {\1c&H00FFFFFF&}team {\1c&H00FFFFFF&}as {\1c&H006DB8E8&}well. {\1c&H008C7B6B&}And
+Dialogue: 0,0:00:19.70,0:00:19.80,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}every {\1c&H00FFFFFF&}team {\1c&H00FFFFFF&}as {\1c&H00FFFFFF&}well. {\1c&H006DB8E8&}And
+Dialogue: 0,0:00:19.80,0:00:20.16,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}Madden's {\1c&H008C7B6B&}going {\1c&H008C7B6B&}to {\1c&H008C7B6B&}be {\1c&H008C7B6B&}drawing
+Dialogue: 0,0:00:20.16,0:00:20.22,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Madden's {\1c&H006DB8E8&}going {\1c&H008C7B6B&}to {\1c&H008C7B6B&}be {\1c&H008C7B6B&}drawing
+Dialogue: 0,0:00:20.22,0:00:20.30,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Madden's {\1c&H00FFFFFF&}going {\1c&H006DB8E8&}to {\1c&H008C7B6B&}be {\1c&H008C7B6B&}drawing
+Dialogue: 0,0:00:20.30,0:00:20.54,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Madden's {\1c&H00FFFFFF&}going {\1c&H00FFFFFF&}to {\1c&H006DB8E8&}be {\1c&H008C7B6B&}drawing
+Dialogue: 0,0:00:20.54,0:00:20.82,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Madden's {\1c&H00FFFFFF&}going {\1c&H00FFFFFF&}to {\1c&H00FFFFFF&}be {\1c&H006DB8E8&}drawing
+Dialogue: 0,0:00:20.82,0:00:21.12,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}for {\1c&H008C7B6B&}us {\1c&H008C7B6B&}throughout {\1c&H008C7B6B&}the {\1c&H008C7B6B&}shift.
+Dialogue: 0,0:00:21.12,0:00:21.42,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}for {\1c&H006DB8E8&}us {\1c&H008C7B6B&}throughout {\1c&H008C7B6B&}the {\1c&H008C7B6B&}shift.
+Dialogue: 0,0:00:21.42,0:00:21.60,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}for {\1c&H00FFFFFF&}us {\1c&H006DB8E8&}throughout {\1c&H008C7B6B&}the {\1c&H008C7B6B&}shift.
+Dialogue: 0,0:00:21.60,0:00:21.86,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}for {\1c&H00FFFFFF&}us {\1c&H00FFFFFF&}throughout {\1c&H006DB8E8&}the {\1c&H008C7B6B&}shift.
+Dialogue: 0,0:00:21.86,0:00:22.18,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}for {\1c&H00FFFFFF&}us {\1c&H00FFFFFF&}throughout {\1c&H00FFFFFF&}the {\1c&H006DB8E8&}shift.
+Dialogue: 0,0:00:22.18,0:00:22.18,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}Do {\1c&H008C7B6B&}you {\1c&H008C7B6B&}have {\1c&H008C7B6B&}to {\1c&H008C7B6B&}put
+Dialogue: 0,0:00:22.18,0:00:22.18,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Do {\1c&H006DB8E8&}you {\1c&H008C7B6B&}have {\1c&H008C7B6B&}to {\1c&H008C7B6B&}put
+Dialogue: 0,0:00:22.18,0:00:22.18,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Do {\1c&H00FFFFFF&}you {\1c&H006DB8E8&}have {\1c&H008C7B6B&}to {\1c&H008C7B6B&}put
+Dialogue: 0,0:00:22.18,0:00:22.18,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Do {\1c&H00FFFFFF&}you {\1c&H00FFFFFF&}have {\1c&H006DB8E8&}to {\1c&H008C7B6B&}put
+Dialogue: 0,0:00:22.18,0:00:22.54,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Do {\1c&H00FFFFFF&}you {\1c&H00FFFFFF&}have {\1c&H00FFFFFF&}to {\1c&H006DB8E8&}put
+Dialogue: 0,0:00:22.54,0:00:22.76,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}the {\1c&H008C7B6B&}doink {\1c&H008C7B6B&}right {\1c&H008C7B6B&}next {\1c&H008C7B6B&}to
+Dialogue: 0,0:00:22.76,0:00:23.06,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}the {\1c&H006DB8E8&}doink {\1c&H008C7B6B&}right {\1c&H008C7B6B&}next {\1c&H008C7B6B&}to
+Dialogue: 0,0:00:23.06,0:00:23.30,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}the {\1c&H00FFFFFF&}doink {\1c&H006DB8E8&}right {\1c&H008C7B6B&}next {\1c&H008C7B6B&}to
+Dialogue: 0,0:00:23.30,0:00:23.50,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}the {\1c&H00FFFFFF&}doink {\1c&H00FFFFFF&}right {\1c&H006DB8E8&}next {\1c&H008C7B6B&}to
+Dialogue: 0,0:00:23.50,0:00:23.66,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}the {\1c&H00FFFFFF&}doink {\1c&H00FFFFFF&}right {\1c&H00FFFFFF&}next {\1c&H006DB8E8&}to
+Dialogue: 0,0:00:23.66,0:00:23.74,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}your {\1c&H008C7B6B&}dad's {\1c&H008C7B6B&}head? {\1c&H008C7B6B&}Okay, {\1c&H008C7B6B&}well
+Dialogue: 0,0:00:23.74,0:00:24.06,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}your {\1c&H006DB8E8&}dad's {\1c&H008C7B6B&}head? {\1c&H008C7B6B&}Okay, {\1c&H008C7B6B&}well
+Dialogue: 0,0:00:24.06,0:00:25.56,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}your {\1c&H00FFFFFF&}dad's {\1c&H006DB8E8&}head? {\1c&H008C7B6B&}Okay, {\1c&H008C7B6B&}well
+Dialogue: 0,0:00:25.56,0:00:26.62,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}your {\1c&H00FFFFFF&}dad's {\1c&H00FFFFFF&}head? {\1c&H006DB8E8&}Okay, {\1c&H008C7B6B&}well
+Dialogue: 0,0:00:26.62,0:00:26.66,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}your {\1c&H00FFFFFF&}dad's {\1c&H00FFFFFF&}head? {\1c&H00FFFFFF&}Okay, {\1c&H006DB8E8&}well
+Dialogue: 0,0:00:26.66,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}I {\1c&H008C7B6B&}don't {\1c&H008C7B6B&}blame {\1c&H008C7B6B&}you. {\1c&H008C7B6B&}Manicue
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H006DB8E8&}don't {\1c&H008C7B6B&}blame {\1c&H008C7B6B&}you. {\1c&H008C7B6B&}Manicue
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}don't {\1c&H006DB8E8&}blame {\1c&H008C7B6B&}you. {\1c&H008C7B6B&}Manicue
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}don't {\1c&H00FFFFFF&}blame {\1c&H006DB8E8&}you. {\1c&H008C7B6B&}Manicue
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}don't {\1c&H00FFFFFF&}blame {\1c&H00FFFFFF&}you. {\1c&H006DB8E8&}Manicue
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}words. {\1c&H008C7B6B&}Exactly. {\1c&H008C7B6B&}I {\1c&H008C7B6B&}mean, {\1c&H008C7B6B&}he
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}words. {\1c&H006DB8E8&}Exactly. {\1c&H008C7B6B&}I {\1c&H008C7B6B&}mean, {\1c&H008C7B6B&}he
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}words. {\1c&H00FFFFFF&}Exactly. {\1c&H006DB8E8&}I {\1c&H008C7B6B&}mean, {\1c&H008C7B6B&}he
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}words. {\1c&H00FFFFFF&}Exactly. {\1c&H00FFFFFF&}I {\1c&H006DB8E8&}mean, {\1c&H008C7B6B&}he
+Dialogue: 0,0:00:29.24,0:00:29.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}words. {\1c&H00FFFFFF&}Exactly. {\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}mean, {\1c&H006DB8E8&}he
+Dialogue: 0,0:00:29.24,0:00:29.66,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}didn't, {\1c&H008C7B6B&}but {\1c&H008C7B6B&}there's {\1c&H008C7B6B&}also {\1c&H008C7B6B&}a
+Dialogue: 0,0:00:29.66,0:00:29.76,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}didn't, {\1c&H006DB8E8&}but {\1c&H008C7B6B&}there's {\1c&H008C7B6B&}also {\1c&H008C7B6B&}a
+Dialogue: 0,0:00:29.76,0:00:30.44,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}didn't, {\1c&H00FFFFFF&}but {\1c&H006DB8E8&}there's {\1c&H008C7B6B&}also {\1c&H008C7B6B&}a
+Dialogue: 0,0:00:30.44,0:00:30.60,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}didn't, {\1c&H00FFFFFF&}but {\1c&H00FFFFFF&}there's {\1c&H006DB8E8&}also {\1c&H008C7B6B&}a
+Dialogue: 0,0:00:30.60,0:00:30.76,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}didn't, {\1c&H00FFFFFF&}but {\1c&H00FFFFFF&}there's {\1c&H00FFFFFF&}also {\1c&H006DB8E8&}a
+Dialogue: 0,0:00:30.76,0:00:30.98,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}bake {\1c&H008C7B6B&}in {\1c&H008C7B6B&}there. {\1c&H008C7B6B&}So {\1c&H008C7B6B&}that
+Dialogue: 0,0:00:30.98,0:00:31.14,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}bake {\1c&H006DB8E8&}in {\1c&H008C7B6B&}there. {\1c&H008C7B6B&}So {\1c&H008C7B6B&}that
+Dialogue: 0,0:00:31.14,0:00:31.54,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}bake {\1c&H00FFFFFF&}in {\1c&H006DB8E8&}there. {\1c&H008C7B6B&}So {\1c&H008C7B6B&}that
+Dialogue: 0,0:00:31.54,0:00:31.54,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}bake {\1c&H00FFFFFF&}in {\1c&H00FFFFFF&}there. {\1c&H006DB8E8&}So {\1c&H008C7B6B&}that
+Dialogue: 0,0:00:31.54,0:00:31.88,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}bake {\1c&H00FFFFFF&}in {\1c&H00FFFFFF&}there. {\1c&H00FFFFFF&}So {\1c&H006DB8E8&}that
+Dialogue: 0,0:00:31.88,0:00:32.68,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}might- {\1c&H008C7B6B&}And
+Dialogue: 0,0:00:32.68,0:00:33.30,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}might- {\1c&H006DB8E8&}And
+Dialogue: 0,0:00:34.36,0:00:34.48,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}I {\1c&H008C7B6B&}want {\1c&H008C7B6B&}to {\1c&H008C7B6B&}tell {\1c&H008C7B6B&}this
+Dialogue: 0,0:00:34.48,0:00:34.70,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H006DB8E8&}want {\1c&H008C7B6B&}to {\1c&H008C7B6B&}tell {\1c&H008C7B6B&}this
+Dialogue: 0,0:00:34.70,0:00:34.96,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}want {\1c&H006DB8E8&}to {\1c&H008C7B6B&}tell {\1c&H008C7B6B&}this
+Dialogue: 0,0:00:34.96,0:00:35.12,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}want {\1c&H00FFFFFF&}to {\1c&H006DB8E8&}tell {\1c&H008C7B6B&}this
+Dialogue: 0,0:00:35.12,0:00:35.54,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}want {\1c&H00FFFFFF&}to {\1c&H00FFFFFF&}tell {\1c&H006DB8E8&}this
+Dialogue: 0,0:00:35.54,0:00:36.18,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}to {\1c&H008C7B6B&}Hunter, {\1c&H008C7B6B&}Noah, {\1c&H008C7B6B&}Lenny, {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:36.18,0:00:36.88,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}to {\1c&H006DB8E8&}Hunter, {\1c&H008C7B6B&}Noah, {\1c&H008C7B6B&}Lenny, {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:36.88,0:00:37.42,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}to {\1c&H00FFFFFF&}Hunter, {\1c&H006DB8E8&}Noah, {\1c&H008C7B6B&}Lenny, {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:37.42,0:00:37.60,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}to {\1c&H00FFFFFF&}Hunter, {\1c&H00FFFFFF&}Noah, {\1c&H006DB8E8&}Lenny, {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:37.60,0:00:37.82,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}to {\1c&H00FFFFFF&}Hunter, {\1c&H00FFFFFF&}Noah, {\1c&H00FFFFFF&}Lenny, {\1c&H006DB8E8&}and
+Dialogue: 0,0:00:37.82,0:00:37.96,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}Mom {\1c&H008C7B6B&}if {\1c&H008C7B6B&}they're
+Dialogue: 0,0:00:37.96,0:00:38.96,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Mom {\1c&H006DB8E8&}if {\1c&H008C7B6B&}they're
+Dialogue: 0,0:00:38.96,0:00:39.58,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Mom {\1c&H00FFFFFF&}if {\1c&H006DB8E8&}they're
+Dialogue: 0,0:00:41.92,0:00:41.92,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}watching {\1c&H008C7B6B&}this. {\1c&H008C7B6B&}Mom,
+Dialogue: 0,0:00:41.92,0:00:42.82,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}watching {\1c&H006DB8E8&}this. {\1c&H008C7B6B&}Mom,
+Dialogue: 0,0:00:42.82,0:00:43.52,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}watching {\1c&H00FFFFFF&}this. {\1c&H006DB8E8&}Mom,
+Dialogue: 0,0:00:45.80,0:00:45.88,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}I {\1c&H008C7B6B&}love {\1c&H008C7B6B&}you.
+Dialogue: 0,0:00:45.88,0:00:46.04,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H006DB8E8&}love {\1c&H008C7B6B&}you.
+Dialogue: 0,0:00:46.04,0:00:46.76,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}love {\1c&H006DB8E8&}you.
+Dialogue: 0,0:00:47.84,0:00:48.66,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}Hunter,
+Dialogue: 0,0:00:49.62,0:00:49.74,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}you're {\1c&H008C7B6B&}my {\1c&H008C7B6B&}favorite {\1c&H008C7B6B&}twin.
+Dialogue: 0,0:00:49.74,0:00:49.98,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}you're {\1c&H006DB8E8&}my {\1c&H008C7B6B&}favorite {\1c&H008C7B6B&}twin.
+Dialogue: 0,0:00:49.98,0:00:50.60,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}you're {\1c&H00FFFFFF&}my {\1c&H006DB8E8&}favorite {\1c&H008C7B6B&}twin.
+Dialogue: 0,0:00:50.60,0:00:53.66,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}you're {\1c&H00FFFFFF&}my {\1c&H00FFFFFF&}favorite {\1c&H006DB8E8&}twin.
+Dialogue: 0,0:00:54.24,0:00:54.78,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}Noah,
+Dialogue: 0,0:00:58.70,0:00:58.80,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}I {\1c&H008C7B6B&}do {\1c&H008C7B6B&}like {\1c&H008C7B6B&}you {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:58.80,0:00:58.98,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H006DB8E8&}do {\1c&H008C7B6B&}like {\1c&H008C7B6B&}you {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:58.98,0:00:59.24,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}do {\1c&H006DB8E8&}like {\1c&H008C7B6B&}you {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:59.24,0:00:59.58,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}do {\1c&H00FFFFFF&}like {\1c&H006DB8E8&}you {\1c&H008C7B6B&}and
+Dialogue: 0,0:00:59.58,0:00:59.68,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}I {\1c&H00FFFFFF&}do {\1c&H00FFFFFF&}like {\1c&H00FFFFFF&}you {\1c&H006DB8E8&}and
+Dialogue: 0,0:00:59.68,0:00:59.86,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}Lennon {\1c&H008C7B6B&}for
+Dialogue: 0,0:00:59.86,0:01:00.60,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}Lennon {\1c&H006DB8E8&}for
+Dialogue: 0,0:01:01.28,0:01:01.76,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H006DB8E8&}supporting {\1c&H008C7B6B&}me.
+Dialogue: 0,0:01:01.76,0:01:02.46,Karaoke,,0,0,0,,{\an5\pos(540,1620)}{\1c&H00FFFFFF&}supporting {\1c&H006DB8E8&}me.

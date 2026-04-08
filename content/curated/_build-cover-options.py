@@ -31,6 +31,14 @@ ARTISTS = {
         "credit":     "via Tamron Hall Show",
         "photo":      "cover-photo.png",
     },
+    "dan-orlovsky-madden": {
+        "brand_main": "SPECTRUM",
+        "brand_sub":  "UNLOCKED",
+        "name":       "MADDEN ORLOVSKY",
+        "headline":   '"Mom,<br>I Love You."',
+        "credit":     "via ESPN NFL Live",
+        "photo":      "cover-photo.png",
+    },
 }
 
 # ---------------------------------------------------------------------------

@@ -5,6 +5,7 @@ const targets = [
   { html: `${BASE}/holly-peete/ending-slide.html`, out: `${BASE}/holly-peete/ending-slide.png` },
   { html: `${BASE}/ot-genasis/ending-slide.html`,  out: `${BASE}/ot-genasis/ending-slide.png`  },
   { html: `${BASE}/faith-evans/ending-slide.html`, out: `${BASE}/faith-evans/ending-slide.png` },
+  { html: `${BASE}/dan-orlovsky-madden/ending-slide.html`, out: `${BASE}/dan-orlovsky-madden/ending-slide.png` },
 ];
 
 const browser = await chromium.launch();

@@ -1,0 +1,3863 @@
+{
+  "text": " And last year was the first year obviously that we did this and it was a very cool moment. And Madden's been working hard at new drawing, always individual characters and buddies. I think he's got logos of every team in the NFL. He drew the NFL logo for every team as well. And Madden's going to be drawing for us throughout the shift. Do you have to put the doink right next to your dad's head? Okay, well I don't blame you. Manicue words. Exactly. I mean, he didn't, but there's also a bake in there. So that might- And I want to tell this to Hunter, Noah, Lenny, and Mom if they're watching this. Mom, I love you. Hunter, you're my favorite twin. Noah, I do like you and Lennon for supporting me.",
+  "segments": [
+    {
+      "start": 0.04,
+      "end": 6.3,
+      "text": " And last year was the first year obviously that we did this and it was a very cool moment.",
+      "seek": null,
+      "tokens": [
+        843,
+        938,
+        614,
+        373,
+        262,
+        717,
+        614,
+        6189,
+        326,
+        356,
+        750,
+        428,
+        290,
+        340,
+        373,
+        257,
+        845,
+        3608,
+        2589,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " And",
+          "start": 0.04,
+          "end": 0.04,
+          "probability": 0.028943562880158424,
+          "tokens": [
+            843
+          ]
+        },
+        {
+          "word": " last",
+          "start": 0.28,
+          "end": 0.5,
+          "probability": 0.7040484547615051,
+          "tokens": [
+            938
+          ]
+        },
+        {
+          "word": " year",
+          "start": 0.5,
+          "end": 0.8,
+          "probability": 0.9955169558525085,
+          "tokens": [
+            614
+          ]
+        },
+        {
+          "word": " was",
+          "start": 0.8,
+          "end": 0.98,
+          "probability": 0.9755455851554871,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " the",
+          "start": 1.02,
+          "end": 1.14,
+          "probability": 0.9947433471679688,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " first",
+          "start": 1.14,
+          "end": 1.38,
+          "probability": 0.9885239005088806,
+          "tokens": [
+            717
+          ]
+        },
+        {
+          "word": " year",
+          "start": 1.38,
+          "end": 1.72,
+          "probability": 0.990368664264679,
+          "tokens": [
+            614
+          ]
+        },
+        {
+          "word": " obviously",
+          "start": 1.72,
+          "end": 2.04,
+          "probability": 0.6171555519104004,
+          "tokens": [
+            6189
+          ]
+        },
+        {
+          "word": " that",
+          "start": 2.04,
+          "end": 2.34,
+          "probability": 0.8594154119491577,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " we",
+          "start": 2.34,
+          "end": 2.48,
+          "probability": 0.9955202341079712,
+          "tokens": [
+            356
+          ]
+        },
+        {
+          "word": " did",
+          "start": 2.48,
+          "end": 2.68,
+          "probability": 0.9962557554244995,
+          "tokens": [
+            750
+          ]
+        },
+        {
+          "word": " this",
+          "start": 2.68,
+          "end": 2.94,
+          "probability": 0.9968196153640747,
+          "tokens": [
+            428
+          ]
+        },
+        {
+          "word": " and",
+          "start": 2.94,
+          "end": 3.24,
+          "probability": 0.6522074937820435,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " it",
+          "start": 3.8,
+          "end": 3.9,
+          "probability": 0.8982950448989868,
+          "tokens": [
+            340
+          ]
+        },
+        {
+          "word": " was",
+          "start": 3.9,
+          "end": 3.98,
+          "probability": 0.9980459213256836,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " a",
+          "start": 3.98,
+          "end": 4.14,
+          "probability": 0.9972444772720337,
+          "tokens": [
+            257
+          ]
+        },
+        {
+          "word": " very",
+          "start": 4.14,
+          "end": 4.5,
+          "probability": 0.9957423806190491,
+          "tokens": [
+            845
+          ]
+        },
+        {
+          "word": " cool",
+          "start": 4.5,
+          "end": 4.88,
+          "probability": 0.9975531697273254,
+          "tokens": [
+            3608
+          ]
+        },
+        {
+          "word": " moment.",
+          "start": 4.88,
+          "end": 6.3,
+          "probability": 0.717335045337677,
+          "tokens": [
+            2589,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 7.46,
+      "end": 12.94,
+      "text": " And Madden's been working hard at new drawing, always individual characters and buddies.",
+      "seek": null,
+      "tokens": [
+        843,
+        38920,
+        338,
+        587,
+        1762,
+        1327,
+        379,
+        649,
+        8263,
+        11,
+        1464,
+        1981,
+        3435,
+        290,
+        35548,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " And",
+          "start": 7.46,
+          "end": 7.46,
+          "probability": 0.8020046949386597,
+          "tokens": [
+            843
+          ]
+        },
+        {
+          "word": " Madden's",
+          "start": 7.46,
+          "end": 7.86,
+          "probability": 0.8092276155948639,
+          "tokens": [
+            38920,
+            338
+          ]
+        },
+        {
+          "word": " been",
+          "start": 7.88,
+          "end": 7.98,
+          "probability": 0.9964950680732727,
+          "tokens": [
+            587
+          ]
+        },
+        {
+          "word": " working",
+          "start": 7.98,
+          "end": 8.28,
+          "probability": 0.9985164999961853,
+          "tokens": [
+            1762
+          ]
+        },
+        {
+          "word": " hard",
+          "start": 8.3,
+          "end": 8.7,
+          "probability": 0.9985278844833374,
+          "tokens": [
+            1327
+          ]
+        },
+        {
+          "word": " at",
+          "start": 8.7,
+          "end": 8.96,
+          "probability": 0.9948220252990723,
+          "tokens": [
+            379
+          ]
+        },
+        {
+          "word": " new",
+          "start": 8.96,
+          "end": 9.4,
+          "probability": 0.9697132110595703,
+          "tokens": [
+            649
+          ]
+        },
+        {
+          "word": " drawing,",
+          "start": 9.4,
+          "end": 10.02,
+          "probability": 0.36965955793857574,
+          "tokens": [
+            8263,
+            11
+          ]
+        },
+        {
+          "word": " always",
+          "start": 10.02,
+          "end": 10.44,
+          "probability": 0.9561004042625427,
+          "tokens": [
+            1464
+          ]
+        },
+        {
+          "word": " individual",
+          "start": 10.44,
+          "end": 11.38,
+          "probability": 0.96235591173172,
+          "tokens": [
+            1981
+          ]
+        },
+        {
+          "word": " characters",
+          "start": 11.38,
+          "end": 12.02,
+          "probability": 0.9933870434761047,
+          "tokens": [
+            3435
+          ]
+        },
+        {
+          "word": " and",
+          "start": 12.02,
+          "end": 12.32,
+          "probability": 0.9700145125389099,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " buddies.",
+          "start": 12.32,
+          "end": 12.94,
+          "probability": 0.9133416414260864,
+          "tokens": [
+            35548,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 13.74,
+      "end": 16.44,
+      "text": " I think he's got logos of every team in the NFL.",
+      "seek": null,
+      "tokens": [
+        314,
+        892,
+        339,
+        338,
+        1392,
+        29645,
+        286,
+        790,
+        1074,
+        287,
+        262,
+        5134,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 13.74,
+          "end": 13.74,
+          "probability": 0.7024295330047607,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " think",
+          "start": 13.74,
+          "end": 13.8,
+          "probability": 0.9950467348098755,
+          "tokens": [
+            892
+          ]
+        },
+        {
+          "word": " he's",
+          "start": 13.8,
+          "end": 13.96,
+          "probability": 0.9962014257907867,
+          "tokens": [
+            339,
+            338
+          ]
+        },
+        {
+          "word": " got",
+          "start": 13.96,
+          "end": 14.16,
+          "probability": 0.9988697171211243,
+          "tokens": [
+            1392
+          ]
+        },
+        {
+          "word": " logos",
+          "start": 14.16,
+          "end": 14.6,
+          "probability": 0.9892938137054443,
+          "tokens": [
+            29645
+          ]
+        },
+        {
+          "word": " of",
+          "start": 14.6,
+          "end": 14.96,
+          "probability": 0.9950485825538635,
+          "tokens": [
+            286
+          ]
+        },
+        {
+          "word": " every",
+          "start": 15.08,
+          "end": 15.4,
+          "probability": 0.9978309273719788,
+          "tokens": [
+            790
+          ]
+        },
+        {
+          "word": " team",
+          "start": 15.4,
+          "end": 15.72,
+          "probability": 0.9983273148536682,
+          "tokens": [
+            1074
+          ]
+        },
+        {
+          "word": " in",
+          "start": 15.72,
+          "end": 15.88,
+          "probability": 0.9530646204948425,
+          "tokens": [
+            287
+          ]
+        },
+        {
+          "word": " the",
+          "start": 15.88,
+          "end": 16.02,
+          "probability": 0.9960816502571106,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " NFL.",
+          "start": 16.02,
+          "end": 16.44,
+          "probability": 0.8172074258327484,
+          "tokens": [
+            5134,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 16.48,
+      "end": 19.16,
+      "text": " He drew the NFL logo for every team as well.",
+      "seek": null,
+      "tokens": [
+        679,
+        9859,
+        262,
+        5134,
+        11112,
+        329,
+        790,
+        1074,
+        355,
+        880,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " He",
+          "start": 16.48,
+          "end": 16.48,
+          "probability": 0.6856705546379089,
+          "tokens": [
+            679
+          ]
+        },
+        {
+          "word": " drew",
+          "start": 16.48,
+          "end": 16.64,
+          "probability": 0.994347870349884,
+          "tokens": [
+            9859
+          ]
+        },
+        {
+          "word": " the",
+          "start": 16.64,
+          "end": 16.82,
+          "probability": 0.9828438758850098,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " NFL",
+          "start": 16.82,
+          "end": 17.52,
+          "probability": 0.992377519607544,
+          "tokens": [
+            5134
+          ]
+        },
+        {
+          "word": " logo",
+          "start": 17.52,
+          "end": 17.78,
+          "probability": 0.9938779473304749,
+          "tokens": [
+            11112
+          ]
+        },
+        {
+          "word": " for",
+          "start": 17.78,
+          "end": 18.04,
+          "probability": 0.9954931735992432,
+          "tokens": [
+            329
+          ]
+        },
+        {
+          "word": " every",
+          "start": 18.04,
+          "end": 18.24,
+          "probability": 0.9984937906265259,
+          "tokens": [
+            790
+          ]
+        },
+        {
+          "word": " team",
+          "start": 18.24,
+          "end": 18.44,
+          "probability": 0.9990160465240479,
+          "tokens": [
+            1074
+          ]
+        },
+        {
+          "word": " as",
+          "start": 18.48,
+          "end": 18.58,
+          "probability": 0.9842533469200134,
+          "tokens": [
+            355
+          ]
+        },
+        {
+          "word": " well.",
+          "start": 18.58,
+          "end": 19.16,
+          "probability": 0.7307541519403458,
+          "tokens": [
+            880,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 19.7,
+      "end": 22.18,
+      "text": " And Madden's going to be drawing for us throughout the shift.",
+      "seek": null,
+      "tokens": [
+        843,
+        38920,
+        338,
+        1016,
+        284,
+        307,
+        8263,
+        329,
+        514,
+        3690,
+        262,
+        6482,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " And",
+          "start": 19.7,
+          "end": 19.8,
+          "probability": 0.854652464389801,
+          "tokens": [
+            843
+          ]
+        },
+        {
+          "word": " Madden's",
+          "start": 19.8,
+          "end": 20.16,
+          "probability": 0.9390511512756348,
+          "tokens": [
+            38920,
+            338
+          ]
+        },
+        {
+          "word": " going",
+          "start": 20.16,
+          "end": 20.22,
+          "probability": 0.5664429068565369,
+          "tokens": [
+            1016
+          ]
+        },
+        {
+          "word": " to",
+          "start": 20.22,
+          "end": 20.3,
+          "probability": 0.9974849224090576,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " be",
+          "start": 20.3,
+          "end": 20.48,
+          "probability": 0.9976451992988586,
+          "tokens": [
+            307
+          ]
+        },
+        {
+          "word": " drawing",
+          "start": 20.54,
+          "end": 20.82,
+          "probability": 0.9970044493675232,
+          "tokens": [
+            8263
+          ]
+        },
+        {
+          "word": " for",
+          "start": 20.82,
+          "end": 21.12,
+          "probability": 0.9938170313835144,
+          "tokens": [
+            329
+          ]
+        },
+        {
+          "word": " us",
+          "start": 21.12,
+          "end": 21.34,
+          "probability": 0.9958956241607666,
+          "tokens": [
+            514
+          ]
+        },
+        {
+          "word": " throughout",
+          "start": 21.42,
+          "end": 21.6,
+          "probability": 0.9860512018203735,
+          "tokens": [
+            3690
+          ]
+        },
+        {
+          "word": " the",
+          "start": 21.6,
+          "end": 21.86,
+          "probability": 0.9462302327156067,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " shift.",
+          "start": 21.86,
+          "end": 22.18,
+          "probability": 0.6992383897304535,
+          "tokens": [
+            6482,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 22.18,
+      "end": 25.14,
+      "text": " Do you have to put the doink right next to your dad's head?",
+      "seek": null,
+      "tokens": [
+        2141,
+        345,
+        423,
+        284,
+        1234,
+        262,
+        466,
+        676,
+        826,
+        1306,
+        284,
+        534,
+        9955,
+        338,
+        1182,
+        30
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Do",
+          "start": 22.18,
+          "end": 22.18,
+          "probability": 0.0357309989631176,
+          "tokens": [
+            2141
+          ]
+        },
+        {
+          "word": " you",
+          "start": 22.18,
+          "end": 22.18,
+          "probability": 0.7870979905128479,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " have",
+          "start": 22.18,
+          "end": 22.18,
+          "probability": 0.7800115346908569,
+          "tokens": [
+            423
+          ]
+        },
+        {
+          "word": " to",
+          "start": 22.18,
+          "end": 22.18,
+          "probability": 0.9872161746025085,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " put",
+          "start": 22.18,
+          "end": 22.54,
+          "probability": 0.9387423396110535,
+          "tokens": [
+            1234
+          ]
+        },
+        {
+          "word": " the",
+          "start": 22.54,
+          "end": 22.76,
+          "probability": 0.9795491099357605,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " doink",
+          "start": 22.76,
+          "end": 23.06,
+          "probability": 0.7791984677314758,
+          "tokens": [
+            466,
+            676
+          ]
+        },
+        {
+          "word": " right",
+          "start": 23.06,
+          "end": 23.3,
+          "probability": 0.9790549874305725,
+          "tokens": [
+            826
+          ]
+        },
+        {
+          "word": " next",
+          "start": 23.3,
+          "end": 23.5,
+          "probability": 0.9981948733329773,
+          "tokens": [
+            1306
+          ]
+        },
+        {
+          "word": " to",
+          "start": 23.5,
+          "end": 23.66,
+          "probability": 0.9748968482017517,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " your",
+          "start": 23.66,
+          "end": 23.74,
+          "probability": 0.9960455298423767,
+          "tokens": [
+            534
+          ]
+        },
+        {
+          "word": " dad's",
+          "start": 23.74,
+          "end": 24.06,
+          "probability": 0.9807608723640442,
+          "tokens": [
+            9955,
+            338
+          ]
+        },
+        {
+          "word": " head?",
+          "start": 24.06,
+          "end": 25.14,
+          "probability": 0.9862445890903473,
+          "tokens": [
+            1182,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "start": 25.56,
+      "end": 29.24,
+      "text": " Okay, well I don't blame you.",
+      "seek": null,
+      "tokens": [
+        16805,
+        11,
+        880,
+        314,
+        836,
+        470,
+        8138,
+        345,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Okay,",
+          "start": 25.56,
+          "end": 26.62,
+          "probability": 0.26899482449516654,
+          "tokens": [
+            16805,
+            11
+          ]
+        },
+        {
+          "word": " well",
+          "start": 26.62,
+          "end": 26.66,
+          "probability": 0.8325124979019165,
+          "tokens": [
+            880
+          ]
+        },
+        {
+          "word": " I",
+          "start": 26.66,
+          "end": 29.24,
+          "probability": 0.3491838574409485,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " don't",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.4993801121599972,
+          "tokens": [
+            836,
+            470
+          ]
+        },
+        {
+          "word": " blame",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 6.630427378695458e-05,
+          "tokens": [
+            8138
+          ]
+        },
+        {
+          "word": " you.",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.214624784886837,
+          "tokens": [
+            345,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 29.24,
+      "end": 29.24,
+      "text": " Manicue words.",
+      "seek": null,
+      "tokens": [
+        1869,
+        291,
+        518,
+        2456,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Manicue",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.00011480235722653258,
+          "tokens": [
+            1869,
+            291,
+            518
+          ]
+        },
+        {
+          "word": " words.",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.09492861480202919,
+          "tokens": [
+            2456,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 29.24,
+      "end": 29.24,
+      "text": " Exactly.",
+      "seek": null,
+      "tokens": [
+        36819,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Exactly.",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.3360885383299319,
+          "tokens": [
+            36819,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 29.24,
+      "end": 32.04,
+      "text": " I mean, he didn't, but there's also a bake in there. So that might-",
+      "seek": null,
+      "tokens": [
+        314,
+        1612,
+        11,
+        339,
+        1422,
+        470,
+        11,
+        475,
+        612,
+        338,
+        635,
+        257,
+        28450,
+        287,
+        612,
+        13,
+        1406,
+        326,
+        1244,
+        12
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.051875703036785126,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " mean,",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.30051494389772415,
+          "tokens": [
+            1612,
+            11
+          ]
+        },
+        {
+          "word": " he",
+          "start": 29.24,
+          "end": 29.24,
+          "probability": 0.3254927396774292,
+          "tokens": [
+            339
+          ]
+        },
+        {
+          "word": " didn't,",
+          "start": 29.24,
+          "end": 29.66,
+          "probability": 0.8305199940999349,
+          "tokens": [
+            1422,
+            470,
+            11
+          ]
+        },
+        {
+          "word": " but",
+          "start": 29.66,
+          "end": 29.76,
+          "probability": 0.9803977012634277,
+          "tokens": [
+            475
+          ]
+        },
+        {
+          "word": " there's",
+          "start": 29.76,
+          "end": 30.44,
+          "probability": 0.6793275624513626,
+          "tokens": [
+            612,
+            338
+          ]
+        },
+        {
+          "word": " also",
+          "start": 30.44,
+          "end": 30.6,
+          "probability": 0.9904069304466248,
+          "tokens": [
+            635
+          ]
+        },
+        {
+          "word": " a",
+          "start": 30.6,
+          "end": 30.76,
+          "probability": 0.9879669547080994,
+          "tokens": [
+            257
+          ]
+        },
+        {
+          "word": " bake",
+          "start": 30.76,
+          "end": 30.96,
+          "probability": 0.4517729580402374,
+          "tokens": [
+            28450
+          ]
+        },
+        {
+          "word": " in",
+          "start": 30.98,
+          "end": 31.14,
+          "probability": 0.9096744060516357,
+          "tokens": [
+            287
+          ]
+        },
+        {
+          "word": " there.",
+          "start": 31.14,
+          "end": 31.54,
+          "probability": 0.6558669805526733,
+          "tokens": [
+            612,
+            13
+          ]
+        },
+        {
+          "word": " So",
+          "start": 31.54,
+          "end": 31.54,
+          "probability": 0.4807071089744568,
+          "tokens": [
+            1406
+          ]
+        },
+        {
+          "word": " that",
+          "start": 31.54,
+          "end": 31.88,
+          "probability": 0.7724374532699585,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " might-",
+          "start": 31.88,
+          "end": 32.04,
+          "probability": 0.5254565328359604,
+          "tokens": [
+            1244,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "start": 32.68,
+      "end": 42.48,
+      "text": " And I want to tell this to Hunter, Noah, Lenny, and Mom if they're watching this.",
+      "seek": null,
+      "tokens": [
+        843,
+        314,
+        765,
+        284,
+        1560,
+        428,
+        284,
+        9055,
+        11,
+        18394,
+        11,
+        406,
+        11870,
+        11,
+        290,
+        11254,
+        611,
+        484,
+        821,
+        4964,
+        428,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " And",
+          "start": 32.68,
+          "end": 32.9,
+          "probability": 0.5909584760665894,
+          "tokens": [
+            843
+          ]
+        },
+        {
+          "word": " I",
+          "start": 34.36,
+          "end": 34.48,
+          "probability": 0.5963108539581299,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " want",
+          "start": 34.48,
+          "end": 34.7,
+          "probability": 0.7067621350288391,
+          "tokens": [
+            765
+          ]
+        },
+        {
+          "word": " to",
+          "start": 34.7,
+          "end": 34.88,
+          "probability": 0.9840414524078369,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " tell",
+          "start": 34.96,
+          "end": 35.12,
+          "probability": 0.9975807666778564,
+          "tokens": [
+            1560
+          ]
+        },
+        {
+          "word": " this",
+          "start": 35.12,
+          "end": 35.42,
+          "probability": 0.9814262986183167,
+          "tokens": [
+            428
+          ]
+        },
+        {
+          "word": " to",
+          "start": 35.54,
+          "end": 36.18,
+          "probability": 0.9877427816390991,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " Hunter,",
+          "start": 36.18,
+          "end": 36.88,
+          "probability": 0.9451769888401031,
+          "tokens": [
+            9055,
+            11
+          ]
+        },
+        {
+          "word": " Noah,",
+          "start": 36.88,
+          "end": 37.42,
+          "probability": 0.9658678770065308,
+          "tokens": [
+            18394,
+            11
+          ]
+        },
+        {
+          "word": " Lenny,",
+          "start": 37.42,
+          "end": 37.6,
+          "probability": 0.5144268025954565,
+          "tokens": [
+            406,
+            11870,
+            11
+          ]
+        },
+        {
+          "word": " and",
+          "start": 37.6,
+          "end": 37.82,
+          "probability": 0.9212287664413452,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " Mom",
+          "start": 37.82,
+          "end": 37.96,
+          "probability": 0.7160502076148987,
+          "tokens": [
+            11254
+          ]
+        },
+        {
+          "word": " if",
+          "start": 37.96,
+          "end": 38.9,
+          "probability": 0.42456045746803284,
+          "tokens": [
+            611
+          ]
+        },
+        {
+          "word": " they're",
+          "start": 38.96,
+          "end": 39.18,
+          "probability": 0.809259831905365,
+          "tokens": [
+            484,
+            821
+          ]
+        },
+        {
+          "word": " watching",
+          "start": 41.92,
+          "end": 41.92,
+          "probability": 2.97220321954228e-06,
+          "tokens": [
+            4964
+          ]
+        },
+        {
+          "word": " this.",
+          "start": 41.92,
+          "end": 42.48,
+          "probability": 0.1078542061150074,
+          "tokens": [
+            428,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 42.82,
+      "end": 53.26,
+      "text": " Mom, I love you. Hunter, you're my favorite twin.",
+      "seek": null,
+      "tokens": [
+        11254,
+        11,
+        314,
+        1842,
+        345,
+        13,
+        9055,
+        11,
+        345,
+        821,
+        616,
+        4004,
+        15203,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Mom,",
+          "start": 42.82,
+          "end": 43.12,
+          "probability": 0.31866079568862915,
+          "tokens": [
+            11254,
+            11
+          ]
+        },
+        {
+          "word": " I",
+          "start": 45.8,
+          "end": 45.88,
+          "probability": 0.8907507061958313,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " love",
+          "start": 45.88,
+          "end": 46.04,
+          "probability": 0.9876634478569031,
+          "tokens": [
+            1842
+          ]
+        },
+        {
+          "word": " you.",
+          "start": 46.04,
+          "end": 46.36,
+          "probability": 0.9448432922363281,
+          "tokens": [
+            345,
+            13
+          ]
+        },
+        {
+          "word": " Hunter,",
+          "start": 47.84,
+          "end": 48.26,
+          "probability": 0.8878566026687622,
+          "tokens": [
+            9055,
+            11
+          ]
+        },
+        {
+          "word": " you're",
+          "start": 49.62,
+          "end": 49.74,
+          "probability": 0.9229406118392944,
+          "tokens": [
+            345,
+            821
+          ]
+        },
+        {
+          "word": " my",
+          "start": 49.74,
+          "end": 49.86,
+          "probability": 0.9976834058761597,
+          "tokens": [
+            616
+          ]
+        },
+        {
+          "word": " favorite",
+          "start": 49.98,
+          "end": 50.1,
+          "probability": 0.942264974117279,
+          "tokens": [
+            4004
+          ]
+        },
+        {
+          "word": " twin.",
+          "start": 50.6,
+          "end": 53.26,
+          "probability": 0.28509534895420074,
+          "tokens": [
+            15203,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 54.24,
+      "end": 54.38,
+      "text": " Noah,",
+      "seek": null,
+      "tokens": [
+        18394,
+        11
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Noah,",
+          "start": 54.24,
+          "end": 54.38,
+          "probability": 0.13034164905548096,
+          "tokens": [
+            18394,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "start": 58.7,
+      "end": 62.06,
+      "text": " I do like you and Lennon for supporting me.",
+      "seek": null,
+      "tokens": [
+        314,
+        466,
+        588,
+        345,
+        290,
+        37470,
+        329,
+        6493,
+        502,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 58.7,
+          "end": 58.8,
+          "probability": 0.8621845245361328,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " do",
+          "start": 58.8,
+          "end": 58.98,
+          "probability": 0.9785889387130737,
+          "tokens": [
+            466
+          ]
+        },
+        {
+          "word": " like",
+          "start": 58.98,
+          "end": 59.24,
+          "probability": 0.9766237139701843,
+          "tokens": [
+            588
+          ]
+        },
+        {
+          "word": " you",
+          "start": 59.24,
+          "end": 59.46,
+          "probability": 0.992264986038208,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " and",
+          "start": 59.58,
+          "end": 59.68,
+          "probability": 0.45306459069252014,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " Lennon",
+          "start": 59.68,
+          "end": 59.86,
+          "probability": 0.411194771528244,
+          "tokens": [
+            37470
+          ]
+        },
+        {
+          "word": " for",
+          "start": 59.86,
+          "end": 60.2,
+          "probability": 0.5589249134063721,
+          "tokens": [
+            329
+          ]
+        },
+        {
+          "word": " supporting",
+          "start": 61.28,
+          "end": 61.64,
+          "probability": 0.9222334623336792,
+          "tokens": [
+            6493
+          ]
+        },
+        {
+          "word": " me.",
+          "start": 61.76,
+          "end": 62.06,
+          "probability": 0.9323089420795441,
+          "tokens": [
+            502,
+            13
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "ori_dict": {
+    "text": " And last year was the first year obviously that we did this and it was a very cool moment. And Madden's been working hard at new drawing, always individual characters and buddies. I think he's got logos of every team in the NFL. He drew the NFL logo for every team as well. And Madden's going to be drawing for us throughout the shift. Do you have to put the doink right next to your dad's head? Okay, well I don't blame you. Manicue words. Exactly. I mean, he didn't, but there's also a bake in there. So that might- And I want to tell this to Hunter, Noah, Lenny, and Mom if they're watching this. Mom, I love you. Hunter, you're my favorite twin. Noah, I do like you and Lennon for supporting me.",
+    "segments": [
+      {
+        "start": 0.04,
+        "end": 6.3,
+        "text": " And last year was the first year obviously that we did this and it was a very cool moment.",
+        "seek": null,
+        "tokens": [
+          843,
+          938,
+          614,
+          373,
+          262,
+          717,
+          614,
+          6189,
+          326,
+          356,
+          750,
+          428,
+          290,
+          340,
+          373,
+          257,
+          845,
+          3608,
+          2589,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " And",
+            "start": 0.04,
+            "end": 0.04,
+            "probability": 0.028943562880158424,
+            "tokens": [
+              843
+            ]
+          },
+          {
+            "word": " last",
+            "start": 0.28,
+            "end": 0.5,
+            "probability": 0.7040484547615051,
+            "tokens": [
+              938
+            ]
+          },
+          {
+            "word": " year",
+            "start": 0.5,
+            "end": 0.8,
+            "probability": 0.9955169558525085,
+            "tokens": [
+              614
+            ]
+          },
+          {
+            "word": " was",
+            "start": 0.8,
+            "end": 0.98,
+            "probability": 0.9755455851554871,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " the",
+            "start": 1.02,
+            "end": 1.14,
+            "probability": 0.9947433471679688,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " first",
+            "start": 1.14,
+            "end": 1.38,
+            "probability": 0.9885239005088806,
+            "tokens": [
+              717
+            ]
+          },
+          {
+            "word": " year",
+            "start": 1.38,
+            "end": 1.72,
+            "probability": 0.990368664264679,
+            "tokens": [
+              614
+            ]
+          },
+          {
+            "word": " obviously",
+            "start": 1.72,
+            "end": 2.04,
+            "probability": 0.6171555519104004,
+            "tokens": [
+              6189
+            ]
+          },
+          {
+            "word": " that",
+            "start": 2.04,
+            "end": 2.34,
+            "probability": 0.8594154119491577,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " we",
+            "start": 2.34,
+            "end": 2.48,
+            "probability": 0.9955202341079712,
+            "tokens": [
+              356
+            ]
+          },
+          {
+            "word": " did",
+            "start": 2.48,
+            "end": 2.68,
+            "probability": 0.9962557554244995,
+            "tokens": [
+              750
+            ]
+          },
+          {
+            "word": " this",
+            "start": 2.68,
+            "end": 2.94,
+            "probability": 0.9968196153640747,
+            "tokens": [
+              428
+            ]
+          },
+          {
+            "word": " and",
+            "start": 2.94,
+            "end": 3.24,
+            "probability": 0.6522074937820435,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " it",
+            "start": 3.8,
+            "end": 3.9,
+            "probability": 0.8982950448989868,
+            "tokens": [
+              340
+            ]
+          },
+          {
+            "word": " was",
+            "start": 3.9,
+            "end": 3.98,
+            "probability": 0.9980459213256836,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " a",
+            "start": 3.98,
+            "end": 4.14,
+            "probability": 0.9972444772720337,
+            "tokens": [
+              257
+            ]
+          },
+          {
+            "word": " very",
+            "start": 4.14,
+            "end": 4.5,
+            "probability": 0.9957423806190491,
+            "tokens": [
+              845
+            ]
+          },
+          {
+            "word": " cool",
+            "start": 4.5,
+            "end": 4.88,
+            "probability": 0.9975531697273254,
+            "tokens": [
+              3608
+            ]
+          },
+          {
+            "word": " moment.",
+            "start": 4.88,
+            "end": 6.3,
+            "probability": 0.717335045337677,
+            "tokens": [
+              2589,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 7.46,
+        "end": 12.94,
+        "text": " And Madden's been working hard at new drawing, always individual characters and buddies.",
+        "seek": null,
+        "tokens": [
+          843,
+          38920,
+          338,
+          587,
+          1762,
+          1327,
+          379,
+          649,
+          8263,
+          11,
+          1464,
+          1981,
+          3435,
+          290,
+          35548,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " And",
+            "start": 7.46,
+            "end": 7.46,
+            "probability": 0.8020046949386597,
+            "tokens": [
+              843
+            ]
+          },
+          {
+            "word": " Madden's",
+            "start": 7.46,
+            "end": 7.86,
+            "probability": 0.8092276155948639,
+            "tokens": [
+              38920,
+              338
+            ]
+          },
+          {
+            "word": " been",
+            "start": 7.88,
+            "end": 7.98,
+            "probability": 0.9964950680732727,
+            "tokens": [
+              587
+            ]
+          },
+          {
+            "word": " working",
+            "start": 7.98,
+            "end": 8.28,
+            "probability": 0.9985164999961853,
+            "tokens": [
+              1762
+            ]
+          },
+          {
+            "word": " hard",
+            "start": 8.3,
+            "end": 8.7,
+            "probability": 0.9985278844833374,
+            "tokens": [
+              1327
+            ]
+          },
+          {
+            "word": " at",
+            "start": 8.7,
+            "end": 8.96,
+            "probability": 0.9948220252990723,
+            "tokens": [
+              379
+            ]
+          },
+          {
+            "word": " new",
+            "start": 8.96,
+            "end": 9.4,
+            "probability": 0.9697132110595703,
+            "tokens": [
+              649
+            ]
+          },
+          {
+            "word": " drawing,",
+            "start": 9.4,
+            "end": 10.02,
+            "probability": 0.36965955793857574,
+            "tokens": [
+              8263,
+              11
+            ]
+          },
+          {
+            "word": " always",
+            "start": 10.02,
+            "end": 10.44,
+            "probability": 0.9561004042625427,
+            "tokens": [
+              1464
+            ]
+          },
+          {
+            "word": " individual",
+            "start": 10.44,
+            "end": 11.38,
+            "probability": 0.96235591173172,
+            "tokens": [
+              1981
+            ]
+          },
+          {
+            "word": " characters",
+            "start": 11.38,
+            "end": 12.02,
+            "probability": 0.9933870434761047,
+            "tokens": [
+              3435
+            ]
+          },
+          {
+            "word": " and",
+            "start": 12.02,
+            "end": 12.32,
+            "probability": 0.9700145125389099,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " buddies.",
+            "start": 12.32,
+            "end": 12.94,
+            "probability": 0.9133416414260864,
+            "tokens": [
+              35548,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 13.74,
+        "end": 16.44,
+        "text": " I think he's got logos of every team in the NFL.",
+        "seek": null,
+        "tokens": [
+          314,
+          892,
+          339,
+          338,
+          1392,
+          29645,
+          286,
+          790,
+          1074,
+          287,
+          262,
+          5134,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 13.74,
+            "end": 13.74,
+            "probability": 0.7024295330047607,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " think",
+            "start": 13.74,
+            "end": 13.8,
+            "probability": 0.9950467348098755,
+            "tokens": [
+              892
+            ]
+          },
+          {
+            "word": " he's",
+            "start": 13.8,
+            "end": 13.96,
+            "probability": 0.9962014257907867,
+            "tokens": [
+              339,
+              338
+            ]
+          },
+          {
+            "word": " got",
+            "start": 13.96,
+            "end": 14.16,
+            "probability": 0.9988697171211243,
+            "tokens": [
+              1392
+            ]
+          },
+          {
+            "word": " logos",
+            "start": 14.16,
+            "end": 14.6,
+            "probability": 0.9892938137054443,
+            "tokens": [
+              29645
+            ]
+          },
+          {
+            "word": " of",
+            "start": 14.6,
+            "end": 14.96,
+            "probability": 0.9950485825538635,
+            "tokens": [
+              286
+            ]
+          },
+          {
+            "word": " every",
+            "start": 15.08,
+            "end": 15.4,
+            "probability": 0.9978309273719788,
+            "tokens": [
+              790
+            ]
+          },
+          {
+            "word": " team",
+            "start": 15.4,
+            "end": 15.72,
+            "probability": 0.9983273148536682,
+            "tokens": [
+              1074
+            ]
+          },
+          {
+            "word": " in",
+            "start": 15.72,
+            "end": 15.88,
+            "probability": 0.9530646204948425,
+            "tokens": [
+              287
+            ]
+          },
+          {
+            "word": " the",
+            "start": 15.88,
+            "end": 16.02,
+            "probability": 0.9960816502571106,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " NFL.",
+            "start": 16.02,
+            "end": 16.44,
+            "probability": 0.8172074258327484,
+            "tokens": [
+              5134,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 16.48,
+        "end": 19.16,
+        "text": " He drew the NFL logo for every team as well.",
+        "seek": null,
+        "tokens": [
+          679,
+          9859,
+          262,
+          5134,
+          11112,
+          329,
+          790,
+          1074,
+          355,
+          880,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " He",
+            "start": 16.48,
+            "end": 16.48,
+            "probability": 0.6856705546379089,
+            "tokens": [
+              679
+            ]
+          },
+          {
+            "word": " drew",
+            "start": 16.48,
+            "end": 16.64,
+            "probability": 0.994347870349884,
+            "tokens": [
+              9859
+            ]
+          },
+          {
+            "word": " the",
+            "start": 16.64,
+            "end": 16.82,
+            "probability": 0.9828438758850098,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " NFL",
+            "start": 16.82,
+            "end": 17.52,
+            "probability": 0.992377519607544,
+            "tokens": [
+              5134
+            ]
+          },
+          {
+            "word": " logo",
+            "start": 17.52,
+            "end": 17.78,
+            "probability": 0.9938779473304749,
+            "tokens": [
+              11112
+            ]
+          },
+          {
+            "word": " for",
+            "start": 17.78,
+            "end": 18.04,
+            "probability": 0.9954931735992432,
+            "tokens": [
+              329
+            ]
+          },
+          {
+            "word": " every",
+            "start": 18.04,
+            "end": 18.24,
+            "probability": 0.9984937906265259,
+            "tokens": [
+              790
+            ]
+          },
+          {
+            "word": " team",
+            "start": 18.24,
+            "end": 18.44,
+            "probability": 0.9990160465240479,
+            "tokens": [
+              1074
+            ]
+          },
+          {
+            "word": " as",
+            "start": 18.48,
+            "end": 18.58,
+            "probability": 0.9842533469200134,
+            "tokens": [
+              355
+            ]
+          },
+          {
+            "word": " well.",
+            "start": 18.58,
+            "end": 19.16,
+            "probability": 0.7307541519403458,
+            "tokens": [
+              880,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 19.7,
+        "end": 22.18,
+        "text": " And Madden's going to be drawing for us throughout the shift.",
+        "seek": null,
+        "tokens": [
+          843,
+          38920,
+          338,
+          1016,
+          284,
+          307,
+          8263,
+          329,
+          514,
+          3690,
+          262,
+          6482,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " And",
+            "start": 19.7,
+            "end": 19.8,
+            "probability": 0.854652464389801,
+            "tokens": [
+              843
+            ]
+          },
+          {
+            "word": " Madden's",
+            "start": 19.8,
+            "end": 20.16,
+            "probability": 0.9390511512756348,
+            "tokens": [
+              38920,
+              338
+            ]
+          },
+          {
+            "word": " going",
+            "start": 20.16,
+            "end": 20.22,
+            "probability": 0.5664429068565369,
+            "tokens": [
+              1016
+            ]
+          },
+          {
+            "word": " to",
+            "start": 20.22,
+            "end": 20.3,
+            "probability": 0.9974849224090576,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " be",
+            "start": 20.3,
+            "end": 20.48,
+            "probability": 0.9976451992988586,
+            "tokens": [
+              307
+            ]
+          },
+          {
+            "word": " drawing",
+            "start": 20.54,
+            "end": 20.82,
+            "probability": 0.9970044493675232,
+            "tokens": [
+              8263
+            ]
+          },
+          {
+            "word": " for",
+            "start": 20.82,
+            "end": 21.12,
+            "probability": 0.9938170313835144,
+            "tokens": [
+              329
+            ]
+          },
+          {
+            "word": " us",
+            "start": 21.12,
+            "end": 21.34,
+            "probability": 0.9958956241607666,
+            "tokens": [
+              514
+            ]
+          },
+          {
+            "word": " throughout",
+            "start": 21.42,
+            "end": 21.6,
+            "probability": 0.9860512018203735,
+            "tokens": [
+              3690
+            ]
+          },
+          {
+            "word": " the",
+            "start": 21.6,
+            "end": 21.86,
+            "probability": 0.9462302327156067,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " shift.",
+            "start": 21.86,
+            "end": 22.18,
+            "probability": 0.6992383897304535,
+            "tokens": [
+              6482,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 22.18,
+        "end": 25.14,
+        "text": " Do you have to put the doink right next to your dad's head?",
+        "seek": null,
+        "tokens": [
+          2141,
+          345,
+          423,
+          284,
+          1234,
+          262,
+          466,
+          676,
+          826,
+          1306,
+          284,
+          534,
+          9955,
+          338,
+          1182,
+          30
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Do",
+            "start": 22.18,
+            "end": 22.18,
+            "probability": 0.0357309989631176,
+            "tokens": [
+              2141
+            ]
+          },
+          {
+            "word": " you",
+            "start": 22.18,
+            "end": 22.18,
+            "probability": 0.7870979905128479,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " have",
+            "start": 22.18,
+            "end": 22.18,
+            "probability": 0.7800115346908569,
+            "tokens": [
+              423
+            ]
+          },
+          {
+            "word": " to",
+            "start": 22.18,
+            "end": 22.18,
+            "probability": 0.9872161746025085,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " put",
+            "start": 22.18,
+            "end": 22.54,
+            "probability": 0.9387423396110535,
+            "tokens": [
+              1234
+            ]
+          },
+          {
+            "word": " the",
+            "start": 22.54,
+            "end": 22.76,
+            "probability": 0.9795491099357605,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " doink",
+            "start": 22.76,
+            "end": 23.06,
+            "probability": 0.7791984677314758,
+            "tokens": [
+              466,
+              676
+            ]
+          },
+          {
+            "word": " right",
+            "start": 23.06,
+            "end": 23.3,
+            "probability": 0.9790549874305725,
+            "tokens": [
+              826
+            ]
+          },
+          {
+            "word": " next",
+            "start": 23.3,
+            "end": 23.5,
+            "probability": 0.9981948733329773,
+            "tokens": [
+              1306
+            ]
+          },
+          {
+            "word": " to",
+            "start": 23.5,
+            "end": 23.66,
+            "probability": 0.9748968482017517,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " your",
+            "start": 23.66,
+            "end": 23.74,
+            "probability": 0.9960455298423767,
+            "tokens": [
+              534
+            ]
+          },
+          {
+            "word": " dad's",
+            "start": 23.74,
+            "end": 24.06,
+            "probability": 0.9807608723640442,
+            "tokens": [
+              9955,
+              338
+            ]
+          },
+          {
+            "word": " head?",
+            "start": 24.06,
+            "end": 25.14,
+            "probability": 0.9862445890903473,
+            "tokens": [
+              1182,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "start": 25.56,
+        "end": 29.24,
+        "text": " Okay, well I don't blame you.",
+        "seek": null,
+        "tokens": [
+          16805,
+          11,
+          880,
+          314,
+          836,
+          470,
+          8138,
+          345,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Okay,",
+            "start": 25.56,
+            "end": 26.62,
+            "probability": 0.26899482449516654,
+            "tokens": [
+              16805,
+              11
+            ]
+          },
+          {
+            "word": " well",
+            "start": 26.62,
+            "end": 26.66,
+            "probability": 0.8325124979019165,
+            "tokens": [
+              880
+            ]
+          },
+          {
+            "word": " I",
+            "start": 26.66,
+            "end": 29.24,
+            "probability": 0.3491838574409485,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " don't",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.4993801121599972,
+            "tokens": [
+              836,
+              470
+            ]
+          },
+          {
+            "word": " blame",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 6.630427378695458e-05,
+            "tokens": [
+              8138
+            ]
+          },
+          {
+            "word": " you.",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.214624784886837,
+            "tokens": [
+              345,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 29.24,
+        "end": 29.24,
+        "text": " Manicue words.",
+        "seek": null,
+        "tokens": [
+          1869,
+          291,
+          518,
+          2456,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Manicue",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.00011480235722653258,
+            "tokens": [
+              1869,
+              291,
+              518
+            ]
+          },
+          {
+            "word": " words.",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.09492861480202919,
+            "tokens": [
+              2456,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 29.24,
+        "end": 29.24,
+        "text": " Exactly.",
+        "seek": null,
+        "tokens": [
+          36819,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Exactly.",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.3360885383299319,
+            "tokens": [
+              36819,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 29.24,
+        "end": 32.04,
+        "text": " I mean, he didn't, but there's also a bake in there. So that might-",
+        "seek": null,
+        "tokens": [
+          314,
+          1612,
+          11,
+          339,
+          1422,
+          470,
+          11,
+          475,
+          612,
+          338,
+          635,
+          257,
+          28450,
+          287,
+          612,
+          13,
+          1406,
+          326,
+          1244,
+          12
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.051875703036785126,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " mean,",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.30051494389772415,
+            "tokens": [
+              1612,
+              11
+            ]
+          },
+          {
+            "word": " he",
+            "start": 29.24,
+            "end": 29.24,
+            "probability": 0.3254927396774292,
+            "tokens": [
+              339
+            ]
+          },
+          {
+            "word": " didn't,",
+            "start": 29.24,
+            "end": 29.66,
+            "probability": 0.8305199940999349,
+            "tokens": [
+              1422,
+              470,
+              11
+            ]
+          },
+          {
+            "word": " but",
+            "start": 29.66,
+            "end": 29.76,
+            "probability": 0.9803977012634277,
+            "tokens": [
+              475
+            ]
+          },
+          {
+            "word": " there's",
+            "start": 29.76,
+            "end": 30.44,
+            "probability": 0.6793275624513626,
+            "tokens": [
+              612,
+              338
+            ]
+          },
+          {
+            "word": " also",
+            "start": 30.44,
+            "end": 30.6,
+            "probability": 0.9904069304466248,
+            "tokens": [
+              635
+            ]
+          },
+          {
+            "word": " a",
+            "start": 30.6,
+            "end": 30.76,
+            "probability": 0.9879669547080994,
+            "tokens": [
+              257
+            ]
+          },
+          {
+            "word": " bake",
+            "start": 30.76,
+            "end": 30.96,
+            "probability": 0.4517729580402374,
+            "tokens": [
+              28450
+            ]
+          },
+          {
+            "word": " in",
+            "start": 30.98,
+            "end": 31.14,
+            "probability": 0.9096744060516357,
+            "tokens": [
+              287
+            ]
+          },
+          {
+            "word": " there.",
+            "start": 31.14,
+            "end": 31.54,
+            "probability": 0.6558669805526733,
+            "tokens": [
+              612,
+              13
+            ]
+          },
+          {
+            "word": " So",
+            "start": 31.54,
+            "end": 31.54,
+            "probability": 0.4807071089744568,
+            "tokens": [
+              1406
+            ]
+          },
+          {
+            "word": " that",
+            "start": 31.54,
+            "end": 31.88,
+            "probability": 0.7724374532699585,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " might-",
+            "start": 31.88,
+            "end": 32.04,
+            "probability": 0.5254565328359604,
+            "tokens": [
+              1244,
+              12
+            ]
+          }
+        ]
+      },
+      {
+        "start": 32.68,
+        "end": 42.48,
+        "text": " And I want to tell this to Hunter, Noah, Lenny, and Mom if they're watching this.",
+        "seek": null,
+        "tokens": [
+          843,
+          314,
+          765,
+          284,
+          1560,
+          428,
+          284,
+          9055,
+          11,
+          18394,
+          11,
+          406,
+          11870,
+          11,
+          290,
+          11254,
+          611,
+          484,
+          821,
+          4964,
+          428,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " And",
+            "start": 32.68,
+            "end": 32.9,
+            "probability": 0.5909584760665894,
+            "tokens": [
+              843
+            ]
+          },
+          {
+            "word": " I",
+            "start": 34.36,
+            "end": 34.48,
+            "probability": 0.5963108539581299,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " want",
+            "start": 34.48,
+            "end": 34.7,
+            "probability": 0.7067621350288391,
+            "tokens": [
+              765
+            ]
+          },
+          {
+            "word": " to",
+            "start": 34.7,
+            "end": 34.88,
+            "probability": 0.9840414524078369,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " tell",
+            "start": 34.96,
+            "end": 35.12,
+            "probability": 0.9975807666778564,
+            "tokens": [
+              1560
+            ]
+          },
+          {
+            "word": " this",
+            "start": 35.12,
+            "end": 35.42,
+            "probability": 0.9814262986183167,
+            "tokens": [
+              428
+            ]
+          },
+          {
+            "word": " to",
+            "start": 35.54,
+            "end": 36.18,
+            "probability": 0.9877427816390991,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " Hunter,",
+            "start": 36.18,
+            "end": 36.88,
+            "probability": 0.9451769888401031,
+            "tokens": [
+              9055,
+              11
+            ]
+          },
+          {
+            "word": " Noah,",
+            "start": 36.88,
+            "end": 37.42,
+            "probability": 0.9658678770065308,
+            "tokens": [
+              18394,
+              11
+            ]
+          },
+          {
+            "word": " Lenny,",
+            "start": 37.42,
+            "end": 37.6,
+            "probability": 0.5144268025954565,
+            "tokens": [
+              406,
+              11870,
+              11
+            ]
+          },
+          {
+            "word": " and",
+            "start": 37.6,
+            "end": 37.82,
+            "probability": 0.9212287664413452,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " Mom",
+            "start": 37.82,
+            "end": 37.96,
+            "probability": 0.7160502076148987,
+            "tokens": [
+              11254
+            ]
+          },
+          {
+            "word": " if",
+            "start": 37.96,
+            "end": 38.9,
+            "probability": 0.42456045746803284,
+            "tokens": [
+              611
+            ]
+          },
+          {
+            "word": " they're",
+            "start": 38.96,
+            "end": 39.18,
+            "probability": 0.809259831905365,
+            "tokens": [
+              484,
+              821
+            ]
+          },
+          {
+            "word": " watching",
+            "start": 41.92,
+            "end": 41.92,
+            "probability": 2.97220321954228e-06,
+            "tokens": [
+              4964
+            ]
+          },
+          {
+            "word": " this.",
+            "start": 41.92,
+            "end": 42.48,
+            "probability": 0.1078542061150074,
+            "tokens": [
+              428,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 42.82,
+        "end": 53.26,
+        "text": " Mom, I love you. Hunter, you're my favorite twin.",
+        "seek": null,
+        "tokens": [
+          11254,
+          11,
+          314,
+          1842,
+          345,
+          13,
+          9055,
+          11,
+          345,
+          821,
+          616,
+          4004,
+          15203,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Mom,",
+            "start": 42.82,
+            "end": 43.12,
+            "probability": 0.31866079568862915,
+            "tokens": [
+              11254,
+              11
+            ]
+          },
+          {
+            "word": " I",
+            "start": 45.8,
+            "end": 45.88,
+            "probability": 0.8907507061958313,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " love",
+            "start": 45.88,
+            "end": 46.04,
+            "probability": 0.9876634478569031,
+            "tokens": [
+              1842
+            ]
+          },
+          {
+            "word": " you.",
+            "start": 46.04,
+            "end": 46.36,
+            "probability": 0.9448432922363281,
+            "tokens": [
+              345,
+              13
+            ]
+          },
+          {
+            "word": " Hunter,",
+            "start": 47.84,
+            "end": 48.26,
+            "probability": 0.8878566026687622,
+            "tokens": [
+              9055,
+              11
+            ]
+          },
+          {
+            "word": " you're",
+            "start": 49.62,
+            "end": 49.74,
+            "probability": 0.9229406118392944,
+            "tokens": [
+              345,
+              821
+            ]
+          },
+          {
+            "word": " my",
+            "start": 49.74,
+            "end": 49.86,
+            "probability": 0.9976834058761597,
+            "tokens": [
+              616
+            ]
+          },
+          {
+            "word": " favorite",
+            "start": 49.98,
+            "end": 50.1,
+            "probability": 0.942264974117279,
+            "tokens": [
+              4004
+            ]
+          },
+          {
+            "word": " twin.",
+            "start": 50.6,
+            "end": 53.26,
+            "probability": 0.28509534895420074,
+            "tokens": [
+              15203,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 54.24,
+        "end": 54.38,
+        "text": " Noah,",
+        "seek": null,
+        "tokens": [
+          18394,
+          11
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Noah,",
+            "start": 54.24,
+            "end": 54.38,
+            "probability": 0.13034164905548096,
+            "tokens": [
+              18394,
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "start": 58.7,
+        "end": 62.06,
+        "text": " I do like you and Lennon for supporting me.",
+        "seek": null,
+        "tokens": [
+          314,
+          466,
+          588,
+          345,
+          290,
+          37470,
+          329,
+          6493,
+          502,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 58.7,
+            "end": 58.8,
+            "probability": 0.8621845245361328,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " do",
+            "start": 58.8,
+            "end": 58.98,
+            "probability": 0.9785889387130737,
+            "tokens": [
+              466
+            ]
+          },
+          {
+            "word": " like",
+            "start": 58.98,
+            "end": 59.24,
+            "probability": 0.9766237139701843,
+            "tokens": [
+              588
+            ]
+          },
+          {
+            "word": " you",
+            "start": 59.24,
+            "end": 59.46,
+            "probability": 0.992264986038208,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " and",
+            "start": 59.58,
+            "end": 59.68,
+            "probability": 0.45306459069252014,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " Lennon",
+            "start": 59.68,
+            "end": 59.86,
+            "probability": 0.411194771528244,
+            "tokens": [
+              37470
+            ]
+          },
+          {
+            "word": " for",
+            "start": 59.86,
+            "end": 60.2,
+            "probability": 0.5589249134063721,
+            "tokens": [
+              329
+            ]
+          },
+          {
+            "word": " supporting",
+            "start": 61.28,
+            "end": 61.64,
+            "probability": 0.9222334623336792,
+            "tokens": [
+              6493
+            ]
+          },
+          {
+            "word": " me.",
+            "start": 61.76,
+            "end": 62.06,
+            "probability": 0.9323089420795441,
+            "tokens": [
+              502,
+              13
+            ]
+          }
+        ]
+      }
+    ],
+    "language": null,
+    "ori_dict": {},
+    "regroup_history": "",
+    "nonspeech_sections": [
+      {
+        "start": 0.0,
+        "end": 0.28
+      },
+      {
+        "start": 0.54,
+        "end": 0.66
+      },
+      {
+        "start": 0.98,
+        "end": 1.02
+      },
+      {
+        "start": 1.16,
+        "end": 1.2
+      },
+      {
+        "start": 1.46,
+        "end": 1.52
+      },
+      {
+        "start": 2.1,
+        "end": 2.18
+      },
+      {
+        "start": 2.52,
+        "end": 2.56
+      },
+      {
+        "start": 3.2,
+        "end": 3.84
+      },
+      {
+        "start": 4.18,
+        "end": 4.28
+      },
+      {
+        "start": 4.68,
+        "end": 4.74
+      },
+      {
+        "start": 5.36,
+        "end": 5.58
+      },
+      {
+        "start": 6.3,
+        "end": 7.44
+      },
+      {
+        "start": 7.86,
+        "end": 7.88
+      },
+      {
+        "start": 8.26,
+        "end": 8.3
+      },
+      {
+        "start": 9.0,
+        "end": 9.08
+      },
+      {
+        "start": 10.7,
+        "end": 10.9
+      },
+      {
+        "start": 11.18,
+        "end": 11.2
+      },
+      {
+        "start": 11.36,
+        "end": 11.38
+      },
+      {
+        "start": 11.52,
+        "end": 11.62
+      },
+      {
+        "start": 11.9,
+        "end": 11.96
+      },
+      {
+        "start": 12.3,
+        "end": 12.38
+      },
+      {
+        "start": 12.94,
+        "end": 13.68
+      },
+      {
+        "start": 13.84,
+        "end": 13.86
+      },
+      {
+        "start": 14.96,
+        "end": 15.08
+      },
+      {
+        "start": 15.42,
+        "end": 15.54
+      },
+      {
+        "start": 16.18,
+        "end": 16.22
+      },
+      {
+        "start": 16.5,
+        "end": 16.56
+      },
+      {
+        "start": 16.96,
+        "end": 17.2
+      },
+      {
+        "start": 17.38,
+        "end": 17.42
+      },
+      {
+        "start": 17.96,
+        "end": 18.02
+      },
+      {
+        "start": 18.26,
+        "end": 18.34
+      },
+      {
+        "start": 18.46,
+        "end": 18.58
+      },
+      {
+        "start": 18.86,
+        "end": 18.96
+      },
+      {
+        "start": 19.16,
+        "end": 19.7
+      },
+      {
+        "start": 20.44,
+        "end": 20.54
+      },
+      {
+        "start": 21.0,
+        "end": 21.06
+      },
+      {
+        "start": 21.3,
+        "end": 21.42
+      },
+      {
+        "start": 21.7,
+        "end": 21.74
+      },
+      {
+        "start": 22.1,
+        "end": 22.12
+      },
+      {
+        "start": 22.78,
+        "end": 22.8
+      },
+      {
+        "start": 23.1,
+        "end": 23.14
+      },
+      {
+        "start": 23.52,
+        "end": 23.6
+      },
+      {
+        "start": 24.28,
+        "end": 24.78
+      },
+      {
+        "start": 25.14,
+        "end": 25.72
+      },
+      {
+        "start": 25.86,
+        "end": 26.34
+      },
+      {
+        "start": 26.7,
+        "end": 26.72
+      },
+      {
+        "start": 27.0,
+        "end": 27.04
+      },
+      {
+        "start": 29.1,
+        "end": 29.16
+      },
+      {
+        "start": 29.24,
+        "end": 29.26
+      },
+      {
+        "start": 29.56,
+        "end": 29.64
+      },
+      {
+        "start": 30.04,
+        "end": 30.16
+      },
+      {
+        "start": 30.96,
+        "end": 30.98
+      },
+      {
+        "start": 32.04,
+        "end": 32.66
+      },
+      {
+        "start": 33.0,
+        "end": 34.36
+      },
+      {
+        "start": 34.84,
+        "end": 34.96
+      },
+      {
+        "start": 35.34,
+        "end": 35.54
+      },
+      {
+        "start": 35.88,
+        "end": 36.34
+      },
+      {
+        "start": 36.54,
+        "end": 36.6
+      },
+      {
+        "start": 38.04,
+        "end": 38.78
+      },
+      {
+        "start": 38.9,
+        "end": 38.96
+      },
+      {
+        "start": 39.4,
+        "end": 39.52
+      },
+      {
+        "start": 39.78,
+        "end": 42.76
+      },
+      {
+        "start": 43.12,
+        "end": 45.82
+      },
+      {
+        "start": 46.36,
+        "end": 47.84
+      },
+      {
+        "start": 47.96,
+        "end": 48.02
+      },
+      {
+        "start": 48.26,
+        "end": 49.62
+      },
+      {
+        "start": 49.86,
+        "end": 49.92
+      },
+      {
+        "start": 49.92,
+        "end": 49.98
+      },
+      {
+        "start": 50.1,
+        "end": 54.0
+      },
+      {
+        "start": 54.38,
+        "end": 58.7
+      },
+      {
+        "start": 58.86,
+        "end": 58.9
+      },
+      {
+        "start": 59.16,
+        "end": 59.6
+      },
+      {
+        "start": 60.14,
+        "end": 61.28
+      },
+      {
+        "start": 61.4,
+        "end": 61.48
+      },
+      {
+        "start": 62.06,
+        "end": 67.04
+      }
+    ]
+  },
+  "regroup_history": "",
+  "nonspeech_sections": [
+    {
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "start": 0.54,
+      "end": 0.66
+    },
+    {
+      "start": 0.98,
+      "end": 1.02
+    },
+    {
+      "start": 1.16,
+      "end": 1.2
+    },
+    {
+      "start": 1.46,
+      "end": 1.52
+    },
+    {
+      "start": 2.1,
+      "end": 2.18
+    },
+    {
+      "start": 2.52,
+      "end": 2.56
+    },
+    {
+      "start": 3.2,
+      "end": 3.84
+    },
+    {
+      "start": 4.18,
+      "end": 4.28
+    },
+    {
+      "start": 4.68,
+      "end": 4.74
+    },
+    {
+      "start": 5.36,
+      "end": 5.58
+    },
+    {
+      "start": 6.3,
+      "end": 7.44
+    },
+    {
+      "start": 7.86,
+      "end": 7.88
+    },
+    {
+      "start": 8.26,
+      "end": 8.3
+    },
+    {
+      "start": 9.0,
+      "end": 9.08
+    },
+    {
+      "start": 10.7,
+      "end": 10.9
+    },
+    {
+      "start": 11.18,
+      "end": 11.2
+    },
+    {
+      "start": 11.36,
+      "end": 11.38
+    },
+    {
+      "start": 11.52,
+      "end": 11.62
+    },
+    {
+      "start": 11.9,
+      "end": 11.96
+    },
+    {
+      "start": 12.3,
+      "end": 12.38
+    },
+    {
+      "start": 12.94,
+      "end": 13.68
+    },
+    {
+      "start": 13.84,
+      "end": 13.86
+    },
+    {
+      "start": 14.96,
+      "end": 15.08
+    },
+    {
+      "start": 15.42,
+      "end": 15.54
+    },
+    {
+      "start": 16.18,
+      "end": 16.22
+    },
+    {
+      "start": 16.5,
+      "end": 16.56
+    },
+    {
+      "start": 16.96,
+      "end": 17.2
+    },
+    {
+      "start": 17.38,
+      "end": 17.42
+    },
+    {
+      "start": 17.96,
+      "end": 18.02
+    },
+    {
+      "start": 18.26,
+      "end": 18.34
+    },
+    {
+      "start": 18.46,
+      "end": 18.58
+    },
+    {
+      "start": 18.86,
+      "end": 18.96
+    },
+    {
+      "start": 19.16,
+      "end": 19.7
+    },
+    {
+      "start": 20.44,
+      "end": 20.54
+    },
+    {
+      "start": 21.0,
+      "end": 21.06
+    },
+    {
+      "start": 21.3,
+      "end": 21.42
+    },
+    {
+      "start": 21.7,
+      "end": 21.74
+    },
+    {
+      "start": 22.1,
+      "end": 22.12
+    },
+    {
+      "start": 22.78,
+      "end": 22.8
+    },
+    {
+      "start": 23.1,
+      "end": 23.14
+    },
+    {
+      "start": 23.52,
+      "end": 23.6
+    },
+    {
+      "start": 24.28,
+      "end": 24.78
+    },
+    {
+      "start": 25.14,
+      "end": 25.72
+    },
+    {
+      "start": 25.86,
+      "end": 26.34
+    },
+    {
+      "start": 26.7,
+      "end": 26.72
+    },
+    {
+      "start": 27.0,
+      "end": 27.04
+    },
+    {
+      "start": 29.1,
+      "end": 29.16
+    },
+    {
+      "start": 29.24,
+      "end": 29.26
+    },
+    {
+      "start": 29.56,
+      "end": 29.64
+    },
+    {
+      "start": 30.04,
+      "end": 30.16
+    },
+    {
+      "start": 30.96,
+      "end": 30.98
+    },
+    {
+      "start": 32.04,
+      "end": 32.66
+    },
+    {
+      "start": 33.0,
+      "end": 34.36
+    },
+    {
+      "start": 34.84,
+      "end": 34.96
+    },
+    {
+      "start": 35.34,
+      "end": 35.54
+    },
+    {
+      "start": 35.88,
+      "end": 36.34
+    },
+    {
+      "start": 36.54,
+      "end": 36.6
+    },
+    {
+      "start": 38.04,
+      "end": 38.78
+    },
+    {
+      "start": 38.9,
+      "end": 38.96
+    },
+    {
+      "start": 39.4,
+      "end": 39.52
+    },
+    {
+      "start": 39.78,
+      "end": 42.76
+    },
+    {
+      "start": 43.12,
+      "end": 45.82
+    },
+    {
+      "start": 46.36,
+      "end": 47.84
+    },
+    {
+      "start": 47.96,
+      "end": 48.02
+    },
+    {
+      "start": 48.26,
+      "end": 49.62
+    },
+    {
+      "start": 49.86,
+      "end": 49.92
+    },
+    {
+      "start": 49.92,
+      "end": 49.98
+    },
+    {
+      "start": 50.1,
+      "end": 54.0
+    },
+    {
+      "start": 54.38,
+      "end": 58.7
+    },
+    {
+      "start": 58.86,
+      "end": 58.9
+    },
+    {
+      "start": 59.16,
+      "end": 59.6
+    },
+    {
+      "start": 60.14,
+      "end": 61.28
+    },
+    {
+      "start": 61.4,
+      "end": 61.48
+    },
+    {
+      "start": 62.06,
+      "end": 67.04
+    }
+  ]
+}
