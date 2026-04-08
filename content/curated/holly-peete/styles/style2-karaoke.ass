@@ -1,0 +1,61 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,42,&H00CCCCCC,&H0000FFFF,&H00000000,&H80000000,1,0,0,0,100,100,1,0,1,3,0,2,80,80,120,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.84,Base,,0,0,0,,{\kf20}My {\kf18}favorite {\kf24}moment {\kf18}that {\kf33}today {\kf34}was {\kf100}helping {\kf35}those
+Dialogue: 0,0:00:02.84,0:00:04.82,Base,,0,0,0,,{\kf28}kids {\kf21}at {\kf12}the {\kf37}center. {\kf1}I {\kf14}can {\kf21}feel {\kf20}their
+Dialogue: 0,0:00:04.82,0:00:06.80,Base,,0,0,0,,{\kf31}struggles, {\kf8}but {\kf17}they {\kf18}have {\kf51}the {\kf17}words {\kf14}in {\kf13}their
+Dialogue: 0,0:00:06.80,0:00:08.68,Base,,0,0,0,,{\kf14}head, {\kf17}but {\kf13}they {\kf18}just {\kf27}can't {\kf24}say {\kf31}it. {\kf24}Yeah.
+Dialogue: 0,0:00:09.14,0:00:11.34,Base,,0,0,0,,{\kf13}Do {\kf32}you {\kf17}remember {\kf22}what {\kf19}that {\kf18}felt {\kf25}like? {\kf19}I
+Dialogue: 0,0:00:11.34,0:00:12.84,Base,,0,0,0,,{\kf14}felt {\kf16}like {\kf13}a {\kf25}ball {\kf24}stuck {\kf20}in {\kf9}your {\kf25}throat.
+Dialogue: 0,0:00:13.46,0:00:15.58,Base,,0,0,0,,{\kf39}Does {\kf12}it {\kf17}get {\kf50}frustrating? {\kf17}Yeah, {\kf12}it {\kf8}does {\kf19}get
+Dialogue: 0,0:00:15.58,0:00:19.04,Base,,0,0,0,,{\kf35}frustrating {\kf40}after {\kf12}a {\kf19}while. {\kf14}I {\kf15}mean, {\kf60}you're {\kf35}lucky
+Dialogue: 0,0:00:19.04,0:00:20.88,Base,,0,0,0,,{\kf30}because {\kf16}you {\kf19}got {\kf37}language, {\kf19}but {\kf24}there {\kf9}are {\kf14}kids
+Dialogue: 0,0:00:20.88,0:00:23.02,Base,,0,0,0,,{\kf17}at {\kf14}your {\kf28}age {\kf28}that {\kf50}can't, {\kf17}still {\kf35}can't {\kf19}speak.
+Dialogue: 0,0:00:24.14,0:00:26.48,Base,,0,0,0,,{\kf25}Do {\kf14}I {\kf26}have {\kf25}autism {\kf38}still? {\kf19}Do {\kf10}you {\kf17}feel
+Dialogue: 0,0:00:26.48,0:00:28.66,Base,,0,0,0,,{\kf14}like {\kf14}you {\kf19}still {\kf16}have {\kf30}autism? {\kf57}Yeah, {\kf19}sometimes {\kf26}I
+Dialogue: 0,0:00:28.66,0:00:30.82,Base,,0,0,0,,{\kf23}do, {\kf2}but {\kf32}sometimes {\kf25}I {\kf80}don't. {\kf19}What {\kf8}do {\kf5}you
+Dialogue: 0,0:00:30.82,0:00:33.04,Base,,0,0,0,,{\kf14}mean? {\kf10}When {\kf64}I {\kf17}act {\kf8}a {\kf7}little {\kf29}crazy, {\kf21}that's
+Dialogue: 0,0:00:33.04,0:00:34.82,Base,,0,0,0,,{\kf30}sometimes {\kf55}when {\kf12}I {\kf15}start {\kf14}to {\kf21}cry {\kf16}and {\kf11}feel
+Dialogue: 0,0:00:34.82,0:00:36.46,Base,,0,0,0,,{\kf33}sensitive. {\kf17}That's {\kf7}when {\kf10}I {\kf23}feel {\kf17}like {\kf14}I {\kf16}have
+Dialogue: 0,0:00:36.46,0:00:37.82,Base,,0,0,0,,{\kf28}autism. {\kf10}What {\kf21}about {\kf52}friendship?
+Dialogue: 0,0:00:39.04,0:00:40.76,Base,,0,0,0,,{\kf43}Yeah, {\kf17}that {\kf20}kind {\kf11}of {\kf20}feels {\kf24}like {\kf19}I {\kf14}have
+Dialogue: 0,0:00:40.76,0:00:42.82,Base,,0,0,0,,{\kf28}autism {\kf35}too. {\kf3}When {\kf5}I {\kf22}act {\kf41}cool {\kf21}around {\kf34}friends
+Dialogue: 0,0:00:42.82,0:00:45.32,Base,,0,0,0,,{\kf28}at {\kf24}that {\kf97}moment, {\kf8}I {\kf11}don't {\kf24}seem {\kf15}I {\kf24}really
+Dialogue: 0,0:00:45.32,0:00:47.44,Base,,0,0,0,,{\kf24}have {\kf14}it {\kf25}then. {\kf7}But {\kf14}do {\kf10}you {\kf46}sometimes {\kf33}feel
+Dialogue: 0,0:00:47.44,0:00:50.14,Base,,0,0,0,,{\kf28}like {\kf112}you {\kf9}don't {\kf17}have {\kf28}friends {\kf34}because {\kf21}you {\kf17}have
+Dialogue: 0,0:00:50.14,0:00:53.40,Base,,0,0,0,,{\kf33}autism? {\kf25}Yeah. {\kf43}You {\kf16}do? {\kf16}Yeah, {\kf19}sometimes {\kf20}I {\kf15}see
+Dialogue: 0,0:00:53.40,0:00:55.46,Base,,0,0,0,,{\kf28}people {\kf11}who {\kf32}like {\kf20}me {\kf47}sometimes {\kf34}because {\kf14}I {\kf17}have
+Dialogue: 0,0:00:55.46,0:00:57.80,Base,,0,0,0,,{\kf42}autism. {\kf79}Right. {\kf3}When {\kf14}you {\kf7}were {\kf32}little, {\kf21}you {\kf14}were
+Dialogue: 0,0:00:57.80,0:00:59.80,Base,,0,0,0,,{\kf30}really {\kf28}having {\kf15}a {\kf14}hard {\kf17}time {\kf39}connecting {\kf35}and {\kf17}making
+Dialogue: 0,0:00:59.80,0:01:02.44,Base,,0,0,0,,{\kf40}friends. {\kf39}They {\kf19}didn't {\kf34}understand {\kf24}who {\kf15}you {\kf21}were.
+Dialogue: 0,0:01:04.18,0:01:06.14,Base,,0,0,0,,{\kf39}Right? {\kf24}Yeah. {\kf17}What {\kf6}did {\kf12}they {\kf20}ask {\kf7}you {\kf7}to
+Dialogue: 0,0:01:06.14,0:01:08.18,Base,,0,0,0,,{\kf15}say? {\kf12}I {\kf23}asked {\kf9}you {\kf12}in {\kf9}the {\kf21}booty {\kf22}hole.
+Dialogue: 0,0:01:08.68,0:01:10.78,Base,,0,0,0,,{\kf7}Are {\kf17}you {\kf32}kidding {\kf28}me? {\kf20}You {\kf7}had {\kf28}boys {\kf20}that
+Dialogue: 0,0:01:10.78,0:01:12.92,Base,,0,0,0,,{\kf12}were {\kf31}sending {\kf20}you {\kf17}up {\kf18}to {\kf23}girls {\kf34}saying {\kf56}disgusting
+Dialogue: 0,0:01:12.92,0:01:14.10,Base,,0,0,0,,{\kf20}things. {\kf7}They {\kf23}made {\kf16}me {\kf15}go {\kf7}in {\kf7}the {\kf15}girls'
+Dialogue: 0,0:01:14.26,0:01:16.12,Base,,0,0,0,,{\kf28}bathroom. {\kf6}I {\kf17}did {\kf26}to {\kf14}make {\kf40}friends. {\kf1}I {\kf7}didn't.
+Dialogue: 0,0:01:23.70,0:01:26.80,Base,,0,0,0,,{\kf39}Anytime {\kf35}you {\kf14}have {\kf34}someone {\kf21}that {\kf42}doesn't {\kf65}really {\kf56}understand
+Dialogue: 0,0:01:26.80,0:01:28.24,Base,,0,0,0,,{\kf29}you, {\kf7}they're {\kf14}not {\kf11}going {\kf10}to {\kf19}really {\kf26}know {\kf15}how
+Dialogue: 0,0:01:28.24,0:01:29.42,Base,,0,0,0,,{\kf10}to {\kf20}love {\kf17}you {\kf18}because {\kf11}they {\kf10}don't {\kf14}know {\kf15}who
+Dialogue: 0,0:01:29.42,0:01:30.86,Base,,0,0,0,,{\kf15}you {\kf21}are. {\kf7}I {\kf7}don't {\kf11}want {\kf10}you {\kf12}to {\kf17}feel
+Dialogue: 0,0:01:30.86,0:01:34.86,Base,,0,0,0,,{\kf42}sad {\kf29}about {\kf23}not {\kf34}having {\kf138}25, {\kf17}30 {\kf46}friends {\kf31}because
+Dialogue: 0,0:01:34.86,0:01:36.28,Base,,0,0,0,,{\kf12}you {\kf11}only {\kf24}really {\kf15}need {\kf28}one {\kf9}or {\kf18}two {\kf21}good
+Dialogue: 0,0:01:36.28,0:01:39.22,Base,,0,0,0,,{\kf34}friends, {\kf35}right? {\kf11}Yeah. {\kf20}Mom {\kf29}has {\kf30}anti {\kf35}-terry. {\kf12}I
+Dialogue: 0,0:01:39.22,0:01:41.26,Base,,0,0,0,,{\kf28}have {\kf28}wonder. {\kf15}You {\kf11}have {\kf38}wonder. {\kf6}You {\kf17}always {\kf16}look
+Dialogue: 0,0:01:41.26,0:01:43.02,Base,,0,0,0,,{\kf21}out {\kf20}for {\kf15}me. {\kf1}You {\kf20}would {\kf31}wonder {\kf40}ever {\kf25}put
+Dialogue: 0,0:01:43.02,0:01:44.96,Base,,0,0,0,,{\kf18}you {\kf11}in {\kf10}a {\kf15}bad {\kf51}position {\kf52}where {\kf21}you {\kf11}were
+Dialogue: 0,0:01:44.96,0:01:47.52,Base,,0,0,0,,{\kf26}either {\kf20}in {\kf39}harm's {\kf18}way {\kf56}or {\kf25}you {\kf32}did {\kf37}something
+Dialogue: 0,0:01:47.52,0:01:50.44,Base,,0,0,0,,{\kf78}inappropriate. {\kf17}He {\kf12}would {\kf18}never {\kf21}do {\kf21}that. {\kf17}No. {\kf28}That's
+Dialogue: 0,0:01:50.44,0:01:53.32,Base,,0,0,0,,{\kf6}a {\kf15}real {\kf28}friend. {\kf19}That {\kf62}is {\kf35}how {\kf21}you {\kf23}judge
+Dialogue: 0,0:01:53.32,0:01:55.98,Base,,0,0,0,,{\kf30}who {\kf21}is {\kf9}your {\kf42}friend, {\kf21}who {\kf34}has {\kf15}your {\kf34}back,
+Dialogue: 0,0:01:56.26,0:01:57.52,Base,,0,0,0,,{\kf31}who's {\kf29}looking {\kf21}out {\kf24}for {\kf17}you.

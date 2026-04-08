@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900:ital@0;1&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body {
+  width:1080px; height:1350px; font-family:'Poppins',sans-serif;
+  background:linear-gradient(165deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  color:white; position:relative; overflow:hidden;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:120px 80px;
+}
+body::before {
+  content:''; position:absolute; top:-200px; right:-200px;
+  width:700px; height:700px;
+  background:radial-gradient(circle, rgba(232,184,109,0.18) 0%, transparent 70%);
+}
+body::after {
+  content:''; position:absolute; bottom:-200px; left:-200px;
+  width:700px; height:700px;
+  background:radial-gradient(circle, rgba(74,144,164,0.2) 0%, transparent 70%);
+}
+.brand { position:absolute; top:60px; left:60px; }
+.brand-main { font-size:36px; font-weight:900; color:white; letter-spacing:2px; }
+.brand-sub { font-size:22px; font-weight:800; color:#4A90A4; letter-spacing:5px; margin-top:-4px; }
+.quote-mark {
+  font-family:'Playfair Display', serif;
+  font-size:280px; font-weight:900; color:#E8B86D;
+  line-height:0.6; opacity:0.3;
+  margin-bottom:-40px;
+  position:relative; z-index:1;
+}
+.quote {
+  font-family:'Playfair Display', serif;
+  font-size:88px; font-weight:900; color:white;
+  line-height:1.08; letter-spacing:-2px;
+  text-align:center;
+  position:relative; z-index:2;
+  max-width:900px;
+  margin-bottom:50px;
+}
+.attribution {
+  font-size:26px; font-weight:600; color:rgba(255,255,255,0.8);
+  text-align:center; letter-spacing:0.5px;
+  position:relative; z-index:2;
+  max-width:800px;
+}
+.swipe { position:absolute; bottom:60px; right:60px; font-size:20px; font-weight:700; color:#E8B86D; letter-spacing:1px; }
+</style></head>
+<body>
+  <div class="brand"><div class="brand-main">SPECTRUM</div><div class="brand-sub">UNLOCKED</div></div>
+  <div class="quote-mark">"</div>
+  <div class="quote">"Do I have autism still?"</div>
+  <div class="attribution">— RJ Peete to his mom on national TV</div>
+  <div class="swipe">SWIPE →</div>
+</body></html>

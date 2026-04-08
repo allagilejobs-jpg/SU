@@ -1,0 +1,8519 @@
+{
+  "text": " Ryder was just under three. Just under three. I mean, I was kind of begging, begging for a diagnosis so that I could get him diagnosed I mean, I knew, having three children before he was born, you know, I knew that he wasn't meeting certain milestones. I mean, specifically language, you know? And a doctor kept telling me to wait. Every child is different, you know? I'm like, I feel like he should be talking. I finally just begged enough so that he gave me a written diagnosis. But see, I live in California and we have like legislation that is specific to special needs and dis- In order for me to take advantage of early intervention things at the regional center, which is where we go to get our supports and services, I needed a written diagnosis. I think it was more fear, but I mean, with the help of other parents, thank God, who helped me early. It was another parent who became my first advocate. And then I wanted to do the same thing as I've grown and I'm still learning and still navigating this walk, but I've learned so much. I met a parent there like who told me, no, you got to go beg, you got to beg for it. Go to the regional center, go here, do this. I'll come with you. You know, just that type of stuff. Knowing that there is someone else who knows a little bit more than I know and who's sort of walking the same walk, you know? And that was really why I did. It started my foundation writers room just to be able to not gatekeep, you know, and share what I'm learning. And then we can learn together, we can cry together, vent together, you know what I mean? I love that. I love it.",
+  "segments": [
+    {
+      "start": 0.14,
+      "end": 2.3,
+      "text": " Ryder was just under three.",
+      "seek": null,
+      "tokens": [
+        40238,
+        373,
+        655,
+        739,
+        1115,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Ryder",
+          "start": 0.14,
+          "end": 0.14,
+          "probability": 3.338776150485501e-05,
+          "tokens": [
+            40238
+          ]
+        },
+        {
+          "word": " was",
+          "start": 0.14,
+          "end": 0.54,
+          "probability": 0.9809174537658691,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " just",
+          "start": 1.5,
+          "end": 1.64,
+          "probability": 0.9574723839759827,
+          "tokens": [
+            655
+          ]
+        },
+        {
+          "word": " under",
+          "start": 1.7,
+          "end": 1.94,
+          "probability": 0.9983596205711365,
+          "tokens": [
+            739
+          ]
+        },
+        {
+          "word": " three.",
+          "start": 1.94,
+          "end": 2.3,
+          "probability": 0.874437689781189,
+          "tokens": [
+            1115,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 2.3,
+      "end": 2.82,
+      "text": " Just under three.",
+      "seek": null,
+      "tokens": [
+        2329,
+        739,
+        1115,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Just",
+          "start": 2.3,
+          "end": 2.36,
+          "probability": 0.7528229355812073,
+          "tokens": [
+            2329
+          ]
+        },
+        {
+          "word": " under",
+          "start": 2.36,
+          "end": 2.58,
+          "probability": 0.9961418509483337,
+          "tokens": [
+            739
+          ]
+        },
+        {
+          "word": " three.",
+          "start": 2.58,
+          "end": 2.82,
+          "probability": 0.7333804965019226,
+          "tokens": [
+            1115,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 2.88,
+      "end": 5.08,
+      "text": " I mean, I was kind of begging, begging for a diagnosis",
+      "seek": null,
+      "tokens": [
+        314,
+        1612,
+        11,
+        314,
+        373,
+        1611,
+        286,
+        26732,
+        11,
+        26732,
+        329,
+        257,
+        13669
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 2.88,
+          "end": 2.9,
+          "probability": 0.9400964975357056,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " mean,",
+          "start": 2.9,
+          "end": 3.14,
+          "probability": 0.7128223478794098,
+          "tokens": [
+            1612,
+            11
+          ]
+        },
+        {
+          "word": " I",
+          "start": 3.14,
+          "end": 3.16,
+          "probability": 0.9973617196083069,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " was",
+          "start": 3.16,
+          "end": 3.34,
+          "probability": 0.9987137317657471,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " kind",
+          "start": 3.42,
+          "end": 3.52,
+          "probability": 0.6800849437713623,
+          "tokens": [
+            1611
+          ]
+        },
+        {
+          "word": " of",
+          "start": 3.52,
+          "end": 3.72,
+          "probability": 0.9948051571846008,
+          "tokens": [
+            286
+          ]
+        },
+        {
+          "word": " begging,",
+          "start": 3.72,
+          "end": 4.16,
+          "probability": 0.9227273762226105,
+          "tokens": [
+            26732,
+            11
+          ]
+        },
+        {
+          "word": " begging",
+          "start": 4.16,
+          "end": 4.3,
+          "probability": 0.999202311038971,
+          "tokens": [
+            26732
+          ]
+        },
+        {
+          "word": " for",
+          "start": 4.3,
+          "end": 4.58,
+          "probability": 0.9868797063827515,
+          "tokens": [
+            329
+          ]
+        },
+        {
+          "word": " a",
+          "start": 4.58,
+          "end": 4.68,
+          "probability": 0.9457845687866211,
+          "tokens": [
+            257
+          ]
+        },
+        {
+          "word": " diagnosis",
+          "start": 4.68,
+          "end": 5.08,
+          "probability": 0.9973207116127014,
+          "tokens": [
+            13669
+          ]
+        }
+      ]
+    },
+    {
+      "start": 5.5,
+      "end": 7.14,
+      "text": " so that I could get him diagnosed",
+      "seek": null,
+      "tokens": [
+        523,
+        326,
+        314,
+        714,
+        651,
+        683,
+        14641
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " so",
+          "start": 5.5,
+          "end": 5.5,
+          "probability": 0.31912320852279663,
+          "tokens": [
+            523
+          ]
+        },
+        {
+          "word": " that",
+          "start": 5.5,
+          "end": 6.2,
+          "probability": 0.9369136691093445,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " I",
+          "start": 6.2,
+          "end": 6.36,
+          "probability": 0.9949687123298645,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " could",
+          "start": 6.36,
+          "end": 6.5,
+          "probability": 0.9772252440452576,
+          "tokens": [
+            714
+          ]
+        },
+        {
+          "word": " get",
+          "start": 6.5,
+          "end": 6.66,
+          "probability": 0.9904627203941345,
+          "tokens": [
+            651
+          ]
+        },
+        {
+          "word": " him",
+          "start": 6.66,
+          "end": 6.82,
+          "probability": 0.9822972416877747,
+          "tokens": [
+            683
+          ]
+        },
+        {
+          "word": " diagnosed",
+          "start": 6.82,
+          "end": 7.14,
+          "probability": 0.9960517287254333,
+          "tokens": [
+            14641
+          ]
+        }
+      ]
+    },
+    {
+      "start": 8.34,
+      "end": 12.56,
+      "text": " I mean, I knew, having three children before he was born,",
+      "seek": null,
+      "tokens": [
+        314,
+        1612,
+        11,
+        314,
+        2993,
+        11,
+        1719,
+        1115,
+        1751,
+        878,
+        339,
+        373,
+        4642,
+        11
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 8.34,
+          "end": 8.34,
+          "probability": 0.0019405488856136799,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " mean,",
+          "start": 8.34,
+          "end": 9.34,
+          "probability": 0.6890432834625244,
+          "tokens": [
+            1612,
+            11
+          ]
+        },
+        {
+          "word": " I",
+          "start": 9.34,
+          "end": 9.44,
+          "probability": 0.5435057878494263,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " knew,",
+          "start": 9.44,
+          "end": 9.96,
+          "probability": 0.6215543448925018,
+          "tokens": [
+            2993,
+            11
+          ]
+        },
+        {
+          "word": " having",
+          "start": 9.96,
+          "end": 10.28,
+          "probability": 0.9243423938751221,
+          "tokens": [
+            1719
+          ]
+        },
+        {
+          "word": " three",
+          "start": 10.28,
+          "end": 11.02,
+          "probability": 0.9870211482048035,
+          "tokens": [
+            1115
+          ]
+        },
+        {
+          "word": " children",
+          "start": 11.02,
+          "end": 11.38,
+          "probability": 0.9992879033088684,
+          "tokens": [
+            1751
+          ]
+        },
+        {
+          "word": " before",
+          "start": 11.38,
+          "end": 11.8,
+          "probability": 0.9844781160354614,
+          "tokens": [
+            878
+          ]
+        },
+        {
+          "word": " he",
+          "start": 11.8,
+          "end": 11.94,
+          "probability": 0.9983293414115906,
+          "tokens": [
+            339
+          ]
+        },
+        {
+          "word": " was",
+          "start": 11.94,
+          "end": 12.08,
+          "probability": 0.9992934465408325,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " born,",
+          "start": 12.08,
+          "end": 12.56,
+          "probability": 0.9089314043521881,
+          "tokens": [
+            4642,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "start": 12.68,
+      "end": 16.14,
+      "text": " you know, I knew that he wasn't meeting certain milestones.",
+      "seek": null,
+      "tokens": [
+        345,
+        760,
+        11,
+        314,
+        2993,
+        326,
+        339,
+        2492,
+        470,
+        3249,
+        1728,
+        41926,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " you",
+          "start": 12.68,
+          "end": 12.68,
+          "probability": 0.06500525772571564,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " know,",
+          "start": 12.68,
+          "end": 12.9,
+          "probability": 0.8815445899963379,
+          "tokens": [
+            760,
+            11
+          ]
+        },
+        {
+          "word": " I",
+          "start": 13.36,
+          "end": 13.46,
+          "probability": 0.9263321161270142,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " knew",
+          "start": 13.46,
+          "end": 13.66,
+          "probability": 0.9966366291046143,
+          "tokens": [
+            2993
+          ]
+        },
+        {
+          "word": " that",
+          "start": 13.66,
+          "end": 13.92,
+          "probability": 0.9906251430511475,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " he",
+          "start": 13.92,
+          "end": 14.28,
+          "probability": 0.9884116053581238,
+          "tokens": [
+            339
+          ]
+        },
+        {
+          "word": " wasn't",
+          "start": 14.28,
+          "end": 14.56,
+          "probability": 0.9976566731929779,
+          "tokens": [
+            2492,
+            470
+          ]
+        },
+        {
+          "word": " meeting",
+          "start": 14.56,
+          "end": 14.88,
+          "probability": 0.9703254103660583,
+          "tokens": [
+            3249
+          ]
+        },
+        {
+          "word": " certain",
+          "start": 14.88,
+          "end": 15.36,
+          "probability": 0.9929293990135193,
+          "tokens": [
+            1728
+          ]
+        },
+        {
+          "word": " milestones.",
+          "start": 15.36,
+          "end": 16.14,
+          "probability": 0.7401389479637146,
+          "tokens": [
+            41926,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 16.16,
+      "end": 18.62,
+      "text": " I mean, specifically language, you know?",
+      "seek": null,
+      "tokens": [
+        314,
+        1612,
+        11,
+        5734,
+        3303,
+        11,
+        345,
+        760,
+        30
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 16.16,
+          "end": 16.16,
+          "probability": 0.969430685043335,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " mean,",
+          "start": 16.16,
+          "end": 16.34,
+          "probability": 0.9669849872589111,
+          "tokens": [
+            1612,
+            11
+          ]
+        },
+        {
+          "word": " specifically",
+          "start": 16.6,
+          "end": 16.84,
+          "probability": 0.9938116073608398,
+          "tokens": [
+            5734
+          ]
+        },
+        {
+          "word": " language,",
+          "start": 16.84,
+          "end": 17.38,
+          "probability": 0.6387330591678619,
+          "tokens": [
+            3303,
+            11
+          ]
+        },
+        {
+          "word": " you",
+          "start": 17.72,
+          "end": 18.14,
+          "probability": 0.5189286470413208,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " know?",
+          "start": 18.14,
+          "end": 18.62,
+          "probability": 0.618288092315197,
+          "tokens": [
+            760,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "start": 18.62,
+      "end": 21.58,
+      "text": " And a doctor kept telling me to wait.",
+      "seek": null,
+      "tokens": [
+        843,
+        257,
+        6253,
+        4030,
+        5149,
+        502,
+        284,
+        4043,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " And",
+          "start": 18.62,
+          "end": 18.62,
+          "probability": 0.25424379110336304,
+          "tokens": [
+            843
+          ]
+        },
+        {
+          "word": " a",
+          "start": 19.6,
+          "end": 19.7,
+          "probability": 0.31542932987213135,
+          "tokens": [
+            257
+          ]
+        },
+        {
+          "word": " doctor",
+          "start": 19.7,
+          "end": 19.94,
+          "probability": 0.9930984377861023,
+          "tokens": [
+            6253
+          ]
+        },
+        {
+          "word": " kept",
+          "start": 20.1,
+          "end": 20.2,
+          "probability": 0.9981856942176819,
+          "tokens": [
+            4030
+          ]
+        },
+        {
+          "word": " telling",
+          "start": 20.2,
+          "end": 20.44,
+          "probability": 0.995267391204834,
+          "tokens": [
+            5149
+          ]
+        },
+        {
+          "word": " me",
+          "start": 20.44,
+          "end": 20.66,
+          "probability": 0.9966683983802795,
+          "tokens": [
+            502
+          ]
+        },
+        {
+          "word": " to",
+          "start": 20.66,
+          "end": 20.84,
+          "probability": 0.5854133367538452,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " wait.",
+          "start": 20.84,
+          "end": 21.58,
+          "probability": 0.7783962190151215,
+          "tokens": [
+            4043,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 21.66,
+      "end": 23.24,
+      "text": " Every child is different, you know?",
+      "seek": null,
+      "tokens": [
+        3887,
+        1200,
+        318,
+        1180,
+        11,
+        345,
+        760,
+        30
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Every",
+          "start": 21.66,
+          "end": 21.8,
+          "probability": 0.8018624782562256,
+          "tokens": [
+            3887
+          ]
+        },
+        {
+          "word": " child",
+          "start": 21.8,
+          "end": 22.02,
+          "probability": 0.9427904486656189,
+          "tokens": [
+            1200
+          ]
+        },
+        {
+          "word": " is",
+          "start": 22.02,
+          "end": 22.2,
+          "probability": 0.9884002208709717,
+          "tokens": [
+            318
+          ]
+        },
+        {
+          "word": " different,",
+          "start": 22.2,
+          "end": 22.66,
+          "probability": 0.8821234107017517,
+          "tokens": [
+            1180,
+            11
+          ]
+        },
+        {
+          "word": " you",
+          "start": 22.66,
+          "end": 22.82,
+          "probability": 0.9363649487495422,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " know?",
+          "start": 22.82,
+          "end": 23.24,
+          "probability": 0.9303820729255676,
+          "tokens": [
+            760,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "start": 23.42,
+      "end": 26.88,
+      "text": " I'm like, I feel like he should be talking.",
+      "seek": null,
+      "tokens": [
+        314,
+        1101,
+        588,
+        11,
+        314,
+        1254,
+        588,
+        339,
+        815,
+        307,
+        3375,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I'm",
+          "start": 23.42,
+          "end": 23.52,
+          "probability": 0.5838606953620911,
+          "tokens": [
+            314,
+            1101
+          ]
+        },
+        {
+          "word": " like,",
+          "start": 23.52,
+          "end": 23.84,
+          "probability": 0.9114218354225159,
+          "tokens": [
+            588,
+            11
+          ]
+        },
+        {
+          "word": " I",
+          "start": 23.84,
+          "end": 24.08,
+          "probability": 0.683971643447876,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " feel",
+          "start": 24.08,
+          "end": 25.0,
+          "probability": 0.8058798313140869,
+          "tokens": [
+            1254
+          ]
+        },
+        {
+          "word": " like",
+          "start": 25.0,
+          "end": 25.22,
+          "probability": 0.9920808672904968,
+          "tokens": [
+            588
+          ]
+        },
+        {
+          "word": " he",
+          "start": 25.22,
+          "end": 25.34,
+          "probability": 0.9902881383895874,
+          "tokens": [
+            339
+          ]
+        },
+        {
+          "word": " should",
+          "start": 25.36,
+          "end": 25.46,
+          "probability": 0.16493262350559235,
+          "tokens": [
+            815
+          ]
+        },
+        {
+          "word": " be",
+          "start": 25.46,
+          "end": 25.66,
+          "probability": 0.9629613757133484,
+          "tokens": [
+            307
+          ]
+        },
+        {
+          "word": " talking.",
+          "start": 25.66,
+          "end": 26.88,
+          "probability": 0.7417090535163879,
+          "tokens": [
+            3375,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 26.88,
+      "end": 28.52,
+      "text": " I finally just begged enough",
+      "seek": null,
+      "tokens": [
+        314,
+        3443,
+        655,
+        32946,
+        1576
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 26.88,
+          "end": 26.9,
+          "probability": 0.3908216059207916,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " finally",
+          "start": 26.9,
+          "end": 27.68,
+          "probability": 0.9184404611587524,
+          "tokens": [
+            3443
+          ]
+        },
+        {
+          "word": " just",
+          "start": 27.68,
+          "end": 27.96,
+          "probability": 0.9836567640304565,
+          "tokens": [
+            655
+          ]
+        },
+        {
+          "word": " begged",
+          "start": 27.96,
+          "end": 28.22,
+          "probability": 0.9900056719779968,
+          "tokens": [
+            32946
+          ]
+        },
+        {
+          "word": " enough",
+          "start": 28.22,
+          "end": 28.52,
+          "probability": 0.9869393110275269,
+          "tokens": [
+            1576
+          ]
+        }
+      ]
+    },
+    {
+      "start": 28.76,
+      "end": 30.34,
+      "text": " so that he gave me a written diagnosis.",
+      "seek": null,
+      "tokens": [
+        523,
+        326,
+        339,
+        2921,
+        502,
+        257,
+        3194,
+        13669,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " so",
+          "start": 28.76,
+          "end": 28.76,
+          "probability": 0.3972238004207611,
+          "tokens": [
+            523
+          ]
+        },
+        {
+          "word": " that",
+          "start": 28.76,
+          "end": 28.94,
+          "probability": 0.9388247132301331,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " he",
+          "start": 28.94,
+          "end": 29.12,
+          "probability": 0.9773628115653992,
+          "tokens": [
+            339
+          ]
+        },
+        {
+          "word": " gave",
+          "start": 29.12,
+          "end": 29.36,
+          "probability": 0.9958502054214478,
+          "tokens": [
+            2921
+          ]
+        },
+        {
+          "word": " me",
+          "start": 29.36,
+          "end": 29.54,
+          "probability": 0.9960582256317139,
+          "tokens": [
+            502
+          ]
+        },
+        {
+          "word": " a",
+          "start": 29.54,
+          "end": 29.64,
+          "probability": 0.9863394498825073,
+          "tokens": [
+            257
+          ]
+        },
+        {
+          "word": " written",
+          "start": 29.64,
+          "end": 29.78,
+          "probability": 0.9973044395446777,
+          "tokens": [
+            3194
+          ]
+        },
+        {
+          "word": " diagnosis.",
+          "start": 29.78,
+          "end": 30.34,
+          "probability": 0.7204412519931793,
+          "tokens": [
+            13669,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 30.44,
+      "end": 33.32,
+      "text": " But see, I live in California and we have like legislation",
+      "seek": null,
+      "tokens": [
+        887,
+        766,
+        11,
+        314,
+        2107,
+        287,
+        3442,
+        290,
+        356,
+        423,
+        588,
+        5520
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " But",
+          "start": 30.44,
+          "end": 30.44,
+          "probability": 0.21526968479156494,
+          "tokens": [
+            887
+          ]
+        },
+        {
+          "word": " see,",
+          "start": 30.44,
+          "end": 31.0,
+          "probability": 0.636490523815155,
+          "tokens": [
+            766,
+            11
+          ]
+        },
+        {
+          "word": " I",
+          "start": 31.0,
+          "end": 31.06,
+          "probability": 0.996164083480835,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " live",
+          "start": 31.06,
+          "end": 31.16,
+          "probability": 0.9968840479850769,
+          "tokens": [
+            2107
+          ]
+        },
+        {
+          "word": " in",
+          "start": 31.16,
+          "end": 31.32,
+          "probability": 0.9982397556304932,
+          "tokens": [
+            287
+          ]
+        },
+        {
+          "word": " California",
+          "start": 31.32,
+          "end": 31.72,
+          "probability": 0.9971657395362854,
+          "tokens": [
+            3442
+          ]
+        },
+        {
+          "word": " and",
+          "start": 31.72,
+          "end": 32.16,
+          "probability": 0.3472961187362671,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " we",
+          "start": 32.16,
+          "end": 32.3,
+          "probability": 0.9912322163581848,
+          "tokens": [
+            356
+          ]
+        },
+        {
+          "word": " have",
+          "start": 32.3,
+          "end": 32.54,
+          "probability": 0.9967429041862488,
+          "tokens": [
+            423
+          ]
+        },
+        {
+          "word": " like",
+          "start": 32.68,
+          "end": 32.86,
+          "probability": 0.1734464168548584,
+          "tokens": [
+            588
+          ]
+        },
+        {
+          "word": " legislation",
+          "start": 32.86,
+          "end": 33.32,
+          "probability": 0.9135631322860718,
+          "tokens": [
+            5520
+          ]
+        }
+      ]
+    },
+    {
+      "start": 33.7,
+      "end": 36.0,
+      "text": " that is specific to special needs and dis-",
+      "seek": null,
+      "tokens": [
+        326,
+        318,
+        2176,
+        284,
+        2041,
+        2476,
+        290,
+        595,
+        12
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " that",
+          "start": 33.7,
+          "end": 33.7,
+          "probability": 0.9310361742973328,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " is",
+          "start": 33.7,
+          "end": 33.86,
+          "probability": 0.9942877888679504,
+          "tokens": [
+            318
+          ]
+        },
+        {
+          "word": " specific",
+          "start": 33.86,
+          "end": 34.2,
+          "probability": 0.9977001547813416,
+          "tokens": [
+            2176
+          ]
+        },
+        {
+          "word": " to",
+          "start": 34.56,
+          "end": 34.76,
+          "probability": 0.9906983971595764,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " special",
+          "start": 35.2,
+          "end": 35.62,
+          "probability": 0.8340131044387817,
+          "tokens": [
+            2041
+          ]
+        },
+        {
+          "word": " needs",
+          "start": 35.68,
+          "end": 35.86,
+          "probability": 0.9778884649276733,
+          "tokens": [
+            2476
+          ]
+        },
+        {
+          "word": " and",
+          "start": 35.86,
+          "end": 36.0,
+          "probability": 0.4862729012966156,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " dis-",
+          "start": 36.0,
+          "end": 36.0,
+          "probability": 0.18066662549972534,
+          "tokens": [
+            595,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "start": 36.02,
+      "end": 38.2,
+      "text": " In order for me to take advantage of early intervention",
+      "seek": null,
+      "tokens": [
+        554,
+        1502,
+        329,
+        502,
+        284,
+        1011,
+        4621,
+        286,
+        1903,
+        9572
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " In",
+          "start": 36.02,
+          "end": 36.06,
+          "probability": 0.46197396516799927,
+          "tokens": [
+            554
+          ]
+        },
+        {
+          "word": " order",
+          "start": 36.06,
+          "end": 36.16,
+          "probability": 0.9898584485054016,
+          "tokens": [
+            1502
+          ]
+        },
+        {
+          "word": " for",
+          "start": 36.16,
+          "end": 36.38,
+          "probability": 0.9914124011993408,
+          "tokens": [
+            329
+          ]
+        },
+        {
+          "word": " me",
+          "start": 36.38,
+          "end": 36.44,
+          "probability": 0.9981825351715088,
+          "tokens": [
+            502
+          ]
+        },
+        {
+          "word": " to",
+          "start": 36.44,
+          "end": 36.58,
+          "probability": 0.9840047359466553,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " take",
+          "start": 36.62,
+          "end": 36.74,
+          "probability": 0.9933083057403564,
+          "tokens": [
+            1011
+          ]
+        },
+        {
+          "word": " advantage",
+          "start": 36.74,
+          "end": 37.08,
+          "probability": 0.9775708913803101,
+          "tokens": [
+            4621
+          ]
+        },
+        {
+          "word": " of",
+          "start": 37.08,
+          "end": 37.32,
+          "probability": 0.8965408205986023,
+          "tokens": [
+            286
+          ]
+        },
+        {
+          "word": " early",
+          "start": 37.32,
+          "end": 37.6,
+          "probability": 0.9613315463066101,
+          "tokens": [
+            1903
+          ]
+        },
+        {
+          "word": " intervention",
+          "start": 37.6,
+          "end": 38.2,
+          "probability": 0.9806129336357117,
+          "tokens": [
+            9572
+          ]
+        }
+      ]
+    },
+    {
+      "start": 39.24,
+      "end": 41.26,
+      "text": " things at the regional center, which is where we go",
+      "seek": null,
+      "tokens": [
+        1243,
+        379,
+        262,
+        7915,
+        3641,
+        11,
+        543,
+        318,
+        810,
+        356,
+        467
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " things",
+          "start": 39.24,
+          "end": 39.26,
+          "probability": 0.8756427764892578,
+          "tokens": [
+            1243
+          ]
+        },
+        {
+          "word": " at",
+          "start": 39.26,
+          "end": 39.56,
+          "probability": 0.9636859893798828,
+          "tokens": [
+            379
+          ]
+        },
+        {
+          "word": " the",
+          "start": 39.66,
+          "end": 39.76,
+          "probability": 0.9939097166061401,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " regional",
+          "start": 39.76,
+          "end": 40.1,
+          "probability": 0.602392852306366,
+          "tokens": [
+            7915
+          ]
+        },
+        {
+          "word": " center,",
+          "start": 40.1,
+          "end": 40.46,
+          "probability": 0.761631965637207,
+          "tokens": [
+            3641,
+            11
+          ]
+        },
+        {
+          "word": " which",
+          "start": 40.46,
+          "end": 40.64,
+          "probability": 0.9040290713310242,
+          "tokens": [
+            543
+          ]
+        },
+        {
+          "word": " is",
+          "start": 40.64,
+          "end": 40.74,
+          "probability": 0.9962855577468872,
+          "tokens": [
+            318
+          ]
+        },
+        {
+          "word": " where",
+          "start": 40.74,
+          "end": 40.88,
+          "probability": 0.9948232173919678,
+          "tokens": [
+            810
+          ]
+        },
+        {
+          "word": " we",
+          "start": 40.88,
+          "end": 41.02,
+          "probability": 0.994394063949585,
+          "tokens": [
+            356
+          ]
+        },
+        {
+          "word": " go",
+          "start": 41.02,
+          "end": 41.26,
+          "probability": 0.9917176961898804,
+          "tokens": [
+            467
+          ]
+        }
+      ]
+    },
+    {
+      "start": 41.44,
+      "end": 42.72,
+      "text": " to get our supports and services,",
+      "seek": null,
+      "tokens": [
+        284,
+        651,
+        674,
+        6971,
+        290,
+        2594,
+        11
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " to",
+          "start": 41.44,
+          "end": 41.48,
+          "probability": 0.9090492129325867,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " get",
+          "start": 41.48,
+          "end": 41.6,
+          "probability": 0.9981100559234619,
+          "tokens": [
+            651
+          ]
+        },
+        {
+          "word": " our",
+          "start": 41.6,
+          "end": 41.8,
+          "probability": 0.9933927655220032,
+          "tokens": [
+            674
+          ]
+        },
+        {
+          "word": " supports",
+          "start": 41.8,
+          "end": 42.22,
+          "probability": 0.9066358208656311,
+          "tokens": [
+            6971
+          ]
+        },
+        {
+          "word": " and",
+          "start": 42.22,
+          "end": 42.4,
+          "probability": 0.9893403649330139,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " services,",
+          "start": 42.4,
+          "end": 42.72,
+          "probability": 0.7919193804264069,
+          "tokens": [
+            2594,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "start": 43.16,
+      "end": 44.34,
+      "text": " I needed a written diagnosis.",
+      "seek": null,
+      "tokens": [
+        314,
+        2622,
+        257,
+        3194,
+        13669,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 43.16,
+          "end": 43.16,
+          "probability": 0.9767962694168091,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " needed",
+          "start": 43.16,
+          "end": 43.4,
+          "probability": 0.971835732460022,
+          "tokens": [
+            2622
+          ]
+        },
+        {
+          "word": " a",
+          "start": 43.4,
+          "end": 43.76,
+          "probability": 0.9794225096702576,
+          "tokens": [
+            257
+          ]
+        },
+        {
+          "word": " written",
+          "start": 43.76,
+          "end": 43.98,
+          "probability": 0.9980149269104004,
+          "tokens": [
+            3194
+          ]
+        },
+        {
+          "word": " diagnosis.",
+          "start": 43.98,
+          "end": 44.34,
+          "probability": 0.9370120763778687,
+          "tokens": [
+            13669,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 44.48,
+      "end": 46.02,
+      "text": " I think it was more fear, but I mean,",
+      "seek": null,
+      "tokens": [
+        314,
+        892,
+        340,
+        373,
+        517,
+        3252,
+        11,
+        475,
+        314,
+        1612,
+        11
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 44.48,
+          "end": 44.48,
+          "probability": 0.6472259163856506,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " think",
+          "start": 44.48,
+          "end": 44.52,
+          "probability": 0.9834359288215637,
+          "tokens": [
+            892
+          ]
+        },
+        {
+          "word": " it",
+          "start": 44.52,
+          "end": 44.64,
+          "probability": 0.9814419150352478,
+          "tokens": [
+            340
+          ]
+        },
+        {
+          "word": " was",
+          "start": 44.64,
+          "end": 44.76,
+          "probability": 0.9976620674133301,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " more",
+          "start": 44.76,
+          "end": 44.96,
+          "probability": 0.980250895023346,
+          "tokens": [
+            517
+          ]
+        },
+        {
+          "word": " fear,",
+          "start": 44.96,
+          "end": 45.36,
+          "probability": 0.8068830072879791,
+          "tokens": [
+            3252,
+            11
+          ]
+        },
+        {
+          "word": " but",
+          "start": 45.36,
+          "end": 45.52,
+          "probability": 0.868373692035675,
+          "tokens": [
+            475
+          ]
+        },
+        {
+          "word": " I",
+          "start": 45.52,
+          "end": 45.66,
+          "probability": 0.8433325886726379,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " mean,",
+          "start": 45.66,
+          "end": 46.02,
+          "probability": 0.7597880959510803,
+          "tokens": [
+            1612,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "start": 46.4,
+      "end": 49.28,
+      "text": " with the help of other parents, thank God,",
+      "seek": null,
+      "tokens": [
+        351,
+        262,
+        1037,
+        286,
+        584,
+        3397,
+        11,
+        5875,
+        1793,
+        11
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " with",
+          "start": 46.4,
+          "end": 46.4,
+          "probability": 0.896777868270874,
+          "tokens": [
+            351
+          ]
+        },
+        {
+          "word": " the",
+          "start": 46.4,
+          "end": 46.58,
+          "probability": 0.9989417195320129,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " help",
+          "start": 46.58,
+          "end": 46.74,
+          "probability": 0.9981897473335266,
+          "tokens": [
+            1037
+          ]
+        },
+        {
+          "word": " of",
+          "start": 46.74,
+          "end": 46.92,
+          "probability": 0.9911235570907593,
+          "tokens": [
+            286
+          ]
+        },
+        {
+          "word": " other",
+          "start": 46.92,
+          "end": 47.26,
+          "probability": 0.9809338450431824,
+          "tokens": [
+            584
+          ]
+        },
+        {
+          "word": " parents,",
+          "start": 47.26,
+          "end": 47.98,
+          "probability": 0.2848735712468624,
+          "tokens": [
+            3397,
+            11
+          ]
+        },
+        {
+          "word": " thank",
+          "start": 47.98,
+          "end": 48.14,
+          "probability": 0.9796232581138611,
+          "tokens": [
+            5875
+          ]
+        },
+        {
+          "word": " God,",
+          "start": 48.14,
+          "end": 49.28,
+          "probability": 0.7708188593387604,
+          "tokens": [
+            1793,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "start": 49.42,
+      "end": 50.32,
+      "text": " who helped me early.",
+      "seek": null,
+      "tokens": [
+        508,
+        4193,
+        502,
+        1903,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " who",
+          "start": 49.42,
+          "end": 49.42,
+          "probability": 0.20662762224674225,
+          "tokens": [
+            508
+          ]
+        },
+        {
+          "word": " helped",
+          "start": 49.42,
+          "end": 49.62,
+          "probability": 0.9527226090431213,
+          "tokens": [
+            4193
+          ]
+        },
+        {
+          "word": " me",
+          "start": 49.62,
+          "end": 49.82,
+          "probability": 0.9960386753082275,
+          "tokens": [
+            502
+          ]
+        },
+        {
+          "word": " early.",
+          "start": 49.82,
+          "end": 50.32,
+          "probability": 0.7814272940158844,
+          "tokens": [
+            1903,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 50.32,
+      "end": 52.98,
+      "text": " It was another parent who became my first advocate.",
+      "seek": null,
+      "tokens": [
+        632,
+        373,
+        1194,
+        2560,
+        508,
+        2627,
+        616,
+        717,
+        12811,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " It",
+          "start": 50.32,
+          "end": 50.32,
+          "probability": 0.026065967977046967,
+          "tokens": [
+            632
+          ]
+        },
+        {
+          "word": " was",
+          "start": 50.32,
+          "end": 50.34,
+          "probability": 0.8056332468986511,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " another",
+          "start": 50.34,
+          "end": 50.62,
+          "probability": 0.9957962036132812,
+          "tokens": [
+            1194
+          ]
+        },
+        {
+          "word": " parent",
+          "start": 50.62,
+          "end": 51.0,
+          "probability": 0.9985013008117676,
+          "tokens": [
+            2560
+          ]
+        },
+        {
+          "word": " who",
+          "start": 51.0,
+          "end": 51.32,
+          "probability": 0.9637091159820557,
+          "tokens": [
+            508
+          ]
+        },
+        {
+          "word": " became",
+          "start": 51.32,
+          "end": 51.86,
+          "probability": 0.9087904095649719,
+          "tokens": [
+            2627
+          ]
+        },
+        {
+          "word": " my",
+          "start": 51.86,
+          "end": 52.1,
+          "probability": 0.9912912845611572,
+          "tokens": [
+            616
+          ]
+        },
+        {
+          "word": " first",
+          "start": 52.1,
+          "end": 52.3,
+          "probability": 0.9960607886314392,
+          "tokens": [
+            717
+          ]
+        },
+        {
+          "word": " advocate.",
+          "start": 52.3,
+          "end": 52.98,
+          "probability": 0.7275602370500565,
+          "tokens": [
+            12811,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 52.98,
+      "end": 55.76,
+      "text": " And then I wanted to do the same thing as I've grown",
+      "seek": null,
+      "tokens": [
+        843,
+        788,
+        314,
+        2227,
+        284,
+        466,
+        262,
+        976,
+        1517,
+        355,
+        314,
+        1053,
+        7334
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " And",
+          "start": 52.98,
+          "end": 52.98,
+          "probability": 0.35836145281791687,
+          "tokens": [
+            843
+          ]
+        },
+        {
+          "word": " then",
+          "start": 52.98,
+          "end": 53.2,
+          "probability": 0.7854254841804504,
+          "tokens": [
+            788
+          ]
+        },
+        {
+          "word": " I",
+          "start": 53.2,
+          "end": 53.7,
+          "probability": 0.7837541103363037,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " wanted",
+          "start": 53.7,
+          "end": 53.9,
+          "probability": 0.9969077706336975,
+          "tokens": [
+            2227
+          ]
+        },
+        {
+          "word": " to",
+          "start": 53.9,
+          "end": 54.14,
+          "probability": 0.9988681077957153,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " do",
+          "start": 54.18,
+          "end": 54.28,
+          "probability": 0.9962862730026245,
+          "tokens": [
+            466
+          ]
+        },
+        {
+          "word": " the",
+          "start": 54.28,
+          "end": 54.42,
+          "probability": 0.9977005124092102,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " same",
+          "start": 54.46,
+          "end": 54.62,
+          "probability": 0.9991018772125244,
+          "tokens": [
+            976
+          ]
+        },
+        {
+          "word": " thing",
+          "start": 54.62,
+          "end": 54.86,
+          "probability": 0.9911174774169922,
+          "tokens": [
+            1517
+          ]
+        },
+        {
+          "word": " as",
+          "start": 54.86,
+          "end": 55.14,
+          "probability": 0.9290894865989685,
+          "tokens": [
+            355
+          ]
+        },
+        {
+          "word": " I've",
+          "start": 55.14,
+          "end": 55.52,
+          "probability": 0.9078992903232574,
+          "tokens": [
+            314,
+            1053
+          ]
+        },
+        {
+          "word": " grown",
+          "start": 55.52,
+          "end": 55.76,
+          "probability": 0.9972578883171082,
+          "tokens": [
+            7334
+          ]
+        }
+      ]
+    },
+    {
+      "start": 56.22,
+      "end": 60.18,
+      "text": " and I'm still learning and still navigating this walk, but I've learned so much. I met a",
+      "seek": null,
+      "tokens": [
+        290,
+        314,
+        1101,
+        991,
+        4673,
+        290,
+        991,
+        35210,
+        428,
+        2513,
+        11,
+        475,
+        314,
+        1053,
+        4499,
+        523,
+        881,
+        13,
+        314,
+        1138,
+        257
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " and",
+          "start": 56.22,
+          "end": 56.22,
+          "probability": 0.6576812267303467,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " I'm",
+          "start": 56.22,
+          "end": 56.76,
+          "probability": 0.6271543949842453,
+          "tokens": [
+            314,
+            1101
+          ]
+        },
+        {
+          "word": " still",
+          "start": 56.76,
+          "end": 57.02,
+          "probability": 0.999018669128418,
+          "tokens": [
+            991
+          ]
+        },
+        {
+          "word": " learning",
+          "start": 57.02,
+          "end": 57.32,
+          "probability": 0.9985089898109436,
+          "tokens": [
+            4673
+          ]
+        },
+        {
+          "word": " and",
+          "start": 57.32,
+          "end": 57.6,
+          "probability": 0.7641006112098694,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " still",
+          "start": 57.6,
+          "end": 57.84,
+          "probability": 0.9879572987556458,
+          "tokens": [
+            991
+          ]
+        },
+        {
+          "word": " navigating",
+          "start": 57.84,
+          "end": 58.28,
+          "probability": 0.9959282279014587,
+          "tokens": [
+            35210
+          ]
+        },
+        {
+          "word": " this",
+          "start": 58.28,
+          "end": 58.62,
+          "probability": 0.9953069090843201,
+          "tokens": [
+            428
+          ]
+        },
+        {
+          "word": " walk,",
+          "start": 58.62,
+          "end": 58.84,
+          "probability": 0.803981363773346,
+          "tokens": [
+            2513,
+            11
+          ]
+        },
+        {
+          "word": " but",
+          "start": 58.84,
+          "end": 58.96,
+          "probability": 0.9288004636764526,
+          "tokens": [
+            475
+          ]
+        },
+        {
+          "word": " I've",
+          "start": 58.96,
+          "end": 59.16,
+          "probability": 0.9899576008319855,
+          "tokens": [
+            314,
+            1053
+          ]
+        },
+        {
+          "word": " learned",
+          "start": 59.2,
+          "end": 59.34,
+          "probability": 0.9909935593605042,
+          "tokens": [
+            4499
+          ]
+        },
+        {
+          "word": " so",
+          "start": 59.34,
+          "end": 59.58,
+          "probability": 0.9982471466064453,
+          "tokens": [
+            523
+          ]
+        },
+        {
+          "word": " much.",
+          "start": 59.58,
+          "end": 59.88,
+          "probability": 0.9675381779670715,
+          "tokens": [
+            881,
+            13
+          ]
+        },
+        {
+          "word": " I",
+          "start": 59.88,
+          "end": 59.92,
+          "probability": 0.8651552796363831,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " met",
+          "start": 59.92,
+          "end": 60.08,
+          "probability": 0.922157347202301,
+          "tokens": [
+            1138
+          ]
+        },
+        {
+          "word": " a",
+          "start": 60.08,
+          "end": 60.18,
+          "probability": 0.9969930648803711,
+          "tokens": [
+            257
+          ]
+        }
+      ]
+    },
+    {
+      "start": 60.38,
+      "end": 64.26,
+      "text": " parent there like who told me, no, you got to go beg, you got to beg for it. Go to the",
+      "seek": null,
+      "tokens": [
+        2560,
+        612,
+        588,
+        508,
+        1297,
+        502,
+        11,
+        645,
+        11,
+        345,
+        1392,
+        284,
+        467,
+        4123,
+        11,
+        345,
+        1392,
+        284,
+        4123,
+        329,
+        340,
+        13,
+        1514,
+        284,
+        262
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " parent",
+          "start": 60.38,
+          "end": 60.52,
+          "probability": 0.5307199954986572,
+          "tokens": [
+            2560
+          ]
+        },
+        {
+          "word": " there",
+          "start": 60.52,
+          "end": 60.7,
+          "probability": 0.9262948632240295,
+          "tokens": [
+            612
+          ]
+        },
+        {
+          "word": " like",
+          "start": 60.7,
+          "end": 60.92,
+          "probability": 0.26598232984542847,
+          "tokens": [
+            588
+          ]
+        },
+        {
+          "word": " who",
+          "start": 60.92,
+          "end": 61.1,
+          "probability": 0.7398177981376648,
+          "tokens": [
+            508
+          ]
+        },
+        {
+          "word": " told",
+          "start": 61.1,
+          "end": 61.3,
+          "probability": 0.9947973489761353,
+          "tokens": [
+            1297
+          ]
+        },
+        {
+          "word": " me,",
+          "start": 61.3,
+          "end": 61.58,
+          "probability": 0.9115005731582642,
+          "tokens": [
+            502,
+            11
+          ]
+        },
+        {
+          "word": " no,",
+          "start": 61.58,
+          "end": 61.84,
+          "probability": 0.45404524356126785,
+          "tokens": [
+            645,
+            11
+          ]
+        },
+        {
+          "word": " you",
+          "start": 61.84,
+          "end": 61.86,
+          "probability": 0.9891341328620911,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " got",
+          "start": 61.86,
+          "end": 62.0,
+          "probability": 0.4521004557609558,
+          "tokens": [
+            1392
+          ]
+        },
+        {
+          "word": " to",
+          "start": 62.0,
+          "end": 62.1,
+          "probability": 0.9892102479934692,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " go",
+          "start": 62.1,
+          "end": 62.24,
+          "probability": 0.9914306998252869,
+          "tokens": [
+            467
+          ]
+        },
+        {
+          "word": " beg,",
+          "start": 62.24,
+          "end": 62.6,
+          "probability": 0.7184762805700302,
+          "tokens": [
+            4123,
+            11
+          ]
+        },
+        {
+          "word": " you",
+          "start": 62.6,
+          "end": 62.66,
+          "probability": 0.9611660838127136,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " got",
+          "start": 62.66,
+          "end": 62.84,
+          "probability": 0.9152230620384216,
+          "tokens": [
+            1392
+          ]
+        },
+        {
+          "word": " to",
+          "start": 62.84,
+          "end": 63.02,
+          "probability": 0.9646306037902832,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " beg",
+          "start": 63.3,
+          "end": 63.46,
+          "probability": 0.9868307113647461,
+          "tokens": [
+            4123
+          ]
+        },
+        {
+          "word": " for",
+          "start": 63.46,
+          "end": 63.7,
+          "probability": 0.9887658953666687,
+          "tokens": [
+            329
+          ]
+        },
+        {
+          "word": " it.",
+          "start": 63.7,
+          "end": 63.8,
+          "probability": 0.702427476644516,
+          "tokens": [
+            340,
+            13
+          ]
+        },
+        {
+          "word": " Go",
+          "start": 63.88,
+          "end": 63.98,
+          "probability": 0.9139718413352966,
+          "tokens": [
+            1514
+          ]
+        },
+        {
+          "word": " to",
+          "start": 63.98,
+          "end": 64.14,
+          "probability": 0.9945964217185974,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " the",
+          "start": 64.14,
+          "end": 64.26,
+          "probability": 0.9898515939712524,
+          "tokens": [
+            262
+          ]
+        }
+      ]
+    },
+    {
+      "start": 64.38,
+      "end": 68.08,
+      "text": " regional center, go here, do this. I'll come with you. You know, just that type of stuff.",
+      "seek": null,
+      "tokens": [
+        7915,
+        3641,
+        11,
+        467,
+        994,
+        11,
+        466,
+        428,
+        13,
+        314,
+        1183,
+        1282,
+        351,
+        345,
+        13,
+        921,
+        760,
+        11,
+        655,
+        326,
+        2099,
+        286,
+        3404,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " regional",
+          "start": 64.38,
+          "end": 64.56,
+          "probability": 0.22484511137008667,
+          "tokens": [
+            7915
+          ]
+        },
+        {
+          "word": " center,",
+          "start": 64.56,
+          "end": 64.76,
+          "probability": 0.7196135520935059,
+          "tokens": [
+            3641,
+            11
+          ]
+        },
+        {
+          "word": " go",
+          "start": 64.76,
+          "end": 65.0,
+          "probability": 0.9908871650695801,
+          "tokens": [
+            467
+          ]
+        },
+        {
+          "word": " here,",
+          "start": 65.0,
+          "end": 65.24,
+          "probability": 0.9023679792881012,
+          "tokens": [
+            994,
+            11
+          ]
+        },
+        {
+          "word": " do",
+          "start": 65.24,
+          "end": 65.44,
+          "probability": 0.9879999756813049,
+          "tokens": [
+            466
+          ]
+        },
+        {
+          "word": " this.",
+          "start": 65.44,
+          "end": 65.72,
+          "probability": 0.7551717460155487,
+          "tokens": [
+            428,
+            13
+          ]
+        },
+        {
+          "word": " I'll",
+          "start": 65.72,
+          "end": 65.86,
+          "probability": 0.9800028800964355,
+          "tokens": [
+            314,
+            1183
+          ]
+        },
+        {
+          "word": " come",
+          "start": 65.86,
+          "end": 66.02,
+          "probability": 0.9939525723457336,
+          "tokens": [
+            1282
+          ]
+        },
+        {
+          "word": " with",
+          "start": 66.02,
+          "end": 66.22,
+          "probability": 0.993316113948822,
+          "tokens": [
+            351
+          ]
+        },
+        {
+          "word": " you.",
+          "start": 66.28,
+          "end": 66.58,
+          "probability": 0.5471430644392967,
+          "tokens": [
+            345,
+            13
+          ]
+        },
+        {
+          "word": " You",
+          "start": 66.58,
+          "end": 66.58,
+          "probability": 0.268514484167099,
+          "tokens": [
+            921
+          ]
+        },
+        {
+          "word": " know,",
+          "start": 66.58,
+          "end": 66.86,
+          "probability": 0.8100576102733612,
+          "tokens": [
+            760,
+            11
+          ]
+        },
+        {
+          "word": " just",
+          "start": 67.04,
+          "end": 67.18,
+          "probability": 0.9849423170089722,
+          "tokens": [
+            655
+          ]
+        },
+        {
+          "word": " that",
+          "start": 67.2,
+          "end": 67.42,
+          "probability": 0.9929028153419495,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " type",
+          "start": 67.46,
+          "end": 67.58,
+          "probability": 0.989980161190033,
+          "tokens": [
+            2099
+          ]
+        },
+        {
+          "word": " of",
+          "start": 67.58,
+          "end": 67.74,
+          "probability": 0.9969713687896729,
+          "tokens": [
+            286
+          ]
+        },
+        {
+          "word": " stuff.",
+          "start": 67.74,
+          "end": 68.08,
+          "probability": 0.7393324077129364,
+          "tokens": [
+            3404,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 68.08,
+      "end": 72.04,
+      "text": " Knowing that there is someone else who knows a little bit more than I know and who's sort",
+      "seek": null,
+      "tokens": [
+        29154,
+        326,
+        612,
+        318,
+        2130,
+        2073,
+        508,
+        4206,
+        257,
+        1310,
+        1643,
+        517,
+        621,
+        314,
+        760,
+        290,
+        508,
+        338,
+        3297
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " Knowing",
+          "start": 68.08,
+          "end": 68.08,
+          "probability": 0.1577315628528595,
+          "tokens": [
+            29154
+          ]
+        },
+        {
+          "word": " that",
+          "start": 68.08,
+          "end": 68.34,
+          "probability": 0.9662608504295349,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " there",
+          "start": 68.36,
+          "end": 68.54,
+          "probability": 0.9927594661712646,
+          "tokens": [
+            612
+          ]
+        },
+        {
+          "word": " is",
+          "start": 68.54,
+          "end": 68.8,
+          "probability": 0.9879515767097473,
+          "tokens": [
+            318
+          ]
+        },
+        {
+          "word": " someone",
+          "start": 68.8,
+          "end": 69.12,
+          "probability": 0.9864527583122253,
+          "tokens": [
+            2130
+          ]
+        },
+        {
+          "word": " else",
+          "start": 69.12,
+          "end": 69.38,
+          "probability": 0.4873572289943695,
+          "tokens": [
+            2073
+          ]
+        },
+        {
+          "word": " who",
+          "start": 69.78,
+          "end": 69.92,
+          "probability": 0.8891608715057373,
+          "tokens": [
+            508
+          ]
+        },
+        {
+          "word": " knows",
+          "start": 69.92,
+          "end": 70.42,
+          "probability": 0.9961374402046204,
+          "tokens": [
+            4206
+          ]
+        },
+        {
+          "word": " a",
+          "start": 70.42,
+          "end": 70.6,
+          "probability": 0.9916898012161255,
+          "tokens": [
+            257
+          ]
+        },
+        {
+          "word": " little",
+          "start": 70.6,
+          "end": 70.72,
+          "probability": 0.9975658655166626,
+          "tokens": [
+            1310
+          ]
+        },
+        {
+          "word": " bit",
+          "start": 70.72,
+          "end": 70.9,
+          "probability": 0.9464104175567627,
+          "tokens": [
+            1643
+          ]
+        },
+        {
+          "word": " more",
+          "start": 70.9,
+          "end": 71.08,
+          "probability": 0.998678982257843,
+          "tokens": [
+            517
+          ]
+        },
+        {
+          "word": " than",
+          "start": 71.08,
+          "end": 71.24,
+          "probability": 0.9841048121452332,
+          "tokens": [
+            621
+          ]
+        },
+        {
+          "word": " I",
+          "start": 71.24,
+          "end": 71.38,
+          "probability": 0.9956995248794556,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " know",
+          "start": 71.38,
+          "end": 71.54,
+          "probability": 0.9930709004402161,
+          "tokens": [
+            760
+          ]
+        },
+        {
+          "word": " and",
+          "start": 71.54,
+          "end": 71.66,
+          "probability": 0.6185508370399475,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " who's",
+          "start": 71.66,
+          "end": 71.9,
+          "probability": 0.8481709659099579,
+          "tokens": [
+            508,
+            338
+          ]
+        },
+        {
+          "word": " sort",
+          "start": 71.9,
+          "end": 72.04,
+          "probability": 0.922940194606781,
+          "tokens": [
+            3297
+          ]
+        }
+      ]
+    },
+    {
+      "start": 72.14,
+      "end": 77.46,
+      "text": " of walking the same walk, you know? And that was really why I did. It started my foundation",
+      "seek": null,
+      "tokens": [
+        286,
+        6155,
+        262,
+        976,
+        2513,
+        11,
+        345,
+        760,
+        30,
+        843,
+        326,
+        373,
+        1107,
+        1521,
+        314,
+        750,
+        13,
+        632,
+        2067,
+        616,
+        8489
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " of",
+          "start": 72.14,
+          "end": 72.14,
+          "probability": 0.19127675890922546,
+          "tokens": [
+            286
+          ]
+        },
+        {
+          "word": " walking",
+          "start": 72.14,
+          "end": 72.38,
+          "probability": 0.8134230971336365,
+          "tokens": [
+            6155
+          ]
+        },
+        {
+          "word": " the",
+          "start": 72.38,
+          "end": 72.58,
+          "probability": 0.9577566981315613,
+          "tokens": [
+            262
+          ]
+        },
+        {
+          "word": " same",
+          "start": 72.58,
+          "end": 72.76,
+          "probability": 0.9984815716743469,
+          "tokens": [
+            976
+          ]
+        },
+        {
+          "word": " walk,",
+          "start": 72.76,
+          "end": 73.1,
+          "probability": 0.7855075001716614,
+          "tokens": [
+            2513,
+            11
+          ]
+        },
+        {
+          "word": " you",
+          "start": 73.2,
+          "end": 73.28,
+          "probability": 0.9657416939735413,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " know?",
+          "start": 73.28,
+          "end": 73.48,
+          "probability": 0.8475704491138458,
+          "tokens": [
+            760,
+            30
+          ]
+        },
+        {
+          "word": " And",
+          "start": 73.48,
+          "end": 74.04,
+          "probability": 0.4018649160861969,
+          "tokens": [
+            843
+          ]
+        },
+        {
+          "word": " that",
+          "start": 74.04,
+          "end": 74.22,
+          "probability": 0.9782989025115967,
+          "tokens": [
+            326
+          ]
+        },
+        {
+          "word": " was",
+          "start": 74.22,
+          "end": 74.38,
+          "probability": 0.9905666708946228,
+          "tokens": [
+            373
+          ]
+        },
+        {
+          "word": " really",
+          "start": 74.38,
+          "end": 74.84,
+          "probability": 0.9918814301490784,
+          "tokens": [
+            1107
+          ]
+        },
+        {
+          "word": " why",
+          "start": 74.84,
+          "end": 75.58,
+          "probability": 0.9593960642814636,
+          "tokens": [
+            1521
+          ]
+        },
+        {
+          "word": " I",
+          "start": 75.58,
+          "end": 75.86,
+          "probability": 0.9167041182518005,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " did.",
+          "start": 75.86,
+          "end": 76.22,
+          "probability": 0.3273541107773781,
+          "tokens": [
+            750,
+            13
+          ]
+        },
+        {
+          "word": " It",
+          "start": 76.22,
+          "end": 76.22,
+          "probability": 0.3312605023384094,
+          "tokens": [
+            632
+          ]
+        },
+        {
+          "word": " started",
+          "start": 76.22,
+          "end": 76.48,
+          "probability": 0.9400309920310974,
+          "tokens": [
+            2067
+          ]
+        },
+        {
+          "word": " my",
+          "start": 76.48,
+          "end": 77.04,
+          "probability": 0.8899379968643188,
+          "tokens": [
+            616
+          ]
+        },
+        {
+          "word": " foundation",
+          "start": 77.04,
+          "end": 77.46,
+          "probability": 0.878174364566803,
+          "tokens": [
+            8489
+          ]
+        }
+      ]
+    },
+    {
+      "start": 77.78,
+      "end": 82.3,
+      "text": " writers room just to be able to not gatekeep, you know, and share what I'm learning. And",
+      "seek": null,
+      "tokens": [
+        8786,
+        2119,
+        655,
+        284,
+        307,
+        1498,
+        284,
+        407,
+        8946,
+        14894,
+        11,
+        345,
+        760,
+        11,
+        290,
+        2648,
+        644,
+        314,
+        1101,
+        4673,
+        13,
+        843
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " writers",
+          "start": 77.78,
+          "end": 77.86,
+          "probability": 0.14870096743106842,
+          "tokens": [
+            8786
+          ]
+        },
+        {
+          "word": " room",
+          "start": 77.86,
+          "end": 78.06,
+          "probability": 0.7318130135536194,
+          "tokens": [
+            2119
+          ]
+        },
+        {
+          "word": " just",
+          "start": 78.06,
+          "end": 78.28,
+          "probability": 0.5200191140174866,
+          "tokens": [
+            655
+          ]
+        },
+        {
+          "word": " to",
+          "start": 78.28,
+          "end": 78.46,
+          "probability": 0.994327962398529,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " be",
+          "start": 78.48,
+          "end": 78.58,
+          "probability": 0.9961230158805847,
+          "tokens": [
+            307
+          ]
+        },
+        {
+          "word": " able",
+          "start": 78.58,
+          "end": 78.74,
+          "probability": 0.9941855072975159,
+          "tokens": [
+            1498
+          ]
+        },
+        {
+          "word": " to",
+          "start": 78.74,
+          "end": 79.0,
+          "probability": 0.986239492893219,
+          "tokens": [
+            284
+          ]
+        },
+        {
+          "word": " not",
+          "start": 79.38,
+          "end": 79.54,
+          "probability": 0.36385127902030945,
+          "tokens": [
+            407
+          ]
+        },
+        {
+          "word": " gatekeep,",
+          "start": 79.54,
+          "end": 80.28,
+          "probability": 0.5648074746131897,
+          "tokens": [
+            8946,
+            14894,
+            11
+          ]
+        },
+        {
+          "word": " you",
+          "start": 80.28,
+          "end": 80.36,
+          "probability": 0.8759928941726685,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " know,",
+          "start": 80.36,
+          "end": 80.64,
+          "probability": 0.6363255530595779,
+          "tokens": [
+            760,
+            11
+          ]
+        },
+        {
+          "word": " and",
+          "start": 80.64,
+          "end": 80.78,
+          "probability": 0.9789699912071228,
+          "tokens": [
+            290
+          ]
+        },
+        {
+          "word": " share",
+          "start": 80.78,
+          "end": 81.12,
+          "probability": 0.9483281373977661,
+          "tokens": [
+            2648
+          ]
+        },
+        {
+          "word": " what",
+          "start": 81.12,
+          "end": 81.62,
+          "probability": 0.8023754954338074,
+          "tokens": [
+            644
+          ]
+        },
+        {
+          "word": " I'm",
+          "start": 81.62,
+          "end": 81.8,
+          "probability": 0.9958643615245819,
+          "tokens": [
+            314,
+            1101
+          ]
+        },
+        {
+          "word": " learning.",
+          "start": 81.8,
+          "end": 82.3,
+          "probability": 0.7356566041707993,
+          "tokens": [
+            4673,
+            13
+          ]
+        },
+        {
+          "word": " And",
+          "start": 82.3,
+          "end": 82.3,
+          "probability": 0.9719231128692627,
+          "tokens": [
+            843
+          ]
+        }
+      ]
+    },
+    {
+      "start": 82.5,
+      "end": 86.62,
+      "text": " then we can learn together, we can cry together, vent together, you know what I mean?",
+      "seek": null,
+      "tokens": [
+        788,
+        356,
+        460,
+        2193,
+        1978,
+        11,
+        356,
+        460,
+        3960,
+        1978,
+        11,
+        7435,
+        1978,
+        11,
+        345,
+        760,
+        644,
+        314,
+        1612,
+        30
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " then",
+          "start": 82.5,
+          "end": 82.5,
+          "probability": 0.5603379011154175,
+          "tokens": [
+            788
+          ]
+        },
+        {
+          "word": " we",
+          "start": 82.5,
+          "end": 82.96,
+          "probability": 0.8172861337661743,
+          "tokens": [
+            356
+          ]
+        },
+        {
+          "word": " can",
+          "start": 82.96,
+          "end": 83.1,
+          "probability": 0.9911090135574341,
+          "tokens": [
+            460
+          ]
+        },
+        {
+          "word": " learn",
+          "start": 83.1,
+          "end": 83.28,
+          "probability": 0.9925939440727234,
+          "tokens": [
+            2193
+          ]
+        },
+        {
+          "word": " together,",
+          "start": 83.28,
+          "end": 83.78,
+          "probability": 0.7443645000457764,
+          "tokens": [
+            1978,
+            11
+          ]
+        },
+        {
+          "word": " we",
+          "start": 83.78,
+          "end": 83.88,
+          "probability": 0.9916274547576904,
+          "tokens": [
+            356
+          ]
+        },
+        {
+          "word": " can",
+          "start": 83.96,
+          "end": 84.12,
+          "probability": 0.9957665205001831,
+          "tokens": [
+            460
+          ]
+        },
+        {
+          "word": " cry",
+          "start": 84.12,
+          "end": 84.88,
+          "probability": 0.922186553478241,
+          "tokens": [
+            3960
+          ]
+        },
+        {
+          "word": " together,",
+          "start": 84.88,
+          "end": 85.42,
+          "probability": 0.9777562022209167,
+          "tokens": [
+            1978,
+            11
+          ]
+        },
+        {
+          "word": " vent",
+          "start": 85.42,
+          "end": 85.52,
+          "probability": 0.9929700493812561,
+          "tokens": [
+            7435
+          ]
+        },
+        {
+          "word": " together,",
+          "start": 85.52,
+          "end": 86.06,
+          "probability": 0.8351024985313416,
+          "tokens": [
+            1978,
+            11
+          ]
+        },
+        {
+          "word": " you",
+          "start": 86.06,
+          "end": 86.08,
+          "probability": 0.9885009527206421,
+          "tokens": [
+            345
+          ]
+        },
+        {
+          "word": " know",
+          "start": 86.08,
+          "end": 86.2,
+          "probability": 0.9976167678833008,
+          "tokens": [
+            760
+          ]
+        },
+        {
+          "word": " what",
+          "start": 86.2,
+          "end": 86.28,
+          "probability": 0.9791974425315857,
+          "tokens": [
+            644
+          ]
+        },
+        {
+          "word": " I",
+          "start": 86.28,
+          "end": 86.38,
+          "probability": 0.9864626526832581,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " mean?",
+          "start": 86.38,
+          "end": 86.62,
+          "probability": 0.9175186157226562,
+          "tokens": [
+            1612,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "start": 86.96,
+      "end": 87.52,
+      "text": " I love that.",
+      "seek": null,
+      "tokens": [
+        314,
+        1842,
+        326,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 86.96,
+          "end": 86.96,
+          "probability": 0.17669011652469635,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " love",
+          "start": 86.96,
+          "end": 87.06,
+          "probability": 0.9796395897865295,
+          "tokens": [
+            1842
+          ]
+        },
+        {
+          "word": " that.",
+          "start": 87.06,
+          "end": 87.52,
+          "probability": 0.7349238693714142,
+          "tokens": [
+            326,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "start": 87.58,
+      "end": 88.06,
+      "text": " I love it.",
+      "seek": null,
+      "tokens": [
+        314,
+        1842,
+        340,
+        13
+      ],
+      "temperature": null,
+      "avg_logprob": null,
+      "compression_ratio": null,
+      "no_speech_prob": null,
+      "words": [
+        {
+          "word": " I",
+          "start": 87.58,
+          "end": 87.62,
+          "probability": 0.22584933042526245,
+          "tokens": [
+            314
+          ]
+        },
+        {
+          "word": " love",
+          "start": 87.62,
+          "end": 87.84,
+          "probability": 0.9471791386604309,
+          "tokens": [
+            1842
+          ]
+        },
+        {
+          "word": " it.",
+          "start": 87.84,
+          "end": 88.06,
+          "probability": 0.90292027592659,
+          "tokens": [
+            340,
+            13
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "ori_dict": {
+    "text": " Ryder was just under three. Just under three. I mean, I was kind of begging, begging for a diagnosis so that I could get him diagnosed I mean, I knew, having three children before he was born, you know, I knew that he wasn't meeting certain milestones. I mean, specifically language, you know? And a doctor kept telling me to wait. Every child is different, you know? I'm like, I feel like he should be talking. I finally just begged enough so that he gave me a written diagnosis. But see, I live in California and we have like legislation that is specific to special needs and dis- In order for me to take advantage of early intervention things at the regional center, which is where we go to get our supports and services, I needed a written diagnosis. I think it was more fear, but I mean, with the help of other parents, thank God, who helped me early. It was another parent who became my first advocate. And then I wanted to do the same thing as I've grown and I'm still learning and still navigating this walk, but I've learned so much. I met a parent there like who told me, no, you got to go beg, you got to beg for it. Go to the regional center, go here, do this. I'll come with you. You know, just that type of stuff. Knowing that there is someone else who knows a little bit more than I know and who's sort of walking the same walk, you know? And that was really why I did. It started my foundation writers room just to be able to not gatekeep, you know, and share what I'm learning. And then we can learn together, we can cry together, vent together, you know what I mean? I love that. I love it.",
+    "segments": [
+      {
+        "start": 0.14,
+        "end": 2.3,
+        "text": " Ryder was just under three.",
+        "seek": null,
+        "tokens": [
+          40238,
+          373,
+          655,
+          739,
+          1115,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Ryder",
+            "start": 0.14,
+            "end": 0.14,
+            "probability": 3.338776150485501e-05,
+            "tokens": [
+              40238
+            ]
+          },
+          {
+            "word": " was",
+            "start": 0.14,
+            "end": 0.54,
+            "probability": 0.9809174537658691,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " just",
+            "start": 1.5,
+            "end": 1.64,
+            "probability": 0.9574723839759827,
+            "tokens": [
+              655
+            ]
+          },
+          {
+            "word": " under",
+            "start": 1.7,
+            "end": 1.94,
+            "probability": 0.9983596205711365,
+            "tokens": [
+              739
+            ]
+          },
+          {
+            "word": " three.",
+            "start": 1.94,
+            "end": 2.3,
+            "probability": 0.874437689781189,
+            "tokens": [
+              1115,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 2.3,
+        "end": 2.82,
+        "text": " Just under three.",
+        "seek": null,
+        "tokens": [
+          2329,
+          739,
+          1115,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Just",
+            "start": 2.3,
+            "end": 2.36,
+            "probability": 0.7528229355812073,
+            "tokens": [
+              2329
+            ]
+          },
+          {
+            "word": " under",
+            "start": 2.36,
+            "end": 2.58,
+            "probability": 0.9961418509483337,
+            "tokens": [
+              739
+            ]
+          },
+          {
+            "word": " three.",
+            "start": 2.58,
+            "end": 2.82,
+            "probability": 0.7333804965019226,
+            "tokens": [
+              1115,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 2.88,
+        "end": 5.08,
+        "text": " I mean, I was kind of begging, begging for a diagnosis",
+        "seek": null,
+        "tokens": [
+          314,
+          1612,
+          11,
+          314,
+          373,
+          1611,
+          286,
+          26732,
+          11,
+          26732,
+          329,
+          257,
+          13669
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 2.88,
+            "end": 2.9,
+            "probability": 0.9400964975357056,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " mean,",
+            "start": 2.9,
+            "end": 3.14,
+            "probability": 0.7128223478794098,
+            "tokens": [
+              1612,
+              11
+            ]
+          },
+          {
+            "word": " I",
+            "start": 3.14,
+            "end": 3.16,
+            "probability": 0.9973617196083069,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " was",
+            "start": 3.16,
+            "end": 3.34,
+            "probability": 0.9987137317657471,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " kind",
+            "start": 3.42,
+            "end": 3.52,
+            "probability": 0.6800849437713623,
+            "tokens": [
+              1611
+            ]
+          },
+          {
+            "word": " of",
+            "start": 3.52,
+            "end": 3.72,
+            "probability": 0.9948051571846008,
+            "tokens": [
+              286
+            ]
+          },
+          {
+            "word": " begging,",
+            "start": 3.72,
+            "end": 4.16,
+            "probability": 0.9227273762226105,
+            "tokens": [
+              26732,
+              11
+            ]
+          },
+          {
+            "word": " begging",
+            "start": 4.16,
+            "end": 4.3,
+            "probability": 0.999202311038971,
+            "tokens": [
+              26732
+            ]
+          },
+          {
+            "word": " for",
+            "start": 4.3,
+            "end": 4.58,
+            "probability": 0.9868797063827515,
+            "tokens": [
+              329
+            ]
+          },
+          {
+            "word": " a",
+            "start": 4.58,
+            "end": 4.68,
+            "probability": 0.9457845687866211,
+            "tokens": [
+              257
+            ]
+          },
+          {
+            "word": " diagnosis",
+            "start": 4.68,
+            "end": 5.08,
+            "probability": 0.9973207116127014,
+            "tokens": [
+              13669
+            ]
+          }
+        ]
+      },
+      {
+        "start": 5.5,
+        "end": 7.14,
+        "text": " so that I could get him diagnosed",
+        "seek": null,
+        "tokens": [
+          523,
+          326,
+          314,
+          714,
+          651,
+          683,
+          14641
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " so",
+            "start": 5.5,
+            "end": 5.5,
+            "probability": 0.31912320852279663,
+            "tokens": [
+              523
+            ]
+          },
+          {
+            "word": " that",
+            "start": 5.5,
+            "end": 6.2,
+            "probability": 0.9369136691093445,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " I",
+            "start": 6.2,
+            "end": 6.36,
+            "probability": 0.9949687123298645,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " could",
+            "start": 6.36,
+            "end": 6.5,
+            "probability": 0.9772252440452576,
+            "tokens": [
+              714
+            ]
+          },
+          {
+            "word": " get",
+            "start": 6.5,
+            "end": 6.66,
+            "probability": 0.9904627203941345,
+            "tokens": [
+              651
+            ]
+          },
+          {
+            "word": " him",
+            "start": 6.66,
+            "end": 6.82,
+            "probability": 0.9822972416877747,
+            "tokens": [
+              683
+            ]
+          },
+          {
+            "word": " diagnosed",
+            "start": 6.82,
+            "end": 7.14,
+            "probability": 0.9960517287254333,
+            "tokens": [
+              14641
+            ]
+          }
+        ]
+      },
+      {
+        "start": 8.34,
+        "end": 12.56,
+        "text": " I mean, I knew, having three children before he was born,",
+        "seek": null,
+        "tokens": [
+          314,
+          1612,
+          11,
+          314,
+          2993,
+          11,
+          1719,
+          1115,
+          1751,
+          878,
+          339,
+          373,
+          4642,
+          11
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 8.34,
+            "end": 8.34,
+            "probability": 0.0019405488856136799,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " mean,",
+            "start": 8.34,
+            "end": 9.34,
+            "probability": 0.6890432834625244,
+            "tokens": [
+              1612,
+              11
+            ]
+          },
+          {
+            "word": " I",
+            "start": 9.34,
+            "end": 9.44,
+            "probability": 0.5435057878494263,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " knew,",
+            "start": 9.44,
+            "end": 9.96,
+            "probability": 0.6215543448925018,
+            "tokens": [
+              2993,
+              11
+            ]
+          },
+          {
+            "word": " having",
+            "start": 9.96,
+            "end": 10.28,
+            "probability": 0.9243423938751221,
+            "tokens": [
+              1719
+            ]
+          },
+          {
+            "word": " three",
+            "start": 10.28,
+            "end": 11.02,
+            "probability": 0.9870211482048035,
+            "tokens": [
+              1115
+            ]
+          },
+          {
+            "word": " children",
+            "start": 11.02,
+            "end": 11.38,
+            "probability": 0.9992879033088684,
+            "tokens": [
+              1751
+            ]
+          },
+          {
+            "word": " before",
+            "start": 11.38,
+            "end": 11.8,
+            "probability": 0.9844781160354614,
+            "tokens": [
+              878
+            ]
+          },
+          {
+            "word": " he",
+            "start": 11.8,
+            "end": 11.94,
+            "probability": 0.9983293414115906,
+            "tokens": [
+              339
+            ]
+          },
+          {
+            "word": " was",
+            "start": 11.94,
+            "end": 12.08,
+            "probability": 0.9992934465408325,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " born,",
+            "start": 12.08,
+            "end": 12.56,
+            "probability": 0.9089314043521881,
+            "tokens": [
+              4642,
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "start": 12.68,
+        "end": 16.14,
+        "text": " you know, I knew that he wasn't meeting certain milestones.",
+        "seek": null,
+        "tokens": [
+          345,
+          760,
+          11,
+          314,
+          2993,
+          326,
+          339,
+          2492,
+          470,
+          3249,
+          1728,
+          41926,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " you",
+            "start": 12.68,
+            "end": 12.68,
+            "probability": 0.06500525772571564,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " know,",
+            "start": 12.68,
+            "end": 12.9,
+            "probability": 0.8815445899963379,
+            "tokens": [
+              760,
+              11
+            ]
+          },
+          {
+            "word": " I",
+            "start": 13.36,
+            "end": 13.46,
+            "probability": 0.9263321161270142,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " knew",
+            "start": 13.46,
+            "end": 13.66,
+            "probability": 0.9966366291046143,
+            "tokens": [
+              2993
+            ]
+          },
+          {
+            "word": " that",
+            "start": 13.66,
+            "end": 13.92,
+            "probability": 0.9906251430511475,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " he",
+            "start": 13.92,
+            "end": 14.28,
+            "probability": 0.9884116053581238,
+            "tokens": [
+              339
+            ]
+          },
+          {
+            "word": " wasn't",
+            "start": 14.28,
+            "end": 14.56,
+            "probability": 0.9976566731929779,
+            "tokens": [
+              2492,
+              470
+            ]
+          },
+          {
+            "word": " meeting",
+            "start": 14.56,
+            "end": 14.88,
+            "probability": 0.9703254103660583,
+            "tokens": [
+              3249
+            ]
+          },
+          {
+            "word": " certain",
+            "start": 14.88,
+            "end": 15.36,
+            "probability": 0.9929293990135193,
+            "tokens": [
+              1728
+            ]
+          },
+          {
+            "word": " milestones.",
+            "start": 15.36,
+            "end": 16.14,
+            "probability": 0.7401389479637146,
+            "tokens": [
+              41926,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 16.16,
+        "end": 18.62,
+        "text": " I mean, specifically language, you know?",
+        "seek": null,
+        "tokens": [
+          314,
+          1612,
+          11,
+          5734,
+          3303,
+          11,
+          345,
+          760,
+          30
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 16.16,
+            "end": 16.16,
+            "probability": 0.969430685043335,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " mean,",
+            "start": 16.16,
+            "end": 16.34,
+            "probability": 0.9669849872589111,
+            "tokens": [
+              1612,
+              11
+            ]
+          },
+          {
+            "word": " specifically",
+            "start": 16.6,
+            "end": 16.84,
+            "probability": 0.9938116073608398,
+            "tokens": [
+              5734
+            ]
+          },
+          {
+            "word": " language,",
+            "start": 16.84,
+            "end": 17.38,
+            "probability": 0.6387330591678619,
+            "tokens": [
+              3303,
+              11
+            ]
+          },
+          {
+            "word": " you",
+            "start": 17.72,
+            "end": 18.14,
+            "probability": 0.5189286470413208,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " know?",
+            "start": 18.14,
+            "end": 18.62,
+            "probability": 0.618288092315197,
+            "tokens": [
+              760,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "start": 18.62,
+        "end": 21.58,
+        "text": " And a doctor kept telling me to wait.",
+        "seek": null,
+        "tokens": [
+          843,
+          257,
+          6253,
+          4030,
+          5149,
+          502,
+          284,
+          4043,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " And",
+            "start": 18.62,
+            "end": 18.62,
+            "probability": 0.25424379110336304,
+            "tokens": [
+              843
+            ]
+          },
+          {
+            "word": " a",
+            "start": 19.6,
+            "end": 19.7,
+            "probability": 0.31542932987213135,
+            "tokens": [
+              257
+            ]
+          },
+          {
+            "word": " doctor",
+            "start": 19.7,
+            "end": 19.94,
+            "probability": 0.9930984377861023,
+            "tokens": [
+              6253
+            ]
+          },
+          {
+            "word": " kept",
+            "start": 20.1,
+            "end": 20.2,
+            "probability": 0.9981856942176819,
+            "tokens": [
+              4030
+            ]
+          },
+          {
+            "word": " telling",
+            "start": 20.2,
+            "end": 20.44,
+            "probability": 0.995267391204834,
+            "tokens": [
+              5149
+            ]
+          },
+          {
+            "word": " me",
+            "start": 20.44,
+            "end": 20.66,
+            "probability": 0.9966683983802795,
+            "tokens": [
+              502
+            ]
+          },
+          {
+            "word": " to",
+            "start": 20.66,
+            "end": 20.84,
+            "probability": 0.5854133367538452,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " wait.",
+            "start": 20.84,
+            "end": 21.58,
+            "probability": 0.7783962190151215,
+            "tokens": [
+              4043,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 21.66,
+        "end": 23.24,
+        "text": " Every child is different, you know?",
+        "seek": null,
+        "tokens": [
+          3887,
+          1200,
+          318,
+          1180,
+          11,
+          345,
+          760,
+          30
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Every",
+            "start": 21.66,
+            "end": 21.8,
+            "probability": 0.8018624782562256,
+            "tokens": [
+              3887
+            ]
+          },
+          {
+            "word": " child",
+            "start": 21.8,
+            "end": 22.02,
+            "probability": 0.9427904486656189,
+            "tokens": [
+              1200
+            ]
+          },
+          {
+            "word": " is",
+            "start": 22.02,
+            "end": 22.2,
+            "probability": 0.9884002208709717,
+            "tokens": [
+              318
+            ]
+          },
+          {
+            "word": " different,",
+            "start": 22.2,
+            "end": 22.66,
+            "probability": 0.8821234107017517,
+            "tokens": [
+              1180,
+              11
+            ]
+          },
+          {
+            "word": " you",
+            "start": 22.66,
+            "end": 22.82,
+            "probability": 0.9363649487495422,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " know?",
+            "start": 22.82,
+            "end": 23.24,
+            "probability": 0.9303820729255676,
+            "tokens": [
+              760,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "start": 23.42,
+        "end": 26.88,
+        "text": " I'm like, I feel like he should be talking.",
+        "seek": null,
+        "tokens": [
+          314,
+          1101,
+          588,
+          11,
+          314,
+          1254,
+          588,
+          339,
+          815,
+          307,
+          3375,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I'm",
+            "start": 23.42,
+            "end": 23.52,
+            "probability": 0.5838606953620911,
+            "tokens": [
+              314,
+              1101
+            ]
+          },
+          {
+            "word": " like,",
+            "start": 23.52,
+            "end": 23.84,
+            "probability": 0.9114218354225159,
+            "tokens": [
+              588,
+              11
+            ]
+          },
+          {
+            "word": " I",
+            "start": 23.84,
+            "end": 24.08,
+            "probability": 0.683971643447876,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " feel",
+            "start": 24.08,
+            "end": 25.0,
+            "probability": 0.8058798313140869,
+            "tokens": [
+              1254
+            ]
+          },
+          {
+            "word": " like",
+            "start": 25.0,
+            "end": 25.22,
+            "probability": 0.9920808672904968,
+            "tokens": [
+              588
+            ]
+          },
+          {
+            "word": " he",
+            "start": 25.22,
+            "end": 25.34,
+            "probability": 0.9902881383895874,
+            "tokens": [
+              339
+            ]
+          },
+          {
+            "word": " should",
+            "start": 25.36,
+            "end": 25.46,
+            "probability": 0.16493262350559235,
+            "tokens": [
+              815
+            ]
+          },
+          {
+            "word": " be",
+            "start": 25.46,
+            "end": 25.66,
+            "probability": 0.9629613757133484,
+            "tokens": [
+              307
+            ]
+          },
+          {
+            "word": " talking.",
+            "start": 25.66,
+            "end": 26.88,
+            "probability": 0.7417090535163879,
+            "tokens": [
+              3375,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 26.88,
+        "end": 28.52,
+        "text": " I finally just begged enough",
+        "seek": null,
+        "tokens": [
+          314,
+          3443,
+          655,
+          32946,
+          1576
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 26.88,
+            "end": 26.9,
+            "probability": 0.3908216059207916,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " finally",
+            "start": 26.9,
+            "end": 27.68,
+            "probability": 0.9184404611587524,
+            "tokens": [
+              3443
+            ]
+          },
+          {
+            "word": " just",
+            "start": 27.68,
+            "end": 27.96,
+            "probability": 0.9836567640304565,
+            "tokens": [
+              655
+            ]
+          },
+          {
+            "word": " begged",
+            "start": 27.96,
+            "end": 28.22,
+            "probability": 0.9900056719779968,
+            "tokens": [
+              32946
+            ]
+          },
+          {
+            "word": " enough",
+            "start": 28.22,
+            "end": 28.52,
+            "probability": 0.9869393110275269,
+            "tokens": [
+              1576
+            ]
+          }
+        ]
+      },
+      {
+        "start": 28.76,
+        "end": 30.34,
+        "text": " so that he gave me a written diagnosis.",
+        "seek": null,
+        "tokens": [
+          523,
+          326,
+          339,
+          2921,
+          502,
+          257,
+          3194,
+          13669,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " so",
+            "start": 28.76,
+            "end": 28.76,
+            "probability": 0.3972238004207611,
+            "tokens": [
+              523
+            ]
+          },
+          {
+            "word": " that",
+            "start": 28.76,
+            "end": 28.94,
+            "probability": 0.9388247132301331,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " he",
+            "start": 28.94,
+            "end": 29.12,
+            "probability": 0.9773628115653992,
+            "tokens": [
+              339
+            ]
+          },
+          {
+            "word": " gave",
+            "start": 29.12,
+            "end": 29.36,
+            "probability": 0.9958502054214478,
+            "tokens": [
+              2921
+            ]
+          },
+          {
+            "word": " me",
+            "start": 29.36,
+            "end": 29.54,
+            "probability": 0.9960582256317139,
+            "tokens": [
+              502
+            ]
+          },
+          {
+            "word": " a",
+            "start": 29.54,
+            "end": 29.64,
+            "probability": 0.9863394498825073,
+            "tokens": [
+              257
+            ]
+          },
+          {
+            "word": " written",
+            "start": 29.64,
+            "end": 29.78,
+            "probability": 0.9973044395446777,
+            "tokens": [
+              3194
+            ]
+          },
+          {
+            "word": " diagnosis.",
+            "start": 29.78,
+            "end": 30.34,
+            "probability": 0.7204412519931793,
+            "tokens": [
+              13669,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 30.44,
+        "end": 33.32,
+        "text": " But see, I live in California and we have like legislation",
+        "seek": null,
+        "tokens": [
+          887,
+          766,
+          11,
+          314,
+          2107,
+          287,
+          3442,
+          290,
+          356,
+          423,
+          588,
+          5520
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " But",
+            "start": 30.44,
+            "end": 30.44,
+            "probability": 0.21526968479156494,
+            "tokens": [
+              887
+            ]
+          },
+          {
+            "word": " see,",
+            "start": 30.44,
+            "end": 31.0,
+            "probability": 0.636490523815155,
+            "tokens": [
+              766,
+              11
+            ]
+          },
+          {
+            "word": " I",
+            "start": 31.0,
+            "end": 31.06,
+            "probability": 0.996164083480835,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " live",
+            "start": 31.06,
+            "end": 31.16,
+            "probability": 0.9968840479850769,
+            "tokens": [
+              2107
+            ]
+          },
+          {
+            "word": " in",
+            "start": 31.16,
+            "end": 31.32,
+            "probability": 0.9982397556304932,
+            "tokens": [
+              287
+            ]
+          },
+          {
+            "word": " California",
+            "start": 31.32,
+            "end": 31.72,
+            "probability": 0.9971657395362854,
+            "tokens": [
+              3442
+            ]
+          },
+          {
+            "word": " and",
+            "start": 31.72,
+            "end": 32.16,
+            "probability": 0.3472961187362671,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " we",
+            "start": 32.16,
+            "end": 32.3,
+            "probability": 0.9912322163581848,
+            "tokens": [
+              356
+            ]
+          },
+          {
+            "word": " have",
+            "start": 32.3,
+            "end": 32.54,
+            "probability": 0.9967429041862488,
+            "tokens": [
+              423
+            ]
+          },
+          {
+            "word": " like",
+            "start": 32.68,
+            "end": 32.86,
+            "probability": 0.1734464168548584,
+            "tokens": [
+              588
+            ]
+          },
+          {
+            "word": " legislation",
+            "start": 32.86,
+            "end": 33.32,
+            "probability": 0.9135631322860718,
+            "tokens": [
+              5520
+            ]
+          }
+        ]
+      },
+      {
+        "start": 33.7,
+        "end": 36.0,
+        "text": " that is specific to special needs and dis-",
+        "seek": null,
+        "tokens": [
+          326,
+          318,
+          2176,
+          284,
+          2041,
+          2476,
+          290,
+          595,
+          12
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " that",
+            "start": 33.7,
+            "end": 33.7,
+            "probability": 0.9310361742973328,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " is",
+            "start": 33.7,
+            "end": 33.86,
+            "probability": 0.9942877888679504,
+            "tokens": [
+              318
+            ]
+          },
+          {
+            "word": " specific",
+            "start": 33.86,
+            "end": 34.2,
+            "probability": 0.9977001547813416,
+            "tokens": [
+              2176
+            ]
+          },
+          {
+            "word": " to",
+            "start": 34.56,
+            "end": 34.76,
+            "probability": 0.9906983971595764,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " special",
+            "start": 35.2,
+            "end": 35.62,
+            "probability": 0.8340131044387817,
+            "tokens": [
+              2041
+            ]
+          },
+          {
+            "word": " needs",
+            "start": 35.68,
+            "end": 35.86,
+            "probability": 0.9778884649276733,
+            "tokens": [
+              2476
+            ]
+          },
+          {
+            "word": " and",
+            "start": 35.86,
+            "end": 36.0,
+            "probability": 0.4862729012966156,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " dis-",
+            "start": 36.0,
+            "end": 36.0,
+            "probability": 0.18066662549972534,
+            "tokens": [
+              595,
+              12
+            ]
+          }
+        ]
+      },
+      {
+        "start": 36.02,
+        "end": 38.2,
+        "text": " In order for me to take advantage of early intervention",
+        "seek": null,
+        "tokens": [
+          554,
+          1502,
+          329,
+          502,
+          284,
+          1011,
+          4621,
+          286,
+          1903,
+          9572
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " In",
+            "start": 36.02,
+            "end": 36.06,
+            "probability": 0.46197396516799927,
+            "tokens": [
+              554
+            ]
+          },
+          {
+            "word": " order",
+            "start": 36.06,
+            "end": 36.16,
+            "probability": 0.9898584485054016,
+            "tokens": [
+              1502
+            ]
+          },
+          {
+            "word": " for",
+            "start": 36.16,
+            "end": 36.38,
+            "probability": 0.9914124011993408,
+            "tokens": [
+              329
+            ]
+          },
+          {
+            "word": " me",
+            "start": 36.38,
+            "end": 36.44,
+            "probability": 0.9981825351715088,
+            "tokens": [
+              502
+            ]
+          },
+          {
+            "word": " to",
+            "start": 36.44,
+            "end": 36.58,
+            "probability": 0.9840047359466553,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " take",
+            "start": 36.62,
+            "end": 36.74,
+            "probability": 0.9933083057403564,
+            "tokens": [
+              1011
+            ]
+          },
+          {
+            "word": " advantage",
+            "start": 36.74,
+            "end": 37.08,
+            "probability": 0.9775708913803101,
+            "tokens": [
+              4621
+            ]
+          },
+          {
+            "word": " of",
+            "start": 37.08,
+            "end": 37.32,
+            "probability": 0.8965408205986023,
+            "tokens": [
+              286
+            ]
+          },
+          {
+            "word": " early",
+            "start": 37.32,
+            "end": 37.6,
+            "probability": 0.9613315463066101,
+            "tokens": [
+              1903
+            ]
+          },
+          {
+            "word": " intervention",
+            "start": 37.6,
+            "end": 38.2,
+            "probability": 0.9806129336357117,
+            "tokens": [
+              9572
+            ]
+          }
+        ]
+      },
+      {
+        "start": 39.24,
+        "end": 41.26,
+        "text": " things at the regional center, which is where we go",
+        "seek": null,
+        "tokens": [
+          1243,
+          379,
+          262,
+          7915,
+          3641,
+          11,
+          543,
+          318,
+          810,
+          356,
+          467
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " things",
+            "start": 39.24,
+            "end": 39.26,
+            "probability": 0.8756427764892578,
+            "tokens": [
+              1243
+            ]
+          },
+          {
+            "word": " at",
+            "start": 39.26,
+            "end": 39.56,
+            "probability": 0.9636859893798828,
+            "tokens": [
+              379
+            ]
+          },
+          {
+            "word": " the",
+            "start": 39.66,
+            "end": 39.76,
+            "probability": 0.9939097166061401,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " regional",
+            "start": 39.76,
+            "end": 40.1,
+            "probability": 0.602392852306366,
+            "tokens": [
+              7915
+            ]
+          },
+          {
+            "word": " center,",
+            "start": 40.1,
+            "end": 40.46,
+            "probability": 0.761631965637207,
+            "tokens": [
+              3641,
+              11
+            ]
+          },
+          {
+            "word": " which",
+            "start": 40.46,
+            "end": 40.64,
+            "probability": 0.9040290713310242,
+            "tokens": [
+              543
+            ]
+          },
+          {
+            "word": " is",
+            "start": 40.64,
+            "end": 40.74,
+            "probability": 0.9962855577468872,
+            "tokens": [
+              318
+            ]
+          },
+          {
+            "word": " where",
+            "start": 40.74,
+            "end": 40.88,
+            "probability": 0.9948232173919678,
+            "tokens": [
+              810
+            ]
+          },
+          {
+            "word": " we",
+            "start": 40.88,
+            "end": 41.02,
+            "probability": 0.994394063949585,
+            "tokens": [
+              356
+            ]
+          },
+          {
+            "word": " go",
+            "start": 41.02,
+            "end": 41.26,
+            "probability": 0.9917176961898804,
+            "tokens": [
+              467
+            ]
+          }
+        ]
+      },
+      {
+        "start": 41.44,
+        "end": 42.72,
+        "text": " to get our supports and services,",
+        "seek": null,
+        "tokens": [
+          284,
+          651,
+          674,
+          6971,
+          290,
+          2594,
+          11
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " to",
+            "start": 41.44,
+            "end": 41.48,
+            "probability": 0.9090492129325867,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " get",
+            "start": 41.48,
+            "end": 41.6,
+            "probability": 0.9981100559234619,
+            "tokens": [
+              651
+            ]
+          },
+          {
+            "word": " our",
+            "start": 41.6,
+            "end": 41.8,
+            "probability": 0.9933927655220032,
+            "tokens": [
+              674
+            ]
+          },
+          {
+            "word": " supports",
+            "start": 41.8,
+            "end": 42.22,
+            "probability": 0.9066358208656311,
+            "tokens": [
+              6971
+            ]
+          },
+          {
+            "word": " and",
+            "start": 42.22,
+            "end": 42.4,
+            "probability": 0.9893403649330139,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " services,",
+            "start": 42.4,
+            "end": 42.72,
+            "probability": 0.7919193804264069,
+            "tokens": [
+              2594,
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "start": 43.16,
+        "end": 44.34,
+        "text": " I needed a written diagnosis.",
+        "seek": null,
+        "tokens": [
+          314,
+          2622,
+          257,
+          3194,
+          13669,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 43.16,
+            "end": 43.16,
+            "probability": 0.9767962694168091,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " needed",
+            "start": 43.16,
+            "end": 43.4,
+            "probability": 0.971835732460022,
+            "tokens": [
+              2622
+            ]
+          },
+          {
+            "word": " a",
+            "start": 43.4,
+            "end": 43.76,
+            "probability": 0.9794225096702576,
+            "tokens": [
+              257
+            ]
+          },
+          {
+            "word": " written",
+            "start": 43.76,
+            "end": 43.98,
+            "probability": 0.9980149269104004,
+            "tokens": [
+              3194
+            ]
+          },
+          {
+            "word": " diagnosis.",
+            "start": 43.98,
+            "end": 44.34,
+            "probability": 0.9370120763778687,
+            "tokens": [
+              13669,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 44.48,
+        "end": 46.02,
+        "text": " I think it was more fear, but I mean,",
+        "seek": null,
+        "tokens": [
+          314,
+          892,
+          340,
+          373,
+          517,
+          3252,
+          11,
+          475,
+          314,
+          1612,
+          11
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 44.48,
+            "end": 44.48,
+            "probability": 0.6472259163856506,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " think",
+            "start": 44.48,
+            "end": 44.52,
+            "probability": 0.9834359288215637,
+            "tokens": [
+              892
+            ]
+          },
+          {
+            "word": " it",
+            "start": 44.52,
+            "end": 44.64,
+            "probability": 0.9814419150352478,
+            "tokens": [
+              340
+            ]
+          },
+          {
+            "word": " was",
+            "start": 44.64,
+            "end": 44.76,
+            "probability": 0.9976620674133301,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " more",
+            "start": 44.76,
+            "end": 44.96,
+            "probability": 0.980250895023346,
+            "tokens": [
+              517
+            ]
+          },
+          {
+            "word": " fear,",
+            "start": 44.96,
+            "end": 45.36,
+            "probability": 0.8068830072879791,
+            "tokens": [
+              3252,
+              11
+            ]
+          },
+          {
+            "word": " but",
+            "start": 45.36,
+            "end": 45.52,
+            "probability": 0.868373692035675,
+            "tokens": [
+              475
+            ]
+          },
+          {
+            "word": " I",
+            "start": 45.52,
+            "end": 45.66,
+            "probability": 0.8433325886726379,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " mean,",
+            "start": 45.66,
+            "end": 46.02,
+            "probability": 0.7597880959510803,
+            "tokens": [
+              1612,
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "start": 46.4,
+        "end": 49.28,
+        "text": " with the help of other parents, thank God,",
+        "seek": null,
+        "tokens": [
+          351,
+          262,
+          1037,
+          286,
+          584,
+          3397,
+          11,
+          5875,
+          1793,
+          11
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " with",
+            "start": 46.4,
+            "end": 46.4,
+            "probability": 0.896777868270874,
+            "tokens": [
+              351
+            ]
+          },
+          {
+            "word": " the",
+            "start": 46.4,
+            "end": 46.58,
+            "probability": 0.9989417195320129,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " help",
+            "start": 46.58,
+            "end": 46.74,
+            "probability": 0.9981897473335266,
+            "tokens": [
+              1037
+            ]
+          },
+          {
+            "word": " of",
+            "start": 46.74,
+            "end": 46.92,
+            "probability": 0.9911235570907593,
+            "tokens": [
+              286
+            ]
+          },
+          {
+            "word": " other",
+            "start": 46.92,
+            "end": 47.26,
+            "probability": 0.9809338450431824,
+            "tokens": [
+              584
+            ]
+          },
+          {
+            "word": " parents,",
+            "start": 47.26,
+            "end": 47.98,
+            "probability": 0.2848735712468624,
+            "tokens": [
+              3397,
+              11
+            ]
+          },
+          {
+            "word": " thank",
+            "start": 47.98,
+            "end": 48.14,
+            "probability": 0.9796232581138611,
+            "tokens": [
+              5875
+            ]
+          },
+          {
+            "word": " God,",
+            "start": 48.14,
+            "end": 49.28,
+            "probability": 0.7708188593387604,
+            "tokens": [
+              1793,
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "start": 49.42,
+        "end": 50.32,
+        "text": " who helped me early.",
+        "seek": null,
+        "tokens": [
+          508,
+          4193,
+          502,
+          1903,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " who",
+            "start": 49.42,
+            "end": 49.42,
+            "probability": 0.20662762224674225,
+            "tokens": [
+              508
+            ]
+          },
+          {
+            "word": " helped",
+            "start": 49.42,
+            "end": 49.62,
+            "probability": 0.9527226090431213,
+            "tokens": [
+              4193
+            ]
+          },
+          {
+            "word": " me",
+            "start": 49.62,
+            "end": 49.82,
+            "probability": 0.9960386753082275,
+            "tokens": [
+              502
+            ]
+          },
+          {
+            "word": " early.",
+            "start": 49.82,
+            "end": 50.32,
+            "probability": 0.7814272940158844,
+            "tokens": [
+              1903,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 50.32,
+        "end": 52.98,
+        "text": " It was another parent who became my first advocate.",
+        "seek": null,
+        "tokens": [
+          632,
+          373,
+          1194,
+          2560,
+          508,
+          2627,
+          616,
+          717,
+          12811,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " It",
+            "start": 50.32,
+            "end": 50.32,
+            "probability": 0.026065967977046967,
+            "tokens": [
+              632
+            ]
+          },
+          {
+            "word": " was",
+            "start": 50.32,
+            "end": 50.34,
+            "probability": 0.8056332468986511,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " another",
+            "start": 50.34,
+            "end": 50.62,
+            "probability": 0.9957962036132812,
+            "tokens": [
+              1194
+            ]
+          },
+          {
+            "word": " parent",
+            "start": 50.62,
+            "end": 51.0,
+            "probability": 0.9985013008117676,
+            "tokens": [
+              2560
+            ]
+          },
+          {
+            "word": " who",
+            "start": 51.0,
+            "end": 51.32,
+            "probability": 0.9637091159820557,
+            "tokens": [
+              508
+            ]
+          },
+          {
+            "word": " became",
+            "start": 51.32,
+            "end": 51.86,
+            "probability": 0.9087904095649719,
+            "tokens": [
+              2627
+            ]
+          },
+          {
+            "word": " my",
+            "start": 51.86,
+            "end": 52.1,
+            "probability": 0.9912912845611572,
+            "tokens": [
+              616
+            ]
+          },
+          {
+            "word": " first",
+            "start": 52.1,
+            "end": 52.3,
+            "probability": 0.9960607886314392,
+            "tokens": [
+              717
+            ]
+          },
+          {
+            "word": " advocate.",
+            "start": 52.3,
+            "end": 52.98,
+            "probability": 0.7275602370500565,
+            "tokens": [
+              12811,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 52.98,
+        "end": 55.76,
+        "text": " And then I wanted to do the same thing as I've grown",
+        "seek": null,
+        "tokens": [
+          843,
+          788,
+          314,
+          2227,
+          284,
+          466,
+          262,
+          976,
+          1517,
+          355,
+          314,
+          1053,
+          7334
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " And",
+            "start": 52.98,
+            "end": 52.98,
+            "probability": 0.35836145281791687,
+            "tokens": [
+              843
+            ]
+          },
+          {
+            "word": " then",
+            "start": 52.98,
+            "end": 53.2,
+            "probability": 0.7854254841804504,
+            "tokens": [
+              788
+            ]
+          },
+          {
+            "word": " I",
+            "start": 53.2,
+            "end": 53.7,
+            "probability": 0.7837541103363037,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " wanted",
+            "start": 53.7,
+            "end": 53.9,
+            "probability": 0.9969077706336975,
+            "tokens": [
+              2227
+            ]
+          },
+          {
+            "word": " to",
+            "start": 53.9,
+            "end": 54.14,
+            "probability": 0.9988681077957153,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " do",
+            "start": 54.18,
+            "end": 54.28,
+            "probability": 0.9962862730026245,
+            "tokens": [
+              466
+            ]
+          },
+          {
+            "word": " the",
+            "start": 54.28,
+            "end": 54.42,
+            "probability": 0.9977005124092102,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " same",
+            "start": 54.46,
+            "end": 54.62,
+            "probability": 0.9991018772125244,
+            "tokens": [
+              976
+            ]
+          },
+          {
+            "word": " thing",
+            "start": 54.62,
+            "end": 54.86,
+            "probability": 0.9911174774169922,
+            "tokens": [
+              1517
+            ]
+          },
+          {
+            "word": " as",
+            "start": 54.86,
+            "end": 55.14,
+            "probability": 0.9290894865989685,
+            "tokens": [
+              355
+            ]
+          },
+          {
+            "word": " I've",
+            "start": 55.14,
+            "end": 55.52,
+            "probability": 0.9078992903232574,
+            "tokens": [
+              314,
+              1053
+            ]
+          },
+          {
+            "word": " grown",
+            "start": 55.52,
+            "end": 55.76,
+            "probability": 0.9972578883171082,
+            "tokens": [
+              7334
+            ]
+          }
+        ]
+      },
+      {
+        "start": 56.22,
+        "end": 60.18,
+        "text": " and I'm still learning and still navigating this walk, but I've learned so much. I met a",
+        "seek": null,
+        "tokens": [
+          290,
+          314,
+          1101,
+          991,
+          4673,
+          290,
+          991,
+          35210,
+          428,
+          2513,
+          11,
+          475,
+          314,
+          1053,
+          4499,
+          523,
+          881,
+          13,
+          314,
+          1138,
+          257
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " and",
+            "start": 56.22,
+            "end": 56.22,
+            "probability": 0.6576812267303467,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " I'm",
+            "start": 56.22,
+            "end": 56.76,
+            "probability": 0.6271543949842453,
+            "tokens": [
+              314,
+              1101
+            ]
+          },
+          {
+            "word": " still",
+            "start": 56.76,
+            "end": 57.02,
+            "probability": 0.999018669128418,
+            "tokens": [
+              991
+            ]
+          },
+          {
+            "word": " learning",
+            "start": 57.02,
+            "end": 57.32,
+            "probability": 0.9985089898109436,
+            "tokens": [
+              4673
+            ]
+          },
+          {
+            "word": " and",
+            "start": 57.32,
+            "end": 57.6,
+            "probability": 0.7641006112098694,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " still",
+            "start": 57.6,
+            "end": 57.84,
+            "probability": 0.9879572987556458,
+            "tokens": [
+              991
+            ]
+          },
+          {
+            "word": " navigating",
+            "start": 57.84,
+            "end": 58.28,
+            "probability": 0.9959282279014587,
+            "tokens": [
+              35210
+            ]
+          },
+          {
+            "word": " this",
+            "start": 58.28,
+            "end": 58.62,
+            "probability": 0.9953069090843201,
+            "tokens": [
+              428
+            ]
+          },
+          {
+            "word": " walk,",
+            "start": 58.62,
+            "end": 58.84,
+            "probability": 0.803981363773346,
+            "tokens": [
+              2513,
+              11
+            ]
+          },
+          {
+            "word": " but",
+            "start": 58.84,
+            "end": 58.96,
+            "probability": 0.9288004636764526,
+            "tokens": [
+              475
+            ]
+          },
+          {
+            "word": " I've",
+            "start": 58.96,
+            "end": 59.16,
+            "probability": 0.9899576008319855,
+            "tokens": [
+              314,
+              1053
+            ]
+          },
+          {
+            "word": " learned",
+            "start": 59.2,
+            "end": 59.34,
+            "probability": 0.9909935593605042,
+            "tokens": [
+              4499
+            ]
+          },
+          {
+            "word": " so",
+            "start": 59.34,
+            "end": 59.58,
+            "probability": 0.9982471466064453,
+            "tokens": [
+              523
+            ]
+          },
+          {
+            "word": " much.",
+            "start": 59.58,
+            "end": 59.88,
+            "probability": 0.9675381779670715,
+            "tokens": [
+              881,
+              13
+            ]
+          },
+          {
+            "word": " I",
+            "start": 59.88,
+            "end": 59.92,
+            "probability": 0.8651552796363831,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " met",
+            "start": 59.92,
+            "end": 60.08,
+            "probability": 0.922157347202301,
+            "tokens": [
+              1138
+            ]
+          },
+          {
+            "word": " a",
+            "start": 60.08,
+            "end": 60.18,
+            "probability": 0.9969930648803711,
+            "tokens": [
+              257
+            ]
+          }
+        ]
+      },
+      {
+        "start": 60.38,
+        "end": 64.26,
+        "text": " parent there like who told me, no, you got to go beg, you got to beg for it. Go to the",
+        "seek": null,
+        "tokens": [
+          2560,
+          612,
+          588,
+          508,
+          1297,
+          502,
+          11,
+          645,
+          11,
+          345,
+          1392,
+          284,
+          467,
+          4123,
+          11,
+          345,
+          1392,
+          284,
+          4123,
+          329,
+          340,
+          13,
+          1514,
+          284,
+          262
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " parent",
+            "start": 60.38,
+            "end": 60.52,
+            "probability": 0.5307199954986572,
+            "tokens": [
+              2560
+            ]
+          },
+          {
+            "word": " there",
+            "start": 60.52,
+            "end": 60.7,
+            "probability": 0.9262948632240295,
+            "tokens": [
+              612
+            ]
+          },
+          {
+            "word": " like",
+            "start": 60.7,
+            "end": 60.92,
+            "probability": 0.26598232984542847,
+            "tokens": [
+              588
+            ]
+          },
+          {
+            "word": " who",
+            "start": 60.92,
+            "end": 61.1,
+            "probability": 0.7398177981376648,
+            "tokens": [
+              508
+            ]
+          },
+          {
+            "word": " told",
+            "start": 61.1,
+            "end": 61.3,
+            "probability": 0.9947973489761353,
+            "tokens": [
+              1297
+            ]
+          },
+          {
+            "word": " me,",
+            "start": 61.3,
+            "end": 61.58,
+            "probability": 0.9115005731582642,
+            "tokens": [
+              502,
+              11
+            ]
+          },
+          {
+            "word": " no,",
+            "start": 61.58,
+            "end": 61.84,
+            "probability": 0.45404524356126785,
+            "tokens": [
+              645,
+              11
+            ]
+          },
+          {
+            "word": " you",
+            "start": 61.84,
+            "end": 61.86,
+            "probability": 0.9891341328620911,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " got",
+            "start": 61.86,
+            "end": 62.0,
+            "probability": 0.4521004557609558,
+            "tokens": [
+              1392
+            ]
+          },
+          {
+            "word": " to",
+            "start": 62.0,
+            "end": 62.1,
+            "probability": 0.9892102479934692,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " go",
+            "start": 62.1,
+            "end": 62.24,
+            "probability": 0.9914306998252869,
+            "tokens": [
+              467
+            ]
+          },
+          {
+            "word": " beg,",
+            "start": 62.24,
+            "end": 62.6,
+            "probability": 0.7184762805700302,
+            "tokens": [
+              4123,
+              11
+            ]
+          },
+          {
+            "word": " you",
+            "start": 62.6,
+            "end": 62.66,
+            "probability": 0.9611660838127136,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " got",
+            "start": 62.66,
+            "end": 62.84,
+            "probability": 0.9152230620384216,
+            "tokens": [
+              1392
+            ]
+          },
+          {
+            "word": " to",
+            "start": 62.84,
+            "end": 63.02,
+            "probability": 0.9646306037902832,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " beg",
+            "start": 63.3,
+            "end": 63.46,
+            "probability": 0.9868307113647461,
+            "tokens": [
+              4123
+            ]
+          },
+          {
+            "word": " for",
+            "start": 63.46,
+            "end": 63.7,
+            "probability": 0.9887658953666687,
+            "tokens": [
+              329
+            ]
+          },
+          {
+            "word": " it.",
+            "start": 63.7,
+            "end": 63.8,
+            "probability": 0.702427476644516,
+            "tokens": [
+              340,
+              13
+            ]
+          },
+          {
+            "word": " Go",
+            "start": 63.88,
+            "end": 63.98,
+            "probability": 0.9139718413352966,
+            "tokens": [
+              1514
+            ]
+          },
+          {
+            "word": " to",
+            "start": 63.98,
+            "end": 64.14,
+            "probability": 0.9945964217185974,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " the",
+            "start": 64.14,
+            "end": 64.26,
+            "probability": 0.9898515939712524,
+            "tokens": [
+              262
+            ]
+          }
+        ]
+      },
+      {
+        "start": 64.38,
+        "end": 68.08,
+        "text": " regional center, go here, do this. I'll come with you. You know, just that type of stuff.",
+        "seek": null,
+        "tokens": [
+          7915,
+          3641,
+          11,
+          467,
+          994,
+          11,
+          466,
+          428,
+          13,
+          314,
+          1183,
+          1282,
+          351,
+          345,
+          13,
+          921,
+          760,
+          11,
+          655,
+          326,
+          2099,
+          286,
+          3404,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " regional",
+            "start": 64.38,
+            "end": 64.56,
+            "probability": 0.22484511137008667,
+            "tokens": [
+              7915
+            ]
+          },
+          {
+            "word": " center,",
+            "start": 64.56,
+            "end": 64.76,
+            "probability": 0.7196135520935059,
+            "tokens": [
+              3641,
+              11
+            ]
+          },
+          {
+            "word": " go",
+            "start": 64.76,
+            "end": 65.0,
+            "probability": 0.9908871650695801,
+            "tokens": [
+              467
+            ]
+          },
+          {
+            "word": " here,",
+            "start": 65.0,
+            "end": 65.24,
+            "probability": 0.9023679792881012,
+            "tokens": [
+              994,
+              11
+            ]
+          },
+          {
+            "word": " do",
+            "start": 65.24,
+            "end": 65.44,
+            "probability": 0.9879999756813049,
+            "tokens": [
+              466
+            ]
+          },
+          {
+            "word": " this.",
+            "start": 65.44,
+            "end": 65.72,
+            "probability": 0.7551717460155487,
+            "tokens": [
+              428,
+              13
+            ]
+          },
+          {
+            "word": " I'll",
+            "start": 65.72,
+            "end": 65.86,
+            "probability": 0.9800028800964355,
+            "tokens": [
+              314,
+              1183
+            ]
+          },
+          {
+            "word": " come",
+            "start": 65.86,
+            "end": 66.02,
+            "probability": 0.9939525723457336,
+            "tokens": [
+              1282
+            ]
+          },
+          {
+            "word": " with",
+            "start": 66.02,
+            "end": 66.22,
+            "probability": 0.993316113948822,
+            "tokens": [
+              351
+            ]
+          },
+          {
+            "word": " you.",
+            "start": 66.28,
+            "end": 66.58,
+            "probability": 0.5471430644392967,
+            "tokens": [
+              345,
+              13
+            ]
+          },
+          {
+            "word": " You",
+            "start": 66.58,
+            "end": 66.58,
+            "probability": 0.268514484167099,
+            "tokens": [
+              921
+            ]
+          },
+          {
+            "word": " know,",
+            "start": 66.58,
+            "end": 66.86,
+            "probability": 0.8100576102733612,
+            "tokens": [
+              760,
+              11
+            ]
+          },
+          {
+            "word": " just",
+            "start": 67.04,
+            "end": 67.18,
+            "probability": 0.9849423170089722,
+            "tokens": [
+              655
+            ]
+          },
+          {
+            "word": " that",
+            "start": 67.2,
+            "end": 67.42,
+            "probability": 0.9929028153419495,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " type",
+            "start": 67.46,
+            "end": 67.58,
+            "probability": 0.989980161190033,
+            "tokens": [
+              2099
+            ]
+          },
+          {
+            "word": " of",
+            "start": 67.58,
+            "end": 67.74,
+            "probability": 0.9969713687896729,
+            "tokens": [
+              286
+            ]
+          },
+          {
+            "word": " stuff.",
+            "start": 67.74,
+            "end": 68.08,
+            "probability": 0.7393324077129364,
+            "tokens": [
+              3404,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 68.08,
+        "end": 72.04,
+        "text": " Knowing that there is someone else who knows a little bit more than I know and who's sort",
+        "seek": null,
+        "tokens": [
+          29154,
+          326,
+          612,
+          318,
+          2130,
+          2073,
+          508,
+          4206,
+          257,
+          1310,
+          1643,
+          517,
+          621,
+          314,
+          760,
+          290,
+          508,
+          338,
+          3297
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " Knowing",
+            "start": 68.08,
+            "end": 68.08,
+            "probability": 0.1577315628528595,
+            "tokens": [
+              29154
+            ]
+          },
+          {
+            "word": " that",
+            "start": 68.08,
+            "end": 68.34,
+            "probability": 0.9662608504295349,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " there",
+            "start": 68.36,
+            "end": 68.54,
+            "probability": 0.9927594661712646,
+            "tokens": [
+              612
+            ]
+          },
+          {
+            "word": " is",
+            "start": 68.54,
+            "end": 68.8,
+            "probability": 0.9879515767097473,
+            "tokens": [
+              318
+            ]
+          },
+          {
+            "word": " someone",
+            "start": 68.8,
+            "end": 69.12,
+            "probability": 0.9864527583122253,
+            "tokens": [
+              2130
+            ]
+          },
+          {
+            "word": " else",
+            "start": 69.12,
+            "end": 69.38,
+            "probability": 0.4873572289943695,
+            "tokens": [
+              2073
+            ]
+          },
+          {
+            "word": " who",
+            "start": 69.78,
+            "end": 69.92,
+            "probability": 0.8891608715057373,
+            "tokens": [
+              508
+            ]
+          },
+          {
+            "word": " knows",
+            "start": 69.92,
+            "end": 70.42,
+            "probability": 0.9961374402046204,
+            "tokens": [
+              4206
+            ]
+          },
+          {
+            "word": " a",
+            "start": 70.42,
+            "end": 70.6,
+            "probability": 0.9916898012161255,
+            "tokens": [
+              257
+            ]
+          },
+          {
+            "word": " little",
+            "start": 70.6,
+            "end": 70.72,
+            "probability": 0.9975658655166626,
+            "tokens": [
+              1310
+            ]
+          },
+          {
+            "word": " bit",
+            "start": 70.72,
+            "end": 70.9,
+            "probability": 0.9464104175567627,
+            "tokens": [
+              1643
+            ]
+          },
+          {
+            "word": " more",
+            "start": 70.9,
+            "end": 71.08,
+            "probability": 0.998678982257843,
+            "tokens": [
+              517
+            ]
+          },
+          {
+            "word": " than",
+            "start": 71.08,
+            "end": 71.24,
+            "probability": 0.9841048121452332,
+            "tokens": [
+              621
+            ]
+          },
+          {
+            "word": " I",
+            "start": 71.24,
+            "end": 71.38,
+            "probability": 0.9956995248794556,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " know",
+            "start": 71.38,
+            "end": 71.54,
+            "probability": 0.9930709004402161,
+            "tokens": [
+              760
+            ]
+          },
+          {
+            "word": " and",
+            "start": 71.54,
+            "end": 71.66,
+            "probability": 0.6185508370399475,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " who's",
+            "start": 71.66,
+            "end": 71.9,
+            "probability": 0.8481709659099579,
+            "tokens": [
+              508,
+              338
+            ]
+          },
+          {
+            "word": " sort",
+            "start": 71.9,
+            "end": 72.04,
+            "probability": 0.922940194606781,
+            "tokens": [
+              3297
+            ]
+          }
+        ]
+      },
+      {
+        "start": 72.14,
+        "end": 77.46,
+        "text": " of walking the same walk, you know? And that was really why I did. It started my foundation",
+        "seek": null,
+        "tokens": [
+          286,
+          6155,
+          262,
+          976,
+          2513,
+          11,
+          345,
+          760,
+          30,
+          843,
+          326,
+          373,
+          1107,
+          1521,
+          314,
+          750,
+          13,
+          632,
+          2067,
+          616,
+          8489
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " of",
+            "start": 72.14,
+            "end": 72.14,
+            "probability": 0.19127675890922546,
+            "tokens": [
+              286
+            ]
+          },
+          {
+            "word": " walking",
+            "start": 72.14,
+            "end": 72.38,
+            "probability": 0.8134230971336365,
+            "tokens": [
+              6155
+            ]
+          },
+          {
+            "word": " the",
+            "start": 72.38,
+            "end": 72.58,
+            "probability": 0.9577566981315613,
+            "tokens": [
+              262
+            ]
+          },
+          {
+            "word": " same",
+            "start": 72.58,
+            "end": 72.76,
+            "probability": 0.9984815716743469,
+            "tokens": [
+              976
+            ]
+          },
+          {
+            "word": " walk,",
+            "start": 72.76,
+            "end": 73.1,
+            "probability": 0.7855075001716614,
+            "tokens": [
+              2513,
+              11
+            ]
+          },
+          {
+            "word": " you",
+            "start": 73.2,
+            "end": 73.28,
+            "probability": 0.9657416939735413,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " know?",
+            "start": 73.28,
+            "end": 73.48,
+            "probability": 0.8475704491138458,
+            "tokens": [
+              760,
+              30
+            ]
+          },
+          {
+            "word": " And",
+            "start": 73.48,
+            "end": 74.04,
+            "probability": 0.4018649160861969,
+            "tokens": [
+              843
+            ]
+          },
+          {
+            "word": " that",
+            "start": 74.04,
+            "end": 74.22,
+            "probability": 0.9782989025115967,
+            "tokens": [
+              326
+            ]
+          },
+          {
+            "word": " was",
+            "start": 74.22,
+            "end": 74.38,
+            "probability": 0.9905666708946228,
+            "tokens": [
+              373
+            ]
+          },
+          {
+            "word": " really",
+            "start": 74.38,
+            "end": 74.84,
+            "probability": 0.9918814301490784,
+            "tokens": [
+              1107
+            ]
+          },
+          {
+            "word": " why",
+            "start": 74.84,
+            "end": 75.58,
+            "probability": 0.9593960642814636,
+            "tokens": [
+              1521
+            ]
+          },
+          {
+            "word": " I",
+            "start": 75.58,
+            "end": 75.86,
+            "probability": 0.9167041182518005,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " did.",
+            "start": 75.86,
+            "end": 76.22,
+            "probability": 0.3273541107773781,
+            "tokens": [
+              750,
+              13
+            ]
+          },
+          {
+            "word": " It",
+            "start": 76.22,
+            "end": 76.22,
+            "probability": 0.3312605023384094,
+            "tokens": [
+              632
+            ]
+          },
+          {
+            "word": " started",
+            "start": 76.22,
+            "end": 76.48,
+            "probability": 0.9400309920310974,
+            "tokens": [
+              2067
+            ]
+          },
+          {
+            "word": " my",
+            "start": 76.48,
+            "end": 77.04,
+            "probability": 0.8899379968643188,
+            "tokens": [
+              616
+            ]
+          },
+          {
+            "word": " foundation",
+            "start": 77.04,
+            "end": 77.46,
+            "probability": 0.878174364566803,
+            "tokens": [
+              8489
+            ]
+          }
+        ]
+      },
+      {
+        "start": 77.78,
+        "end": 82.3,
+        "text": " writers room just to be able to not gatekeep, you know, and share what I'm learning. And",
+        "seek": null,
+        "tokens": [
+          8786,
+          2119,
+          655,
+          284,
+          307,
+          1498,
+          284,
+          407,
+          8946,
+          14894,
+          11,
+          345,
+          760,
+          11,
+          290,
+          2648,
+          644,
+          314,
+          1101,
+          4673,
+          13,
+          843
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " writers",
+            "start": 77.78,
+            "end": 77.86,
+            "probability": 0.14870096743106842,
+            "tokens": [
+              8786
+            ]
+          },
+          {
+            "word": " room",
+            "start": 77.86,
+            "end": 78.06,
+            "probability": 0.7318130135536194,
+            "tokens": [
+              2119
+            ]
+          },
+          {
+            "word": " just",
+            "start": 78.06,
+            "end": 78.28,
+            "probability": 0.5200191140174866,
+            "tokens": [
+              655
+            ]
+          },
+          {
+            "word": " to",
+            "start": 78.28,
+            "end": 78.46,
+            "probability": 0.994327962398529,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " be",
+            "start": 78.48,
+            "end": 78.58,
+            "probability": 0.9961230158805847,
+            "tokens": [
+              307
+            ]
+          },
+          {
+            "word": " able",
+            "start": 78.58,
+            "end": 78.74,
+            "probability": 0.9941855072975159,
+            "tokens": [
+              1498
+            ]
+          },
+          {
+            "word": " to",
+            "start": 78.74,
+            "end": 79.0,
+            "probability": 0.986239492893219,
+            "tokens": [
+              284
+            ]
+          },
+          {
+            "word": " not",
+            "start": 79.38,
+            "end": 79.54,
+            "probability": 0.36385127902030945,
+            "tokens": [
+              407
+            ]
+          },
+          {
+            "word": " gatekeep,",
+            "start": 79.54,
+            "end": 80.28,
+            "probability": 0.5648074746131897,
+            "tokens": [
+              8946,
+              14894,
+              11
+            ]
+          },
+          {
+            "word": " you",
+            "start": 80.28,
+            "end": 80.36,
+            "probability": 0.8759928941726685,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " know,",
+            "start": 80.36,
+            "end": 80.64,
+            "probability": 0.6363255530595779,
+            "tokens": [
+              760,
+              11
+            ]
+          },
+          {
+            "word": " and",
+            "start": 80.64,
+            "end": 80.78,
+            "probability": 0.9789699912071228,
+            "tokens": [
+              290
+            ]
+          },
+          {
+            "word": " share",
+            "start": 80.78,
+            "end": 81.12,
+            "probability": 0.9483281373977661,
+            "tokens": [
+              2648
+            ]
+          },
+          {
+            "word": " what",
+            "start": 81.12,
+            "end": 81.62,
+            "probability": 0.8023754954338074,
+            "tokens": [
+              644
+            ]
+          },
+          {
+            "word": " I'm",
+            "start": 81.62,
+            "end": 81.8,
+            "probability": 0.9958643615245819,
+            "tokens": [
+              314,
+              1101
+            ]
+          },
+          {
+            "word": " learning.",
+            "start": 81.8,
+            "end": 82.3,
+            "probability": 0.7356566041707993,
+            "tokens": [
+              4673,
+              13
+            ]
+          },
+          {
+            "word": " And",
+            "start": 82.3,
+            "end": 82.3,
+            "probability": 0.9719231128692627,
+            "tokens": [
+              843
+            ]
+          }
+        ]
+      },
+      {
+        "start": 82.5,
+        "end": 86.62,
+        "text": " then we can learn together, we can cry together, vent together, you know what I mean?",
+        "seek": null,
+        "tokens": [
+          788,
+          356,
+          460,
+          2193,
+          1978,
+          11,
+          356,
+          460,
+          3960,
+          1978,
+          11,
+          7435,
+          1978,
+          11,
+          345,
+          760,
+          644,
+          314,
+          1612,
+          30
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " then",
+            "start": 82.5,
+            "end": 82.5,
+            "probability": 0.5603379011154175,
+            "tokens": [
+              788
+            ]
+          },
+          {
+            "word": " we",
+            "start": 82.5,
+            "end": 82.96,
+            "probability": 0.8172861337661743,
+            "tokens": [
+              356
+            ]
+          },
+          {
+            "word": " can",
+            "start": 82.96,
+            "end": 83.1,
+            "probability": 0.9911090135574341,
+            "tokens": [
+              460
+            ]
+          },
+          {
+            "word": " learn",
+            "start": 83.1,
+            "end": 83.28,
+            "probability": 0.9925939440727234,
+            "tokens": [
+              2193
+            ]
+          },
+          {
+            "word": " together,",
+            "start": 83.28,
+            "end": 83.78,
+            "probability": 0.7443645000457764,
+            "tokens": [
+              1978,
+              11
+            ]
+          },
+          {
+            "word": " we",
+            "start": 83.78,
+            "end": 83.88,
+            "probability": 0.9916274547576904,
+            "tokens": [
+              356
+            ]
+          },
+          {
+            "word": " can",
+            "start": 83.96,
+            "end": 84.12,
+            "probability": 0.9957665205001831,
+            "tokens": [
+              460
+            ]
+          },
+          {
+            "word": " cry",
+            "start": 84.12,
+            "end": 84.88,
+            "probability": 0.922186553478241,
+            "tokens": [
+              3960
+            ]
+          },
+          {
+            "word": " together,",
+            "start": 84.88,
+            "end": 85.42,
+            "probability": 0.9777562022209167,
+            "tokens": [
+              1978,
+              11
+            ]
+          },
+          {
+            "word": " vent",
+            "start": 85.42,
+            "end": 85.52,
+            "probability": 0.9929700493812561,
+            "tokens": [
+              7435
+            ]
+          },
+          {
+            "word": " together,",
+            "start": 85.52,
+            "end": 86.06,
+            "probability": 0.8351024985313416,
+            "tokens": [
+              1978,
+              11
+            ]
+          },
+          {
+            "word": " you",
+            "start": 86.06,
+            "end": 86.08,
+            "probability": 0.9885009527206421,
+            "tokens": [
+              345
+            ]
+          },
+          {
+            "word": " know",
+            "start": 86.08,
+            "end": 86.2,
+            "probability": 0.9976167678833008,
+            "tokens": [
+              760
+            ]
+          },
+          {
+            "word": " what",
+            "start": 86.2,
+            "end": 86.28,
+            "probability": 0.9791974425315857,
+            "tokens": [
+              644
+            ]
+          },
+          {
+            "word": " I",
+            "start": 86.28,
+            "end": 86.38,
+            "probability": 0.9864626526832581,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " mean?",
+            "start": 86.38,
+            "end": 86.62,
+            "probability": 0.9175186157226562,
+            "tokens": [
+              1612,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "start": 86.96,
+        "end": 87.52,
+        "text": " I love that.",
+        "seek": null,
+        "tokens": [
+          314,
+          1842,
+          326,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 86.96,
+            "end": 86.96,
+            "probability": 0.17669011652469635,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " love",
+            "start": 86.96,
+            "end": 87.06,
+            "probability": 0.9796395897865295,
+            "tokens": [
+              1842
+            ]
+          },
+          {
+            "word": " that.",
+            "start": 87.06,
+            "end": 87.52,
+            "probability": 0.7349238693714142,
+            "tokens": [
+              326,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "start": 87.58,
+        "end": 88.06,
+        "text": " I love it.",
+        "seek": null,
+        "tokens": [
+          314,
+          1842,
+          340,
+          13
+        ],
+        "temperature": null,
+        "avg_logprob": null,
+        "compression_ratio": null,
+        "no_speech_prob": null,
+        "words": [
+          {
+            "word": " I",
+            "start": 87.58,
+            "end": 87.62,
+            "probability": 0.22584933042526245,
+            "tokens": [
+              314
+            ]
+          },
+          {
+            "word": " love",
+            "start": 87.62,
+            "end": 87.84,
+            "probability": 0.9471791386604309,
+            "tokens": [
+              1842
+            ]
+          },
+          {
+            "word": " it.",
+            "start": 87.84,
+            "end": 88.06,
+            "probability": 0.90292027592659,
+            "tokens": [
+              340,
+              13
+            ]
+          }
+        ]
+      }
+    ],
+    "language": null,
+    "ori_dict": {},
+    "regroup_history": "",
+    "nonspeech_sections": [
+      {
+        "start": 0.44,
+        "end": 1.5
+      },
+      {
+        "start": 1.64,
+        "end": 1.7
+      },
+      {
+        "start": 2.0,
+        "end": 2.2
+      },
+      {
+        "start": 2.64,
+        "end": 2.76
+      },
+      {
+        "start": 3.26,
+        "end": 3.44
+      },
+      {
+        "start": 3.7,
+        "end": 3.74
+      },
+      {
+        "start": 4.42,
+        "end": 4.5
+      },
+      {
+        "start": 5.08,
+        "end": 5.1
+      },
+      {
+        "start": 5.26,
+        "end": 5.42
+      },
+      {
+        "start": 5.62,
+        "end": 5.7
+      },
+      {
+        "start": 5.84,
+        "end": 5.98
+      },
+      {
+        "start": 7.18,
+        "end": 7.2
+      },
+      {
+        "start": 8.84,
+        "end": 8.9
+      },
+      {
+        "start": 9.84,
+        "end": 9.9
+      },
+      {
+        "start": 10.42,
+        "end": 10.86
+      },
+      {
+        "start": 11.12,
+        "end": 11.18
+      },
+      {
+        "start": 11.62,
+        "end": 11.68
+      },
+      {
+        "start": 12.08,
+        "end": 12.16
+      },
+      {
+        "start": 12.5,
+        "end": 12.52
+      },
+      {
+        "start": 12.9,
+        "end": 13.38
+      },
+      {
+        "start": 13.98,
+        "end": 14.16
+      },
+      {
+        "start": 14.74,
+        "end": 14.8
+      },
+      {
+        "start": 15.04,
+        "end": 15.18
+      },
+      {
+        "start": 15.52,
+        "end": 16.06
+      },
+      {
+        "start": 16.34,
+        "end": 16.58
+      },
+      {
+        "start": 16.74,
+        "end": 16.92
+      },
+      {
+        "start": 17.38,
+        "end": 17.72
+      },
+      {
+        "start": 17.96,
+        "end": 18.08
+      },
+      {
+        "start": 19.06,
+        "end": 19.7
+      },
+      {
+        "start": 19.9,
+        "end": 20.12
+      },
+      {
+        "start": 20.26,
+        "end": 20.3
+      },
+      {
+        "start": 20.72,
+        "end": 21.16
+      },
+      {
+        "start": 21.34,
+        "end": 21.44
+      },
+      {
+        "start": 21.58,
+        "end": 21.62
+      },
+      {
+        "start": 21.88,
+        "end": 21.9
+      },
+      {
+        "start": 22.18,
+        "end": 22.24
+      },
+      {
+        "start": 22.4,
+        "end": 22.46
+      },
+      {
+        "start": 23.24,
+        "end": 23.4
+      },
+      {
+        "start": 24.42,
+        "end": 24.68
+      },
+      {
+        "start": 24.9,
+        "end": 24.94
+      },
+      {
+        "start": 25.34,
+        "end": 25.4
+      },
+      {
+        "start": 25.74,
+        "end": 26.04
+      },
+      {
+        "start": 26.32,
+        "end": 26.74
+      },
+      {
+        "start": 27.02,
+        "end": 27.48
+      },
+      {
+        "start": 28.0,
+        "end": 28.08
+      },
+      {
+        "start": 28.58,
+        "end": 28.72
+      },
+      {
+        "start": 29.16,
+        "end": 29.24
+      },
+      {
+        "start": 30.34,
+        "end": 30.9
+      },
+      {
+        "start": 31.58,
+        "end": 31.6
+      },
+      {
+        "start": 31.84,
+        "end": 31.96
+      },
+      {
+        "start": 32.52,
+        "end": 32.68
+      },
+      {
+        "start": 32.82,
+        "end": 32.88
+      },
+      {
+        "start": 33.16,
+        "end": 33.22
+      },
+      {
+        "start": 33.34,
+        "end": 33.44
+      },
+      {
+        "start": 33.72,
+        "end": 34.56
+      },
+      {
+        "start": 34.76,
+        "end": 35.2
+      },
+      {
+        "start": 35.36,
+        "end": 35.68
+      },
+      {
+        "start": 35.88,
+        "end": 35.9
+      },
+      {
+        "start": 36.28,
+        "end": 36.32
+      },
+      {
+        "start": 36.52,
+        "end": 36.62
+      },
+      {
+        "start": 37.34,
+        "end": 37.36
+      },
+      {
+        "start": 37.94,
+        "end": 37.96
+      },
+      {
+        "start": 38.48,
+        "end": 39.12
+      },
+      {
+        "start": 39.56,
+        "end": 39.66
+      },
+      {
+        "start": 40.2,
+        "end": 40.3
+      },
+      {
+        "start": 41.34,
+        "end": 41.38
+      },
+      {
+        "start": 41.86,
+        "end": 42.18
+      },
+      {
+        "start": 42.3,
+        "end": 42.44
+      },
+      {
+        "start": 42.72,
+        "end": 43.06
+      },
+      {
+        "start": 43.5,
+        "end": 43.66
+      },
+      {
+        "start": 43.8,
+        "end": 43.9
+      },
+      {
+        "start": 44.18,
+        "end": 44.2
+      },
+      {
+        "start": 44.34,
+        "end": 44.52
+      },
+      {
+        "start": 45.0,
+        "end": 45.12
+      },
+      {
+        "start": 45.94,
+        "end": 45.98
+      },
+      {
+        "start": 46.14,
+        "end": 46.2
+      },
+      {
+        "start": 46.78,
+        "end": 46.82
+      },
+      {
+        "start": 46.96,
+        "end": 47.08
+      },
+      {
+        "start": 47.26,
+        "end": 47.34
+      },
+      {
+        "start": 47.7,
+        "end": 47.96
+      },
+      {
+        "start": 48.26,
+        "end": 48.32
+      },
+      {
+        "start": 48.58,
+        "end": 48.86
+      },
+      {
+        "start": 49.04,
+        "end": 49.12
+      },
+      {
+        "start": 51.06,
+        "end": 51.16
+      },
+      {
+        "start": 51.36,
+        "end": 51.52
+      },
+      {
+        "start": 52.1,
+        "end": 52.34
+      },
+      {
+        "start": 52.54,
+        "end": 52.56
+      },
+      {
+        "start": 52.58,
+        "end": 52.86
+      },
+      {
+        "start": 53.3,
+        "end": 53.64
+      },
+      {
+        "start": 53.98,
+        "end": 54.18
+      },
+      {
+        "start": 54.4,
+        "end": 54.46
+      },
+      {
+        "start": 54.7,
+        "end": 54.76
+      },
+      {
+        "start": 55.44,
+        "end": 55.58
+      },
+      {
+        "start": 56.06,
+        "end": 56.08
+      },
+      {
+        "start": 56.34,
+        "end": 56.62
+      },
+      {
+        "start": 56.8,
+        "end": 56.88
+      },
+      {
+        "start": 57.64,
+        "end": 57.7
+      },
+      {
+        "start": 58.32,
+        "end": 58.4
+      },
+      {
+        "start": 58.88,
+        "end": 58.9
+      },
+      {
+        "start": 59.16,
+        "end": 59.2
+      },
+      {
+        "start": 59.4,
+        "end": 59.5
+      },
+      {
+        "start": 60.16,
+        "end": 60.22
+      },
+      {
+        "start": 60.96,
+        "end": 61.0
+      },
+      {
+        "start": 61.76,
+        "end": 61.78
+      },
+      {
+        "start": 62.3,
+        "end": 62.36
+      },
+      {
+        "start": 62.98,
+        "end": 63.3
+      },
+      {
+        "start": 63.52,
+        "end": 63.6
+      },
+      {
+        "start": 63.8,
+        "end": 63.9
+      },
+      {
+        "start": 64.62,
+        "end": 64.64
+      },
+      {
+        "start": 64.82,
+        "end": 64.86
+      },
+      {
+        "start": 65.88,
+        "end": 65.9
+      },
+      {
+        "start": 66.22,
+        "end": 66.32
+      },
+      {
+        "start": 66.86,
+        "end": 67.04
+      },
+      {
+        "start": 67.18,
+        "end": 67.2
+      },
+      {
+        "start": 67.42,
+        "end": 67.46
+      },
+      {
+        "start": 67.64,
+        "end": 67.82
+      },
+      {
+        "start": 68.32,
+        "end": 68.36
+      },
+      {
+        "start": 68.58,
+        "end": 68.64
+      },
+      {
+        "start": 68.82,
+        "end": 68.92
+      },
+      {
+        "start": 69.36,
+        "end": 69.78
+      },
+      {
+        "start": 70.04,
+        "end": 70.18
+      },
+      {
+        "start": 71.82,
+        "end": 71.94
+      },
+      {
+        "start": 72.6,
+        "end": 72.68
+      },
+      {
+        "start": 73.1,
+        "end": 73.2
+      },
+      {
+        "start": 73.52,
+        "end": 73.56
+      },
+      {
+        "start": 73.88,
+        "end": 73.96
+      },
+      {
+        "start": 74.42,
+        "end": 74.46
+      },
+      {
+        "start": 74.92,
+        "end": 75.3
+      },
+      {
+        "start": 76.26,
+        "end": 76.34
+      },
+      {
+        "start": 76.6,
+        "end": 76.68
+      },
+      {
+        "start": 77.08,
+        "end": 77.26
+      },
+      {
+        "start": 77.52,
+        "end": 77.54
+      },
+      {
+        "start": 77.9,
+        "end": 77.96
+      },
+      {
+        "start": 78.32,
+        "end": 78.48
+      },
+      {
+        "start": 79.02,
+        "end": 79.38
+      },
+      {
+        "start": 79.62,
+        "end": 79.68
+      },
+      {
+        "start": 79.84,
+        "end": 80.16
+      },
+      {
+        "start": 80.84,
+        "end": 80.92
+      },
+      {
+        "start": 81.22,
+        "end": 81.32
+      },
+      {
+        "start": 82.6,
+        "end": 82.9
+      },
+      {
+        "start": 83.8,
+        "end": 83.96
+      },
+      {
+        "start": 84.18,
+        "end": 84.74
+      }
+    ]
+  },
+  "regroup_history": "",
+  "nonspeech_sections": [
+    {
+      "start": 0.44,
+      "end": 1.5
+    },
+    {
+      "start": 1.64,
+      "end": 1.7
+    },
+    {
+      "start": 2.0,
+      "end": 2.2
+    },
+    {
+      "start": 2.64,
+      "end": 2.76
+    },
+    {
+      "start": 3.26,
+      "end": 3.44
+    },
+    {
+      "start": 3.7,
+      "end": 3.74
+    },
+    {
+      "start": 4.42,
+      "end": 4.5
+    },
+    {
+      "start": 5.08,
+      "end": 5.1
+    },
+    {
+      "start": 5.26,
+      "end": 5.42
+    },
+    {
+      "start": 5.62,
+      "end": 5.7
+    },
+    {
+      "start": 5.84,
+      "end": 5.98
+    },
+    {
+      "start": 7.18,
+      "end": 7.2
+    },
+    {
+      "start": 8.84,
+      "end": 8.9
+    },
+    {
+      "start": 9.84,
+      "end": 9.9
+    },
+    {
+      "start": 10.42,
+      "end": 10.86
+    },
+    {
+      "start": 11.12,
+      "end": 11.18
+    },
+    {
+      "start": 11.62,
+      "end": 11.68
+    },
+    {
+      "start": 12.08,
+      "end": 12.16
+    },
+    {
+      "start": 12.5,
+      "end": 12.52
+    },
+    {
+      "start": 12.9,
+      "end": 13.38
+    },
+    {
+      "start": 13.98,
+      "end": 14.16
+    },
+    {
+      "start": 14.74,
+      "end": 14.8
+    },
+    {
+      "start": 15.04,
+      "end": 15.18
+    },
+    {
+      "start": 15.52,
+      "end": 16.06
+    },
+    {
+      "start": 16.34,
+      "end": 16.58
+    },
+    {
+      "start": 16.74,
+      "end": 16.92
+    },
+    {
+      "start": 17.38,
+      "end": 17.72
+    },
+    {
+      "start": 17.96,
+      "end": 18.08
+    },
+    {
+      "start": 19.06,
+      "end": 19.7
+    },
+    {
+      "start": 19.9,
+      "end": 20.12
+    },
+    {
+      "start": 20.26,
+      "end": 20.3
+    },
+    {
+      "start": 20.72,
+      "end": 21.16
+    },
+    {
+      "start": 21.34,
+      "end": 21.44
+    },
+    {
+      "start": 21.58,
+      "end": 21.62
+    },
+    {
+      "start": 21.88,
+      "end": 21.9
+    },
+    {
+      "start": 22.18,
+      "end": 22.24
+    },
+    {
+      "start": 22.4,
+      "end": 22.46
+    },
+    {
+      "start": 23.24,
+      "end": 23.4
+    },
+    {
+      "start": 24.42,
+      "end": 24.68
+    },
+    {
+      "start": 24.9,
+      "end": 24.94
+    },
+    {
+      "start": 25.34,
+      "end": 25.4
+    },
+    {
+      "start": 25.74,
+      "end": 26.04
+    },
+    {
+      "start": 26.32,
+      "end": 26.74
+    },
+    {
+      "start": 27.02,
+      "end": 27.48
+    },
+    {
+      "start": 28.0,
+      "end": 28.08
+    },
+    {
+      "start": 28.58,
+      "end": 28.72
+    },
+    {
+      "start": 29.16,
+      "end": 29.24
+    },
+    {
+      "start": 30.34,
+      "end": 30.9
+    },
+    {
+      "start": 31.58,
+      "end": 31.6
+    },
+    {
+      "start": 31.84,
+      "end": 31.96
+    },
+    {
+      "start": 32.52,
+      "end": 32.68
+    },
+    {
+      "start": 32.82,
+      "end": 32.88
+    },
+    {
+      "start": 33.16,
+      "end": 33.22
+    },
+    {
+      "start": 33.34,
+      "end": 33.44
+    },
+    {
+      "start": 33.72,
+      "end": 34.56
+    },
+    {
+      "start": 34.76,
+      "end": 35.2
+    },
+    {
+      "start": 35.36,
+      "end": 35.68
+    },
+    {
+      "start": 35.88,
+      "end": 35.9
+    },
+    {
+      "start": 36.28,
+      "end": 36.32
+    },
+    {
+      "start": 36.52,
+      "end": 36.62
+    },
+    {
+      "start": 37.34,
+      "end": 37.36
+    },
+    {
+      "start": 37.94,
+      "end": 37.96
+    },
+    {
+      "start": 38.48,
+      "end": 39.12
+    },
+    {
+      "start": 39.56,
+      "end": 39.66
+    },
+    {
+      "start": 40.2,
+      "end": 40.3
+    },
+    {
+      "start": 41.34,
+      "end": 41.38
+    },
+    {
+      "start": 41.86,
+      "end": 42.18
+    },
+    {
+      "start": 42.3,
+      "end": 42.44
+    },
+    {
+      "start": 42.72,
+      "end": 43.06
+    },
+    {
+      "start": 43.5,
+      "end": 43.66
+    },
+    {
+      "start": 43.8,
+      "end": 43.9
+    },
+    {
+      "start": 44.18,
+      "end": 44.2
+    },
+    {
+      "start": 44.34,
+      "end": 44.52
+    },
+    {
+      "start": 45.0,
+      "end": 45.12
+    },
+    {
+      "start": 45.94,
+      "end": 45.98
+    },
+    {
+      "start": 46.14,
+      "end": 46.2
+    },
+    {
+      "start": 46.78,
+      "end": 46.82
+    },
+    {
+      "start": 46.96,
+      "end": 47.08
+    },
+    {
+      "start": 47.26,
+      "end": 47.34
+    },
+    {
+      "start": 47.7,
+      "end": 47.96
+    },
+    {
+      "start": 48.26,
+      "end": 48.32
+    },
+    {
+      "start": 48.58,
+      "end": 48.86
+    },
+    {
+      "start": 49.04,
+      "end": 49.12
+    },
+    {
+      "start": 51.06,
+      "end": 51.16
+    },
+    {
+      "start": 51.36,
+      "end": 51.52
+    },
+    {
+      "start": 52.1,
+      "end": 52.34
+    },
+    {
+      "start": 52.54,
+      "end": 52.56
+    },
+    {
+      "start": 52.58,
+      "end": 52.86
+    },
+    {
+      "start": 53.3,
+      "end": 53.64
+    },
+    {
+      "start": 53.98,
+      "end": 54.18
+    },
+    {
+      "start": 54.4,
+      "end": 54.46
+    },
+    {
+      "start": 54.7,
+      "end": 54.76
+    },
+    {
+      "start": 55.44,
+      "end": 55.58
+    },
+    {
+      "start": 56.06,
+      "end": 56.08
+    },
+    {
+      "start": 56.34,
+      "end": 56.62
+    },
+    {
+      "start": 56.8,
+      "end": 56.88
+    },
+    {
+      "start": 57.64,
+      "end": 57.7
+    },
+    {
+      "start": 58.32,
+      "end": 58.4
+    },
+    {
+      "start": 58.88,
+      "end": 58.9
+    },
+    {
+      "start": 59.16,
+      "end": 59.2
+    },
+    {
+      "start": 59.4,
+      "end": 59.5
+    },
+    {
+      "start": 60.16,
+      "end": 60.22
+    },
+    {
+      "start": 60.96,
+      "end": 61.0
+    },
+    {
+      "start": 61.76,
+      "end": 61.78
+    },
+    {
+      "start": 62.3,
+      "end": 62.36
+    },
+    {
+      "start": 62.98,
+      "end": 63.3
+    },
+    {
+      "start": 63.52,
+      "end": 63.6
+    },
+    {
+      "start": 63.8,
+      "end": 63.9
+    },
+    {
+      "start": 64.62,
+      "end": 64.64
+    },
+    {
+      "start": 64.82,
+      "end": 64.86
+    },
+    {
+      "start": 65.88,
+      "end": 65.9
+    },
+    {
+      "start": 66.22,
+      "end": 66.32
+    },
+    {
+      "start": 66.86,
+      "end": 67.04
+    },
+    {
+      "start": 67.18,
+      "end": 67.2
+    },
+    {
+      "start": 67.42,
+      "end": 67.46
+    },
+    {
+      "start": 67.64,
+      "end": 67.82
+    },
+    {
+      "start": 68.32,
+      "end": 68.36
+    },
+    {
+      "start": 68.58,
+      "end": 68.64
+    },
+    {
+      "start": 68.82,
+      "end": 68.92
+    },
+    {
+      "start": 69.36,
+      "end": 69.78
+    },
+    {
+      "start": 70.04,
+      "end": 70.18
+    },
+    {
+      "start": 71.82,
+      "end": 71.94
+    },
+    {
+      "start": 72.6,
+      "end": 72.68
+    },
+    {
+      "start": 73.1,
+      "end": 73.2
+    },
+    {
+      "start": 73.52,
+      "end": 73.56
+    },
+    {
+      "start": 73.88,
+      "end": 73.96
+    },
+    {
+      "start": 74.42,
+      "end": 74.46
+    },
+    {
+      "start": 74.92,
+      "end": 75.3
+    },
+    {
+      "start": 76.26,
+      "end": 76.34
+    },
+    {
+      "start": 76.6,
+      "end": 76.68
+    },
+    {
+      "start": 77.08,
+      "end": 77.26
+    },
+    {
+      "start": 77.52,
+      "end": 77.54
+    },
+    {
+      "start": 77.9,
+      "end": 77.96
+    },
+    {
+      "start": 78.32,
+      "end": 78.48
+    },
+    {
+      "start": 79.02,
+      "end": 79.38
+    },
+    {
+      "start": 79.62,
+      "end": 79.68
+    },
+    {
+      "start": 79.84,
+      "end": 80.16
+    },
+    {
+      "start": 80.84,
+      "end": 80.92
+    },
+    {
+      "start": 81.22,
+      "end": 81.32
+    },
+    {
+      "start": 82.6,
+      "end": 82.9
+    },
+    {
+      "start": 83.8,
+      "end": 83.96
+    },
+    {
+      "start": 84.18,
+      "end": 84.74
+    }
+  ]
+}

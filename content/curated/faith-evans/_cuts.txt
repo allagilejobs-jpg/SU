@@ -1,0 +1,8 @@
+# Faith Evans best-of cut plan - segments in seconds
+# start end  label
+109.34 117.80  hook-begging
+128.00 146.20  milestones-doctor-waiting
+149.30 169.20  diagnosis-california
+246.40 262.20  advocate-parent
+296.10 312.60  begging-advice
+312.70 324.94  rydersroom-mission

@@ -1,0 +1,140 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Impact,72,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,2,0,1,6,0,2,40,40,140,1
+Style: Hi,Impact,72,&H006DA5E8,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,2,0,1,6,0,2,40,40,140,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.62,Base,,0,0,0,,MY {\c&H6DA5E8&}FAVORITE{\c&HFFFFFF&} MOMENT
+Dialogue: 0,0:00:00.62,0:00:01.48,Base,,0,0,0,,THAT TODAY WAS
+Dialogue: 0,0:00:01.48,0:00:03.12,Base,,0,0,0,,HELPING THOSE KIDS
+Dialogue: 0,0:00:03.12,0:00:03.84,Base,,0,0,0,,AT THE CENTER.
+Dialogue: 0,0:00:04.26,0:00:04.62,Base,,0,0,0,,I CAN FEEL
+Dialogue: 0,0:00:04.62,0:00:05.46,Base,,0,0,0,,THEIR STRUGGLES, BUT
+Dialogue: 0,0:00:05.46,0:00:06.34,Base,,0,0,0,,THEY HAVE THE
+Dialogue: 0,0:00:06.34,0:00:06.80,Base,,0,0,0,,WORDS IN THEIR
+Dialogue: 0,0:00:06.80,0:00:07.26,Base,,0,0,0,,HEAD, BUT THEY
+Dialogue: 0,0:00:07.26,0:00:07.96,Base,,0,0,0,,JUST CAN'T SAY
+Dialogue: 0,0:00:07.96,0:00:09.28,Base,,0,0,0,,IT. YEAH. DO
+Dialogue: 0,0:00:09.28,0:00:10.00,Base,,0,0,0,,YOU REMEMBER WHAT
+Dialogue: 0,0:00:10.00,0:00:10.64,Base,,0,0,0,,THAT FELT LIKE?
+Dialogue: 0,0:00:11.14,0:00:11.64,Base,,0,0,0,,I FELT LIKE
+Dialogue: 0,0:00:11.64,0:00:12.28,Base,,0,0,0,,A BALL STUCK
+Dialogue: 0,0:00:12.28,0:00:12.84,Base,,0,0,0,,IN YOUR THROAT.
+Dialogue: 0,0:00:13.46,0:00:14.16,Base,,0,0,0,,DOES IT GET
+Dialogue: 0,0:00:14.16,0:00:15.30,Base,,0,0,0,,FRUSTRATING? YEAH, IT
+Dialogue: 0,0:00:15.30,0:00:15.94,Base,,0,0,0,,DOES GET FRUSTRATING
+Dialogue: 0,0:00:15.94,0:00:16.66,Base,,0,0,0,,AFTER A WHILE.
+Dialogue: 0,0:00:17.78,0:00:18.68,Base,,0,0,0,,I MEAN, YOU'RE
+Dialogue: 0,0:00:18.68,0:00:19.50,Base,,0,0,0,,LUCKY BECAUSE YOU
+Dialogue: 0,0:00:19.50,0:00:20.40,Base,,0,0,0,,GOT LANGUAGE, BUT
+Dialogue: 0,0:00:20.40,0:00:20.88,Base,,0,0,0,,THERE ARE KIDS
+Dialogue: 0,0:00:20.88,0:00:21.48,Base,,0,0,0,,AT YOUR AGE
+Dialogue: 0,0:00:21.48,0:00:22.46,Base,,0,0,0,,THAT CAN'T, STILL
+Dialogue: 0,0:00:22.46,0:00:24.40,Base,,0,0,0,,CAN'T SPEAK. DO
+Dialogue: 0,0:00:24.40,0:00:25.06,Base,,0,0,0,,I HAVE {\c&H6DA5E8&}AUTISM{\c&HFFFFFF&}
+Dialogue: 0,0:00:25.06,0:00:26.30,Base,,0,0,0,,STILL? DO YOU
+Dialogue: 0,0:00:26.30,0:00:26.76,Base,,0,0,0,,FEEL LIKE YOU
+Dialogue: 0,0:00:26.76,0:00:27.42,Base,,0,0,0,,STILL HAVE {\c&H6DA5E8&}AUTISM?{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.42,0:00:28.66,Base,,0,0,0,,YEAH, SOMETIMES I
+Dialogue: 0,0:00:28.66,0:00:29.42,Base,,0,0,0,,DO, BUT SOMETIMES
+Dialogue: 0,0:00:29.42,0:00:30.68,Base,,0,0,0,,I DON'T. WHAT
+Dialogue: 0,0:00:30.68,0:00:30.96,Base,,0,0,0,,DO YOU MEAN?
+Dialogue: 0,0:00:31.24,0:00:32.16,Base,,0,0,0,,WHEN I ACT
+Dialogue: 0,0:00:32.16,0:00:32.62,Base,,0,0,0,,A LITTLE CRAZY,
+Dialogue: 0,0:00:32.82,0:00:33.90,Base,,0,0,0,,THAT'S SOMETIMES WHEN
+Dialogue: 0,0:00:33.90,0:00:34.32,Base,,0,0,0,,I START TO
+Dialogue: 0,0:00:34.32,0:00:34.82,Base,,0,0,0,,CRY AND FEEL
+Dialogue: 0,0:00:34.82,0:00:35.64,Base,,0,0,0,,SENSITIVE. THAT'S WHEN
+Dialogue: 0,0:00:35.64,0:00:36.16,Base,,0,0,0,,I FEEL LIKE
+Dialogue: 0,0:00:36.16,0:00:36.74,Base,,0,0,0,,I HAVE {\c&H6DA5E8&}AUTISM.{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.98,0:00:37.82,Base,,0,0,0,,WHAT ABOUT FRIENDSHIP?
+Dialogue: 0,0:00:39.04,0:00:39.86,Base,,0,0,0,,YEAH, THAT KIND
+Dialogue: 0,0:00:39.86,0:00:40.42,Base,,0,0,0,,OF FEELS LIKE
+Dialogue: 0,0:00:40.42,0:00:41.04,Base,,0,0,0,,I HAVE {\c&H6DA5E8&}AUTISM{\c&HFFFFFF&}
+Dialogue: 0,0:00:41.04,0:00:41.62,Base,,0,0,0,,TOO. WHEN I
+Dialogue: 0,0:00:41.62,0:00:42.48,Base,,0,0,0,,ACT COOL AROUND
+Dialogue: 0,0:00:42.48,0:00:43.34,Base,,0,0,0,,{\c&H6DA5E8&}FRIENDS{\c&HFFFFFF&} AT THAT
+Dialogue: 0,0:00:43.34,0:00:44.68,Base,,0,0,0,,MOMENT, I DON'T
+Dialogue: 0,0:00:44.68,0:00:45.32,Base,,0,0,0,,SEEM I REALLY
+Dialogue: 0,0:00:45.32,0:00:45.96,Base,,0,0,0,,HAVE IT THEN.
+Dialogue: 0,0:00:46.32,0:00:46.64,Base,,0,0,0,,BUT DO YOU
+Dialogue: 0,0:00:46.64,0:00:47.72,Base,,0,0,0,,SOMETIMES FEEL LIKE
+Dialogue: 0,0:00:47.72,0:00:49.12,Base,,0,0,0,,YOU DON'T HAVE
+Dialogue: 0,0:00:49.12,0:00:49.96,Base,,0,0,0,,{\c&H6DA5E8&}FRIENDS{\c&HFFFFFF&} BECAUSE YOU
+Dialogue: 0,0:00:49.96,0:00:51.10,Base,,0,0,0,,HAVE {\c&H6DA5E8&}AUTISM?{\c&HFFFFFF&} YEAH.
+Dialogue: 0,0:00:51.72,0:00:52.74,Base,,0,0,0,,YOU DO? YEAH,
+Dialogue: 0,0:00:52.84,0:00:53.40,Base,,0,0,0,,SOMETIMES I SEE
+Dialogue: 0,0:00:53.40,0:00:54.12,Base,,0,0,0,,PEOPLE WHO LIKE
+Dialogue: 0,0:00:54.12,0:00:55.14,Base,,0,0,0,,ME SOMETIMES BECAUSE
+Dialogue: 0,0:00:55.14,0:00:55.88,Base,,0,0,0,,I HAVE {\c&H6DA5E8&}AUTISM.{\c&HFFFFFF&}
+Dialogue: 0,0:00:55.88,0:00:57.02,Base,,0,0,0,,RIGHT. WHEN YOU
+Dialogue: 0,0:00:57.02,0:00:57.66,Base,,0,0,0,,WERE LITTLE, YOU
+Dialogue: 0,0:00:57.66,0:00:58.38,Base,,0,0,0,,WERE REALLY HAVING
+Dialogue: 0,0:00:58.38,0:00:58.86,Base,,0,0,0,,A HARD TIME
+Dialogue: 0,0:00:58.86,0:00:59.80,Base,,0,0,0,,CONNECTING AND MAKING
+Dialogue: 0,0:00:59.80,0:01:01.48,Base,,0,0,0,,{\c&H6DA5E8&}FRIENDS.{\c&HFFFFFF&} THEY DIDN'T
+Dialogue: 0,0:01:01.48,0:01:02.22,Base,,0,0,0,,UNDERSTAND WHO YOU
+Dialogue: 0,0:01:02.22,0:01:02.44,Base,,0,0,0,,WERE.
+Dialogue: 0,0:01:04.18,0:01:05.60,Base,,0,0,0,,RIGHT? YEAH. WHAT
+Dialogue: 0,0:01:05.60,0:01:05.98,Base,,0,0,0,,DID THEY ASK
+Dialogue: 0,0:01:05.98,0:01:06.30,Base,,0,0,0,,YOU TO SAY?
+Dialogue: 0,0:01:07.06,0:01:07.52,Base,,0,0,0,,I ASKED YOU
+Dialogue: 0,0:01:07.52,0:01:07.96,Base,,0,0,0,,IN THE BOOTY
+Dialogue: 0,0:01:07.96,0:01:08.94,Base,,0,0,0,,HOLE. ARE YOU
+Dialogue: 0,0:01:08.94,0:01:10.22,Base,,0,0,0,,KIDDING ME? YOU
+Dialogue: 0,0:01:10.22,0:01:10.78,Base,,0,0,0,,HAD BOYS THAT
+Dialogue: 0,0:01:10.78,0:01:11.42,Base,,0,0,0,,WERE SENDING YOU
+Dialogue: 0,0:01:11.42,0:01:12.02,Base,,0,0,0,,UP TO GIRLS
+Dialogue: 0,0:01:12.02,0:01:13.12,Base,,0,0,0,,SAYING DISGUSTING THINGS.
+Dialogue: 0,0:01:13.14,0:01:13.62,Base,,0,0,0,,THEY MADE ME
+Dialogue: 0,0:01:13.62,0:01:13.94,Base,,0,0,0,,GO IN THE
+Dialogue: 0,0:01:13.94,0:01:15.06,Base,,0,0,0,,GIRLS' BATHROOM. I
+Dialogue: 0,0:01:15.06,0:01:15.64,Base,,0,0,0,,DID TO MAKE
+Dialogue: 0,0:01:15.64,0:01:16.12,Base,,0,0,0,,{\c&H6DA5E8&}FRIENDS.{\c&HFFFFFF&} I DIDN'T.
+Dialogue: 0,0:01:23.70,0:01:24.60,Base,,0,0,0,,ANYTIME YOU HAVE
+Dialogue: 0,0:01:24.60,0:01:25.58,Base,,0,0,0,,SOMEONE THAT DOESN'T
+Dialogue: 0,0:01:25.58,0:01:27.10,Base,,0,0,0,,REALLY UNDERSTAND YOU,
+Dialogue: 0,0:01:27.18,0:01:27.52,Base,,0,0,0,,THEY'RE NOT GOING
+Dialogue: 0,0:01:27.52,0:01:28.08,Base,,0,0,0,,TO REALLY KNOW
+Dialogue: 0,0:01:28.08,0:01:28.54,Base,,0,0,0,,HOW TO {\c&H6DA5E8&}LOVE{\c&HFFFFFF&}
+Dialogue: 0,0:01:28.54,0:01:29.02,Base,,0,0,0,,YOU BECAUSE THEY
+Dialogue: 0,0:01:29.02,0:01:29.42,Base,,0,0,0,,DON'T KNOW WHO
+Dialogue: 0,0:01:29.42,0:01:30.26,Base,,0,0,0,,YOU ARE. I
+Dialogue: 0,0:01:30.26,0:01:30.56,Base,,0,0,0,,DON'T WANT YOU
+Dialogue: 0,0:01:30.56,0:01:31.28,Base,,0,0,0,,TO FEEL SAD
+Dialogue: 0,0:01:31.28,0:01:32.16,Base,,0,0,0,,ABOUT NOT HAVING
+Dialogue: 0,0:01:32.16,0:01:34.54,Base,,0,0,0,,25, 30 {\c&H6DA5E8&}FRIENDS{\c&HFFFFFF&}
+Dialogue: 0,0:01:34.54,0:01:35.10,Base,,0,0,0,,BECAUSE YOU ONLY
+Dialogue: 0,0:01:35.10,0:01:35.78,Base,,0,0,0,,REALLY NEED ONE
+Dialogue: 0,0:01:35.78,0:01:36.28,Base,,0,0,0,,OR TWO GOOD
+Dialogue: 0,0:01:36.28,0:01:37.32,Base,,0,0,0,,{\c&H6DA5E8&}FRIENDS,{\c&HFFFFFF&} RIGHT? YEAH.
+Dialogue: 0,0:01:37.60,0:01:38.40,Base,,0,0,0,,MOM HAS ANTI
+Dialogue: 0,0:01:38.40,0:01:39.50,Base,,0,0,0,,-TERRY. I HAVE
+Dialogue: 0,0:01:39.50,0:01:40.32,Base,,0,0,0,,{\c&H6DA5E8&}WONDER.{\c&HFFFFFF&} YOU HAVE
+Dialogue: 0,0:01:40.32,0:01:41.10,Base,,0,0,0,,{\c&H6DA5E8&}WONDER.{\c&HFFFFFF&} YOU ALWAYS
+Dialogue: 0,0:01:41.10,0:01:41.68,Base,,0,0,0,,LOOK OUT FOR
+Dialogue: 0,0:01:41.68,0:01:42.04,Base,,0,0,0,,ME. YOU WOULD
+Dialogue: 0,0:01:42.04,0:01:43.02,Base,,0,0,0,,{\c&H6DA5E8&}WONDER{\c&HFFFFFF&} EVER PUT
+Dialogue: 0,0:01:43.02,0:01:43.42,Base,,0,0,0,,YOU IN A
+Dialogue: 0,0:01:43.42,0:01:44.62,Base,,0,0,0,,BAD POSITION WHERE
+Dialogue: 0,0:01:44.62,0:01:45.22,Base,,0,0,0,,YOU WERE EITHER
+Dialogue: 0,0:01:45.22,0:01:46.00,Base,,0,0,0,,IN HARM'S WAY
+Dialogue: 0,0:01:46.00,0:01:47.14,Base,,0,0,0,,OR YOU DID
+Dialogue: 0,0:01:47.14,0:01:48.82,Base,,0,0,0,,SOMETHING INAPPROPRIATE. HE
+Dialogue: 0,0:01:48.82,0:01:49.34,Base,,0,0,0,,WOULD NEVER DO
+Dialogue: 0,0:01:49.34,0:01:50.44,Base,,0,0,0,,THAT. NO. THAT'S
+Dialogue: 0,0:01:50.44,0:01:50.94,Base,,0,0,0,,A {\c&H6DA5E8&}REAL{\c&HFFFFFF&} {\c&H6DA5E8&}FRIEND.{\c&HFFFFFF&}
+Dialogue: 0,0:01:51.68,0:01:52.86,Base,,0,0,0,,THAT IS HOW
+Dialogue: 0,0:01:52.86,0:01:53.62,Base,,0,0,0,,YOU {\c&H6DA5E8&}JUDGE{\c&HFFFFFF&} WHO
+Dialogue: 0,0:01:53.62,0:01:54.36,Base,,0,0,0,,IS YOUR {\c&H6DA5E8&}FRIEND,{\c&HFFFFFF&}
+Dialogue: 0,0:01:54.92,0:01:55.64,Base,,0,0,0,,WHO HAS YOUR
+Dialogue: 0,0:01:55.64,0:01:56.88,Base,,0,0,0,,BACK, WHO'S LOOKING
+Dialogue: 0,0:01:56.88,0:01:57.52,Base,,0,0,0,,OUT FOR YOU.

@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,38,&H00FFFFFF,&H000000FF,&H00000000,&HA0000000,0,0,0,0,100,100,0,0,3,0,0,2,80,80,130,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.84,Base,,0,0,0,,My favorite moment that today was helping those kids at the center.
+Dialogue: 0,0:00:04.26,0:00:08.28,Base,,0,0,0,,I can feel their struggles, but they have the words in their head, but they just can't say it.
+Dialogue: 0,0:00:08.44,0:00:08.68,Base,,0,0,0,,Yeah.
+Dialogue: 0,0:00:09.14,0:00:10.64,Base,,0,0,0,,Do you remember what that felt like?
+Dialogue: 0,0:00:11.14,0:00:12.84,Base,,0,0,0,,I felt like a ball stuck in your throat.
+Dialogue: 0,0:00:13.46,0:00:14.66,Base,,0,0,0,,Does it get frustrating?
+Dialogue: 0,0:00:14.96,0:00:16.66,Base,,0,0,0,,Yeah, it does get frustrating after a while.
+Dialogue: 0,0:00:17.78,0:00:23.02,Base,,0,0,0,,I mean, you're lucky because you got language, but there are kids at your age that can't, still can't speak.
+Dialogue: 0,0:00:24.14,0:00:25.44,Base,,0,0,0,,Do I have autism still?
+Dialogue: 0,0:00:26.00,0:00:27.42,Base,,0,0,0,,Do you feel like you still have autism?
+Dialogue: 0,0:00:27.42,0:00:30.48,Base,,0,0,0,,Yeah, sometimes I do, but sometimes I don't.
+Dialogue: 0,0:00:30.48,0:00:30.96,Base,,0,0,0,,What do you mean?
+Dialogue: 0,0:00:31.24,0:00:35.16,Base,,0,0,0,,When I act a little crazy, that's sometimes when I start to cry and feel sensitive.
+Dialogue: 0,0:00:35.38,0:00:36.74,Base,,0,0,0,,That's when I feel like I have autism.
+Dialogue: 0,0:00:36.98,0:00:37.82,Base,,0,0,0,,What about friendship?
+Dialogue: 0,0:00:39.04,0:00:41.40,Base,,0,0,0,,Yeah, that kind of feels like I have autism too.
+Dialogue: 0,0:00:41.52,0:00:45.96,Base,,0,0,0,,When I act cool around friends at that moment, I don't seem I really have it then.
+Dialogue: 0,0:00:46.32,0:00:50.48,Base,,0,0,0,,But do you sometimes feel like you don't have friends because you have autism?
+Dialogue: 0,0:00:50.84,0:00:51.10,Base,,0,0,0,,Yeah.
+Dialogue: 0,0:00:51.72,0:00:52.32,Base,,0,0,0,,You do?
+Dialogue: 0,0:00:52.58,0:00:55.88,Base,,0,0,0,,Yeah, sometimes I see people who like me sometimes because I have autism.
+Dialogue: 0,0:00:55.88,0:00:56.68,Base,,0,0,0,,Right.
+Dialogue: 0,0:00:56.84,0:01:00.20,Base,,0,0,0,,When you were little, you were really having a hard time connecting and making friends.
+Dialogue: 0,0:01:00.88,0:01:02.44,Base,,0,0,0,,They didn't understand who you were.
+Dialogue: 0,0:01:04.18,0:01:04.58,Base,,0,0,0,,Right?
+Dialogue: 0,0:01:04.82,0:01:05.06,Base,,0,0,0,,Yeah.
+Dialogue: 0,0:01:05.42,0:01:06.30,Base,,0,0,0,,What did they ask you to say?
+Dialogue: 0,0:01:07.06,0:01:08.18,Base,,0,0,0,,I asked you in the booty hole.
+Dialogue: 0,0:01:08.68,0:01:09.54,Base,,0,0,0,,Are you kidding me?
+Dialogue: 0,0:01:10.02,0:01:13.12,Base,,0,0,0,,You had boys that were sending you up to girls saying disgusting things.
+Dialogue: 0,0:01:13.14,0:01:14.54,Base,,0,0,0,,They made me go in the girls' bathroom.
+Dialogue: 0,0:01:15.00,0:01:16.04,Base,,0,0,0,,I did to make friends.
+Dialogue: 0,0:01:16.04,0:01:16.12,Base,,0,0,0,,I didn't.
+Dialogue: 0,0:01:23.70,0:01:28.08,Base,,0,0,0,,Anytime you have someone that doesn't really understand you, they're not going to really know
+Dialogue: 0,0:01:28.08,0:01:29.80,Base,,0,0,0,,how to love you because they don't know who you are.
+Dialogue: 0,0:01:30.18,0:01:36.98,Base,,0,0,0,,I don't want you to feel sad about not having 25, 30 friends because you only really need one or two good friends, right?
+Dialogue: 0,0:01:37.20,0:01:37.32,Base,,0,0,0,,Yeah.
+Dialogue: 0,0:01:37.60,0:01:38.76,Base,,0,0,0,,Mom has anti-terry.
+Dialogue: 0,0:01:39.10,0:01:39.78,Base,,0,0,0,,I have wonder.
+Dialogue: 0,0:01:40.04,0:01:40.70,Base,,0,0,0,,You have wonder.
+Dialogue: 0,0:01:40.86,0:01:41.84,Base,,0,0,0,,You always look out for me.
+Dialogue: 0,0:01:41.84,0:01:48.30,Base,,0,0,0,,You would wonder ever put you in a bad position where you were either in harm's way or you did something inappropriate.
+Dialogue: 0,0:01:48.64,0:01:49.56,Base,,0,0,0,,He would never do that.
+Dialogue: 0,0:01:49.78,0:01:49.96,Base,,0,0,0,,No.
+Dialogue: 0,0:01:50.16,0:01:50.94,Base,,0,0,0,,That's a real friend.
+Dialogue: 0,0:01:51.68,0:01:57.52,Base,,0,0,0,,That is how you judge who is your friend, who has your back, who's looking out for you.
