@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Content Ideas | Spectrum Unlocked</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #4A90A4;
+            --teal-dark: #3d7a8c;
+            --gold: #E8B86D;
+            --green: #27AE60;
+            --dark-bg: #1a1a2e;
+            --darker-bg: #16213e;
+            --card-bg: #252542;
+            --text: #f0f0f0;
+            --text-muted: #a0a0a0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        .last-updated {
+            display: inline-block;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            color: var(--gold);
+        }
+        
+        section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            color: var(--teal);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .creator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        .creator-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .creator-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--teal);
+        }
+        
+        .creator-name {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+        
+        .creator-platform {
+            font-size: 0.85rem;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+        
+        .creator-focus {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        
+        .creator-followers {
+            font-size: 0.85rem;
+            color: var(--gold);
+            margin-top: 0.5rem;
+        }
+        
+        .topic-list {
+            list-style: none;
+        }
+        
+        .topic-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .topic-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .topic-number {
+            background: var(--teal);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .topic-content strong {
+            color: var(--text);
+        }
+        
+        .topic-content span {
+            color: var(--text-muted);
+        }
+        
+        .idea-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .idea-category h4 {
+            color: var(--teal);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .idea-list {
+            list-style: none;
+        }
+        
+        .idea-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-muted);
+        }
+        
+        .idea-list li::before {
+            content: "○";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .platform-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .platform-card h4 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .platform-card ul {
+            list-style: none;
+        }
+        
+        .platform-card li {
+            padding: 0.4rem 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .sources-list {
+            list-style: none;
+        }
+        
+        .sources-list li {
+            padding: 0.5rem 0;
+        }
+        
+        .sources-list a {
+            color: var(--teal);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .sources-list a:hover {
+            color: var(--gold);
+        }
+        
+        .log-entry {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--teal);
+        }
+        
+        .log-date {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .log-entry ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: var(--text-muted);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--teal);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.2s;
+        }
+        
+        .back-link:hover {
+            color: var(--gold);
+        }
+        
+        .gap-alert {
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2), rgba(74, 144, 164, 0.2));
+            border: 1px solid var(--green);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gap-alert h4 {
+            color: var(--green);
+            margin-bottom: 0.75rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Dashboard</a>
+        
+        <header>
+            <h1>🔬 Research & Content Ideas</h1>
+            <p class="subtitle">Trending autism parenting content, competitor analysis, and content ideas</p>
+            <span class="last-updated">Last Updated: April 8, 2026</span>
+        </header>
+        
+        <section>
+            <h2>🎯 Top Autism Parenting Creators</h2>
+            <div class="creator-grid">
+                <div class="creator-card">
+                    <div class="creator-name">Autism Dietitian</div>
+                    <div class="creator-platform">Instagram</div>
+                    <div class="creator-focus">Sensory-friendly feeding tips, co-founder @bestpartkids</div>
+                    <div class="creator-followers">114K followers</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Orion Kelly</div>
+                    <div class="creator-platform">YouTube / Podcast</div>
+                    <div class="creator-focus">Keynote speaker, parenting tips, workplace inclusivity</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Autistic Mama (Kaylene George)</div>
+                    <div class="creator-platform">Blog / Social</div>
+                    <div class="creator-focus">Mom of 4 autistic kids, homeschooling, sensory activities</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Stories About Autism</div>
+                    <div class="creator-platform">Social</div>
+                    <div class="creator-focus">Parent perspectives and journeys</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Jessie Lipscomb</div>
+                    <div class="creator-platform">Social</div>
+                    <div class="creator-focus">Parent journey content</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Motherhood Phasing</div>
+                    <div class="creator-platform">Social</div>
+                    <div class="creator-focus">Parent content</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Eileen "Mama Fry" Shaklee</div>
+                    <div class="creator-platform">Social</div>
+                    <div class="creator-focus">Parent advocacy</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Purple Ella</div>
+                    <div class="creator-platform">YouTube</div>
+                    <div class="creator-focus">Day-to-day caregiver content</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Chloé Hayden</div>
+                    <div class="creator-platform">YouTube</div>
+                    <div class="creator-focus">Autistic advocate, caregiver education</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Yo Samdy Sam</div>
+                    <div class="creator-platform">YouTube</div>
+                    <div class="creator-focus">Late diagnosis, autistic experience</div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-name">Autism From The Inside</div>
+                    <div class="creator-platform">YouTube</div>
+                    <div class="creator-focus">Understanding autism</div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>📈 Trending Content Topics (2024-2026)</h2>
+            
+            <h3>High-Performing Topics</h3>
+            <ol class="topic-list">
+                <li>
+                    <span class="topic-number">1</span>
+                    <div class="topic-content">
+                        <strong>Newly diagnosed guidance</strong><br>
+                        <span>"What to do THIS WEEK after diagnosis"</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="topic-number">2</span>
+                    <div class="topic-content">
+                        <strong>Sensory-friendly practical tips</strong><br>
+                        <span>Feeding, clothing, environment modifications</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="topic-number">3</span>
+                    <div class="topic-content">
+                        <strong>Myth-busting</strong><br>
+                        <span>Debunking autism stereotypes</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="topic-number">4</span>
+                    <div class="topic-content">
+                        <strong>Language & vocabulary</strong><br>
+                        <span>How to talk about autism respectfully</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="topic-number">5</span>
+                    <div class="topic-content">
+                        <strong>Evidence-based information</strong><br>
+                        <span>From professionals (doctors, therapists)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="topic-number">6</span>
+                    <div class="topic-content">
+                        <strong>Day-in-the-life family content</strong><br>
+                        <span>Relatable reality</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="topic-number">7</span>
+                    <div class="topic-content">
+                        <strong>IEP/School advocacy</strong><br>
+                        <span>Navigating education system</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="topic-number">8</span>
+                    <div class="topic-content">
+                        <strong>Therapy options</strong><br>
+                        <span>ABA controversy, alternatives, what works</span>
+                    </div>
+                </li>
+            </ol>
+            
+            <div class="gap-alert">
+                <h4>🚀 Content Gaps (Opportunities)</h4>
+                <ul style="list-style: disc; margin-left: 1.5rem; color: var(--text-muted);">
+                    <li><strong>Parent-focused TikTok content</strong> — UNC study shows only ~15% of autism TikTok content is parent-focused, though ~30% of autistic individuals have high support needs. Room for more!</li>
+                    <li><strong>Practical templates</strong> — Visual schedules, communication boards, routine charts</li>
+                    <li><strong>"What I wish I knew"</strong> — First-person parent retrospectives</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>🔍 Platform Insights</h2>
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <h4>📱 TikTok</h4>
+                    <ul>
+                        <li>Autism hashtags heavily used but underrepresent parent/caregiver perspective</li>
+                        <li>Evidence-based content from professionals performs well</li>
+                        <li>Controversial topics (ABA, diagnosis criteria) drive engagement</li>
+                    </ul>
+                </div>
+                <div class="platform-card">
+                    <h4>📸 Instagram</h4>
+                    <ul>
+                        <li>Carousels perform best for educational content</li>
+                        <li>Reels for quick tips and relatable moments</li>
+                        <li>Stories for polls, Q&A, community building</li>
+                    </ul>
+                </div>
+                <div class="platform-card">
+                    <h4>🎬 YouTube</h4>
+                    <ul>
+                        <li>60+ dedicated autism channels (per Feedspot 2026)</li>
+                        <li>Long-form content for deep dives</li>
+                        <li>Shorts competing with TikTok/Reels</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>💡 Content Ideas Backlog</h2>
+            <div class="idea-grid">
+                <div class="idea-category">
+                    <h4>🎠 Carousels</h4>
+                    <ul class="idea-list">
+                        <li>"Red flags vs. quirks — when to get evaluated"</li>
+                        <li>"5 sensory hacks for picky eaters"</li>
+                        <li>"What teachers wish parents knew about IEPs"</li>
+                        <li>"Autism & siblings — helping the whole family"</li>
+                    </ul>
+                </div>
+                <div class="idea-category">
+                    <h4>🎬 Reels/TikToks</h4>
+                    <ul class="idea-list">
+                        <li>"Things people say to autism parents (and what we think)"</li>
+                        <li>"POV: Explaining your child's needs to family"</li>
+                        <li>"Sensory win of the day" series</li>
+                        <li>"This therapy hack changed everything"</li>
+                    </ul>
+                </div>
+                <div class="idea-category">
+                    <h4>📚 Educational Series</h4>
+                    <ul class="idea-list">
+                        <li>"Autism ABC" — one term per post</li>
+                        <li>"Myth Monday" — weekly debunk</li>
+                        <li>"Win Wednesday" — celebrating small victories</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>📚 Research Sources</h2>
+            <ul class="sources-list">
+                <li><a href="https://influencers.feedspot.com/autism_instagram_influencers/" target="_blank">Top 100 Autistic Influencers 2026 — Feedspot</a></li>
+                <li><a href="https://videos.feedspot.com/autism_youtube_channels/" target="_blank">60 Autism YouTubers 2026 — Feedspot</a></li>
+                <li><a href="https://www.med.unc.edu/healthsciences/harroplab/" target="_blank">UNC AutisTikTok Study — Content Analysis</a></li>
+                <li><a href="https://beaminghealth.com/article/11-autism-social-media-influencers-to-follow" target="_blank">Beaming Health Influencer List</a></li>
+                <li><a href="https://www.abtaba.com/blog/autism-blogs-in-2024" target="_blank">Top Autism Blogs 2024</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>🗓️ Research Log</h2>
+            <div class="log-entry">
+                <div class="log-date">April 8, 2026</div>
+                <ul>
+                    <li>Initial research on trending autism parenting content creators</li>
+                    <li>Identified content gaps (parent-focused TikTok, practical templates)</li>
+                    <li>Added top creators to watch list</li>
+                    <li>Created content ideas backlog</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
