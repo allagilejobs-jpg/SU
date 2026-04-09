@@ -288,6 +288,54 @@ If you're early in this journey: there are parents 6 months ahead of you who are
         ],
     },
     {
+        "slug": "tisha-campbell",
+        "name_main": "Tisha",
+        "name_em":   "Campbell",
+        "name_full": "Tisha Campbell",
+        "source":    "via The Real",
+        "quote":     '"This is a boy who couldn\'t talk." — Tisha Campbell on her son Xen, diagnosed at 23 months and now college-bound.',
+        "reel_file": "FINAL-reel-v3.mp4",
+        "reel_size": "~22 MB",
+        "reel_len":  "1:21",
+        "reel_desc": "6-beat best-of cut from Tisha Campbell\'s 2020 appearance on The Real, where she became emotional announcing that her autistic son Xen had been accepted to his top choice college. Diagnosis at 23 months → mission of independence → Xen chose mom\'s house over dad\'s because she was \"preparing him for college\" → dream of being a zoologist → 10-year-old brother Zeke adds \"mom, you\'re in my safe place.\" Uniform blur-fit crop preserves all shot compositions including the wide 5-person panel and the 2-shot cutaways to co-host Adrienne Bailon.",
+        "reel_status": "ready",
+        "carousel": [
+            {"file": "carousel-v2/slide-1-cover.png",  "kind": "image", "title": "Cover",        "desc": "Tisha smiling + play cue (1080×1350)"},
+            {"file": "carousel-v2/slide-2-video.mp4",  "kind": "video", "title": "Branded clip", "desc": "6-beat best-of with karaoke captions (77s)"},
+            {"file": "carousel-v2/slide-3-quote.png",  "kind": "image", "title": "Quote card",   "desc": "Big Playfair Display pull quote"},
+            {"file": "carousel-v2/slide-4-cta.png",    "kind": "image", "title": "CTA / Ending", "desc": "Save / Share / Follow + Tag prompt"},
+        ],
+        "reel_caption": '''"This is a boy who couldn't talk."
+Tisha Campbell's son Xen was diagnosed with autism at 23 months. At 18, he got into his top choice college. He chose mom's house because she was preparing him. 💛
+#autismmom #tishacampbell #autismawareness #autismparenting #raisethemstrong''',
+        "feed_caption": '''"This is a boy who couldn't talk."
+
+Tisha Campbell's son Xen was diagnosed with autism at 23 months old. On The Real, she broke down announcing that he had just been accepted to his top choice college — a school he'd talked about since he was eight. He wants to be a zoologist.
+
+But the most powerful part wasn't the college acceptance. It was how he got there.
+
+"Once I got the diagnosis," Tisha said, "I wanted him to be as independent of me as possible."
+
+At 18, Xen chose to live at her house over his father's. When his 10-year-old brother Zeke asked him why, Xen said: "Because she's preparing me for my life. She's preparing me for college. Here, we don't have maids. I do everything on my own. I open the car door for mommy. She allows me to be more of a man at her house."
+
+Then Zeke turned to Tisha and said, "Mom, you're in my safe place."
+
+"What 10-year-old says that to somebody?" Tisha whispered.
+
+People said Xen wasn't going to get into that school. He didn't wait for her. He didn't wait for his dad. He just did it. Straight-A student. Always on the Dean's list.
+
+This is autism advocacy in its most powerful form: raising them to not need you. Loving them so hard they learn to stand on their own. Refusing to accept the limits the world tried to place on them.
+
+🎥 Tisha Campbell on The Real, 2020
+💛 Her memoir "The A Word: A Mother's Journey Through Autism and Love" is coming
+
+#AutismMom #TishaCampbell #AutismParenting #XenMartin #AutismAwareness #IndependentAutism #RaiseThemStrong #AutismAdvocacy #AutismCommunity #AutismAcceptance''',
+        "badges": [
+            ('<span class="meta gold">Reel ready</span>'),
+            ('<span class="meta">Carousel ready</span>'),
+        ],
+    },
+    {
         "slug": "dan-orlovsky-madden",
         "name_main": "Dan & Madden",
         "name_em":   "Orlovsky",

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tisha Campbell — Curated — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; padding-bottom: 60px; }
+
+.main-nav { background: #0f0f1a; padding: 15px 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
+.main-nav a { color: #aaa; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+.main-nav a:hover, .main-nav a.active { background: #4A90A4; color: white; }
+.nav-dropdown { position: relative; }
+.dropdown-toggle { cursor: pointer; }
+.dropdown-menu { display: none; position: absolute; right: 0; top: 100%; background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px; padding: 15px; min-width: 280px; max-height: 70vh; overflow-y: auto; z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+.nav-dropdown:hover .dropdown-menu, .dropdown-menu:hover { display: block; }
+.dropdown-group { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #2a2a4a; }
+.dropdown-group:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dropdown-label { color: #E8B86D; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
+.dropdown-menu a { display: block; color: #ccc; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.dropdown-menu a:hover { background: #4A90A4; color: white; }
+
+.header { background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%); padding: 36px 20px; text-align: center; }
+.header .source-tag { display: inline-block; font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; }
+.header h1 { font-family: 'Playfair Display', serif; font-size: 2.4rem; margin-bottom: 10px; line-height: 1.1; }
+.header h1 .em { color: #E8B86D; font-style: italic; }
+.header p { opacity: 0.92; font-size: 1.05rem; max-width: 720px; margin: 0 auto; line-height: 1.55; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
+
+.section-card { background: #16213e; border-radius: 16px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+.section-header { background: #0f3460; padding: 16px 22px; display: flex; align-items: center; gap: 14px; }
+.section-num { background: #E8B86D; color: #1a1a2e; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0; }
+.section-info h3 { font-size: 1rem; color: #E8B86D; }
+.section-info .sub { font-size: 0.82rem; opacity: 0.7; margin-top: 2px; }
+.section-content { padding: 22px; }
+
+.reel-grid { display: grid; grid-template-columns: 320px 1fr; gap: 28px; align-items: start; }
+.reel-player { background: black; border-radius: 12px; overflow: hidden; aspect-ratio: 9/16; }
+.reel-player video { width: 100%; height: 100%; display: block; }
+.reel-info p { line-height: 1.65; opacity: 0.85; margin-bottom: 18px; font-size: 0.95rem; }
+.meta-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.meta { font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 12px; background: rgba(74,144,164,0.25); color: #4A90A4; border: 1px solid rgba(74,144,164,0.4); letter-spacing: 0.5px; }
+.meta.gold { background: rgba(232,184,109,0.18); color: #E8B86D; border-color: rgba(232,184,109,0.4); }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%); color: #1a1a2e; text-decoration: none; padding: 13px 26px; border-radius: 10px; font-weight: 800; font-size: 14px; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 6px 20px rgba(232,184,109,0.25); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(232,184,109,0.4); }
+
+.carousel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.slide { background: #0f3460; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; }
+.slide-thumb { aspect-ratio: 4/5; background: black; position: relative; overflow: hidden; }
+.slide-thumb img, .slide-thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slide-thumb .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.18); pointer-events: none; }
+.slide-thumb .play-overlay::after { content: ''; width: 0; height: 0; border-left: 22px solid white; border-top: 14px solid transparent; border-bottom: 14px solid transparent; margin-left: 6px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5)); }
+.slide-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+.slide-num { font-size: 10px; font-weight: 700; color: #E8B86D; letter-spacing: 1.5px; }
+.slide-title { font-size: 13px; font-weight: 700; line-height: 1.35; }
+.slide-desc { font-size: 11px; opacity: 0.6; line-height: 1.4; }
+.slide-dl { margin-top: auto; }
+.slide-dl a { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 9px; background: rgba(232,184,109,0.15); color: #E8B86D; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 11px; border: 1px solid rgba(232,184,109,0.3); transition: all 0.15s; }
+.slide-dl a:hover { background: rgba(232,184,109,0.25); }
+
+.caption-box { background: #0a1628; border: 1px solid #0f3460; border-radius: 10px; padding: 18px 18px 18px 18px; font-size: 0.92rem; line-height: 1.7; color: #ddd; white-space: pre-wrap; word-wrap: break-word; position: relative; margin-bottom: 16px; font-family: 'Poppins', sans-serif; }
+.caption-box .label { font-size: 10px; font-weight: 700; color: #4A90A4; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; display: block; }
+.copy-btn { position: absolute; top: 14px; right: 14px; background: #27AE60; color: white; border: none; padding: 7px 14px; border-radius: 8px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+.copy-btn:hover { background: #2ecc71; transform: scale(1.05); }
+.caption-text { padding-right: 70px; }
+
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #27AE60; color: white; padding: 14px 28px; border-radius: 10px; font-weight: 600; box-shadow: 0 10px 40px rgba(0,0,0,0.3); opacity: 0; transition: opacity 0.3s; z-index: 1000; }
+.toast.show { opacity: 1; }
+
+/* Hub-specific */
+.artist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.artist-card { background: #16213e; border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 5px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column; }
+.artist-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(232,184,109,0.4); }
+.artist-photo { aspect-ratio: 4/5; background-size: cover; background-position: center top; position: relative; }
+.artist-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,33,62,0) 55%, rgba(22,33,62,0.95) 100%); }
+.artist-body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.artist-source { font-size: 11px; color: #E8B86D; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+.artist-name { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white; }
+.artist-quote { font-size: 14px; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: italic; margin-bottom: 16px; flex: 1; }
+.artist-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.notice-box { background: rgba(232,184,109,0.08); border: 1px solid rgba(232,184,109,0.25); border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; font-size: 0.88rem; line-height: 1.55; color: #E8B86D; }
+.notice-box strong { display: block; margin-bottom: 4px; }
+
+@media (max-width: 800px) {
+  .reel-grid { grid-template-columns: 1fr; }
+  .reel-player { max-width: 280px; margin: 0 auto; }
+  .header h1 { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="../../../index.html">🏠 Home</a>
+    <a href="../../../calendar-30day.html">📅 30-Day</a>
+    <a href="../../../calendar-60day.html">📅 60-Day</a>
+    <a href="../../../calendar-90day.html">📅 90-Day</a>
+    <a href="../../../personal.html">💛 Personal</a>
+    <a href="../index.html" class="active">🎬 Curated</a>
+    <a href="../../../brand-guidelines.html">📋 Brand</a>
+    <a href="../../../guides.html">📖 Guides</a>
+    <div class="nav-dropdown">
+      <a href="#" class="dropdown-toggle">📂 All Pages ▾</a>
+      <div class="dropdown-menu">
+        <div class="dropdown-group">
+          <div class="dropdown-label">Curated</div>
+          <a href="../index.html">🎬 All Curated</a>
+          <a href="../holly-peete/index.html">⭐ Holly Robinson Peete</a>
+          <a href="../ot-genasis/index.html">⭐ OT Genasis</a>
+          <a href="../faith-evans/index.html">⭐ Faith Evans</a>
+        </div>
+        <div class="dropdown-group">
+          <div class="dropdown-label">Calendars</div>
+          <a href="../../../calendar-30day.html">📅 30-Day Calendar</a>
+          <a href="../../../calendar-60day.html">📅 60-Day Calendar</a>
+          <a href="../../../calendar-90day.html">📅 90-Day Calendar</a>
+        </div>
+        <div class="dropdown-group">
+          <div class="dropdown-label">Brand & Guides</div>
+          <a href="../../../brand-guidelines.html">📋 Brand Guidelines</a>
+          <a href="../../../guides.html">📖 Guides</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="header">
+    <div class="source-tag">via The Real</div>
+    <h1>Tisha <span class="em">Campbell</span></h1>
+    <p>"This is a boy who couldn't talk." — Tisha Campbell on her son Xen, diagnosed at 23 months and now college-bound.</p>
+  </div>
+
+  <div class="container">
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div class="section-info">
+          <h3>REEL</h3>
+          <div class="sub">Vertical 1080×1920 — single Instagram Reel</div>
+        </div>
+      </div>
+      <div class="section-content">
+        
+        <div class="reel-grid">
+          <div class="reel-player">
+            <video controls preload="metadata">
+              <source src="FINAL-reel-v3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="reel-info">
+            <p>6-beat best-of cut from Tisha Campbell's 2020 appearance on The Real, where she became emotional announcing that her autistic son Xen had been accepted to his top choice college. Diagnosis at 23 months → mission of independence → Xen chose mom's house over dad's because she was "preparing him for college" → dream of being a zoologist → 10-year-old brother Zeke adds "mom, you're in my safe place." Uniform blur-fit crop preserves all shot compositions including the wide 5-person panel and the 2-shot cutaways to co-host Adrienne Bailon.</p>
+            <div class="meta-row">
+              <span class="meta gold">1080×1920</span>
+              <span class="meta">1:21</span>
+              <span class="meta">H.264 high</span>
+              <span class="meta">~22 MB</span>
+            </div>
+            <a href="FINAL-reel-v3.mp4" download class="btn">⬇ Download Reel (.mp4)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-info">
+          <h3>CAROUSEL</h3>
+          <div class="sub">4-slide Instagram carousel — 1080×1350</div>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="carousel-grid">
+
+        <div class="slide">
+          <div class="slide-thumb"><img src="carousel-v2/slide-1-cover.png" alt="Cover"></div>
+          <div class="slide-body">
+            <div class="slide-num">SLIDE 1 / 4</div>
+            <div class="slide-title">Cover</div>
+            <div class="slide-desc">Tisha smiling + play cue (1080×1350)</div>
+            <div class="slide-dl"><a href="carousel-v2/slide-1-cover.png" download>⬇ PNG</a></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-thumb"><video src="carousel-v2/slide-2-video.mp4" muted preload="metadata"></video><div class="play-overlay"></div></div>
+          <div class="slide-body">
+            <div class="slide-num">SLIDE 2 / 4</div>
+            <div class="slide-title">Branded clip</div>
+            <div class="slide-desc">6-beat best-of with karaoke captions (77s)</div>
+            <div class="slide-dl"><a href="carousel-v2/slide-2-video.mp4" download>⬇ MP4</a></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-thumb"><img src="carousel-v2/slide-3-quote.png" alt="Quote card"></div>
+          <div class="slide-body">
+            <div class="slide-num">SLIDE 3 / 4</div>
+            <div class="slide-title">Quote card</div>
+            <div class="slide-desc">Big Playfair Display pull quote</div>
+            <div class="slide-dl"><a href="carousel-v2/slide-3-quote.png" download>⬇ PNG</a></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-thumb"><img src="carousel-v2/slide-4-cta.png" alt="CTA / Ending"></div>
+          <div class="slide-body">
+            <div class="slide-num">SLIDE 4 / 4</div>
+            <div class="slide-title">CTA / Ending</div>
+            <div class="slide-desc">Save / Share / Follow + Tag prompt</div>
+            <div class="slide-dl"><a href="carousel-v2/slide-4-cta.png" download>⬇ PNG</a></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-info">
+          <h3>CAPTIONS</h3>
+          <div class="sub">Reel + carousel feed copy</div>
+        </div>
+      </div>
+      <div class="section-content">
+
+        <div class="caption-box">
+          <span class="label">🎬 REEL CAPTION</span>
+          <button class="copy-btn" onclick="copyText(this)">📋 Copy</button>
+          <div class="caption-text">"This is a boy who couldn't talk."
+Tisha Campbell's son Xen was diagnosed with autism at 23 months. At 18, he got into his top choice college. He chose mom's house because she was preparing him. 💛
+#autismmom #tishacampbell #autismawareness #autismparenting #raisethemstrong</div>
+        </div>
+
+        <div class="caption-box">
+          <span class="label">📱 FEED CAPTION (CAROUSEL)</span>
+          <button class="copy-btn" onclick="copyText(this)">📋 Copy</button>
+          <div class="caption-text">"This is a boy who couldn't talk."
+
+Tisha Campbell's son Xen was diagnosed with autism at 23 months old. On The Real, she broke down announcing that he had just been accepted to his top choice college — a school he'd talked about since he was eight. He wants to be a zoologist.
+
+But the most powerful part wasn't the college acceptance. It was how he got there.
+
+"Once I got the diagnosis," Tisha said, "I wanted him to be as independent of me as possible."
+
+At 18, Xen chose to live at her house over his father's. When his 10-year-old brother Zeke asked him why, Xen said: "Because she's preparing me for my life. She's preparing me for college. Here, we don't have maids. I do everything on my own. I open the car door for mommy. She allows me to be more of a man at her house."
+
+Then Zeke turned to Tisha and said, "Mom, you're in my safe place."
+
+"What 10-year-old says that to somebody?" Tisha whispered.
+
+People said Xen wasn't going to get into that school. He didn't wait for her. He didn't wait for his dad. He just did it. Straight-A student. Always on the Dean's list.
+
+This is autism advocacy in its most powerful form: raising them to not need you. Loving them so hard they learn to stand on their own. Refusing to accept the limits the world tried to place on them.
+
+🎥 Tisha Campbell on The Real, 2020
+💛 Her memoir "The A Word: A Mother's Journey Through Autism and Love" is coming
+
+#AutismMom #TishaCampbell #AutismParenting #XenMartin #AutismAwareness #IndependentAutism #RaiseThemStrong #AutismAdvocacy #AutismCommunity #AutismAcceptance</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+<script>
+function copyText(btn) {
+  const box = btn.closest('.caption-box');
+  const text = box.querySelector('.caption-text').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    showToast('Caption copied');
+    setTimeout(() => { btn.textContent = orig; }, 1500);
+  });
+}
+function showToast(msg) {
+  let t = document.querySelector('.toast');
+  if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.appendChild(t); }
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1800);
+}
+</script>
+
+</body>
+</html>

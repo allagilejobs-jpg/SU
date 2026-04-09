@@ -1,0 +1,9 @@
+# Tisha Campbell best-of cut plan - segments in seconds
+# Source: "Tisha Campbell Becomes Emotional Talking About Her Son" (The Real, 2020)
+# start    end       label
+15.80      23.90     diagnosis-disclosure
+23.90      31.60     independence-mission
+39.20      62.00     zen-why-live-with-mom
+108.30     117.60    zoologist-since-8
+133.90     139.80    he-didnt-wait
+152.38     175.44    safe-place-climax

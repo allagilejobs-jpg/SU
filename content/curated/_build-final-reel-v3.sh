@@ -87,11 +87,13 @@ build_branded_clip "content/curated/holly-peete"
 build_branded_clip "content/curated/ot-genasis"
 build_branded_clip "content/curated/faith-evans"
 build_branded_clip "content/curated/dan-orlovsky-madden"
+build_branded_clip "content/curated/tisha-campbell"
 
 build_reel "content/curated/holly-peete"
 build_reel "content/curated/ot-genasis"
 build_reel "content/curated/faith-evans"
 build_reel "content/curated/dan-orlovsky-madden"
+build_reel "content/curated/tisha-campbell"
 
 echo
 echo "DONE"

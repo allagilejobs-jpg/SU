@@ -77,6 +77,20 @@ ARTISTS = [
         "cta_sub": "14-year-old Madden Orlovsky told his family he loved them on national TV. His dad Dan couldn't hold it together. Neither could anyone watching.",
         "cta_button": "Tag a dad",
     },
+    {
+        "slug": "tisha-campbell",
+        "name": "Tisha Campbell",
+        "name_upper": "TISHA CAMPBELL",
+        "source": "via The Real",
+        "cover_headline_lines": ['"This Is A Boy', 'Who Couldn\'t Talk"'],
+        "quote_main": '"This is a boy who couldn\'t talk."',
+        "quote_attribution": "Tisha Campbell on her son Xen, now college-bound",
+        "photo": "cover-photo.png",
+        "cta_label": "TISHA'S TRUTH",
+        "cta_main": 'Raise them to <em>not</em><br>need you.',
+        "cta_sub": "Tisha Campbell's son Xen was diagnosed at 23 months. She raised him for independence. At 18, he chose her house because she was preparing him for college.",
+        "cta_button": "Tag a strong mom",
+    },
 ]
 
 FONT_LINK = '<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900:ital@0;1&display=swap" rel="stylesheet">'

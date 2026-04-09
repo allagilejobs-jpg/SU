@@ -39,6 +39,14 @@ ARTISTS = {
         "credit":     "via ESPN NFL Live",
         "photo":      "cover-photo.png",
     },
+    "tisha-campbell": {
+        "brand_main": "SPECTRUM",
+        "brand_sub":  "UNLOCKED",
+        "name":       "TISHA CAMPBELL",
+        "headline":   '"This Is A Boy<br>Who Couldn\'t Talk"',
+        "credit":     "via The Real",
+        "photo":      "cover-photo.png",
+    },
 }
 
 # ---------------------------------------------------------------------------
