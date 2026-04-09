@@ -1,0 +1,12 @@
+# Rodney Peete best-of cut plan - segments in seconds
+# Source: "Helping Your Autistic Child" (CBS Early Show Saturday Edition, 2010)
+# Note: SD source (640x480), upscaled via blur-fit
+# Narrative: denial -> acceptance arc from "Not My Boy!" book
+# start     end       label
+143.38     152.06     prognosis-heartbreak
+214.04     225.30     stuck-in-denial
+229.90     239.40     divergence-she-reads
+239.40     250.30     books-under-bed
+250.30     254.80     turning-point
+263.40     271.40     holly-warpath-middle
+134.70     140.30     victory-never-ever-do

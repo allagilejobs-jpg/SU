@@ -288,6 +288,56 @@ If you're early in this journey: there are parents 6 months ahead of you who are
         ],
     },
     {
+        "slug": "rodney-peete",
+        "name_main": "Rodney",
+        "name_em":   "Peete",
+        "name_full": "Rodney Peete",
+        "source":    "via CBS Early Show",
+        "quote":     '"I was stuck in denial." — Rodney Peete on his son RJ\'s autism diagnosis and the journey from denial to writing "Not My Boy!"',
+        "reel_file": "FINAL-reel-v3.mp4",
+        "reel_size": "~17 MB",
+        "reel_len":  "1:04",
+        "reel_desc": "7-beat best-of cut from Rodney Peete\'s 2010 CBS Early Show appearance with wife Holly Robinson Peete, promoting his book \"Not My Boy!\" The unfiltered DAD confession: the doctor\'s devastating prognosis → \"I was stuck in denial\" → he threw the books Holly gave him under the bed → his son\'s treatment embarrassed him into action → Holly\'s context (\"I went on the warpath and he retreated, we met in the middle\") → victory (doing things the doctor said he\'d never do). Uniform blur-fit crop preserves the 2-shot of Rodney and Holly on the Early Show couch. Note: SD source (640x480) upscaled.",
+        "reel_status": "ready",
+        "carousel": [
+            {"file": "carousel-v2/slide-1-cover.png",  "kind": "image", "title": "Cover",        "desc": "Rodney solemn close-up + play cue (1080×1350)"},
+            {"file": "carousel-v2/slide-2-video.mp4",  "kind": "video", "title": "Branded clip", "desc": "7-beat denial arc with karaoke captions (58s)"},
+            {"file": "carousel-v2/slide-3-quote.png",  "kind": "image", "title": "Quote card",   "desc": "Big Playfair Display pull quote"},
+            {"file": "carousel-v2/slide-4-cta.png",    "kind": "image", "title": "CTA / Ending", "desc": "Save / Share / Follow + Tag prompt"},
+        ],
+        "reel_caption": '''"I was stuck in denial."
+Rodney Peete — former NFL QB and Holly Robinson Peete's husband — threw the autism books his wife gave him under the bed. Then his son's treatment embarrassed him into action. 💛
+#autismdad #rodneypeete #notmyboy #autismacceptance #autismawareness''',
+        "feed_caption": '''"I was stuck in denial for a period of time, I really was."
+
+Rodney Peete — former NFL quarterback, husband to actress Holly Robinson Peete — on his son RJ's autism diagnosis.
+
+The doctor told them RJ would never play sports. Would never be able to say "I love you" to his parents.
+
+"I was stuck in being that father and that man who wanted to fix my son and really didn't pay attention to the signs, didn't pay attention to the education that I needed in order to communicate with him."
+
+While Holly was rolling up her sleeves, reading every book, talking to families, talking to doctors, and sending them to Rodney — he was throwing them under the bed unread.
+
+"It came to a point where I really had to almost get embarrassed by the treatment that was being given to him, and understand that I needed to put away all my expectations, come down to his level, and understand what autism is."
+
+Holly puts it this way: "I went on the warpath and he sort of retreated. We were blessed to meet in the middle."
+
+That reckoning became Rodney's book, "Not My Boy! A Father, a Son, and One Family's Journey with Autism."
+
+Today? RJ is doing a lot of things that doctor said he would never ever do.
+
+This is what the dad's journey through autism acceptance actually looks like — and why it's different from the mom's journey. Both are real. Both are needed.
+
+🎥 Rodney & Holly Robinson Peete on CBS Early Show Saturday Edition, 2010
+📖 "Not My Boy!" by Rodney Peete with Danelle Morton
+
+#AutismDad #RodneyPeete #HollyRobinsonPeete #NotMyBoy #AutismAcceptance #AutismAwareness #AutismParenting #FathersJourney #AutismFamily #HollyRod''',
+        "badges": [
+            ('<span class="meta gold">Reel ready</span>'),
+            ('<span class="meta">Carousel ready</span>'),
+        ],
+    },
+    {
         "slug": "tisha-campbell",
         "name_main": "Tisha",
         "name_em":   "Campbell",

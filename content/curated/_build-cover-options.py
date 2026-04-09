@@ -47,6 +47,14 @@ ARTISTS = {
         "credit":     "via The Real",
         "photo":      "cover-photo.png",
     },
+    "rodney-peete": {
+        "brand_main": "SPECTRUM",
+        "brand_sub":  "UNLOCKED",
+        "name":       "RODNEY PEETE",
+        "headline":   '"I Was Stuck<br>In Denial"',
+        "credit":     "via CBS Early Show",
+        "photo":      "cover-photo.png",
+    },
 }
 
 # ---------------------------------------------------------------------------

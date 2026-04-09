@@ -91,6 +91,20 @@ ARTISTS = [
         "cta_sub": "Tisha Campbell's son Xen was diagnosed at 23 months. She raised him for independence. At 18, he chose her house because she was preparing him for college.",
         "cta_button": "Tag a strong mom",
     },
+    {
+        "slug": "rodney-peete",
+        "name": "Rodney Peete",
+        "name_upper": "RODNEY PEETE",
+        "source": "via CBS Early Show",
+        "cover_headline_lines": ['"I Was Stuck', 'In Denial"'],
+        "quote_main": '"I was stuck in denial."',
+        "quote_attribution": "Rodney Peete on his son RJ's autism diagnosis",
+        "photo": "cover-photo.png",
+        "cta_label": "RODNEY'S CONFESSION",
+        "cta_main": 'Dads process autism<br><em>differently.</em>',
+        "cta_sub": "Rodney Peete was stuck in denial. He threw the books Holly gave him under the bed. Then his son's treatment embarrassed him into action — and he wrote \"Not My Boy!\"",
+        "cta_button": "Tag an autism dad",
+    },
 ]
 
 FONT_LINK = '<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900:ital@0;1&display=swap" rel="stylesheet">'
