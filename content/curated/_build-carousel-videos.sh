@@ -13,7 +13,7 @@ set -e
 
 # Step 1 - build 1080x1350 brand overlays from the 1920 ones by cropping
 #          the top 1350 pixels (all brand content is in the top ~420px)
-for slug in holly-peete ot-genasis faith-evans dan-orlovsky-madden tisha-campbell rodney-peete; do
+for slug in holly-peete ot-genasis faith-evans dan-orlovsky-madden tisha-campbell rodney-peete pete-wright; do
   DIR="content/curated/$slug"
   if [ -f "$DIR/brand-overlay-v2.png" ]; then
     ffmpeg -y -i "$DIR/brand-overlay-v2.png" \
@@ -71,3 +71,4 @@ build_carousel_video "content/curated/faith-evans"       "400"
 build_carousel_video "content/curated/dan-orlovsky-madden" "prefit"
 build_carousel_video "content/curated/tisha-campbell"    "prefit"
 build_carousel_video "content/curated/rodney-peete"      "prefit"
+build_carousel_video "content/curated/pete-wright"       "prefit"

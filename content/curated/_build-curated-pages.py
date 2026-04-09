@@ -288,6 +288,55 @@ If you're early in this journey: there are parents 6 months ahead of you who are
         ],
     },
     {
+        "slug": "pete-wright",
+        "name_main": "Pete",
+        "name_em":   "Wright, Esq.",
+        "name_full": "Pete Wright, Esq.",
+        "source":    "via Wrightslaw.com",
+        "quote":     '"Best is a four-letter word." — Pete Wright, founder of Wrightslaw.com, on the single word parents should never say in an IEP meeting.',
+        "reel_file": "FINAL-reel-v3.mp4",
+        "reel_size": "~18 MB",
+        "reel_len":  "1:37",
+        "reel_desc": "5-beat best-of cut from Pete Wright\'s 44-minute \"Top 10 IEP Mistakes\" interview with Dr. Roseann Capanna-Hodge. First reel in the roster from a non-celebrity expert — pure advocacy wisdom. Pete\'s personal origin (DC public schools wrote him off as \"retarded\" in kindergarten → his mom fought for a top-tier psychoeducational evaluation → she found Diana Hanbury King who taught him to read) → his signature IEP lesson (\"best\" is a four-letter word; it closes the door to quality services because by law your child is only entitled to FAPE, not to what is best) → the iconic hand-across-the-table moment where Pete trained parents to stop before they said the word \"best.\" This is the first artist with a 2-stage crop pipeline: source is a split-screen podcast (Dr. Roseann on left, Pete on right), so we pre-crop to just Pete\'s window (560x365 at x=680,y=155) before blur-fit to 1080x1920. Pete becomes the full-frame star, host\'s reactions are lost (acceptable for an expertise-focused reel). At 1:37, the longest reel in the roster — warranted by expertise-heavy content.",
+        "reel_status": "ready",
+        "carousel": [
+            {"file": "carousel-v2/slide-1-cover.png",  "kind": "image", "title": "Cover",        "desc": "Pete against sunset + play cue (1080×1350)"},
+            {"file": "carousel-v2/slide-2-video.mp4",  "kind": "video", "title": "Branded clip", "desc": "5-beat IEP advocacy lesson with karaoke (92s)"},
+            {"file": "carousel-v2/slide-3-quote.png",  "kind": "image", "title": "Quote card",   "desc": "Big Playfair Display pull quote"},
+            {"file": "carousel-v2/slide-4-cta.png",    "kind": "image", "title": "CTA / Ending", "desc": "Save / Share / Follow + Tag prompt"},
+        ],
+        "reel_caption": '''"Best is a four-letter word."
+Pete Wright — the man who built Wrightslaw after DC public schools told his mom he was "retarded" in kindergarten — on the ONE word parents should never say at an IEP meeting. 💛
+#IEP #Wrightslaw #specialeducation #autismparent #advocacy''',
+        "feed_caption": '''"Best is a four-letter word."
+
+Pete Wright, Esq. — the man who co-authored "Wrightslaw: Special Education Law" and trained a generation of parents how to advocate for their kids — has one rule he wants every IEP parent to follow:
+
+Never say the word "best."
+
+"When parents would come in to see me and they had an IEP meeting coming up, what I found so common with so many was that they wanted the school district to give the child a program that is best for their child. But if you say that at a meeting, you have now closed the door to your child getting quality services. Because by law, by case law, by statute, your child is not entitled to what is best. Your child is only entitled to a free, appropriate public education."
+
+"When they would use the word best, I would stop them. I'd put my hand up, right? I'd reach my hand across the table right almost to their face. I wanted to create a visceral gut reaction to that word. I wanted it paired with somebody coming and putting their hand in their face. So that they stopped saying it before it even came out of their mouth — because they knew that was a four-letter word."
+
+"Best is a four-letter word."
+
+The most powerful part of Pete's story? He gets WHY the system writes kids off — because it wrote him off. DC public schools told his parents in kindergarten that he was "ineligible, male retarded, emotionally disturbed, and really not much could be done about it." His mom said forget about it. She got him a top-of-the-line psychoeducational evaluation from George Washington University, found Diana Hanbury King (an Orton-Gillingham specialist who was world famous), and by sixth grade Pete was testing two years above grade level in every domain.
+
+"I am your adult dyslexic. That is the product of intense early intervention."
+
+That's why Pete fights for other people's kids. And that's why every parent going into an IEP meeting should know his rule.
+
+🎥 Pete Wright on "Top 10 IEP Mistakes" with Dr. Roseann Capanna-Hodge
+📖 Wrightslaw.com — the canonical resource for special education law
+🏛️ Pete argued the landmark Florence County School District v. Carter case in the US Supreme Court
+
+#IEP #Wrightslaw #SpecialEducationLaw #IEPAdvocate #AutismParent #DyslexiaDad #ParentAdvocacy #FAPE #IDEA #SpecialEducation''',
+        "badges": [
+            ('<span class="meta gold">Reel ready</span>'),
+            ('<span class="meta">Carousel ready</span>'),
+        ],
+    },
+    {
         "slug": "rodney-peete",
         "name_main": "Rodney",
         "name_em":   "Peete",

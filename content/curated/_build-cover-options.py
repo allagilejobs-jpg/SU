@@ -55,6 +55,14 @@ ARTISTS = {
         "credit":     "via CBS Early Show",
         "photo":      "cover-photo.png",
     },
+    "pete-wright": {
+        "brand_main": "SPECTRUM",
+        "brand_sub":  "UNLOCKED",
+        "name":       "PETE WRIGHT, ESQ",
+        "headline":   '"Best Is A<br>Four-Letter Word"',
+        "credit":     "via Wrightslaw.com",
+        "photo":      "cover-photo.png",
+    },
 }
 
 # ---------------------------------------------------------------------------

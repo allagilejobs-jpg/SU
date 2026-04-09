@@ -105,6 +105,20 @@ ARTISTS = [
         "cta_sub": "Rodney Peete was stuck in denial. He threw the books Holly gave him under the bed. Then his son's treatment embarrassed him into action — and he wrote \"Not My Boy!\"",
         "cta_button": "Tag an autism dad",
     },
+    {
+        "slug": "pete-wright",
+        "name": "Pete Wright, Esq.",
+        "name_upper": "PETE WRIGHT, ESQ.",
+        "source": "via Wrightslaw.com",
+        "cover_headline_lines": ['"Best Is A', 'Four-Letter Word"'],
+        "quote_main": '"Best is a four-letter word."',
+        "quote_attribution": "Pete Wright, founder of Wrightslaw, on IEP advocacy",
+        "photo": "cover-photo.png",
+        "cta_label": "PETE'S IEP RULE",
+        "cta_main": 'Never say<br><em>"best"</em> again.',
+        "cta_sub": "Pete Wright built Wrightslaw after DC public schools wrote him off as \"retarded\" in kindergarten. Today he teaches parents how to win IEP meetings — and it starts with never using the word \"best.\"",
+        "cta_button": "Tag an IEP parent",
+    },
 ]
 
 FONT_LINK = '<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900:ital@0;1&display=swap" rel="stylesheet">'

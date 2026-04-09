@@ -1,0 +1,11 @@
+# Pete Wright best-of cut plan - segments in seconds
+# Source: "Top 10 IEP Mistakes with Pete Wright, Esq. from Wrightslaw.com"
+#   Dr. Roseann Capanna-Hodge, 2023, 44:09 duration, YouTube 5RUq01Vel4A
+# Narrative: Pete's origin (mom fought for him when DC public schools wrote him
+# off) -> his signature teaching (the word "best" is a four-letter word at an IEP)
+# start     end       label
+179.00     196.60     dc-public-schools-wrote-me-off
+196.60     209.60     mom-got-top-eval
+259.00     265.00     product-of-early-intervention
+466.00     486.30     parents-want-best-but-law-says-no
+540.50     575.50     hand-across-table-four-letter-word

@@ -89,6 +89,7 @@ build_branded_clip "content/curated/faith-evans"
 build_branded_clip "content/curated/dan-orlovsky-madden"
 build_branded_clip "content/curated/tisha-campbell"
 build_branded_clip "content/curated/rodney-peete"
+build_branded_clip "content/curated/pete-wright"
 
 build_reel "content/curated/holly-peete"
 build_reel "content/curated/ot-genasis"
@@ -96,6 +97,7 @@ build_reel "content/curated/faith-evans"
 build_reel "content/curated/dan-orlovsky-madden"
 build_reel "content/curated/tisha-campbell"
 build_reel "content/curated/rodney-peete"
+build_reel "content/curated/pete-wright"
 
 echo
 echo "DONE"
