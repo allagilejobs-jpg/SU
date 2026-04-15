@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #E74C3C; bottom: -100px; left: -100px; }
+    .section-badge {
+      background: #E74C3C;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+    }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 60px; 
+      font-weight: 800; 
+      line-height: 1.2; 
+      margin-bottom: 50px;
+      color: #E74C3C;
+    }
+    .list-box {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid rgba(231, 76, 60, 0.3);
+      border-radius: 20px;
+      padding: 40px 50px;
+      max-width: 850px;
+      text-align: left;
+    }
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 20px 0;
+      font-size: 26px;
+      line-height: 1.4;
+    }
+    .bullet {
+      color: #E74C3C;
+      font-size: 32px;
+    }
+    .summary {
+      margin-top: 50px;
+      font-size: 30px;
+      font-weight: 700;
+      color: #E8B86D;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="section-badge">Meltdown</div>
+  
+  <div class="main-title">MELTDOWN</div>
+  
+  <div class="list-box">
+    <div class="list-item">
+      <span class="bullet">•</span>
+      <span>Neurological overload</span>
+    </div>
+    <div class="list-item">
+      <span class="bullet">•</span>
+      <span>NOT goal-oriented</span>
+    </div>
+    <div class="list-item">
+      <span class="bullet">•</span>
+      <span>Cannot stop on command</span>
+    </div>
+    <div class="list-item">
+      <span class="bullet">•</span>
+      <span>Not aware of audience</span>
+    </div>
+    <div class="list-item">
+      <span class="bullet">•</span>
+      <span>Needs safety, space, and time</span>
+    </div>
+  </div>
+  
+  <div class="summary">A meltdown is a nervous system crash.</div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

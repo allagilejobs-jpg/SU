@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .number-badge {
+      width: 100px; height: 100px;
+      background: #E8B86D;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px; font-weight: 800;
+      margin-bottom: 40px;
+    }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      line-height: 1.2; 
+      margin-bottom: 40px;
+      max-width: 900px;
+    }
+    .highlight { color: #4A90A4; }
+    .highlight-gold { color: #E8B86D; }
+    .content-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+    }
+    .content-text {
+      font-size: 28px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    .highlight-box {
+      background: rgba(74, 144, 164, 0.2);
+      border-left: 5px solid #4A90A4;
+      padding: 25px 30px;
+      margin-top: 30px;
+      border-radius: 0 15px 15px 0;
+      text-align: left;
+    }
+    .highlight-box p {
+      font-size: 24px;
+      font-weight: 600;
+      color: #4A90A4;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 20px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  
+  <div class="number-badge">1</div>
+  
+  <div class="main-title">
+    Therapy waitlists are <span class="highlight-gold">6-12 months</span> long
+  </div>
+  
+  <div class="content-box">
+    <div class="content-text">
+      Get on them NOW, even if you're not sure which therapy is right.
+    </div>
+    <div class="highlight-box">
+      <p>You can always say no when they call. But you can't get that time back.</p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
