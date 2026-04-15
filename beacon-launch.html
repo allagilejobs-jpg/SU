@@ -501,6 +501,63 @@
     
     .toast.show { opacity: 1; }
     
+    .graphic-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #0f3460;
+      border-radius: 12px;
+    }
+    
+    .graphic-preview img {
+      border: 2px solid #2a4a6e;
+      transition: transform 0.2s;
+    }
+    
+    .graphic-preview img:hover {
+      transform: scale(1.02);
+      border-color: #E67E22;
+    }
+    
+    .download-btn {
+      display: inline-block;
+      background: #27AE60;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    
+    .download-btn:hover {
+      background: #2ecc71;
+    }
+    
+    .slides-grid {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+    
+    .slides-grid img {
+      width: 80px;
+      border-radius: 8px;
+      border: 2px solid #2a4a6e;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .slides-grid img:hover {
+      border-color: #E67E22;
+      transform: scale(1.05);
+    }
+    
     .demo-placeholder {
       background: #0f3460;
       border: 2px dashed #2a4a6e;
@@ -658,6 +715,12 @@
       <div class="post-date">Day 1</div>
     </div>
     <div class="post-content">
+      <div class="graphic-preview">
+        <a href="content/beacon-week1-start-here/slide-01-cover.png" target="_blank">
+          <img src="content/beacon-week1-start-here/slide-01-cover.png" alt="Start Here Graphic" style="width: 200px; border-radius: 12px; margin-bottom: 15px;">
+        </a>
+        <a href="content/beacon-week1-start-here/slide-01-cover.png" download class="download-btn">⬇️ Download PNG</a>
+      </div>
       <div class="caption-box" id="caption-w1-pin">If you just got an autism diagnosis for your child and you're Googling at 2am: you're in the right place.
 
 If you're prepping for an IEP meeting and feel like you're drowning: you're in the right place.
@@ -689,11 +752,23 @@ Save this post. You'll need it at 2am.
       <div class="post-num">1</div>
       <div class="post-info">
         <h3>5 Things I Wish Someone Told Me</h3>
-        <div class="post-type">FB + IG | List Post</div>
+        <div class="post-type">FB + IG | 7-Slide Carousel</div>
       </div>
       <div class="post-date">Day 2</div>
     </div>
     <div class="post-content">
+      <div class="graphic-preview">
+        <div class="slides-grid">
+          <a href="content/beacon-week1-5-things/slide-01-cover.png" target="_blank"><img src="content/beacon-week1-5-things/slide-01-cover.png" alt="Slide 1"></a>
+          <a href="content/beacon-week1-5-things/slide-02-waitlists.png" target="_blank"><img src="content/beacon-week1-5-things/slide-02-waitlists.png" alt="Slide 2"></a>
+          <a href="content/beacon-week1-5-things/slide-03-pediatrician.png" target="_blank"><img src="content/beacon-week1-5-things/slide-03-pediatrician.png" alt="Slide 3"></a>
+          <a href="content/beacon-week1-5-things/slide-04-iep.png" target="_blank"><img src="content/beacon-week1-5-things/slide-04-iep.png" alt="Slide 4"></a>
+          <a href="content/beacon-week1-5-things/slide-05-village.png" target="_blank"><img src="content/beacon-week1-5-things/slide-05-village.png" alt="Slide 5"></a>
+          <a href="content/beacon-week1-5-things/slide-06-same-kid.png" target="_blank"><img src="content/beacon-week1-5-things/slide-06-same-kid.png" alt="Slide 6"></a>
+          <a href="content/beacon-week1-5-things/slide-07-cta.png" target="_blank"><img src="content/beacon-week1-5-things/slide-07-cta.png" alt="Slide 7"></a>
+        </div>
+        <a href="content/beacon-week1-5-things/" class="download-btn">📁 Open Folder</a>
+      </div>
       <div class="caption-box" id="caption-w1-1">5 things I wish someone told me the week my child was diagnosed:
 
 1. Therapy waitlists are 6-12 months long. Get on them NOW, even if you're not sure which therapy is right. You can always say no when they call.
@@ -720,11 +795,21 @@ What would you add? Drop it below 👇
       <div class="post-num">2</div>
       <div class="post-info">
         <h3>IEP Meeting Tomorrow</h3>
-        <div class="post-type">FB + IG | Tactical Checklist</div>
+        <div class="post-type">FB + IG | 5-Slide Carousel</div>
       </div>
       <div class="post-date">Day 4</div>
     </div>
     <div class="post-content">
+      <div class="graphic-preview">
+        <div class="slides-grid">
+          <a href="content/beacon-week1-iep-checklist/slide-01-cover.png" target="_blank"><img src="content/beacon-week1-iep-checklist/slide-01-cover.png" alt="Slide 1"></a>
+          <a href="content/beacon-week1-iep-checklist/slide-02-before.png" target="_blank"><img src="content/beacon-week1-iep-checklist/slide-02-before.png" alt="Slide 2"></a>
+          <a href="content/beacon-week1-iep-checklist/slide-03-during.png" target="_blank"><img src="content/beacon-week1-iep-checklist/slide-03-during.png" alt="Slide 3"></a>
+          <a href="content/beacon-week1-iep-checklist/slide-04-pushback.png" target="_blank"><img src="content/beacon-week1-iep-checklist/slide-04-pushback.png" alt="Slide 4"></a>
+          <a href="content/beacon-week1-iep-checklist/slide-05-cta.png" target="_blank"><img src="content/beacon-week1-iep-checklist/slide-05-cta.png" alt="Slide 5"></a>
+        </div>
+        <a href="content/beacon-week1-iep-checklist/" class="download-btn">📁 Open Folder</a>
+      </div>
       <div class="caption-box" id="caption-w1-2">IEP meeting tomorrow? Screenshot this.
 
 Before you walk in:
@@ -758,11 +843,21 @@ Save this. Share it with a parent who has a meeting coming up.
       <div class="post-num">3</div>
       <div class="post-info">
         <h3>Meltdown vs Tantrum</h3>
-        <div class="post-type">FB + IG | Educational</div>
+        <div class="post-type">FB + IG | 5-Slide Carousel</div>
       </div>
       <div class="post-date">Day 6</div>
     </div>
     <div class="post-content">
+      <div class="graphic-preview">
+        <div class="slides-grid">
+          <a href="content/beacon-week1-meltdown/slide-01-cover.png" target="_blank"><img src="content/beacon-week1-meltdown/slide-01-cover.png" alt="Slide 1"></a>
+          <a href="content/beacon-week1-meltdown/slide-02-tantrum.png" target="_blank"><img src="content/beacon-week1-meltdown/slide-02-tantrum.png" alt="Slide 2"></a>
+          <a href="content/beacon-week1-meltdown/slide-03-meltdown.png" target="_blank"><img src="content/beacon-week1-meltdown/slide-03-meltdown.png" alt="Slide 3"></a>
+          <a href="content/beacon-week1-meltdown/slide-04-key.png" target="_blank"><img src="content/beacon-week1-meltdown/slide-04-key.png" alt="Slide 4"></a>
+          <a href="content/beacon-week1-meltdown/slide-05-cta.png" target="_blank"><img src="content/beacon-week1-meltdown/slide-05-cta.png" alt="Slide 5"></a>
+        </div>
+        <a href="content/beacon-week1-meltdown/" class="download-btn">📁 Open Folder</a>
+      </div>
       <div class="caption-box" id="caption-w1-3">"They're just throwing a tantrum."
 
 No. Here's the difference:
