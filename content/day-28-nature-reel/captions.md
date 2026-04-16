@@ -71,7 +71,7 @@ What's your favorite outdoor spot? Share below!
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 28: Nature and Sensory Benefits
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

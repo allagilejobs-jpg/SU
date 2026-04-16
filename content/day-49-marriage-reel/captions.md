@@ -80,7 +80,7 @@ How do you stay connected? Share below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 49: Marriage & Autism Parenting
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

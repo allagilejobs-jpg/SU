@@ -67,7 +67,7 @@ Which one are you trying first? Comment below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 14: Visual Supports That Work
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

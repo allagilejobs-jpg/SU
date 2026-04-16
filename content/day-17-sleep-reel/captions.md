@@ -91,7 +91,7 @@ What helps YOUR child sleep? Share below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Sleep Issues in Autism: What Actually Helps
 
 **Description:** Melatonin isn't the only answer. Save this guide for tips that actually work.
 

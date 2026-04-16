@@ -73,7 +73,7 @@ How do you support your glass child? Share your tips below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 31: Glass Child / Siblings
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

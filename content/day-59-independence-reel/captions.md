@@ -87,7 +87,7 @@ What skill are you working on? Share your wins below! 🎉
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 59: Building Independence
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

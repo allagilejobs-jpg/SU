@@ -73,7 +73,7 @@ Which one will you try first? Comment below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** 5 Sensory Hacks That Actually Work
 
 **Description:** OT-approved tips for meltdown prevention. Save this guide for tips that actually work.
 

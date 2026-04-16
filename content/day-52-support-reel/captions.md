@@ -77,7 +77,7 @@ Who's in your village? Tag them below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 52: Building Your Support System
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

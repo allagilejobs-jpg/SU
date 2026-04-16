@@ -67,7 +67,7 @@ What's your best summer hack? Share below! ☀️
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 38: Summer Prep for Autism Families
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

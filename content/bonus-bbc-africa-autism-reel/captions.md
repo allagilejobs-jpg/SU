@@ -99,7 +99,7 @@ Output will be `FINAL-bbc-africa-autism-reel.mp4`
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Bonus: BBC Africa Eye - Life on the Spectrum
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

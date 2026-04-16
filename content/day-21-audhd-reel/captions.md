@@ -68,7 +68,7 @@ Comment "ME" if you relate!
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 21: AuDHD — Autism + ADHD
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

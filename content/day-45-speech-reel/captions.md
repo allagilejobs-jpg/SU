@@ -79,7 +79,7 @@ What's your speech therapy tip? Share below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 45: Speech Therapy & AAC
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

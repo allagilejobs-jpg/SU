@@ -21,7 +21,7 @@ see calendar for feed caption
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Autism Acceptance Month
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

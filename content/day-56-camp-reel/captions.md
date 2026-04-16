@@ -79,7 +79,7 @@ Any camp recommendations? Share below! 🏕️
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 56: Summer Camps for Autistic Kids
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

@@ -89,7 +89,7 @@ What resource would you add to this list? Drop it below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 35: Resources Toolkit
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

@@ -21,7 +21,7 @@ see calendar for feed caption
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 62: 5 FREE Sensory Summer Activities
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

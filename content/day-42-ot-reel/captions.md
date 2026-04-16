@@ -83,7 +83,7 @@ Has OT helped your child? Share below! 👇
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 42: Occupational Therapy Deep Dive
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

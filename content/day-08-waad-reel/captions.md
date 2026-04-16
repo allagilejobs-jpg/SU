@@ -83,7 +83,7 @@ The pride. The exhaustion. The love. The advocacy. All at once.
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** World Autism Acceptance Day - "Autism and Humanity — Every Life Has Value"
 
 **Description:** Today we don't just spread awareness. We celebrate humanity. Save this guide for tips that actually work.
 

@@ -21,7 +21,7 @@ see calendar for feed caption
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 86: Sensory Seeking VS Avoiding
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 

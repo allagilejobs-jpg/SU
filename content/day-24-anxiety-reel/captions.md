@@ -69,7 +69,7 @@ What helps your child? Share in the comments!
 
 ## 📌 Pinterest
 
-**Title:** Character count:
+**Title:** Day 24: Autism and Anxiety
 
 **Description:** Save this guide for practical tips that actually work for autism families.
 
