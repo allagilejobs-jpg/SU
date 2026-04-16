@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1000px; 
+      height: 1500px; 
+      font-family: 'Poppins', sans-serif; 
+      color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      padding: 60px 50px;
+      position: relative; 
+      overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; top: -100px; left: -100px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #E74C3C; bottom: 200px; right: -100px; }
+    
+    .badge { 
+      background: #E8B86D; 
+      color: #1a1a2e;
+      padding: 12px 30px; 
+      border-radius: 30px; 
+      font-size: 16px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+    }
+    
+    .quote {
+      font-size: 26px;
+      font-style: italic;
+      opacity: 0.7;
+      margin-bottom: 25px;
+    }
+    
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 50px; 
+      font-weight: 800; 
+      line-height: 1.15; 
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .highlight-teal { color: #4A90A4; }
+    .highlight-red { color: #E74C3C; }
+    .vs { color: #E8B86D; margin: 0 15px; }
+    
+    .comparison {
+      display: flex;
+      gap: 25px;
+      width: 100%;
+      margin-bottom: 35px;
+    }
+    
+    .compare-box {
+      flex: 1;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: left;
+    }
+    
+    .compare-box.tantrum {
+      background: rgba(74, 144, 164, 0.15);
+      border-top: 5px solid #4A90A4;
+    }
+    
+    .compare-box.meltdown {
+      background: rgba(231, 76, 60, 0.15);
+      border-top: 5px solid #E74C3C;
+    }
+    
+    .compare-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .compare-box.tantrum .compare-title { color: #4A90A4; }
+    .compare-box.meltdown .compare-title { color: #E74C3C; }
+    
+    .compare-list {
+      list-style: none;
+    }
+    
+    .compare-list li {
+      padding: 10px 0;
+      font-size: 17px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .compare-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .compare-box.tantrum .compare-list li::before {
+      content: "•";
+      color: #4A90A4;
+      font-weight: bold;
+    }
+    
+    .compare-box.meltdown .compare-list li::before {
+      content: "•";
+      color: #E74C3C;
+      font-weight: bold;
+    }
+    
+    .summary {
+      display: flex;
+      gap: 25px;
+      width: 100%;
+      margin-bottom: 35px;
+    }
+    
+    .summary-box {
+      flex: 1;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    
+    .summary-box.tantrum {
+      background: rgba(74, 144, 164, 0.2);
+      color: #4A90A4;
+    }
+    
+    .summary-box.meltdown {
+      background: rgba(231, 76, 60, 0.2);
+      color: #E74C3C;
+    }
+    
+    .insight {
+      background: rgba(232, 184, 109, 0.15);
+      border-left: 5px solid #E8B86D;
+      padding: 25px 30px;
+      border-radius: 0 15px 15px 0;
+      font-size: 22px;
+      line-height: 1.5;
+      text-align: center;
+      color: #E8B86D;
+      font-weight: 600;
+    }
+    
+    .footer { 
+      position: absolute; 
+      bottom: 40px; 
+      text-align: center; 
+    }
+    .handle { 
+      font-size: 20px; 
+      opacity: 0.5; 
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="badge">🧠 Education</div>
+  
+  <div class="quote">"They're just throwing a tantrum."</div>
+  
+  <div class="main-title">
+    <span class="highlight-red">Meltdown</span><span class="vs">vs</span><span class="highlight-teal">Tantrum</span>
+  </div>
+  
+  <div class="comparison">
+    <div class="compare-box tantrum">
+      <div class="compare-title">Tantrum</div>
+      <ul class="compare-list">
+        <li>Goal-oriented</li>
+        <li>Stops when they get what they want</li>
+        <li>Aware of audience</li>
+        <li>Can be redirected</li>
+      </ul>
+    </div>
+    <div class="compare-box meltdown">
+      <div class="compare-title">Meltdown</div>
+      <ul class="compare-list">
+        <li>Neurological overload</li>
+        <li>Cannot stop on command</li>
+        <li>Not aware of audience</li>
+        <li>Needs safety + time</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="summary">
+    <div class="summary-box tantrum">You can discipline</div>
+    <div class="summary-box meltdown">You can only support</div>
+  </div>
+  
+  <div class="insight">
+    Understanding this changed everything for our family.
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

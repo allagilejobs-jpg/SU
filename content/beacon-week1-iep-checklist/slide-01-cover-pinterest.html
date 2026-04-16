@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1000px; 
+      height: 1500px; 
+      font-family: 'Poppins', sans-serif; 
+      color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      padding: 60px 50px;
+      position: relative; 
+      overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #9B59B6; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #E8B86D; bottom: 100px; left: -100px; }
+    
+    .badge { 
+      background: #9B59B6; 
+      padding: 12px 30px; 
+      border-radius: 30px; 
+      font-size: 16px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+    }
+    
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      line-height: 1.15; 
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .highlight-gold { color: #E8B86D; }
+    
+    .subtitle {
+      font-size: 22px;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+    
+    .section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    
+    .section-badge {
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .section-badge.before { background: #9B59B6; }
+    .section-badge.during { background: #4A90A4; }
+    .section-badge.pushback { background: #E74C3C; }
+    
+    .checklist {
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 20px 25px;
+    }
+    
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      font-size: 18px;
+      line-height: 1.4;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .checklist-item:last-child {
+      border-bottom: none;
+    }
+    
+    .checkbox {
+      width: 22px;
+      height: 22px;
+      border: 2px solid currentColor;
+      border-radius: 5px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .section.before .checkbox { border-color: #9B59B6; }
+    .section.during .checkbox { border-color: #4A90A4; }
+    .section.pushback .checkbox { border-color: #E74C3C; }
+    
+    .cta {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #E8B86D;
+      text-align: center;
+    }
+    
+    .footer { 
+      position: absolute; 
+      bottom: 40px; 
+      text-align: center; 
+    }
+    .handle { 
+      font-size: 20px; 
+      opacity: 0.5; 
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="badge">📋 IEP Tips</div>
+  
+  <div class="main-title">
+    IEP Meeting <span class="highlight-gold">Checklist</span>
+  </div>
+  
+  <div class="subtitle">Screenshot this for your next meeting</div>
+  
+  <div class="section before">
+    <div class="section-header">
+      <span class="section-badge before">Before</span>
+    </div>
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>Request draft IEP 3 days early (your right!)</span>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>Write down your top 3 priorities</span>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>Bring someone with you if possible</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section during">
+    <div class="section-header">
+      <span class="section-badge during">During</span>
+    </div>
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>Ask them to explain anything unclear</span>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>Take notes or record (check state laws)</span>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>You do NOT have to sign same-day</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section pushback">
+    <div class="section-header">
+      <span class="section-badge pushback">If They Say No</span>
+    </div>
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>Ask for the denial in writing</span>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>Request the specific policy they're citing</span>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <span>"I'd like to revisit this at a follow-up"</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="cta">You are the expert on your child 💪</div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
