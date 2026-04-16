@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
+    .blog-badge { display: inline-block; background: #E8B86D; color: #1a1a2e; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .title { font-size: 52px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+    .subtitle { font-size: 20px; color: #aaa; }
+    .comparison { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .side { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; border: 3px solid; }
+    .side.iep { border-color: #4A90A4; }
+    .side.plan504 { border-color: #E8B86D; }
+    .side-title { font-size: 32px; font-weight: 800; text-align: center; margin-bottom: 20px; }
+    .side.iep .side-title { color: #4A90A4; }
+    .side.plan504 .side-title { color: #E8B86D; }
+    .items { display: flex; flex-direction: column; gap: 12px; }
+    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; }
+    .item span { flex-shrink: 0; }
+    .side.iep .item span { color: #4A90A4; }
+    .side.plan504 .item span { color: #E8B86D; }
+    .bottom-tip { background: rgba(39, 174, 96, 0.15); border-radius: 16px; padding: 20px; text-align: center; margin-top: 20px; grid-column: 1 / -1; }
+    .tip-text { font-size: 18px; color: #27AE60; font-weight: 600; }
+    .read-box { background: linear-gradient(135deg, #E8B86D 0%, #D4A05A 100%); color: #1a1a2e; border-radius: 16px; padding: 20px; text-align: center; grid-column: 1 / -1; }
+    .read-text { font-size: 20px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.8; margin-top: 5px; }
+    .footer { text-align: center; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title">IEP vs 504 Plan</h1>
+    <p class="subtitle">Which does your autistic child need?</p>
+  </div>
+  <div class="comparison">
+    <div class="side iep">
+      <div class="side-title">IEP</div>
+      <div class="items">
+        <div class="item"><span>✓</span> Specialized instruction</div>
+        <div class="item"><span>✓</span> Individualized goals</div>
+        <div class="item"><span>✓</span> Progress monitoring</div>
+        <div class="item"><span>✓</span> Related services (OT, Speech)</div>
+        <div class="item"><span>✓</span> Legal protections under IDEA</div>
+        <div class="item"><span>✓</span> Annual review required</div>
+        <div class="item"><span>✓</span> For kids who need specialized teaching</div>
+      </div>
+    </div>
+    <div class="side plan504">
+      <div class="side-title">504</div>
+      <div class="items">
+        <div class="item"><span>✓</span> Accommodations only</div>
+        <div class="item"><span>✓</span> No specialized instruction</div>
+        <div class="item"><span>✓</span> Less paperwork</div>
+        <div class="item"><span>✓</span> Faster to set up</div>
+        <div class="item"><span>✓</span> Civil rights protection</div>
+        <div class="item"><span>✓</span> Less formal review</div>
+        <div class="item"><span>✓</span> For kids who just need accommodations</div>
+      </div>
+    </div>
+    <div class="bottom-tip">
+      <div class="tip-text">💡 Not sure? Start with IEP request. You can always move to 504 later.</div>
+    </div>
+    <div class="read-box">
+      <div class="read-text">📖 Read the Full Comparison</div>
+      <div class="read-url">spectrumunlocked.com/blog</div>
+    </div>
+  </div>
+  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
+</body>
+</html>

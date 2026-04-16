@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
+    .blog-badge { display: inline-block; background: #E74C3C; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .title { font-size: 46px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+    .title span { color: #E74C3C; }
+    .subtitle { font-size: 20px; color: #aaa; }
+    .scenario { background: rgba(231, 76, 60, 0.15); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 25px; font-size: 18px; font-style: italic; }
+    .content { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+    .section { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; }
+    .section-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+    .section.do .section-title { color: #27AE60; }
+    .section.dont .section-title { color: #E74C3C; }
+    .section.strangers .section-title { color: #E8B86D; }
+    .items { display: flex; flex-direction: column; gap: 8px; }
+    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; }
+    .section.do .item span { color: #27AE60; }
+    .section.dont .item span { color: #E74C3C; }
+    .section.strangers .item span { color: #E8B86D; }
+    .read-box { background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%); border-radius: 16px; padding: 25px; text-align: center; margin-top: 15px; }
+    .read-text { font-size: 22px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
+    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title">How to Handle <span>Public Meltdowns</span></h1>
+    <p class="subtitle">Without shame</p>
+  </div>
+  <div class="scenario">"Your child is on the floor of Target and everyone is staring."</div>
+  <div class="content">
+    <div class="section do">
+      <div class="section-title">✓ In the Moment: DO</div>
+      <div class="items">
+        <div class="item"><span>✓</span> Get low, speak quietly</div>
+        <div class="item"><span>✓</span> Reduce sensory input (lights, sounds)</div>
+        <div class="item"><span>✓</span> Offer comfort items or stims</div>
+        <div class="item"><span>✓</span> Wait it out safely — don't rush</div>
+        <div class="item"><span>✓</span> Move to a quieter space if possible</div>
+      </div>
+    </div>
+    <div class="section dont">
+      <div class="section-title">✕ In the Moment: DON'T</div>
+      <div class="items">
+        <div class="item"><span>✕</span> Try to reason or lecture</div>
+        <div class="item"><span>✕</span> Raise your voice</div>
+        <div class="item"><span>✕</span> Physically force compliance</div>
+        <div class="item"><span>✕</span> Threaten or punish</div>
+      </div>
+    </div>
+    <div class="section strangers">
+      <div class="section-title">👀 For Judgmental Strangers</div>
+      <div class="items">
+        <div class="item"><span>→</span> "My child is autistic. We're okay."</div>
+        <div class="item"><span>→</span> Carry cards explaining autism</div>
+        <div class="item"><span>→</span> Ignore them — your child comes first</div>
+        <div class="item"><span>→</span> Remember: their opinion doesn't matter</div>
+      </div>
+    </div>
+  </div>
+  <div class="read-box">
+    <div class="read-text">📖 Read Prevention Tips</div>
+    <div class="read-url">spectrumunlocked.com/blog</div>
+  </div>
+  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
+</body>
+</html>

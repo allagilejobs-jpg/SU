@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
+    .blog-badge { display: inline-block; background: #4A90A4; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .title { font-size: 46px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+    .title span { color: #4A90A4; }
+    .subtitle { font-size: 18px; color: #aaa; }
+    .content { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .therapy { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; border-left: 4px solid; }
+    .therapy:nth-child(1) { border-color: #4A90A4; }
+    .therapy:nth-child(2) { border-color: #E8B86D; }
+    .therapy:nth-child(3) { border-color: #27AE60; }
+    .therapy:nth-child(4) { border-color: #9B59B6; }
+    .therapy:nth-child(5) { border-color: #E74C3C; }
+    .therapy:nth-child(6) { border-color: #3498DB; }
+    .therapy-name { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .therapy:nth-child(1) .therapy-name { color: #4A90A4; }
+    .therapy:nth-child(2) .therapy-name { color: #E8B86D; }
+    .therapy:nth-child(3) .therapy-name { color: #27AE60; }
+    .therapy:nth-child(4) .therapy-name { color: #9B59B6; }
+    .therapy:nth-child(5) .therapy-name { color: #E74C3C; }
+    .therapy:nth-child(6) .therapy-name { color: #3498DB; }
+    .therapy-desc { font-size: 14px; color: #aaa; line-height: 1.4; }
+    .read-box { background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%); border-radius: 16px; padding: 20px; text-align: center; grid-column: 1 / -1; }
+    .read-text { font-size: 20px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.9; margin-top: 5px; }
+    .footer { text-align: center; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title">Autism <span>Therapies</span> Explained</h1>
+    <p class="subtitle">ABA, OT, Speech & More — Plain language guide</p>
+  </div>
+  <div class="content">
+    <div class="therapy">
+      <div class="therapy-name">🗣️ Speech Therapy</div>
+      <div class="therapy-desc">Communication skills, AAC, social language, articulation. Often first recommended.</div>
+    </div>
+    <div class="therapy">
+      <div class="therapy-name">🤸 Occupational Therapy (OT)</div>
+      <div class="therapy-desc">Sensory processing, fine motor, daily living skills, self-regulation.</div>
+    </div>
+    <div class="therapy">
+      <div class="therapy-name">🎯 ABA Therapy</div>
+      <div class="therapy-desc">Behavior-based learning. Controversial but common. Ask about play-based approaches.</div>
+    </div>
+    <div class="therapy">
+      <div class="therapy-name">🏃 Physical Therapy</div>
+      <div class="therapy-desc">Gross motor, coordination, balance, body awareness.</div>
+    </div>
+    <div class="therapy">
+      <div class="therapy-name">🧠 Developmental (DIR/Floortime)</div>
+      <div class="therapy-desc">Relationship-based, follows child's lead, builds emotional connections.</div>
+    </div>
+    <div class="therapy">
+      <div class="therapy-name">👥 Social Skills Groups</div>
+      <div class="therapy-desc">Peer interaction, social rules, friendship skills in group setting.</div>
+    </div>
+    <div class="read-box">
+      <div class="read-text">📖 Read Full Guide + Red Flags</div>
+      <div class="read-url">spectrumunlocked.com/blog</div>
+    </div>
+  </div>
+  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
+</body>
+</html>

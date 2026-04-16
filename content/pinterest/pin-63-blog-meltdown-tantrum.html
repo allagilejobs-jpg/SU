@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
+    .blog-badge { display: inline-block; background: #E74C3C; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .title { font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+    .title span { color: #E74C3C; }
+    .subtitle { font-size: 18px; color: #aaa; }
+    .quote { background: rgba(231, 76, 60, 0.15); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 25px; font-size: 20px; font-style: italic; }
+    .comparison { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .side { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; border: 3px solid; }
+    .side.meltdown { border-color: #E74C3C; }
+    .side.tantrum { border-color: #E8B86D; }
+    .side-title { font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 18px; }
+    .side.meltdown .side-title { color: #E74C3C; }
+    .side.tantrum .side-title { color: #E8B86D; }
+    .items { display: flex; flex-direction: column; gap: 12px; }
+    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; }
+    .side.meltdown .item span { color: #E74C3C; }
+    .side.tantrum .item span { color: #E8B86D; }
+    .read-box { background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%); border-radius: 16px; padding: 20px; text-align: center; grid-column: 1 / -1; }
+    .read-text { font-size: 20px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.9; margin-top: 5px; }
+    .footer { text-align: center; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title"><span>Meltdown</span> vs <span>Tantrum</span></h1>
+    <p class="subtitle">Why it matters</p>
+  </div>
+  <div class="quote">"Your child isn't giving you a hard time. They're having a hard time."</div>
+  <div class="comparison">
+    <div class="side meltdown">
+      <div class="side-title">Meltdown</div>
+      <div class="items">
+        <div class="item"><span>→</span> Neurological overwhelm</div>
+        <div class="item"><span>→</span> No goal or demand</div>
+        <div class="item"><span>→</span> Can't be reasoned with</div>
+        <div class="item"><span>→</span> Happens with or without audience</div>
+        <div class="item"><span>→</span> Takes time to recover</div>
+        <div class="item"><span>→</span> Child is genuinely distressed</div>
+        <div class="item"><span>→</span> Response: safety, reduce stimuli, wait</div>
+      </div>
+    </div>
+    <div class="side tantrum">
+      <div class="side-title">Tantrum</div>
+      <div class="items">
+        <div class="item"><span>→</span> Goal-oriented behavior</div>
+        <div class="item"><span>→</span> Wants something specific</div>
+        <div class="item"><span>→</span> Responds to negotiation</div>
+        <div class="item"><span>→</span> Checks if someone is watching</div>
+        <div class="item"><span>→</span> Stops when goal is met/given up</div>
+        <div class="item"><span>→</span> More in control</div>
+        <div class="item"><span>→</span> Response: stay calm, hold boundaries</div>
+      </div>
+    </div>
+    <div class="read-box">
+      <div class="read-text">📖 Read How to Respond to Each</div>
+      <div class="read-url">spectrumunlocked.com/blog</div>
+    </div>
+  </div>
+  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
+</body>
+</html>
