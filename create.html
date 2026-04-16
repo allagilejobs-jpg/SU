@@ -239,6 +239,59 @@
     
     .toast.show { opacity: 1; }
     
+    /* Size Selector */
+    .size-selector {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .size-btn {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .size-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    .size-btn.active {
+      background: #E8B86D;
+      border-color: #E8B86D;
+      color: #1a1a2e;
+    }
+    
+    /* Pinterest Preview Sizes - 2:3 ratio (1000x1500 final) */
+    .pinterest-preview .post {
+      width: 200px !important;
+      height: 300px !important;
+    }
+    
+    .pinterest-preview .quote-post,
+    .pinterest-preview .tip-post,
+    .pinterest-preview .list-post,
+    .pinterest-preview .myth-post,
+    .pinterest-preview .resource-post,
+    .pinterest-preview .emotional-post {
+      width: 200px !important;
+      height: 300px !important;
+    }
+    
+    /* Adjust font sizes for Pinterest taller format */
+    .pinterest-preview .quote-text { font-size: 13px !important; }
+    .pinterest-preview .tip-title { font-size: 14px !important; }
+    .pinterest-preview .list-title { font-size: 12px !important; }
+    .pinterest-preview .section-text { font-size: 10px !important; }
+    
     /* ========== TEMPLATE STYLES ========== */
     .post {
       width: 270px;
@@ -400,6 +453,10 @@
 <div class="header">
   <div class="day-badge" id="dayBadge">Day 1</div>
   <h1 id="headerTitle">Loading...</h1>
+  <div class="size-selector" style="margin-top: 15px;">
+    <button class="size-btn active" data-size="instagram" onclick="setSize('instagram')">📸 Instagram (1080×1350)</button>
+    <button class="size-btn" data-size="pinterest" onclick="setSize('pinterest')">📌 Pinterest (1000×1500)</button>
+  </div>
 </div>
 
 <div class="container">
@@ -1018,7 +1075,7 @@ function downloadGraphic() {
   if (!element) return;
   
   html2canvas(element, {
-    scale: 4,
+    scale: getScaleForSize(),
     useCORS: true,
     allowTaint: true,
     backgroundColor: null
@@ -1026,10 +1083,11 @@ function downloadGraphic() {
     const link = document.createElement('a');
     const params = new URLSearchParams(window.location.search);
     const day = params.get('day') || 1;
-    link.download = `spectrum-unlocked-day-${day}.png`;
+    const platform = currentSize === 'pinterest' ? '-pinterest' : '-instagram';
+    link.download = `spectrum-unlocked-day-${day}${platform}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
-    showToast('✓ Downloaded!');
+    showToast(`✓ Downloaded for ${currentSize === 'pinterest' ? 'Pinterest' : 'Instagram'}!`);
   });
 }
 
@@ -1077,16 +1135,17 @@ async function downloadAndCopy() {
   if (!element) return;
   
   html2canvas(element, {
-    scale: 4,
+    scale: getScaleForSize(),
     useCORS: true,
     allowTaint: true,
     backgroundColor: null
   }).then(canvas => {
     const link = document.createElement('a');
-    link.download = `spectrum-unlocked-day-${day}.png`;
+    const platform = currentSize === 'pinterest' ? '-pinterest' : '-instagram';
+    link.download = `spectrum-unlocked-day-${day}${platform}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
-    showToast('✓ Downloaded + Caption Copied! Ready to post!');
+    showToast(`✓ Downloaded for ${currentSize === 'pinterest' ? 'Pinterest' : 'Instagram'} + Caption Copied!`);
   });
 }
 
@@ -1095,6 +1154,45 @@ function showToast(message) {
   toast.textContent = message;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+// Size selection for Instagram vs Pinterest
+let currentSize = 'instagram';
+
+function setSize(size) {
+  currentSize = size;
+  
+  // Update button states
+  document.querySelectorAll('.size-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.size === size);
+  });
+  
+  // Update preview container class
+  const container = document.getElementById('templateContainer');
+  container.classList.toggle('pinterest-preview', size === 'pinterest');
+  
+  // Update download filename suffix
+  updateDownloadSize();
+}
+
+function updateDownloadSize() {
+  // This will be used when downloading to adjust the output
+}
+
+function getScaleForSize() {
+  // Instagram: 1080x1350 (scale 4 from 270x337.5 preview = 1080x1350)
+  // Pinterest: 1000x1500 (scale ~3.7 from 270x405 preview)
+  return currentSize === 'pinterest' ? 5 : 4;
+}
+
+function getFileSuffix() {
+  return currentSize === 'pinterest' ? '-pinterest' : '';
+}
+
+// Check URL for size parameter
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('size') === 'pinterest') {
+  setSize('pinterest');
 }
 
 init();
