@@ -178,6 +178,13 @@
       margin-bottom: 12px;
       line-height: 1.5;
     }
+    .pin-blog-url {
+      font-size: 0.75rem;
+      color: #4A90A4;
+      font-weight: 600;
+      margin-bottom: 8px;
+      word-break: break-all;
+    }
     .pin-board {
       font-size: 0.75rem;
       color: #E60023;
@@ -1482,6 +1489,7 @@
         <div class="pin-content">
           <div class="pin-title">${pin.title}</div>
           <div class="pin-desc">${pin.desc}</div>
+          ${pin.blogUrl ? `<div class="pin-blog-url">🔗 spectrumunlocked.com${pin.blogUrl}</div>` : ''}
           <div class="pin-board">📍 ${pin.board}</div>
           <div class="pin-actions">
             <button class="pin-btn copy" onclick="copyPin('${pin.id}')">📋 Copy All</button>
