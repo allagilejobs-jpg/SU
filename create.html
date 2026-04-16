@@ -270,27 +270,104 @@
       color: #1a1a2e;
     }
     
-    /* Pinterest Preview Sizes - 2:3 ratio (1000x1500 final) */
-    .pinterest-preview .post {
-      width: 200px !important;
-      height: 300px !important;
+    /* Pinterest Preview - scale down 1000x1500 to 200x300 (0.2 scale) */
+    .pinterest-preview .pinterest-post {
+      transform: scale(0.2);
+      transform-origin: top left;
+      margin-bottom: -1200px; /* Compensate for scaled height */
+      margin-right: -800px; /* Compensate for scaled width */
     }
     
-    .pinterest-preview .quote-post,
-    .pinterest-preview .tip-post,
-    .pinterest-preview .list-post,
-    .pinterest-preview .myth-post,
-    .pinterest-preview .resource-post,
-    .pinterest-preview .emotional-post {
-      width: 200px !important;
-      height: 300px !important;
+    /* ========== PINTEREST NATIVE TEMPLATES (1000x1500) ========== */
+    .pinterest-post {
+      width: 1000px;
+      height: 1500px;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: white;
     }
     
-    /* Adjust font sizes for Pinterest taller format */
-    .pinterest-preview .quote-text { font-size: 13px !important; }
-    .pinterest-preview .tip-title { font-size: 14px !important; }
-    .pinterest-preview .list-title { font-size: 12px !important; }
-    .pinterest-preview .section-text { font-size: 10px !important; }
+    .pinterest-quote {
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 80px; text-align: center;
+    }
+    .pinterest-quote .quote-mark { font-size: 120px; color: rgba(255,255,255,0.2); font-family: Georgia, serif; line-height: 1; margin-bottom: 20px; }
+    .pinterest-quote .quote-text { font-family: 'Playfair Display', serif; font-size: 48px; color: white; line-height: 1.4; margin-bottom: 40px; max-width: 850px; }
+    .pinterest-quote .quote-author { font-size: 22px; color: #E8B86D; text-transform: uppercase; letter-spacing: 3px; }
+    .pinterest-quote .logo { position: absolute; bottom: 50px; font-size: 22px; color: rgba(255,255,255,0.5); }
+    .pinterest-quote .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .pinterest-quote .bg-shape-1 { width: 500px; height: 500px; background: #4A90A4; top: -150px; right: -150px; }
+    .pinterest-quote .bg-shape-2 { width: 400px; height: 400px; background: #E8B86D; bottom: 200px; left: -150px; }
+    
+    .pinterest-tip {
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center;
+      padding: 80px 60px; text-align: center;
+    }
+    .pinterest-tip .tip-badge { background: #4A90A4; color: white; padding: 15px 35px; border-radius: 30px; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 50px; }
+    .pinterest-tip .tip-title { font-family: 'Playfair Display', serif; font-size: 52px; color: white; line-height: 1.3; margin-bottom: 50px; max-width: 850px; }
+    .pinterest-tip .tip-content { font-size: 28px; color: #ccc; line-height: 1.6; max-width: 800px; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; }
+    .pinterest-tip .logo { position: absolute; bottom: 50px; font-size: 22px; color: rgba(255,255,255,0.5); }
+    .pinterest-tip .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .pinterest-tip .bg-shape-1 { width: 450px; height: 450px; background: #E8B86D; top: -100px; left: -100px; }
+    
+    .pinterest-list {
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center;
+      padding: 70px 60px;
+    }
+    .pinterest-list .list-title { font-family: 'Playfair Display', serif; font-size: 48px; color: white; margin-bottom: 50px; line-height: 1.3; text-align: center; max-width: 850px; }
+    .pinterest-list .list-items { width: 100%; max-width: 800px; }
+    .pinterest-list .list-item { display: flex; align-items: flex-start; gap: 20px; padding: 25px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 26px; }
+    .pinterest-list .list-item:last-child { border-bottom: none; }
+    .pinterest-list .list-number { background: #E8B86D; color: #1a1a2e; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; flex-shrink: 0; }
+    .pinterest-list .list-text { color: #ddd; line-height: 1.5; padding-top: 8px; }
+    .pinterest-list .logo { position: absolute; bottom: 50px; font-size: 22px; color: rgba(255,255,255,0.5); }
+    .pinterest-list .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .pinterest-list .bg-shape-1 { width: 400px; height: 400px; background: #4A90A4; bottom: -100px; right: -100px; }
+    
+    .pinterest-myth {
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 80px 60px; gap: 50px;
+    }
+    .pinterest-myth .myth-section { width: 100%; max-width: 850px; padding: 40px; border-radius: 20px; }
+    .pinterest-myth .myth-section.myth { background: rgba(231, 76, 60, 0.15); border-left: 6px solid #E74C3C; }
+    .pinterest-myth .myth-section.truth { background: rgba(39, 174, 96, 0.15); border-left: 6px solid #27AE60; }
+    .pinterest-myth .section-label { font-size: 18px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; font-weight: 700; }
+    .pinterest-myth .myth .section-label { color: #E74C3C; }
+    .pinterest-myth .truth .section-label { color: #27AE60; }
+    .pinterest-myth .section-text { font-family: 'Playfair Display', serif; font-size: 32px; line-height: 1.4; color: white; }
+    .pinterest-myth .logo { position: absolute; bottom: 50px; font-size: 22px; color: rgba(255,255,255,0.5); }
+    
+    .pinterest-resource {
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center;
+      padding: 80px 60px; text-align: center;
+    }
+    .pinterest-resource .free-badge { background: #E8B86D; color: #1a1a2e; padding: 15px 35px; border-radius: 30px; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 40px; }
+    .pinterest-resource .resource-title { font-family: 'Playfair Display', serif; font-size: 52px; color: white; line-height: 1.3; margin-bottom: 50px; max-width: 850px; }
+    .pinterest-resource .resource-list { text-align: left; max-width: 750px; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; }
+    .pinterest-resource .resource-item { display: flex; align-items: center; gap: 15px; padding: 18px 0; font-size: 24px; color: #ddd; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .pinterest-resource .resource-item:last-child { border-bottom: none; }
+    .pinterest-resource .check { color: #27AE60; font-size: 28px; }
+    .pinterest-resource .cta { margin-top: 50px; font-size: 26px; color: #4A90A4; font-weight: 600; }
+    .pinterest-resource .logo { position: absolute; bottom: 50px; font-size: 22px; color: rgba(255,255,255,0.5); }
+    
+    .pinterest-emotional {
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 80px; text-align: center;
+    }
+    .pinterest-emotional .heart { font-size: 100px; margin-bottom: 50px; }
+    .pinterest-emotional .main-text { font-family: 'Playfair Display', serif; font-size: 56px; color: #E8B86D; line-height: 1.3; margin-bottom: 50px; max-width: 850px; }
+    .pinterest-emotional .sub-text { font-size: 28px; color: #ccc; line-height: 1.6; max-width: 750px; }
+    .pinterest-emotional .logo { position: absolute; bottom: 50px; font-size: 22px; color: rgba(255,255,255,0.5); }
+    .pinterest-emotional .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .pinterest-emotional .bg-shape-1 { width: 500px; height: 500px; background: #4A90A4; top: -150px; left: -150px; }
+    .pinterest-emotional .bg-shape-2 { width: 400px; height: 400px; background: #E8B86D; bottom: -100px; right: -100px; }
     
     /* ========== TEMPLATE STYLES ========== */
     .post {
@@ -968,7 +1045,7 @@ Link in bio → spectrumunlocked.com/resources 💙
   }
 };
 
-// Generate template HTML based on type
+// Generate Instagram template HTML (1080x1350 scaled from preview)
 function generateTemplate(day) {
   const data = content[day];
   if (!data) return '<p>Content not found for this day.</p>';
@@ -1051,6 +1128,95 @@ function generateTemplate(day) {
   return html;
 }
 
+// Generate Pinterest template HTML (native 1000x1500)
+function generatePinterestTemplate(day) {
+  const data = content[day];
+  if (!data) return '<p>Content not found for this day.</p>';
+  
+  let html = '';
+  
+  switch(data.type) {
+    case 'quote':
+      html = `
+        <div class="pinterest-post pinterest-quote" id="graphic">
+          <div class="bg-shape bg-shape-1"></div>
+          <div class="bg-shape bg-shape-2"></div>
+          <div class="quote-mark">"</div>
+          <div class="quote-text">${data.graphic.quote}</div>
+          <div class="quote-author">${data.graphic.author}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'tip':
+      html = `
+        <div class="pinterest-post pinterest-tip" id="graphic">
+          <div class="bg-shape bg-shape-1"></div>
+          <div class="tip-badge">💡 Quick Tip</div>
+          <div class="tip-title">${data.graphic.title}</div>
+          <div class="tip-content">${data.graphic.content}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'emotional':
+      html = `
+        <div class="pinterest-post pinterest-emotional" id="graphic">
+          <div class="bg-shape bg-shape-1"></div>
+          <div class="bg-shape bg-shape-2"></div>
+          <div class="heart">💙</div>
+          <div class="main-text">${data.graphic.main}</div>
+          <div class="sub-text">${data.graphic.sub}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'resource':
+      const pItems = data.graphic.items.map(i => `<div class="resource-item"><span class="check">✓</span> ${i}</div>`).join('');
+      html = `
+        <div class="pinterest-post pinterest-resource" id="graphic">
+          <div class="free-badge">📚 Free Resource</div>
+          <div class="resource-title">${data.graphic.title}</div>
+          <div class="resource-list">${pItems}</div>
+          <div class="cta">spectrumunlocked.com</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'list':
+      const pListItems = data.graphic.items.map((item, i) => `
+        <div class="list-item">
+          <div class="list-number">${i+1}</div>
+          <div class="list-text">${item}</div>
+        </div>`).join('');
+      html = `
+        <div class="pinterest-post pinterest-list" id="graphic">
+          <div class="bg-shape bg-shape-1"></div>
+          <div class="list-title">${data.graphic.title}</div>
+          <div class="list-items">${pListItems}</div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+      
+    case 'myth':
+      html = `
+        <div class="pinterest-post pinterest-myth" id="graphic">
+          <div class="myth-section myth">
+            <div class="section-label">❌ MYTH</div>
+            <div class="section-text">${data.graphic.myth}</div>
+          </div>
+          <div class="myth-section truth">
+            <div class="section-label">✓ TRUTH</div>
+            <div class="section-text">${data.graphic.truth}</div>
+          </div>
+          <div class="logo">@spectrum_unlocked</div>
+        </div>`;
+      break;
+  }
+  
+  return html;
+}
+
 // Initialize page
 function init() {
   const params = new URLSearchParams(window.location.search);
@@ -1066,8 +1232,23 @@ function init() {
   
   document.getElementById('dayBadge').textContent = `Day ${day}`;
   document.getElementById('headerTitle').textContent = data.title;
-  document.getElementById('templateContainer').innerHTML = generateTemplate(day);
+  updateTemplate();
   document.getElementById('captionBox').innerHTML = data.caption.replace(/(#\w+)/g, '<span class="hashtags">$1</span>');
+}
+
+// Update template based on current size
+function updateTemplate() {
+  const params = new URLSearchParams(window.location.search);
+  const day = parseInt(params.get('day')) || 1;
+  const container = document.getElementById('templateContainer');
+  
+  if (currentSize === 'pinterest') {
+    container.innerHTML = generatePinterestTemplate(day);
+    container.classList.add('pinterest-preview');
+  } else {
+    container.innerHTML = generateTemplate(day);
+    container.classList.remove('pinterest-preview');
+  }
 }
 
 function downloadGraphic() {
@@ -1167,26 +1348,14 @@ function setSize(size) {
     btn.classList.toggle('active', btn.dataset.size === size);
   });
   
-  // Update preview container class
-  const container = document.getElementById('templateContainer');
-  container.classList.toggle('pinterest-preview', size === 'pinterest');
-  
-  // Update download filename suffix
-  updateDownloadSize();
-}
-
-function updateDownloadSize() {
-  // This will be used when downloading to adjust the output
+  // Regenerate template for the new size
+  updateTemplate();
 }
 
 function getScaleForSize() {
-  // Instagram: 1080x1350 (scale 4 from 270x337.5 preview = 1080x1350)
-  // Pinterest: 1000x1500 (scale ~3.7 from 270x405 preview)
+  // Instagram: scale 4 from 270x270 preview = 1080x1080
+  // Pinterest: scale 5 from 200x300 preview = 1000x1500 (native)
   return currentSize === 'pinterest' ? 5 : 4;
-}
-
-function getFileSuffix() {
-  return currentSize === 'pinterest' ? '-pinterest' : '';
 }
 
 // Check URL for size parameter
