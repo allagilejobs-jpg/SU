@@ -160,6 +160,7 @@
     .pin-badge.day-30 { background: #27AE60; }
     .pin-badge.reel { background: #9B59B6; }
     .pin-badge.personal { background: #E74C3C; }
+    .pin-badge.blogs { background: #E74C3C; }
     
     .pin-content {
       padding: 20px;
@@ -1466,7 +1467,8 @@
                       pin.category === 'beacon' ? 'Beacon' : 
                       pin.category === 'day-30' ? `30-Day` :
                       pin.category === 'day-60' ? `Day ${pin.day}` :
-                      pin.category === 'reel' ? 'Reel' : 'Personal';
+                      pin.category === 'reel' ? 'Reel' :
+                      pin.category === 'blogs' ? '📖 Blog' : 'Personal';
       
       card.innerHTML = `
         <div class="pin-image">
