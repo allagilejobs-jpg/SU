@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #E8B86D; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .camp-types {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px 25px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 15px;
+    }
+    .types-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .type-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+    .type-icon { font-size: 20px; }
+    
+    .questions {
+      background: rgba(74, 144, 164, 0.15);
+      border-radius: 16px;
+      padding: 22px 25px;
+    }
+    .questions .section-title { color: #4A90A4; }
+    .q-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .q-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .q-item span:first-child { color: #4A90A4; }
+    
+    .red-flags {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid #E74C3C;
+      border-radius: 16px;
+      padding: 22px 25px;
+    }
+    .red-flags .section-title { color: #E74C3C; }
+    .flags-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .flag-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .flag-item span { color: #E74C3C; }
+    
+    .green-flags {
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid #27AE60;
+      border-radius: 16px;
+      padding: 22px 25px;
+    }
+    .green-flags .section-title { color: #27AE60; }
+    .green-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .green-item span { color: #27AE60; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">☀️ Summer Planning</div>
+    <h1 class="title">Summer Camps for <span>Autistic Kids</span></h1>
+    <p class="subtitle">Start planning now for the best experience</p>
+  </div>
+  
+  <div class="content">
+    <div class="camp-types">
+      <div class="section-title">🏕️ Types of Camps</div>
+      <div class="types-grid">
+        <div class="type-item"><span class="type-icon">🎯</span> Autism-specific camps</div>
+        <div class="type-item"><span class="type-icon">🌈</span> Inclusive mainstream camps</div>
+        <div class="type-item"><span class="type-icon">🎨</span> Special interest camps (STEM, art)</div>
+        <div class="type-item"><span class="type-icon">🏠</span> Day camps (no overnight)</div>
+        <div class="type-item"><span class="type-icon">🌙</span> Overnight with 1:1 support</div>
+        <div class="type-item"><span class="type-icon">💻</span> Virtual camps (sensory-safe)</div>
+      </div>
+    </div>
+    
+    <div class="questions">
+      <div class="section-title">❓ Questions to Ask</div>
+      <div class="q-list">
+        <div class="q-item"><span>→</span> What's the staff-to-camper ratio?</div>
+        <div class="q-item"><span>→</span> How are staff trained on autism?</div>
+        <div class="q-item"><span>→</span> Is there a quiet/sensory space?</div>
+        <div class="q-item"><span>→</span> How do you handle meltdowns?</div>
+        <div class="q-item"><span>→</span> Can we do a trial day first?</div>
+      </div>
+    </div>
+    
+    <div class="red-flags">
+      <div class="section-title">🚩 Red Flags</div>
+      <div class="flags-grid">
+        <div class="flag-item"><span>✕</span> "We treat everyone the same"</div>
+        <div class="flag-item"><span>✕</span> No accommodation flexibility</div>
+        <div class="flag-item"><span>✕</span> Won't let you visit first</div>
+        <div class="flag-item"><span>✕</span> Vague about training</div>
+        <div class="flag-item"><span>✕</span> Dismissive of concerns</div>
+        <div class="flag-item"><span>✕</span> No sensory plan</div>
+      </div>
+    </div>
+    
+    <div class="green-flags">
+      <div class="section-title">✅ Green Flags</div>
+      <div class="flags-grid">
+        <div class="green-item"><span>✓</span> Asks detailed questions</div>
+        <div class="green-item"><span>✓</span> Has worked with autistic kids</div>
+        <div class="green-item"><span>✓</span> Welcomes parent input</div>
+        <div class="green-item"><span>✓</span> Visual schedules used</div>
+        <div class="green-item"><span>✓</span> Flexible on sensory needs</div>
+        <div class="green-item"><span>✓</span> Communication plan in place</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for summer planning!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

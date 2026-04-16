@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #9B59B6;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .stat-box {
+      background: rgba(155, 89, 182, 0.2);
+      border: 2px solid #9B59B6;
+      border-radius: 16px;
+      padding: 15px 30px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .stat-num {
+      font-size: 48px;
+      font-weight: 800;
+      color: #9B59B6;
+    }
+    .stat-label {
+      font-size: 16px;
+      color: #aaa;
+    }
+    .title {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .title span { color: #9B59B6; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .reasons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .reason {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+    }
+    .reason-icon { color: #9B59B6; }
+    
+    .signs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sign-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+    }
+    .sign-item span:first-child {
+      font-size: 20px;
+    }
+    
+    .quote-box {
+      background: linear-gradient(135deg, rgba(155, 89, 182, 0.2) 0%, rgba(74, 144, 164, 0.2) 100%);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .quote-text {
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 600;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+    .quote-sub {
+      font-size: 15px;
+      color: #888;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">📈 Trending</div>
+    <div class="stat-box">
+      <div class="stat-num">450%</div>
+      <div class="stat-label">increase in adult diagnoses</div>
+    </div>
+    <h1 class="title">Late-Diagnosed <span>Autism</span></h1>
+    <p class="subtitle">Most are women. Here's why they were missed.</p>
+  </div>
+  
+  <div class="content">
+    <div class="section">
+      <div class="section-title">🔍 Why They Were Missed</div>
+      <div class="reasons">
+        <div class="reason">
+          <span class="reason-icon">→</span>
+          <span>Diagnostic criteria based on boys</span>
+        </div>
+        <div class="reason">
+          <span class="reason-icon">→</span>
+          <span>Girls mask better socially</span>
+        </div>
+        <div class="reason">
+          <span class="reason-icon">→</span>
+          <span>Misdiagnosed as anxiety/depression</span>
+        </div>
+        <div class="reason">
+          <span class="reason-icon">→</span>
+          <span>"Quiet" struggles overlooked</span>
+        </div>
+        <div class="reason">
+          <span class="reason-icon">→</span>
+          <span>Compensating is exhausting but invisible</span>
+        </div>
+        <div class="reason">
+          <span class="reason-icon">→</span>
+          <span>"Too social" to be autistic (myth)</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">✨ Signs That Lead to Late Diagnosis</div>
+      <div class="signs-list">
+        <div class="sign-item"><span>🎭</span> Lifelong feeling of being "different" or masking</div>
+        <div class="sign-item"><span>😫</span> Chronic exhaustion from social situations</div>
+        <div class="sign-item"><span>🔥</span> Burnout cycles that don't make sense</div>
+        <div class="sign-item"><span>🎯</span> Intense special interests since childhood</div>
+        <div class="sign-item"><span>📋</span> Needing scripts and rules for social situations</div>
+        <div class="sign-item"><span>⚡</span> Sensory sensitivities others don't notice</div>
+      </div>
+    </div>
+    
+    <div class="quote-box">
+      <div class="quote-text">"What if everything finally made sense?"</div>
+      <div class="quote-sub">It's never too late to understand yourself.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this - it might help someone you know</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E8B86D;
+      color: #1a1a2e;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #E8B86D; }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    .hook {
+      font-size: 24px;
+      color: #4A90A4;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px 25px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section.why .section-title { color: #4A90A4; }
+    .section.helps .section-title { color: #27AE60; }
+    .section.avoid .section-title { color: #E74C3C; }
+    
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .item-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    
+    .reminder {
+      background: linear-gradient(135deg, rgba(232, 184, 109, 0.2) 0%, rgba(74, 144, 164, 0.2) 100%);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .reminder-text {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .reminder-sub {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 5px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🍽️ Food & Sensory</div>
+    <h1 class="title">Feeding <span>Challenges</span><br>in Autistic Kids</h1>
+    <p class="hook">It's not defiance. It's sensory.</p>
+  </div>
+  
+  <div class="content">
+    <div class="section why">
+      <div class="section-title">🧠 Why It Happens</div>
+      <div class="items">
+        <div class="item"><span class="item-icon">•</span> Texture sensitivity (slimy, crunchy, mixed)</div>
+        <div class="item"><span class="item-icon">•</span> Smell overwhelm before food reaches mouth</div>
+        <div class="item"><span class="item-icon">•</span> Color and appearance matter intensely</div>
+        <div class="item"><span class="item-icon">•</span> Brand/packaging changes = different food</div>
+        <div class="item"><span class="item-icon">•</span> Interoception issues (not recognizing hunger)</div>
+      </div>
+    </div>
+    
+    <div class="bottom-grid">
+      <div class="section helps">
+        <div class="section-title">✓ What Helps</div>
+        <div class="items">
+          <div class="item"><span class="item-icon">✓</span> Same plate, same utensils</div>
+          <div class="item"><span class="item-icon">✓</span> Foods not touching</div>
+          <div class="item"><span class="item-icon">✓</span> Consistent brands</div>
+          <div class="item"><span class="item-icon">✓</span> No pressure, no bribes</div>
+          <div class="item"><span class="item-icon">✓</span> Exposure without eating</div>
+          <div class="item"><span class="item-icon">✓</span> Feeding therapy (SOS)</div>
+        </div>
+      </div>
+      
+      <div class="section avoid">
+        <div class="section-title">✕ What to Avoid</div>
+        <div class="items">
+          <div class="item"><span class="item-icon">✕</span> "Just try one bite"</div>
+          <div class="item"><span class="item-icon">✕</span> Hiding foods in others</div>
+          <div class="item"><span class="item-icon">✕</span> Making it a battle</div>
+          <div class="item"><span class="item-icon">✕</span> Comparing to siblings</div>
+          <div class="item"><span class="item-icon">✕</span> Withholding safe foods</div>
+          <div class="item"><span class="item-icon">✕</span> Shaming eating habits</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="reminder">
+      <div class="reminder-text">🍟 Chicken nuggets are keeping your kid alive.</div>
+      <div class="reminder-sub">That's not failure. That's meeting them where they are.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for the next "picky eater" comment</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
