@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E60023;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .quote {
+      font-size: 22px;
+      color: #aaa;
+      font-style: italic;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .what-box {
+      background: rgba(74, 144, 164, 0.15);
+      border: 2px solid #4A90A4;
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .what-title {
+      color: #4A90A4;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .what-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .what-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+    
+    .signs-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      flex: 1;
+    }
+    .signs-title {
+      color: #E8B86D;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .sign {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .sign-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    
+    .cost-box {
+      background: rgba(231, 76, 60, 0.15);
+      border: 2px solid #E74C3C;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .cost-title {
+      color: #E74C3C;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .cost-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .cost-item {
+      background: rgba(0,0,0,0.3);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .message {
+      font-size: 22px;
+      font-weight: 700;
+      color: #9B59B6;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🎭 High Masking</div>
+    <h1 class="title">Signs of Masking<br>in Autism</h1>
+    <p class="quote">"They look fine. They're falling apart inside."</p>
+  </div>
+  
+  <div class="content">
+    <div class="what-box">
+      <div class="what-title">WHAT IS MASKING?</div>
+      <div class="what-items">
+        <div class="what-item">• Forcing eye contact</div>
+        <div class="what-item">• Mimicking expressions</div>
+        <div class="what-item">• Suppressing stims</div>
+        <div class="what-item">• Scripting conversations</div>
+      </div>
+    </div>
+    
+    <div class="signs-box">
+      <div class="signs-title">🚨 SIGNS SOMEONE IS HIGH-MASKING</div>
+      <div class="signs-grid">
+        <div class="sign"><span class="sign-icon">😮‍💨</span> Exhausted after social situations</div>
+        <div class="sign"><span class="sign-icon">🎭</span> Feels like "performing" in public</div>
+        <div class="sign"><span class="sign-icon">🏠</span> Different person at home vs outside</div>
+        <div class="sign"><span class="sign-icon">📝</span> Scripts conversations in advance</div>
+        <div class="sign"><span class="sign-icon">👀</span> Studies others to learn "normal"</div>
+        <div class="sign"><span class="sign-icon">🌪️</span> Meltdowns only in private</div>
+      </div>
+    </div>
+    
+    <div class="cost-box">
+      <div class="cost-title">💔 THE COST OF MASKING</div>
+      <div class="cost-items">
+        <span class="cost-item">Chronic exhaustion</span>
+        <span class="cost-item">Higher anxiety</span>
+        <span class="cost-item">Loss of identity</span>
+        <span class="cost-item">Delayed diagnosis</span>
+        <span class="cost-item">Burnout</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="message">💜 You shouldn't have to perform to be accepted.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
