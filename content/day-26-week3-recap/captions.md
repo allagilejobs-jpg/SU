@@ -66,6 +66,18 @@ What was YOUR biggest takeaway? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Week 3 Recap: What We Learned Together
+
+**Description:** Thank you for being here. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Weekly recap builds community, encourages engagement
 - **Format:** Celebration carousel with highlights

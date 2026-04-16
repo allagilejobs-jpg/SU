@@ -79,6 +79,18 @@ The pride. The exhaustion. The love. The advocacy. All at once.
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Character count:
+
+**Description:** Today we don't just spread awareness. We celebrate humanity. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **PRIORITY CONTENT** — This is the biggest day of the calendar
 - **Post multiple times** — Morning carousel, midday reel, afternoon TikTok

@@ -49,6 +49,18 @@ This might change everything you thought you knew about yourself.
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Late-Diagnosed Autism in Women
+
+**Description:** 450% increase in adult autism diagnoses. Here's why. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism in Girls
+
+---
+
 ## Content Notes
 - **Why it works:** MASSIVE trending topic (from research)
 - **Emotional resonance:** High — many undiagnosed adults relate

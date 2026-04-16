@@ -75,6 +75,18 @@ What sensory tools help you?
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Sensory Processing Deep Dive
+
+**Description:** Why the world feels different when you're autistic. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Sensory Support & Hacks
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Practical Tools - Sensory deep dive
 - **Format:** Educational carousel explaining sensory systems

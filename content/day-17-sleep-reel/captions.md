@@ -87,6 +87,18 @@ What helps YOUR child sleep? Share below! 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Character count:
+
+**Description:** Melatonin isn't the only answer. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (5 slides, 1080x1920)
 - **Timing:** 4 seconds per slide

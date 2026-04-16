@@ -69,6 +69,18 @@ Here's how to bridge the gap. How did you educate your family?
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Educating Extended Family About Autism
+
+**Description:** When grandparents, aunts, and uncles just don't get it. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Family dynamics are ongoing challenge
 - **Format:** Educational carousel with conversation scripts

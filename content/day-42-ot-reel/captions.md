@@ -79,6 +79,18 @@ Has OT helped your child? Share below! 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Character count:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (6 slides, 1080x1920)
 - **Timing:** 3-4 seconds per slide

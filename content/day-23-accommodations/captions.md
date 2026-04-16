@@ -68,6 +68,18 @@ What accommodation saved YOUR kid? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** School Accommodations Beyond the IEP
+
+**Description:** You can ask for more than you think. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / IEP & School Advocacy
+
+---
+
 ## Content Notes
 - **Why now:** Practical school support content, high save rate
 - **Format:** Educational carousel with formal/informal options

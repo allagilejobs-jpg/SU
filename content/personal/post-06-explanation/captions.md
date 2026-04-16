@@ -42,3 +42,16 @@ doesn't look at her
 when she talks to him.
 
 I explained it for the third time.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

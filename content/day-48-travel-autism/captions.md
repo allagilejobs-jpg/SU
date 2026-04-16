@@ -69,6 +69,18 @@ Where have you traveled? Drop your tips 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Travel with Autistic Kids
+
+**Description:** Yes, you CAN travel. Here's how to make it work for your whole family. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Looking Ahead - Travel planning
 - **Format:** Educational carousel with practical tips

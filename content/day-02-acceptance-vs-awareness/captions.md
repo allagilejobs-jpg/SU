@@ -49,6 +49,18 @@ Here's the progression we should all know ⬇️
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism Acceptance vs. Awareness — Why Language Matters
+
+**Description:** Stop saying 'autism awareness.' Here's why. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism Acceptance
+
+---
+
 ## Content Notes
 - **Why it works:** Language shift = timely for April
 - **Trending tie-in:** Autism Acceptance Month prep

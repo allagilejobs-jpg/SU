@@ -62,6 +62,18 @@ These signs get missed. Were you diagnosed late? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Signs of Autism in Girls (Often Missed)
+
+**Description:** Autism doesn't look the same in everyone. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism in Girls
+
+---
+
 ## Content Notes
 - **Why now:** Massive trending topic, girls massively underdiagnosed
 - **Format:** Educational carousel with stats and signs

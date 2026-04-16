@@ -50,6 +50,18 @@ Which one did you used to believe? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** 5 Myths About Autism That Need to Die
+
+**Description:** You've probably believed at least one of these. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism Myths Debunked
+
+---
+
 ## Content Notes
 - **Why now:** Post-WAAD momentum — people searching for autism content
 - **Format:** Myth/Truth format (proven high engagement)

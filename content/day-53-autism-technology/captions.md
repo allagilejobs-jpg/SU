@@ -68,6 +68,18 @@ Tech isn't an escape. It's a tool that works WITH our brains.
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism and Technology
+
+**Description:** Why tech often feels like home for autistic minds. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Practical Tools - Technology exploration
 - **Format:** Educational carousel about autism and tech

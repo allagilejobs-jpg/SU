@@ -40,3 +40,16 @@ the moment we walked in.
 
 I knew.
 But I tried anyway.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

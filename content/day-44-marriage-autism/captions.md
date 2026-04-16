@@ -66,6 +66,18 @@ What keeps your partnership strong? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Marriage and Partnership When Parenting Autism
+
+**Description:** The unique pressures on relationships. How to stay connected as partners. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Relationship support is crucial for autism families
 - **Format:** Educational carousel with statistics and strategies

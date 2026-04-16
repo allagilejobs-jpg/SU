@@ -54,6 +54,18 @@ What's YOUR win this week? Share below! 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Community Spotlight: Your Stories This Week
+
+**Description:** You shared, we're celebrating. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism Community
+
+---
+
 ## Content Notes
 - **Why now:** Sunday reflection, community building
 - **Format:** Community spotlight carousel

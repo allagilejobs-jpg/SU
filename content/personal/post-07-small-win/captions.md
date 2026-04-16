@@ -41,3 +41,16 @@ Just pointed.
 
 And I almost cried
 in the middle of the sidewalk.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

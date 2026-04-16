@@ -101,3 +101,16 @@ If you're early in this journey: there are parents 6 months ahead of you who are
 - `cover-photo.png` — Frame extracted for cover background
 - **`FINAL-clip-01-begging.mp4`** — Branded video for Slide 2 ✓
 - **`FINAL-clip-02-advocate.mp4`** — Branded video for Slide 3 ✓
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Source:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

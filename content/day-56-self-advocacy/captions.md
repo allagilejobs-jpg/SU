@@ -67,6 +67,18 @@ What do you wish you could advocate for? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Self-Advocacy Skills Every Autistic Person Needs
+
+**Description:** Speaking up for yourself is a skill. Here's how to build it. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Practical tips carousel with usable scripts
 - **CTA:** Comment what they want to advocate for

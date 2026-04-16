@@ -58,6 +58,18 @@ What's YOUR must-have product? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism-Friendly Weekend Activities: Spring Edition + Products That Work
+
+**Description:** Making memories without the meltdowns. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Weekend lifestyle content, practical value
 - **Format:** Tips + product recommendations carousel

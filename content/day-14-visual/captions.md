@@ -60,6 +60,18 @@ DM "VISUALS" for free templates! 💾
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Visual Supports That Actually Work
+
+**Description:** Stop guessing. Start using these. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Visual Supports
+
+---
+
 ## Content Notes
 - **Why it works:** Highly saveable, practical, lead gen trigger
 - **Format:** Numbered tools with examples

@@ -71,6 +71,18 @@ And remember: success looks different for everyone.
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Transitioning to Adulthood
+
+**Description:** What no one tells autistic teens and their families. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Adult Autism
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Practical Tools - Transition to adulthood
 - **Format:** Educational carousel with planning tips

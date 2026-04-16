@@ -39,6 +39,18 @@ Stop self-diagnosing from 30-second videos. Here's the truth.
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** 3 Things TikTok Gets WRONG About Autism
+
+**Description:** Mistake/myth format (high engagement hook from research). Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why it works:** Mistake hook = high engagement (IG research)
 - **Trending tie-in:** New misinformation study this week

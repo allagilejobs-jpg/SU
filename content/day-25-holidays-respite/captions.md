@@ -75,6 +75,18 @@ Your survival tip? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Making Events Autism-Friendly + Respite Care
+
+**Description:** Family gatherings don't have to be disasters. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Practical family life content, high engagement
 - **Format:** Combined topic carousel - event tips + respite

@@ -72,6 +72,18 @@ Tag someone who needs to see this!
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Character count:
+
+**Description:** Stop saying autism awareness. Here's why. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (5 slides, 1080x1920)
 - **Timing:** 3-4 seconds per slide

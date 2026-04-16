@@ -67,6 +67,18 @@ What was your favorite moment? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism and Humanity: A Month in Review
+
+**Description:** Every life has value. Every day of the year. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Hero content for end of Autism Acceptance Month
 - **Format:** Celebratory carousel with month highlights

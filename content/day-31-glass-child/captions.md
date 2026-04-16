@@ -67,6 +67,18 @@ How do you balance sibling needs? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Siblings of Autistic Kids: The Glass Child Revisited
+
+**Description:** Don't let your other kids become invisible. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Sibling Support
+
+---
+
 ## Content Notes
 - **Why now:** Follow-up to popular earlier post
 - **Format:** Educational carousel with practical support

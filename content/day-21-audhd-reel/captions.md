@@ -62,3 +62,16 @@ Comment "ME" if you relate!
 ---
 
 #audhd #autism #adhd #autismandadhd #neurodivergent #actuallyautistic #autismawareness #autismparenting
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Character count:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

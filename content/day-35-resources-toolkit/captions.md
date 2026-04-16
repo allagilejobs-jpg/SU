@@ -67,6 +67,18 @@ What would YOU add? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Resources to Bookmark: Your Autism Parent Toolkit
+
+**Description:** Save this. You'll need it. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Comprehensive resource roundup before month ends
 - **Format:** Multi-category resource list

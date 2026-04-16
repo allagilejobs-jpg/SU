@@ -62,6 +62,18 @@ What's your child's safe food? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Feeding Challenges in Autistic Kids: Beyond Picky Eating
+
+**Description:** It's not defiance. It's sensory. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Feeding & Food Tips
+
+---
+
 ## Content Notes
 - **Why now:** Common struggle, underrepresented in content
 - **Format:** Educational carousel with stats and practical tips

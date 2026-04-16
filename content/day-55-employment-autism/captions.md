@@ -70,6 +70,18 @@ What has helped YOU at work?
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Employment & Autism
+
+**Description:** What employers miss and how autistic workers thrive. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Employment focus
 - **Format:** Educational carousel on employment challenges and solutions

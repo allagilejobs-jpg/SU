@@ -58,6 +58,18 @@ What's your May commitment? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Transitioning Out of Autism Acceptance Month: Now What?
+
+**Description:** Acceptance doesn't end April 30th. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism Acceptance
+
+---
+
 ## Content Notes
 - **Why now:** Transition out of April, sustain momentum
 - **Format:** Practical next steps and resources

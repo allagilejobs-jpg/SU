@@ -40,3 +40,16 @@ the evaluation.
 I didn't cry.
 I didn't call anyone.
 I just sat there.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

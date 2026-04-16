@@ -37,3 +37,16 @@ At 3am I had 47 tabs open.
 
 Half contradicted each other.
 A third were trying to sell me something.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

@@ -54,6 +54,18 @@ What was YOUR biggest takeaway? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Monthly Reflection: What April Taught Us
+
+**Description:** Autism Acceptance Month recap. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** End of month reflection, community gratitude
 - **Format:** Celebration and recap carousel

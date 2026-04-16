@@ -55,6 +55,18 @@ Watch for these signs ⬇️
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Glass Child Syndrome: The Siblings Who Fade Into the Background
+
+**Description:** Is your neurotypical child becoming invisible?. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Sibling Support
+
+---
+
 ## Content Notes
 - **Why it works:** Underserved topic, high emotional resonance
 - **Source:** The Autism Cafe covers this topic

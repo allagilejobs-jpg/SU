@@ -76,6 +76,18 @@ What accommodation changed your life? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism Acceptance at Work and School
+
+**Description:** What real inclusion looks like. And what it doesn't. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / IEP & School Advocacy
+
+---
+
 ## Content Notes
 - **Format:** Educational carousel comparing performative vs real acceptance
 - **CTA:** Share accommodation stories

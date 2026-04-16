@@ -74,6 +74,18 @@ Where did you find your people? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Building Your Support System
+
+**Description:** It takes a village, but sometimes you have to build the village yourself. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 7 Family Dynamics - Building support
 - **Format:** Educational carousel with practical framework
