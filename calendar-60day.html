@@ -1943,12 +1943,8 @@
     function copyField(elementId) {
       const text = document.getElementById(elementId).textContent.trim();
       navigator.clipboard.writeText(text).then(() => {
-        // Show brief feedback
-        const btn = event.target;
-        const orig = btn.textContent;
-        btn.textContent = '✓';
-        setTimeout(() => btn.textContent = orig, 1000);
-      });
+        // Brief feedback - no button change needed, just works silently
+      }).catch(err => console.log('Copy failed:', err));
     }
 
     function openDay(dayNum) {
