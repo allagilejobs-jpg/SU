@@ -154,6 +154,7 @@
       font-size: 11px;
       font-weight: 600;
     }
+    .pin-badge.pinterest-ready { background: linear-gradient(135deg, #E60023, #BD081C); }
     .pin-badge.beacon { background: #E8B86D; color: #1a1a2e; }
     .pin-badge.day-60 { background: #4A90A4; }
     .pin-badge.day-30 { background: #27AE60; }
@@ -272,8 +273,8 @@
       <div class="stat-label">Total Pins</div>
     </div>
     <div class="stat">
-      <div class="stat-num" id="stat-ready">0</div>
-      <div class="stat-label">With Graphics</div>
+      <div class="stat-num" id="stat-pinterest-ready">0</div>
+      <div class="stat-label">Pinterest-Ready</div>
     </div>
     <div class="stat">
       <div class="stat-num" id="stat-beacon">0</div>
@@ -291,6 +292,7 @@
   
   <div class="filters">
     <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="pinterest-ready">✨ Pinterest-Ready</button>
     <button class="filter-btn" data-filter="beacon">🧭 Beacon</button>
     <button class="filter-btn" data-filter="day-30">📅 30-Day</button>
     <button class="filter-btn" data-filter="day-60">📅 60-Day</button>
@@ -308,6 +310,74 @@
   <script>
     // Pinterest content data - will be populated from captions.md files
     const pinterestData = [
+      // Dedicated Pinterest Graphics (1000x1500 - proper Pinterest format)
+      {
+        id: 'pin-iep',
+        title: 'Neurodiversity-Affirming IEP Accommodations',
+        desc: 'Sensory, communication, academic, and social accommodations. Save this checklist for your next IEP meeting.',
+        board: 'Autism Parenting Tips / IEP & School',
+        folder: 'pinterest',
+        file: 'pin-01-iep-accommodations.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-meltdown',
+        title: 'Meltdown vs Tantrum: Know the Difference',
+        desc: 'They look similar but need completely different responses. Learn what to do during a meltdown.',
+        board: 'Autism Parenting Tips / Meltdown Support',
+        folder: 'pinterest',
+        file: 'pin-02-meltdown-vs-tantrum.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-sensory',
+        title: '5 Sensory Hacks That Actually Work',
+        desc: 'OT-approved tools for meltdown prevention. Headphones, sunglasses, fidgets, timers, calm corners.',
+        board: 'Autism Parenting Tips / Sensory',
+        folder: 'pinterest',
+        file: 'pin-03-sensory-hacks.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-sleep',
+        title: 'Sleep Issues in Autism: What Actually Helps',
+        desc: '50-80% of autistic kids have sleep problems. Environment fixes and routines that work.',
+        board: 'Autism Parenting Tips / Sleep',
+        folder: 'pinterest',
+        file: 'pin-04-sleep-strategies.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-masking',
+        title: 'Signs of Masking in Autism',
+        desc: '"They look fine. They\'re falling apart inside." Learn the signs and the cost of masking.',
+        board: 'Autism Parenting Tips / Understanding Autism',
+        folder: 'pinterest',
+        file: 'pin-05-signs-of-masking.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-potty',
+        title: 'Potty Training an Autistic Child',
+        desc: 'A different timeline, and that\'s OK. Readiness signs and autism-friendly strategies.',
+        board: 'Autism Parenting Tips / Potty Training',
+        folder: 'pinterest',
+        file: 'pin-06-potty-training.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      
       // Beacon Week 1
       {
         id: 'beacon-start-here',
@@ -836,6 +906,7 @@
       
       // Group by category
       const categories = {
+        'pinterest-ready': { label: '✨ Pinterest-Ready (1000×1500)', items: [] },
         'beacon': { label: '🧭 Beacon Launch', items: [] },
         'day-30': { label: '📅 30-Day Starter Calendar', items: [] },
         'day-60': { label: '📅 60-Day Calendar', items: [] },
@@ -877,15 +948,19 @@
       
       // Determine image path
       let imgPath = '';
-      if (pin.imageType === 'pinterest') {
+      if (pin.isPinterestNative && pin.file) {
+        imgPath = `content/${pin.folder}/${pin.file}`;
+      } else if (pin.imageType === 'pinterest') {
         imgPath = `content/${pin.folder}/slide-01-cover-pinterest.png`;
-      } else {
+      } else if (pin.folder) {
         imgPath = `content/${pin.folder}/slide-01-cover.png`;
       }
       
       // Badge class
       let badgeClass = pin.category;
-      let badgeText = pin.category === 'beacon' ? 'Beacon' : 
+      let badgeText = pin.category === 'pinterest-ready' ? '✨ Ready' :
+                      pin.category === 'beacon' ? 'Beacon' : 
+                      pin.category === 'day-30' ? `30-Day` :
                       pin.category === 'day-60' ? `Day ${pin.day}` :
                       pin.category === 'reel' ? 'Reel' : 'Personal';
       
@@ -935,7 +1010,7 @@
     
     function updateStats() {
       document.getElementById('stat-total').textContent = pinterestData.length;
-      document.getElementById('stat-ready').textContent = pinterestData.filter(p => p.hasImage).length;
+      document.getElementById('stat-pinterest-ready').textContent = pinterestData.filter(p => p.category === 'pinterest-ready').length;
       document.getElementById('stat-beacon').textContent = pinterestData.filter(p => p.category === 'beacon').length;
       document.getElementById('stat-30day').textContent = pinterestData.filter(p => p.category === 'day-30').length;
       document.getElementById('stat-60day').textContent = pinterestData.filter(p => p.category === 'day-60').length;
