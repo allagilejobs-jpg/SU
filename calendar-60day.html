@@ -1006,10 +1006,12 @@
         </div>
         <div class="modal-section">
           <div class="modal-actions">
-            <button class="modal-btn primary" id="modal-download-all" onclick="downloadAllSlides()">⬇️ Download All Slides</button>
+            <button class="modal-btn primary" id="modal-download-all" onclick="downloadAllSlides()">📸 Download All (Instagram)</button>
+            <button class="modal-btn pinterest" id="modal-download-pinterest" onclick="downloadAllSlidesPinterest()" style="background: linear-gradient(135deg, #E60023, #BD081C);">📌 Download All (Pinterest)</button>
             <a class="modal-btn secondary" id="modal-folder-link" href="#" target="_blank">📂 Open Folder</a>
             <a class="modal-btn secondary" id="modal-captions-link" href="#" target="_blank">📝 View Captions</a>
           </div>
+          <p style="font-size: 12px; color: #888; margin-top: 10px; text-align: center;">Pinterest downloads are resized to 1000×1500 (2:3 ratio)</p>
         </div>
       </div>
     </div>
@@ -1858,6 +1860,86 @@
           await new Promise(r => setTimeout(r, 300));
         } catch (e) {
           console.error('Failed to download:', slide.name, e);
+        }
+      }
+      
+      btn.textContent = '✅ Downloaded!';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 2000);
+    }
+    
+    async function downloadAllSlidesPinterest() {
+      if (!currentSlideUrls.length) return;
+      
+      const btn = document.getElementById('modal-download-pinterest');
+      const originalText = btn.textContent;
+      btn.textContent = '⏳ Converting...';
+      btn.disabled = true;
+      
+      // Pinterest dimensions: 1000x1500 (2:3 ratio)
+      const pinterestWidth = 1000;
+      const pinterestHeight = 1500;
+      
+      for (let i = 0; i < currentSlideUrls.length; i++) {
+        const slide = currentSlideUrls[i];
+        try {
+          // Load image
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          await new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = slide.url;
+          });
+          
+          // Create canvas with Pinterest dimensions
+          const canvas = document.createElement('canvas');
+          canvas.width = pinterestWidth;
+          canvas.height = pinterestHeight;
+          const ctx = canvas.getContext('2d');
+          
+          // Fill with dark background (matches our theme)
+          ctx.fillStyle = '#1a1a2e';
+          ctx.fillRect(0, 0, pinterestWidth, pinterestHeight);
+          
+          // Calculate scaling to fit image (cover/crop approach)
+          const imgRatio = img.width / img.height;
+          const targetRatio = pinterestWidth / pinterestHeight;
+          
+          let drawWidth, drawHeight, offsetX, offsetY;
+          
+          if (imgRatio > targetRatio) {
+            // Image is wider - fit height, crop width
+            drawHeight = pinterestHeight;
+            drawWidth = drawHeight * imgRatio;
+            offsetX = (pinterestWidth - drawWidth) / 2;
+            offsetY = 0;
+          } else {
+            // Image is taller - fit width, crop height
+            drawWidth = pinterestWidth;
+            drawHeight = drawWidth / imgRatio;
+            offsetX = 0;
+            offsetY = (pinterestHeight - drawHeight) / 2;
+          }
+          
+          ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+          
+          // Convert to blob and download
+          const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = slide.name.replace('.png', '-pinterest.png');
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);
+          
+          await new Promise(r => setTimeout(r, 300));
+        } catch (e) {
+          console.error('Failed to convert:', slide.name, e);
         }
       }
       
