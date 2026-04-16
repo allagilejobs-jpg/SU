@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #4A90A4;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      flex: 1;
+    }
+    
+    .tool {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+    }
+    .tool-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+    .tool-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 8px;
+    }
+    .tool-desc {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+    .tool-uses {
+      margin-top: auto;
+    }
+    .tool-use {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+    .tool-use .check { color: #27AE60; }
+    
+    .tip-box {
+      background: rgba(232, 184, 109, 0.15);
+      border: 2px solid #E8B86D;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .tip-title {
+      color: #E8B86D;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .tip-text {
+      font-size: 16px;
+      color: #ccc;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 10px;
+    }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">📋 Save These</div>
+    <h1 class="title">Visual Supports<br>That Actually Work</h1>
+    <p class="subtitle">Tools to reduce anxiety and increase independence</p>
+  </div>
+  
+  <div class="tools-grid">
+    <div class="tool">
+      <div class="tool-icon">📅</div>
+      <div class="tool-name">Visual Schedules</div>
+      <div class="tool-desc">Show the day's plan with pictures or words</div>
+      <div class="tool-uses">
+        <div class="tool-use"><span class="check">✓</span> Reduces "what's next?" anxiety</div>
+        <div class="tool-use"><span class="check">✓</span> Helps with transitions</div>
+      </div>
+    </div>
+    
+    <div class="tool">
+      <div class="tool-icon">⏰</div>
+      <div class="tool-name">Visual Timers</div>
+      <div class="tool-desc">Make time visible with countdown timers</div>
+      <div class="tool-uses">
+        <div class="tool-use"><span class="check">✓</span> Shows "how long" concretely</div>
+        <div class="tool-use"><span class="check">✓</span> Eases transition warnings</div>
+      </div>
+    </div>
+    
+    <div class="tool">
+      <div class="tool-icon">1️⃣</div>
+      <div class="tool-name">First-Then Boards</div>
+      <div class="tool-desc">"First [task], then [reward]"</div>
+      <div class="tool-uses">
+        <div class="tool-use"><span class="check">✓</span> Motivates completion</div>
+        <div class="tool-use"><span class="check">✓</span> Breaks down tasks</div>
+      </div>
+    </div>
+    
+    <div class="tool">
+      <div class="tool-icon">🎯</div>
+      <div class="tool-name">Choice Boards</div>
+      <div class="tool-desc">Offer 2-4 options visually</div>
+      <div class="tool-uses">
+        <div class="tool-use"><span class="check">✓</span> Gives control</div>
+        <div class="tool-use"><span class="check">✓</span> Reduces overwhelm</div>
+      </div>
+    </div>
+    
+    <div class="tool">
+      <div class="tool-icon">📖</div>
+      <div class="tool-name">Social Stories</div>
+      <div class="tool-desc">Prepare for new situations with story format</div>
+      <div class="tool-uses">
+        <div class="tool-use"><span class="check">✓</span> Explains expectations</div>
+        <div class="tool-use"><span class="check">✓</span> Reduces fear of unknown</div>
+      </div>
+    </div>
+    
+    <div class="tool">
+      <div class="tool-icon">🃏</div>
+      <div class="tool-name">Break Cards</div>
+      <div class="tool-desc">Non-verbal way to request a break</div>
+      <div class="tool-uses">
+        <div class="tool-use"><span class="check">✓</span> Self-advocacy tool</div>
+        <div class="tool-use"><span class="check">✓</span> Prevents meltdowns</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tip-box">
+    <div class="tip-title">💡 PRO TIP</div>
+    <div class="tip-text">Keep visuals consistent across home, school, and therapy. Laminate for durability!</div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for your visual toolkit!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

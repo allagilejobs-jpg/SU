@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #27AE60;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    .key-stat {
+      font-size: 18px;
+      color: #E8B86D;
+      margin-top: 10px;
+    }
+    
+    .types-section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    .types-title {
+      color: #4A90A4;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .types-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .type {
+      background: rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 15px;
+    }
+    .type-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .type-name {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .type-desc {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .support-section {
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid #27AE60;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    .support-title {
+      color: #27AE60;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .support-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .support-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+    .check { color: #27AE60; }
+    
+    .myths-section {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid #E74C3C;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .myths-title {
+      color: #E74C3C;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .myths-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .myth {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .myth .icon { color: #27AE60; flex-shrink: 0; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: auto;
+    }
+    .message {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💬 AAC Guide</div>
+    <h1 class="title">Communication for<br>Nonverbal Children</h1>
+    <p class="subtitle">Not speaking ≠ not communicating</p>
+    <p class="key-stat">📊 25-30% of autistic individuals are nonspeaking</p>
+  </div>
+  
+  <div class="types-section">
+    <div class="types-title">📱 AAC OPTIONS</div>
+    <div class="types-grid">
+      <div class="type">
+        <div class="type-icon">📱</div>
+        <div class="type-name">High-Tech</div>
+        <div class="type-desc">Tablets with speech apps (Proloquo2Go, TouchChat)</div>
+      </div>
+      <div class="type">
+        <div class="type-icon">📋</div>
+        <div class="type-name">Low-Tech</div>
+        <div class="type-desc">Picture boards, PECS, communication books</div>
+      </div>
+      <div class="type">
+        <div class="type-icon">🤟</div>
+        <div class="type-name">Sign Language</div>
+        <div class="type-desc">ASL or personalized gestures</div>
+      </div>
+      <div class="type">
+        <div class="type-icon">✏️</div>
+        <div class="type-name">Writing/Typing</div>
+        <div class="type-desc">Letter boards, keyboards</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="support-section">
+    <div class="support-title">✅ HOW TO SUPPORT AAC SUCCESS</div>
+    <div class="support-items">
+      <div class="support-item"><span class="check">✓</span> Model it yourself</div>
+      <div class="support-item"><span class="check">✓</span> Keep AAC available 24/7</div>
+      <div class="support-item"><span class="check">✓</span> Give 10-15 sec wait time</div>
+      <div class="support-item"><span class="check">✓</span> Honor ALL attempts</div>
+      <div class="support-item"><span class="check">✓</span> Never withhold to "make them talk"</div>
+      <div class="support-item"><span class="check">✓</span> Presume competence</div>
+    </div>
+  </div>
+  
+  <div class="myths-section">
+    <div class="myths-title">💥 MYTHS BUSTED</div>
+    <div class="myths-grid">
+      <div class="myth"><span class="icon">✓</span> AAC does NOT prevent speech</div>
+      <div class="myth"><span class="icon">✓</span> No prerequisites needed</div>
+      <div class="myth"><span class="icon">✓</span> Never "too young" for AAC</div>
+      <div class="myth"><span class="icon">✓</span> Can use alongside speech</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="message">💙 Communication is a RIGHT, not a privilege.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

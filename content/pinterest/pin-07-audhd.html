@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #9B59B6, #3498DB);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .title .autism { color: #9B59B6; }
+    .title .adhd { color: #3498DB; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    .stat {
+      font-size: 18px;
+      color: #E8B86D;
+      margin-top: 10px;
+    }
+    
+    .conflict-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    .conflict-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 20px;
+    }
+    .conflicts {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .conflict {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 15px;
+      align-items: center;
+    }
+    .autism-says, .adhd-says {
+      padding: 12px 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .autism-says {
+      background: rgba(155, 89, 182, 0.2);
+      border: 1px solid #9B59B6;
+    }
+    .adhd-says {
+      background: rgba(52, 152, 219, 0.2);
+      border: 1px solid #3498DB;
+    }
+    .vs {
+      color: #666;
+      font-weight: 700;
+    }
+    
+    .experiences {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    .exp-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #4A90A4;
+      margin-bottom: 15px;
+    }
+    .exp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .exp-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+    
+    .strengths {
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid #27AE60;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .str-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #27AE60;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .str-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .str-item {
+      background: rgba(0,0,0,0.3);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+      margin-top: auto;
+    }
+    .message {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🧠⚡ AuDHD</div>
+    <h1 class="title"><span class="autism">Autism</span> + <span class="adhd">ADHD</span></h1>
+    <p class="subtitle">When your brain runs on TWO operating systems</p>
+    <p class="stat">📊 50-70% of autistic people also have ADHD traits</p>
+  </div>
+  
+  <div class="conflict-box">
+    <div class="conflict-title">⚔️ THE INTERNAL TUG-OF-WAR</div>
+    <div class="conflicts">
+      <div class="conflict">
+        <div class="autism-says">🧩 "I need routine"</div>
+        <span class="vs">VS</span>
+        <div class="adhd-says">⚡ "I'm bored, need novelty"</div>
+      </div>
+      <div class="conflict">
+        <div class="autism-says">🧩 "Plan everything"</div>
+        <span class="vs">VS</span>
+        <div class="adhd-says">⚡ "Plans? What plans?"</div>
+      </div>
+      <div class="conflict">
+        <div class="autism-says">🧩 "Same food daily"</div>
+        <span class="vs">VS</span>
+        <div class="adhd-says">⚡ "I want something new"</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="experiences">
+    <div class="exp-title">🔄 COMMON AuDHD EXPERIENCES</div>
+    <div class="exp-grid">
+      <div class="exp-item">🔁 Hyperfocus loops that shift unpredictably</div>
+      <div class="exp-item">😤 Emotional whiplash - big feelings, fast</div>
+      <div class="exp-item">🛋️ Paralysis paradox - want ALL things, frozen</div>
+      <div class="exp-item">🎭 Double masking - hiding both conditions</div>
+      <div class="exp-item">⏰ Time blindness PLUS schedule panic</div>
+      <div class="exp-item">🔋 Energy bursts → complete shutdowns</div>
+    </div>
+  </div>
+  
+  <div class="strengths">
+    <div class="str-title">✨ AuDHD SUPERPOWERS</div>
+    <div class="str-items">
+      <span class="str-item">Creative problem solving</span>
+      <span class="str-item">Passionate expertise</span>
+      <span class="str-item">Adaptable systems</span>
+      <span class="str-item">Deep empathy</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="message">💜 Your brain isn't broken. It's running two operating systems.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

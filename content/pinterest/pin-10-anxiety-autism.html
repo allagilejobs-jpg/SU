@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E74C3C;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 32px;
+      font-weight: 800;
+      color: #E8B86D;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: #888;
+    }
+    
+    .triggers-section {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid #E74C3C;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .triggers-section .section-title { color: #E74C3C; }
+    .triggers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .trigger {
+      text-align: center;
+      font-size: 13px;
+    }
+    .trigger-icon {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    
+    .helps-section {
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid #27AE60;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 15px;
+      flex: 1;
+    }
+    .helps-section .section-title { color: #27AE60; }
+    .helps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .help-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .help-icon { color: #27AE60; flex-shrink: 0; }
+    
+    .flags-section {
+      background: rgba(155, 89, 182, 0.1);
+      border: 2px solid #9B59B6;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .flags-section .section-title { color: #9B59B6; }
+    .flags-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .flag {
+      background: rgba(0,0,0,0.3);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .message {
+      font-size: 18px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 8px;
+    }
+    .brand { font-size: 14px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">😰 Hidden Connection</div>
+    <h1 class="title">Autism & Anxiety</h1>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">40-80%</div>
+        <div class="stat-label">have clinical anxiety</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">#1</div>
+        <div class="stat-label">co-occurring condition</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="triggers-section">
+    <div class="section-title">⚡ COMMON TRIGGERS</div>
+    <div class="triggers-grid">
+      <div class="trigger"><div class="trigger-icon">🔊</div>Sensory overload</div>
+      <div class="trigger"><div class="trigger-icon">🔄</div>Unexpected changes</div>
+      <div class="trigger"><div class="trigger-icon">👥</div>Social uncertainty</div>
+      <div class="trigger"><div class="trigger-icon">🎭</div>Masking exhaustion</div>
+      <div class="trigger"><div class="trigger-icon">❓</div>Ambiguity</div>
+      <div class="trigger"><div class="trigger-icon">⏰</div>Transitions</div>
+      <div class="trigger"><div class="trigger-icon">📱</div>Too many demands</div>
+      <div class="trigger"><div class="trigger-icon">💭</div>Can't read body signals</div>
+    </div>
+  </div>
+  
+  <div class="helps-section">
+    <div class="section-title">✅ WHAT ACTUALLY HELPS</div>
+    <div class="helps-grid">
+      <div class="help-item"><span class="help-icon">📅</span> Predictability - visual schedules, advance warnings</div>
+      <div class="help-item"><span class="help-icon">🏠</span> Sensory safe spaces - quiet corner, dim lights</div>
+      <div class="help-item"><span class="help-icon">🌀</span> Allow stimming - it's regulating, not a problem</div>
+      <div class="help-item"><span class="help-icon">🎯</span> Special interests - diving in reduces cortisol</div>
+      <div class="help-item"><span class="help-icon">📝</span> Scripts & preparation - practice, preview, plan</div>
+      <div class="help-item"><span class="help-icon">⚡</span> Reduce demands when stressed - recovery matters</div>
+    </div>
+  </div>
+  
+  <div class="flags-section">
+    <div class="section-title">🚩 RED FLAGS - GET HELP</div>
+    <div class="flags-grid">
+      <span class="flag">School refusal</span>
+      <span class="flag">Self-harm</span>
+      <span class="flag">Isolation</span>
+      <span class="flag">Panic attacks</span>
+      <span class="flag">Skill regression</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="message">💙 Anxiety in autism isn't overreacting. Their nervous system genuinely perceives more threats.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

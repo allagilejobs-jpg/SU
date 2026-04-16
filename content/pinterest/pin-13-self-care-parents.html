@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #9B59B6;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .subtitle {
+      font-size: 22px;
+      color: #E8B86D;
+      font-weight: 600;
+    }
+    
+    .reality-box {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid #E74C3C;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .reality-title {
+      color: #E74C3C;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .reality-text {
+      font-size: 16px;
+      color: #ccc;
+    }
+    
+    .strategies-section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .strategies-title {
+      color: #27AE60;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .strategies-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .strategy {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .strategy-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .strategy-content {}
+    .strategy-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .strategy-desc {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.3;
+    }
+    
+    .people-box {
+      background: rgba(74, 144, 164, 0.15);
+      border: 2px solid #4A90A4;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .people-title {
+      color: #4A90A4;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .people-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .people-item {
+      background: rgba(0,0,0,0.3);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+    }
+    .message {
+      font-size: 20px;
+      font-weight: 700;
+      color: #9B59B6;
+      margin-bottom: 10px;
+    }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💜 For Parents</div>
+    <h1 class="title">Self-Care for<br>Autism Parents</h1>
+    <p class="subtitle">Not bubble baths. Real strategies.</p>
+  </div>
+  
+  <div class="reality-box">
+    <div class="reality-title">⚠️ THE REALITY</div>
+    <div class="reality-text">You're running on empty, appointments fill your calendar, and "me time" feels impossible. We get it.</div>
+  </div>
+  
+  <div class="strategies-section">
+    <div class="strategies-title">✅ MICRO SELF-CARE THAT ACTUALLY WORKS</div>
+    <div class="strategies-grid">
+      <div class="strategy">
+        <div class="strategy-icon">☕</div>
+        <div class="strategy-content">
+          <div class="strategy-title">Hot Coffee Rule</div>
+          <div class="strategy-desc">Finish ONE hot drink before it gets cold. That's a win.</div>
+        </div>
+      </div>
+      <div class="strategy">
+        <div class="strategy-icon">🚗</div>
+        <div class="strategy-content">
+          <div class="strategy-title">Parking Lot Pause</div>
+          <div class="strategy-desc">Sit in car for 5 min before going inside. Breathe.</div>
+        </div>
+      </div>
+      <div class="strategy">
+        <div class="strategy-icon">🎧</div>
+        <div class="strategy-content">
+          <div class="strategy-title">Sensory Reset</div>
+          <div class="strategy-desc">Noise-canceling headphones. Even for 10 minutes.</div>
+        </div>
+      </div>
+      <div class="strategy">
+        <div class="strategy-icon">📱</div>
+        <div class="strategy-content">
+          <div class="strategy-title">Phone Boundaries</div>
+          <div class="strategy-desc">No screens first 30 min awake. Or during meals.</div>
+        </div>
+      </div>
+      <div class="strategy">
+        <div class="strategy-icon">🌙</div>
+        <div class="strategy-content">
+          <div class="strategy-title">Sleep When Possible</div>
+          <div class="strategy-desc">Everything else can wait. Rest is productive.</div>
+        </div>
+      </div>
+      <div class="strategy">
+        <div class="strategy-icon">🚶</div>
+        <div class="strategy-content">
+          <div class="strategy-title">Movement Snacks</div>
+          <div class="strategy-desc">5-min walk. Stretch at red lights. Small counts.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="people-box">
+    <div class="people-title">👥 FIND YOUR PEOPLE</div>
+    <div class="people-items">
+      <span class="people-item">Facebook groups</span>
+      <span class="people-item">Local support groups</span>
+      <span class="people-item">Therapy for YOU</span>
+      <span class="people-item">Autism parent friends</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="message">💜 You can't pour from an empty cup. Your needs matter too.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E74C3C;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .subtitle {
+      font-size: 22px;
+      color: #E8B86D;
+      font-weight: 600;
+    }
+    
+    .why-box {
+      background: rgba(231, 76, 60, 0.1);
+      border: 2px solid #E74C3C;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    .why-title {
+      color: #E74C3C;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .why-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    
+    .signs-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .signs-title {
+      color: #4A90A4;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .sign {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .sign-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    
+    .stat-box {
+      background: rgba(155, 89, 182, 0.15);
+      border: 2px solid #9B59B6;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 48px;
+      font-weight: 800;
+      color: #9B59B6;
+    }
+    .stat-text {
+      font-size: 18px;
+      color: #aaa;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+    }
+    .message {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">👩 Often Missed</div>
+    <h1 class="title">Autism in Girls</h1>
+    <p class="subtitle">Why They're Underdiagnosed</p>
+  </div>
+  
+  <div class="why-box">
+    <div class="why-title">❓ WHY GIRLS ARE MISSED</div>
+    <div class="why-items">
+      <div class="why-item">📚 Diagnostic criteria based on boys</div>
+      <div class="why-item">🎭 Better at masking from young age</div>
+      <div class="why-item">👥 Social mimicry appears "normal"</div>
+      <div class="why-item">🏥 Misdiagnosed as anxiety/depression</div>
+      <div class="why-item">🧸 Interests seen as "typical"</div>
+      <div class="why-item">📖 Quiet struggles go unnoticed</div>
+    </div>
+  </div>
+  
+  <div class="signs-box">
+    <div class="signs-title">🔍 SIGNS IN GIRLS & WOMEN</div>
+    <div class="signs-grid">
+      <div class="sign"><span class="sign-icon">🎭</span> Masking in public, meltdowns at home</div>
+      <div class="sign"><span class="sign-icon">📚</span> Intense interest in people/fiction</div>
+      <div class="sign"><span class="sign-icon">👯</span> One close friend vs. groups</div>
+      <div class="sign"><span class="sign-icon">🪞</span> Studies others to learn "normal"</div>
+      <div class="sign"><span class="sign-icon">😰</span> High anxiety around social rules</div>
+      <div class="sign"><span class="sign-icon">📝</span> Scripts conversations in advance</div>
+      <div class="sign"><span class="sign-icon">😮‍💨</span> Exhausted after socializing</div>
+      <div class="sign"><span class="sign-icon">🎯</span> Perfectionism and people-pleasing</div>
+    </div>
+  </div>
+  
+  <div class="stat-box">
+    <div class="stat-num">3:1</div>
+    <div class="stat-text">Boys diagnosed vs girls — but the real ratio may be closer to 1:1</div>
+  </div>
+  
+  <div class="footer">
+    <div class="message">💜 Share this — it might change a life.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
