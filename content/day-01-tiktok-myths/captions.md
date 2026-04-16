@@ -45,7 +45,7 @@ Stop self-diagnosing from 30-second videos. Here's the truth.
 
 **Title:** 3 Things TikTok Gets WRONG About Autism
 
-**Description:** Mistake/myth format (high engagement hook from research). Save this guide for tips that actually work.
+**Description:** 5 autism myths that need to die. These harmful misconceptions hurt autistic people every day. Learn the truth and share it.
 
 **Board:** Autism Parenting Tips
 

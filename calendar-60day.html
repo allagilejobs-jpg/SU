@@ -458,6 +458,50 @@
       font-size: 13px;
       margin-top: 15px;
     }
+    
+    .pinterest-section {
+      background: rgba(230, 60, 60, 0.1);
+      border: 1px solid rgba(230, 60, 60, 0.3);
+    }
+    .pinterest-section h3 {
+      color: #E63C3C !important;
+    }
+    .pinterest-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pinterest-field {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .pinterest-field label {
+      color: #E8B86D;
+      font-weight: 600;
+      font-size: 12px;
+      min-width: 80px;
+    }
+    .pinterest-field span {
+      flex: 1;
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.4;
+    }
+    .copy-btn.small {
+      padding: 4px 8px;
+      font-size: 11px;
+      background: rgba(74, 144, 164, 0.3);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: white;
+    }
+    .copy-btn.small:hover {
+      background: rgba(74, 144, 164, 0.5);
+    }
+
     .modal-actions {
       display: flex;
       gap: 15px;
@@ -1025,7 +1069,10 @@
         slides: 5,
         igCaption: "🚨 STOP scrolling TikTok for autism \"facts.\"\n\nA new study just found that over 50% of autism/ADHD content on social media is MISLEADING.\n\nHere are 3 myths that need to die 👇\n\n💾 Save this and share it with someone who needs accurate information.",
         igHashtags: "#autism #autismawareness #autismmom #autismfamily #neurodiversity #autismacceptance #autismfacts #mythbusters #autismparenting #autismcommunity",
-        tiktokCaption: "🚨 3 things TikTok gets WRONG about autism (new study says 50% of content is misleading!)\n\n#autism #autismawareness #fyp #autismfacts #mythbusters"
+        tiktokCaption: "🚨 3 things TikTok gets WRONG about autism (new study says 50% of content is misleading!)\n\n#autism #autismawareness #fyp #autismfacts #mythbusters",
+        pinterestTitle: "3 Things TikTok Gets WRONG About Autism",
+        pinterestDesc: "5 autism myths that need to die. These harmful misconceptions hurt autistic people every day. Learn the truth and share it.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       2: {
         title: "Acceptance vs. Awareness — Why Language Matters",
@@ -1041,7 +1088,10 @@
         slides: 6,
         igCaption: "🪟 Is your neurotypical child becoming invisible?\n\nLet's talk about GLASS CHILD SYNDROME.\n\nWhen one child has high support needs, their siblings often fade into the background.\n\nTag a sibling parent who needs this 💙",
         igHashtags: "#autism #autismfamily #autismparenting #siblings #glasschildsyndrome #specialneeds #autismmom #autismdad",
-        tiktokCaption: "🪟 Is your NT child becoming INVISIBLE?\n\nGlass Child Syndrome: when siblings fade into the background.\n\n#autism #autismparenting #siblings #fyp"
+        tiktokCaption: "🪟 Is your NT child becoming INVISIBLE?\n\nGlass Child Syndrome: when siblings fade into the background.\n\n#autism #autismparenting #siblings #fyp",
+        pinterestTitle: "Glass Child Syndrome: The Siblings Who Fade Into the Background",
+        pinterestDesc: "Is your neurotypical child becoming invisible?. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Sibling Support"
       },
       4: {
         title: "5 Sensory Hacks That Actually Work",
@@ -1049,7 +1099,10 @@
         slides: 7,
         igCaption: "🎧😎🧸 5 SENSORY HACKS that actually work!\n\nMeltdown prevention starts here ⬇️\n\n1️⃣ Noise-canceling headphones\n2️⃣ Sunglasses indoors\n3️⃣ Fidget tools\n4️⃣ Visual timers\n5️⃣ Calm-down corner\n\n💾 Save this for your sensory toolkit!",
         igHashtags: "#autism #sensoryfriendly #sensoryprocessing #autismparenting #autismhacks #autismtips #occupationaltherapy",
-        tiktokCaption: "🎧😎🧸 5 Sensory hacks that ACTUALLY work (OT-approved!)\n\n#autism #sensoryfriendly #autismhacks #fyp"
+        tiktokCaption: "🎧😎🧸 5 Sensory hacks that ACTUALLY work (OT-approved!)\n\n#autism #sensoryfriendly #autismhacks #fyp",
+        pinterestTitle: "5 Sensory Hacks That Actually Work",
+        pinterestDesc: "Meltdown prevention starts here. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Sensory Support & Hacks"
       },
       5: {
         title: "Late-Diagnosed Autism in Women",
@@ -1057,7 +1110,10 @@
         slides: 5,
         igCaption: "💜 450% increase in adult autism diagnoses (ages 26-34).\n\nMost of them? Women.\n\nFor years, girls learned to mask, study social rules, and hide their struggles.\n\nIt's never too late to understand yourself.\n\n💾 Save & share for someone who needs this.",
         igHashtags: "#latediagnosedautistic #unmaskingautism #autisticwomen #autisticburnout #highmaskingautism #autism #neurodivergent",
-        tiktokCaption: "💜 450% spike in adult autism diagnoses — most are WOMEN.\n\n#latediagnosedautistic #unmaskingautism #autisticwomen #fyp"
+        tiktokCaption: "💜 450% spike in adult autism diagnoses — most are WOMEN.\n\n#latediagnosedautistic #unmaskingautism #autisticwomen #fyp",
+        pinterestTitle: "Late-Diagnosed Autism in Women",
+        pinterestDesc: "450% increase in adult autism diagnoses. Here's why. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism in Girls"
       },
       6: {
         title: "Autistic Burnout: Signs & Prevention",
@@ -1065,7 +1121,10 @@
         slides: 5,
         igCaption: "🔥 AUTISTIC BURNOUT is real. And it's not what you think.\n\nIt's NOT laziness or just depression.\n\nIt IS neurological exhaustion from navigating a neurotypical world.\n\n💙 You're not broken. You're exhausted.\n\n💾 Save for when you or someone you love needs this.",
         igHashtags: "#autisticburnout #autism #autismawareness #autismparenting #neurodivergent #actuallyautistic #mentalhealth",
-        tiktokCaption: "🔥 Autistic burnout is NOT laziness.\n\nSome experience first burnout at AGE 6.\n\n#autisticburnout #autism #neurodivergent #fyp"
+        tiktokCaption: "🔥 Autistic burnout is NOT laziness.\n\nSome experience first burnout at AGE 6.\n\n#autisticburnout #autism #neurodivergent #fyp",
+        pinterestTitle: "Autistic Burnout: Signs in Kids AND Adults",
+        pinterestDesc: "Some people experience their first burnout at age 6. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Self-Care for Parents"
       },
       7: {
         title: "Autism Acceptance Month Kickoff",
@@ -1073,7 +1132,10 @@
         slides: 4,
         igCaption: "♾️💙 IT'S AUTISM ACCEPTANCE MONTH! 💙♾️\n\nApril is here. A whole month of education, support, and celebration.\n\n➕ Follow so you don't miss anything\n🔔 Turn on notifications\n💾 Save this!\n\nSee you tomorrow for World Autism Acceptance Day! 💙",
         igHashtags: "#AutismAcceptanceMonth #autism #autismawareness #autismacceptance #april #neurodiversity #autismcommunity",
-        tiktokCaption: "♾️💙 AUTISM ACCEPTANCE MONTH IS HERE!\n\nTurn on notifications — tomorrow is WORLD AUTISM DAY! 🌍\n\n#AutismAcceptanceMonth #autism #april #fyp"
+        tiktokCaption: "♾️💙 AUTISM ACCEPTANCE MONTH IS HERE!\n\nTurn on notifications — tomorrow is WORLD AUTISM DAY! 🌍\n\n#AutismAcceptanceMonth #autism #april #fyp",
+        pinterestTitle: "Autism Acceptance Month Kickoff",
+        pinterestDesc: "It's here. A whole month dedicated to acceptance. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism Acceptance"
       },
       8: {
         title: "World Autism Acceptance Day",
@@ -1089,7 +1151,10 @@
         slides: 7,
         igCaption: "💀 5 MYTHS about autism that need to DIE:\n\nYou've probably believed at least one of these ⬇️\n\n❌ Myth #1: \"Vaccines cause autism\"\n✅ Debunked by countless studies. The original study was fraudulent.\n\n❌ Myth #2: \"Autistic people lack empathy\"\n✅ Many feel TOO much empathy — they just express it differently.\n\n❌ Myth #3: \"But you don't look autistic\"\n✅ Autism has no \"look.\" Many people mask to survive.\n\n❌ Myth #4: \"Only boys can be autistic\"\n✅ Girls are massively underdiagnosed. The real ratio? Much closer to 1:1.\n\n❌ Myth #5: \"Autism can be cured\"\n✅ It's a lifelong neurotype, not a disease. Support > \"cure.\"\n\nWhich myth did YOU used to believe? 👇\n\n💾 Save this to share with someone who needs it",
         igHashtags: "#autism #autismmyths #autismawareness #autismacceptance #neurodiversity #actuallyautistic #autismfacts #autismcommunity #autismparenting #autismmom #autismdad #specialneeds #autismeducation #mythbusters",
-        tiktokCaption: "💀 5 autism myths that need to DIE\n\nWhich one did you used to believe? 👇\n\n#autism #autismmyths #autismawareness #fyp #actuallyautistic"
+        tiktokCaption: "💀 5 autism myths that need to DIE\n\nWhich one did you used to believe? 👇\n\n#autism #autismmyths #autismawareness #fyp #actuallyautistic",
+        pinterestTitle: "5 Myths About Autism That Need to Die",
+        pinterestDesc: "You've probably believed at least one of these. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism Myths Debunked"
       },
       10: {
         title: "Neurodiversity-Affirming IEP Accommodations",
@@ -1105,7 +1170,10 @@
         slides: 6,
         igCaption: "🎭 HIGH-MASKING AUTISM: The Hidden Struggle\n\n\"They look fine. They're falling apart inside.\"\n\nWhat is masking? ⬇️\n\nMasking is when autistic people suppress their natural traits to appear neurotypical. It includes:\n• Forcing eye contact\n• Mimicking expressions\n• Suppressing stims\n• Scripting conversations\n\n💔 THE COST:\n• Chronic exhaustion\n• Higher anxiety & depression\n• Loss of identity\n• Delayed diagnosis\n• Worse mental health outcomes\n\n🚨 SIGNS OF HIGH-MASKING:\n• Exhausted after social situations\n• Feels like \"performing\" in public\n• Different person at home vs outside\n• Scripts conversations in advance\n• Studies others to learn \"normal\"\n• Meltdowns in private\n\nYou shouldn't have to perform to be accepted.\nUnmasking is a journey. You're not alone. 💜\n\nDid this resonate? Share your experience 👇",
         igHashtags: "#highmaskingautism #autisticmasking #unmaskingautism #actuallyautistic #autisticwomen #latediagnosedautistic #autisticburnout #autism #neurodiversity #autismacceptance #autismcommunity",
-        tiktokCaption: "🎭 High-masking autism: they look fine, but they're exhausted inside\n\nDid this resonate? 💜\n\n#highmaskingautism #unmaskingautism #actuallyautistic #fyp #autism"
+        tiktokCaption: "🎭 High-masking autism: they look fine, but they're exhausted inside\n\nDid this resonate? 💜\n\n#highmaskingautism #unmaskingautism #actuallyautistic #fyp #autism",
+        pinterestTitle: "High-Masking Autism: The Hidden Struggle",
+        pinterestDesc: "\"They look fine\" but they're exhausted inside. Learn what masking is, why it's harmful, and signs someone is high-masking. Save this for yourself or someone you love.",
+        pinterestBoard: "Autism Parenting Tips / Understanding Autism"
       },
       12: {
         title: "Self-Care for Autism Parents",
@@ -1113,7 +1181,10 @@
         slides: 6,
         igCaption: "🧘♀️ SELF-CARE for autism parents that actually works\n\nNot bubble baths. REAL strategies ⬇️\n\n⏰ MICRO-BREAKS\nYou don't need an hour. Small moments add up.\n• 2 min alone in the bathroom\n• 5 min with headphones on\n• Deep breaths in the car\n• Coffee while it's still HOT\n\n🤝 FIND YOUR PEOPLE\nSupport groups aren't weakness — they're survival.\n• Online autism parent communities\n• Local support meetups\n• Therapy for caregivers (yes, it's valid!)\n\n🚫 SET BOUNDARIES\n\"No\" is a complete sentence.\n• Skip draining events\n• Limit unsolicited advice givers\n• It's OK to cancel plans\n\n🙋 ASK FOR HELP\nThis is NOT weakness. It's wisdom.\n• Respite care exists for a reason\n• Trade childcare with other autism parents\n• Be specific about what you need\n\nYou can't pour from an empty cup. 💕\n\nWhat's ONE thing you'll do for yourself today? 👇",
         igHashtags: "#autismparent #selfcare #autismmom #autismdad #parentburnout #caregiversupport #autism #specialneedsparenting #autismfamily #mentalhealthmatters #autismlife",
-        tiktokCaption: "🧘♀️ Self-care for autism parents (not bubble baths — real stuff)\n\nWhat's your go-to? 💕\n\n#autism #selfcare #autismparent #fyp #parentburnout"
+        tiktokCaption: "🧘♀️ Self-care for autism parents (not bubble baths — real stuff)\n\nWhat's your go-to? 💕\n\n#autism #selfcare #autismparent #fyp #parentburnout",
+        pinterestTitle: "Self-Care for Autism Parents",
+        pinterestDesc: "Not bubble baths. Real strategies. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       13: {
         title: "The ABA Controversy: What Parents Need to Know",
@@ -1121,7 +1192,10 @@
         slides: 6,
         igCaption: "🤔 THE ABA CONTROVERSY: What parents need to know\n\nIs ABA right for your child? Let's look at both sides ⬇️\n\n📋 WHAT IS ABA?\nApplied Behavior Analysis — the most researched autism intervention. Covered by most insurance. Practices vary WIDELY.\n\n⚠️ THE CONCERNS (from autistic adults):\n• Historical focus on compliance over wellbeing\n• Teaching masking, not acceptance\n• Suppressing harmless stims\n• High intensity (20-40 hrs/week)\n• Some report trauma from certain programs\n\n✓ THE OTHER SIDE:\n• Modern \"naturalistic\" ABA looks different\n• Some providers are neurodiversity-affirming\n• Can help with safety skills & communication\n• Often the only insurance-covered option\n• Quality varies HUGELY by provider\n\n❓ QUESTIONS TO ASK:\n• What's your approach to stimming?\n• How do you handle \"no\"?\n• Who sets the goals?\n• Can I observe sessions anytime?\n• What's your view on neurodiversity?\n\nYou know your child best. 💙\n\nThis post isn't pro or anti-ABA — it's pro informed decision-making.\n\nWhat's your experience? Share (respectfully) 👇",
         igHashtags: "#ABA #ABAtherapy #autism #autismparenting #autismadvocacy #neurodiversity #actuallyautistic #autismcommunity #autismdebate #autismresources",
-        tiktokCaption: "🤔 The ABA debate: here's both sides so you can decide\n\nWhat's your experience?\n\n#ABA #autism #autismparenting #fyp #neurodiversity"
+        tiktokCaption: "🤔 The ABA debate: here's both sides so you can decide\n\nWhat's your experience?\n\n#ABA #autism #autismparenting #fyp #neurodiversity",
+        pinterestTitle: "The ABA Controversy: What Parents Need to Know",
+        pinterestDesc: "Is ABA therapy right for your child? Here's both sides. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Therapy Options"
       },
       14: {
         title: "Visual Supports That Actually Work",
@@ -1137,7 +1211,10 @@
         slides: 6,
         igCaption: "🌪️ Supporting your child through MELTDOWNS (during & after)\n\nIt's NOT a tantrum. Here's the difference ⬇️\n\n😤 TANTRUM:\n• Goal-oriented\n• Checks for audience\n• Can stop if need is met\n\n🌪️ MELTDOWN:\n• Overwhelm response\n• Neurological crisis\n• Can't just \"stop\"\n• NOT manipulation\n\n❌ DURING — DON'T:\n• Yell or raise voice\n• Demand eye contact\n• Say \"calm down\"\n• Touch without permission\n• Take it personally\n\n✅ DURING — DO:\n• Stay calm (regulate yourself first)\n• Reduce sensory input\n• Give space if safe\n• Use few, simple words\n• Just BE there\n\n💙 AFTER:\n• Give recovery time\n• Don't lecture or punish\n• Reconnect when ready\n• Note triggers\n• Reassure them they're loved\n\nMeltdowns aren't misbehavior. They're a sign your child needs SUPPORT. 💙\n\n💾 Save this for when you need it\n\nWhat helps YOUR child? 👇",
         igHashtags: "#autism #meltdown #autismparenting #autismmeltdown #autismmom #autismdad #sensoryoverload #autismfamily #autismsupport #specialneeds #autismacceptance",
-        tiktokCaption: "🌪️ Meltdown ≠ tantrum. Here's the difference + what to do\n\nWhat helps your child? 💙\n\n#autism #meltdown #autismparenting #fyp #autismsupport"
+        tiktokCaption: "🌪️ Meltdown ≠ tantrum. Here's the difference + what to do\n\nWhat helps your child? 💙\n\n#autism #meltdown #autismparenting #fyp #autismsupport",
+        pinterestTitle: "Meltdown vs Tantrum: How to Support Your Autistic Child",
+        pinterestDesc: "Meltdowns aren't misbehavior. Learn the difference between tantrums and meltdowns, plus exactly what to do (and avoid) during and after. A must-save guide for autism parents.",
+        pinterestBoard: "Autism Parenting Tips / Meltdown Support"
       },
       16: {
         title: "Feeding Challenges in Autistic Kids",
@@ -1145,7 +1222,10 @@
         slides: 6,
         igCaption: "🍽️ FEEDING CHALLENGES in autistic kids go way beyond \"picky eating\"\n\nIt's not defiance. It's not bad parenting. It's sensory.\n\nHere's what you need to know ⬇️\n\n📊 70-90% of autistic children have feeding challenges\n📊 They're 5x more likely to have a limited diet\n\nIt's not just about taste:\n👁️ Visual - colors, shapes, foods touching\n👃 Smell - can be overwhelming before it reaches the mouth\n🖐️ Texture - some textures feel physically painful\n🌡️ Temperature - specific requirements\n👂 Sound - their own chewing can be distressing\n\nWhat actually helps:\n✅ Use divided plates (foods don't touch!)\n✅ Same foods, same time (predictability)\n✅ Remove ALL pressure (no \"just one bite\")\n✅ Food chaining (bridge from safe foods)\n✅ Food play without eating expectations\n\nWhen to seek help:\n⚠️ Weight loss or failure to gain\n⚠️ Eating fewer than 10-15 foods\n⚠️ Extreme distress around food\n⚠️ Nutritional deficiencies\n\nYou're not a bad parent. Your child's brain experiences food differently.\n\nWhat's your child's safe food? 👇\n\n💾 Save this for tough mealtime moments",
         igHashtags: "#autism #autismparenting #feedingchallenges #pickyeater #autisticchild #sensoryfood #feedingtherapy #autismmom #autismdad #sensoryprocessing #arfid #autismfamily #neurodiversity #autismacceptance #specialneeds",
-        tiktokCaption: "🍽️ It's not picky eating. It's sensory.\n\n70-90% of autistic kids have feeding challenges. What's your child's safe food? 👇\n\n#autism #autismparenting #feedingchallenges #sensory #fyp"
+        tiktokCaption: "🍽️ It's not picky eating. It's sensory.\n\n70-90% of autistic kids have feeding challenges. What's your child's safe food? 👇\n\n#autism #autismparenting #feedingchallenges #sensory #fyp",
+        pinterestTitle: "Feeding Challenges in Autistic Kids: Beyond Picky Eating",
+        pinterestDesc: "It's not defiance. It's sensory. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Feeding & Food Tips"
       },
       17: {
         title: "Sleep Issues in Autism",
@@ -1153,7 +1233,10 @@
         slides: 6,
         igCaption: "🌙 SLEEP ISSUES in autism: what actually helps\n\nMelatonin isn't the only answer. Here's what else works ⬇️\n\n📊 50-80% of autistic kids have sleep problems\n📊 They get 2+ hours LESS sleep than neurotypical peers\n\nWhy sleep is so hard:\n🧠 Different melatonin production\n⚡ Hard to wind down an active nervous system\n🔊 Sensory sensitivities (sheets, sounds, light)\n😰 Co-occurring anxiety\n\nEnvironment fixes:\n🌑 Total darkness (blackout curtains, cover LEDs)\n🔇 White noise to mask unpredictable sounds\n🛏️ Weighted blanket, specific textures\n🌡️ Cool room (65-68°F)\n📱 No screens 1-2 hours before bed\n\nRoutine matters:\n✅ Same time every night\n✅ Visual schedule of bedtime steps\n✅ Predictable sequence (bath, PJs, book, bed)\n✅ Same comfort items every night\n\nWhen to get help:\n⚠️ Takes 1+ hour to fall asleep most nights\n⚠️ Multiple wakings with no self-soothing\n⚠️ Daytime behavior significantly affected\n\nWhat helps YOUR child sleep? Share your tips! 👇\n\n💾 Save this for exhausted nights",
         igHashtags: "#autism #autismsleep #sleepissues #autismparenting #autisticchild #sensoryprocessing #sleeptips #autismmom #autismdad #neurodiversity #autismfamily #weightedbanket #sleephygiene #specialneeds #autismacceptance",
-        tiktokCaption: "🌙 50-80% of autistic kids have sleep issues\n\nMelatonin isn't the only answer. What helps YOUR child? 👇\n\n#autism #autismsleep #sleeptips #sensory #fyp"
+        tiktokCaption: "🌙 50-80% of autistic kids have sleep issues\n\nMelatonin isn't the only answer. What helps YOUR child? 👇\n\n#autism #autismsleep #sleeptips #sensory #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Melatonin isn't the only answer. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       18: {
         title: "Signs of Autism in Girls",
@@ -1161,7 +1244,10 @@
         slides: 6,
         igCaption: "👧 SIGNS OF AUTISM IN GIRLS that often get missed\n\nAutism doesn't look the same in everyone. Girls are diagnosed 4-5 years later than boys on average.\n\nHere's what to look for ⬇️\n\nWhy girls get missed:\n📊 Diagnostic criteria were developed studying mostly boys\n📊 Girls are better at masking from an early age\n📊 The real ratio may be 2:1 or 3:1, not 4:1\n\nSigns that get overlooked:\n🎭 Social camouflaging (copies others to fit in)\n👯 One intense friendship rather than groups\n📚 \"Acceptable\" special interests (animals, reading, celebrities)\n🏠 Holds it together at school, meltdowns at home\n😰 Diagnosed with anxiety/depression first\n\nMore signs to know:\n🪞 Sensory sensitivities (tags, textures, noise)\n📝 Extreme perfectionism\n🗣️ Advanced vocabulary, prefers adults\n🎪 Imaginative play but scripted (re-enacting movies)\n😓 Needs lots of alone time to recover\n\nIf this sounds familiar:\n1. Document what you see (videos help)\n2. Find evaluators experienced with girls\n3. Trust your gut, get second opinions\n4. Start support even before diagnosis\n\nWere you or your daughter diagnosed late? Share your story 👇\n\n💾 Save this for families who need it",
         igHashtags: "#autisticgirls #autisminwomen #autismsigns #latediagnosed #autismparenting #neurodivergent #autisticwomen #autismawareness #girlswithautism #autismdiagnosis #autismcommunity #autismmom #actuallyautistic #specialneeds #unmaskingautism",
-        tiktokCaption: "👧 Girls are diagnosed 4-5 years LATER than boys\n\nThese signs get missed. Were you diagnosed late? 👇\n\n#autisticgirls #autisminwomen #autism #latediagnosed #fyp"
+        tiktokCaption: "👧 Girls are diagnosed 4-5 years LATER than boys\n\nThese signs get missed. Were you diagnosed late? 👇\n\n#autisticgirls #autisminwomen #autism #latediagnosed #fyp",
+        pinterestTitle: "Signs of Autism in Girls (Often Missed)",
+        pinterestDesc: "Autism doesn't look the same in everyone. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism in Girls"
       },
       19: {
         title: "Community Spotlight",
@@ -1169,7 +1255,10 @@
         slides: 4,
         igCaption: "💛 COMMUNITY SPOTLIGHT: Your stories this week\n\nYou shared. We're celebrating. Thank you for being here ⬇️\n\nThis week's wins 🎉\n\n🌟 \"My son tried a new food today! It's been 8 months of food chaining and he finally ate a strawberry!\"\n\n🌟 \"We had our first successful haircut without tears. Noise cancelling headphones changed everything.\"\n\n🌟 \"My daughter made her first friend at school. They bond over their shared love of dinosaurs.\"\n\nEvery win matters. Big or small. ✨\n\nYour most asked questions this week:\n🚽 Potty training struggles\n😴 Sleep issues that won't quit\n🗣️ Speech delays and AAC\n👨👩👧 Explaining autism to family\n🏫 School placement decisions\n\nComing soon: We'll cover all of these topics!\n\nYou make this community special. Every comment, every share, every story helps another family feel less alone.\n\nWant to be featured? DM us your wins and stories! 👇",
         igHashtags: "#autismcommunity #autismparenting #autismfamily #autismsupport #specialneedsparenting #autismmom #autismdad #autismwins #neurodiversity #autismacceptance #autismlove #yourenotalone #autismparent #celebratewins",
-        tiktokCaption: "💛 THIS WEEK'S WINS from our community\n\nWhat's YOUR win this week? Share below! 👇\n\n#autism #autismcommunity #autismwins #celebratewins #fyp"
+        tiktokCaption: "💛 THIS WEEK'S WINS from our community\n\nWhat's YOUR win this week? Share below! 👇\n\n#autism #autismcommunity #autismwins #celebratewins #fyp",
+        pinterestTitle: "Community Spotlight: Your Stories This Week",
+        pinterestDesc: "You shared, we're celebrating. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism Community"
       },
       20: {
         title: "Potty Training an Autistic Child",
@@ -1177,7 +1266,10 @@
         slides: 6,
         igCaption: "🚽 POTTY TRAINING an autistic child: A different timeline\n\nThrow the milestone charts away. Your child will get there. ⬇️\n\nWhy it takes longer:\n🧠 Interoception challenges (hard to sense \"I need to go\")\n😰 Transition anxiety from diapers to toilet\n🔊 Sensory issues (cold seat, flushing sounds, echoes)\n🔄 Routine disruption is hard\n\nReadiness signs to look for:\n✓ Awareness of wet/dirty diaper\n✓ Predictable bowel movement times\n✓ Can stay dry for 1-2 hours\n✓ Shows interest in the bathroom\n✓ Can follow simple instructions\n\nAutism-friendly strategies:\n📋 Visual schedule of each step\n⏰ Timed toileting (every 30-60 min)\n🎧 Address sensory issues (headphones, warm seat)\n🎁 Immediate rewards using their special interest\n📱 Social stories about using the potty\n🧘 ZERO pressure. No punishment for accidents.\n\nRemember:\n📅 Many autistic kids aren't fully trained until 5-8+\n🔄 Regression happens. It's not failure.\n⏸️ Take breaks if there's extreme distress\n\nYour child WILL get there. Don't let anyone rush you.\n\nWhat worked (or didn't work) for your family? 👇\n\n💾 Save this for the tough days",
         igHashtags: "#pottytraining #autismparenting #autisticchild #toilettraining #autismmom #autismdad #specialneeds #autismlife #neurodiversity #autismfamily #autismtips #autismsupport #pottytrainingtips #autismacceptance",
-        tiktokCaption: "🚽 Potty training your autistic child?\n\nThrow the milestone charts away. Here's what actually works 👇\n\n#autism #pottytraining #autismparenting #autismtips #fyp"
+        tiktokCaption: "🚽 Potty training your autistic child?\n\nThrow the milestone charts away. Here's what actually works 👇\n\n#autism #pottytraining #autismparenting #autismtips #fyp",
+        pinterestTitle: "Potty Training an Autistic Child: A Different Timeline",
+        pinterestDesc: "Forget milestone charts. Learn why autistic kids train on a different timeline, signs of readiness, and sensory-friendly strategies that actually work. No pressure, no shame.",
+        pinterestBoard: "Autism Parenting Tips / Potty Training Tips"
       },
       21: {
         title: "AuDHD: Autism + ADHD",
@@ -1185,7 +1277,10 @@
         slides: 6,
         igCaption: "🧠⚡ AuDHD: When your brain runs on TWO operating systems\n\nAutism + ADHD together. It's more common than you think.\n\nHere's what you need to know:\n\n📊 50-70% of autistic people also have ADHD traits\n📊 Until 2013, doctors said you couldn't have both. They were wrong.\n\nThe internal tug-of-war:\n🧩 Autism says: \"I need routine\"\n⚡ ADHD says: \"I'm bored, need novelty NOW\"\n\n🧩 Autism says: \"Plan everything\"\n⚡ ADHD says: \"Plans? What plans?\"\n\nCommon AuDHD experiences:\n🔄 Hyperfocus loops that shift unpredictably\n😤 Emotional whiplash - big feelings, fast\n🛋️ Paralysis paradox - want to do ALL things, frozen\n🎭 Double masking - hiding both conditions at once\n⏰ Time blindness PLUS schedule panic\n🔋 Energy bursts followed by complete shutdowns\n\nBut also SUPERPOWERS:\n✨ Creative problem solving\n✨ Passionate expertise when both brains agree\n✨ Adaptable systems that flex\n✨ Deep empathy and connection\n\nYour brain isn't broken. It's running two operating systems.\n\nAuDHD parent or AuDHDer yourself? Drop a 🧠⚡ below!\n\n💾 Save this to share with someone who gets it",
         igHashtags: "#audhd #autism #adhd #autismandadhd #neurodivergent #actuallyautistic #adhdlife #autismparenting #neurodiversity #autismacceptance #adhdbrain #autismmom #autismawareness #neurodivergentparenting #specialneeds",
-        tiktokCaption: "🧠⚡ AuDHD: When your brain has two operating systems fighting each other\n\nAutism wants routine. ADHD wants novelty. The result? Exhausting.\n\nAuDHDer? Drop a 🧠⚡\n\n#audhd #autism #adhd #neurodivergent #fyp"
+        tiktokCaption: "🧠⚡ AuDHD: When your brain has two operating systems fighting each other\n\nAutism wants routine. ADHD wants novelty. The result? Exhausting.\n\nAuDHDer? Drop a 🧠⚡\n\n#audhd #autism #adhd #neurodivergent #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       22: {
         title: "AAC and Communication",
@@ -1193,7 +1288,10 @@
         slides: 6,
         igCaption: "💬 Not speaking ≠ not communicating\n\nAAC (Augmentative and Alternative Communication) opens doors for nonverbal and minimally verbal children.\n\nThe facts:\n📊 25-30% of autistic individuals are nonspeaking or minimally verbal\n📊 100% of people have the right to communicate\n\nAAC options:\n📱 High-tech: Tablets with speech apps (Proloquo2Go, TouchChat)\n📋 Low-tech: Picture boards, PECS, communication books\n🤟 Sign language: ASL or personalized gestures\n✋ Unaided: Body language, pointing, facial expressions\n✏️ Writing/typing: Letter boards, keyboards\n🎨 Core word systems: 50 words = 80% of communication!\n\nHow to support AAC success:\n🗣️ Model it yourself - show them how!\n🌍 Keep AAC available 24/7\n⏳ Give 10-15 seconds wait time\n🎉 Honor ALL communication attempts\n🚫 Never withhold AAC to \"make them talk\"\n\nBusting myths:\n✅ AAC does NOT prevent speech - research shows it helps!\n✅ No prerequisites - communication is a right\n✅ You're never \"too young\" for AAC\n✅ AAC can be used alongside speech\n\nCommunication is a right. Not a privilege. Not something to earn.\n\nDoes your family use AAC? Share your experience 👇\n\n💾 Save this for families who need it",
         igHashtags: "#aac #augmentativecommunication #nonverbal #minimallyverbal #autism #autismparenting #speechtherapy #proloquo2go #communicationmatters #autismacceptance #neurodiversity #specialneeds #autismmom #autismfamily #actuallyautistic",
-        tiktokCaption: "💬 Not speaking ≠ not communicating\n\nAAC gives nonverbal kids a voice. And NO - it doesn't prevent speech!\n\nDoes your family use AAC? 👇\n\n#aac #autism #nonverbal #communication #fyp"
+        tiktokCaption: "💬 Not speaking ≠ not communicating\n\nAAC gives nonverbal kids a voice. And NO - it doesn't prevent speech!\n\nDoes your family use AAC? 👇\n\n#aac #autism #nonverbal #communication #fyp",
+        pinterestTitle: "Communicating with Nonverbal/Minimally Verbal Children",
+        pinterestDesc: "Not speaking does not mean not communicating. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       23: {
         title: "School Accommodations Beyond the IEP",
@@ -1201,7 +1299,10 @@
         slides: 6,
         igCaption: "🏫 School accommodations go WAY beyond the IEP\n\nYou can ask for more than you think. Here's what most parents don't know:\n\nFormal options:\n📋 IEP: Specialized instruction + accommodations + legal protections\n📄 504 Plan: Accommodations only but faster, broader eligibility\n💡 Pro tip: Some kids have BOTH!\n\nInformal accommodations (no paperwork needed):\n🪑 Flexible seating - near door, wobble chair, standing desk\n🎧 Sensory tools - headphones, fidgets, sunglasses\n⏰ Timing adjustments - early dismissal, movement breaks\n📝 Assignment mods - typed not handwritten, verbal answers\n🚪 Safe exit plan - signal to leave when overwhelmed\n📧 Written instructions and advance notice of changes\n🍎 Food flexibility - snacks in class, quiet eating space\n👥 Social supports - lunch bunch, buddy system\n\nThings you CAN ask for:\n📚 Reduced homework (quality over quantity)\n🗓️ Advance notice of substitute teachers\n🧪 Alternative assessments - oral tests, projects\n🚌 Transportation support\n🎭 Modified participation options\n\nDocumentation tips:\n1️⃣ Put everything in writing\n2️⃣ Be specific, not vague\n3️⃣ Build relationships first\n4️⃣ Know your rights (IDEA, 504, ADA)\n5️⃣ Follow up monthly\n\nAccommodations aren't special treatment. They're equal access.\n\nWhat accommodation changed YOUR child's school life? 👇\n\n💾 Save this for your next school meeting",
         igHashtags: "#iep #504plan #schoolaccommodations #autism #autismparenting #specialeducation #iepmeeting #advocacy #autismadvocate #specialneeds #autismmom #neurodiversity #autismacceptance #ieptips #parentadvocacy",
-        tiktokCaption: "🏫 School accommodations go WAY beyond the IEP\n\nYou can ask for more than you think. If you don't ask, the answer is always no.\n\nWhat accommodation saved YOUR kid? 👇\n\n#iep #autism #schoolaccommodations #advocacy #fyp"
+        tiktokCaption: "🏫 School accommodations go WAY beyond the IEP\n\nYou can ask for more than you think. If you don't ask, the answer is always no.\n\nWhat accommodation saved YOUR kid? 👇\n\n#iep #autism #schoolaccommodations #advocacy #fyp",
+        pinterestTitle: "School Accommodations Beyond the IEP",
+        pinterestDesc: "You can ask for more than you think. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / IEP & School Advocacy"
       },
       24: {
         title: "Autism and Anxiety",
@@ -1209,7 +1310,10 @@
         slides: 6,
         igCaption: "😰 Autism and Anxiety: The hidden connection\n\nMost autistic people experience anxiety. Here's what you need to know:\n\nThe stats:\n📊 40-80% of autistic people have clinical anxiety\n📊 50% of autistic children have an anxiety disorder\n📊 Anxiety is the #1 co-occurring condition with autism\n\nCommon triggers:\n🔊 Sensory overload\n🔄 Unexpected changes\n👥 Social uncertainty\n🎭 Masking exhaustion\n❓ Ambiguity and uncertainty\n⏰ Transitions between activities\n📱 Too many demands\n💭 Interoception issues (can't identify body signals)\n\nWhat actually helps:\n📅 Predictability - visual schedules, advance warnings\n🏠 Sensory safe spaces - quiet corner, dim lights, headphones\n🌀 Allow stimming - it's regulating, not a problem\n🎯 Special interests - diving in reduces cortisol\n📝 Scripts and preparation - practice, preview, plan\n⚡ Reduce demands when stressed - recovery matters\n\nWhen to get professional help:\n🔍 Find autism-informed therapists (CBT may need mods)\n💊 Medication can be part of the plan\n🧘 OT for sensory regulation\n\n⚠️ Red flags: school refusal, self-harm, isolation, panic attacks, physical symptoms, skill regression\n\nAnxiety in autism isn't overreacting. Their nervous system is genuinely perceiving more threats.\n\nWhat helps YOUR child (or you) with anxiety? 👇\n\n💾 Save this for anxious moments",
         igHashtags: "#autismandanxiety #autism #anxiety #autismparenting #anxiouskids #sensoryoverload #neurodivergent #autismmom #mentalhealth #autismacceptance #specialneeds #autismsupport #copingstrategies #neurodiversity #autismfamily",
-        tiktokCaption: "😰 40-80% of autistic people have anxiety. It's not overreacting - their nervous system genuinely perceives more threats.\n\nWhat helps YOUR anxiety? 👇\n\n#autism #anxiety #autismandanxiety #mentalhealth #fyp"
+        tiktokCaption: "😰 40-80% of autistic people have anxiety. It's not overreacting - their nervous system genuinely perceives more threats.\n\nWhat helps YOUR anxiety? 👇\n\n#autism #anxiety #autismandanxiety #mentalhealth #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       25: {
         title: "Events & Respite Care",
@@ -1217,7 +1321,10 @@
         slides: 6,
         igCaption: "🎉 Making events autism-friendly + why respite MATTERS\n\nFamily gatherings don't have to be disasters. Here's how to survive them:\n\nBefore the event:\n📸 Preview the location with photos/videos\n📝 Create a social story about what will happen\n🎒 Pack the kit: headphones, fidgets, safe snacks, comfort items\n⏰ Set a time limit in advance\n🚪 Scout quiet spaces before you arrive\n👋 Have an exit code word\n👨👩👧 Brief family on dos and don'ts\n🍕 Bring safe foods\n\nDuring the event:\n⏱️ Take regulation breaks every 30 min\n🛡️ Be the buffer with overwhelming relatives\n🎯 Let them parallel play - it's valid!\n📱 Screens are regulation tools (ignore the judgment)\n🚗 Leave BEFORE the meltdown, not after\n\nNow let's talk RESPITE:\n\nTaking a break isn't abandonment. It's survival.\n\n\"You can't pour from an empty cup.\"\n\nBenefits:\n🔋 Prevents caregiver burnout\n❤️ Strengthens your relationship\n👫 Time for other relationships\n🧘 Restores mental health\n\nWhere to find respite:\n🏛️ State/county Medicaid waiver programs\n🏢 The Arc, Easter Seals, Autism Society\n👨👩👧 Train trusted family/friends\n⛪ Faith community programs\n🏕️ Specialized camps\n\nYou DESERVE a break. Taking care of yourself = showing up long-term.\n\nWhat's YOUR survival tip for family events? 👇\n\n💾 Save for the next gathering",
         igHashtags: "#autismparenting #familyevents #respitecare #autismfamily #selfcare #caregiverburnout #autismmom #autismdad #specialneeds #neurodiversity #autismacceptance #sensoryoverload #autismlife #autismsupport #parentingsupport",
-        tiktokCaption: "🎉 Family events + autism: survival tips + why respite care matters\n\nYou're not abandoning your child by taking a break. You're making sure you can show up long-term.\n\nYour survival tip? 👇\n\n#autism #familyevents #respitecare #parentlife #fyp"
+        tiktokCaption: "🎉 Family events + autism: survival tips + why respite care matters\n\nYou're not abandoning your child by taking a break. You're making sure you can show up long-term.\n\nYour survival tip? 👇\n\n#autism #familyevents #respitecare #parentlife #fyp",
+        pinterestTitle: "Making Events Autism-Friendly + Respite Care",
+        pinterestDesc: "Family gatherings don't have to be disasters. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       26: {
         title: "Week 3 Recap",
@@ -1225,7 +1332,10 @@
         slides: 6,
         igCaption: "🌟💙 WEEK 3 RECAP: What We Learned Together\n\nThis week was PACKED. Here's what we covered:\n\n🧠 Meltdown Support - The difference between meltdowns and tantrums, plus real strategies\n\n🍽️ Feeding Challenges - Understanding sensory-based eating\n\n😴 Sleep Solutions - Routines that actually work\n\n👧 Autism in Girls - The often-missed signs\n\n🤝 Potty Training - Different timelines, no shame\n\n⚡ AuDHD - When autism and ADHD combine\n\nKey lessons from this week:\n1. Behavior is communication\n2. Timelines vary (and that's okay)\n3. Girls are often missed in diagnosis\n4. Co-occurring conditions matter\n5. Community is EVERYTHING\n\nComing up in Week 4:\n- Autism in Teens\n- Nature and Sensory Benefits\n- Building Friendships\n- Late Diagnosis: Adult Edition\n- Glass Child: Siblings Revisited\n- End of Autism Acceptance Month celebration!\n\nThe best is yet to come 💙\n\nWhat was YOUR biggest takeaway from this week? Drop it below! 👇\n\n💾 Save this recap to revisit anytime",
         igHashtags: "#autismacceptancemonth #autismcommunity #autismawareness #autismparenting #neurodiversity #autismfamily #autismmom #autismdad #specialneedsparenting #autismlife #neurodivergent #actuallyautistic #autismadvocate",
-        tiktokCaption: "🌟 WEEK 3 RECAP: What a week!\n\nMeltdowns. Sleep. Feeding. AuDHD. Girls and autism. So much covered.\n\nWhat was YOUR biggest takeaway? 👇\n\n#autismacceptancemonth #autism #autismcommunity #fyp"
+        tiktokCaption: "🌟 WEEK 3 RECAP: What a week!\n\nMeltdowns. Sleep. Feeding. AuDHD. Girls and autism. So much covered.\n\nWhat was YOUR biggest takeaway? 👇\n\n#autismacceptancemonth #autism #autismcommunity #fyp",
+        pinterestTitle: "Week 3 Recap: What We Learned Together",
+        pinterestDesc: "Thank you for being here. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       27: {
         title: "Autism in Teens",
@@ -1233,7 +1343,10 @@
         slides: 6,
         igCaption: "🧒➡️🧑 AUTISM IN TEENS: What changes and what stays\n\nPuberty + autism = a whole new journey. Here's what you need to know:\n\nPHYSICAL CHANGES + AUTISM:\n🌡️ Sensory overload intensifies (hormones amplify sensitivity)\n🎢 Emotional regulation gets harder\n👕 Body changes feel jarring\n😰 Anxiety often spikes\n\nSOCIAL CHALLENGES:\n👥 Peer pressure and complex social rules\n💔 Feeling different becomes more pronounced\n🎭 Masking exhaustion and burnout risk\n💕 Navigating dating and romance\n📱 Social media dynamics\n🎯 Identity formation (\"Who am I?\")\n\nHOW TO SUPPORT YOUR AUTISTIC TEEN:\n1. Talk about puberty early with clear, concrete language\n2. Create safety to unmask at home\n3. Foster independence gradually\n4. Connect them with interest-based peer groups\n5. Validate their experience - be their safe person\n\nTHE GOOD NEWS:\n🎯 Deep focus becomes powerful skills\n💡 Original thinking leads to creativity\n🤝 Authentic connections with \"their people\"\n⚖️ Strong values and sense of justice\n\nMany autistic teens who struggle go on to THRIVE as adults. The teen years are hard, but they're not forever.\n\nParents of autistic teens: what's your biggest challenge? 👇\n\n💾 Save this for the teen years ahead",
         igHashtags: "#autismteens #autisticteen #autismparenting #teensandautism #puberty #autismfamily #autismmom #neurodivergent #autismacceptance #specialneedsparenting #autismlife",
-        tiktokCaption: "🧒➡️🧑 Autism in Teens: Puberty + autism = whole new journey\n\nWhat changes, what stays the same, and how to help.\n\nParents of autistic teens - what's your biggest challenge? 👇\n\n#autismteens #autism #autismparenting #fyp"
+        tiktokCaption: "🧒➡️🧑 Autism in Teens: Puberty + autism = whole new journey\n\nWhat changes, what stays the same, and how to help.\n\nParents of autistic teens - what's your biggest challenge? 👇\n\n#autismteens #autism #autismparenting #fyp",
+        pinterestTitle: "Autism in Teens: What Changes and What Stays the Same",
+        pinterestDesc: "Puberty + autism = a whole new journey. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       28: {
         title: "Nature and Autism",
@@ -1241,7 +1354,10 @@
         slides: 6,
         igCaption: "🌍🌿 NATURE AND AUTISM: Sensory Benefits of the Outdoors\n\nHappy Earth Day! Free therapy is right outside your door.\n\nWHY NATURE HELPS AUTISTIC INDIVIDUALS:\n🧠 Reduces cortisol (stress hormones drop after 20 mins)\n🔊 Natural soundscape (gentler than urban noise)\n👁️ Soft visual input (greens and natural patterns are calming)\n🏃 Proprioceptive regulation (uneven terrain, climbing)\n\n💡 Nature doesn't demand social performance. It's one of the few places to just BE.\n\nNATURE HITS EVERY SENSE:\n👁️ Visual: Greens, blues, natural fractals\n👂 Auditory: Water, leaves, birdsong\n✋ Tactile: Sand, grass, bark, water\n👃 Olfactory: Fresh air, flowers, earth\n🏃 Vestibular: Hills, swings, climbing\n💪 Proprioceptive: Carrying, digging, hiking\n\nACTIVITIES THAT WORK:\n🚶 Nature walks (even 10 minutes!)\n🔍 Nature scavenger hunts\n🌱 Gardening\n💧 Water play\n🪨 Rock and stick collecting\n📷 Nature photography\n\nTIPS FOR SUCCESS:\n- Start small (5 minutes counts!)\n- Go during off-peak times\n- Bring sensory supports\n- Follow their lead\n- Have an exit plan\n\nIt won't be Instagram-perfect. That's okay. Any time outside is beneficial!\n\nWhat outdoor activity does your child love? 🌳👇\n\n💾 Save this for outdoor inspiration",
         igHashtags: "#earthday #autismandnature #sensorynature #naturetherapy #autismparenting #sensoryprocessing #autismlife #outdoorkids #neurodivergent #autismacceptance",
-        tiktokCaption: "🌍🌿 Happy Earth Day! Nature = free therapy for autistic kids\n\nReduces stress, calms the senses, no social demands.\n\nWhat outdoor activity does your child love? 🌳👇\n\n#earthday #autism #sensoryfriendly #naturetherapy #fyp"
+        tiktokCaption: "🌍🌿 Happy Earth Day! Nature = free therapy for autistic kids\n\nReduces stress, calms the senses, no social demands.\n\nWhat outdoor activity does your child love? 🌳👇\n\n#earthday #autism #sensoryfriendly #naturetherapy #fyp",
+        pinterestTitle: "Nature and Autism: Sensory Benefits of the Outdoors",
+        pinterestDesc: "Fresh air might be the best sensory tool. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Sensory Support & Hacks"
       },
       29: {
         title: "Building Friendships",
@@ -1249,7 +1365,10 @@
         slides: 6,
         igCaption: "💛🤝 BUILDING FRIENDSHIPS: Social Support for Autistic Kids\n\nFriendship looks different. That's okay.\n\nVALID FRIENDSHIP STYLES:\n🎮 Parallel play friendships (together, not constantly interacting)\n🎯 Interest-based connections (bonding over shared passions)\n💬 Online friendships (genuine digital connections)\n👤 One deep friendship (quality over quantity)\n🏠 Solitary preference (some are genuinely content alone)\n\nThe goal isn't to make them \"normal.\" It's to help them find connection on their terms.\n\nHOW TO SUPPORT SOCIAL CONNECTION:\n1. Follow their interests (LEGO club, coding camp, etc.)\n2. Structure playdates with planned activities\n3. Keep playdates short (1-2 hours max)\n4. Find neurodivergent peers (they often \"get\" each other)\n5. Don't force it - respect their preferences\n\nSOCIAL SKILLS VS. MASKING:\n❌ Forcing eye contact ➡️ ✅ Let them connect naturally\n❌ Pushing them to \"fit in\" ➡️ ✅ Find accepting spaces\n❌ Criticizing how they play ➡️ ✅ Celebrate unique connecting\n❌ Measuring by friend count ➡️ ✅ Measuring by happiness\n\nWhen your autistic child finally finds someone who GETS them... it's everything. It might take time. Keep creating opportunities.\n\nHas your child found \"their person\"? Share below! 💛👇\n\n💾 Save for friendship encouragement",
         igHashtags: "#autismfriendship #autisticfriends #autismparenting #neurodivergent #socialskills #autismacceptance #autismsupport #autismlife #autismfamily",
-        tiktokCaption: "💛 Friendship looks DIFFERENT for autistic kids. That's okay.\n\nParallel play. Online friends. One deep connection. All valid!\n\nHas your child found their person? 👇\n\n#autismfriendship #autism #neurodivergent #fyp"
+        tiktokCaption: "💛 Friendship looks DIFFERENT for autistic kids. That's okay.\n\nParallel play. Online friends. One deep connection. All valid!\n\nHas your child found their person? 👇\n\n#autismfriendship #autism #neurodivergent #fyp",
+        pinterestTitle: "Building Friendships: Social Support for Autistic Kids",
+        pinterestDesc: "Friendship looks different. That's okay. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       30: {
         title: "Late Diagnosis in Adults",
@@ -1265,7 +1384,10 @@
         slides: 6,
         igCaption: "👫💔 GLASS CHILD REVISITED: Don't Let Siblings Disappear\n\nWhen one child needs more attention, the other can become invisible.\n\nWHAT IS A \"GLASS CHILD\"?\nA sibling who becomes invisible because their brother/sister requires so much attention. You can see right through them.\n\nSigns your child may be fading:\n🤫 They stop asking for help\n😊 They become \"the easy one\"\n🎭 They hide their own struggles\n👤 They fade at family events\n😔 They internalize that their needs matter less\n\nTHE LONG-TERM IMPACT:\n😰 Anxiety and hypervigilance\n🤷 Low self-worth\n🧹 People-pleasing patterns\n😶 Difficulty expressing needs\n😤 Hidden resentment\n🏆 Overachievement/perfectionism\n\nHOW TO HELP YOUR GLASS CHILD:\n1. Schedule 1-on-1 time (even 15 minutes matters!)\n2. Ask about THEIR day\n3. Validate their feelings\n4. Give space to be \"not okay\"\n5. Celebrate their wins loudly\n\nTHE CONVERSATION TO HAVE:\n\"I know your sibling needs a lot of attention. I want you to know that I see you too. You are just as important. Your needs matter just as much.\"\n\nIt's not about equal time. It's about making sure every child feels equally loved, valued, and visible.\n\nHow do you balance sibling needs? Share your tips! 👇\n\n💾 Save this reminder for sibling support",
         igHashtags: "#glasschild #siblingsupport #autismfamily #autismparenting #specialneedssiblings #neurotypicalsiblings #autismlife #familybalance",
-        tiktokCaption: "👫 GLASS CHILD: When siblings of autistic kids become invisible\n\nDon't let it happen. See BOTH your children.\n\nHow do you balance sibling needs? 👇\n\n#glasschild #autismfamily #siblingsupport #fyp"
+        tiktokCaption: "👫 GLASS CHILD: When siblings of autistic kids become invisible\n\nDon't let it happen. See BOTH your children.\n\nHow do you balance sibling needs? 👇\n\n#glasschild #autismfamily #siblingsupport #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       32: {
         title: "Spring Weekend Activities",
@@ -1273,7 +1395,10 @@
         slides: 6,
         igCaption: "🌸☀️ AUTISM-FRIENDLY SPRING WEEKENDS + Products That Actually Work\n\nWeekend activities that won't overwhelm your kiddo:\n\n🌿 Nature walks (early morning = fewer crowds)\n💧 Water play at home (sensory win!)\n🎨 Outdoor art projects\n🏕️ Backyard camping (bathroom nearby!)\n\nProducts we actually use:\n🎧 Noise-reducing headphones\n🧸 Portable fidgets\n🎒 Comfort kit bag (always packed)\n🌡️ Weighted lap pad\n🕶️ Sunglasses for visual overwhelm\n📱 AAC app/device\n\nPro tips:\n1. Preview the day with visuals\n2. Build in downtime between activities\n3. Know where quiet spaces are\n4. Go during off-hours when possible\n\nReality check: Some weekends, staying home in pajamas IS the activity. Rest is productive too.\n\nWhat's YOUR must-have product for outings? Drop it below! 👇\n\n💾 Save this for your next weekend adventure",
         igHashtags: "#autismparenting #autismlife #sensoryprocessing #autismfamily #neurodiversity #autismmom #autismdad #specialneedsparenting #autismproducts #sensoryfriendly #weekendactivities #springactivities",
-        tiktokCaption: "🌸 Autism-friendly weekend activities + products that ACTUALLY work\n\nParent-tested, meltdown-reducing ideas for spring!\n\nWhat's YOUR must-have product? 👇\n\n#autism #autismparenting #sensoryfriendly #fyp #autismlife"
+        tiktokCaption: "🌸 Autism-friendly weekend activities + products that ACTUALLY work\n\nParent-tested, meltdown-reducing ideas for spring!\n\nWhat's YOUR must-have product? 👇\n\n#autism #autismparenting #sensoryfriendly #fyp #autismlife",
+        pinterestTitle: "Autism-Friendly Weekend Activities: Spring Edition + Products That Work",
+        pinterestDesc: "Making memories without the meltdowns. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       33: {
         title: "April Reflection",
@@ -1281,7 +1406,10 @@
         slides: 6,
         igCaption: "💙🌟 APRIL REFLECTION: What This Month Taught Us\n\nAutism Acceptance Month is wrapping up. What a journey it's been.\n\nWhat we covered together:\n🌍 World Autism Day - \"Every Life Has Value\"\n🧠 Understanding behaviors (meltdowns, stimming, sensory needs)\n📚 School advocacy and IEP tips\n💪 Parent support and self-care\n⚡ AuDHD and co-occurring conditions\n🗣️ Communication and AAC\n\nKey lessons from this month:\n1. Acceptance is daily, not just April\n2. Behavior is communication\n3. Every autistic person's experience is unique\n4. Community support is everything\n5. Progress looks different for everyone\n\nThank you for being here. Every comment, share, and DM means the world. We're building something special together.\n\nWhat was YOUR biggest takeaway from April? Drop it below! 👇\n\nThe journey continues...",
         igHashtags: "#autismacceptancemonth #autismcommunity #autismawareness #autismparenting #neurodiversity #autismfamily #autismmom #autismdad #specialneedsparenting #autismlife #aprilreflection",
-        tiktokCaption: "💙 April Autism Acceptance Month: A Reflection\n\nWhat a journey this month has been. Thank you for being part of it.\n\nWhat was YOUR biggest takeaway? 👇\n\n#autismacceptancemonth #autism #autismcommunity #fyp"
+        tiktokCaption: "💙 April Autism Acceptance Month: A Reflection\n\nWhat a journey this month has been. Thank you for being part of it.\n\nWhat was YOUR biggest takeaway? 👇\n\n#autismacceptancemonth #autism #autismcommunity #fyp",
+        pinterestTitle: "Monthly Reflection: What April Taught Us",
+        pinterestDesc: "Autism Acceptance Month recap. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       34: {
         title: "After Autism Month",
@@ -1289,7 +1417,10 @@
         slides: 6,
         igCaption: "📆➡️🌟 AFTER AUTISM MONTH: Now What?\n\nAcceptance doesn't end April 30th. Here's how to keep going.\n\nApril Only vs. Year-Round:\n❌ Post for 30 days, forget until next year\n✅ Consistent advocacy all year\n❌ Surface-level awareness\n✅ Deep understanding and real community\n\nWhat you can do in May (and beyond):\n📚 Keep learning from autistic voices\n📢 Advocate for sensory-friendly spaces locally\n💬 Correct misinformation kindly\n🤝 Support autistic-owned businesses\n❤️ Practice acceptance at home daily\n\nYear-round resources:\n- Books: NeuroTribes, Uniquely Human, Unmasking Autism\n- Podcasts: The Autism Helper, 1800 Seconds on Autism\n- Communities: ASAN, Autism Society, local groups\n- Follow autistic advocates on social media\n\nMay 1st doesn't mean we stop. It means we keep going.\n\nWhat's YOUR May commitment? Tell us below! 👇\n\n💾 Save these resources for later",
         igHashtags: "#autismacceptance #autismadvocate #autismparenting #neurodiversity #autismsupport #autismcommunity #autismlife #specialneedsparenting #autismawareness",
-        tiktokCaption: "📆 After Autism Acceptance Month ends... now what?\n\nThe real work continues. Here's how to keep the momentum going.\n\nWhat's your May commitment? 👇\n\n#autism #autismacceptance #autismadvocate #fyp"
+        tiktokCaption: "📆 After Autism Acceptance Month ends... now what?\n\nThe real work continues. Here's how to keep the momentum going.\n\nWhat's your May commitment? 👇\n\n#autism #autismacceptance #autismadvocate #fyp",
+        pinterestTitle: "Transitioning Out of Autism Acceptance Month: Now What?",
+        pinterestDesc: "Acceptance doesn't end April 30th. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism Acceptance"
       },
       35: {
         title: "Autism Parent Resource Toolkit",
@@ -1297,7 +1428,10 @@
         slides: 7,
         igCaption: "🧰📚 YOUR AUTISM PARENT RESOURCE TOOLKIT\n\nSave this. You'll need it.\n\nORGANIZATIONS:\n🏛️ ASAN (Autistic Self Advocacy Network)\n🌐 Autism Society of America\n🧠 Autism Science Foundation\n💬 Communication FIRST\n🎓 Wrightslaw (IEP help)\n\nBOOKS:\n📖 NeuroTribes (Steve Silberman)\n📖 Uniquely Human (Dr. Barry Prizant)\n📖 Unmasking Autism (Dr. Devon Price)\n📖 The Reason I Jump (Naoki Higashida)\n📖 Differently Wired (Deborah Reber)\n\nAPPS:\n🗣️ AAC: TouchChat, Proloquo2Go\n📅 Visual Schedule: Choiceworks\n😊 Emotions: Zones of Regulation\n⏰ Visual Timers\n\nPODCASTS:\n🎙️ The Autism Helper\n🎙️ 1800 Seconds on Autism\n🎙️ Two Sides of the Spectrum\n\nCOMMUNITY:\n💬 Facebook autism parent groups\n📱 Reddit: r/autism, r/AutisticParents\n🏠 Local support groups\n\nWhat resource would YOU add to this list? 👇\n\n💾 Save this toolkit. Share with a parent who needs it.",
         igHashtags: "#autismresources #autismparenting #autismsupport #autismcommunity #autismtips #specialneedsparenting #autismfamily #neurodiversity #autismtools #autismmom #autismdad",
-        tiktokCaption: "🧰 THE AUTISM PARENT TOOLKIT you need to save!\n\nBooks, apps, organizations, podcasts, communities - all in one place.\n\nWhat would YOU add? 👇\n\n#autism #autismparenting #autismresources #fyp #autismtips"
+        tiktokCaption: "🧰 THE AUTISM PARENT TOOLKIT you need to save!\n\nBooks, apps, organizations, podcasts, communities - all in one place.\n\nWhat would YOU add? 👇\n\n#autism #autismparenting #autismresources #fyp #autismtips",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       36: {
         title: "End of Autism Acceptance Month",
@@ -1305,7 +1439,10 @@
         slides: 7,
         igCaption: "💙🌟💙 AUTISM ACCEPTANCE MONTH: A Celebration\n\n\"Autism and Humanity: Every Life Has Value\"\n\nThis month, we showed up. Every. Single. Day.\n\nWhat we built together:\n✨ 30 days of content\n✨ 100+ topics covered\n✨ Countless lives touched\n✨ One incredible community\n\nMonth highlights:\n🌍 World Autism Day celebration\n🧠 Meltdowns vs tantrums explained\n📚 IEP advocacy strategies\n⚡ AuDHD life explored\n🗣️ AAC and communication celebrated\n👧 Autism in girls recognized\n💪 Parent self-care prioritized\n👶 Late diagnosis destigmatized\n\nWhat's next:\n📅 May Goals\n☀️ Summer Prep\n🩺 Therapy Deep Dives (OT, Speech)\n👨👩👧👦 Family Dynamics\n\nTo every parent who showed up tired but still engaged. To every advocate who shared our posts. To every person who learned something new.\n\nThank you. This is just the beginning.\n\nAutism acceptance is every single day. 💙\n\nWhat was YOUR favorite moment from this month? Tell us below! 👇",
         igHashtags: "#autismacceptancemonth #worldautismday #autismcommunity #autismawareness #autismparenting #neurodiversity #autismfamily #everylifehasvalue #actuallyautistic #autismadvocate",
-        tiktokCaption: "💙 AUTISM ACCEPTANCE MONTH: A Celebration\n\n30 days. 100+ topics. One incredible community.\n\nThank you for being here. This is just the beginning.\n\nWhat was your favorite moment? 👇\n\n#autismacceptancemonth #autism #autismcommunity #fyp #autismday"
+        tiktokCaption: "💙 AUTISM ACCEPTANCE MONTH: A Celebration\n\n30 days. 100+ topics. One incredible community.\n\nThank you for being here. This is just the beginning.\n\nWhat was your favorite moment? 👇\n\n#autismacceptancemonth #autism #autismcommunity #fyp #autismday",
+        pinterestTitle: "Autism and Humanity: A Month in Review",
+        pinterestDesc: "Every life has value. Every day of the year. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       37: {
         title: "May Goals",
@@ -1313,7 +1450,10 @@
         slides: 6,
         igCaption: "🌱📅 MAY GOALS: What's Next for Our Community\n\nNew month, same mission. Here's what's coming!\n\nMAY CONTENT THEMES:\n🩺 Therapy Deep Dives - OT, Speech, PT explained\n👨👩👧👦 Family Dynamics - Siblings, partnerships, extended family\n☀️ Summer Prep - Camps, activities, surviving break\n🚀 Building Independence - Life skills and self-advocacy\n\nCOMMUNITY INITIATIVES:\n💬 Weekly Q&A sessions\n📸 Community features (DM your wins!)\n📊 Topic polls - you vote, we create\n🤝 Resource sharing from families\n\nYOUR INPUT MATTERS:\n- What topics do you want to see?\n- What's your biggest struggle right now?\n- What resources would help most?\n\nOUR PROMISE:\n✓ Real talk, no toxic positivity\n✓ Evidence-based information\n✓ Autistic voices always centered\n✓ Community over perfection\n✓ Consistent support year-round\n\nLet's make May amazing together!\n\nWhat do YOU want to see this month? Tell us below! 👇",
         igHashtags: "#may2026 #autismcommunity #autismparenting #neurodiversity #autismsupport #autismfamily #autismlife #specialneedsparenting #autismadvocate",
-        tiktokCaption: "🌱 MAY GOALS: New month, same mission!\n\nTherapy deep dives, summer prep, family dynamics - all coming your way.\n\nWhat do YOU want to see? 👇\n\n#autism #autismcommunity #autismparenting #fyp #may2026"
+        tiktokCaption: "🌱 MAY GOALS: New month, same mission!\n\nTherapy deep dives, summer prep, family dynamics - all coming your way.\n\nWhat do YOU want to see? 👇\n\n#autism #autismcommunity #autismparenting #fyp #may2026",
+        pinterestTitle: "May Goals: What's Next for Our Community",
+        pinterestDesc: "New month, same mission. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism Community"
       },
       38: {
         title: "Summer Prep",
@@ -1345,7 +1485,10 @@
         slides: 6,
         igCaption: "💪 PHYSICAL THERAPY for autistic kids is more than exercise\n\nIt's building body awareness, coordination, and confidence in movement.\n\nHere's what you need to know ⬇️\n\nWhat PT addresses:\n🎯 Gross motor skills: walking, running, jumping\n⚖️ Balance and coordination\n💪 Core strength and posture\n🧠 Body awareness (proprioception)\n🏃 Motor planning\n\nSigns PT might help:\n✓ Frequently trips or falls\n✓ Difficulty with stairs or jumping\n✓ Avoids playground equipment\n✓ Toe walking\n✓ Poor posture or tires easily sitting\n✓ Difficulty learning to bike or swim\n✓ Low muscle tone\n\nWhat to expect:\n1️⃣ Play-based evaluation\n2️⃣ Functional goal setting\n3️⃣ Fun sessions with swings, balls, obstacles\n4️⃣ Home exercise program\n5️⃣ Regular progress check-ins\n\nParent tips:\n🎮 Find a PT experienced with autism\n👀 Ask to observe sessions\n🏠 Practice movement at home\n⏰ Be patient with progress\n🤝 Coordinate with OT and other therapies\n\nHas PT helped your child? Share your experience! 👇\n\n💾 Save this for your therapy toolkit",
         igHashtags: "#autism #autismparenting #physicaltherapy #pediatricPT #autisticchild #grossmotorskills #autismmom #autismdad #therapylife #autismfamily #neurodiversity #autismacceptance #specialneeds #motorskills #autismtherapy",
-        tiktokCaption: "💪 Physical therapy for autistic kids: more than just movement\n\nIt's building body awareness, coordination, and confidence. Has PT helped your child?\n\n#autism #physicaltherapy #autismparenting #therapy #fyp"
+        tiktokCaption: "💪 Physical therapy for autistic kids: more than just movement\n\nIt's building body awareness, coordination, and confidence. Has PT helped your child?\n\n#autism #physicaltherapy #autismparenting #therapy #fyp",
+        pinterestTitle: "Physical Therapy for Autistic Kids",
+        pinterestDesc: "More than just movement. Building body awareness, coordination, and confidence. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Therapy Options"
       },
       42: {
         title: "Insurance and Therapy Coverage",
@@ -1353,7 +1496,10 @@
         slides: 6,
         igCaption: "🏥 INSURANCE AND THERAPY COVERAGE: What you need to know\n\nNavigating coverage for autism therapies is overwhelming. Here's your guide ⬇️\n\nCoverage options:\n🏢 Private insurance: Check your state's autism mandate\n🏛️ Medicaid: EPSDT covers medically necessary services\n🎓 School services: Free through IEP (but doesn't replace medical)\n🏠 Medicaid waivers: Home-based services (often has waitlists)\n\nCommonly covered therapies:\n🗣️ Speech therapy\n🧩 Occupational therapy  \n💪 Physical therapy\n🧠 ABA therapy\n👥 Social skills groups\n💭 Mental health counseling\n\nDenied? Here's how to appeal:\n1️⃣ Get the denial in writing\n2️⃣ Review your policy language\n3️⃣ Gather supporting documentation\n4️⃣ File internal appeal (meet all deadlines!)\n5️⃣ Request external review if needed\n6️⃣ File complaints with state insurance commissioner\n\nTips for success:\n📞 Always verify coverage BEFORE scheduling\n📝 Get pre-authorization with reference numbers\n📁 Document everything\n🔍 Know your state's autism mandate\n🤝 Use care coordinators when available\n\nA denial is not the final answer. Many families win on appeal.\n\nWhat's your biggest insurance struggle? 👇\n\n💾 Save this for your next call with insurance",
         igHashtags: "#autism #autismparenting #insurancecoverage #autismtherapy #autisticchild #therapycoverage #autismmom #autismdad #autismadvocacy #autismfamily #neurodiversity #autismacceptance #specialneeds #aba #speechtherapy",
-        tiktokCaption: "🏥 Insurance and therapy coverage for autism: the breakdown\n\nA denial is not the final answer. Many families win on appeal. What's your biggest struggle?\n\n#autism #insurance #autismparenting #therapy #fyp"
+        tiktokCaption: "🏥 Insurance and therapy coverage for autism: the breakdown\n\nA denial is not the final answer. Many families win on appeal. What's your biggest struggle?\n\n#autism #insurance #autismparenting #therapy #fyp",
+        pinterestTitle: "Insurance and Therapy Coverage",
+        pinterestDesc: "Navigating the maze of coverage for autism therapies. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Therapy Options"
       },
       43: {
         title: "Educating Extended Family",
@@ -1361,7 +1507,10 @@
         slides: 6,
         igCaption: "👨👩👧 EDUCATING EXTENDED FAMILY about autism\n\nWhen grandparents, aunts, and uncles just don't get it. Here's how to bridge the gap ⬇️\n\nWhy it's hard:\n📺 Outdated information and stereotypes\n👁️ \"But they look fine!\" mindset\n🛡️ Their own denial or grief process\n📖 Generational gaps in understanding\n💬 Unsolicited advice with good intentions\n\nWhat to say when they don't understand:\n\n\"They need more discipline\" →\n\"Their brain processes differently. What looks like defiance is often overwhelm.\"\n\n\"They don't look autistic\" →\n\"Autism is a spectrum. Every autistic person is different.\"\n\n\"We didn't have this in my day\" →\n\"We just didn't have a name for it.\"\n\nHow to educate:\n📚 Share resources at their pace\n👥 Invite them to therapy sessions\n📝 Create a \"cheat sheet\" for your child\n❤️ Lead with love, assume positive intent\n🚪 Set boundaries when needed\n⏰ Be patient with their learning\n\nWhen to set limits:\n⚠️ They refuse to follow accommodations\n⚠️ Their behavior harms your child's self-esteem\n⚠️ They repeatedly undermine your parenting\n⚠️ Visits consistently cause meltdowns\n\nYour child comes first. Always.\n\nHow did you educate your extended family? 👇\n\n💾 Save to share with family members",
         igHashtags: "#autism #autismparenting #autismfamily #extendedfamily #grandparents #autisticchild #autismmom #autismdad #familysupport #neurodiversity #autismacceptance #specialneeds #autismawareness #familyeducation #autismadvocacy",
-        tiktokCaption: "👨👩👧 When extended family doesn't understand autism\n\nHere's how to bridge the gap. How did you educate your family?\n\n#autism #autismfamily #grandparents #autismparenting #fyp"
+        tiktokCaption: "👨👩👧 When extended family doesn't understand autism\n\nHere's how to bridge the gap. How did you educate your family?\n\n#autism #autismfamily #grandparents #autismparenting #fyp",
+        pinterestTitle: "Educating Extended Family About Autism",
+        pinterestDesc: "When grandparents, aunts, and uncles just don't get it. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       44: {
         title: "Marriage and Autism Parenting",
@@ -1369,7 +1518,10 @@
         slides: 6,
         igCaption: "💑 MARRIAGE AND PARTNERSHIP when parenting autism\n\nThe unique pressures on relationships. How to stay connected ⬇️\n\nThe hard truth:\n📊 80% of couples report increased stress after diagnosis\n📊 2x higher burnout rates than other special needs parents\n💚 But many couples become STRONGER through it\n\nCommon challenges:\n⏰ No time together\n😴 Constant exhaustion\n⚖️ Unequal mental load\n🎯 Different parenting approaches\n💔 Processing grief differently\n🏝️ Social isolation\n\nWhat actually helps:\n📅 Schedule couple time (even 15 minutes counts)\n🤝 Present as a united team\n📊 Share the load clearly\n💬 Check in: \"How are YOU doing?\"\n🎯 Regular meetings about approach\n🙌 Give each other solo breaks\n\nWhen to get help:\n💭 Couples therapy (find someone who gets special needs parenting)\n👥 Support groups for autism parent couples\n🧘 Individual therapy\n🏠 Respite care for time away together\n\nRed flags: constant criticism, contempt, stonewalling, defensiveness. Seek help early.\n\nYour relationship matters. A strong partnership makes better parents.\n\nWhat keeps your partnership strong? 👇\n\n💾 Save and share with your partner",
         igHashtags: "#autism #autismparenting #marriage #relationships #autismfamily #couplegoals #autismmom #autismdad #partnership #neurodiversity #autismacceptance #specialneeds #caregiverburnout #marriageadvice #autismlife",
-        tiktokCaption: "💑 Marriage and partnership when parenting autism\n\n80% of couples report increased stress. Here's what actually helps.\n\n#autism #marriage #autismparenting #relationships #fyp"
+        tiktokCaption: "💑 Marriage and partnership when parenting autism\n\n80% of couples report increased stress. Here's what actually helps.\n\n#autism #marriage #autismparenting #relationships #fyp",
+        pinterestTitle: "Marriage and Partnership When Parenting Autism",
+        pinterestDesc: "The unique pressures on relationships. How to stay connected as partners. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       45: {
         title: "Self-Care Deep Dive",
@@ -1377,7 +1529,10 @@
         slides: 6,
         igCaption: "🧘 Self-care for autism parents: NOT what you think\n\nLet's be honest. You're exhausted. You're touched out. And someone telling you to \"take a bubble bath\" makes you want to scream.\n\nHere's what ACTUALLY works:\n\nThe hard truth:\n❌ Bubble baths don't fix burnout\n❌ \"Me time\" often doesn't exist\n❌ Traditional advice wasn't made for us\n\nWhat really helps:\n\n⏱️ MICRO-MOMENTS\n- 2 minutes of deep breathing\n- Hiding in the bathroom (we see you)\n- One hot cup of coffee, finished\n\n🚧 BOUNDARIES\n- \"I can't do that right now\"\n- Screen time isn't failure\n- Saying no to one more therapy appointment\n\n👥 SUPPORT SYSTEMS\n- Online groups who GET IT\n- Scheduled respite (not just emergencies)\n- Therapy for YOU, not just your kid\n\n🗣️ Asking for help\n- Specific requests work better than hints\n- \"Can you watch them for 30 minutes?\"\n- Let people help imperfectly\n\nRemember: You can't pour from an empty cup.\n\nTaking care of yourself isn't selfish. It's survival strategy.\n\nWhat's ONE thing you'll do for yourself this week? Comment below 👇\n\n💾 Save this for the hard days",
         igHashtags: "#autismparenting #autismmom #autismdad #selfcare #caregiversupport #specialneedsparenting #autismfamily #parentingsupport #caregiverselfcare #autismacceptance #neurodiversity #autismlife #parentingautism #raisingautistic #autismawareness",
-        tiktokCaption: "🧘 Self-care for autism parents that ACTUALLY works\n\nSpoiler: It's not bubble baths and wine\n\nMicro-moments + real boundaries + asking for help\n\nWhat's one thing you'll do for yourself this week?\n\n#autismparenting #selfcare #autismmom #specialneeds #fyp"
+        tiktokCaption: "🧘 Self-care for autism parents that ACTUALLY works\n\nSpoiler: It's not bubble baths and wine\n\nMicro-moments + real boundaries + asking for help\n\nWhat's one thing you'll do for yourself this week?\n\n#autismparenting #selfcare #autismmom #specialneeds #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       46: {
         title: "Building Your Support System",
@@ -1393,7 +1548,10 @@
         slides: 6,
         igCaption: "🏕️ Summer camp with an autistic child: What to know before you enroll\n\nSummer is coming. Camp brochures are everywhere. But how do you find the RIGHT fit?\n\nTYPES OF CAMPS:\n🌟 Specialized autism camps: Trained staff, structured, sensory-friendly\n🤝 Inclusive camps: Mixed populations with support staff\n⚽ Traditional + accommodations: Regular camps willing to adapt\n🏠 Day vs overnight: Start small, build up\n\nQUESTIONS TO ASK:\n1. What autism/sensory training do staff have?\n2. What is the camper-to-staff ratio?\n3. Is there a quiet space for sensory breaks?\n4. How do you handle meltdowns?\n5. Can I provide visual schedules or social stories?\n6. What is your parent communication plan?\n7. Can we visit before the first day?\n\nPREPARING YOUR CHILD:\n📖 Create social stories about camp\n📸 Get photos in advance (location, counselors, activities)\n🎒 Pack a comfort kit (fidgets, headphones, favorite snack)\n🚗 Practice runs: Drive by, do a tour, practice morning routine\n\nTimeline: Start prep 4 weeks out!\n\n🚩 RED FLAGS:\n\"We treat all kids the same\" (no accommodations)\nNo quiet space available\nPunitive approach to behaviors\nResistant to parent input\n\n💚 GREEN FLAG:\n\"Tell us about YOUR child. What works for them?\"\n\nThe right camp exists. Keep looking until you find it.\n\nHas your child done camp? Share your experience! 👇\n\n💾 Save this for summer planning season",
         igHashtags: "#summercamp #autismparenting #autismcommunity #specialneedsparenting #autismmom #summerplanning #autismfamily #sensoryprocessing #autismacceptance #neurodiversity #autismlife #camplife #autismkids #parentingtips #autismtips",
-        tiktokCaption: "🏕️ Summer camp considerations for autistic kids\n\nQuestions to ask, red flags to avoid, and how to prep your child for success.\n\nThe right camp exists. Keep searching!\n\nHas your kid done camp? Tell me below 👇\n\n#summercamp #autismparenting #autismmom #fyp #specialneeds"
+        tiktokCaption: "🏕️ Summer camp considerations for autistic kids\n\nQuestions to ask, red flags to avoid, and how to prep your child for success.\n\nThe right camp exists. Keep searching!\n\nHas your kid done camp? Tell me below 👇\n\n#summercamp #autismparenting #autismmom #fyp #specialneeds",
+        pinterestTitle: "Summer Camp Considerations for Autistic Kids",
+        pinterestDesc: "Finding the right fit for your autistic child. Questions to ask before you enroll. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Seasonal Tips"
       },
       48: {
         title: "Travel with Autistic Kids",
@@ -1401,7 +1559,10 @@
         slides: 6,
         igCaption: "✈️ Traveling with an autistic child: Yes, you CAN do this!\n\nI know what you're thinking. Travel? With MY kid? But hear me out...\n\nBEFORE YOU GO:\n📖 Create social stories about the trip\n📸 Show photos/videos of destination\n📅 Build a visual itinerary (include downtime!)\n📞 Call ahead to hotels/airlines about accommodations\n🎒 Pack essentials: safe foods, headphones, comfort items\n\nFLYING TIPS:\n🎫 TSA Cares: Call 72+ hours ahead for help through security\n⏰ Arrive early to avoid rushing\n🎧 Pack a sensory kit (headphones, chewy, fidgets, snacks)\n💺 Window for visual stimmers, aisle for movement needs\n🛫 Ask about pre-boarding\n📋 Carry an info card about your child's needs\n\nAUTISM-FRIENDLY DESTINATIONS:\n🏰 Theme parks (DAS passes, quiet rooms, sensory guides)\n🏖️ Beach/nature (open space, sensory play, flexibility)\n⚓ Cruises (contained, routine-friendly, staff support)\n🏕️ Cabins/rentals (home-like, kitchen, privacy)\n\nSURVIVAL STRATEGIES:\n⏰ One activity, one break. Don't over-schedule.\n🏠 Make your hotel room a \"home base\"\n🍽️ Bring safe foods, research restaurants ahead\n🚪 Know exits and quiet spots at every location\n💪 Lower expectations. Survival = success!\n\nSome moments will be hard. Some will be magical. Both are okay.\n\nWhere have you traveled with your autistic child? Share your tips! 👇\n\n💾 Save this for your next adventure",
         igHashtags: "#autismtravel #travelwithkids #autismparenting #familytravel #autismmom #specialneedsparenting #autismfamily #sensoryfriendly #travelingwithautism #vacationplanning #autismlife #neurodiversity #autismacceptance #travelwithautism #autismtips",
-        tiktokCaption: "✈️ Traveling with an autistic child IS possible\n\nPrep before, pack smart, lower expectations, find the magic.\n\nTSA Cares + social stories + safe foods = your best friends\n\nWhere have you traveled? Drop your tips 👇\n\n#autismtravel #familytravel #autismparenting #fyp #specialneeds"
+        tiktokCaption: "✈️ Traveling with an autistic child IS possible\n\nPrep before, pack smart, lower expectations, find the magic.\n\nTSA Cares + social stories + safe foods = your best friends\n\nWhere have you traveled? Drop your tips 👇\n\n#autismtravel #familytravel #autismparenting #fyp #specialneeds",
+        pinterestTitle: "Travel with Autistic Kids",
+        pinterestDesc: "Yes, you CAN travel. Here's how to make it work for your whole family. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       49: {
         title: "ESY and Year-Round School",
@@ -1409,7 +1570,10 @@
         slides: 6,
         igCaption: "📚 Extended School Year (ESY): What every autism parent should know\n\nSummer break sounds great... until your child loses months of progress in 8 weeks.\n\nWHAT IS ESY?\nExtended School Year provides special education services during summer to prevent regression. It's FREE under IDEA.\n\nKey points:\n📜 Federal right under IDEA\n🎯 Focuses on maintaining skills (not new learning)\n📝 Decided individually at IEP meetings\n⚖️ Cannot be denied based on cost\n\nWHO QUALIFIES?\n📉 Regression: Child loses skills during breaks\n⏱️ Recoupment: Takes longer to regain skills than peers\n🧠 Critical learning period: Interruption would be harmful\n🔄 Behaviors: Emerge or worsen during breaks\n📊 Severity: Nature of disability makes ongoing services essential\n\nHOW TO ADVOCATE:\n1. Start early (discuss at IEP before spring!)\n2. Bring data (videos, work samples, therapist notes)\n3. Request in writing (paper trails matter)\n4. Know your rights (school cannot deny based on cost)\n\nWhat to say: \"I am formally requesting that the IEP team discuss ESY eligibility based on documented regression.\"\n\nBEYOND ESY:\n📅 Year-round schools\n🏠 Home programs with structure\n💆 Private therapy through summer\n🏕️ Specialized camps\n📲 Apps and online learning\n👩👧 One-on-one tutoring\n\nDocument everything. Data is your best advocate.\n\nHas your child done ESY? Share your experience! 👇\n\n💾 Save this for IEP season",
         igHashtags: "#esy #extendedschoolyear #iep #specialeducation #autismparenting #iepadvocacy #autismmom #specialneedsparenting #autismfamily #educationadvocacy #autismacceptance #neurodiversity #autismlife #iepmeeting #autismschool",
-        tiktokCaption: "📚 Extended School Year (ESY): FREE summer services to prevent regression\n\nKnow your rights. Document regression. Advocate early.\n\nHas your child done ESY? Tell me below 👇\n\n#esy #iep #autismparenting #specialeducation #fyp"
+        tiktokCaption: "📚 Extended School Year (ESY): FREE summer services to prevent regression\n\nKnow your rights. Document regression. Advocate early.\n\nHas your child done ESY? Tell me below 👇\n\n#esy #iep #autismparenting #specialeducation #fyp",
+        pinterestTitle: "Year-Round School Options and ESY",
+        pinterestDesc: "Could Extended School Year help your autistic child? Understanding ESY and other options. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / IEP & School Advocacy"
       },
       50: {
         title: "Building Independence",
@@ -1417,7 +1581,10 @@
         slides: 6,
         igCaption: "🌱 Building independence in autistic kids: It's a marathon, not a sprint\n\nIndependence looks different for everyone. Here's how to build it, step by step.\n\nTHE MINDSET SHIFT:\n❌ \"They'll never be able to...\" → ✅ \"What support do they need?\"\n❌ \"I'll just do it faster\" → ✅ \"I'll build in extra time\"\n❌ \"Independence means alone\" → ✅ \"Independence means less support\"\n❌ \"They should be doing this by now\" → ✅ \"What's their next step?\"\n\nSKILLS TO BUILD:\n🚿 Self-care: hygiene, dressing, grooming\n🍳 Food: snacks, microwave, simple cooking\n🏠 Home: laundry, cleaning, organizing\n💰 Money: recognizing coins, paying for items\n🚌 Community: transit, ordering, shopping\n⏰ Time: schedules, timers, routines\n📱 Technology: phone, apps, safety\n🗣️ Communication: asking for help, self-advocacy\n\nHOW TO TEACH:\n🔗 Task analysis: Break big tasks into tiny steps\n📸 Visual supports: Picture schedules, video modeling\n🔄 Backward chaining: Let them complete last step, build backward\n👐 Prompt fading: Hand-over-hand → gestures → verbal → independent\n🎯 Practice in context: Real stores, real situations\n\nTIPS FOR SUCCESS:\n📅 Start now (it's never too early or late)\n🎯 One skill at a time\n⏰ Build in extra time\n🎉 Celebrate small wins\n💪 Expect setbacks\n🤝 Include them in choosing goals\n\nTheir best is good enough. Progress, not perfection.\n\nWhat skill is your child working on? Share below! 👇\n\n💾 Save for life skills planning",
         igHashtags: "#lifeskills #independence #autismparenting #autismmom #specialneedsparenting #autismfamily #teachinglifeskills #autismacceptance #neurodiversity #autismlife #functionalskills #autismkids #parentingtips #autismtips #buildingindependence",
-        tiktokCaption: "🌱 Building independence: Small steps, big impact\n\nBreak tasks down. Use visuals. Practice in real life. Celebrate every win.\n\nTheir timeline, their progress, their success.\n\nWhat skill is your child working on? 👇\n\n#independence #lifeskills #autismparenting #fyp #autismmom"
+        tiktokCaption: "🌱 Building independence: Small steps, big impact\n\nBreak tasks down. Use visuals. Practice in real life. Celebrate every win.\n\nTheir timeline, their progress, their success.\n\nWhat skill is your child working on? 👇\n\n#independence #lifeskills #autismparenting #fyp #autismmom",
+        pinterestTitle: "Building Independence",
+        pinterestDesc: "Teaching life skills at every age. Small steps toward big autonomy. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       51: {
         title: "Sensory Processing Deep Dive",
@@ -1425,7 +1592,10 @@
         slides: 6,
         igCaption: "👂 Sensory processing: the thing that affects EVERYTHING\n\nMost people talk about the 5 senses. But we actually have 8:\n\n1. Visual (light, colors, patterns)\n2. Auditory (sounds, filtering noise)\n3. Tactile (touch, texture, temperature)\n4. Olfactory (smell sensitivity)\n5. Gustatory (taste and food textures)\n6. Vestibular (balance and motion)\n7. Proprioception (body awareness)\n8. Interoception (internal signals)\n\nAutistic people can be:\n\n⬆️ HYPERSENSITIVE (over-responsive)\n- Lights feel blinding\n- Background noise is overwhelming\n- Clothing tags feel like torture\n- Certain textures cause physical distress\n\n⬇️ HYPOSENSITIVE (under-responsive)\n- Craving deep pressure and tight hugs\n- Needing to spin, jump, crash\n- Seeking strong flavors\n- Not noticing pain or injuries\n\nAnd here's the key: You can be BOTH. Hypersensitive to sound but hyposensitive to proprioception. It varies by sense and by day.\n\nTools that help:\n🎧 Noise-canceling headphones\n🕶️ Tinted glasses for light\n🧸 Fidgets and stim toys\n🛏️ Weighted blankets\n🏠 Quiet decompression spaces\n\nSensory needs aren't preferences. They're how the nervous system processes the world.\n\nWhat sensory accommodations have helped you or your child? Share below 👇\n\n💾 Save this for reference!",
         igHashtags: "#sensoryprocessing #autism #autismawareness #sensoryoverload #neurodiversity #autisticadults #autismparenting #sensoryneeds #spd #autismacceptance #actuallyautistic #sensoryfriendly #autismlife #neurodivergent #sensorytools",
-        tiktokCaption: "👂 Sensory processing explained in 60 seconds\n\nWe have 8 senses, not 5. And autistic people experience them differently.\n\nHyper = too much input\nHypo = not enough input\nMost people are BOTH depending on the sense\n\nWhat sensory tools help you?\n\n#sensoryprocessing #autism #neurodivergent #autistic #fyp"
+        tiktokCaption: "👂 Sensory processing explained in 60 seconds\n\nWe have 8 senses, not 5. And autistic people experience them differently.\n\nHyper = too much input\nHypo = not enough input\nMost people are BOTH depending on the sense\n\nWhat sensory tools help you?\n\n#sensoryprocessing #autism #neurodivergent #autistic #fyp",
+        pinterestTitle: "Sensory Processing Deep Dive",
+        pinterestDesc: "Why the world feels different when you're autistic. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Sensory Support & Hacks"
       },
       52: {
         title: "Executive Function Support",
@@ -1441,7 +1611,10 @@
         slides: 6,
         igCaption: "💻 Why so many autistic people love technology\n\nIt's not a coincidence. Here's why tech and autism often go together:\n\n🔍 Predictable rules: Code follows logic. No hidden social rules.\n🎯 Deep focus rewarded: Hyperfocus becomes a superpower.\n📱 Control over environment: Customize everything to your needs.\n💬 Text-based communication: Time to think before responding.\n🧩 Pattern recognition: Many autistic minds excel at seeing patterns.\n\nTech as assistive support:\n🗣️ AAC apps for communication\n📅 Visual schedule apps\n🎧 Noise-canceling tech\n⌚ Smart watches for reminders\n🎮 Social skills games\n\nFinding community online:\n🌐 Text-based forums and groups\n🎮 Gaming spaces with shared interests\n📝 Platforms centered on special interests\n🎥 Autistic creators sharing experiences\n💬 Discord servers for connection\n\nTips for balance:\n⏰ Set time boundaries (hyperfocus is real)\n🌙 Protect sleep with screen routines\n🚶 Build in movement breaks\n🎯 Use tech intentionally\n🤝 Online friends are real friends AND in-person matters too\n\nTechnology isn't an escape from the world. It's a tool that can work WITH autistic brains instead of against them.\n\nWhat tech tool has been most helpful for you? Share below 👇\n\n💾 Save this post!",
         igHashtags: "#autism #technology #autisticadults #neurodiversity #autismacceptance #techcommunity #aac #actuallyautistic #autismawareness #neurodivergent #autismlife #assistivetechnology #autisticpride #gamingcommunity #autismtech",
-        tiktokCaption: "💻 Why autistic people often thrive with technology\n\nPredictable rules. Deep focus rewarded. Text over talking. Pattern recognition.\n\nPlus: AAC apps, visual schedules, online community\n\nTech isn't an escape. It's a tool that works WITH our brains.\n\n#autism #technology #neurodivergent #autistic #fyp"
+        tiktokCaption: "💻 Why autistic people often thrive with technology\n\nPredictable rules. Deep focus rewarded. Text over talking. Pattern recognition.\n\nPlus: AAC apps, visual schedules, online community\n\nTech isn't an escape. It's a tool that works WITH our brains.\n\n#autism #technology #neurodivergent #autistic #fyp",
+        pinterestTitle: "Autism and Technology",
+        pinterestDesc: "Why tech often feels like home for autistic minds. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       54: {
         title: "Transitioning to Adulthood",
@@ -1449,7 +1622,10 @@
         slides: 6,
         igCaption: "🎓 The transition cliff is real. Here's what you need to know.\n\nAt 18-22, autistic young adults face a sudden loss of support:\n\n🏫 School services end at graduation\n👨⚕️ Pediatric providers age out\n📋 Adult services have years-long waitlists\n🏥 Insurance coverage changes\n😰 \"Adult\" expectations start overnight\n\nLife skills to build NOW:\n💳 Money management and budgeting\n🍳 Cooking basics and grocery shopping\n🏠 Home tasks and cleaning routines\n🚗 Transportation options\n📞 Phone calls (scripts help!)\n💊 Healthcare management\n🗣️ Self-advocacy\n⚠️ Safety skills\n\nStart transition planning early:\n📅 Begin at 14-16, not 18\n📝 Apply for adult services early (waitlists!)\n📋 Gather all documentation\n⚖️ Research legal options (guardianship alternatives exist)\n👥 Build a support network\n\nRedefine success:\n🏠 Living situations vary, and that's okay\n⏰ There's no deadline for \"adulting\"\n💼 Work looks different for everyone\n🤝 Interdependence is normal\n✨ Quality of life matters most\n\nAdulthood is a journey, not a destination. Start planning early. Redefine success on YOUR terms.\n\nWhat's one thing you wish you'd known? Share below 👇\n\n💾 Save this for parents and teens!",
         igHashtags: "#autismtransition #autisticadults #transitionplanning #autismparenting #adulting #neurodiversity #autismacceptance #specialneeds #iep #autismlife #autismawareness #actuallyautistic #lifeafter18 #autismfamily #transitiontoadulthood",
-        tiktokCaption: "🎓 The autism services cliff at 18: what families need to know\n\nSchool services end. Doctors age out. Waitlists are years long.\n\nStart planning at 14-16, not 18. Build life skills now.\n\nAnd remember: success looks different for everyone.\n\n#autism #transition #autisticadults #adulting #fyp"
+        tiktokCaption: "🎓 The autism services cliff at 18: what families need to know\n\nSchool services end. Doctors age out. Waitlists are years long.\n\nStart planning at 14-16, not 18. Build life skills now.\n\nAnd remember: success looks different for everyone.\n\n#autism #transition #autisticadults #adulting #fyp",
+        pinterestTitle: "Transitioning to Adulthood",
+        pinterestDesc: "What no one tells autistic teens and their families. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Adult Autism"
       },
       55: {
         title: "Employment and Autism",
@@ -1457,7 +1633,10 @@
         slides: 6,
         igCaption: "💼 The employment gap for autistic adults is heartbreaking:\n\n- 85% of autistic college grads are unemployed or underemployed\n- 50% leave jobs within the first year due to lack of support\n- 70% report masking at work leads to burnout\n\nBut here's what employers are missing:\n\nAutistic employees often bring:\n🎯 Deep focus and concentration\n🔍 Pattern recognition others miss\n💡 Creative problem-solving from unique perspectives\n📋 Attention to detail and precision\n🤝 Direct, honest communication\n❤️ Loyalty and reliability\n\nSimple accommodations that cost little but matter a lot:\n- Noise-canceling headphones allowed\n- Written instructions for tasks\n- Flexible hours or remote options\n- Clear expectations and direct feedback\n- Meeting agendas sent in advance\n- Sensory breaks when needed\n\nFor autistic job seekers:\n1. Research company culture and neurodiversity initiatives\n2. Practice interview scripts to reduce anxiety\n3. Request accommodations early (many employers will help)\n4. Lead with your strengths\n5. Consider autism-friendly employers like Microsoft, SAP, Dell\n\nThe problem is not capability. It's outdated hiring practices.\n\nWhat workplace accommodations have helped you? 👇\n\n💾 Save this for your next job search!",
         igHashtags: "#autismemployment #neurodiversityatwork #autisticadults #autism #neurodiversity #workplaceaccommodations #autismawareness #actuallyautistic #autismacceptance #neurodivergent #autisticworkers #jobsearch #disabilityinclusion #autismsupport #careeradvice",
-        tiktokCaption: "💼 85% of autistic college grads are unemployed or underemployed\n\nNot because they lack skills.\n\nBecause hiring practices and workplaces were not built for neurodivergent brains.\n\nSimple fixes: headphones, written instructions, flexible hours, clear expectations\n\nWhat has helped YOU at work?\n\n#autismemployment #neurodiversity #autistic #workplace #fyp"
+        tiktokCaption: "💼 85% of autistic college grads are unemployed or underemployed\n\nNot because they lack skills.\n\nBecause hiring practices and workplaces were not built for neurodivergent brains.\n\nSimple fixes: headphones, written instructions, flexible hours, clear expectations\n\nWhat has helped YOU at work?\n\n#autismemployment #neurodiversity #autistic #workplace #fyp",
+        pinterestTitle: "Employment & Autism",
+        pinterestDesc: "What employers miss and how autistic workers thrive. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       56: {
         title: "Self-Advocacy Skills",
@@ -1465,7 +1644,10 @@
         slides: 6,
         igCaption: "🗣️ Self-Advocacy 101: Skills every autistic person needs\n\nNo one knows your needs better than you. But speaking up can feel impossible when the world wasn't designed for your brain.\n\nWhy it matters:\n🎭 Masking drains us when we hide our needs\n❓ Others can't read minds, they need us to tell them\n⚖️ Accommodations are RIGHTS, not favors\n\nScripts you can use (save these!):\n\n💼 At work: \"I work best when I have written instructions. Can you send that in an email?\"\n\n🏥 At the doctor: \"I need extra time to process questions. Please give me a moment.\"\n\n👥 With family: \"I care about you, but I need to recharge alone. It's not personal.\"\n\n🔊 In loud spaces: \"The noise level is overwhelming. Can we move somewhere quieter?\"\n\n5 advocacy tips:\n1️⃣ Know your rights - research disability laws\n2️⃣ Start small - build confidence gradually\n3️⃣ Write it down - email if speaking is hard\n4️⃣ Bring a buddy - for tough conversations\n5️⃣ It's okay to walk away - self-protection counts\n\nAffirmations:\n🗣️ My needs are valid\n✊ I deserve accommodations\n💪 Asking for help is strength\n🌟 I am the expert on myself\n\nWhat's one thing you wish you could advocate for? Tell us below 👇\n\n💾 Save these scripts for when you need them!",
         igHashtags: "#selfadvocacy #autisticadvocacy #autismacceptance #actuallyautistic #neurodivergent #autismawareness #autismrights #disabilityrights #accommodations #autisticadult #autismcommunity #neurodiversity #autismlife #speakup #autisticselfadvocacy",
-        tiktokCaption: "🗣️ Self-advocacy scripts every autistic person needs\n\nSpeaking up is hard. These words make it easier.\n\nSave this for when you need it! 💾\n\nWhat do you wish you could advocate for? 👇\n\n#selfadvocacy #autism #actuallyautistic #neurodivergent #autismtiktok #fyp"
+        tiktokCaption: "🗣️ Self-advocacy scripts every autistic person needs\n\nSpeaking up is hard. These words make it easier.\n\nSave this for when you need it! 💾\n\nWhat do you wish you could advocate for? 👇\n\n#selfadvocacy #autism #actuallyautistic #neurodivergent #autismtiktok #fyp",
+        pinterestTitle: "Self-Advocacy Skills Every Autistic Person Needs",
+        pinterestDesc: "Speaking up for yourself is a skill. Here's how to build it. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       57: {
         title: "Acceptance at Work and School",
@@ -1473,7 +1655,10 @@
         slides: 6,
         igCaption: "💼🎓 Autism acceptance at work and school: What it REALLY looks like\n\nThe numbers are stark:\n📊 85% of college-educated autistic adults are unemployed or underemployed\n📊 50% of autistic students report bullying\n📊 70% of autistic employees mask heavily at work\n\nThe problem isn't us. It's systems that weren't designed with us in mind.\n\n🚫 Performative \"awareness\" looks like:\n- Puzzle piece logos with no action\n- \"We accept everyone\" but no real accommodations\n- One autism month event, then silence\n- Expecting us to \"fit in\" without changes\n\n💚 Real acceptance looks like:\n- Proactive accommodations built in\n- Flexible work and learning options\n- Quiet spaces and sensory support\n- Autistic people in leadership and planning\n- Accommodations seen as NORMAL\n\nWhat actually helps:\n\nAt work:\n📝 Written instructions over verbal\n🏠 Remote/hybrid options\n🎧 Noise-canceling headphones allowed\n💡 Adjustable lighting\n⏰ Flexible start times\n\nAt school:\n⏳ Extended time on tests\n🪑 Preferential seating\n📋 Clear rubrics\n🚶 Movement breaks allowed\n\nRemember: These aren't \"special treatment.\" They're equal access.\n\nFor allies: Listen first. Amplify, don't speak over. Advocate when we can't. Keep learning from autistic voices.\n\nWhat's one accommodation that changed YOUR life? Share below 👇\n\n📤 Share this with someone who needs to see it!",
         igHashtags: "#autismacceptance #workplaceaccomodations #actuallyautistic #neurodivergent #autismawareness #disabilityrights #inclusiveworkplace #autisticemployee #autismschool #iep504 #neurodiversity #autismadvocacy #accommodationsmatter #inclusiveeducation #differentnotless",
-        tiktokCaption: "💼🎓 What autism acceptance REALLY looks like at work and school\n\nHint: It's not a puzzle piece poster and a single awareness day.\n\nReal inclusion changes SYSTEMS, not people.\n\nWhat accommodation changed your life? 👇\n\n#autismacceptance #neurodivergent #actuallyautistic #workplace #autism #fyp"
+        tiktokCaption: "💼🎓 What autism acceptance REALLY looks like at work and school\n\nHint: It's not a puzzle piece poster and a single awareness day.\n\nReal inclusion changes SYSTEMS, not people.\n\nWhat accommodation changed your life? 👇\n\n#autismacceptance #neurodivergent #actuallyautistic #workplace #autism #fyp",
+        pinterestTitle: "Autism Acceptance at Work and School",
+        pinterestDesc: "What real inclusion looks like. And what it doesn't. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / IEP & School Advocacy"
       },
       58: {
         title: "Mental Health and Autism",
@@ -1481,7 +1666,10 @@
         slides: 6,
         igCaption: "💜🧠 Mental Health and Autism: We need to talk about this\n\nThe stats are alarming:\n📊 4x higher rates of depression in autistic adults\n📊 70% of autistic people experience anxiety\n📊 66% have thought about suicide\n📊 9x higher suicide risk than general population\n\nThis isn't because autism is a mental illness. It's because living in a world not built for us takes a real toll.\n\nWhy getting help is hard:\n🎭 We mask so well that professionals miss our struggles\n🩺 Most providers don't understand autism\n😶 Alexithymia makes describing emotions difficult\n🏥 Healthcare settings are sensory nightmares\n💸 Autism-informed care is expensive and rare\n\nWhat actually helps:\n🧠 Autism-informed therapy (find someone who GETS it)\n🎭 Unmask in safe spaces\n🔋 Honor your energy limits\n🌀 Embrace stimming as self-regulation\n👥 Find autistic community\n📝 Try alternative expression (art, writing, music)\n\nMental health truths:\n💜 My struggles are real, not excuses\n🔋 Needing rest is not weakness\n🌧️ Hard days don't erase progress\n🧠 I deserve support that fits my brain\n✨ Healing isn't linear. Neither am I.\n\n⚠️ If you're in crisis:\n988 Suicide & Crisis Lifeline - call or text 988\nCrisis Text Line - text HOME to 741741\n\nDrop a 💜 if you're working on your mental health. You're not alone.\n\n💾 Save this for a hard day.",
         igHashtags: "#autismmentalhealth #mentalhealth #actuallyautistic #neurodivergent #autismawareness #autismanxiety #autismdepression #autisticburnout #autismacceptance #neurodiversity #mentalhealthmatters #autisticadults #autismcommunity #mentalwellness #youarenotalone",
-        tiktokCaption: "💜🧠 Mental health and autism: The connection no one talks about enough\n\nThe stats are scary. The barriers are real. But so is hope.\n\nDrop a 💜 if you're working on it. You're not alone.\n\n#mentalhealth #autism #actuallyautistic #neurodivergent #autismtiktok #fyp"
+        tiktokCaption: "💜🧠 Mental health and autism: The connection no one talks about enough\n\nThe stats are scary. The barriers are real. But so is hope.\n\nDrop a 💜 if you're working on it. You're not alone.\n\n#mentalhealth #autism #actuallyautistic #neurodivergent #autismtiktok #fyp",
+        pinterestTitle: "Mental Health and Autism: The Connection",
+        pinterestDesc: "The connection is real. The support often isn't. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       59: {
         title: "Celebrating Autistic Joy",
@@ -1489,7 +1677,10 @@
         slides: 6,
         igCaption: "✨🎉 Celebrating AUTISTIC JOY\n\nBecause autism isn't just challenges. It's also wonder, depth, and pure magic.\n\nWhat is autistic joy?\n🌟 Special interests that light us up from the inside\n🌀 Happy stims when we can't contain the excitement\n🎵 Sensory delights that make the world feel magical\n🤝 Deep connections with people who truly get us\n💡 Pattern recognition that reveals hidden beauty\n\nMoments of autistic joy (tag yourself):\n📚 Getting lost for hours in a special interest\n🧸 Finding the PERFECT texture\n🎧 A song that hits exactly right every single time\n🧩 When all the pieces click into place\n🤗 Meeting someone who just GETS you\n🏠 Coming home and finally unmasking\n✋ Hand flapping because you're just SO happy\n🔁 Rewatching your comfort show for the 47th time\n💫 Infodumping to someone who actually wants to listen\n\nHow to protect your joy:\n🛡️ Guard your interests from shamers\n🌀 Stim without shame\n🚪 Create sensory-friendly joy spaces\n👥 Find joy allies who celebrate you\n✨ Document joy moments for hard days\n\nJoy affirmations:\n✨ My joy is valid\n🌟 My interests make life rich\n🎉 I deserve to feel excitement\n💃 My happy stims are beautiful\n🌈 Being autistic is a gift\n\nWhat brings YOU autistic joy? Share below! 🌟\n\n📤 Share this to spread the joy!",
         igHashtags: "#autisticjoy #actuallyautistic #autismacceptance #neurodivergent #autismpride #specialinterests #autisticadult #stimming #happystims #autismcommunity #neurodiversity #autismlove #celebrateautism #autisticpride #differentnotless",
-        tiktokCaption: "✨🎉 Celebrating AUTISTIC JOY\n\nBecause autism isn't just challenges. It's wonder, depth, and magic.\n\nWhat brings YOU autistic joy? Tell me! 🌟\n\n#autisticjoy #autism #actuallyautistic #neurodivergent #autismtiktok #fyp"
+        tiktokCaption: "✨🎉 Celebrating AUTISTIC JOY\n\nBecause autism isn't just challenges. It's wonder, depth, and magic.\n\nWhat brings YOU autistic joy? Tell me! 🌟\n\n#autisticjoy #autism #actuallyautistic #neurodivergent #autismtiktok #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       60: {
         title: "The Journey Continues",
@@ -1497,7 +1688,10 @@
         slides: 7,
         igCaption: "🌟✨🚀 DAY 60: The Journey Continues\n\nWe made it. 60 days of autism acceptance content. And what a journey it's been.\n\nWhat we covered:\n🧠 Understanding autism, the spectrum, and neurodiversity\n🔋 Managing energy, burnout, meltdowns, and recovery\n🎭 Masking, identity, late diagnosis, and self-discovery\n🌟 Autistic strengths and superpowers\n🌀 Sensory processing and stimming as self-regulation\n💼 Work and school accommodations and acceptance\n💜 Mental health and the real support we need\n✨ Autistic joy and the magic of our unique brains\n\nWhat we learned:\n🧩 Different, not less. Always.\n🎭 Masking has a cost. Authenticity heals.\n⚖️ Accommodations are rights, not favors.\n🗣️ Your voice matters. Use it.\n✨ Autistic joy is real and worth protecting.\n\nWhat's next:\n🔥 We're not stopping. More content coming year-round.\n📚 Explore the archive. Share what resonates.\n🗣️ Keep the conversation going in real life.\n✊ Advocate. Support autistic-led organizations. Amplify autistic voices.\n\nFinal affirmations:\n🌟 I am worthy exactly as I am\n🧠 My brain is different, not broken\n✊ I deserve acceptance, not just tolerance\n🌈 My existence is a gift\n🚀 The journey continues\n\nThank you for being part of this.\n\nTo autistic people: Thank you for trusting us with your experiences.\nTo parents and caregivers: Thank you for seeking to understand.\nTo allies: Thank you for choosing to learn and advocate.\n\nWhat was YOUR favorite post from the 60 days? Drop it below! 👇\n\n💾 Save the series. 📤 Share with everyone.\n\nHere's to acceptance every single day. 💚",
         igHashtags: "#autismacceptance #actuallyautistic #neurodivergent #autismawareness #60daysofautism #autismcommunity #neurodiversity #autisticpride #differentnotless #autismadvocacy #autismlove #celebrateautism #autisticadult #autismfamily #thejourneycontinues",
-        tiktokCaption: "🌟✨🚀 DAY 60: We made it!\n\n60 days of autism acceptance. What a journey.\n\nThis isn't the end. The journey continues.\n\nWhat was YOUR favorite post? Tell me below! 👇\n\n#autismacceptance #autism #actuallyautistic #neurodivergent #day60 #fyp"
+        tiktokCaption: "🌟✨🚀 DAY 60: We made it!\n\n60 days of autism acceptance. What a journey.\n\nThis isn't the end. The journey continues.\n\nWhat was YOUR favorite post? Tell me below! 👇\n\n#autismacceptance #autism #actuallyautistic #neurodivergent #day60 #fyp",
+        pinterestTitle: "Final Recap: The Journey Continues",
+        pinterestDesc: "60 days of learning, growing, and celebrating autistic identity. What a ride. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       }
     };
 
@@ -1507,84 +1701,120 @@
         folder: "day-02-acceptance-reel",
         slides: 5,
         slideNames: ['hook', 'awareness', 'acceptance', 'action', 'cta'],
-        tiktokCaption: "🛑 STOP saying autism awareness!\n\nHere's why ACCEPTANCE matters more 👇\n\n#autism #autismacceptance #neurodivergent #fyp"
+        tiktokCaption: "🛑 STOP saying autism awareness!\n\nHere's why ACCEPTANCE matters more 👇\n\n#autism #autismacceptance #neurodivergent #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Stop saying autism awareness. Here's why. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       4: {
         title: "5 Sensory Hacks (Reel Version)",
         folder: "day-04-sensory-hacks-reel",
         slides: 7,
         slideNames: ['hook', 'hack1', 'hack2', 'hack3', 'hack4', 'hack5', 'cta'],
-        tiktokCaption: "🧠✨ 5 Sensory Hacks That ACTUALLY Work\n\nOT-approved tips every autism parent needs 👇\n\n#autism #sensoryfriendly #autismhacks #fyp #autismparenting"
+        tiktokCaption: "🧠✨ 5 Sensory Hacks That ACTUALLY Work\n\nOT-approved tips every autism parent needs 👇\n\n#autism #sensoryfriendly #autismhacks #fyp #autismparenting",
+        pinterestTitle: "5 Sensory Hacks That Actually Work",
+        pinterestDesc: "Meltdown prevention starts here. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Sensory Support & Hacks"
       },
       8: {
         title: "World Autism Acceptance Day (Reel)",
         folder: "day-08-waad-reel",
         slides: 6,
         slideNames: ['hook', 'theme', 'stats', 'acceptance', 'pledge', 'cta'],
-        tiktokCaption: "♾️💙 WORLD AUTISM ACCEPTANCE DAY\n\nEvery life has value 👇\n\n#WorldAutismDay #AutismAcceptance #fyp"
+        tiktokCaption: "♾️💙 WORLD AUTISM ACCEPTANCE DAY\n\nEvery life has value 👇\n\n#WorldAutismDay #AutismAcceptance #fyp",
+        pinterestTitle: "World Autism Acceptance Day - \"Autism and Humanity — Every Life Has Value\"",
+        pinterestDesc: "Today we don't just spread awareness. We celebrate humanity. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Autism Acceptance"
       },
       10: {
         title: "IEP Accommodations (Reel Version)",
         folder: "day-10-iep-reel",
         slides: 6,
         slideNames: ['hook', 'sensory', 'communication', 'academic', 'social', 'cta'],
-        tiktokCaption: "📋 IEP Accommodations That Actually Help\n\nYour child's IEP shouldn't teach them to mask 👇\n\n#IEP #autism #specialeducation #fyp #autismadvocacy"
+        tiktokCaption: "📋 IEP Accommodations That Actually Help\n\nYour child's IEP shouldn't teach them to mask 👇\n\n#IEP #autism #specialeducation #fyp #autismadvocacy",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Your child's IEP shouldn't teach them to mask. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       13: {
         title: "ABA Controversy (Reel Version)",
         folder: "day-13-aba-reel",
         slides: 7,
         slideNames: ['hook', 'what', 'concerns', 'other', 'questions', 'trust', 'cta'],
-        tiktokCaption: "ABA therapy. Both sides. No spin.\nSave this before you decide what's right for your child.\n#autism #ABA #autismparent #neurodivergent #fyp"
+        tiktokCaption: "ABA therapy. Both sides. No spin.\nSave this before you decide what's right for your child.\n#autism #ABA #autismparent #neurodivergent #fyp",
+        pinterestTitle: "The ABA Controversy: What Parents Need to Know",
+        pinterestDesc: "Is ABA therapy right for your child? Here's both sides. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Therapy Options"
       },
       14: {
         title: "Visual Supports (Reel Version)",
         folder: "day-14-visual-supports-reel",
         slides: 7,
         slideNames: ['hook', 'schedule', 'timer', 'firstthen', 'social', 'choice', 'cta'],
-        tiktokCaption: "📋 Visual Supports That Actually Work\n\nStop guessing, start using these 👇\n\n#autism #visualsupports #autismparenting #fyp"
+        tiktokCaption: "📋 Visual Supports That Actually Work\n\nStop guessing, start using these 👇\n\n#autism #visualsupports #autismparenting #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       17: {
         title: "Sleep Issues (Reel Version)",
         folder: "day-17-sleep-reel",
         slides: 5,
         slideNames: ['hook', 'why', 'environment', 'routine', 'cta'],
-        tiktokCaption: "😴💤 Sleep Issues in Autism\n\nMelatonin isn't the only answer 👇\n\n#autism #autismsleep #sleeptips #sensory #fyp"
+        tiktokCaption: "😴💤 Sleep Issues in Autism\n\nMelatonin isn't the only answer 👇\n\n#autism #autismsleep #sleeptips #sensory #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Melatonin isn't the only answer. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       21: {
         title: "AuDHD Experience (Reel Version)",
         folder: "day-21-audhd-reel",
         slides: 6,
         slideNames: ['hook', 'what', 'contradiction', 'strengths', 'helps', 'cta'],
-        tiktokCaption: "🧠⚡ AuDHD: When Your Brain Has Two Operating Systems\n\nAutism wants routine. ADHD wants novelty. The result? 👇\n\n#audhd #autism #adhd #neurodivergent #fyp"
+        tiktokCaption: "🧠⚡ AuDHD: When Your Brain Has Two Operating Systems\n\nAutism wants routine. ADHD wants novelty. The result? 👇\n\n#audhd #autism #adhd #neurodivergent #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       24: {
         title: "Autism & Anxiety (Reel Version)",
         folder: "day-24-anxiety-reel",
         slides: 5,
         slideNames: ['hook', 'why', 'signs', 'support', 'cta'],
-        tiktokCaption: "😰 Autism & Anxiety: The Hidden Connection\n\n40-80% of autistic people have anxiety. Here's what helps 👇\n\n#autism #anxiety #autismandanxiety #fyp"
+        tiktokCaption: "😰 Autism & Anxiety: The Hidden Connection\n\n40-80% of autistic people have anxiety. Here's what helps 👇\n\n#autism #anxiety #autismandanxiety #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       28: {
         title: "Nature & Autism (Reel Version)",
         folder: "day-28-nature-reel",
         slides: 6,
         slideNames: ['hook', 'science', 'senses', 'easy', 'tips', 'cta'],
-        tiktokCaption: "🌿🌍 Nature & Autism: Free Therapy Outside Your Door\n\nHappy Earth Day! Here's why nature helps 👇\n\n#earthday #autism #naturetherapy #sensoryfriendly #fyp"
+        tiktokCaption: "🌿🌍 Nature & Autism: Free Therapy Outside Your Door\n\nHappy Earth Day! Here's why nature helps 👇\n\n#earthday #autism #naturetherapy #sensoryfriendly #fyp",
+        pinterestTitle: "Nature and Autism: Sensory Benefits of the Outdoors",
+        pinterestDesc: "Fresh air might be the best sensory tool. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Sensory Support & Hacks"
       },
       31: {
         title: "Glass Child Revisited (Reel Version)",
         folder: "day-31-siblings-reel",
         slides: 6,
         slideNames: ['hook', 'what', 'signs', 'help', 'truth', 'cta'],
-        tiktokCaption: "👫 Don't Let Siblings Become Invisible\n\nGlass Child Syndrome: when one child's needs overshadow another 👇\n\n#glasschild #autismfamily #siblings #fyp"
+        tiktokCaption: "👫 Don't Let Siblings Become Invisible\n\nGlass Child Syndrome: when one child's needs overshadow another 👇\n\n#glasschild #autismfamily #siblings #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       35: {
         title: "Resource Toolkit (Reel Version)",
         folder: "day-35-toolkit-reel",
         slides: 6,
         slideNames: ['hook', 'orgs', 'apps', 'books', 'community', 'cta'],
-        tiktokCaption: "🧰 Your Autism Parent Resource Toolkit\n\nSave this - you'll need it 👇\n\n#autism #autismresources #autismparenting #fyp"
+        tiktokCaption: "🧰 Your Autism Parent Resource Toolkit\n\nSave this - you'll need it 👇\n\n#autism #autismresources #autismparenting #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       38: {
         title: "Summer Prep (Reel Version)",
@@ -1598,42 +1828,60 @@
         folder: "day-42-ot-reel",
         slides: 6,
         slideNames: ['hook', 'what', 'helps', 'looks', 'find', 'cta'],
-        tiktokCaption: "🧩 Occupational Therapy for Autism\n\nIt's not just playing - here's why it works 👇\n\n#autism #occupationaltherapy #OT #autismparenting #fyp"
+        tiktokCaption: "🧩 Occupational Therapy for Autism\n\nIt's not just playing - here's why it works 👇\n\n#autism #occupationaltherapy #OT #autismparenting #fyp",
+        pinterestTitle: "Insurance and Therapy Coverage",
+        pinterestDesc: "Navigating the maze of coverage for autism therapies. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / Therapy Options"
       },
       45: {
         title: "Speech Therapy (Reel Version)",
         folder: "day-45-speech-reel",
         slides: 6,
         slideNames: ['hook', 'myth', 'helps', 'aac', 'tips', 'cta'],
-        tiktokCaption: "🗣️ Speech Therapy: Not Just About Talking\n\nAAC does NOT prevent speech 👇\n\n#autism #speechtherapy #AAC #autismparenting #fyp"
+        tiktokCaption: "🗣️ Speech Therapy: Not Just About Talking\n\nAAC does NOT prevent speech 👇\n\n#autism #speechtherapy #AAC #autismparenting #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       49: {
         title: "Marriage & Autism (Reel Version)",
         folder: "day-49-marriage-reel",
         slides: 6,
         slideNames: ['hook', 'reality', 'connect', 'team', 'therapy', 'cta'],
-        tiktokCaption: "💑 Your Marriage After an Autism Diagnosis\n\nThe strain is real. So is the hope 👇\n\n#autism #marriage #autismparenting #fyp"
+        tiktokCaption: "💑 Your Marriage After an Autism Diagnosis\n\nThe strain is real. So is the hope 👇\n\n#autism #marriage #autismparenting #fyp",
+        pinterestTitle: "Year-Round School Options and ESY",
+        pinterestDesc: "Could Extended School Year help your autistic child? Understanding ESY and other options. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips / IEP & School Advocacy"
       },
       52: {
         title: "Building Support (Reel Version)",
         folder: "day-52-support-reel",
         slides: 5,
         slideNames: ['hook', 'types', 'where', 'ask', 'cta'],
-        tiktokCaption: "🤝 You Can't Do This Alone\n\nBuilding the support system you actually need 👇\n\n#autism #support #autismparenting #fyp"
+        tiktokCaption: "🤝 You Can't Do This Alone\n\nBuilding the support system you actually need 👇\n\n#autism #support #autismparenting #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       56: {
         title: "Summer Camps (Reel Version)",
         folder: "day-56-camp-reel",
         slides: 5,
         slideNames: ['hook', 'options', 'questions', 'prep', 'cta'],
-        tiktokCaption: "🏕️ Summer Camp: The Right One Can Be Magical\n\nHow to choose wisely 👇\n\n#autism #summercamp #autismparenting #fyp"
+        tiktokCaption: "🏕️ Summer Camp: The Right One Can Be Magical\n\nHow to choose wisely 👇\n\n#autism #summercamp #autismparenting #fyp",
+        pinterestTitle: "Self-Advocacy Skills Every Autistic Person Needs",
+        pinterestDesc: "Speaking up for yourself is a skill. Here's how to build it. Save this guide for tips that actually work.",
+        pinterestBoard: "Autism Parenting Tips"
       },
       59: {
         title: "Building Independence (Reel Version)",
         folder: "day-59-independence-reel",
         slides: 6,
         slideNames: ['hook', 'mindset', 'areas', 'how', 'start', 'cta'],
-        tiktokCaption: "🌱 Building Independence: It Starts Now\n\nEvery skill learned is a step toward their future 👇\n\n#autism #independence #autismparenting #fyp"
+        tiktokCaption: "🌱 Building Independence: It Starts Now\n\nEvery skill learned is a step toward their future 👇\n\n#autism #independence #autismparenting #fyp",
+        pinterestTitle: "Character count:",
+        pinterestDesc: "Save this guide for practical tips that actually work for autism families.",
+        pinterestBoard: "Autism Parenting Tips"
       }
     };
 
@@ -1657,6 +1905,17 @@
       document.getElementById('modal-tiktok-caption').textContent = data.tiktokCaption;
       document.getElementById('modal-folder-link').href = `content/${data.folder}/`;
       document.getElementById('modal-captions-link').href = `content/${data.folder}/captions.md`;
+
+      // Pinterest fields
+      if (data.pinterestTitle) {
+        document.getElementById('modal-pinterest-title').textContent = data.pinterestTitle;
+        document.getElementById('modal-pinterest-desc').textContent = data.pinterestDesc;
+        document.getElementById('modal-pinterest-board').textContent = data.pinterestBoard;
+        document.querySelector('.pinterest-section').style.display = 'block';
+      } else {
+        document.querySelector('.pinterest-section').style.display = 'none';
+      }
+
       
       // Load slides
       const slidesContainer = document.getElementById('modal-slides');
