@@ -280,14 +280,19 @@
       <div class="stat-label">Beacon</div>
     </div>
     <div class="stat">
+      <div class="stat-num" id="stat-30day">0</div>
+      <div class="stat-label">30-Day</div>
+    </div>
+    <div class="stat">
       <div class="stat-num" id="stat-60day">0</div>
-      <div class="stat-label">60-Day Calendar</div>
+      <div class="stat-label">60-Day</div>
     </div>
   </div>
   
   <div class="filters">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="beacon">🧭 Beacon</button>
+    <button class="filter-btn" data-filter="day-30">📅 30-Day</button>
     <button class="filter-btn" data-filter="day-60">📅 60-Day</button>
     <button class="filter-btn" data-filter="reel">🎬 Reels</button>
     <button class="filter-btn" data-filter="personal">💛 Personal</button>
@@ -343,6 +348,168 @@
         category: 'beacon',
         hasImage: true,
         imageType: 'pinterest'
+      },
+      
+      // 30-Day Calendar Content (Starter Calendar - different content plan)
+      {
+        id: '30d-01',
+        title: 'Why I Started Spectrum Unlocked',
+        desc: 'When my child was diagnosed, I Googled frantically at 2 AM. I built this so you don\'t have to. Real tools, real guidance, no judgment.',
+        board: 'Autism Parenting Tips / About Us',
+        folder: null,
+        category: 'day-30',
+        day: 1,
+        hasImage: false
+      },
+      {
+        id: '30d-02',
+        title: 'Therapy Waitlists Are 6-12 Months Long',
+        desc: 'Get on multiple waitlists NOW — even before you\'re sure which therapy is right. You can always decline later.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: null,
+        category: 'day-30',
+        day: 2,
+        hasImage: false
+      },
+      {
+        id: '30d-03',
+        title: 'You\'re Doing Better Than You Think',
+        desc: 'The fact that you\'re here, searching, learning, advocating — that\'s love in action. Your child is lucky to have you.',
+        board: 'Autism Parenting Tips / Encouragement',
+        folder: null,
+        category: 'day-30',
+        day: 3,
+        hasImage: false
+      },
+      {
+        id: '30d-05',
+        title: 'The First 48 Hours Post-Diagnosis Guide',
+        desc: 'Stop the frantic 2am Googling. Emotional processing tips, the 3 most important calls, how to talk to your child.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: null,
+        category: 'day-30',
+        day: 5,
+        hasImage: false
+      },
+      {
+        id: '30d-06',
+        title: '5 Things I Wish I Knew After Diagnosis',
+        desc: 'Therapy waitlists, finding specialists, IEPs are negotiable, your village, and your child is still amazing.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: null,
+        category: 'day-30',
+        day: 6,
+        hasImage: false
+      },
+      {
+        id: '30d-07',
+        title: 'Autism Is NOT Caused By Bad Parenting',
+        desc: 'Let\'s clear this up: Autism is neurological, not caused by vaccines, screen time, or anything you did. Science says so.',
+        board: 'Autism Parenting Tips / Myth Busting',
+        folder: null,
+        category: 'day-30',
+        day: 7,
+        hasImage: false
+      },
+      {
+        id: '30d-09',
+        title: 'Always Request IEP Meetings in WRITING',
+        desc: 'Email creates a paper trail. Schools must respond within a legal timeframe. This protects you.',
+        board: 'Autism Parenting Tips / IEP & School',
+        folder: null,
+        category: 'day-30',
+        day: 9,
+        hasImage: false
+      },
+      {
+        id: '30d-10',
+        title: 'Just Got a Diagnosis? Here\'s What to Do This Week',
+        desc: '5 steps that actually help. Take a breath, get on waitlists, contact school, find your people, take care of YOU.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: null,
+        category: 'day-30',
+        day: 10,
+        hasImage: false
+      },
+      {
+        id: '30d-13',
+        title: 'Autistic Kids Feel Emotions Deeply',
+        desc: 'Myth busted: They don\'t lack emotions — they often feel MORE intensely. They just express it differently.',
+        board: 'Autism Parenting Tips / Myth Busting',
+        folder: null,
+        category: 'day-30',
+        day: 13,
+        hasImage: false
+      },
+      {
+        id: '30d-17',
+        title: 'IEP Meeting Survival Guide',
+        desc: 'Everything you need to walk in confident and leave with what your child needs. Before, during, and after tips.',
+        board: 'Autism Parenting Tips / IEP & School',
+        folder: null,
+        category: 'day-30',
+        day: 17,
+        hasImage: false
+      },
+      {
+        id: '30d-18',
+        title: 'The Grief No One Talks About',
+        desc: 'You might grieve the future you imagined. The milestones. The expectations. This grief is valid AND you can still find joy.',
+        board: 'Autism Parenting Tips / Emotional Support',
+        folder: null,
+        category: 'day-30',
+        day: 18,
+        hasImage: false
+      },
+      {
+        id: '30d-20',
+        title: '5 Apps Every Autism Parent Needs',
+        desc: 'Visual schedule apps, AAC apps, sensory tools, routine apps, and parent support apps. All in one list.',
+        board: 'Autism Parenting Tips / Resources',
+        folder: null,
+        category: 'day-30',
+        day: 20,
+        hasImage: false
+      },
+      {
+        id: '30d-22',
+        title: '"High-Functioning" Is NOT a Compliment',
+        desc: 'Functioning labels harm everyone. High support needs get ignored, low support needs don\'t get help. Stop using them.',
+        board: 'Autism Parenting Tips / Language Matters',
+        folder: null,
+        category: 'day-30',
+        day: 22,
+        hasImage: false
+      },
+      {
+        id: '30d-23',
+        title: 'Sensory Profile Worksheet',
+        desc: 'Map your child\'s sensory needs. Seeking vs. avoiding for each sense. Free printable for OT visits and IEPs.',
+        board: 'Autism Parenting Tips / Sensory',
+        folder: null,
+        category: 'day-30',
+        day: 23,
+        hasImage: false
+      },
+      {
+        id: '30d-26',
+        title: 'What TO Say to Autism Parents',
+        desc: 'Skip "I\'m sorry" and "They\'ll grow out of it." Try these supportive phrases instead. Share with friends and family.',
+        board: 'Autism Parenting Tips / For Friends & Family',
+        folder: null,
+        category: 'day-30',
+        day: 26,
+        hasImage: false
+      },
+      {
+        id: '30d-28',
+        title: 'All Our Free Resources',
+        desc: 'IEP guide, first 48 hours guide, sensory worksheet, and more. Everything free, all in one place.',
+        board: 'Autism Parenting Tips / Resources',
+        folder: null,
+        category: 'day-30',
+        day: 28,
+        hasImage: false
       },
       
       // 60-Day Calendar Content
@@ -670,6 +837,7 @@
       // Group by category
       const categories = {
         'beacon': { label: '🧭 Beacon Launch', items: [] },
+        'day-30': { label: '📅 30-Day Starter Calendar', items: [] },
         'day-60': { label: '📅 60-Day Calendar', items: [] },
         'reel': { label: '🎬 Reels', items: [] },
         'personal': { label: '💛 Personal Stories', items: [] }
@@ -769,6 +937,7 @@
       document.getElementById('stat-total').textContent = pinterestData.length;
       document.getElementById('stat-ready').textContent = pinterestData.filter(p => p.hasImage).length;
       document.getElementById('stat-beacon').textContent = pinterestData.filter(p => p.category === 'beacon').length;
+      document.getElementById('stat-30day').textContent = pinterestData.filter(p => p.category === 'day-30').length;
       document.getElementById('stat-60day').textContent = pinterestData.filter(p => p.category === 'day-60').length;
     }
     
