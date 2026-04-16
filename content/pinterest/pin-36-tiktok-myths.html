@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E74C3C;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #E74C3C; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .myths {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .myth {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      border-left: 5px solid #E74C3C;
+    }
+    
+    .myth-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .myth-num {
+      background: #E74C3C;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+    .myth-wrong {
+      font-size: 22px;
+      font-weight: 700;
+      color: #E74C3C;
+    }
+    
+    .myth-truth {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(39, 174, 96, 0.1);
+      border-radius: 12px;
+      padding: 15px;
+    }
+    .truth-icon {
+      color: #27AE60;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .truth-text {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+    
+    .stat-box {
+      background: rgba(74, 144, 164, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .stat-text {
+      font-size: 18px;
+      color: #4A90A4;
+    }
+    .stat-text strong { font-size: 24px; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🚫 Fact Check</div>
+    <h1 class="title"><span>3</span> Things TikTok Gets<br>WRONG About Autism</h1>
+    <p class="subtitle">Stop the misinformation</p>
+  </div>
+  
+  <div class="myths">
+    <div class="myth">
+      <div class="myth-header">
+        <div class="myth-num">1</div>
+        <div class="myth-wrong">"Everyone is a little autistic"</div>
+      </div>
+      <div class="myth-truth">
+        <span class="truth-icon">✓</span>
+        <span class="truth-text">No. Autism is a specific neurotype, not a spectrum everyone is on. This minimizes real struggles.</span>
+      </div>
+    </div>
+    
+    <div class="myth">
+      <div class="myth-header">
+        <div class="myth-num">2</div>
+        <div class="myth-wrong">"You can tell by looking at someone"</div>
+      </div>
+      <div class="myth-truth">
+        <span class="truth-icon">✓</span>
+        <span class="truth-text">There is no "autistic look." Many mask their traits. Assuming you can spot autism is harmful.</span>
+      </div>
+    </div>
+    
+    <div class="myth">
+      <div class="myth-header">
+        <div class="myth-num">3</div>
+        <div class="myth-wrong">"Autism is caused by bad parenting"</div>
+      </div>
+      <div class="myth-truth">
+        <span class="truth-icon">✓</span>
+        <span class="truth-text">Autism is neurological and present from birth. Parents don't cause it. This myth creates guilt and blame.</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="stat-box">
+    <div class="stat-text">📊 Study shows <strong>50%+</strong> of TikTok autism content contains misinformation</div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save & share to fight misinformation</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

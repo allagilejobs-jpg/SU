@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E74C3C;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #E74C3C; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .truth-box {
+      background: rgba(231, 76, 60, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .truth-text {
+      font-size: 18px;
+    }
+    .truth-text strong { color: #E74C3C; }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .strain {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .strain-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #E74C3C;
+      margin-bottom: 12px;
+    }
+    .strain-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .strain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+    }
+    .strain-item span { color: #E74C3C; }
+    
+    .hope {
+      background: rgba(39, 174, 96, 0.15);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .hope-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 12px;
+    }
+    .hope-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .hope-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .hope-item span { color: #27AE60; }
+    
+    .reminder {
+      background: linear-gradient(135deg, rgba(232, 184, 109, 0.2) 0%, rgba(74, 144, 164, 0.2) 100%);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .reminder-text {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .reminder-sub {
+      font-size: 15px;
+      color: #aaa;
+      margin-top: 8px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💑 Relationships</div>
+    <h1 class="title">Marriage & <span>Autism</span><br>Parenting</h1>
+    <p class="subtitle">The strain is real. So is the hope.</p>
+  </div>
+  
+  <div class="truth-box">
+    <div class="truth-text">Divorce rates for autism parents are <strong>higher than average</strong>. But it doesn't have to be your story.</div>
+  </div>
+  
+  <div class="content">
+    <div class="strain">
+      <div class="strain-title">😔 Why It's Hard</div>
+      <div class="strain-items">
+        <div class="strain-item"><span>•</span> All energy goes to the kids - nothing left for each other</div>
+        <div class="strain-item"><span>•</span> Different coping styles create conflict</div>
+        <div class="strain-item"><span>•</span> One parent often becomes the "expert"</div>
+        <div class="strain-item"><span>•</span> Date nights feel impossible</div>
+        <div class="strain-item"><span>•</span> Grief timelines don't match</div>
+      </div>
+    </div>
+    
+    <div class="hope">
+      <div class="hope-title">💚 What Helps</div>
+      <div class="hope-items">
+        <div class="hope-item"><span>✓</span> Schedule 15 min daily check-ins</div>
+        <div class="hope-item"><span>✓</span> Share the "expert" role</div>
+        <div class="hope-item"><span>✓</span> Respite care for date nights</div>
+        <div class="hope-item"><span>✓</span> Couples therapy (autism-informed)</div>
+        <div class="hope-item"><span>✓</span> Individual therapy too</div>
+        <div class="hope-item"><span>✓</span> Lower expectations, not standards</div>
+        <div class="hope-item"><span>✓</span> Tag team parenting</div>
+        <div class="hope-item"><span>✓</span> Celebrate small wins together</div>
+      </div>
+    </div>
+    
+    <div class="reminder">
+      <div class="reminder-text">💕 Your relationship matters too.</div>
+      <div class="reminder-sub">Taking care of your marriage IS taking care of your kids.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for when you need this reminder</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
