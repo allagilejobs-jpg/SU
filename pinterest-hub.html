@@ -277,6 +277,10 @@
       <div class="stat-label">Pinterest-Ready</div>
     </div>
     <div class="stat">
+      <div class="stat-num" id="stat-30day">0</div>
+      <div class="stat-label">30-Day</div>
+    </div>
+    <div class="stat">
       <div class="stat-num" id="stat-beacon">0</div>
       <div class="stat-label">Beacon</div>
     </div>
@@ -285,6 +289,7 @@
   <div class="filters">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="pinterest-ready">✨ Pinterest-Ready (25)</button>
+    <button class="filter-btn" data-filter="day-30">📅 30-Day (10)</button>
     <button class="filter-btn" data-filter="beacon">🧭 Beacon (4)</button>
   </div>
   
@@ -614,12 +619,120 @@
         category: 'beacon',
         hasImage: true,
         imageType: 'pinterest'
+      },
+      
+      // 30-Day Calendar - Pinterest Native (1000x1500)
+      {
+        id: 'pin-waitlists',
+        title: 'Therapy Waitlists: 6-12 Months',
+        desc: 'The advice I wish someone gave me on day one. Get on multiple waitlists NOW. You can always decline later.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'pinterest',
+        file: 'pin-26-therapy-waitlists.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-first48',
+        title: 'First 48 Hours After Diagnosis',
+        desc: 'Stop the frantic 2am Googling. Here is what to do hour by hour after getting the diagnosis.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'pinterest',
+        file: 'pin-27-first-48-hours.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-iepwriting',
+        title: 'Always Request IEP Meetings in WRITING',
+        desc: 'Email creates a paper trail. Schools must respond within a legal timeframe. Template included.',
+        board: 'Autism Parenting Tips / IEP Advocacy',
+        folder: 'pinterest',
+        file: 'pin-28-iep-in-writing.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-grief',
+        title: 'The Grief No One Talks About',
+        desc: 'You might grieve the future you imagined. This grief is valid AND you can still find joy.',
+        board: 'Autism Parenting Tips / Emotional Support',
+        folder: 'pinterest',
+        file: 'pin-29-grief-diagnosis.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-apps',
+        title: '5 Apps Every Autism Parent Needs',
+        desc: 'Visual schedules, AAC communication, sensory tools, timers, and parent support apps that actually help.',
+        board: 'Autism Parenting Tips / Resources',
+        folder: 'pinterest',
+        file: 'pin-30-autism-apps.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-functioning',
+        title: '"High-Functioning" Is NOT a Compliment',
+        desc: 'Why functioning labels harm everyone. What to say instead.',
+        board: 'Autism Parenting Tips / Language Matters',
+        folder: 'pinterest',
+        file: 'pin-31-functioning-labels.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-whattosay',
+        title: 'What TO Say to Autism Parents',
+        desc: 'Share this with friends and family. Skip "I am sorry" - try these supportive phrases instead.',
+        board: 'Autism Parenting Tips / For Friends & Family',
+        folder: 'pinterest',
+        file: 'pin-32-what-to-say.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-diagnosisweek',
+        title: 'Just Got a Diagnosis? This Week\'s Checklist',
+        desc: '5 steps that actually help: breathe, waitlists, school district, find your people, take care of you.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'pinterest',
+        file: 'pin-33-diagnosis-week.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-emotions',
+        title: 'Autistic Kids Feel Emotions Deeply',
+        desc: 'Myth busted: They don\'t lack emotions - they often feel MORE intensely. They just express it differently.',
+        board: 'Autism Parenting Tips / Myth Busting',
+        folder: 'pinterest',
+        file: 'pin-34-emotions-myth.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-encouragement',
+        title: 'You\'re Doing Better Than You Think',
+        desc: 'The fact that you\'re here - searching, learning, advocating - that\'s love in action. Save for hard days.',
+        board: 'Autism Parenting Tips / Encouragement',
+        folder: 'pinterest',
+        file: 'pin-35-encouragement.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
       }
     ];
-
-    // NOTE: 30-day and 60-day calendar items removed - they use Instagram format (1080x1350)
-    // Pinterest Hub now only shows Pinterest-native content (1000x1500)
-    // For calendar content, use the main 60-Day Calendar page
 
     // Render content
     function renderContent(filter = 'all') {
@@ -643,6 +756,7 @@
       // Group by category
       const categories = {
         'pinterest-ready': { label: '✨ Pinterest-Ready (1000×1500)', items: [] },
+        'day-30': { label: '📅 30-Day Starter Calendar', items: [] },
         'beacon': { label: '🧭 Beacon Launch', items: [] }
       };
       
@@ -743,6 +857,7 @@
     function updateStats() {
       document.getElementById('stat-total').textContent = pinterestData.length;
       document.getElementById('stat-pinterest-ready').textContent = pinterestData.filter(p => p.category === 'pinterest-ready').length;
+      document.getElementById('stat-30day').textContent = pinterestData.filter(p => p.category === 'day-30').length;
       document.getElementById('stat-beacon').textContent = pinterestData.filter(p => p.category === 'beacon').length;
     }
     

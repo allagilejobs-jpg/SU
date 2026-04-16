@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #9B59B6;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #9B59B6; }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .quote-box {
+      background: rgba(155, 89, 182, 0.15);
+      border-left: 5px solid #9B59B6;
+      border-radius: 0 16px 16px 0;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .quote-text {
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.5;
+      color: #ddd;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .grief-item {
+      display: flex;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px 25px;
+      align-items: flex-start;
+    }
+    .grief-icon {
+      font-size: 36px;
+      flex-shrink: 0;
+    }
+    .grief-content {
+      flex: 1;
+    }
+    .grief-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 6px;
+    }
+    .grief-desc {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .affirmation {
+      background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(74, 144, 164, 0.2) 100%);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .affirm-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 10px;
+    }
+    .affirm-text {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💜 Emotional Support</div>
+    <h1 class="title">The <span>Grief</span><br>No One Talks About</h1>
+    <p class="subtitle">For the parents who are struggling</p>
+  </div>
+  
+  <div class="quote-box">
+    <div class="quote-text">"You might grieve the future you imagined. The milestones. The expectations. This grief is valid."</div>
+  </div>
+  
+  <div class="content">
+    <div class="grief-item">
+      <div class="grief-icon">💔</div>
+      <div class="grief-content">
+        <div class="grief-title">It's Not About Loving Them Less</div>
+        <div class="grief-desc">Grieving the path you imagined doesn't mean you love your child any less. Both can exist.</div>
+      </div>
+    </div>
+    
+    <div class="grief-item">
+      <div class="grief-icon">🌊</div>
+      <div class="grief-content">
+        <div class="grief-title">Grief Comes in Waves</div>
+        <div class="grief-desc">Birthday parties. School milestones. Watching other kids. It hits when you least expect it.</div>
+      </div>
+    </div>
+    
+    <div class="grief-item">
+      <div class="grief-icon">🤐</div>
+      <div class="grief-content">
+        <div class="grief-title">Not Everyone Will Understand</div>
+        <div class="grief-desc">"But your child is alive and healthy!" They don't get it. Find people who do.</div>
+      </div>
+    </div>
+    
+    <div class="grief-item">
+      <div class="grief-icon">🌱</div>
+      <div class="grief-content">
+        <div class="grief-title">There Is Joy on the Other Side</div>
+        <div class="grief-desc">The grief doesn't disappear, but it makes room for unexpected joys you couldn't have imagined.</div>
+      </div>
+    </div>
+    
+    <div class="affirmation">
+      <div class="affirm-title">Remember This</div>
+      <div class="affirm-text">Your feelings are valid. Seeking help is strength.<br>You are not alone in this. 💜</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for when you need it</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E74C3C;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #E74C3C; }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .main-message {
+      background: rgba(231, 76, 60, 0.15);
+      border: 3px solid #E74C3C;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .main-stat {
+      font-size: 72px;
+      font-weight: 800;
+      color: #E74C3C;
+      margin-bottom: 10px;
+    }
+    .main-text {
+      font-size: 28px;
+      font-weight: 600;
+    }
+    
+    .action-box {
+      background: rgba(39, 174, 96, 0.15);
+      border: 3px solid #27AE60;
+      border-radius: 20px;
+      padding: 35px;
+      flex: 1;
+    }
+    .action-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #27AE60;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      font-size: 20px;
+    }
+    .action-num {
+      background: #27AE60;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .action-text {
+      line-height: 1.4;
+    }
+    .action-text strong { color: #27AE60; }
+    
+    .bottom-tip {
+      background: rgba(232, 184, 109, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .tip-icon { font-size: 24px; margin-right: 10px; }
+    .tip-text { font-size: 18px; color: #E8B86D; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #E8B86D;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">⚠️ Newly Diagnosed</div>
+    <h1 class="title">Therapy <span>Waitlists</span></h1>
+    <p class="subtitle">The advice I wish someone gave me on day one</p>
+  </div>
+  
+  <div class="main-message">
+    <div class="main-stat">6-12 months</div>
+    <div class="main-text">Average wait time for autism therapy</div>
+  </div>
+  
+  <div class="action-box">
+    <div class="action-title">What To Do RIGHT NOW</div>
+    <div class="actions">
+      <div class="action-item">
+        <div class="action-num">1</div>
+        <div class="action-text"><strong>Get on multiple waitlists</strong> — even before you're 100% sure which therapy is right</div>
+      </div>
+      <div class="action-item">
+        <div class="action-num">2</div>
+        <div class="action-text"><strong>Ask about cancellation lists</strong> — you might get in sooner</div>
+      </div>
+      <div class="action-item">
+        <div class="action-num">3</div>
+        <div class="action-text"><strong>You can always say no</strong> when they call. But you can't get that time back.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bottom-tip">
+    <span class="tip-icon">💡</span>
+    <span class="tip-text">Start with your pediatrician referral, then call insurance for in-network providers</span>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this for every newly diagnosed family</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
