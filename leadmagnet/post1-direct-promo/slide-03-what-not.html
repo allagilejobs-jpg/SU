@@ -2,85 +2,90 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1080px;
-      height: 1350px;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px;
-      color: white;
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 60px;
+      position: relative; overflow: hidden;
     }
-    .title {
-      font-size: 56px;
-      font-weight: 700;
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #E74C3C; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #E8B86D; bottom: 100px; left: -100px; }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 56px; 
+      font-weight: 800; 
       color: #E74C3C;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
+      text-align: center;
     }
+    .items { width: 100%; max-width: 850px; }
     .item {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 40px;
+      gap: 25px;
+      margin-bottom: 30px;
+      background: rgba(231, 76, 60, 0.1);
+      padding: 25px 30px;
+      border-radius: 16px;
+      border-left: 4px solid #E74C3C;
     }
-    .arrow {
-      font-size: 42px;
-      color: #E74C3C;
-      margin-right: 25px;
+    .item-icon {
+      font-size: 32px;
       flex-shrink: 0;
     }
-    .text {
-      font-size: 42px;
+    .item-text {
+      font-size: 28px;
+      font-weight: 500;
       line-height: 1.4;
     }
-    .subtext {
-      font-size: 32px;
-      color: rgba(255,255,255,0.7);
+    .item-sub {
+      font-size: 22px;
+      opacity: 0.6;
       font-style: italic;
+      margin-top: 5px;
     }
-    .brand {
-      position: absolute;
-      bottom: 60px;
-      left: 80px;
-      font-size: 28px;
-      color: rgba(255,255,255,0.6);
-    }
-    .slide-num {
-      position: absolute;
-      top: 50px;
-      right: 60px;
-      font-size: 24px;
-      color: rgba(255,255,255,0.4);
-    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 22px; opacity: 0.5; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 18px; opacity: 0.4; font-weight: 600; }
   </style>
 </head>
 <body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
   <div class="slide-num">3/5</div>
+  
   <div class="title">What NOT to do:</div>
   
-  <div class="item">
-    <span class="arrow">→</span>
-    <span class="text">Don't Google at 2am <span class="subtext">(I explain why)</span></span>
+  <div class="items">
+    <div class="item">
+      <span class="item-icon">🚫</span>
+      <div>
+        <div class="item-text">Don't Google at 2am</div>
+        <div class="item-sub">(I explain why in the guide)</div>
+      </div>
+    </div>
+    <div class="item">
+      <span class="item-icon">🚫</span>
+      <span class="item-text">Don't sign anything at the first IEP meeting</span>
+    </div>
+    <div class="item">
+      <span class="item-icon">🚫</span>
+      <span class="item-text">Don't start 4 therapies at once</span>
+    </div>
+    <div class="item">
+      <span class="item-icon">🚫</span>
+      <span class="item-text">Don't let anyone rush you</span>
+    </div>
   </div>
   
-  <div class="item">
-    <span class="arrow">→</span>
-    <span class="text">Don't sign anything at the first IEP meeting</span>
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
   </div>
-  
-  <div class="item">
-    <span class="arrow">→</span>
-    <span class="text">Don't start 4 therapies at once</span>
-  </div>
-  
-  <div class="item">
-    <span class="arrow">→</span>
-    <span class="text">Don't let anyone rush you</span>
-  </div>
-  
-  <div class="brand">@spectrum_unlocked</div>
 </body>
 </html>

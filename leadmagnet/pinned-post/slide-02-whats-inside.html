@@ -2,31 +2,86 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1080px; height: 1350px;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 80px; color: white;
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 60px;
+      position: relative; overflow: hidden;
     }
-    .title { font-size: 52px; font-weight: 700; color: #E8B86D; margin-bottom: 50px; }
-    .item { display: flex; align-items: center; margin-bottom: 35px; }
-    .check { font-size: 36px; color: #27AE60; margin-right: 20px; }
-    .text { font-size: 40px; line-height: 1.3; }
-    .brand { position: absolute; bottom: 60px; left: 80px; font-size: 28px; color: rgba(255,255,255,0.6); }
-    .slide-num { position: absolute; top: 50px; right: 60px; font-size: 24px; color: rgba(255,255,255,0.4); }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #4A90A4; top: -150px; left: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #E8B86D; bottom: 100px; right: -100px; }
+    .title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      color: #E8B86D;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .items { width: 100%; max-width: 850px; }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 30px;
+      background: rgba(39, 174, 96, 0.1);
+      padding: 25px 35px;
+      border-radius: 16px;
+      border-left: 4px solid #27AE60;
+    }
+    .item-icon {
+      font-size: 32px;
+      color: #27AE60;
+      flex-shrink: 0;
+    }
+    .item-text {
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 22px; opacity: 0.5; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 18px; opacity: 0.4; font-weight: 600; }
   </style>
 </head>
 <body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
   <div class="slide-num">2/3</div>
+  
   <div class="title">What's inside:</div>
-  <div class="item"><span class="check">✓</span><span class="text">Hour-by-hour action plan</span></div>
-  <div class="item"><span class="check">✓</span><span class="text">Scripts for calling doctors & schools</span></div>
-  <div class="item"><span class="check">✓</span><span class="text">Insurance checklist</span></div>
-  <div class="item"><span class="check">✓</span><span class="text">What NOT to do</span></div>
-  <div class="item"><span class="check">✓</span><span class="text">Resource directory</span></div>
-  <div class="brand">@spectrum_unlocked</div>
+  
+  <div class="items">
+    <div class="item">
+      <span class="item-icon">✓</span>
+      <span class="item-text">Hour-by-hour action plan</span>
+    </div>
+    <div class="item">
+      <span class="item-icon">✓</span>
+      <span class="item-text">Scripts for calling doctors & schools</span>
+    </div>
+    <div class="item">
+      <span class="item-icon">✓</span>
+      <span class="item-text">Insurance checklist</span>
+    </div>
+    <div class="item">
+      <span class="item-icon">✓</span>
+      <span class="item-text">What NOT to do</span>
+    </div>
+    <div class="item">
+      <span class="item-icon">✓</span>
+      <span class="item-text">Resource directory</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
 </body>
 </html>

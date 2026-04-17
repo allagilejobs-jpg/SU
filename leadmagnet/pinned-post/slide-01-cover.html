@@ -2,28 +2,86 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1080px; height: 1350px;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      padding: 80px; color: white; text-align: center;
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
     }
-    .free-badge { background: #27AE60; padding: 20px 60px; border-radius: 50px; font-size: 42px; font-weight: 700; margin-bottom: 60px; }
-    .main-text { font-size: 58px; font-weight: 700; line-height: 1.4; margin-bottom: 40px; }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 600px; height: 600px; background: #27AE60; top: -200px; right: -200px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #E8B86D; bottom: 50px; left: -150px; }
+    .badge { 
+      background: linear-gradient(135deg, #27AE60 0%, #1E8449 100%);
+      padding: 18px 50px; 
+      border-radius: 50px; 
+      font-size: 28px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 40px rgba(39, 174, 96, 0.4);
+    }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 58px; 
+      font-weight: 800; 
+      line-height: 1.2; 
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
     .highlight { color: #E8B86D; }
-    .subtitle { font-size: 38px; color: rgba(255,255,255,0.8); }
-    .brand { position: absolute; bottom: 60px; font-size: 28px; color: rgba(255,255,255,0.6); }
-    .slide-num { position: absolute; top: 50px; right: 60px; font-size: 24px; color: rgba(255,255,255,0.4); }
+    .subtitle {
+      font-size: 28px;
+      opacity: 0.8;
+      margin-bottom: 50px;
+    }
+    .emoji { font-size: 80px; margin-bottom: 40px; }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+    .arrow { font-size: 30px; animation: bounce 1s infinite; }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 22px; opacity: 0.5; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 18px; opacity: 0.4; font-weight: 600; }
   </style>
 </head>
 <body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
   <div class="slide-num">1/3</div>
-  <div class="free-badge">FREE</div>
-  <div class="main-text">The First <span class="highlight">48 Hours</span> Post-Diagnosis Guide</div>
+  
+  <div class="badge">Free</div>
+  
+  <div class="emoji">📖</div>
+  
+  <div class="main-title">
+    The First <span class="highlight">48 Hours</span> Post-Diagnosis Guide
+  </div>
+  
   <div class="subtitle">For newly diagnosed autism parents</div>
-  <div class="brand">@spectrum_unlocked</div>
+  
+  <div class="swipe-cta">
+    <span>See what's inside</span>
+    <span class="arrow">→</span>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
 </body>
 </html>

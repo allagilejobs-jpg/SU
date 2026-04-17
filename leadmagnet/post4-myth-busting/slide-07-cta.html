@@ -2,30 +2,111 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1080px; height: 1350px;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      padding: 80px; color: white; text-align: center;
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
     }
-    .emoji { font-size: 100px; margin-bottom: 40px; }
-    .main-text { font-size: 48px; font-weight: 600; line-height: 1.5; margin-bottom: 50px; max-width: 900px; }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #4A90A4; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #E8B86D; bottom: 80px; left: -120px; }
+    .emoji { font-size: 80px; margin-bottom: 30px; }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 48px; 
+      font-weight: 800; 
+      line-height: 1.3; 
+      margin-bottom: 30px;
+      max-width: 850px;
+    }
     .highlight { color: #E8B86D; }
-    .features { font-size: 36px; color: rgba(255,255,255,0.8); margin-bottom: 50px; }
-    .cta { background: #E8B86D; color: #1a1a2e; padding: 25px 50px; border-radius: 15px; font-size: 38px; font-weight: 700; }
-    .brand { position: absolute; bottom: 60px; font-size: 28px; color: rgba(255,255,255,0.6); }
-    .slide-num { position: absolute; top: 50px; right: 60px; font-size: 24px; color: rgba(255,255,255,0.4); }
+    .features {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .feature {
+      background: rgba(255,255,255,0.05);
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%);
+      color: #1a1a2e;
+      padding: 30px 60px;
+      border-radius: 20px;
+      margin-bottom: 50px;
+      box-shadow: 0 12px 40px rgba(232, 184, 109, 0.3);
+    }
+    .cta-text {
+      font-size: 32px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .actions {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .action-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      opacity: 0.7;
+      background: rgba(255,255,255,0.05);
+      padding: 12px 25px;
+      border-radius: 30px;
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .follow-text { font-size: 14px; opacity: 0.4; margin-bottom: 8px; letter-spacing: 2px; text-transform: uppercase; }
+    .handle { font-size: 22px; opacity: 0.6; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 18px; opacity: 0.4; font-weight: 600; }
   </style>
 </head>
 <body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
   <div class="slide-num">7/7</div>
+  
   <div class="emoji">📚</div>
-  <div class="main-text">I cover all of this (and more) in my <span class="highlight">free diagnosis guide</span></div>
-  <div class="features">Step-by-step. No jargon. No paywall.</div>
-  <div class="cta">Link in bio 👆</div>
-  <div class="brand">@spectrum_unlocked</div>
+  
+  <div class="main-title">
+    All of this (and more) is in my <span class="highlight">free diagnosis guide</span>
+  </div>
+  
+  <div class="features">
+    <div class="feature">Step-by-step</div>
+    <div class="feature">No jargon</div>
+    <div class="feature">No paywall</div>
+  </div>
+  
+  <div class="cta-box">
+    <div class="cta-text">📥 Link in bio to download</div>
+  </div>
+  
+  <div class="actions">
+    <div class="action-item">💾 Save this</div>
+    <div class="action-item">📤 Share it</div>
+  </div>
+  
+  <div class="footer">
+    <div class="follow-text">Free resources for autism parents</div>
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
 </body>
 </html>

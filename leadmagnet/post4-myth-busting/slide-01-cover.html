@@ -2,26 +2,94 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1080px; height: 1350px;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      padding: 80px; color: white; text-align: center;
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
     }
-    .num { font-size: 180px; color: #E8B86D; font-weight: 800; margin-bottom: 30px; }
-    .main-text { font-size: 62px; font-weight: 700; line-height: 1.3; }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 600px; height: 600px; background: #E74C3C; top: -200px; right: -200px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #E8B86D; bottom: 50px; left: -150px; }
+    .badge { 
+      background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+      padding: 14px 35px; 
+      border-radius: 30px; 
+      font-size: 18px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 3px;
+      margin-bottom: 50px;
+      box-shadow: 0 8px 30px rgba(231, 76, 60, 0.3);
+    }
+    .big-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 200px;
+      font-weight: 800;
+      color: #E8B86D;
+      line-height: 1;
+      margin-bottom: 20px;
+      text-shadow: 0 10px 40px rgba(232, 184, 109, 0.3);
+    }
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 800; 
+      line-height: 1.2; 
+      margin-bottom: 40px;
+      max-width: 850px;
+    }
     .highlight { color: #E74C3C; }
-    .brand { position: absolute; bottom: 60px; font-size: 28px; color: rgba(255,255,255,0.6); }
-    .slide-num { position: absolute; top: 50px; right: 60px; font-size: 24px; color: rgba(255,255,255,0.4); }
+    .subtitle {
+      font-size: 24px;
+      opacity: 0.7;
+      max-width: 700px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+    .arrow { font-size: 30px; animation: bounce 1s infinite; }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 22px; opacity: 0.5; }
+    .slide-num { position: absolute; top: 40px; right: 50px; font-size: 18px; opacity: 0.4; font-weight: 600; }
   </style>
 </head>
 <body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
   <div class="slide-num">1/7</div>
-  <div class="num">5</div>
-  <div class="main-text">things your child's school <span class="highlight">can't legally refuse</span></div>
-  <div class="brand">@spectrum_unlocked</div>
+  
+  <div class="badge">⚖️ Know Your Rights</div>
+  
+  <div class="big-num">5</div>
+  
+  <div class="main-title">
+    things your child's school <span class="highlight">can't legally refuse</span>
+  </div>
+  
+  <div class="swipe-cta">
+    <span>Swipe to know your rights</span>
+    <span class="arrow">→</span>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
 </body>
 </html>
