@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #FDB03E;
+      color: #2a004a;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .comparison {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    
+    .side {
+      background: rgba(255,255,255,0.03);
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .side.awareness {
+      border: 3px solid #18A8F1;
+    }
+    .side.acceptance {
+      border: 3px solid #FDB03E;
+    }
+    
+    .side-header {
+      text-align: center;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .side-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .side-title {
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .side.awareness .side-title { color: #18A8F1; }
+    .side.acceptance .side-title { color: #FDB03E; }
+    
+    .points {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 1;
+    }
+    .point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .point-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    .side.awareness .point-icon { color: #18A8F1; }
+    .side.acceptance .point-icon { color: #FDB03E; }
+    
+    .bottom-message {
+      background: linear-gradient(135deg, #FDB03E 0%, #E59A2A 100%);
+      color: #2a004a;
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .bottom-message h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .bottom-message p {
+      font-size: 16px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💡 Language Matters</div>
+    <h1 class="title">Acceptance vs Awareness</h1>
+    <p class="subtitle">Why the autism community moved on</p>
+  </div>
+  
+  <div class="comparison">
+    <div class="side awareness">
+      <div class="side-header">
+        <div class="side-icon">💡</div>
+        <div class="side-title">Awareness</div>
+      </div>
+      <div class="points">
+        <div class="point">
+          <span class="point-icon">•</span>
+          <span>"Know autism exists"</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">•</span>
+          <span>Focus on deficits and challenges</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">•</span>
+          <span>Talks ABOUT autistic people</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">•</span>
+          <span>Often leads to pity</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">•</span>
+          <span>"Light it up blue" (not preferred)</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">•</span>
+          <span>Goal: Recognize autism</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="side acceptance">
+      <div class="side-header">
+        <div class="side-icon">💛</div>
+        <div class="side-title">Acceptance</div>
+      </div>
+      <div class="points">
+        <div class="point">
+          <span class="point-icon">✓</span>
+          <span>"Embrace autistic people as they are"</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">✓</span>
+          <span>Celebrates differences and strengths</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">✓</span>
+          <span>Listens TO autistic voices</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">✓</span>
+          <span>Leads to inclusion and support</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">✓</span>
+          <span>"Light it up gold" (community preferred)</span>
+        </div>
+        <div class="point">
+          <span class="point-icon">✓</span>
+          <span>Goal: Include and accommodate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bottom-message">
+    <h3>The Shift That Matters</h3>
+    <p>Awareness says "I see you." Acceptance says "I welcome you."</p>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save & share for Autism Acceptance Month</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

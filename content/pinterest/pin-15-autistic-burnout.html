@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #52008C;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #52008C; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .columns {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    
+    .column {
+      background: rgba(255,255,255,0.03);
+      border-radius: 20px;
+      padding: 25px;
+    }
+    .column-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid;
+    }
+    .column.kids .column-title { 
+      color: #18A8F1; 
+      border-color: #18A8F1;
+    }
+    .column.adults .column-title { 
+      color: #FDB03E; 
+      border-color: #FDB03E;
+    }
+    
+    .signs {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .sign {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .sign-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .sign-text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    
+    .warning {
+      background: rgba(204, 120, 203, 0.15);
+      border: 2px solid #CC78CB;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .warning-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #CC78CB;
+      margin-bottom: 8px;
+    }
+    .warning-text {
+      font-size: 15px;
+      color: #aaa;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🔥 Know the Signs</div>
+    <h1 class="title">Autistic <span>Burnout</span></h1>
+    <p class="subtitle">Some experience their first burnout at age 6</p>
+  </div>
+  
+  <div class="columns">
+    <div class="column kids">
+      <div class="column-title">👶 Signs in Kids</div>
+      <div class="signs">
+        <div class="sign">
+          <span class="sign-icon">📉</span>
+          <span class="sign-text">Skills regression (loses abilities they had)</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">😫</span>
+          <span class="sign-text">More frequent, intense meltdowns</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">🏫</span>
+          <span class="sign-text">School refusal or avoidance</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">🛋️</span>
+          <span class="sign-text">Increased need for alone time</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">😴</span>
+          <span class="sign-text">Exhaustion after "normal" activities</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">🙅</span>
+          <span class="sign-text">Refusing previously enjoyed things</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column adults">
+      <div class="column-title">🧑 Signs in Adults</div>
+      <div class="signs">
+        <div class="sign">
+          <span class="sign-icon">🧠</span>
+          <span class="sign-text">Executive function collapse</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">💔</span>
+          <span class="sign-text">Emotional exhaustion, numbness</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">🎭</span>
+          <span class="sign-text">Can't mask anymore (and don't care)</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">🏠</span>
+          <span class="sign-text">Isolation, withdrawing from everyone</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">🤕</span>
+          <span class="sign-text">Physical symptoms (headaches, illness)</span>
+        </div>
+        <div class="sign">
+          <span class="sign-icon">❓</span>
+          <span class="sign-text">Questioning identity and self-worth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="warning">
+    <div class="warning-title">⚠️ Recovery Takes Time</div>
+    <div class="warning-text">Burnout isn't fixed with a weekend off. It can take months. Reduce demands, increase support, and be patient.</div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this - prevention is better than recovery</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

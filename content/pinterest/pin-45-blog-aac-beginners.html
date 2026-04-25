@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .header { text-align: center; margin-bottom: 25px; }
+    .title { font-size: 48px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+    .title span { color: #18A8F1; }
+    .subtitle { font-size: 20px; color: #aaa; }
+    .myth-box {
+      background: rgba(24, 168, 241, 0.15);
+      border: 2px solid #18A8F1;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .myth-text { font-size: 20px; font-weight: 600; }
+    .myth-text span { color: #18A8F1; }
+    .content { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+    .section { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; }
+    .section-title { font-size: 18px; font-weight: 700; color: #FDB03E; margin-bottom: 12px; }
+    .items { display: flex; flex-direction: column; gap: 10px; }
+    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; }
+    .item span { color: #18A8F1; flex-shrink: 0; }
+    .types-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .type-item { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+    .type-icon { font-size: 24px; }
+    .read-box {
+      background: linear-gradient(135deg, #18A8F1 0%, #0F7BB3 100%);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .read-text { font-size: 22px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
+    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title"><span>AAC</span> for Beginners</h1>
+    <p class="subtitle">A Parent's Guide to Augmentative Communication</p>
+  </div>
+  
+  <div class="myth-box">
+    <div class="myth-text">Myth: AAC prevents speech.<br><span>Truth: Research shows it SUPPORTS speech development.</span></div>
+  </div>
+  
+  <div class="content">
+    <div class="section">
+      <div class="section-title">💬 Types of AAC</div>
+      <div class="types-grid">
+        <div class="type-item"><span class="type-icon">📱</span> High-tech apps (Proloquo2Go)</div>
+        <div class="type-item"><span class="type-icon">📋</span> Low-tech boards (PECS)</div>
+        <div class="type-item"><span class="type-icon">🤟</span> Sign language</div>
+        <div class="type-item"><span class="type-icon">🖼️</span> Picture exchange</div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">🚀 How to Start Today</div>
+      <div class="items">
+        <div class="item"><span>1.</span> Model AAC yourself — use it while talking</div>
+        <div class="item"><span>2.</span> Start with motivating words (snack, play, more)</div>
+        <div class="item"><span>3.</span> Accept ALL communication attempts</div>
+        <div class="item"><span>4.</span> Don't require perfection — respond to any try</div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">✅ Signs It's Working</div>
+      <div class="items">
+        <div class="item"><span>✓</span> Less frustration and fewer meltdowns</div>
+        <div class="item"><span>✓</span> Child initiates communication</div>
+        <div class="item"><span>✓</span> More connection and engagement</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="read-box">
+    <div class="read-text">📖 Read the Full Guide</div>
+    <div class="read-url">spectrumunlocked.com/blog/aac-for-beginners</div>
+  </div>
+  
+  <div class="footer">
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

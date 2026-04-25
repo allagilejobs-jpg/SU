@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #2a004a 0%, #52008C 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
+    .blog-badge { display: inline-block; background: #18A8F1; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .title { font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+    .title span { color: #18A8F1; }
+    .subtitle { font-size: 18px; color: #aaa; }
+    .benefits { background: rgba(24, 168, 241, 0.15); border-radius: 16px; padding: 20px; margin-bottom: 25px; }
+    .benefits-title { font-size: 16px; font-weight: 700; color: #18A8F1; margin-bottom: 10px; }
+    .benefits-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .benefit { background: rgba(24, 168, 241, 0.3); padding: 8px 15px; border-radius: 20px; font-size: 14px; }
+    .content { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+    .section { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; }
+    .section-title { font-size: 17px; font-weight: 700; color: #FDB03E; margin-bottom: 12px; }
+    .items { display: flex; flex-direction: column; gap: 10px; }
+    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; }
+    .item span { color: #18A8F1; flex-shrink: 0; }
+    .read-box { background: linear-gradient(135deg, #18A8F1 0%, #0F7BB3 100%); border-radius: 16px; padding: 25px; text-align: center; margin-top: 15px; }
+    .read-text { font-size: 22px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
+    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title">How to Build a <span>Visual Schedule</span> That Works</h1>
+    <p class="subtitle">The complete guide</p>
+  </div>
+  <div class="benefits">
+    <div class="benefits-title">✨ Why Visual Schedules Work</div>
+    <div class="benefits-list">
+      <div class="benefit">Reduces meltdowns</div>
+      <div class="benefit">Eases transitions</div>
+      <div class="benefit">Builds independence</div>
+      <div class="benefit">Less anxiety</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div class="section-title">🖼️ Choosing Icons</div>
+      <div class="items">
+        <div class="item"><span>→</span> Photos work best for younger kids</div>
+        <div class="item"><span>→</span> Simple line drawings for older kids</div>
+        <div class="item"><span>→</span> Let your child help choose/make them</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">📋 Layout Tips</div>
+      <div class="items">
+        <div class="item"><span>→</span> Vertical (top to bottom) is most intuitive</div>
+        <div class="item"><span>→</span> Start with 3-5 items, add more over time</div>
+        <div class="item"><span>→</span> Include "done" pocket or checkbox</div>
+        <div class="item"><span>→</span> Put it where they can see it independently</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">🛠️ Troubleshooting</div>
+      <div class="items">
+        <div class="item"><span>→</span> Not using it? Make it interactive (velcro, moveable)</div>
+        <div class="item"><span>→</span> Still having meltdowns? Add more detail to transitions</div>
+        <div class="item"><span>→</span> Ignoring it? Let them help create it</div>
+      </div>
+    </div>
+  </div>
+  <div class="read-box">
+    <div class="read-text">📖 Read Full Guide + Printables</div>
+    <div class="read-url">spectrumunlocked.com/blog/visual-schedule-guide</div>
+  </div>
+  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
+</body>
+</html>

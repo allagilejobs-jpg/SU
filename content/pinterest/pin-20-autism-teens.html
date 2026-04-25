@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .challenge {
+      display: flex;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px 25px;
+      align-items: flex-start;
+    }
+    
+    .challenge-icon {
+      font-size: 40px;
+      flex-shrink: 0;
+    }
+    
+    .challenge-content {
+      flex: 1;
+    }
+    .challenge-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 6px;
+    }
+    .challenge-desc {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .support-box {
+      background: rgba(24, 168, 241, 0.15);
+      border: 2px solid #18A8F1;
+      border-radius: 20px;
+      padding: 25px;
+      margin-top: 10px;
+    }
+    .support-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #18A8F1;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .support-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+    .support-item span { color: #18A8F1; font-weight: 700; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🧑‍🎓 Teen Years</div>
+    <h1 class="title">Autism in <span>Teens</span></h1>
+    <p class="subtitle">Puberty + autism = a whole new journey</p>
+  </div>
+  
+  <div class="content">
+    <div class="challenge">
+      <div class="challenge-icon">🧬</div>
+      <div class="challenge-content">
+        <div class="challenge-title">Body Changes Hit Different</div>
+        <div class="challenge-desc">Sensory issues intensify. Hygiene routines need explicit teaching. Growth spurts disrupt body awareness.</div>
+      </div>
+    </div>
+    
+    <div class="challenge">
+      <div class="challenge-icon">👥</div>
+      <div class="challenge-content">
+        <div class="challenge-title">Social Gap Widens</div>
+        <div class="challenge-desc">Peers advance socially faster. Subtle social rules become more complex. Loneliness often peaks.</div>
+      </div>
+    </div>
+    
+    <div class="challenge">
+      <div class="challenge-icon">🎭</div>
+      <div class="challenge-content">
+        <div class="challenge-title">Identity Questions Intensify</div>
+        <div class="challenge-desc">"Who am I?" meets "Why am I different?" Self-acceptance becomes crucial.</div>
+      </div>
+    </div>
+    
+    <div class="challenge">
+      <div class="challenge-icon">🏫</div>
+      <div class="challenge-content">
+        <div class="challenge-title">School Demands Increase</div>
+        <div class="challenge-desc">More teachers, more transitions, less structure. Executive function is tested daily.</div>
+      </div>
+    </div>
+    
+    <div class="challenge">
+      <div class="challenge-icon">💔</div>
+      <div class="challenge-content">
+        <div class="challenge-title">Mental Health Risks Rise</div>
+        <div class="challenge-desc">Anxiety and depression rates spike. Burnout becomes real. Monitor closely.</div>
+      </div>
+    </div>
+    
+    <div class="support-box">
+      <div class="support-title">How to Support Your Teen</div>
+      <div class="support-grid">
+        <div class="support-item"><span>✓</span> Respect their autonomy</div>
+        <div class="support-item"><span>✓</span> Explicit puberty education</div>
+        <div class="support-item"><span>✓</span> Connect with autistic peers</div>
+        <div class="support-item"><span>✓</span> Teach self-advocacy</div>
+        <div class="support-item"><span>✓</span> Maintain safe spaces</div>
+        <div class="support-item"><span>✓</span> Plan for transitions</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for the teen years ahead</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

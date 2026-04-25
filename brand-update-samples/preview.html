@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brand Palette Update — Sample Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f8;
+    color: #2a004a;
+    padding: 40px 24px 80px;
+  }
+  header { max-width: 1280px; margin: 0 auto 36px; }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #52008C;
+    margin-bottom: 10px;
+  }
+  header p { font-size: 16px; color: #444; line-height: 1.6; max-width: 780px; }
+
+  .palette {
+    max-width: 1280px;
+    margin: 28px auto 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .swatch {
+    border-radius: 14px;
+    padding: 22px 20px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .swatch .label { font-size: 11px; letter-spacing: 2px; opacity: 0.85; text-transform: uppercase; margin-bottom: 8px; }
+  .swatch .name { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .swatch .pct { float: right; font-size: 18px; opacity: 0.9; }
+
+  .row {
+    max-width: 1280px;
+    margin: 0 auto 60px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+  .row h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #52008C;
+    margin-bottom: 6px;
+  }
+  .row p.note { color: #666; font-size: 14px; margin-bottom: 22px; }
+
+  .pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .card {
+    border: 1px solid #e7e7ee;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fafafd;
+  }
+  .card .tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin: 14px 14px 0;
+  }
+  .tag.before { background: #2a004a; color: #FDB03E; }
+  .tag.after  { background: #52008C; color: #FDB03E; }
+  .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #eee;
+    margin-top: 14px;
+  }
+  .caption {
+    padding: 12px 16px 18px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+  }
+  .caption code { font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: #efeff4; padding: 2px 6px; border-radius: 4px; }
+
+  footer {
+    max-width: 1280px;
+    margin: 60px auto 0;
+    padding: 24px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    font-size: 14px;
+    color: #444;
+    line-height: 1.65;
+  }
+  footer h3 { font-family: 'Playfair Display', serif; color: #52008C; font-size: 20px; margin-bottom: 10px; }
+  footer ul { padding-left: 22px; }
+  footer li { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Brand Palette Update — Sample Preview</h1>
+  <p>Side-by-side: existing navy slides on the left, redesigned slides using the new brand palette on the right. Content is unchanged — only colors. If the direction below works, I'll roll it across all Beacon Week 1 slides (and any other navy-background graphics you point at).</p>
+</header>
+
+<div class="palette">
+  <div class="swatch" style="background:#CC78CB"><span class="pct">55%</span><div class="label">Primary</div><div class="name">Neon Pink</div>#CC78CB · RGB 204,120,203</div>
+  <div class="swatch" style="background:#18A8F1"><span class="pct">20%</span><div class="label">Secondary</div><div class="name">Vivid Azure</div>#18A8F1 · RGB 24,168,241</div>
+  <div class="swatch" style="background:#FDB03E; color:#52008C"><span class="pct">20%</span><div class="label">Alternative</div><div class="name">Amber</div>#FDB03E · RGB 253,176,62</div>
+  <div class="swatch" style="background:#52008C"><span class="pct">5%</span><div class="label">Dark Value</div><div class="name">Purple</div>#52008C · RGB 82,0,140</div>
+</div>
+
+<div class="row">
+  <h2>1. Cover slide (5 Things, slide 01)</h2>
+  <p class="note">Mapping: navy gradient → Purple gradient · teal accent → Vivid Azure · gold accent → Amber · subtle pink for handle.</p>
+  <div class="pair">
+    <div class="card">
+      <span class="tag before">Before · Navy</span>
+      <img src="../content/beacon-week1-5-things/slide-01-cover.png" alt="Before — navy 5 Things cover">
+      <div class="caption">Background <code>#2a004a → #3a005f</code> · accents <code>#18A8F1</code> teal, <code>#FDB03E</code> gold.</div>
+    </div>
+    <div class="card">
+      <span class="tag after">After · New palette</span>
+      <img src="sample-01-cover-5things.png" alt="After — new palette 5 Things cover">
+      <div class="caption">Background <code>#2a004a → #52008C → #3a005f</code> · headings <code>#18A8F1</code> · numbers <code>#FDB03E</code> · handle <code>#CC78CB</code>.</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>2. Content slide with number badge (waitlists)</h2>
+  <p class="note">Number badge becomes Amber on Purple for max contrast; heading uses Vivid Azure (palette guide says Azure is for headings); pull-quote stays Amber to read as the "answer."</p>
+  <div class="pair">
+    <div class="card">
+      <span class="tag before">Before · Navy</span>
+      <img src="../content/beacon-week1-5-things/slide-02-waitlists.png" alt="Before — navy waitlists">
+      <div class="caption">Heading white, accent block teal-tinted.</div>
+    </div>
+    <div class="card">
+      <span class="tag after">After · New palette</span>
+      <img src="sample-02-content-waitlists.png" alt="After — new palette waitlists">
+      <div class="caption">Heading <code>#18A8F1</code> · badge Amber on Purple · accent block tinted Azure with Amber pull-quote.</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>3. CTA / closing slide</h2>
+  <p class="note">CTA box border + tint stays the secondary heading color (Azure); the closer question pops in Amber; handle in Neon Pink keeps a small primary touch on every slide.</p>
+  <div class="pair">
+    <div class="card">
+      <span class="tag before">Before · Navy</span>
+      <img src="../content/beacon-week1-5-things/slide-07-cta.png" alt="Before — navy CTA">
+      <div class="caption">Box outlined teal, question gold.</div>
+    </div>
+    <div class="card">
+      <span class="tag after">After · New palette</span>
+      <img src="sample-03-cta.png" alt="After — new palette CTA">
+      <div class="caption">Box outlined Azure with Azure tint · question Amber · handle Pink.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <h3>If you approve this direction, I'll apply it to:</h3>
+  <ul>
+    <li><code>content/beacon-week1-start-here/</code> (1 slide)</li>
+    <li><code>content/beacon-week1-5-things/</code> (7 slides)</li>
+    <li><code>content/beacon-week1-iep-checklist/</code> (5 slides)</li>
+    <li><code>content/beacon-week1-meltdown/</code> (5 slides)</li>
+  </ul>
+  <p style="margin-top:10px;">Each HTML file gets the color swap, then I re-render every PNG. Originals stay in git so we can roll back if anything reads off. Let me know: <strong>approve as-is</strong>, <strong>tweak X</strong>, or <strong>try a different direction</strong> (e.g. lighter purple, more pink, etc).</p>
+</footer>
+
+</body>
+</html>

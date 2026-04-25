@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .badge {
+      display: inline-block;
+      background: #FDB03E;
+      color: #2a004a;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .title span { color: #FDB03E; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .intro {
+      background: rgba(253, 176, 62, 0.1);
+      border-radius: 16px;
+      padding: 18px 22px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      flex: 1;
+    }
+    
+    .column {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .column-header {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid;
+      text-align: center;
+    }
+    .column.concerns .column-header { 
+      color: #CC78CB; 
+      border-color: #CC78CB;
+    }
+    .column.defenses .column-header { 
+      color: #18A8F1; 
+      border-color: #18A8F1;
+    }
+    
+    .points {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .point {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .point-icon { flex-shrink: 0; font-size: 16px; }
+    .column.concerns .point-icon { color: #CC78CB; }
+    .column.defenses .point-icon { color: #18A8F1; }
+    
+    .questions {
+      background: rgba(24, 168, 241, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .questions-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #18A8F1;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .q-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .q-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .q-item span { color: #18A8F1; }
+    
+    .bottom-message {
+      background: rgba(253, 176, 62, 0.15);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 8px;
+    }
+    .brand {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">⚖️ Balanced View</div>
+    <h1 class="title">The <span>ABA</span> Controversy</h1>
+    <p class="subtitle">What parents need to know</p>
+  </div>
+  
+  <div class="content">
+    <div class="intro">
+      ABA (Applied Behavior Analysis) is the most common autism therapy.<br>It's also the most debated. Here's both sides so YOU can decide.
+    </div>
+    
+    <div class="columns">
+      <div class="column concerns">
+        <div class="column-header">🚩 Concerns Raised</div>
+        <div class="points">
+          <div class="point"><span class="point-icon">•</span> Can teach masking over authenticity</div>
+          <div class="point"><span class="point-icon">•</span> Historical use of punishment</div>
+          <div class="point"><span class="point-icon">•</span> 40 hrs/week too intensive for young kids</div>
+          <div class="point"><span class="point-icon">•</span> May target harmless stims</div>
+          <div class="point"><span class="point-icon">•</span> Many autistic adults report trauma</div>
+          <div class="point"><span class="point-icon">•</span> Focus on compliance over wellbeing</div>
+        </div>
+      </div>
+      
+      <div class="column defenses">
+        <div class="column-header">✓ In Defense</div>
+        <div class="points">
+          <div class="point"><span class="point-icon">•</span> Modern ABA has evolved significantly</div>
+          <div class="point"><span class="point-icon">•</span> Can teach functional skills</div>
+          <div class="point"><span class="point-icon">•</span> Play-based approaches exist</div>
+          <div class="point"><span class="point-icon">•</span> Good BCBAs prioritize child's needs</div>
+          <div class="point"><span class="point-icon">•</span> Evidence-based outcomes</div>
+          <div class="point"><span class="point-icon">•</span> Quality varies by provider</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="questions">
+      <div class="questions-title">❓ Questions to Ask Providers</div>
+      <div class="q-grid">
+        <div class="q-item"><span>→</span> Do you allow stimming?</div>
+        <div class="q-item"><span>→</span> How do you handle "no"?</div>
+        <div class="q-item"><span>→</span> Is it play-based?</div>
+        <div class="q-item"><span>→</span> What does success look like?</div>
+        <div class="q-item"><span>→</span> Can parents observe?</div>
+        <div class="q-item"><span>→</span> Hours per week recommended?</div>
+      </div>
+    </div>
+    
+    <div class="bottom-message">
+      💡 You know your child best. Trust your gut. There are alternatives if ABA isn't right for you.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save to help other parents decide</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

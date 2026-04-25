@@ -10,13 +10,13 @@
     
     body {
       font-family: 'Poppins', sans-serif;
-      background: #1a1a2e;
+      background: #2a004a;
       color: #eee;
       min-height: 100vh;
     }
     
     .main-nav {
-      background: #0f0f1a;
+      background: #1f0033;
       padding: 15px 20px;
       display: flex;
       justify-content: center;
@@ -36,27 +36,27 @@
       transition: all 0.2s;
     }
     .main-nav a:hover, .main-nav a.active {
-      background: #4A90A4;
+      background: #18A8F1;
       color: white;
     }
     .nav-dropdown { position: relative; }
     .dropdown-toggle { cursor: pointer; }
     .dropdown-menu {
       display: none; position: absolute; right: 0; top: 100%;
-      background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px;
+      background: #1f0033; border: 1px solid #2a2a4a; border-radius: 12px;
       padding: 15px; min-width: 280px; max-height: 70vh; overflow-y: auto;
       z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
     .nav-dropdown:hover .dropdown-menu, .dropdown-menu:hover { display: block; }
     .dropdown-group { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #2a2a4a; }
     .dropdown-group:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .dropdown-label { color: #E8B86D; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
+    .dropdown-label { color: #FDB03E; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
     .dropdown-menu a { display: block; color: #ccc; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-    .dropdown-menu a:hover { background: #4A90A4; color: white; }
+    .dropdown-menu a:hover { background: #18A8F1; color: white; }
     
     .header {
-      background: linear-gradient(135deg, #E8B86D 0%, #d4a35a 100%);
-      color: #1a1a2e;
+      background: linear-gradient(135deg, #FDB03E 0%, #E59A2A 100%);
+      color: #2a004a;
       padding: 30px 20px;
       text-align: center;
     }
@@ -79,7 +79,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       margin: 40px 0 20px 0;
-      color: #E8B86D;
+      color: #FDB03E;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -92,22 +92,22 @@
     }
     
     .post-card {
-      background: #16213e;
+      background: #52008C;
       border-radius: 16px;
       overflow: hidden;
     }
     
     .post-card .card-header {
       padding: 15px 20px;
-      background: #0f3460;
+      background: #3a005f;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     
     .post-card .week-badge {
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       padding: 5px 12px;
       border-radius: 15px;
       font-size: 12px;
@@ -129,7 +129,7 @@
     .icon-post {
       width: 280px;
       height: 280px;
-      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      background: linear-gradient(135deg, #18A8F1 0%, #0F7BB3 100%);
       border-radius: 12px;
       position: relative;
       overflow: hidden;
@@ -209,7 +209,7 @@
     .parent-post {
       width: 280px;
       height: 280px;
-      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+      background: linear-gradient(135deg, #52008C 0%, #8E44AD 100%);
       border-radius: 12px;
       position: relative;
       overflow: hidden;
@@ -275,11 +275,11 @@
     /* Caption Area */
     .caption-area {
       padding: 20px;
-      border-top: 1px solid #0f3460;
+      border-top: 1px solid #3a005f;
     }
     
     .caption-area h4 {
-      color: #E8B86D;
+      color: #FDB03E;
       font-size: 12px;
       margin-bottom: 10px;
       text-transform: uppercase;
@@ -299,14 +299,14 @@
     }
     
     .caption-box .hashtags {
-      color: #4A90A4;
+      color: #18A8F1;
     }
     
     .actions {
       display: flex;
       gap: 10px;
       padding: 15px 20px;
-      background: #0f3460;
+      background: #3a005f;
     }
     
     .btn {
@@ -322,12 +322,12 @@
     }
     
     .btn-download {
-      background: linear-gradient(135deg, #27AE60, #1e8449);
+      background: linear-gradient(135deg, #18A8F1, #0F7BB3);
       color: white;
     }
     
     .btn-copy {
-      background: #4A90A4;
+      background: #18A8F1;
       color: white;
     }
     
@@ -340,7 +340,7 @@
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
-      background: #27AE60;
+      background: #18A8F1;
       color: white;
       padding: 15px 30px;
       border-radius: 10px;
@@ -354,18 +354,18 @@
     .toast.show { opacity: 1; }
     
     .intro-card {
-      background: linear-gradient(135deg, #16213e, #1a2a4a);
+      background: linear-gradient(135deg, #52008C, #1a2a4a);
       border-radius: 16px;
       padding: 30px;
       margin-bottom: 30px;
-      border: 1px solid #0f3460;
+      border: 1px solid #3a005f;
     }
     
     .intro-card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       margin-bottom: 15px;
-      color: #E8B86D;
+      color: #FDB03E;
     }
     
     .intro-card p {
@@ -389,12 +389,12 @@
     .schedule-table th, .schedule-table td {
       padding: 12px 15px;
       text-align: left;
-      border-bottom: 1px solid #0f3460;
+      border-bottom: 1px solid #3a005f;
     }
     
     .schedule-table th {
-      background: #0f3460;
-      color: #E8B86D;
+      background: #3a005f;
+      color: #FDB03E;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -406,12 +406,12 @@
     }
     
     .schedule-table .icon-label {
-      color: #4A90A4;
+      color: #18A8F1;
       font-weight: 600;
     }
     
     .schedule-table .parent-label {
-      color: #9B59B6;
+      color: #52008C;
       font-weight: 600;
     }
     
@@ -431,7 +431,7 @@
     
     /* Export Icon Post - Quote Card Style */
     .export-post.icon-theme {
-      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 100%);
+      background: linear-gradient(135deg, #18A8F1 0%, #0F7BB3 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -506,7 +506,7 @@
     
     /* Export Parent Post - Achievement Style */
     .export-post.parent-theme {
-      background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+      background: linear-gradient(135deg, #52008C 0%, #8E44AD 100%);
       padding: 80px;
     }
     
@@ -654,7 +654,7 @@
           <tr><td>Week 5</td><td class="icon-label">🌟 Dan Aykroyd</td><td class="parent-label">💜 JWoww (Jenni Farley)</td></tr>
           <tr><td>Week 6</td><td class="icon-label">🌟 Sia</td><td class="parent-label">💜 Sylvester Stallone</td></tr>
           <tr><td>Week 7</td><td class="icon-label">🌟 Elon Musk</td><td class="parent-label">💜 Tommy Hilfiger</td></tr>
-          <tr><td>Week 8</td><td colspan="2" style="text-align:center; color:#E8B86D;">🎉 Series Finale Carousel — Recap + "Who should we feature next?"</td></tr>
+          <tr><td>Week 8</td><td colspan="2" style="text-align:center; color:#FDB03E;">🎉 Series Finale Carousel — Recap + "Who should we feature next?"</td></tr>
         </tbody>
       </table>
     </div>

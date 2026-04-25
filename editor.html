@@ -10,14 +10,14 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f0f1a;
+      background: #1f0033;
       color: #fff;
       min-height: 100vh;
     }
     
     /* Nav */
     .main-nav {
-      background: #0f0f1a;
+      background: #1f0033;
       padding: 15px 20px;
       display: flex;
       justify-content: center;
@@ -37,23 +37,23 @@
       transition: all 0.2s;
     }
     .main-nav a:hover, .main-nav a.active {
-      background: #4A90A4;
+      background: #18A8F1;
       color: white;
     }
     .nav-dropdown { position: relative; }
     .dropdown-toggle { cursor: pointer; }
     .dropdown-menu {
       display: none; position: absolute; right: 0; top: 100%;
-      background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px;
+      background: #1f0033; border: 1px solid #2a2a4a; border-radius: 12px;
       padding: 15px; min-width: 280px; max-height: 70vh; overflow-y: auto;
       z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
     .nav-dropdown:hover .dropdown-menu, .dropdown-menu:hover { display: block; }
     .dropdown-group { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #2a2a4a; }
     .dropdown-group:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .dropdown-label { color: #E8B86D; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
+    .dropdown-label { color: #FDB03E; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
     .dropdown-menu a { display: block; color: #ccc; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-    .dropdown-menu a:hover { background: #4A90A4; color: white; }
+    .dropdown-menu a:hover { background: #18A8F1; color: white; }
 
     /* Layout */
     .app {
@@ -66,7 +66,7 @@
     /* Header */
     .header {
       grid-column: 1 / -1;
-      background: #1a1a2e;
+      background: #2a004a;
       border-bottom: 1px solid rgba(255,255,255,0.1);
       display: flex;
       align-items: center;
@@ -77,15 +77,15 @@
       font-size: 18px;
       font-weight: 700;
     }
-    .header h1 span { color: #E8B86D; }
+    .header h1 span { color: #FDB03E; }
     
     /* Size Indicator */
     .size-indicator {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: rgba(74,144,164,0.2);
-      border: 1px solid rgba(74,144,164,0.3);
+      background: rgba(24, 168, 241, 0.2);
+      border: 1px solid rgba(24, 168, 241, 0.3);
       padding: 8px 16px;
       border-radius: 8px;
       cursor: pointer;
@@ -93,7 +93,7 @@
       transition: background 0.2s;
     }
     .size-indicator:hover {
-      background: rgba(74,144,164,0.3);
+      background: rgba(24, 168, 241, 0.3);
     }
     .size-indicator .size-label {
       font-size: 14px;
@@ -101,11 +101,11 @@
     .size-indicator .size-value {
       font-size: 13px;
       font-weight: 600;
-      color: #4A90A4;
+      color: #18A8F1;
     }
     .size-indicator .size-ratio {
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       padding: 4px 10px;
       border-radius: 4px;
       font-size: 11px;
@@ -127,7 +127,7 @@
       top: calc(100% + 8px);
       left: 50%;
       transform: translateX(-50%);
-      background: #1a1a2e;
+      background: #2a004a;
       border: 1px solid rgba(255,255,255,0.15);
       border-radius: 12px;
       padding: 8px;
@@ -151,8 +151,8 @@
       background: rgba(255,255,255,0.1);
     }
     .size-option .opt-ratio {
-      background: rgba(232,184,109,0.2);
-      color: #E8B86D;
+      background: rgba(253, 176, 62, 0.2);
+      color: #FDB03E;
       padding: 6px 10px;
       border-radius: 6px;
       font-size: 12px;
@@ -161,8 +161,8 @@
       text-align: center;
     }
     .size-option:hover .opt-ratio {
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
     }
     .size-option .opt-details {
       display: flex;
@@ -181,8 +181,8 @@
       gap: 10px;
     }
     .btn {
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       border: none;
       padding: 10px 20px;
       border-radius: 8px;
@@ -191,7 +191,7 @@
       cursor: pointer;
       font-family: inherit;
     }
-    .btn:hover { background: #d4a85d; }
+    .btn:hover { background: #E59A2A; }
     .btn-secondary {
       background: rgba(255,255,255,0.1);
       color: #fff;
@@ -200,7 +200,7 @@
     
     /* Left Sidebar */
     .sidebar-left {
-      background: #1a1a2e;
+      background: #2a004a;
       border-right: 1px solid rgba(255,255,255,0.1);
       overflow-y: auto;
       padding: 16px;
@@ -241,7 +241,7 @@
       background: rgba(255,255,255,0.03);
     }
     .day-item:hover { background: rgba(255,255,255,0.08); }
-    .day-item.active { background: #E8B86D; color: #1a1a2e; }
+    .day-item.active { background: #FDB03E; color: #2a004a; }
     
     /* Templates with hover preview */
     .template-grid {
@@ -262,7 +262,7 @@
     }
     .template-btn:hover { 
       background: rgba(255,255,255,0.1); 
-      border-color: #E8B86D; 
+      border-color: #FDB03E; 
     }
     .template-btn .icon { font-size: 20px; display: block; margin-bottom: 4px; }
     
@@ -275,7 +275,7 @@
       transform: translateY(-50%);
       margin-left: 12px;
       width: 200px;
-      background: #1a1a2e;
+      background: #2a004a;
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: 12px;
       padding: 12px;
@@ -300,7 +300,7 @@
       margin-bottom: 8px;
     }
     .preview-tooltip .preview-mini {
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      background: linear-gradient(135deg, #2a004a, #52008C);
       border-radius: 8px;
       height: 140px;
       margin-bottom: 8px;
@@ -315,7 +315,7 @@
       font-size: 12px;
       font-weight: 600;
       margin-bottom: 4px;
-      color: #E8B86D;
+      color: #FDB03E;
     }
     .preview-tooltip p {
       font-size: 10px;
@@ -324,8 +324,8 @@
     }
     .preview-tooltip .preview-btn {
       width: 100%;
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       border: none;
       padding: 8px;
       border-radius: 6px;
@@ -335,7 +335,7 @@
       margin-top: 8px;
     }
     .preview-tooltip .preview-btn:hover {
-      background: #d4a85d;
+      background: #E59A2A;
     }
     
     /* Preview Modal */
@@ -356,7 +356,7 @@
       display: flex;
     }
     .preview-modal-content {
-      background: #1a1a2e;
+      background: #2a004a;
       border-radius: 20px;
       padding: 30px;
       max-width: 900px;
@@ -368,7 +368,7 @@
     }
     .preview-modal-canvas {
       flex: 1;
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      background: linear-gradient(135deg, #2a004a, #52008C, #3a005f);
       border-radius: 16px;
       min-height: 400px;
       display: flex;
@@ -391,7 +391,7 @@
     .preview-modal-info h2 {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
-      color: #E8B86D;
+      color: #FDB03E;
       margin-bottom: 8px;
     }
     .preview-modal-info .template-icon {
@@ -405,7 +405,7 @@
       margin-bottom: 20px;
     }
     .preview-modal-info .use-cases {
-      background: rgba(74,144,164,0.15);
+      background: rgba(24, 168, 241, 0.15);
       border-radius: 12px;
       padding: 16px;
       margin-bottom: 20px;
@@ -414,7 +414,7 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #4A90A4;
+      color: #18A8F1;
       margin-bottom: 10px;
     }
     .preview-modal-info .use-cases ul {
@@ -427,7 +427,7 @@
     }
     .preview-modal-info .use-cases li::before {
       content: '✓ ';
-      color: #27AE60;
+      color: #18A8F1;
     }
     .preview-modal-actions {
       margin-top: auto;
@@ -463,16 +463,16 @@
       gap: 8px;
     }
     .add-btn {
-      background: rgba(74,144,164,0.2);
-      border: 1px solid rgba(74,144,164,0.3);
+      background: rgba(24, 168, 241, 0.2);
+      border: 1px solid rgba(24, 168, 241, 0.3);
       border-radius: 8px;
       padding: 8px 12px;
-      color: #4A90A4;
+      color: #18A8F1;
       font-size: 12px;
       cursor: pointer;
       font-family: inherit;
     }
-    .add-btn:hover { background: rgba(74,144,164,0.3); }
+    .add-btn:hover { background: rgba(24, 168, 241, 0.3); }
     
     /* Canvas Area */
     .canvas-area {
@@ -485,7 +485,7 @@
       overflow: auto;
     }
     .canvas-container {
-      background: #1a1a2e;
+      background: #2a004a;
       border-radius: 12px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
@@ -508,15 +508,15 @@
       font-family: inherit;
     }
     .slide-tab:hover { background: rgba(255,255,255,0.2); }
-    .slide-tab.active { background: #E8B86D; color: #1a1a2e; }
+    .slide-tab.active { background: #FDB03E; color: #2a004a; }
     .slide-tab-add {
-      background: rgba(39,174,96,0.2);
-      color: #27AE60;
+      background: rgba(24, 168, 241, 0.2);
+      color: #18A8F1;
     }
     
     /* Right Sidebar - Properties */
     .sidebar-right {
-      background: #1a1a2e;
+      background: #2a004a;
       border-left: 1px solid rgba(255,255,255,0.1);
       overflow-y: auto;
       padding: 16px;
@@ -554,7 +554,7 @@
     }
     .prop-input:focus {
       outline: none;
-      border-color: #E8B86D;
+      border-color: #FDB03E;
     }
     select.prop-input {
       cursor: pointer;
@@ -580,7 +580,7 @@
       border: 2px solid transparent;
     }
     .color-swatch:hover { border-color: #fff; }
-    .color-swatch.active { border-color: #E8B86D; }
+    .color-swatch.active { border-color: #FDB03E; }
     
     /* Canvas Size Selector */
     .size-btns {
@@ -598,13 +598,13 @@
       cursor: pointer;
     }
     .size-btn:hover { background: rgba(255,255,255,0.1); }
-    .size-btn.active { background: #E8B86D; color: #1a1a2e; }
+    .size-btn.active { background: #FDB03E; color: #2a004a; }
     
     /* Delete Button */
     .delete-btn {
-      background: rgba(231,76,60,0.2);
-      border: 1px solid rgba(231,76,60,0.3);
-      color: #E74C3C;
+      background: rgba(204, 120, 203, 0.2);
+      border: 1px solid rgba(204, 120, 203, 0.3);
+      color: #CC78CB;
       width: 100%;
       padding: 10px;
       border-radius: 8px;
@@ -613,7 +613,7 @@
       font-family: inherit;
       margin-top: 10px;
     }
-    .delete-btn:hover { background: rgba(231,76,60,0.3); }
+    .delete-btn:hover { background: rgba(204, 120, 203, 0.3); }
     
     /* No Selection */
     .no-selection {
@@ -630,8 +630,8 @@
     
     /* Instructions */
     .instructions {
-      background: rgba(74,144,164,0.1);
-      border: 1px solid rgba(74,144,164,0.2);
+      background: rgba(24, 168, 241, 0.1);
+      border: 1px solid rgba(24, 168, 241, 0.2);
       border-radius: 8px;
       padding: 12px;
       font-size: 11px;
@@ -639,24 +639,24 @@
       line-height: 1.6;
       margin-top: 20px;
     }
-    .instructions strong { color: #4A90A4; }
+    .instructions strong { color: #18A8F1; }
     
     /* Gallery Link */
     .gallery-link {
       display: block;
       text-align: center;
-      background: rgba(232,184,109,0.15);
-      border: 1px solid rgba(232,184,109,0.3);
+      background: rgba(253, 176, 62, 0.15);
+      border: 1px solid rgba(253, 176, 62, 0.3);
       border-radius: 8px;
       padding: 10px;
-      color: #E8B86D;
+      color: #FDB03E;
       text-decoration: none;
       font-size: 12px;
       font-weight: 600;
       margin-bottom: 12px;
     }
     .gallery-link:hover {
-      background: rgba(232,184,109,0.25);
+      background: rgba(253, 176, 62, 0.25);
     }
     
     /* Mobile Responsive */
@@ -952,7 +952,7 @@
             <option value="support">🤝 Support Systems</option>
           </optgroup>
         </select>
-        <div id="categoryPreview" style="font-size:11px;color:#E8B86D;padding:8px;background:rgba(232,184,109,0.1);border-radius:6px;display:none"></div>
+        <div id="categoryPreview" style="font-size:11px;color:#FDB03E;padding:8px;background:rgba(253, 176, 62, 0.1);border-radius:6px;display:none"></div>
       </div>
       
       <div class="sidebar-section">
@@ -983,7 +983,7 @@
       <div class="canvas-container">
         <canvas id="canvas"></canvas>
       </div>
-      <div id="loadingIndicator" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#E8B86D;">
+      <div id="loadingIndicator" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#FDB03E;">
         <div style="font-size:48px;margin-bottom:16px;">⏳</div>
         <div>Loading editor...</div>
       </div>
@@ -1022,7 +1022,7 @@
         shortName: 'Cover',
         description: 'Eye-catching first slide to hook your audience. Features a bold title, subtitle, and call-to-action to swipe.',
         useCases: ['Carousel openers', 'Reel covers', 'Hook slides', 'Series intros'],
-        color: '#E8B86D'
+        color: '#FDB03E'
       },
       myth: {
         id: 'myth',
@@ -1031,7 +1031,7 @@
         shortName: 'Myth',
         description: 'Debunk misconceptions with a clear myth vs truth format. Red box for the myth, green explanation for the truth.',
         useCases: ['Busting stereotypes', 'Correcting misinformation', 'Educational debunks'],
-        color: '#E74C3C'
+        color: '#CC78CB'
       },
       checklist: {
         id: 'checklist',
@@ -1040,7 +1040,7 @@
         shortName: 'List',
         description: 'Clean list format with checkmarks. Perfect for actionable items, accommodations, or step-by-step guides.',
         useCases: ['Accommodation lists', 'Tips & tricks', 'Resource lists', 'How-to guides'],
-        color: '#4A90A4'
+        color: '#18A8F1'
       },
       vs: {
         id: 'vs',
@@ -1049,7 +1049,7 @@
         shortName: 'VS',
         description: 'Side-by-side comparison with two boxes and a VS badge. Great for contrasting concepts or behaviors.',
         useCases: ['Meltdown vs tantrum', 'Myths vs facts', 'Before/after', 'Do vs Don\'t'],
-        color: '#E8B86D'
+        color: '#FDB03E'
       },
       grid: {
         id: 'grid',
@@ -1058,7 +1058,7 @@
         shortName: 'Grid',
         description: '2x2 grid of cards with emojis and labels. Ideal for showcasing multiple related concepts at once.',
         useCases: ['Types of...', 'Examples', 'Categories', 'Related concepts'],
-        color: '#27AE60'
+        color: '#18A8F1'
       },
       cta: {
         id: 'cta',
@@ -1067,7 +1067,7 @@
         shortName: 'CTA',
         description: 'Engagement-focused slide with big emoji, title, and action button. End your carousels with this!',
         useCases: ['Carousel endings', 'Follow prompts', 'Save reminders', 'DM triggers'],
-        color: '#E8B86D'
+        color: '#FDB03E'
       },
       stats: {
         id: 'stats',
@@ -1076,7 +1076,7 @@
         shortName: 'Stats',
         description: 'Bold statistic display with a massive number and supporting text. Perfect for shocking or impactful data.',
         useCases: ['Research stats', 'Impact numbers', 'Awareness facts', 'Data highlights'],
-        color: '#4A90A4'
+        color: '#18A8F1'
       },
       quote: {
         id: 'quote',
@@ -1085,7 +1085,7 @@
         shortName: 'Quote',
         description: 'Elegant quote display with decorative quotation mark and attribution. Great for community voices.',
         useCases: ['Community quotes', 'Expert insights', 'Affirmations', 'Testimonials'],
-        color: '#E8B86D'
+        color: '#FDB03E'
       },
       contentbox: {
         id: 'contentbox',
@@ -1094,7 +1094,7 @@
         shortName: 'Content',
         description: 'Versatile general-purpose slide with emoji, title, and body text. Your go-to for explanatory content.',
         useCases: ['Explanations', 'Definitions', 'General info', 'Mid-carousel slides'],
-        color: '#4A90A4',
+        color: '#18A8F1',
         isNew: true
       },
       tipcards: {
@@ -1104,7 +1104,7 @@
         shortName: 'Tips',
         description: 'Numbered tips list with circular badges. Perfect for actionable advice and quick strategies.',
         useCases: ['Quick tips', 'Strategies', 'Hacks', 'Numbered advice'],
-        color: '#27AE60',
+        color: '#18A8F1',
         isNew: true
       },
       signcards: {
@@ -1114,7 +1114,7 @@
         shortName: 'Signs',
         description: '2x2 warning signs grid. Use for red flags, symptoms, or things to watch out for.',
         useCases: ['Warning signs', 'Red flags', 'Symptoms', 'Things to avoid'],
-        color: '#E74C3C',
+        color: '#CC78CB',
         isNew: true
       }
     };
@@ -1131,14 +1131,14 @@
     
     // Brand Colors
     const COLORS = {
-      gold: '#E8B86D',
-      teal: '#4A90A4',
-      green: '#27AE60',
-      red: '#E74C3C',
+      gold: '#FDB03E',
+      teal: '#18A8F1',
+      green: '#18A8F1',
+      red: '#CC78CB',
       white: '#FFFFFF',
-      bgPrimary: '#1a1a2e',
-      bgSecondary: '#16213e',
-      bgTertiary: '#0f3460'
+      bgPrimary: '#2a004a',
+      bgSecondary: '#52008C',
+      bgTertiary: '#3a005f'
     };
     
     // 60-Day Calendar Data
@@ -1261,7 +1261,7 @@
         if (loader) {
           loader.innerHTML = `
             <div style="font-size:48px;margin-bottom:16px;">❌</div>
-            <div style="color:#E74C3C;font-weight:600;">Failed to load</div>
+            <div style="color:#CC78CB;font-weight:600;">Failed to load</div>
             <div style="font-size:12px;margin-top:8px;color:rgba(255,255,255,0.6);">${err.message}</div>
           `;
         }
@@ -1273,7 +1273,7 @@
       const templates = Object.values(templateInfo);
       
       grid.innerHTML = templates.map(t => `
-        <button class="template-btn" onclick="showPreviewModal('${t.id}')" ${t.isNew ? 'style="border:1px solid #27AE60"' : ''}>
+        <button class="template-btn" onclick="showPreviewModal('${t.id}')" ${t.isNew ? 'style="border:1px solid #18A8F1"' : ''}>
           <span class="icon">${t.icon}</span>${t.shortName}
           <div class="preview-tooltip">
             <div class="preview-mini" style="border: 2px solid ${t.color}30">
@@ -1293,7 +1293,7 @@
       previewCanvas = new fabric.StaticCanvas('previewCanvas', {
         width: 324,
         height: 405,
-        backgroundColor: '#1a1a2e'
+        backgroundColor: '#2a004a'
       });
     }
     
@@ -1331,7 +1331,7 @@
     function renderPreview(templateId) {
       // Clear preview canvas
       previewCanvas.clear();
-      previewCanvas.setBackgroundColor('#1a1a2e', previewCanvas.renderAll.bind(previewCanvas));
+      previewCanvas.setBackgroundColor('#2a004a', previewCanvas.renderAll.bind(previewCanvas));
       
       const scale = 0.3;
       const w = 1080 * scale;
@@ -1342,9 +1342,9 @@
         type: 'linear',
         coords: { x1: 0, y1: 0, x2: w, y2: h },
         colorStops: [
-          { offset: 0, color: '#1a1a2e' },
-          { offset: 0.5, color: '#16213e' },
-          { offset: 1, color: '#0f3460' }
+          { offset: 0, color: '#2a004a' },
+          { offset: 0.5, color: '#52008C' },
+          { offset: 1, color: '#3a005f' }
         ]
       });
       
@@ -1372,7 +1372,7 @@
         fontFamily: 'Playfair Display',
         fontSize: 24,
         fontWeight: '700',
-        fill: '#E8B86D',
+        fill: '#FDB03E',
         originX: 'center'
       });
       
@@ -1394,7 +1394,7 @@
       const slideNumPadded = slideNum.toString().padStart(2, '0');
       const htmlUrl = `content/${folder}/slide-${slideNumPadded}-${slideName}.html`;
       
-      document.querySelector('.header h1').innerHTML = `<span style="color:#4A90A4">⏳ Loading Day ${dayNum}, Slide ${slideNum}...</span>`;
+      document.querySelector('.header h1').innerHTML = `<span style="color:#18A8F1">⏳ Loading Day ${dayNum}, Slide ${slideNum}...</span>`;
       
       try {
         const response = await fetch(htmlUrl);
@@ -1564,7 +1564,7 @@
       canvas = new fabric.Canvas('canvas', {
         width: Math.max(canvasWidth * scale, 100),
         height: Math.max(canvasHeight * scale, 100),
-        backgroundColor: '#1a1a2e',
+        backgroundColor: '#2a004a',
         preserveObjectStacking: true
       });
       
@@ -1692,8 +1692,8 @@
       const rect = new fabric.Rect({
         left: canvasWidth / 2, top: canvasHeight / 2,
         width: 300, height: 200,
-        fill: 'rgba(74, 144, 164, 0.15)',
-        stroke: 'rgba(74, 144, 164, 0.3)', strokeWidth: 2,
+        fill: 'rgba(24, 168, 241, 0.15)',
+        stroke: 'rgba(24, 168, 241, 0.3)', strokeWidth: 2,
         rx: 16, ry: 16, originX: 'center', originY: 'center'
       });
       canvas.add(rect);
@@ -1805,7 +1805,7 @@
       
       const mythBox = new fabric.Rect({
         left: 60, top: 170, width: canvasWidth - 120, height: 220,
-        fill: 'rgba(231, 76, 60, 0.12)', stroke: COLORS.red, strokeWidth: 3, rx: 16, ry: 16
+        fill: 'rgba(204, 120, 203, 0.12)', stroke: COLORS.red, strokeWidth: 3, rx: 16, ry: 16
       });
       
       const mythText = new fabric.IText('"Autistic people lack empathy\nand can\'t understand emotions."', {
@@ -1829,7 +1829,7 @@
       
       const truthBox = new fabric.Rect({
         left: 60, top: 495, width: canvasWidth - 120, height: 380,
-        fill: 'rgba(39, 174, 96, 0.12)', rx: 16, ry: 16
+        fill: 'rgba(24, 168, 241, 0.12)', rx: 16, ry: 16
       });
       
       const truthText = new fabric.IText('Autistic people often experience\nEMPATHY VERY DEEPLY.\n\nThey may express it differently or\nstruggle with cognitive empathy\n(reading social cues), but emotional\nempathy is frequently intense.', {
@@ -1852,7 +1852,7 @@
       const titleBg = new fabric.Rect({
         left: canvasWidth / 2 - 200, top: 70,
         width: 400, height: 70,
-        fill: 'rgba(232, 184, 109, 0.15)',
+        fill: 'rgba(253, 176, 62, 0.15)',
         stroke: COLORS.gold, strokeWidth: 2, rx: 35, ry: 35
       });
       
@@ -1864,8 +1864,8 @@
       
       const container = new fabric.Rect({
         left: 60, top: 180, width: canvasWidth - 120, height: 920,
-        fill: 'rgba(74, 144, 164, 0.12)',
-        stroke: 'rgba(74, 144, 164, 0.3)', strokeWidth: 2, rx: 20, ry: 20
+        fill: 'rgba(24, 168, 241, 0.12)',
+        stroke: 'rgba(24, 168, 241, 0.3)', strokeWidth: 2, rx: 20, ry: 20
       });
       
       // Individual checklist items with backgrounds
@@ -1884,7 +1884,7 @@
         const itemBg = new fabric.Rect({
           left: 90, top: y,
           width: canvasWidth - 180, height: 100,
-          fill: 'rgba(39, 174, 96, 0.08)',
+          fill: 'rgba(24, 168, 241, 0.08)',
           rx: 12, ry: 12
         });
         
@@ -1927,8 +1927,8 @@
       
       const leftBox = new fabric.Rect({
         left: 60, top: 180, width: 450, height: 500,
-        fill: 'rgba(231, 76, 60, 0.12)',
-        stroke: 'rgba(231, 76, 60, 0.3)', strokeWidth: 2, rx: 20, ry: 20
+        fill: 'rgba(204, 120, 203, 0.12)',
+        stroke: 'rgba(204, 120, 203, 0.3)', strokeWidth: 2, rx: 20, ry: 20
       });
       
       const leftTitle = new fabric.IText('😤 Tantrum', {
@@ -1955,8 +1955,8 @@
       
       const rightBox = new fabric.Rect({
         left: canvasWidth - 510, top: 180, width: 450, height: 500,
-        fill: 'rgba(74, 144, 164, 0.12)',
-        stroke: 'rgba(74, 144, 164, 0.3)', strokeWidth: 2, rx: 20, ry: 20
+        fill: 'rgba(24, 168, 241, 0.12)',
+        stroke: 'rgba(24, 168, 241, 0.3)', strokeWidth: 2, rx: 20, ry: 20
       });
       
       const rightTitle = new fabric.IText('🌪️ Meltdown', {
@@ -2009,8 +2009,8 @@
         
         const card = new fabric.Rect({
           left: x, top: y, width: cardWidth, height: cardHeight,
-          fill: 'rgba(39, 174, 96, 0.12)',
-          stroke: 'rgba(39, 174, 96, 0.25)', strokeWidth: 2, rx: 16, ry: 16
+          fill: 'rgba(24, 168, 241, 0.12)',
+          stroke: 'rgba(24, 168, 241, 0.25)', strokeWidth: 2, rx: 16, ry: 16
         });
         
         const emoji = new fabric.Text(item.emoji, {
@@ -2095,7 +2095,7 @@
       // Stat circle background
       const statBg = new fabric.Circle({
         left: canvasWidth / 2, top: 450,
-        radius: 180, fill: 'rgba(232, 184, 109, 0.15)',
+        radius: 180, fill: 'rgba(253, 176, 62, 0.15)',
         stroke: COLORS.gold, strokeWidth: 4,
         originX: 'center', originY: 'center'
       });
@@ -2110,7 +2110,7 @@
       const descBg = new fabric.Rect({
         left: 100, top: 700,
         width: canvasWidth - 200, height: 140,
-        fill: 'rgba(74, 144, 164, 0.15)',
+        fill: 'rgba(24, 168, 241, 0.15)',
         rx: 16, ry: 16
       });
       
@@ -2158,8 +2158,8 @@
       const quoteBg = new fabric.Rect({
         left: 80, top: 350,
         width: canvasWidth - 160, height: 400,
-        fill: 'rgba(232, 184, 109, 0.08)',
-        stroke: 'rgba(232, 184, 109, 0.2)', strokeWidth: 2,
+        fill: 'rgba(253, 176, 62, 0.08)',
+        stroke: 'rgba(253, 176, 62, 0.2)', strokeWidth: 2,
         rx: 20, ry: 20
       });
       
@@ -2208,7 +2208,7 @@
       // Emoji with glow effect
       const emojiGlow = new fabric.Circle({
         left: canvasWidth / 2, top: 200,
-        radius: 70, fill: 'rgba(232, 184, 109, 0.15)',
+        radius: 70, fill: 'rgba(253, 176, 62, 0.15)',
         originX: 'center', originY: 'center'
       });
       
@@ -2224,8 +2224,8 @@
       
       const contentBox = new fabric.Rect({
         left: 60, top: 400, width: canvasWidth - 120, height: 620,
-        fill: 'rgba(74, 144, 164, 0.12)',
-        stroke: 'rgba(74, 144, 164, 0.3)', strokeWidth: 2, rx: 20, ry: 20
+        fill: 'rgba(24, 168, 241, 0.12)',
+        stroke: 'rgba(24, 168, 241, 0.3)', strokeWidth: 2, rx: 20, ry: 20
       });
       
       const bodyText = new fabric.IText('This is where your main content goes.\n\nExplain the key points, provide information,\nor share insights with your audience.\n\nKeep paragraphs short and easy to read\non mobile screens.', {
@@ -2261,7 +2261,7 @@
       const titleBg = new fabric.Rect({
         left: canvasWidth / 2 - 160, top: 60,
         width: 320, height: 60,
-        fill: 'rgba(232, 184, 109, 0.15)',
+        fill: 'rgba(253, 176, 62, 0.15)',
         stroke: COLORS.gold, strokeWidth: 2, rx: 30, ry: 30
       });
       
@@ -2294,7 +2294,7 @@
         const rowBg = new fabric.Rect({
           left: 70, top: y,
           width: canvasWidth - 140, height: 130,
-          fill: 'rgba(39, 174, 96, 0.08)',
+          fill: 'rgba(24, 168, 241, 0.08)',
           rx: 16, ry: 16
         });
         
@@ -2363,14 +2363,14 @@
         
         const card = new fabric.Rect({
           left: x, top: y, width: cardWidth, height: cardHeight,
-          fill: 'rgba(231, 76, 60, 0.12)',
-          stroke: 'rgba(231, 76, 60, 0.3)', strokeWidth: 2, rx: 20, ry: 20
+          fill: 'rgba(204, 120, 203, 0.12)',
+          stroke: 'rgba(204, 120, 203, 0.3)', strokeWidth: 2, rx: 20, ry: 20
         });
         
         // Icon circle
         const iconBg = new fabric.Circle({
           left: x + cardWidth / 2, top: y + 80,
-          radius: 45, fill: 'rgba(231, 76, 60, 0.2)',
+          radius: 45, fill: 'rgba(204, 120, 203, 0.2)',
           originX: 'center', originY: 'center'
         });
         
@@ -2392,7 +2392,7 @@
       const footerBg = new fabric.Rect({
         left: 100, top: canvasHeight - 180,
         width: canvasWidth - 200, height: 60,
-        fill: 'rgba(74, 144, 164, 0.2)',
+        fill: 'rgba(24, 168, 241, 0.2)',
         stroke: COLORS.teal, strokeWidth: 1, rx: 30, ry: 30
       });
       
@@ -2413,25 +2413,25 @@
     
     // ============ CATEGORY SYSTEM ============
     const categoryData = {
-      sensory: { emoji: '🎧', title: 'Sensory Supports', color: '#4A90A4' },
-      communication: { emoji: '💬', title: 'Communication', color: '#4A90A4' },
-      academic: { emoji: '📚', title: 'Academic Supports', color: '#4A90A4' },
-      social: { emoji: '👥', title: 'Social Skills', color: '#4A90A4' },
-      executive: { emoji: '🧠', title: 'Executive Function', color: '#4A90A4' },
-      iep: { emoji: '📋', title: 'IEP/School', color: '#27AE60' },
-      routines: { emoji: '🔄', title: 'Routines & Transitions', color: '#27AE60' },
-      meltdowns: { emoji: '🌪️', title: 'Meltdowns', color: '#E74C3C' },
-      selfcare: { emoji: '💆', title: 'Self-Care', color: '#27AE60' },
-      therapy: { emoji: '🩺', title: 'Therapy', color: '#27AE60' },
-      acceptance: { emoji: '💙', title: 'Acceptance', color: '#4A90A4' },
-      advocacy: { emoji: '✊', title: 'Self-Advocacy', color: '#E8B86D' },
-      joy: { emoji: '✨', title: 'Autistic Joy', color: '#27AE60' },
-      burnout: { emoji: '🔥', title: 'Burnout', color: '#E74C3C' },
-      masking: { emoji: '🎭', title: 'Masking', color: '#E74C3C' },
-      siblings: { emoji: '👫', title: 'Siblings', color: '#9B59B6' },
-      marriage: { emoji: '💑', title: 'Marriage & Relationships', color: '#9B59B6' },
-      parenting: { emoji: '👶', title: 'Parenting', color: '#9B59B6' },
-      support: { emoji: '🤝', title: 'Support Systems', color: '#9B59B6' }
+      sensory: { emoji: '🎧', title: 'Sensory Supports', color: '#18A8F1' },
+      communication: { emoji: '💬', title: 'Communication', color: '#18A8F1' },
+      academic: { emoji: '📚', title: 'Academic Supports', color: '#18A8F1' },
+      social: { emoji: '👥', title: 'Social Skills', color: '#18A8F1' },
+      executive: { emoji: '🧠', title: 'Executive Function', color: '#18A8F1' },
+      iep: { emoji: '📋', title: 'IEP/School', color: '#18A8F1' },
+      routines: { emoji: '🔄', title: 'Routines & Transitions', color: '#18A8F1' },
+      meltdowns: { emoji: '🌪️', title: 'Meltdowns', color: '#CC78CB' },
+      selfcare: { emoji: '💆', title: 'Self-Care', color: '#18A8F1' },
+      therapy: { emoji: '🩺', title: 'Therapy', color: '#18A8F1' },
+      acceptance: { emoji: '💙', title: 'Acceptance', color: '#18A8F1' },
+      advocacy: { emoji: '✊', title: 'Self-Advocacy', color: '#FDB03E' },
+      joy: { emoji: '✨', title: 'Autistic Joy', color: '#18A8F1' },
+      burnout: { emoji: '🔥', title: 'Burnout', color: '#CC78CB' },
+      masking: { emoji: '🎭', title: 'Masking', color: '#CC78CB' },
+      siblings: { emoji: '👫', title: 'Siblings', color: '#52008C' },
+      marriage: { emoji: '💑', title: 'Marriage & Relationships', color: '#52008C' },
+      parenting: { emoji: '👶', title: 'Parenting', color: '#52008C' },
+      support: { emoji: '🤝', title: 'Support Systems', color: '#52008C' }
     };
     
     function updateCategory() {
@@ -2448,7 +2448,7 @@
         
         // Update preview text
         setTimeout(() => {
-          preview.innerHTML = `<strong>${cat.emoji} ${cat.title}</strong><br><span style="font-size:10px;opacity:0.7;color:#27AE60">✓ Applied!</span>`;
+          preview.innerHTML = `<strong>${cat.emoji} ${cat.title}</strong><br><span style="font-size:10px;opacity:0.7;color:#18A8F1">✓ Applied!</span>`;
         }, 300);
       } else {
         preview.style.display = 'none';
@@ -2570,7 +2570,7 @@
               <div class="color-swatch" style="background:${COLORS.teal}" onclick="setFill('${COLORS.teal}')"></div>
               <div class="color-swatch" style="background:${COLORS.green}" onclick="setFill('${COLORS.green}')"></div>
               <div class="color-swatch" style="background:${COLORS.red}" onclick="setFill('${COLORS.red}')"></div>
-              <div class="color-swatch" style="background:rgba(74,144,164,0.15)" onclick="setFill('rgba(74,144,164,0.15)')"></div>
+              <div class="color-swatch" style="background:rgba(24, 168, 241, 0.15)" onclick="setFill('rgba(24, 168, 241, 0.15)')"></div>
             </div>
           </div>
         `;

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #FDB03E;
+      color: #2a004a;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #FDB03E; }
+    
+    .main-rule {
+      background: rgba(253, 176, 62, 0.15);
+      border: 3px solid #FDB03E;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .rule-text {
+      font-size: 32px;
+      font-weight: 800;
+      color: #FDB03E;
+      margin-bottom: 15px;
+    }
+    .rule-sub {
+      font-size: 20px;
+      color: #ddd;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section.why .section-title { color: #18A8F1; }
+    .section.how .section-title { color: #18A8F1; }
+    .section.template .section-title { color: #52008C; }
+    
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+    .item span:first-child { flex-shrink: 0; }
+    
+    .template-box {
+      background: rgba(82, 0, 140, 0.1);
+      border: 2px dashed #52008C;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.6;
+      font-style: italic;
+      color: #ccc;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">⚖️ IEP Advocacy</div>
+    <h1 class="title">Always Request IEP<br>Meetings <span>in WRITING</span></h1>
+  </div>
+  
+  <div class="main-rule">
+    <div class="rule-text">📧 Email Creates a Paper Trail</div>
+    <div class="rule-sub">Schools MUST respond within a legal timeframe. This protects YOU.</div>
+  </div>
+  
+  <div class="content">
+    <div class="section why">
+      <div class="section-title">🔍 Why It Matters</div>
+      <div class="items">
+        <div class="item"><span>✓</span> Verbal requests can be "forgotten" or denied</div>
+        <div class="item"><span>✓</span> Written requests start the legal clock (usually 30 days)</div>
+        <div class="item"><span>✓</span> Creates documentation if you need to escalate</div>
+        <div class="item"><span>✓</span> Shows you know your rights (schools take you seriously)</div>
+      </div>
+    </div>
+    
+    <div class="section how">
+      <div class="section-title">✅ What to Include</div>
+      <div class="items">
+        <div class="item"><span>1.</span> Your child's name and grade</div>
+        <div class="item"><span>2.</span> Specific request (meeting, evaluation, etc.)</div>
+        <div class="item"><span>3.</span> Date of your request</div>
+        <div class="item"><span>4.</span> Request written confirmation of receipt</div>
+      </div>
+    </div>
+    
+    <div class="section template">
+      <div class="section-title">📝 Copy This Template</div>
+      <div class="template-box">
+        "Dear [Special Ed Coordinator], I am writing to formally request an IEP meeting for my child, [Name], in [Grade]. I would like to discuss [topic]. Please confirm receipt of this request and provide available dates. Thank you, [Your Name] [Date]"
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this template for your next IEP request</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

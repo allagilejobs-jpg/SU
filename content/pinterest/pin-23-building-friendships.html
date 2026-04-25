@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #52008C;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #52008C; }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .truth-box {
+      background: rgba(82, 0, 140, 0.15);
+      border-radius: 16px;
+      padding: 22px 25px;
+      text-align: center;
+    }
+    .truth-text {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .truth-text span { color: #52008C; }
+    
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px 25px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .section.looks .section-title { color: #18A8F1; }
+    .section.support .section-title { color: #18A8F1; }
+    
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .item-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    
+    .dos-donts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .do-box, .dont-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+    .do-box { border-left: 4px solid #18A8F1; }
+    .dont-box { border-left: 4px solid #CC78CB; }
+    .do-title { color: #18A8F1; font-weight: 700; margin-bottom: 12px; }
+    .dont-title { color: #CC78CB; font-weight: 700; margin-bottom: 12px; }
+    .mini-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💜 Social Support</div>
+    <h1 class="title">Building <span>Friendships</span></h1>
+    <p class="subtitle">Friendship looks different. That's okay.</p>
+  </div>
+  
+  <div class="content">
+    <div class="truth-box">
+      <div class="truth-text">Autistic kids <span>want</span> connection.<br>They just connect <span>differently</span>.</div>
+    </div>
+    
+    <div class="section looks">
+      <div class="section-title">🌟 What Autistic Friendship Looks Like</div>
+      <div class="items">
+        <div class="item"><span class="item-icon">💫</span> Parallel play at any age (side by side, not face to face)</div>
+        <div class="item"><span class="item-icon">🎮</span> Bonding over shared interests, not small talk</div>
+        <div class="item"><span class="item-icon">📅</span> Less frequent hangouts but deeper connections</div>
+        <div class="item"><span class="item-icon">🌍</span> Online friendships count (sometimes preferred)</div>
+      </div>
+    </div>
+    
+    <div class="dos-donts">
+      <div class="do-box">
+        <div class="do-title">✓ Do This</div>
+        <div class="mini-item"><span>✓</span> Interest-based activities</div>
+        <div class="mini-item"><span>✓</span> Structured playdates</div>
+        <div class="mini-item"><span>✓</span> Shorter visits first</div>
+        <div class="mini-item"><span>✓</span> Find neurodivergent peers</div>
+        <div class="mini-item"><span>✓</span> Prep social scripts</div>
+      </div>
+      <div class="dont-box">
+        <div class="dont-title">✕ Avoid This</div>
+        <div class="mini-item"><span>✕</span> Forcing eye contact</div>
+        <div class="mini-item"><span>✕</span> "Just go play!"</div>
+        <div class="mini-item"><span>✕</span> Surprise social events</div>
+        <div class="mini-item"><span>✕</span> Comparing to siblings</div>
+        <div class="mini-item"><span>✕</span> Large group activities</div>
+      </div>
+    </div>
+    
+    <div class="section support">
+      <div class="section-title">💡 Finding Their People</div>
+      <div class="items">
+        <div class="item"><span class="item-icon">🎯</span> Special interest clubs (LEGO, coding, art, gaming)</div>
+        <div class="item"><span class="item-icon">🏕️</span> Autism-friendly camps and programs</div>
+        <div class="item"><span class="item-icon">📱</span> Online communities with shared interests</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for social support ideas</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

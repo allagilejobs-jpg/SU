@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #CC78CB;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #CC78CB; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .quote-box {
+      background: rgba(204, 120, 203, 0.15);
+      border: 3px solid #CC78CB;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .quote-text {
+      font-size: 28px;
+      font-weight: 700;
+      color: #CC78CB;
+    }
+    
+    .content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    
+    .harm-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .harm-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid;
+    }
+    .harm-box.high .harm-title { color: #18A8F1; border-color: #18A8F1; }
+    .harm-box.low .harm-title { color: #FDB03E; border-color: #FDB03E; }
+    
+    .harm-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .harm-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .harm-item span { color: #CC78CB; flex-shrink: 0; }
+    
+    .instead-box {
+      grid-column: 1 / -1;
+      background: rgba(24, 168, 241, 0.15);
+      border: 2px solid #18A8F1;
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .instead-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #18A8F1;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .instead-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .instead-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+    .instead-item span { color: #18A8F1; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🚫 Language Matters</div>
+    <h1 class="title">"High-Functioning" Is<br><span>NOT</span> a Compliment</h1>
+    <p class="subtitle">Why functioning labels harm everyone</p>
+  </div>
+  
+  <div class="quote-box">
+    <div class="quote-text">Functioning labels describe how autism LOOKS to others, not how it FEELS to live with.</div>
+  </div>
+  
+  <div class="content">
+    <div class="harm-box high">
+      <div class="harm-title">"High Support Needs" People...</div>
+      <div class="harm-items">
+        <div class="harm-item"><span>✕</span> Get underestimated</div>
+        <div class="harm-item"><span>✕</span> Assumed to have no inner world</div>
+        <div class="harm-item"><span>✕</span> Denied autonomy and choices</div>
+        <div class="harm-item"><span>✕</span> Spoken about, not spoken to</div>
+      </div>
+    </div>
+    
+    <div class="harm-box low">
+      <div class="harm-title">"Low Support Needs" People...</div>
+      <div class="harm-items">
+        <div class="harm-item"><span>✕</span> Get denied services and help</div>
+        <div class="harm-item"><span>✕</span> "You don't look autistic"</div>
+        <div class="harm-item"><span>✕</span> Struggles are minimized</div>
+        <div class="harm-item"><span>✕</span> Expected to "just try harder"</div>
+      </div>
+    </div>
+    
+    <div class="instead-box">
+      <div class="instead-title">✓ What to Say Instead</div>
+      <div class="instead-items">
+        <div class="instead-item"><span>✓</span> "High/low support needs"</div>
+        <div class="instead-item"><span>✓</span> Describe specific strengths</div>
+        <div class="instead-item"><span>✓</span> Describe specific challenges</div>
+        <div class="instead-item"><span>✓</span> Ask the person what they prefer</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save & share to spread awareness</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

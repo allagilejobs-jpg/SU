@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E60023;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #FDB03E; }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .things {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    
+    .thing {
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 28px;
+      border-left: 5px solid;
+    }
+    .thing:nth-child(1) { border-color: #CC78CB; }
+    .thing:nth-child(2) { border-color: #FDB03E; }
+    .thing:nth-child(3) { border-color: #18A8F1; }
+    .thing:nth-child(4) { border-color: #52008C; }
+    .thing:nth-child(5) { border-color: #18A8F1; }
+    
+    .thing-num {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .thing:nth-child(1) .thing-num { background: #CC78CB; }
+    .thing:nth-child(2) .thing-num { background: #FDB03E; color: #2a004a; }
+    .thing:nth-child(3) .thing-num { background: #18A8F1; }
+    .thing:nth-child(4) .thing-num { background: #52008C; }
+    .thing:nth-child(5) .thing-num { background: #18A8F1; }
+    
+    .thing-content {
+      flex: 1;
+    }
+    .thing-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .thing-desc {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💙 Newly Diagnosed</div>
+    <h1 class="title"><span>5</span> Things I Wish<br>I Knew After Diagnosis</h1>
+    <p class="subtitle">What no one tells you on day one</p>
+  </div>
+  
+  <div class="things">
+    <div class="thing">
+      <div class="thing-num">1</div>
+      <div class="thing-content">
+        <div class="thing-title">Therapy waitlists are LONG</div>
+        <div class="thing-desc">Get on multiple waitlists NOW, even before you're sure.</div>
+      </div>
+    </div>
+    
+    <div class="thing">
+      <div class="thing-num">2</div>
+      <div class="thing-content">
+        <div class="thing-title">Your pediatrician isn't the expert</div>
+        <div class="thing-desc">Find specialists. Join parent groups. Real knowledge is in the trenches.</div>
+      </div>
+    </div>
+    
+    <div class="thing">
+      <div class="thing-num">3</div>
+      <div class="thing-content">
+        <div class="thing-title">IEPs are negotiable</div>
+        <div class="thing-desc">Everything can be changed. You have more power than they want you to know.</div>
+      </div>
+    </div>
+    
+    <div class="thing">
+      <div class="thing-num">4</div>
+      <div class="thing-content">
+        <div class="thing-title">Other autism parents become your village</div>
+        <div class="thing-desc">Friends who "don't get it" will fade. That's okay.</div>
+      </div>
+    </div>
+    
+    <div class="thing">
+      <div class="thing-num">5</div>
+      <div class="thing-content">
+        <div class="thing-title">Your child is still amazing</div>
+        <div class="thing-desc">The diagnosis didn't change them. It gave you a roadmap.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this for when you need it</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

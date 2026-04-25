@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px;
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #2a004a 0%, #52008C 50%, #3a005f 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 60px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.12; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #18A8F1; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 350px; height: 350px; background: #FDB03E; bottom: 100px; left: -100px; }
+    .badge {
+      background: #18A8F1;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+    .number {
+      font-size: 120px;
+      font-weight: 800;
+      color: #FDB03E;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .main-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 58px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
+    .highlight { color: #18A8F1; }
+    .highlight-gold { color: #FDB03E; }
+    .highlight-pink { color: #CC78CB; }
+    .subtitle {
+      font-size: 26px;
+      opacity: 0.9;
+      margin-bottom: 40px;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+    .swipe-cta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 30px;
+      color: #CC78CB;
+    }
+    .arrow { font-size: 30px; }
+    .footer { position: absolute; bottom: 40px; text-align: center; }
+    .handle { font-size: 20px; opacity: 0.6; color: #CC78CB; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+
+  <div class="badge">💡 Newly Diagnosed</div>
+
+  <div class="number">5</div>
+
+  <div class="main-title">
+    Things I Wish Someone <span class="highlight-gold">Told Me</span> the Week My Child Was Diagnosed
+  </div>
+
+  <div class="subtitle">
+    The advice I actually needed, not platitudes.
+  </div>
+
+  <div class="swipe-cta">
+    <span>Swipe for the list</span>
+    <span class="arrow">→</span>
+  </div>
+
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

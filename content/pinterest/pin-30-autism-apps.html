@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .apps {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .app {
+      display: flex;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      align-items: center;
+      border-left: 5px solid;
+    }
+    .app:nth-child(1) { border-color: #18A8F1; }
+    .app:nth-child(2) { border-color: #FDB03E; }
+    .app:nth-child(3) { border-color: #18A8F1; }
+    .app:nth-child(4) { border-color: #52008C; }
+    .app:nth-child(5) { border-color: #CC78CB; }
+    
+    .app-icon {
+      font-size: 48px;
+      flex-shrink: 0;
+    }
+    
+    .app-content {
+      flex: 1;
+    }
+    .app-category {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    .app:nth-child(1) .app-category { color: #18A8F1; }
+    .app:nth-child(2) .app-category { color: #FDB03E; }
+    .app:nth-child(3) .app-category { color: #18A8F1; }
+    .app:nth-child(4) .app-category { color: #52008C; }
+    .app:nth-child(5) .app-category { color: #CC78CB; }
+    
+    .app-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .app-desc {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    .app-examples {
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">📱 Resources</div>
+    <h1 class="title"><span>5</span> Apps Every<br>Autism Parent Needs</h1>
+    <p class="subtitle">Tools that actually help (not just hype)</p>
+  </div>
+  
+  <div class="apps">
+    <div class="app">
+      <div class="app-icon">📅</div>
+      <div class="app-content">
+        <div class="app-category">Visual Schedule</div>
+        <div class="app-title">First Then Visual Schedule</div>
+        <div class="app-desc">Create visual routines that reduce anxiety and meltdowns</div>
+        <div class="app-examples">Also try: Choiceworks, Visual Schedule Planner</div>
+      </div>
+    </div>
+    
+    <div class="app">
+      <div class="app-icon">💬</div>
+      <div class="app-content">
+        <div class="app-category">AAC Communication</div>
+        <div class="app-title">Proloquo2Go / TouchChat</div>
+        <div class="app-desc">Give nonverbal kids a voice with picture-based communication</div>
+        <div class="app-examples">Free options: LetMeTalk, JABtalk</div>
+      </div>
+    </div>
+    
+    <div class="app">
+      <div class="app-icon">🧘</div>
+      <div class="app-content">
+        <div class="app-category">Sensory & Calm</div>
+        <div class="app-title">Calm / Breathe Kids</div>
+        <div class="app-desc">Guided breathing, meditation, and sensory regulation tools</div>
+        <div class="app-examples">Also try: Moshi, Headspace for Kids</div>
+      </div>
+    </div>
+    
+    <div class="app">
+      <div class="app-icon">⏰</div>
+      <div class="app-content">
+        <div class="app-category">Visual Timer</div>
+        <div class="app-title">Time Timer / Visual Timer</div>
+        <div class="app-desc">Makes time visible to reduce transition anxiety</div>
+        <div class="app-examples">Physical timer version also available</div>
+      </div>
+    </div>
+    
+    <div class="app">
+      <div class="app-icon">🤝</div>
+      <div class="app-content">
+        <div class="app-category">Parent Support</div>
+        <div class="app-title">Autism Parenting Magazine</div>
+        <div class="app-desc">Articles, resources, and community for autism families</div>
+        <div class="app-examples">Also: Facebook groups, local support apps</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this app toolkit!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

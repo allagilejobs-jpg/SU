@@ -9,7 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f0f1a;
+      background: #1f0033;
       color: #fff;
       min-height: 100vh;
     }
@@ -23,7 +23,7 @@
     
     .header {
       grid-column: 1 / -1;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, #2a004a 0%, #52008C 100%);
       border-bottom: 1px solid rgba(255,255,255,0.1);
       display: flex;
       align-items: center;
@@ -31,7 +31,7 @@
       padding: 0 24px;
     }
     .header h1 { font-size: 18px; font-weight: 600; }
-    .header h1 span { color: #E8B86D; }
+    .header h1 span { color: #FDB03E; }
     .header-actions { display: flex; gap: 12px; }
     
     .btn {
@@ -47,7 +47,7 @@
       gap: 8px;
       transition: all 0.2s;
     }
-    .btn-primary { background: #27AE60; color: #fff; }
+    .btn-primary { background: #18A8F1; color: #fff; }
     .btn-primary:hover { background: #219a52; }
     .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; }
     .btn-secondary:hover { background: rgba(255,255,255,0.15); }
@@ -61,7 +61,7 @@
       overflow: auto;
     }
     .preview-container {
-      background: #1a1a2e;
+      background: #2a004a;
       border-radius: 16px;
       box-shadow: 0 25px 80px rgba(0,0,0,0.6);
       overflow: hidden;
@@ -72,7 +72,7 @@
     }
     
     .editor-panel {
-      background: #1a1a2e;
+      background: #2a004a;
       border-left: 1px solid rgba(255,255,255,0.1);
       display: flex;
       flex-direction: column;
@@ -108,8 +108,8 @@
       text-align: center;
       transition: all 0.2s;
     }
-    .template-btn:hover { border-color: rgba(232,184,109,0.5); background: rgba(232,184,109,0.1); }
-    .template-btn.active { border-color: #E8B86D; background: rgba(232,184,109,0.15); }
+    .template-btn:hover { border-color: rgba(253, 176, 62, 0.5); background: rgba(253, 176, 62, 0.1); }
+    .template-btn.active { border-color: #FDB03E; background: rgba(253, 176, 62, 0.15); }
     .template-btn .icon { font-size: 24px; display: block; margin-bottom: 4px; }
     
     .size-options {
@@ -127,8 +127,8 @@
       cursor: pointer;
       text-align: center;
     }
-    .size-btn:hover { border-color: rgba(74,144,164,0.5); }
-    .size-btn.active { border-color: #4A90A4; background: rgba(74,144,164,0.15); }
+    .size-btn:hover { border-color: rgba(24, 168, 241, 0.5); }
+    .size-btn.active { border-color: #18A8F1; background: rgba(24, 168, 241, 0.15); }
     
     .fields-area {
       flex: 1;
@@ -171,8 +171,8 @@
     .field-group textarea:focus,
     .field-group select:focus {
       outline: none;
-      border-color: #E8B86D;
-      background: rgba(232,184,109,0.05);
+      border-color: #FDB03E;
+      background: rgba(253, 176, 62, 0.05);
     }
     .field-group .hint {
       font-size: 11px;
@@ -208,8 +208,8 @@
       background: rgba(0,0,0,0.2);
     }
     .status { font-size: 13px; padding: 12px 16px; border-radius: 8px; display: none; }
-    .status.success { display: block; background: rgba(39,174,96,0.15); border: 1px solid rgba(39,174,96,0.3); color: #27AE60; }
-    .status.error { display: block; background: rgba(231,76,60,0.15); border: 1px solid rgba(231,76,60,0.3); color: #E74C3C; }
+    .status.success { display: block; background: rgba(24, 168, 241, 0.15); border: 1px solid rgba(24, 168, 241, 0.3); color: #18A8F1; }
+    .status.error { display: block; background: rgba(204, 120, 203, 0.15); border: 1px solid rgba(204, 120, 203, 0.3); color: #CC78CB; }
     
     .loading-overlay {
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
@@ -455,14 +455,14 @@
           width: ${w}px; height: ${h}px; 
           font-family: 'Poppins', sans-serif; 
           color: white;
-          background: linear-gradient(165deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+          background: linear-gradient(165deg, #2a004a 0%, #52008C 50%, #3a005f 100%);
           padding: 60px;
           position: relative;
           overflow: hidden;
         }
         .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
-        .bg-1 { width: 400px; height: 400px; background: #E8B86D; top: -100px; right: -100px; }
-        .bg-2 { width: 300px; height: 300px; background: #4A90A4; bottom: -50px; left: -50px; }
+        .bg-1 { width: 400px; height: 400px; background: #FDB03E; top: -100px; right: -100px; }
+        .bg-2 { width: 300px; height: 300px; background: #18A8F1; bottom: -50px; left: -50px; }
         .handle { position: absolute; bottom: 40px; left: 0; right: 0; text-align: center; font-size: 16px; opacity: 0.4; }
       `;
       
@@ -472,10 +472,10 @@
         case 'cover':
           content = `
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
-              <div style="background:#E8B86D;padding:12px 30px;border-radius:30px;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:40px;color:#1a1a2e">${getFieldValue('badge')}</div>
+              <div style="background:#FDB03E;padding:12px 30px;border-radius:30px;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:40px;color:#2a004a">${getFieldValue('badge')}</div>
               <div style="font-family:'Playfair Display',serif;font-size:${h > 1400 ? 72 : 60}px;font-weight:800;line-height:1.1;margin-bottom:30px;white-space:pre-line">${getFieldValue('title')}</div>
               <div style="font-size:24px;opacity:0.85;margin-bottom:50px;max-width:800px;line-height:1.4">${getFieldValue('subtitle')}</div>
-              <div style="font-size:20px;color:#4A90A4">${getFieldValue('cta')}</div>
+              <div style="font-size:20px;color:#18A8F1">${getFieldValue('cta')}</div>
             </div>
           `;
           break;
@@ -483,12 +483,12 @@
         case 'myth':
           content = `
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
-              <div style="background:#E74C3C;padding:15px 40px;border-radius:35px;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:40px">❌ ${getFieldValue('mythNum')}</div>
-              <div style="background:rgba(231,76,60,0.15);border-left:6px solid #E74C3C;border-radius:20px;padding:30px 40px;margin-bottom:40px;max-width:900px">
+              <div style="background:#CC78CB;padding:15px 40px;border-radius:35px;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:40px">❌ ${getFieldValue('mythNum')}</div>
+              <div style="background:rgba(204, 120, 203, 0.15);border-left:6px solid #CC78CB;border-radius:20px;padding:30px 40px;margin-bottom:40px;max-width:900px">
                 <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;font-style:italic;line-height:1.3">${getFieldValue('mythText')}</div>
               </div>
-              <div style="background:#27AE60;padding:15px 40px;border-radius:35px;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:30px">✅ The Truth</div>
-              <div style="background:rgba(39,174,96,0.12);border-radius:16px;padding:25px 35px;max-width:900px">
+              <div style="background:#18A8F1;padding:15px 40px;border-radius:35px;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:30px">✅ The Truth</div>
+              <div style="background:rgba(24, 168, 241, 0.12);border-radius:16px;padding:25px 35px;max-width:900px">
                 <div style="font-size:24px;line-height:1.5;opacity:0.95">${getFieldValue('truthText')}</div>
               </div>
             </div>
@@ -499,11 +499,11 @@
           const items = [1,2,3,4,5,6].map(i => getFieldValue(`item${i}`)).filter(x => x);
           content = `
             <div style="display:flex;flex-direction:column;height:100%">
-              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#E8B86D;text-align:center;margin-bottom:40px">${getFieldValue('title')}</div>
-              <div style="background:rgba(74,144,164,0.12);border:2px solid rgba(74,144,164,0.3);border-radius:20px;padding:40px;flex:1">
+              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#FDB03E;text-align:center;margin-bottom:40px">${getFieldValue('title')}</div>
+              <div style="background:rgba(24, 168, 241, 0.12);border:2px solid rgba(24, 168, 241, 0.3);border-radius:20px;padding:40px;flex:1">
                 ${items.map(item => `
                   <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.1)">
-                    <div style="color:#27AE60;font-size:28px;font-weight:bold">✓</div>
+                    <div style="color:#18A8F1;font-size:28px;font-weight:bold">✓</div>
                     <div style="font-size:24px">${item}</div>
                   </div>
                 `).join('')}
@@ -515,21 +515,21 @@
         case 'vs':
           content = `
             <div style="display:flex;flex-direction:column;height:100%">
-              <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#E8B86D;text-align:center;margin-bottom:30px">${getFieldValue('title')}</div>
+              <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#FDB03E;text-align:center;margin-bottom:30px">${getFieldValue('title')}</div>
               <div style="display:flex;gap:20px;flex:1">
-                <div style="flex:1;background:rgba(231,76,60,0.12);border:2px solid rgba(231,76,60,0.3);border-radius:20px;padding:30px">
+                <div style="flex:1;background:rgba(204, 120, 203, 0.12);border:2px solid rgba(204, 120, 203, 0.3);border-radius:20px;padding:30px">
                   <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;text-align:center;margin-bottom:20px">${getFieldValue('leftTitle')}</div>
                   <div style="font-size:20px;line-height:2;white-space:pre-line">${getFieldValue('leftItems')}</div>
                 </div>
                 <div style="display:flex;align-items:center">
-                  <div style="background:#E8B86D;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#1a1a2e">VS</div>
+                  <div style="background:#FDB03E;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#2a004a">VS</div>
                 </div>
-                <div style="flex:1;background:rgba(74,144,164,0.12);border:2px solid rgba(74,144,164,0.3);border-radius:20px;padding:30px">
+                <div style="flex:1;background:rgba(24, 168, 241, 0.12);border:2px solid rgba(24, 168, 241, 0.3);border-radius:20px;padding:30px">
                   <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;text-align:center;margin-bottom:20px">${getFieldValue('rightTitle')}</div>
                   <div style="font-size:20px;line-height:2;white-space:pre-line">${getFieldValue('rightItems')}</div>
                 </div>
               </div>
-              <div style="text-align:center;margin-top:30px;font-size:22px;color:#4A90A4">${getFieldValue('footer')}</div>
+              <div style="text-align:center;margin-top:30px;font-size:22px;color:#18A8F1">${getFieldValue('footer')}</div>
             </div>
           `;
           break;
@@ -537,7 +537,7 @@
         case 'stats':
           content = `
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
-              <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#E8B86D;margin-bottom:60px">${getFieldValue('title')}</div>
+              <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#FDB03E;margin-bottom:60px">${getFieldValue('title')}</div>
               <div style="font-family:'Playfair Display',serif;font-size:160px;font-weight:800;line-height:1">${getFieldValue('stat')}</div>
               <div style="font-size:28px;opacity:0.85;margin-top:30px;max-width:800px;line-height:1.5;white-space:pre-line">${getFieldValue('description')}</div>
               <div style="font-size:16px;opacity:0.4;margin-top:40px">${getFieldValue('source')}</div>
@@ -548,9 +548,9 @@
         case 'quote':
           content = `
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:40px">
-              <div style="font-family:'Playfair Display',serif;font-size:200px;color:#E8B86D;opacity:0.25;position:absolute;top:80px;left:60px">"</div>
+              <div style="font-family:'Playfair Display',serif;font-size:200px;color:#FDB03E;opacity:0.25;position:absolute;top:80px;left:60px">"</div>
               <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;font-style:italic;line-height:1.4;max-width:900px;white-space:pre-line">${getFieldValue('quote')}</div>
-              <div style="font-size:24px;color:#E8B86D;margin-top:40px">${getFieldValue('attribution')}</div>
+              <div style="font-size:24px;color:#FDB03E;margin-top:40px">${getFieldValue('attribution')}</div>
             </div>
           `;
           break;
@@ -561,7 +561,7 @@
               <div style="font-size:120px;margin-bottom:40px">${getFieldValue('emoji')}</div>
               <div style="font-family:'Playfair Display',serif;font-size:56px;font-weight:700;margin-bottom:20px">${getFieldValue('title')}</div>
               <div style="font-size:24px;opacity:0.7;margin-bottom:50px">${getFieldValue('subtitle')}</div>
-              <div style="background:#E8B86D;padding:18px 40px;border-radius:40px;font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:50px">${getFieldValue('button')}</div>
+              <div style="background:#FDB03E;padding:18px 40px;border-radius:40px;font-size:18px;font-weight:600;color:#2a004a;margin-bottom:50px">${getFieldValue('button')}</div>
               <div style="font-size:20px;opacity:0.5">${getFieldValue('actions')}</div>
             </div>
           `;
@@ -571,12 +571,12 @@
           const tips = [1,2,3,4,5].map(i => getFieldValue(`tip${i}`)).filter(x => x);
           content = `
             <div style="display:flex;flex-direction:column;height:100%">
-              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#E8B86D;text-align:center">${getFieldValue('title')}</div>
+              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#FDB03E;text-align:center">${getFieldValue('title')}</div>
               <div style="font-size:22px;opacity:0.7;text-align:center;margin:20px 0 40px">${getFieldValue('subtitle')}</div>
               <div style="flex:1;display:flex;flex-direction:column;gap:20px">
                 ${tips.map((tip, i) => `
                   <div style="display:flex;align-items:center;gap:20px">
-                    <div style="background:#E8B86D;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#1a1a2e;flex-shrink:0">${i+1}</div>
+                    <div style="background:#FDB03E;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#2a004a;flex-shrink:0">${i+1}</div>
                     <div style="font-size:24px">${tip}</div>
                   </div>
                 `).join('')}
@@ -588,10 +588,10 @@
         case 'content':
           content = `
             <div style="display:flex;flex-direction:column;align-items:center;height:100%;text-align:center">
-              <div style="font-size:14px;font-weight:700;color:#4A90A4;text-transform:uppercase;letter-spacing:3px;margin-bottom:30px">${getFieldValue('category')}</div>
+              <div style="font-size:14px;font-weight:700;color:#18A8F1;text-transform:uppercase;letter-spacing:3px;margin-bottom:30px">${getFieldValue('category')}</div>
               <div style="font-size:80px;margin-bottom:30px">${getFieldValue('emoji')}</div>
-              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#E8B86D;margin-bottom:30px">${getFieldValue('title')}</div>
-              <div style="background:rgba(74,144,164,0.12);border:2px solid rgba(74,144,164,0.3);border-radius:20px;padding:40px;flex:1;width:100%">
+              <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#FDB03E;margin-bottom:30px">${getFieldValue('title')}</div>
+              <div style="background:rgba(24, 168, 241, 0.12);border:2px solid rgba(24, 168, 241, 0.3);border-radius:20px;padding:40px;flex:1;width:100%">
                 <div style="font-size:24px;line-height:1.6;white-space:pre-line">${getFieldValue('body')}</div>
               </div>
               <div style="font-size:14px;opacity:0.3;margin-top:20px">${getFieldValue('slideNum')}</div>

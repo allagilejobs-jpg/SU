@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #CC78CB;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+    
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 20px 25px;
+      border-left: 4px solid #18A8F1;
+    }
+    
+    .item-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .item-content {
+      flex: 1;
+    }
+    .item-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .item-desc {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .help-section {
+      background: rgba(24, 168, 241, 0.15);
+      border-radius: 20px;
+      padding: 25px;
+      margin-top: 15px;
+    }
+    .help-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #18A8F1;
+      margin-bottom: 15px;
+    }
+    .help-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .help-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+    .help-item span { color: #18A8F1; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">⚠️ Important</div>
+    <h1 class="title">Glass Child <span>Syndrome</span></h1>
+    <p class="subtitle">Is your neurotypical child becoming invisible?<br>The siblings who fade into the background.</p>
+  </div>
+  
+  <div class="content">
+    <div class="section-title">Warning Signs</div>
+    
+    <div class="item">
+      <div class="item-icon">😶</div>
+      <div class="item-content">
+        <div class="item-title">Minimizes Their Own Needs</div>
+        <div class="item-desc">"It's fine, I don't need anything" becomes their default response</div>
+      </div>
+    </div>
+    
+    <div class="item">
+      <div class="item-icon">🏆</div>
+      <div class="item-content">
+        <div class="item-title">Overachieves to Get Noticed</div>
+        <div class="item-desc">Perfectionism driven by wanting any attention at all</div>
+      </div>
+    </div>
+    
+    <div class="item">
+      <div class="item-icon">😔</div>
+      <div class="item-content">
+        <div class="item-title">Hides Emotions to Not "Burden" You</div>
+        <div class="item-desc">They see you're exhausted and don't want to add more</div>
+      </div>
+    </div>
+    
+    <div class="item">
+      <div class="item-icon">🤐</div>
+      <div class="item-content">
+        <div class="item-title">Stops Sharing About Their Day</div>
+        <div class="item-desc">Believes their stories aren't important enough</div>
+      </div>
+    </div>
+    
+    <div class="help-section">
+      <div class="help-title">How to Help</div>
+      <div class="help-items">
+        <div class="help-item"><span>✓</span> Scheduled 1-on-1 time weekly</div>
+        <div class="help-item"><span>✓</span> Ask about THEIR day first</div>
+        <div class="help-item"><span>✓</span> Validate their frustrations</div>
+        <div class="help-item"><span>✓</span> Let them be a kid, not helper</div>
+        <div class="help-item"><span>✓</span> Consider sibling support groups</div>
+        <div class="help-item"><span>✓</span> Celebrate their wins loudly</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this - every child deserves to be seen</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

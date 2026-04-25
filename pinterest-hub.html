@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest Hub — Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #2a004a;
+      color: #eee;
+      min-height: 100vh;
+    }
+    .main-nav {
+      background: #1f0033;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .main-nav a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active {
+      background: #E60023;
+      color: white;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #E60023 0%, #BD081C 100%);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .header p {
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+    
+    .stats-bar {
+      background: #52008C;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #3a005f;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #E60023;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    
+    .filters {
+      background: #1f0033;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 60px;
+      z-index: 99;
+    }
+    .filter-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #52008C;
+      color: #aaa;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #E60023;
+      color: white;
+    }
+    
+    .content-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+    
+    .pin-card {
+      background: #52008C;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pin-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(230, 0, 35, 0.2);
+    }
+    .pin-card.hidden {
+      display: none;
+    }
+    
+    .pin-image {
+      position: relative;
+      background: #1f0033;
+      aspect-ratio: 2/3;
+      overflow: hidden;
+    }
+    .pin-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .pin-image .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #444;
+      font-size: 3rem;
+    }
+    .pin-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .pin-badge.pinterest-ready { background: linear-gradient(135deg, #E60023, #BD081C); }
+    .pin-badge.beacon { background: #FDB03E; color: #2a004a; }
+    .pin-badge.day-60 { background: #18A8F1; }
+    .pin-badge.day-30 { background: #18A8F1; }
+    .pin-badge.reel { background: #52008C; }
+    .pin-badge.personal { background: #CC78CB; }
+    .pin-badge.blogs { background: #CC78CB; }
+    
+    .pin-content {
+      padding: 20px;
+    }
+    .pin-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #fff;
+      line-height: 1.4;
+    }
+    .pin-desc {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .pin-blog-url {
+      font-size: 0.75rem;
+      color: #18A8F1;
+      font-weight: 600;
+      margin-bottom: 8px;
+      word-break: break-all;
+    }
+    .pin-board {
+      font-size: 0.75rem;
+      color: #E60023;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .pin-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pin-btn {
+      flex: 1;
+      min-width: 80px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      text-align: center;
+    }
+    .pin-btn.copy {
+      background: #18A8F1;
+      color: white;
+    }
+    .pin-btn.download {
+      background: #E60023;
+      color: white;
+    }
+    .pin-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    .section-header {
+      grid-column: 1 / -1;
+      padding: 20px 0 10px;
+      border-bottom: 2px solid #E60023;
+      margin-bottom: 10px;
+    }
+    .section-header h2 {
+      color: #E60023;
+      font-size: 1.3rem;
+    }
+    
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: #666;
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #18A8F1;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s;
+      z-index: 1000;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="beacon-launch.html">🧭 Beacon</a>
+    <a href="calendar-30day.html">📅 30-Day</a>
+    <a href="calendar-60day.html">📅 60-Day</a>
+    <a href="pinterest-hub.html" class="active">📌 Pinterest</a>
+    <a href="leadmagnet/index.html">🎯 Lead Magnet</a>
+    <a href="editor.html">🎨 Editor</a>
+  </nav>
+  
+  <header class="header">
+    <h1>📌 Pinterest Hub</h1>
+    <p>All your Pinterest content in one place — browse, copy, and download</p>
+  </header>
+  
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num" id="stat-total">0</div>
+      <div class="stat-label">Total Pins</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-pinterest-ready">0</div>
+      <div class="stat-label">Pinterest-Ready</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-30day">0</div>
+      <div class="stat-label">30-Day</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-60day">0</div>
+      <div class="stat-label">60-Day</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-beacon">0</div>
+      <div class="stat-label">Beacon</div>
+    </div>
+  </div>
+  
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="pinterest-ready">✨ Pinterest-Ready (25)</button>
+    <button class="filter-btn" data-filter="day-30">📅 30-Day (10)</button>
+    <button class="filter-btn" data-filter="day-60">📅 60-Day (27)</button>
+    <button class="filter-btn" data-filter="beacon">🧭 Beacon (4)</button>
+    <button class="filter-btn" data-filter="blogs">📖 Blog Posts (24)</button>
+  </div>
+  
+  <div class="content-grid" id="content-grid">
+    <!-- Content loaded by JavaScript -->
+  </div>
+  
+  <div class="toast" id="toast">Copied!</div>
+
+  <script>
+    // Pinterest content data - will be populated from captions.md files
+    const pinterestData = [
+      // Dedicated Pinterest Graphics (1000x1500 - proper Pinterest format)
+      {
+        id: 'pin-iep',
+        title: 'Neurodiversity-Affirming IEP Accommodations',
+        desc: 'Sensory, communication, academic, and social accommodations. Save this checklist for your next IEP meeting.',
+        board: 'Autism Parenting Tips / IEP & School',
+        folder: 'pinterest',
+        file: 'pin-01-iep-accommodations.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-meltdown',
+        title: 'Meltdown vs Tantrum: Know the Difference',
+        desc: 'They look similar but need completely different responses. Learn what to do during a meltdown.',
+        board: 'Autism Parenting Tips / Meltdown Support',
+        folder: 'pinterest',
+        file: 'pin-02-meltdown-vs-tantrum.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-sensory',
+        title: '5 Sensory Hacks That Actually Work',
+        desc: 'OT-approved tools for meltdown prevention. Headphones, sunglasses, fidgets, timers, calm corners.',
+        board: 'Autism Parenting Tips / Sensory',
+        folder: 'pinterest',
+        file: 'pin-03-sensory-hacks.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-sleep',
+        title: 'Sleep Issues in Autism: What Actually Helps',
+        desc: '50-80% of autistic kids have sleep problems. Environment fixes and routines that work.',
+        board: 'Autism Parenting Tips / Sleep',
+        folder: 'pinterest',
+        file: 'pin-04-sleep-strategies.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-masking',
+        title: 'Signs of Masking in Autism',
+        desc: '"They look fine. They\'re falling apart inside." Learn the signs and the cost of masking.',
+        board: 'Autism Parenting Tips / Understanding Autism',
+        folder: 'pinterest',
+        file: 'pin-05-signs-of-masking.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-potty',
+        title: 'Potty Training an Autistic Child',
+        desc: 'A different timeline, and that\'s OK. Readiness signs and autism-friendly strategies.',
+        board: 'Autism Parenting Tips / Potty Training',
+        folder: 'pinterest',
+        file: 'pin-06-potty-training.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-audhd',
+        title: 'AuDHD: Autism + ADHD',
+        desc: 'When your brain runs on two operating systems. The internal conflict, common experiences, and superpowers.',
+        board: 'Autism Parenting Tips / AuDHD',
+        folder: 'pinterest',
+        file: 'pin-07-audhd.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-girls',
+        title: 'Autism in Girls: Why They\'re Missed',
+        desc: 'Girls mask better, get misdiagnosed, and struggle silently. Know the signs. Share this - it might change a life.',
+        board: 'Autism Parenting Tips / Autism in Girls',
+        folder: 'pinterest',
+        file: 'pin-08-autism-in-girls.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-aac',
+        title: 'AAC: Communication for Nonverbal Children',
+        desc: 'Not speaking doesn\'t mean not communicating. AAC options, how to support success, and myths busted.',
+        board: 'Autism Parenting Tips / Communication',
+        folder: 'pinterest',
+        file: 'pin-09-aac-communication.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-anxiety',
+        title: 'Autism & Anxiety: The Hidden Connection',
+        desc: '40-80% have clinical anxiety. Common triggers, what actually helps, and red flags to watch for.',
+        board: 'Autism Parenting Tips / Mental Health',
+        folder: 'pinterest',
+        file: 'pin-10-anxiety-autism.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-5things',
+        title: '5 Things I Wish I Knew After Diagnosis',
+        desc: 'Waitlists, specialists, IEPs, your village, and remembering your child is still amazing. The advice you need day one.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'pinterest',
+        file: 'pin-11-5-things-diagnosis.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-visual',
+        title: 'Visual Supports That Actually Work',
+        desc: 'Schedules, timers, first-then boards, choice boards, social stories, and break cards. Your visual toolkit.',
+        board: 'Autism Parenting Tips / Visual Supports',
+        folder: 'pinterest',
+        file: 'pin-12-visual-supports.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-selfcare',
+        title: 'Self-Care for Autism Parents',
+        desc: 'Not bubble baths. Real micro self-care that works: hot coffee rule, parking lot pause, finding your people.',
+        board: 'Autism Parenting Tips / Self-Care',
+        folder: 'pinterest',
+        file: 'pin-13-self-care-parents.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-glass-child',
+        title: 'Glass Child Syndrome',
+        desc: 'Is your neurotypical child becoming invisible? The siblings who fade into the background. Warning signs and how to help.',
+        board: 'Autism Parenting Tips / Sibling Support',
+        folder: 'pinterest',
+        file: 'pin-14-glass-child.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-burnout',
+        title: 'Autistic Burnout: Signs in Kids AND Adults',
+        desc: 'Some experience their first burnout at age 6. Learn the warning signs in children and adults, plus recovery tips.',
+        board: 'Autism Parenting Tips / Understanding Autism',
+        folder: 'pinterest',
+        file: 'pin-15-autistic-burnout.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-myths',
+        title: '5 Autism Myths That Need to Die',
+        desc: 'You\'ve probably believed at least one. Vaccines, empathy, "looking autistic" — let\'s debunk them all.',
+        board: 'Autism Parenting Tips / Myth Busting',
+        folder: 'pinterest',
+        file: 'pin-16-autism-myths.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-acceptance',
+        title: 'Acceptance vs Awareness: Why Language Matters',
+        desc: 'The autism community moved on from awareness. Here\'s why acceptance matters more and what the shift means.',
+        board: 'Autism Parenting Tips / Autism Acceptance',
+        folder: 'pinterest',
+        file: 'pin-17-acceptance-vs-awareness.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-late-diagnosis',
+        title: 'Late-Diagnosed Autism: 450% Increase',
+        desc: 'Most are women. Why they were missed, signs that lead to late diagnosis, and what comes next.',
+        board: 'Autism Parenting Tips / Adult Autism',
+        folder: 'pinterest',
+        file: 'pin-18-late-diagnosis.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-feeding',
+        title: 'Feeding Challenges in Autistic Kids',
+        desc: 'It\'s not defiance. It\'s sensory. Why autistic kids are "picky" and strategies that actually help.',
+        board: 'Autism Parenting Tips / Feeding & Food',
+        folder: 'pinterest',
+        file: 'pin-19-feeding-challenges.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-teens',
+        title: 'Autism in Teens: What Changes',
+        desc: 'Puberty + autism = a whole new journey. Body changes, social gaps, identity, and how to support your teen.',
+        board: 'Autism Parenting Tips / Teens',
+        folder: 'pinterest',
+        file: 'pin-20-autism-teens.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-travel',
+        title: 'Traveling with an Autistic Child',
+        desc: 'Airport hacks, hotel tips, packing essentials, and prep strategies. Yes, you can do this.',
+        board: 'Autism Parenting Tips / Travel',
+        folder: 'pinterest',
+        file: 'pin-21-travel-autism.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-camps',
+        title: 'Summer Camps for Autistic Kids',
+        desc: 'Types of camps, questions to ask, red flags to avoid, and green flags to look for. Plan the best summer.',
+        board: 'Autism Parenting Tips / Summer',
+        folder: 'pinterest',
+        file: 'pin-22-summer-camps.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-friendships',
+        title: 'Building Friendships: Social Support',
+        desc: 'Friendship looks different for autistic kids. That\'s okay. How to support without taking over.',
+        board: 'Autism Parenting Tips / Social Skills',
+        folder: 'pinterest',
+        file: 'pin-23-building-friendships.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-school',
+        title: 'School Accommodations Beyond the IEP',
+        desc: 'You can ask for more than you think. Sensory, timing, transitions, academic, social, and communication supports.',
+        board: 'Autism Parenting Tips / School',
+        folder: 'pinterest',
+        file: 'pin-24-school-accommodations.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-aba',
+        title: 'The ABA Controversy: Both Sides',
+        desc: 'What parents need to know. Concerns raised, defenses, and questions to ask providers. You decide.',
+        board: 'Autism Parenting Tips / Therapy Options',
+        folder: 'pinterest',
+        file: 'pin-25-aba-controversy.png',
+        category: 'pinterest-ready',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      
+      // Beacon Week 1
+      {
+        id: 'beacon-start-here',
+        title: 'Start Here: Welcome to Spectrum Unlocked',
+        desc: 'Your guide to navigating autism parenting. Real tools, real guidance, no judgment. Save this as your starting point.',
+        board: 'Autism Parenting Tips',
+        folder: 'beacon-week1-start-here',
+        category: 'beacon',
+        hasImage: true,
+        imageType: 'pinterest'
+      },
+      {
+        id: 'beacon-5-things',
+        title: '5 Things I Wish Someone Told Me After Diagnosis',
+        desc: 'The advice every newly diagnosed autism parent needs. Therapy waitlists, IEPs, finding your village. Save this guide.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'beacon-week1-5-things',
+        category: 'beacon',
+        hasImage: true,
+        imageType: 'pinterest'
+      },
+      {
+        id: 'beacon-iep',
+        title: 'IEP Meeting Survival Checklist',
+        desc: 'Everything you need before your next IEP meeting. Questions to ask, rights to know, accommodations to request.',
+        board: 'Autism Parenting Tips / IEP & School Advocacy',
+        folder: 'beacon-week1-iep-checklist',
+        category: 'beacon',
+        hasImage: true,
+        imageType: 'pinterest'
+      },
+      {
+        id: 'beacon-meltdown',
+        title: 'Meltdown vs Tantrum: Know the Difference',
+        desc: 'Meltdowns aren\'t manipulation. Learn the difference and exactly what to do. A must-save for autism parents.',
+        board: 'Autism Parenting Tips / Meltdown Support',
+        folder: 'beacon-week1-meltdown',
+        category: 'beacon',
+        hasImage: true,
+        imageType: 'pinterest'
+      },
+      
+      // 30-Day Calendar - Pinterest Native (1000x1500)
+      {
+        id: 'pin-waitlists',
+        title: 'Therapy Waitlists: 6-12 Months',
+        desc: 'The advice I wish someone gave me on day one. Get on multiple waitlists NOW. You can always decline later.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'pinterest',
+        file: 'pin-26-therapy-waitlists.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-first48',
+        title: 'First 48 Hours After Diagnosis',
+        desc: 'Stop the frantic 2am Googling. Here is what to do hour by hour after getting the diagnosis.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'pinterest',
+        file: 'pin-27-first-48-hours.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-iepwriting',
+        title: 'Always Request IEP Meetings in WRITING',
+        desc: 'Email creates a paper trail. Schools must respond within a legal timeframe. Template included.',
+        board: 'Autism Parenting Tips / IEP Advocacy',
+        folder: 'pinterest',
+        file: 'pin-28-iep-in-writing.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-grief',
+        title: 'The Grief No One Talks About',
+        desc: 'You might grieve the future you imagined. This grief is valid AND you can still find joy.',
+        board: 'Autism Parenting Tips / Emotional Support',
+        folder: 'pinterest',
+        file: 'pin-29-grief-diagnosis.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-apps',
+        title: '5 Apps Every Autism Parent Needs',
+        desc: 'Visual schedules, AAC communication, sensory tools, timers, and parent support apps that actually help.',
+        board: 'Autism Parenting Tips / Resources',
+        folder: 'pinterest',
+        file: 'pin-30-autism-apps.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-functioning',
+        title: '"High-Functioning" Is NOT a Compliment',
+        desc: 'Why functioning labels harm everyone. What to say instead.',
+        board: 'Autism Parenting Tips / Language Matters',
+        folder: 'pinterest',
+        file: 'pin-31-functioning-labels.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-whattosay',
+        title: 'What TO Say to Autism Parents',
+        desc: 'Share this with friends and family. Skip "I am sorry" - try these supportive phrases instead.',
+        board: 'Autism Parenting Tips / For Friends & Family',
+        folder: 'pinterest',
+        file: 'pin-32-what-to-say.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-diagnosisweek',
+        title: 'Just Got a Diagnosis? This Week\'s Checklist',
+        desc: '5 steps that actually help: breathe, waitlists, school district, find your people, take care of you.',
+        board: 'Autism Parenting Tips / Newly Diagnosed',
+        folder: 'pinterest',
+        file: 'pin-33-diagnosis-week.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-emotions',
+        title: 'Autistic Kids Feel Emotions Deeply',
+        desc: 'Myth busted: They don\'t lack emotions - they often feel MORE intensely. They just express it differently.',
+        board: 'Autism Parenting Tips / Myth Busting',
+        folder: 'pinterest',
+        file: 'pin-34-emotions-myth.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'pin-encouragement',
+        title: 'You\'re Doing Better Than You Think',
+        desc: 'The fact that you\'re here - searching, learning, advocating - that\'s love in action. Save for hard days.',
+        board: 'Autism Parenting Tips / Encouragement',
+        folder: 'pinterest',
+        file: 'pin-35-encouragement.png',
+        category: 'day-30',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      
+      // 60-Day Calendar Content (Pinterest-native 1000x1500)
+      {
+        id: 'day-01',
+        title: '3 Things TikTok Gets WRONG About Autism',
+        desc: 'These harmful misconceptions hurt autistic people every day. Learn the truth and share it.',
+        board: 'Autism Parenting Tips',
+        folder: 'pinterest',
+        file: 'pin-36-tiktok-myths.png',
+        category: 'day-60',
+        day: 1,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-02',
+        title: 'Autism Acceptance vs. Awareness',
+        desc: 'Stop saying autism awareness. The autistic community has moved on. Here is why acceptance matters more.',
+        board: 'Autism Parenting Tips / Autism Acceptance',
+        folder: 'pinterest',
+        file: 'pin-17-acceptance-vs-awareness.png',
+        category: 'day-60',
+        day: 2,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-03',
+        title: 'Glass Child Syndrome: The Siblings Who Fade',
+        desc: 'Is your neurotypical child becoming invisible? Siblings of autistic kids often become glass children.',
+        board: 'Autism Parenting Tips / Sibling Support',
+        folder: 'pinterest',
+        file: 'pin-14-glass-child.png',
+        category: 'day-60',
+        day: 3,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-04',
+        title: '5 Sensory Hacks That Actually Work',
+        desc: 'Meltdown prevention starts here. Simple sensory hacks that actually work for autistic kids.',
+        board: 'Autism Parenting Tips / Sensory Support',
+        folder: 'pinterest',
+        file: 'pin-03-sensory-hacks.png',
+        category: 'day-60',
+        day: 4,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-05',
+        title: 'Late-Diagnosed Autism in Women',
+        desc: '450% increase in adult autism diagnoses. Most are women. Here is why they were missed.',
+        board: 'Autism Parenting Tips / Autism in Girls',
+        folder: 'pinterest',
+        file: 'pin-18-late-diagnosis.png',
+        category: 'day-60',
+        day: 5,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-06',
+        title: 'Autistic Burnout: Signs in Kids AND Adults',
+        desc: 'Some people experience their first burnout at age 6. Learn the warning signs and recovery strategies.',
+        board: 'Autism Parenting Tips / Self-Care',
+        folder: 'pinterest',
+        file: 'pin-15-autistic-burnout.png',
+        category: 'day-60',
+        day: 6,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-08',
+        title: 'World Autism Acceptance Day',
+        desc: 'April 2nd: Autism and Humanity - Every Life Has Value. Today we celebrate, not pity.',
+        board: 'Autism Parenting Tips / Autism Acceptance',
+        folder: 'pinterest',
+        file: 'pin-37-world-autism-day.png',
+        category: 'day-60',
+        day: 8,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-09',
+        title: '5 Myths About Autism That Need to Die',
+        desc: 'You have probably believed at least one of these. Vaccines, empathy, looking autistic - let us debunk them all.',
+        board: 'Autism Parenting Tips / Autism Myths Debunked',
+        folder: 'pinterest',
+        file: 'pin-16-autism-myths.png',
+        category: 'day-60',
+        day: 9,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-10',
+        title: 'Neurodiversity-Affirming IEP Accommodations',
+        desc: 'Your child\'s IEP should not teach them to mask. Here are accommodations that actually SUPPORT autistic learners.',
+        board: 'Autism Parenting Tips / IEP & School Advocacy',
+        folder: 'pinterest',
+        file: 'pin-01-iep-accommodations.png',
+        category: 'day-60',
+        day: 10,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-11',
+        title: 'High-Masking Autism: The Hidden Struggle',
+        desc: 'They look fine but they are exhausted inside. Learn what masking is, why it is harmful, and signs someone is high-masking.',
+        board: 'Autism Parenting Tips / Understanding Autism',
+        folder: 'pinterest',
+        file: 'pin-05-signs-of-masking.png',
+        category: 'day-60',
+        day: 11,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-12',
+        title: 'Self-Care for Autism Parents',
+        desc: 'Not bubble baths. Real strategies for exhausted parents. You can not pour from an empty cup.',
+        board: 'Autism Parenting Tips / Self-Care',
+        folder: 'pinterest',
+        file: 'pin-13-self-care-parents.png',
+        category: 'day-60',
+        day: 12,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-13',
+        title: 'The ABA Controversy: What Parents Need to Know',
+        desc: 'Is ABA therapy right for your child? Here is both sides of the debate and questions to ask providers.',
+        board: 'Autism Parenting Tips / Therapy Options',
+        folder: 'pinterest',
+        file: 'pin-25-aba-controversy.png',
+        category: 'day-60',
+        day: 13,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-14',
+        title: 'Visual Supports That Actually Work',
+        desc: 'From schedules to social stories, here are visual tools that help autistic kids thrive.',
+        board: 'Autism Parenting Tips / Visual Supports',
+        folder: 'pinterest',
+        file: 'pin-12-visual-supports.png',
+        category: 'day-60',
+        day: 14,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-15',
+        title: 'Meltdown vs Tantrum: How to Support Your Child',
+        desc: 'Meltdowns are not misbehavior. Learn the difference and exactly what to do during and after.',
+        board: 'Autism Parenting Tips / Meltdown Support',
+        folder: 'pinterest',
+        file: 'pin-02-meltdown-vs-tantrum.png',
+        category: 'day-60',
+        day: 15,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-16',
+        title: 'Feeding Challenges in Autistic Kids',
+        desc: 'It is not defiance. It is sensory. Understand why autistic kids are picky and strategies that actually help.',
+        board: 'Autism Parenting Tips / Feeding & Food',
+        folder: 'pinterest',
+        file: 'pin-19-feeding-challenges.png',
+        category: 'day-60',
+        day: 16,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-17',
+        title: 'Sleep Issues in Autism: What Actually Helps',
+        desc: 'Melatonin is not the only answer. Evidence-based strategies to help your whole family rest better.',
+        board: 'Autism Parenting Tips / Sleep',
+        folder: 'pinterest',
+        file: 'pin-04-sleep-strategies.png',
+        category: 'day-60',
+        day: 17,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-18',
+        title: 'Autism in Girls: Often Missed',
+        desc: 'Autism does not look the same in everyone. Girls are massively underdiagnosed. Here is what to look for.',
+        board: 'Autism Parenting Tips / Autism in Girls',
+        folder: 'pinterest',
+        file: 'pin-08-autism-in-girls.png',
+        category: 'day-60',
+        day: 18,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-20',
+        title: 'Potty Training an Autistic Child',
+        desc: 'Forget milestone charts. Learn why autistic kids train on a different timeline and sensory-friendly strategies.',
+        board: 'Autism Parenting Tips / Potty Training',
+        folder: 'pinterest',
+        file: 'pin-06-potty-training.png',
+        category: 'day-60',
+        day: 20,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-21',
+        title: 'Autism + ADHD: The AuDHD Experience',
+        desc: 'When your brain runs on two operating systems. Autism wants routine, ADHD wants novelty.',
+        board: 'Autism Parenting Tips / AuDHD',
+        folder: 'pinterest',
+        file: 'pin-07-audhd.png',
+        category: 'day-60',
+        day: 21,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-22',
+        title: 'AAC: Communication for Nonverbal Children',
+        desc: 'Not speaking does not mean not communicating. AAC gives kids a voice.',
+        board: 'Autism Parenting Tips / Communication',
+        folder: 'pinterest',
+        file: 'pin-09-aac-communication.png',
+        category: 'day-60',
+        day: 22,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-24',
+        title: 'Autism and Anxiety: The Hidden Connection',
+        desc: '40-80% of autistic people have clinical anxiety. It is not overreacting.',
+        board: 'Autism Parenting Tips / Mental Health',
+        folder: 'pinterest',
+        file: 'pin-10-anxiety-autism.png',
+        category: 'day-60',
+        day: 24,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-27',
+        title: 'Autism in Teens: What Changes',
+        desc: 'Puberty + autism = a whole new journey. Here is how to navigate adolescence together.',
+        board: 'Autism Parenting Tips / Teens',
+        folder: 'pinterest',
+        file: 'pin-20-autism-teens.png',
+        category: 'day-60',
+        day: 27,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-28',
+        title: 'Nature Therapy for Autistic Kids',
+        desc: 'Why outdoor time is especially powerful for autistic kids. Free, effective sensory regulation.',
+        board: 'Autism Parenting Tips / Activities',
+        folder: 'pinterest',
+        file: 'pin-38-nature-therapy.png',
+        category: 'day-60',
+        day: 28,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-29',
+        title: 'Building Friendships: Social Support',
+        desc: 'Friendship looks different for autistic kids. That is okay. Here is how to support without taking over.',
+        board: 'Autism Parenting Tips / Social Skills',
+        folder: 'pinterest',
+        file: 'pin-23-building-friendships.png',
+        category: 'day-60',
+        day: 29,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-31',
+        title: 'Glass Child Revisited: Siblings',
+        desc: 'Do not let siblings become invisible. Here is how to make sure every child feels equally loved.',
+        board: 'Autism Parenting Tips / Sibling Support',
+        folder: 'pinterest',
+        file: 'pin-14-glass-child.png',
+        category: 'day-60',
+        day: 31,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-35',
+        title: 'Resources Toolkit: Your Autism Parent Starter Kit',
+        desc: 'Organizations, books, apps, podcasts, and communities. Everything you need bookmarked.',
+        board: 'Autism Parenting Tips / Resources',
+        folder: 'pinterest',
+        file: 'pin-39-resources-toolkit.png',
+        category: 'day-60',
+        day: 35,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-44',
+        title: 'Marriage and Autism Parenting',
+        desc: 'The strain is real. So is the hope. How to stay connected when all your energy goes to your kids.',
+        board: 'Autism Parenting Tips / Marriage',
+        folder: 'pinterest',
+        file: 'pin-40-marriage-autism.png',
+        category: 'day-60',
+        day: 44,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-47',
+        title: 'Summer Camps for Autistic Kids',
+        desc: 'Types of camps, questions to ask, red flags to avoid. Start planning now.',
+        board: 'Autism Parenting Tips / Summer',
+        folder: 'pinterest',
+        file: 'pin-22-summer-camps.png',
+        category: 'day-60',
+        day: 47,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-48',
+        title: 'Traveling with an Autistic Child',
+        desc: 'Airport hacks, hotel tips, and how to prep for the unexpected. Yes, you can do this.',
+        board: 'Autism Parenting Tips / Travel',
+        folder: 'pinterest',
+        file: 'pin-21-travel-autism.png',
+        category: 'day-60',
+        day: 48,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'day-59',
+        title: 'Celebrating Autistic Joy',
+        desc: 'Special interests, stims, and the unique ways autistic people experience happiness. Joy is resistance.',
+        board: 'Autism Parenting Tips / Autistic Joy',
+        folder: 'pinterest',
+        file: 'pin-41-autistic-joy.png',
+        category: 'day-60',
+        day: 59,
+        hasImage: true,
+        isPinterestNative: true
+      },
+      // === BLOG POST PINS ===
+      {
+        id: 'blog-parent-burnout',
+        title: 'Autism Parent Burnout Is Real',
+        desc: 'It is 2am, your child will not sleep, and no therapist is awake. That is autism parent burnout. Here is what it is, why it hits harder, and where to find help.',
+        board: 'Autism Parenting Tips / Self-Care',
+        folder: 'pinterest',
+        file: 'pin-42-blog-parent-burnout.png',
+        blogUrl: '/blog/autism-parent-burnout',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-gestalt-language',
+        title: 'What Is a Gestalt Language Processor?',
+        desc: 'Your child scripts full sentences from Bluey but cannot say milk. What gestalt language processing means, the 6 stages, and how to support your child.',
+        board: 'Autism Parenting Tips / Communication',
+        folder: 'pinterest',
+        file: 'pin-43-blog-gestalt-language.png',
+        blogUrl: '/blog/gestalt-language-processing',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-acceptance',
+        title: 'What Autism Acceptance Actually Looks Like',
+        desc: 'Acceptance is not a hashtag or a blue light on a building. It is how you treat my son on a regular Wednesday.',
+        board: 'Autism Parenting Tips / Acceptance',
+        folder: 'pinterest',
+        file: 'pin-44-blog-acceptance.png',
+        blogUrl: '/blog/autism-acceptance-month-2026',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-aac-beginners',
+        title: 'AAC for Beginners: A Parent\'s Guide',
+        desc: 'AAC does not prevent speech. Research shows it supports it. Here is what augmentative communication is and how to start using it today.',
+        board: 'Autism Parenting Tips / Communication',
+        folder: 'pinterest',
+        file: 'pin-45-blog-aac-beginners.png',
+        blogUrl: '/blog/aac-for-beginners',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-early-intervention',
+        title: 'Autism Early Intervention: What Parents Need to Know',
+        desc: 'Early intervention can reshape your child\'s developmental trajectory. Here is what it means, which services to pursue first, and how to access them.',
+        board: 'Autism Parenting Tips / Getting Started',
+        folder: 'pinterest',
+        file: 'pin-46-blog-early-intervention.png',
+        blogUrl: '/blog/autism-early-intervention',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-iep-vs-504',
+        title: 'IEP vs 504 Plan: Which Does Your Child Need?',
+        desc: 'IEPs and 504 plans both provide school accommodations, but they are very different. Here is how to know which one your child needs.',
+        board: 'Autism Parenting Tips / Education',
+        folder: 'pinterest',
+        file: 'pin-47-blog-iep-vs-504.png',
+        blogUrl: '/blog/iep-vs-504-plan',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-workplace',
+        title: 'Workplace Accommodations for Autistic Adults',
+        desc: 'Your child will enter the workforce someday. Here is how ADA protections work and the free government service most families do not know exists.',
+        board: 'Autism Parenting Tips / Transition',
+        folder: 'pinterest',
+        file: 'pin-48-blog-workplace.png',
+        blogUrl: '/blog/workplace-accommodations-autism',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-public-meltdowns',
+        title: 'How to Handle Public Meltdowns Without Shame',
+        desc: 'Your child is on the floor of Target and everyone is staring. Here is exactly what to do in the moment and how to handle judgmental strangers.',
+        board: 'Autism Parenting Tips / Meltdown Support',
+        folder: 'pinterest',
+        file: 'pin-49-blog-public-meltdowns.png',
+        blogUrl: '/blog/public-meltdowns',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-explain-family',
+        title: 'How to Explain Autism to Family Who Don\'t Get It',
+        desc: 'Scripts, strategies, and boundary-setting for conversations with grandparents and relatives who mean well but miss the mark.',
+        board: 'Autism Parenting Tips / Family',
+        folder: 'pinterest',
+        file: 'pin-50-blog-explain-family.png',
+        blogUrl: '/blog/explain-autism-to-family',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-picky-eating',
+        title: 'Autism and Picky Eating: Strategies Beyond Just Try It',
+        desc: 'Why autistic children are selective eaters, what is actually happening, and practical strategies that do not involve power struggles.',
+        board: 'Autism Parenting Tips / Feeding',
+        folder: 'pinterest',
+        file: 'pin-51-blog-picky-eating.png',
+        blogUrl: '/blog/autism-picky-eating',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-therapies-explained',
+        title: 'Autism Therapies Explained: ABA, OT, Speech & More',
+        desc: 'Confused by therapy acronyms? Plain-language guide to every common autism therapy: what each does and red flags to watch for.',
+        board: 'Autism Parenting Tips / Therapy',
+        folder: 'pinterest',
+        file: 'pin-52-blog-therapies-explained.png',
+        blogUrl: '/blog/autism-therapy-types-explained',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-sensory-diet',
+        title: 'A Beginner\'s Guide to Sensory Diets (No, It\'s Not About Food)',
+        desc: 'A sensory diet is a schedule of activities that helps your child stay regulated. Here is how OTs build them and how to create one at home.',
+        board: 'Autism Parenting Tips / Sensory',
+        folder: 'pinterest',
+        file: 'pin-53-blog-sensory-diet.png',
+        blogUrl: '/blog/sensory-diet-beginners-guide',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-diagnosed-now-what',
+        title: 'What to Do After Autism Diagnosis: A Parent\'s Guide',
+        desc: 'Just received your child\'s autism diagnosis? Our free step-by-step guide covers what to do first, who to call, and how to take care of yourself.',
+        board: 'Autism Parenting Tips / Getting Started',
+        folder: 'pinterest',
+        file: 'pin-54-blog-diagnosed-now-what.png',
+        blogUrl: '/blog/diagnosed-now-what',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-sensory-activities',
+        title: '7 Sensory-Friendly Activities for Rainy Days',
+        desc: 'Creative sensory activities for autistic children when outdoor play is not an option. Tested by real parents and grounded in OT principles.',
+        board: 'Autism Parenting Tips / Activities',
+        folder: 'pinterest',
+        file: 'pin-55-blog-sensory-activities.png',
+        blogUrl: '/blog/sensory-friendly-activities',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-first-iep',
+        title: 'Navigating Your First IEP Meeting: A Checklist',
+        desc: 'Walking into your first IEP meeting is intimidating. Here is exactly what to bring, what to say, and how to advocate under IDEA.',
+        board: 'Autism Parenting Tips / Education',
+        folder: 'pinterest',
+        file: 'pin-56-blog-first-iep.png',
+        blogUrl: '/blog/first-iep-meeting-checklist',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-iep-rights',
+        title: 'IEP Rights Schools Won\'t Tell You',
+        desc: 'Most schools will not volunteer these rights, but IDEA guarantees them. Learn what you are entitled to before your next IEP meeting.',
+        board: 'Autism Parenting Tips / Education',
+        folder: 'pinterest',
+        file: 'pin-57-blog-iep-rights.png',
+        blogUrl: '/blog/iep-rights-schools-wont-tell-you',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-finding-village',
+        title: 'Finding Your Village in an Isolated World',
+        desc: 'You do not have to do this alone. Where to find autism parent support groups (online and local) and how to build real connections.',
+        board: 'Autism Parenting Tips / Community',
+        folder: 'pinterest',
+        file: 'pin-58-blog-finding-village.png',
+        blogUrl: '/blog/finding-your-village',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-visual-schedule',
+        title: 'How to Build a Visual Schedule That Actually Works',
+        desc: 'Visual schedules reduce meltdowns, ease transitions, and build independence. Here is how to create one that works.',
+        board: 'Autism Parenting Tips / Visual Supports',
+        folder: 'pinterest',
+        file: 'pin-59-blog-visual-schedule.png',
+        blogUrl: '/blog/visual-schedule-guide',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-school-communication',
+        title: 'How to Communicate with Your Child\'s School Team',
+        desc: 'Email templates, documentation strategies, and tips for communicating with teachers and special ed staff. Free templates included.',
+        board: 'Autism Parenting Tips / Education',
+        folder: 'pinterest',
+        file: 'pin-60-blog-school-communication.png',
+        blogUrl: '/blog/school-communication-tips',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-siblings',
+        title: 'Supporting Siblings: Helping Neurotypical Kids Understand Autism',
+        desc: 'Siblings notice more than you think. Here is how to talk to your neurotypical children and make sure no one feels invisible.',
+        board: 'Autism Parenting Tips / Sibling Support',
+        folder: 'pinterest',
+        file: 'pin-61-blog-siblings.png',
+        blogUrl: '/blog/autism-sibling-support',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-sleep-strategies',
+        title: 'Sleep Strategies That Work for Autistic Kids',
+        desc: 'Why autistic children struggle with sleep and evidence-based strategies to build a bedtime routine that actually leads to rest.',
+        board: 'Autism Parenting Tips / Sleep',
+        folder: 'pinterest',
+        file: 'pin-62-blog-sleep-strategies.png',
+        blogUrl: '/blog/autism-sleep-strategies',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-meltdown-tantrum',
+        title: 'Meltdown vs. Tantrum: What\'s the Difference',
+        desc: 'Your child is not giving you a hard time. They are having a hard time. Here is the neurological difference and how to respond to each.',
+        board: 'Autism Parenting Tips / Meltdown Support',
+        folder: 'pinterest',
+        file: 'pin-63-blog-meltdown-tantrum.png',
+        blogUrl: '/blog/autism-meltdown-vs-tantrum',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-waitlist',
+        title: 'Autism Therapy Waitlists: What to Do While You Wait',
+        desc: 'Stuck on a 6-month therapy waitlist? Here is exactly what you can do right now to support your child while waiting for services.',
+        board: 'Autism Parenting Tips / Getting Started',
+        folder: 'pinterest',
+        file: 'pin-64-blog-waitlist.png',
+        blogUrl: '/blog/autism-therapy-waitlist',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      },
+      {
+        id: 'blog-self-care',
+        title: 'Self-Care for Autism Parents: Practical Strategies That Work',
+        desc: 'Self-care advice for autism parents usually sounds like it was written by someone who has never spent an hour on hold with insurance. Here is what actually helps.',
+        board: 'Autism Parenting Tips / Self-Care',
+        folder: 'pinterest',
+        file: 'pin-65-blog-self-care.png',
+        blogUrl: '/blog/self-care-autism-parents',
+        category: 'blogs',
+        hasImage: true,
+        isPinterestNative: true
+      }
+    ];
+
+    // Render content
+    function renderContent(filter = 'all') {
+      const grid = document.getElementById('content-grid');
+      grid.innerHTML = '';
+      
+      let filtered = pinterestData;
+      if (filter !== 'all') {
+        if (filter === 'has-image') {
+          filtered = pinterestData.filter(p => p.hasImage);
+        } else {
+          filtered = pinterestData.filter(p => p.category === filter);
+        }
+      }
+      
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="no-results">No pins found for this filter.</div>';
+        return;
+      }
+      
+      // Group by category
+      const categories = {
+        'pinterest-ready': { label: '✨ Pinterest-Ready (1000×1500)', items: [] },
+        'day-30': { label: '📅 30-Day Starter Calendar', items: [] },
+        'day-60': { label: '📅 60-Day Calendar', items: [] },
+        'beacon': { label: '🧭 Beacon Launch', items: [] },
+        'blogs': { label: '📖 Blog Post Graphics', items: [] }
+      };
+      
+      filtered.forEach(pin => {
+        if (categories[pin.category]) {
+          categories[pin.category].items.push(pin);
+        }
+      });
+      
+      // Render each category
+      for (const [key, cat] of Object.entries(categories)) {
+        if (cat.items.length === 0) continue;
+        
+        // Section header
+        const header = document.createElement('div');
+        header.className = 'section-header';
+        header.innerHTML = `<h2>${cat.label} (${cat.items.length})</h2>`;
+        grid.appendChild(header);
+        
+        // Cards
+        cat.items.forEach(pin => {
+          const card = createPinCard(pin);
+          grid.appendChild(card);
+        });
+      }
+      
+      // Update stats
+      updateStats();
+    }
+    
+    function createPinCard(pin) {
+      const card = document.createElement('div');
+      card.className = 'pin-card';
+      card.dataset.category = pin.category;
+      
+      // Determine image path
+      let imgPath = '';
+      if (pin.isPinterestNative && pin.file) {
+        imgPath = `content/${pin.folder}/${pin.file}`;
+      } else if (pin.imageType === 'pinterest') {
+        imgPath = `content/${pin.folder}/slide-01-cover-pinterest.png`;
+      } else if (pin.folder) {
+        imgPath = `content/${pin.folder}/slide-01-cover.png`;
+      }
+      
+      // Badge class
+      let badgeClass = pin.category;
+      let badgeText = pin.category === 'pinterest-ready' ? '✨ Ready' :
+                      pin.category === 'beacon' ? 'Beacon' : 
+                      pin.category === 'day-30' ? `30-Day` :
+                      pin.category === 'day-60' ? `Day ${pin.day}` :
+                      pin.category === 'reel' ? 'Reel' :
+                      pin.category === 'blogs' ? '📖 Blog' : 'Personal';
+      
+      card.innerHTML = `
+        <div class="pin-image">
+          ${pin.hasImage ? 
+            `<img src="${imgPath}" alt="${pin.title}" onerror="this.parentElement.innerHTML='<div class=placeholder>📌</div>'">` :
+            '<div class="placeholder">📌</div>'
+          }
+          <span class="pin-badge ${badgeClass}">${badgeText}</span>
+        </div>
+        <div class="pin-content">
+          <div class="pin-title">${pin.title}</div>
+          <div class="pin-desc">${pin.desc}</div>
+          ${pin.blogUrl ? `<div class="pin-blog-url">🔗 spectrumunlocked.com${pin.blogUrl}</div>` : ''}
+          <div class="pin-board">📍 ${pin.board}</div>
+          <div class="pin-actions">
+            <button class="pin-btn copy" onclick="copyPin('${pin.id}')">📋 Copy All</button>
+            ${pin.hasImage ? `<a href="${imgPath}" download class="pin-btn download">⬇️ Download</a>` : ''}
+          </div>
+        </div>
+      `;
+      
+      // Store data for copy
+      card.dataset.title = pin.title;
+      card.dataset.desc = pin.desc;
+      card.dataset.board = pin.board;
+      card.id = `pin-${pin.id}`;
+      
+      return card;
+    }
+    
+    function copyPin(id) {
+      const card = document.getElementById(`pin-${id}`);
+      const text = `Title: ${card.dataset.title}\n\nDescription: ${card.dataset.desc}\n\nBoard: ${card.dataset.board}`;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('✓ Copied title, description & board!');
+      });
+    }
+    
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+    
+    function updateStats() {
+      document.getElementById('stat-total').textContent = pinterestData.length;
+      document.getElementById('stat-pinterest-ready').textContent = pinterestData.filter(p => p.category === 'pinterest-ready').length;
+      document.getElementById('stat-30day').textContent = pinterestData.filter(p => p.category === 'day-30').length;
+      document.getElementById('stat-60day').textContent = pinterestData.filter(p => p.category === 'day-60').length;
+      document.getElementById('stat-beacon').textContent = pinterestData.filter(p => p.category === 'beacon').length;
+    }
+    
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderContent(btn.dataset.filter);
+      });
+    });
+    
+    // Initial render
+    renderContent();
+  </script>
+</body>
+</html>
+<!-- Updated Thu Apr 16 10:40:16 EDT 2026 -->

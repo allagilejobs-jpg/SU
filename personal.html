@@ -9,12 +9,12 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #1a1a2e;
+      background: #2a004a;
       color: #eee;
       min-height: 100vh;
     }
     .main-nav {
-      background: #0f0f1a;
+      background: #1f0033;
       padding: 15px 20px;
       display: flex;
       justify-content: center;
@@ -34,26 +34,26 @@
       transition: all 0.2s;
     }
     .main-nav a:hover, .main-nav a.active {
-      background: #4A90A4;
+      background: #18A8F1;
       color: white;
     }
     .nav-dropdown { position: relative; }
     .dropdown-toggle { cursor: pointer; }
     .dropdown-menu {
       display: none; position: absolute; right: 0; top: 100%;
-      background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px;
+      background: #1f0033; border: 1px solid #2a2a4a; border-radius: 12px;
       padding: 15px; min-width: 280px; max-height: 70vh; overflow-y: auto;
       z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
     .nav-dropdown:hover .dropdown-menu, .dropdown-menu:hover { display: block; }
     .dropdown-group { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #2a2a4a; }
     .dropdown-group:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .dropdown-label { color: #E8B86D; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
+    .dropdown-label { color: #FDB03E; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
     .dropdown-menu a { display: block; color: #ccc; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-    .dropdown-menu a:hover { background: #4A90A4; color: white; }
+    .dropdown-menu a:hover { background: #18A8F1; color: white; }
 
     .header {
-      background: linear-gradient(135deg, #4A90A4 0%, #2C5F6E 50%, #0f3460 100%);
+      background: linear-gradient(135deg, #18A8F1 0%, #0F7BB3 50%, #3a005f 100%);
       padding: 60px 20px;
       text-align: center;
     }
@@ -62,7 +62,7 @@
       font-size: 3.2rem;
       margin-bottom: 15px;
     }
-    .header h1 span { color: #E8B86D; font-style: italic; }
+    .header h1 span { color: #FDB03E; font-style: italic; }
     .header p { opacity: 0.9; font-size: 1.15rem; max-width: 700px; margin: 0 auto 20px; line-height: 1.5; }
     .header .badge {
       background: rgba(255,255,255,0.12);
@@ -77,13 +77,13 @@
     .container { max-width: 1400px; margin: 0 auto; padding: 50px 20px; }
 
     .intro {
-      background: #16213e;
+      background: #52008C;
       border-radius: 16px;
       padding: 30px 35px;
       margin-bottom: 40px;
-      border-left: 4px solid #E8B86D;
+      border-left: 4px solid #FDB03E;
     }
-    .intro h2 { font-family: 'Playfair Display', serif; color: #E8B86D; margin-bottom: 12px; font-size: 1.5rem; }
+    .intro h2 { font-family: 'Playfair Display', serif; color: #FDB03E; margin-bottom: 12px; font-size: 1.5rem; }
     .intro p { line-height: 1.6; opacity: 0.9; }
 
     .grid {
@@ -93,7 +93,7 @@
     }
 
     .post-card {
-      background: #16213e;
+      background: #52008C;
       border-radius: 16px;
       overflow: hidden;
       cursor: pointer;
@@ -103,10 +103,10 @@
     .post-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-      border-color: #E8B86D;
+      border-color: #FDB03E;
     }
-    .post-card.template-quote { border-left: 4px solid #E8B86D; }
-    .post-card.template-content_box { border-left: 4px solid #4A90A4; }
+    .post-card.template-quote { border-left: 4px solid #FDB03E; }
+    .post-card.template-content_box { border-left: 4px solid #18A8F1; }
 
     .post-image {
       width: 100%;
@@ -119,8 +119,8 @@
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(232, 184, 109, 0.95);
-      color: #1a1a2e;
+      background: rgba(253, 176, 62, 0.95);
+      color: #2a004a;
       width: 36px;
       height: 36px;
       border-radius: 50%;
@@ -135,7 +135,7 @@
       top: 12px;
       right: 12px;
       background: rgba(0,0,0,0.7);
-      color: #E8B86D;
+      color: #FDB03E;
       padding: 5px 12px;
       border-radius: 20px;
       font-size: 11px;
@@ -148,7 +148,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.4rem;
       font-weight: 700;
-      color: #E8B86D;
+      color: #FDB03E;
       margin-bottom: 8px;
       line-height: 1.2;
     }
@@ -176,7 +176,7 @@
     }
     .modal-overlay.active { display: flex; }
     .modal {
-      background: #16213e;
+      background: #52008C;
       border-radius: 20px;
       max-width: 900px;
       width: 100%;
@@ -185,15 +185,15 @@
     }
     .modal-header {
       padding: 25px 30px;
-      background: #0f3460;
+      background: #3a005f;
       display: flex;
       align-items: center;
       gap: 18px;
     }
     .modal-num {
       width: 50px; height: 50px;
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -250,19 +250,19 @@
       transition: opacity 0.2s;
     }
     .modal-btn:hover { opacity: 0.85; }
-    .modal-btn.primary { background: #E8B86D; color: #1a1a2e; }
-    .modal-btn.secondary { background: #4A90A4; color: white; }
+    .modal-btn.primary { background: #FDB03E; color: #2a004a; }
+    .modal-btn.secondary { background: #18A8F1; color: white; }
 
     .modal-section { margin-bottom: 25px; }
     .modal-section h3 {
-      color: #E8B86D;
+      color: #FDB03E;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 12px;
     }
     .caption-box {
-      background: #0f3460;
+      background: #3a005f;
       border-radius: 12px;
       padding: 20px 22px;
       font-size: 14px;
@@ -274,7 +274,7 @@
     .copy-btn {
       margin-top: 8px;
       padding: 6px 14px;
-      background: #4A90A4;
+      background: #18A8F1;
       color: white;
       border: none;
       border-radius: 6px;
@@ -459,7 +459,7 @@
         const btn = event.target;
         const original = btn.textContent;
         btn.textContent = '✓ Copied!';
-        btn.style.background = '#27AE60';
+        btn.style.background = '#18A8F1';
         setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 2000);
       });
     }

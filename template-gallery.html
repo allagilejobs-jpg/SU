@@ -10,14 +10,14 @@
     
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f3460 100%);
+      background: linear-gradient(135deg, #1f0033 0%, #2a004a 50%, #3a005f 100%);
       color: #fff;
       min-height: 100vh;
     }
     
     /* Nav */
     .main-nav {
-      background: #0f0f1a;
+      background: #1f0033;
       padding: 15px 20px;
       display: flex;
       justify-content: center;
@@ -37,23 +37,23 @@
       transition: all 0.2s;
     }
     .main-nav a:hover, .main-nav a.active {
-      background: #4A90A4;
+      background: #18A8F1;
       color: white;
     }
     .nav-dropdown { position: relative; }
     .dropdown-toggle { cursor: pointer; }
     .dropdown-menu {
       display: none; position: absolute; right: 0; top: 100%;
-      background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px;
+      background: #1f0033; border: 1px solid #2a2a4a; border-radius: 12px;
       padding: 15px; min-width: 280px; max-height: 70vh; overflow-y: auto;
       z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
     .nav-dropdown:hover .dropdown-menu, .dropdown-menu:hover { display: block; }
     .dropdown-group { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #2a2a4a; }
     .dropdown-group:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .dropdown-label { color: #E8B86D; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
+    .dropdown-label { color: #FDB03E; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; padding: 0 10px; }
     .dropdown-menu a { display: block; color: #ccc; text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-    .dropdown-menu a:hover { background: #4A90A4; color: white; }
+    .dropdown-menu a:hover { background: #18A8F1; color: white; }
     
     /* Hero Section */
     .hero {
@@ -67,7 +67,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 48px;
       margin-bottom: 16px;
-      color: #E8B86D;
+      color: #FDB03E;
     }
     
     .hero p {
@@ -78,9 +78,9 @@
     
     .template-count {
       display: inline-block;
-      background: rgba(39, 174, 96, 0.2);
-      border: 1px solid rgba(39, 174, 96, 0.3);
-      color: #27AE60;
+      background: rgba(24, 168, 241, 0.2);
+      border: 1px solid rgba(24, 168, 241, 0.3);
+      color: #18A8F1;
       padding: 8px 20px;
       border-radius: 50px;
       font-size: 14px;
@@ -103,7 +103,7 @@
     
     /* Template Card */
     .template-card {
-      background: rgba(26, 26, 46, 0.8);
+      background: rgba(42, 0, 74, 0.8);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 20px;
       overflow: hidden;
@@ -116,14 +116,14 @@
     }
     
     .template-card.new {
-      border-color: rgba(39, 174, 96, 0.4);
+      border-color: rgba(24, 168, 241, 0.4);
     }
     
     .new-badge {
       position: absolute;
       top: 12px;
       right: 12px;
-      background: #27AE60;
+      background: #18A8F1;
       color: #fff;
       padding: 4px 12px;
       border-radius: 20px;
@@ -135,7 +135,7 @@
     /* Preview Area */
     .template-preview {
       position: relative;
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      background: linear-gradient(135deg, #2a004a, #52008C, #3a005f);
       aspect-ratio: 4/5;
       display: flex;
       align-items: center;
@@ -160,8 +160,8 @@
       text-align: center;
     }
     .preview-cover .badge {
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       padding: 6px 16px;
       border-radius: 20px;
       font-size: 10px;
@@ -180,21 +180,21 @@
       color: rgba(255,255,255,0.7);
     }
     .preview-cover .cta {
-      color: #4A90A4;
+      color: #18A8F1;
       font-size: 11px;
       margin-top: 20px;
     }
     
     .preview-myth .myth-box {
-      background: rgba(231, 76, 60, 0.15);
-      border: 2px solid #E74C3C;
+      background: rgba(204, 120, 203, 0.15);
+      border: 2px solid #CC78CB;
       border-radius: 12px;
       padding: 16px;
       margin-bottom: 16px;
       text-align: center;
     }
     .preview-myth .myth-label {
-      color: #E74C3C;
+      color: #CC78CB;
       font-size: 10px;
       font-weight: 700;
       margin-bottom: 8px;
@@ -205,13 +205,13 @@
       font-size: 14px;
     }
     .preview-myth .truth-box {
-      background: rgba(39, 174, 96, 0.15);
+      background: rgba(24, 168, 241, 0.15);
       border-radius: 12px;
       padding: 16px;
       text-align: center;
     }
     .preview-myth .truth-label {
-      color: #27AE60;
+      color: #18A8F1;
       font-size: 10px;
       font-weight: 700;
       margin-bottom: 8px;
@@ -227,12 +227,12 @@
     .preview-checklist .title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      color: #E8B86D;
+      color: #FDB03E;
       margin-bottom: 16px;
       text-align: center;
     }
     .preview-checklist .list-box {
-      background: rgba(74, 144, 164, 0.15);
+      background: rgba(24, 168, 241, 0.15);
       border-radius: 12px;
       padding: 16px;
     }
@@ -243,7 +243,7 @@
     }
     .preview-checklist .item::before {
       content: '✓ ';
-      color: #27AE60;
+      color: #18A8F1;
     }
     
     .preview-vs {
@@ -252,7 +252,7 @@
     .preview-vs .vs-title {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
-      color: #E8B86D;
+      color: #FDB03E;
       text-align: center;
       margin-bottom: 16px;
     }
@@ -268,12 +268,12 @@
       text-align: center;
     }
     .preview-vs .vs-box.left {
-      background: rgba(231, 76, 60, 0.15);
-      border: 1px solid rgba(231, 76, 60, 0.3);
+      background: rgba(204, 120, 203, 0.15);
+      border: 1px solid rgba(204, 120, 203, 0.3);
     }
     .preview-vs .vs-box.right {
-      background: rgba(74, 144, 164, 0.15);
-      border: 1px solid rgba(74, 144, 164, 0.3);
+      background: rgba(24, 168, 241, 0.15);
+      border: 1px solid rgba(24, 168, 241, 0.3);
     }
     .preview-vs .vs-box .emoji { font-size: 24px; }
     .preview-vs .vs-box .label {
@@ -291,8 +291,8 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       width: 36px;
       height: 36px;
       border-radius: 50%;
@@ -309,7 +309,7 @@
     .preview-grid .title {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
-      color: #E8B86D;
+      color: #FDB03E;
       text-align: center;
       margin-bottom: 16px;
     }
@@ -319,8 +319,8 @@
       gap: 10px;
     }
     .preview-grid .card {
-      background: rgba(39, 174, 96, 0.15);
-      border: 1px solid rgba(39, 174, 96, 0.25);
+      background: rgba(24, 168, 241, 0.15);
+      border: 1px solid rgba(24, 168, 241, 0.25);
       border-radius: 10px;
       padding: 16px;
       text-align: center;
@@ -349,8 +349,8 @@
       margin-bottom: 20px;
     }
     .preview-cta .btn {
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       padding: 10px 20px;
       border-radius: 25px;
       font-size: 11px;
@@ -365,7 +365,7 @@
     .preview-stats .label {
       font-family: 'Playfair Display', serif;
       font-size: 16px;
-      color: #E8B86D;
+      color: #FDB03E;
       margin-bottom: 20px;
     }
     .preview-stats .stat {
@@ -391,7 +391,7 @@
       left: 20px;
       font-family: 'Playfair Display', serif;
       font-size: 100px;
-      color: #E8B86D;
+      color: #FDB03E;
       opacity: 0.2;
       line-height: 1;
     }
@@ -403,7 +403,7 @@
       padding: 0 20px;
     }
     .preview-quote .attribution {
-      color: #E8B86D;
+      color: #FDB03E;
       font-size: 12px;
       margin-top: 16px;
     }
@@ -413,7 +413,7 @@
       text-align: center;
     }
     .preview-contentbox .category {
-      color: #4A90A4;
+      color: #18A8F1;
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
@@ -426,12 +426,12 @@
     .preview-contentbox .title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      color: #E8B86D;
+      color: #FDB03E;
       margin-bottom: 12px;
     }
     .preview-contentbox .box {
-      background: rgba(74, 144, 164, 0.15);
-      border: 1px solid rgba(74, 144, 164, 0.25);
+      background: rgba(24, 168, 241, 0.15);
+      border: 1px solid rgba(24, 168, 241, 0.25);
       border-radius: 12px;
       padding: 16px;
     }
@@ -447,7 +447,7 @@
     .preview-tips .title {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
-      color: #E8B86D;
+      color: #FDB03E;
       text-align: center;
       margin-bottom: 16px;
     }
@@ -458,8 +458,8 @@
       margin-bottom: 12px;
     }
     .preview-tips .num {
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -481,7 +481,7 @@
     .preview-signs .title {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
-      color: #E8B86D;
+      color: #FDB03E;
       text-align: center;
       margin-bottom: 16px;
     }
@@ -491,8 +491,8 @@
       gap: 10px;
     }
     .preview-signs .card {
-      background: rgba(231, 76, 60, 0.15);
-      border: 1px solid rgba(231, 76, 60, 0.25);
+      background: rgba(204, 120, 203, 0.15);
+      border: 1px solid rgba(204, 120, 203, 0.25);
       border-radius: 10px;
       padding: 12px;
       text-align: center;
@@ -523,7 +523,7 @@
     .template-name {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
-      color: #E8B86D;
+      color: #FDB03E;
     }
     
     .template-desc {
@@ -541,8 +541,8 @@
     }
     
     .use-case {
-      background: rgba(74, 144, 164, 0.2);
-      color: #4A90A4;
+      background: rgba(24, 168, 241, 0.2);
+      color: #18A8F1;
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 12px;
@@ -550,8 +550,8 @@
     
     .use-template-btn {
       width: 100%;
-      background: #E8B86D;
-      color: #1a1a2e;
+      background: #FDB03E;
+      color: #2a004a;
       border: none;
       padding: 14px;
       border-radius: 10px;
@@ -564,7 +564,7 @@
       text-align: center;
     }
     .use-template-btn:hover {
-      background: #d4a85d;
+      background: #E59A2A;
     }
     
     /* Footer */
@@ -576,7 +576,7 @@
     }
     
     .footer a {
-      color: #E8B86D;
+      color: #FDB03E;
       text-decoration: none;
     }
     

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    
+    .category {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid;
+    }
+    .cat-icon { font-size: 24px; }
+    .cat-title { font-size: 16px; font-weight: 700; }
+    
+    .category:nth-child(1) .cat-header { border-color: #18A8F1; }
+    .category:nth-child(1) .cat-title { color: #18A8F1; }
+    .category:nth-child(2) .cat-header { border-color: #FDB03E; }
+    .category:nth-child(2) .cat-title { color: #FDB03E; }
+    .category:nth-child(3) .cat-header { border-color: #18A8F1; }
+    .category:nth-child(3) .cat-title { color: #18A8F1; }
+    .category:nth-child(4) .cat-header { border-color: #52008C; }
+    .category:nth-child(4) .cat-title { color: #52008C; }
+    .category:nth-child(5) .cat-header { border-color: #CC78CB; }
+    .category:nth-child(5) .cat-title { color: #CC78CB; }
+    .category:nth-child(6) .cat-header { border-color: #18A8F1; }
+    .category:nth-child(6) .cat-title { color: #18A8F1; }
+    
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      line-height: 1.3;
+    }
+    .item span:first-child { color: #18A8F1; flex-shrink: 0; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 8px;
+    }
+    .brand {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🏫 School Support</div>
+    <h1 class="title">School <span>Accommodations</span><br>Beyond the IEP</h1>
+    <p class="subtitle">You can ask for more than you think</p>
+  </div>
+  
+  <div class="content">
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">🎧</span>
+        <span class="cat-title">Sensory</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>✓</span> Noise-canceling headphones</div>
+        <div class="item"><span>✓</span> Preferential seating</div>
+        <div class="item"><span>✓</span> Fidget tools allowed</div>
+        <div class="item"><span>✓</span> Sunglasses indoors</div>
+        <div class="item"><span>✓</span> Sensory breaks built in</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">⏰</span>
+        <span class="cat-title">Timing/Pace</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>✓</span> Extended time on tests</div>
+        <div class="item"><span>✓</span> Reduced homework load</div>
+        <div class="item"><span>✓</span> Breaks during work</div>
+        <div class="item"><span>✓</span> Early dismissal option</div>
+        <div class="item"><span>✓</span> Flexible due dates</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">🔄</span>
+        <span class="cat-title">Transitions</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>✓</span> Early class release</div>
+        <div class="item"><span>✓</span> Visual schedule</div>
+        <div class="item"><span>✓</span> Advance notice of changes</div>
+        <div class="item"><span>✓</span> Transition warnings</div>
+        <div class="item"><span>✓</span> Safe person to check in</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">📝</span>
+        <span class="cat-title">Academic</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>✓</span> Typed instead of written</div>
+        <div class="item"><span>✓</span> Copy of notes provided</div>
+        <div class="item"><span>✓</span> Alt assignments for group work</div>
+        <div class="item"><span>✓</span> Quiet testing space</div>
+        <div class="item"><span>✓</span> Verbal vs written options</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">👥</span>
+        <span class="cat-title">Social</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>✓</span> Lunch buddy or quiet space</div>
+        <div class="item"><span>✓</span> Recess alternatives</div>
+        <div class="item"><span>✓</span> Social skills support</div>
+        <div class="item"><span>✓</span> Safe adult check-ins</div>
+        <div class="item"><span>✓</span> Anti-bullying plan</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">💬</span>
+        <span class="cat-title">Communication</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>✓</span> Home-school notebook</div>
+        <div class="item"><span>✓</span> Written instructions</div>
+        <div class="item"><span>✓</span> Extra processing time</div>
+        <div class="item"><span>✓</span> AAC device access</div>
+        <div class="item"><span>✓</span> Check for understanding</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for your next school meeting!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

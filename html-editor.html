@@ -9,7 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f0f1a;
+      background: #1f0033;
       color: #fff;
       min-height: 100vh;
     }
@@ -23,7 +23,7 @@
     
     .header {
       grid-column: 1 / -1;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, #2a004a 0%, #52008C 100%);
       border-bottom: 1px solid rgba(255,255,255,0.1);
       display: flex;
       align-items: center;
@@ -51,7 +51,7 @@
     }
     .back-btn:hover { background: rgba(255,255,255,0.2); }
     .header h1 { font-size: 18px; font-weight: 600; }
-    .header h1 .day { color: #E8B86D; }
+    .header h1 .day { color: #FDB03E; }
     .header-actions { display: flex; gap: 12px; }
     
     .btn {
@@ -68,7 +68,7 @@
       transition: all 0.2s;
     }
     .btn-primary {
-      background: #27AE60;
+      background: #18A8F1;
       color: #fff;
     }
     .btn-primary:hover { background: #219a52; transform: translateY(-1px); }
@@ -88,7 +88,7 @@
     }
     
     .preview-container {
-      background: #1a1a2e;
+      background: #2a004a;
       border-radius: 16px;
       box-shadow: 0 25px 80px rgba(0,0,0,0.6);
       overflow: hidden;
@@ -100,7 +100,7 @@
     }
     
     .editor-panel {
-      background: #1a1a2e;
+      background: #2a004a;
       border-left: 1px solid rgba(255,255,255,0.1);
       display: flex;
       flex-direction: column;
@@ -141,16 +141,16 @@
     }
     .slide-nav button:hover:not(:disabled) { 
       background: rgba(255,255,255,0.1); 
-      border-color: #E8B86D;
+      border-color: #FDB03E;
     }
     .slide-nav button:disabled { 
       opacity: 0.3; 
       cursor: not-allowed; 
     }
     .slide-nav .current {
-      background: rgba(232,184,109,0.15);
-      border-color: #E8B86D;
-      color: #E8B86D;
+      background: rgba(253, 176, 62, 0.15);
+      border-color: #FDB03E;
+      color: #FDB03E;
       font-weight: 600;
     }
     
@@ -195,8 +195,8 @@
     .field-group input:focus,
     .field-group textarea:focus {
       outline: none;
-      border-color: #E8B86D;
-      background: rgba(232,184,109,0.05);
+      border-color: #FDB03E;
+      background: rgba(253, 176, 62, 0.05);
     }
     .field-group .hint {
       font-size: 11px;
@@ -217,21 +217,21 @@
     }
     .status-bar .status.success {
       display: block;
-      background: rgba(39,174,96,0.15);
-      border: 1px solid rgba(39,174,96,0.3);
-      color: #27AE60;
+      background: rgba(24, 168, 241, 0.15);
+      border: 1px solid rgba(24, 168, 241, 0.3);
+      color: #18A8F1;
     }
     .status-bar .status.error {
       display: block;
-      background: rgba(231,76,60,0.15);
-      border: 1px solid rgba(231,76,60,0.3);
-      color: #E74C3C;
+      background: rgba(204, 120, 203, 0.15);
+      border: 1px solid rgba(204, 120, 203, 0.3);
+      color: #CC78CB;
     }
     .status-bar .status.loading {
       display: block;
-      background: rgba(74,144,164,0.15);
-      border: 1px solid rgba(74,144,164,0.3);
-      color: #4A90A4;
+      background: rgba(24, 168, 241, 0.15);
+      border: 1px solid rgba(24, 168, 241, 0.3);
+      color: #18A8F1;
     }
     
     .empty-state {

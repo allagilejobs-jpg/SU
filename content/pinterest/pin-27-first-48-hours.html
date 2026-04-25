@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .step {
+      display: flex;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px 25px;
+      align-items: flex-start;
+    }
+    
+    .step-time {
+      background: #18A8F1;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .step-content {
+      flex: 1;
+    }
+    .step-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 6px;
+    }
+    .step-desc {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .reminder {
+      background: linear-gradient(135deg, rgba(24, 168, 241, 0.2) 0%, rgba(253, 176, 62, 0.2) 100%);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .reminder-text {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .reminder-sub {
+      font-size: 16px;
+      color: #aaa;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">📋 Newly Diagnosed</div>
+    <h1 class="title">The First <span>48 Hours</span><br>After Diagnosis</h1>
+    <p class="subtitle">Stop the frantic 2am Googling. Start here.</p>
+  </div>
+  
+  <div class="content">
+    <div class="step">
+      <div class="step-time">Hour 1-6</div>
+      <div class="step-content">
+        <div class="step-title">Feel Your Feelings</div>
+        <div class="step-desc">Grief, relief, fear, hope — all valid. Don't make any big decisions yet. Just breathe.</div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-time">Hour 6-12</div>
+      <div class="step-content">
+        <div class="step-title">Call 3 People</div>
+        <div class="step-desc">1) Your pediatrician for referrals. 2) Your insurance for coverage info. 3) Your school district about early intervention.</div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-time">Hour 12-24</div>
+      <div class="step-content">
+        <div class="step-title">Get on Waitlists</div>
+        <div class="step-desc">Speech, OT, ABA — whatever was recommended. Don't wait until you "know more." Waitlists are 6-12 months.</div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-time">Hour 24-36</div>
+      <div class="step-content">
+        <div class="step-title">Find Your People</div>
+        <div class="step-desc">Join one Facebook group or follow autism parent accounts. You need people who GET IT.</div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-time">Hour 36-48</div>
+      <div class="step-content">
+        <div class="step-title">Take Care of YOU</div>
+        <div class="step-desc">Sleep. Eat. Hug your kid. The marathon starts now. You need to pace yourself.</div>
+      </div>
+    </div>
+    
+    <div class="reminder">
+      <div class="reminder-text">🤍 Your child is still the same kid they were yesterday.</div>
+      <div class="reminder-sub">The diagnosis is information, not a tragedy.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this to share with a newly diagnosed family</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

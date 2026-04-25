@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #CC78CB;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #CC78CB; }
+    
+    .myth-box {
+      background: rgba(204, 120, 203, 0.15);
+      border: 3px solid #CC78CB;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .myth-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #CC78CB;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .myth-text {
+      font-size: 28px;
+      font-weight: 700;
+      text-decoration: line-through;
+      color: #888;
+    }
+    
+    .truth-box {
+      background: rgba(24, 168, 241, 0.15);
+      border: 3px solid #18A8F1;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .truth-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #18A8F1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .truth-text {
+      font-size: 26px;
+      font-weight: 700;
+      color: #18A8F1;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .fact {
+      display: flex;
+      gap: 18px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px 25px;
+      align-items: center;
+    }
+    .fact-icon {
+      font-size: 40px;
+      flex-shrink: 0;
+    }
+    .fact-text {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .fact-text strong { color: #FDB03E; }
+    
+    .bottom-quote {
+      background: rgba(253, 176, 62, 0.15);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .quote-text {
+      font-size: 20px;
+      font-style: italic;
+      color: #FDB03E;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🚫 Myth Busted</div>
+    <h1 class="title">Autistic Kids <span>Feel</span><br>Emotions Deeply</h1>
+  </div>
+  
+  <div class="myth-box">
+    <div class="myth-label">✕ The Myth</div>
+    <div class="myth-text">"Autistic people don't have emotions or empathy"</div>
+  </div>
+  
+  <div class="truth-box">
+    <div class="truth-label">✓ The Truth</div>
+    <div class="truth-text">They often feel MORE intensely. They just express it differently.</div>
+  </div>
+  
+  <div class="content">
+    <div class="fact">
+      <div class="fact-icon">🌊</div>
+      <div class="fact-text"><strong>Emotional flooding is real.</strong> They feel so much it can be overwhelming and shut them down.</div>
+    </div>
+    
+    <div class="fact">
+      <div class="fact-icon">🎭</div>
+      <div class="fact-text"><strong>Expression ≠ Experience.</strong> A flat face doesn't mean a flat heart. They may feel deeply but not show it "typically."</div>
+    </div>
+    
+    <div class="fact">
+      <div class="fact-icon">🤝</div>
+      <div class="fact-text"><strong>Hyper-empathy is common.</strong> Many autistic people absorb others' emotions intensely, sometimes painfully.</div>
+    </div>
+    
+    <div class="fact">
+      <div class="fact-icon">⏰</div>
+      <div class="fact-text"><strong>Delayed processing happens.</strong> They might cry about something hours or days later once they've processed it.</div>
+    </div>
+    
+    <div class="bottom-quote">
+      <div class="quote-text">"Just because I don't express it the way you expect doesn't mean I don't feel it."</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save & share to bust this harmful myth</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #2a004a 0%, #52008C 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
+    .blog-badge { display: inline-block; background: #52008C; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .title { font-size: 48px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+    .title span { color: #52008C; }
+    .subtitle { font-size: 18px; color: #aaa; }
+    .quote { background: rgba(82, 0, 140, 0.15); border-left: 5px solid #52008C; border-radius: 0 16px 16px 0; padding: 20px; margin-bottom: 25px; font-size: 20px; font-style: italic; }
+    .content { flex: 1; display: flex; flex-direction: column; gap: 18px; }
+    .point { display: flex; gap: 18px; background: rgba(255,255,255,0.05); border-radius: 16px; padding: 22px; align-items: flex-start; }
+    .point-icon { font-size: 36px; flex-shrink: 0; }
+    .point-content { flex: 1; }
+    .point-title { font-size: 20px; font-weight: 700; color: #FDB03E; margin-bottom: 5px; }
+    .point-desc { font-size: 16px; color: #aaa; line-height: 1.4; }
+    .read-box { background: linear-gradient(135deg, #52008C 0%, #7D3C98 100%); border-radius: 16px; padding: 25px; text-align: center; margin-top: 15px; }
+    .read-text { font-size: 22px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
+    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title">Finding Your <span>Village</span></h1>
+    <p class="subtitle">In an isolated world</p>
+  </div>
+  <div class="quote">"You don't have to do this alone."</div>
+  <div class="content">
+    <div class="point">
+      <div class="point-icon">💻</div>
+      <div class="point-content">
+        <div class="point-title">Online Communities</div>
+        <div class="point-desc">Facebook groups, Reddit r/Autism_Parenting, Discord servers. 24/7 support from people who get it.</div>
+      </div>
+    </div>
+    <div class="point">
+      <div class="point-icon">🏠</div>
+      <div class="point-content">
+        <div class="point-title">Local Parent Groups</div>
+        <div class="point-desc">Search "[your city] autism parent support group" — meetups, playdates, real friendships.</div>
+      </div>
+    </div>
+    <div class="point">
+      <div class="point-icon">🏥</div>
+      <div class="point-content">
+        <div class="point-title">Therapy Waiting Rooms</div>
+        <div class="point-desc">Some of your best connections will come from the parents sitting next to you.</div>
+      </div>
+    </div>
+    <div class="point">
+      <div class="point-icon">💚</div>
+      <div class="point-content">
+        <div class="point-title">Building Real Connections</div>
+        <div class="point-desc">Vulnerability first. Share your hard days. The right people will show up.</div>
+      </div>
+    </div>
+  </div>
+  <div class="read-box">
+    <div class="read-text">📖 Read Where to Find Support</div>
+    <div class="read-url">spectrumunlocked.com/blog/finding-your-village</div>
+  </div>
+  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
+</body>
+</html>

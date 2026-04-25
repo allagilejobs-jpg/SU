@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-badge {
+      display: inline-block;
+      background: #CC78CB;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .header { text-align: center; margin-bottom: 30px; }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+    .title span { color: #CC78CB; }
+    .subtitle { font-size: 20px; color: #aaa; line-height: 1.4; }
+    .content { flex: 1; display: flex; flex-direction: column; gap: 18px; }
+    .point {
+      display: flex;
+      gap: 18px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px;
+      align-items: flex-start;
+    }
+    .point-icon { font-size: 36px; flex-shrink: 0; }
+    .point-content { flex: 1; }
+    .point-title { font-size: 20px; font-weight: 700; color: #FDB03E; margin-bottom: 5px; }
+    .point-desc { font-size: 16px; color: #aaa; line-height: 1.4; }
+    .read-box {
+      background: linear-gradient(135deg, #CC78CB 0%, #C0392B 100%);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .read-text { font-size: 22px; font-weight: 700; }
+    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .brand { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blog-badge">📖 Blog Post</div>
+    <h1 class="title">Autism Parent <span>Burnout</span> Is Real</h1>
+    <p class="subtitle">It doesn't mean you're failing. It means you're human.</p>
+  </div>
+  
+  <div class="content">
+    <div class="point">
+      <div class="point-icon">😫</div>
+      <div class="point-content">
+        <div class="point-title">It's 2am and No One Is Awake</div>
+        <div class="point-desc">Your child won't sleep, no therapist is answering, and you're running on empty. That's burnout.</div>
+      </div>
+    </div>
+    <div class="point">
+      <div class="point-icon">⚡</div>
+      <div class="point-content">
+        <div class="point-title">Why It Hits Autism Parents Harder</div>
+        <div class="point-desc">Constant advocacy, sensory vigilance, therapy schedules, insurance fights. The load never stops.</div>
+      </div>
+    </div>
+    <div class="point">
+      <div class="point-icon">🚨</div>
+      <div class="point-content">
+        <div class="point-title">Warning Signs You're Burned Out</div>
+        <div class="point-desc">Irritability, detachment, physical exhaustion, dreading each day. These aren't character flaws.</div>
+      </div>
+    </div>
+    <div class="point">
+      <div class="point-icon">💚</div>
+      <div class="point-content">
+        <div class="point-title">Where to Find Real Help</div>
+        <div class="point-desc">Respite care, parent support groups, therapy for YOU, and asking for help without guilt.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="read-box">
+    <div class="read-text">📖 Read the Full Guide</div>
+    <div class="read-url">spectrumunlocked.com/blog/autism-parent-burnout</div>
+  </div>
+  
+  <div class="footer">
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

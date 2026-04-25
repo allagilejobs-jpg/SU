@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #FDB03E;
+      color: #2a004a;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #FDB03E; }
+    .subtitle {
+      font-size: 18px;
+      color: #aaa;
+    }
+    
+    .resources {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    
+    .category {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid;
+    }
+    .cat-icon { font-size: 24px; }
+    .cat-title { font-size: 16px; font-weight: 700; }
+    
+    .category:nth-child(1) .cat-header { border-color: #18A8F1; }
+    .category:nth-child(1) .cat-title { color: #18A8F1; }
+    .category:nth-child(2) .cat-header { border-color: #FDB03E; }
+    .category:nth-child(2) .cat-title { color: #FDB03E; }
+    .category:nth-child(3) .cat-header { border-color: #18A8F1; }
+    .category:nth-child(3) .cat-title { color: #18A8F1; }
+    .category:nth-child(4) .cat-header { border-color: #52008C; }
+    .category:nth-child(4) .cat-title { color: #52008C; }
+    .category:nth-child(5) .cat-header { border-color: #CC78CB; }
+    .category:nth-child(5) .cat-title { color: #CC78CB; }
+    .category:nth-child(6) .cat-header { border-color: #18A8F1; }
+    .category:nth-child(6) .cat-title { color: #18A8F1; }
+    
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .item {
+      font-size: 14px;
+      line-height: 1.3;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .item span { color: #FDB03E; flex-shrink: 0; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">📚 Bookmark This</div>
+    <h1 class="title">Your <span>Autism Parent</span><br>Resource Toolkit</h1>
+    <p class="subtitle">Everything you need in one place</p>
+  </div>
+  
+  <div class="resources">
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">🏢</span>
+        <span class="cat-title">Organizations</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>→</span> Autism Society of America</div>
+        <div class="item"><span>→</span> ASAN (Autistic Self Advocacy Network)</div>
+        <div class="item"><span>→</span> The Arc</div>
+        <div class="item"><span>→</span> Local autism societies</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">📖</span>
+        <span class="cat-title">Books</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>→</span> Uniquely Human (Barry Prizant)</div>
+        <div class="item"><span>→</span> NeuroTribes (Steve Silberman)</div>
+        <div class="item"><span>→</span> The Reason I Jump</div>
+        <div class="item"><span>→</span> Unmasking Autism (Devon Price)</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">📱</span>
+        <span class="cat-title">Apps</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>→</span> Visual Schedule apps</div>
+        <div class="item"><span>→</span> AAC apps (Proloquo2Go)</div>
+        <div class="item"><span>→</span> Calm/Breathe for Kids</div>
+        <div class="item"><span>→</span> Time Timer</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">🎧</span>
+        <span class="cat-title">Podcasts</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>→</span> Autism in Real Life</div>
+        <div class="item"><span>→</span> The Autism Helper</div>
+        <div class="item"><span>→</span> Embracing Autism</div>
+        <div class="item"><span>→</span> Adulting on the Spectrum</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">👥</span>
+        <span class="cat-title">Communities</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>→</span> Facebook parent groups</div>
+        <div class="item"><span>→</span> Reddit r/autism_parenting</div>
+        <div class="item"><span>→</span> Local support groups</div>
+        <div class="item"><span>→</span> Instagram autism community</div>
+      </div>
+    </div>
+    
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-icon">⚖️</span>
+        <span class="cat-title">Legal/Advocacy</span>
+      </div>
+      <div class="items">
+        <div class="item"><span>→</span> Wrightslaw (IEP/504)</div>
+        <div class="item"><span>→</span> Disability Rights organizations</div>
+        <div class="item"><span>→</span> Parent Training Centers</div>
+        <div class="item"><span>→</span> State advocacy offices</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Bookmark this toolkit!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

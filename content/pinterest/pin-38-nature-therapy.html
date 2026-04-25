@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .benefits {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .benefit {
+      display: flex;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      align-items: center;
+      border-left: 5px solid #18A8F1;
+    }
+    
+    .benefit-icon {
+      font-size: 45px;
+      flex-shrink: 0;
+    }
+    
+    .benefit-content {
+      flex: 1;
+    }
+    .benefit-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #18A8F1;
+      margin-bottom: 6px;
+    }
+    .benefit-desc {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .ideas-box {
+      background: rgba(24, 168, 241, 0.15);
+      border-radius: 20px;
+      padding: 25px;
+      margin-top: 15px;
+    }
+    .ideas-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #18A8F1;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .ideas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .idea {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+    .idea span { color: #18A8F1; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🌿 Free Therapy</div>
+    <h1 class="title"><span>Nature</span> Therapy<br>for Autistic Kids</h1>
+    <p class="subtitle">Free, effective, and accessible sensory regulation</p>
+  </div>
+  
+  <div class="benefits">
+    <div class="benefit">
+      <div class="benefit-icon">🧘</div>
+      <div class="benefit-content">
+        <div class="benefit-title">Natural Sensory Regulation</div>
+        <div class="benefit-desc">Wind, water, leaves, dirt - nature provides gentle, unpredictable sensory input that calms the nervous system</div>
+      </div>
+    </div>
+    
+    <div class="benefit">
+      <div class="benefit-icon">🔇</div>
+      <div class="benefit-content">
+        <div class="benefit-title">Escape Artificial Overload</div>
+        <div class="benefit-desc">No fluorescent lights, no crowds, no beeping machines. Natural sounds are easier to process.</div>
+      </div>
+    </div>
+    
+    <div class="benefit">
+      <div class="benefit-icon">🏃</div>
+      <div class="benefit-content">
+        <div class="benefit-title">Movement Without Rules</div>
+        <div class="benefit-desc">No "sit still" or "quiet hands." Kids can run, climb, stim freely without judgment.</div>
+      </div>
+    </div>
+    
+    <div class="benefit">
+      <div class="benefit-icon">😌</div>
+      <div class="benefit-content">
+        <div class="benefit-title">Reduces Anxiety & Meltdowns</div>
+        <div class="benefit-desc">Studies show time in nature lowers cortisol and improves emotional regulation.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="ideas-box">
+    <div class="ideas-title">🌳 Simple Nature Activities</div>
+    <div class="ideas-grid">
+      <div class="idea"><span>✓</span> Backyard sensory walk</div>
+      <div class="idea"><span>✓</span> Collecting rocks/leaves</div>
+      <div class="idea"><span>✓</span> Water play (creek, puddles)</div>
+      <div class="idea"><span>✓</span> Cloud watching</div>
+      <div class="idea"><span>✓</span> Digging in dirt</div>
+      <div class="idea"><span>✓</span> Bird/bug observation</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for your sensory toolkit</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .subtitle {
+      font-size: 24px;
+      color: #FDB03E;
+      font-weight: 600;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    .section-icon { font-size: 24px; }
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .why .section-title { color: #FDB03E; }
+    .readiness .section-title { color: #18A8F1; }
+    .strategies .section-title { color: #18A8F1; }
+    
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+    }
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.3;
+    }
+    .item .icon { flex-shrink: 0; }
+    
+    .strategies .items {
+      grid-template-columns: 1fr;
+    }
+    
+    .remember-box {
+      background: rgba(82, 0, 140, 0.15);
+      border: 2px solid #52008C;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+    .remember-title {
+      color: #52008C;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .remember-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .remember-item {
+      background: rgba(0,0,0,0.3);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .message {
+      font-size: 22px;
+      font-weight: 700;
+      color: #18A8F1;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🚽 No Pressure Guide</div>
+    <h1 class="title">Potty Training<br>an Autistic Child</h1>
+    <p class="subtitle">A Different Timeline — And That's OK</p>
+  </div>
+  
+  <div class="content">
+    <div class="section why">
+      <div class="section-header">
+        <span class="section-icon">🧠</span>
+        <span class="section-title">WHY IT TAKES LONGER</span>
+      </div>
+      <div class="items">
+        <div class="item"><span class="icon">•</span> Interoception challenges (sensing "I need to go")</div>
+        <div class="item"><span class="icon">•</span> Transition anxiety from diapers</div>
+        <div class="item"><span class="icon">•</span> Sensory issues (cold seat, flushing sounds)</div>
+        <div class="item"><span class="icon">•</span> Routine disruption is hard</div>
+      </div>
+    </div>
+    
+    <div class="section readiness">
+      <div class="section-header">
+        <span class="section-icon">✅</span>
+        <span class="section-title">READINESS SIGNS TO LOOK FOR</span>
+      </div>
+      <div class="items">
+        <div class="item"><span class="icon">✓</span> Awareness of wet/dirty diaper</div>
+        <div class="item"><span class="icon">✓</span> Predictable bowel times</div>
+        <div class="item"><span class="icon">✓</span> Can stay dry for 1-2 hours</div>
+        <div class="item"><span class="icon">✓</span> Shows interest in bathroom</div>
+      </div>
+    </div>
+    
+    <div class="section strategies">
+      <div class="section-header">
+        <span class="section-icon">💡</span>
+        <span class="section-title">AUTISM-FRIENDLY STRATEGIES</span>
+      </div>
+      <div class="items">
+        <div class="item"><span class="icon">📋</span> Visual schedule of each step</div>
+        <div class="item"><span class="icon">⏰</span> Timed toileting (every 30-60 min)</div>
+        <div class="item"><span class="icon">🎧</span> Address sensory issues (headphones, warm seat)</div>
+        <div class="item"><span class="icon">🎁</span> Immediate rewards using special interest</div>
+        <div class="item"><span class="icon">📱</span> Social stories about using the potty</div>
+        <div class="item"><span class="icon">🧘</span> ZERO pressure. No punishment for accidents.</div>
+      </div>
+    </div>
+    
+    <div class="remember-box">
+      <div class="remember-title">📅 REMEMBER</div>
+      <div class="remember-items">
+        <span class="remember-item">Many aren't fully trained until 5-8+</span>
+        <span class="remember-item">Regression happens</span>
+        <span class="remember-item">Take breaks if distressed</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="message">💙 Your child WILL get there. Don't let anyone rush you.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

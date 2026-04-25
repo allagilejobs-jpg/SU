@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 20px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .tip-section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 20px 22px;
+    }
+    .tip-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .tip-icon {
+      font-size: 28px;
+    }
+    .tip-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .tip-section:nth-child(1) .tip-title { color: #18A8F1; }
+    .tip-section:nth-child(2) .tip-title { color: #FDB03E; }
+    .tip-section:nth-child(3) .tip-title { color: #52008C; }
+    .tip-section:nth-child(4) .tip-title { color: #18A8F1; }
+    
+    .tip-items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tip-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .tip-item span:first-child {
+      color: #18A8F1;
+      font-weight: 700;
+    }
+    
+    .pro-tip {
+      background: linear-gradient(135deg, rgba(24, 168, 241, 0.2) 0%, rgba(24, 168, 241, 0.2) 100%);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .pro-tip-label {
+      font-size: 14px;
+      color: #18A8F1;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .pro-tip-text {
+      font-size: 17px;
+      font-weight: 600;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">✈️ Travel Guide</div>
+    <h1 class="title">Traveling with an <span>Autistic Child</span></h1>
+    <p class="subtitle">Yes, you can do this. Here's how.</p>
+  </div>
+  
+  <div class="content">
+    <div class="tip-section">
+      <div class="tip-header">
+        <span class="tip-icon">🛫</span>
+        <span class="tip-title">Airport Hacks</span>
+      </div>
+      <div class="tip-items">
+        <div class="tip-item"><span>✓</span> Request TSA Cares or airline disability assistance</div>
+        <div class="tip-item"><span>✓</span> Pre-board when offered (game changer)</div>
+        <div class="tip-item"><span>✓</span> Download airport maps, practice the route visually</div>
+        <div class="tip-item"><span>✓</span> Noise-canceling headphones are non-negotiable</div>
+      </div>
+    </div>
+    
+    <div class="tip-section">
+      <div class="tip-header">
+        <span class="tip-icon">🏨</span>
+        <span class="tip-title">Hotel Tips</span>
+      </div>
+      <div class="tip-items">
+        <div class="tip-item"><span>✓</span> Call ahead about quiet rooms (away from elevators)</div>
+        <div class="tip-item"><span>✓</span> Bring familiar bedding or pillowcase from home</div>
+        <div class="tip-item"><span>✓</span> Request mini fridge for safe foods</div>
+        <div class="tip-item"><span>✓</span> Pack a nightlight and white noise machine</div>
+      </div>
+    </div>
+    
+    <div class="tip-section">
+      <div class="tip-header">
+        <span class="tip-icon">🎒</span>
+        <span class="tip-title">Packing Essentials</span>
+      </div>
+      <div class="tip-items">
+        <div class="tip-item"><span>✓</span> Safe snacks (airports are sensory nightmares)</div>
+        <div class="tip-item"><span>✓</span> Favorite comfort items/stim toys</div>
+        <div class="tip-item"><span>✓</span> Tablet loaded with familiar shows</div>
+        <div class="tip-item"><span>✓</span> Visual schedule of the trip</div>
+      </div>
+    </div>
+    
+    <div class="tip-section">
+      <div class="tip-header">
+        <span class="tip-icon">🗓️</span>
+        <span class="tip-title">Prep Strategies</span>
+      </div>
+      <div class="tip-items">
+        <div class="tip-item"><span>✓</span> Social stories about travel weeks before</div>
+        <div class="tip-item"><span>✓</span> Build in MORE downtime than you think</div>
+        <div class="tip-item"><span>✓</span> Practice "what if" scenarios</div>
+        <div class="tip-item"><span>✓</span> Have an exit plan for every activity</div>
+      </div>
+    </div>
+    
+    <div class="pro-tip">
+      <div class="pro-tip-label">💡 PRO TIP</div>
+      <div class="pro-tip-text">Theme parks offer disability passes. Ask about sensory-friendly hours. Many have quiet rooms.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for your next trip!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

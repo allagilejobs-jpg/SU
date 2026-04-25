@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1000px; 
+      height: 1500px; 
+      font-family: 'Poppins', sans-serif; 
+      color: white;
+      background: linear-gradient(165deg, #2a004a 0%, #52008C 50%, #3a005f 100%);
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+      text-align: center; 
+      padding: 80px 60px;
+      position: relative; 
+      overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.08; }
+    .bg-shape-1 { width: 500px; height: 500px; background: #18A8F1; top: -150px; right: -150px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #FDB03E; bottom: 200px; left: -150px; }
+    
+    .badge { 
+      background: #18A8F1; 
+      padding: 14px 35px; 
+      border-radius: 30px; 
+      font-size: 18px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 3px;
+      margin-bottom: 50px;
+    }
+    
+    .number { 
+      font-size: 180px; 
+      font-weight: 800; 
+      color: #FDB03E;
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+    
+    .main-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 58px; 
+      font-weight: 800; 
+      line-height: 1.2; 
+      margin-bottom: 50px;
+      max-width: 850px;
+    }
+    
+    .highlight-gold { color: #FDB03E; }
+    
+    .subtitle {
+      font-size: 28px;
+      opacity: 0.85;
+      margin-bottom: 60px;
+      max-width: 750px;
+      line-height: 1.5;
+    }
+    
+    .preview-list {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 35px 45px;
+      text-align: left;
+      max-width: 800px;
+    }
+    
+    .preview-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 0;
+      font-size: 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .preview-item:last-child {
+      border-bottom: none;
+    }
+    
+    .preview-num {
+      background: #FDB03E;
+      color: #2a004a;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    
+    .footer { 
+      position: absolute; 
+      bottom: 50px; 
+      text-align: center; 
+    }
+    .handle { 
+      font-size: 22px; 
+      opacity: 0.5; 
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="badge">💡 Newly Diagnosed</div>
+  
+  <div class="number">5</div>
+  
+  <div class="main-title">
+    Things I Wish Someone <span class="highlight-gold">Told Me</span>
+  </div>
+  
+  <div class="subtitle">
+    The week my child was diagnosed
+  </div>
+  
+  <div class="preview-list">
+    <div class="preview-item">
+      <span class="preview-num">1</span>
+      <span>Therapy waitlists are LONG</span>
+    </div>
+    <div class="preview-item">
+      <span class="preview-num">2</span>
+      <span>Your pediatrician isn't the expert</span>
+    </div>
+    <div class="preview-item">
+      <span class="preview-num">3</span>
+      <span>IEPs are negotiable</span>
+    </div>
+    <div class="preview-item">
+      <span class="preview-num">4</span>
+      <span>Other parents become your village</span>
+    </div>
+    <div class="preview-item">
+      <span class="preview-num">5</span>
+      <span>Your child is still amazing</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

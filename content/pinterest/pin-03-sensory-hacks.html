@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E60023;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .hacks {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .hack {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 25px 30px;
+      border-left: 5px solid;
+    }
+    .hack:nth-child(1) { border-color: #18A8F1; }
+    .hack:nth-child(2) { border-color: #FDB03E; }
+    .hack:nth-child(3) { border-color: #18A8F1; }
+    .hack:nth-child(4) { border-color: #52008C; }
+    .hack:nth-child(5) { border-color: #CC78CB; }
+    
+    .hack-num {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .hack:nth-child(1) .hack-num { background: #18A8F1; }
+    .hack:nth-child(2) .hack-num { background: #FDB03E; color: #2a004a; }
+    .hack:nth-child(3) .hack-num { background: #18A8F1; }
+    .hack:nth-child(4) .hack-num { background: #52008C; }
+    .hack:nth-child(5) .hack-num { background: #CC78CB; }
+    
+    .hack-content {
+      flex: 1;
+    }
+    .hack-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .hack-desc {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    
+    .hack-icon {
+      font-size: 50px;
+      flex-shrink: 0;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🎧 OT-Approved</div>
+    <h1 class="title"><span>5</span> Sensory Hacks<br>That Actually Work</h1>
+    <p class="subtitle">Meltdown prevention starts here</p>
+  </div>
+  
+  <div class="hacks">
+    <div class="hack">
+      <div class="hack-num">1</div>
+      <div class="hack-content">
+        <div class="hack-title">Noise-Canceling Headphones</div>
+        <div class="hack-desc">Block overwhelming sounds in stores, schools, events</div>
+      </div>
+      <div class="hack-icon">🎧</div>
+    </div>
+    
+    <div class="hack">
+      <div class="hack-num">2</div>
+      <div class="hack-content">
+        <div class="hack-title">Sunglasses Indoors</div>
+        <div class="hack-desc">Reduce harsh fluorescent lighting that causes overload</div>
+      </div>
+      <div class="hack-icon">😎</div>
+    </div>
+    
+    <div class="hack">
+      <div class="hack-num">3</div>
+      <div class="hack-content">
+        <div class="hack-title">Fidget Tools Always Available</div>
+        <div class="hack-desc">Keeps hands busy, helps with focus and regulation</div>
+      </div>
+      <div class="hack-icon">🧸</div>
+    </div>
+    
+    <div class="hack">
+      <div class="hack-num">4</div>
+      <div class="hack-content">
+        <div class="hack-title">Visual Timer</div>
+        <div class="hack-desc">Makes time visible, reduces transition anxiety</div>
+      </div>
+      <div class="hack-icon">⏰</div>
+    </div>
+    
+    <div class="hack">
+      <div class="hack-num">5</div>
+      <div class="hack-content">
+        <div class="hack-title">Calm-Down Corner</div>
+        <div class="hack-desc">A sensory-safe space to retreat and regulate</div>
+      </div>
+      <div class="hack-icon">🏠</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save this for your sensory toolkit!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a1a2e 0%, #0f1729 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #9B59B6;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .stat {
+      font-size: 20px;
+      color: #E8B86D;
+      font-weight: 600;
+    }
+    
+    .sections {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .section-icon {
+      font-size: 30px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #4A90A4;
+    }
+    
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+    .item .icon { color: #27AE60; }
+    
+    .why-section {
+      border: 2px solid #E8B86D;
+    }
+    .why-section .section-title { color: #E8B86D; }
+    .why-section .items { grid-template-columns: 1fr; }
+    
+    .footer {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 20px;
+      font-weight: 700;
+      color: #9B59B6;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🌙 Sleep Help</div>
+    <h1 class="title">Sleep Issues in Autism:<br>What Actually Helps</h1>
+    <p class="stat">📊 50-80% of autistic kids have sleep problems</p>
+  </div>
+  
+  <div class="sections">
+    <div class="section why-section">
+      <div class="section-header">
+        <span class="section-icon">🧠</span>
+        <span class="section-title">WHY SLEEP IS HARDER</span>
+      </div>
+      <div class="items">
+        <div class="item"><span class="icon">•</span> Different melatonin production</div>
+        <div class="item"><span class="icon">•</span> Hard to wind down an active nervous system</div>
+        <div class="item"><span class="icon">•</span> Sensory sensitivities (sheets, sounds, light)</div>
+        <div class="item"><span class="icon">•</span> Co-occurring anxiety</div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🏠</span>
+        <span class="section-title">ENVIRONMENT FIXES</span>
+      </div>
+      <div class="items">
+        <div class="item"><span class="icon">✓</span> Total darkness (blackout curtains)</div>
+        <div class="item"><span class="icon">✓</span> White noise machine</div>
+        <div class="item"><span class="icon">✓</span> Weighted blanket</div>
+        <div class="item"><span class="icon">✓</span> Cool room (65-68°F)</div>
+        <div class="item"><span class="icon">✓</span> Cover all LED lights</div>
+        <div class="item"><span class="icon">✓</span> No screens 1-2h before bed</div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📋</span>
+        <span class="section-title">ROUTINE MATTERS</span>
+      </div>
+      <div class="items">
+        <div class="item"><span class="icon">✓</span> Same time every night</div>
+        <div class="item"><span class="icon">✓</span> Visual bedtime schedule</div>
+        <div class="item"><span class="icon">✓</span> Predictable sequence</div>
+        <div class="item"><span class="icon">✓</span> Same comfort items</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save for those exhausted nights!</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

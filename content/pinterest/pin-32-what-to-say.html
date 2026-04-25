@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .badge {
+      display: inline-block;
+      background: #18A8F1;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .title span { color: #18A8F1; }
+    .subtitle {
+      font-size: 18px;
+      color: #aaa;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    
+    .dont-box {
+      background: rgba(204, 120, 203, 0.1);
+      border: 2px solid #CC78CB;
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .do-box {
+      background: rgba(24, 168, 241, 0.1);
+      border: 2px solid #18A8F1;
+      border-radius: 12px;
+      padding: 18px;
+    }
+    
+    .box-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .dont-box .box-label { color: #CC78CB; }
+    .do-box .box-label { color: #18A8F1; }
+    
+    .box-text {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .box-text strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+    .dont-box strong { color: #CC78CB; }
+    .do-box strong { color: #18A8F1; }
+    .box-why {
+      font-size: 13px;
+      color: #888;
+      margin-top: 6px;
+      font-style: italic;
+    }
+    
+    .bottom-tip {
+      background: rgba(253, 176, 62, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .tip-text {
+      font-size: 18px;
+      color: #FDB03E;
+      font-weight: 600;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 8px;
+    }
+    .brand {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">💬 For Friends & Family</div>
+    <h1 class="title">What <span>TO</span> Say to<br>Autism Parents</h1>
+    <p class="subtitle">Share this with the people in your life</p>
+  </div>
+  
+  <div class="content">
+    <div class="row">
+      <div class="dont-box">
+        <div class="box-label">✕ Don't Say</div>
+        <div class="box-text">
+          <strong>"I'm so sorry"</strong>
+          <div class="box-why">Implies autism is a tragedy</div>
+        </div>
+      </div>
+      <div class="do-box">
+        <div class="box-label">✓ Say This</div>
+        <div class="box-text">
+          <strong>"Thanks for sharing with me"</strong>
+          <div class="box-why">Acknowledges trust, no judgment</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="dont-box">
+        <div class="box-label">✕ Don't Say</div>
+        <div class="box-text">
+          <strong>"They'll grow out of it"</strong>
+          <div class="box-why">Autism is lifelong; dismisses reality</div>
+        </div>
+      </div>
+      <div class="do-box">
+        <div class="box-label">✓ Say This</div>
+        <div class="box-text">
+          <strong>"How can I support you?"</strong>
+          <div class="box-why">Opens door for actual help</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="dont-box">
+        <div class="box-label">✕ Don't Say</div>
+        <div class="box-text">
+          <strong>"They don't look autistic"</strong>
+          <div class="box-why">There is no "look"; dismisses struggles</div>
+        </div>
+      </div>
+      <div class="do-box">
+        <div class="box-label">✓ Say This</div>
+        <div class="box-text">
+          <strong>"Tell me about them"</strong>
+          <div class="box-why">Shows interest in the whole child</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="dont-box">
+        <div class="box-label">✕ Don't Say</div>
+        <div class="box-text">
+          <strong>"God only gives special kids..."</strong>
+          <div class="box-why">Can feel dismissive of real struggles</div>
+        </div>
+      </div>
+      <div class="do-box">
+        <div class="box-label">✓ Say This</div>
+        <div class="box-text">
+          <strong>"You're doing a great job"</strong>
+          <div class="box-why">Simple validation goes SO far</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="dont-box">
+        <div class="box-label">✕ Don't Say</div>
+        <div class="box-text">
+          <strong>"Have you tried [random cure]?"</strong>
+          <div class="box-why">We've researched more than you know</div>
+        </div>
+      </div>
+      <div class="do-box">
+        <div class="box-label">✓ Say This</div>
+        <div class="box-text">
+          <strong>"Can I bring you dinner/coffee?"</strong>
+          <div class="box-why">Practical help > unsolicited advice</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bottom-tip">
+      <div class="tip-text">💡 When in doubt: Listen more, advise less.</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="cta">💾 Save & share with friends and family</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

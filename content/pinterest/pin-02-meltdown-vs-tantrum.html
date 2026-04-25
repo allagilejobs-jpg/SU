@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E60023;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .subtitle {
+      font-size: 22px;
+      color: #aaa;
+    }
+    
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .column {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+    }
+    .column.tantrum {
+      border: 3px solid #CC78CB;
+    }
+    .column.meltdown {
+      border: 3px solid #18A8F1;
+    }
+    
+    .column-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .column-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .column-title {
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .tantrum .column-title { color: #CC78CB; }
+    .meltdown .column-title { color: #18A8F1; }
+    
+    .point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 15px;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+    .point-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    
+    .action-section {
+      background: rgba(24, 168, 241, 0.1);
+      border: 2px solid #18A8F1;
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+    .action-title {
+      color: #18A8F1;
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .action {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+    .action .check { color: #18A8F1; }
+    
+    .footer {
+      text-align: center;
+      margin-top: auto;
+    }
+    .key-message {
+      font-size: 24px;
+      font-weight: 700;
+      color: #FDB03E;
+      margin-bottom: 10px;
+    }
+    .brand {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🌪️ Know The Difference</div>
+    <h1 class="title">Meltdown vs Tantrum</h1>
+    <p class="subtitle">They look similar but need completely different responses</p>
+  </div>
+  
+  <div class="comparison">
+    <div class="column tantrum">
+      <div class="column-header">
+        <div class="column-icon">😤</div>
+        <div class="column-title">TANTRUM</div>
+      </div>
+      <div class="point"><span class="point-icon">🎯</span> Goal-oriented behavior</div>
+      <div class="point"><span class="point-icon">👀</span> Checks for audience</div>
+      <div class="point"><span class="point-icon">🛑</span> Can stop if need is met</div>
+      <div class="point"><span class="point-icon">🧠</span> In control of actions</div>
+      <div class="point"><span class="point-icon">📍</span> Happens in specific contexts</div>
+    </div>
+    
+    <div class="column meltdown">
+      <div class="column-header">
+        <div class="column-icon">🌪️</div>
+        <div class="column-title">MELTDOWN</div>
+      </div>
+      <div class="point"><span class="point-icon">⚡</span> Overwhelm response</div>
+      <div class="point"><span class="point-icon">🧠</span> Neurological crisis</div>
+      <div class="point"><span class="point-icon">🚫</span> Cannot just "stop"</div>
+      <div class="point"><span class="point-icon">❌</span> NOT manipulation</div>
+      <div class="point"><span class="point-icon">🔋</span> Needs recovery time after</div>
+    </div>
+  </div>
+  
+  <div class="action-section">
+    <div class="action-title">✅ DURING A MELTDOWN — DO:</div>
+    <div class="actions">
+      <div class="action"><span class="check">✓</span> Stay calm yourself</div>
+      <div class="action"><span class="check">✓</span> Reduce sensory input</div>
+      <div class="action"><span class="check">✓</span> Give space if safe</div>
+      <div class="action"><span class="check">✓</span> Use few, simple words</div>
+      <div class="action"><span class="check">✓</span> Just BE there</div>
+      <div class="action"><span class="check">✓</span> Give recovery time after</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="key-message">💙 Meltdowns aren't misbehavior. They're a sign your child needs SUPPORT.</div>
+    <div class="brand">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>
