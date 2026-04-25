@@ -69,6 +69,18 @@ Drop a 💜 if you're working on it. You're not alone.
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Mental Health and Autism: The Connection
+
+**Description:** The connection is real. The support often isn't. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Educational carousel with stats, barriers, and support
 - **CTA:** Community building via emoji drop

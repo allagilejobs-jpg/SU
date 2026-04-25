@@ -67,6 +67,18 @@ It's building body awareness, coordination, and confidence. Has PT helped your c
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Physical Therapy for Autistic Kids
+
+**Description:** More than just movement. Building body awareness, coordination, and confidence. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Therapy Options
+
+---
+
 ## Content Notes
 - **Why now:** Part of therapy deep dive series
 - **Format:** Educational carousel with practical tips

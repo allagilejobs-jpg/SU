@@ -64,6 +64,18 @@ Does your family use AAC? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Communicating with Nonverbal/Minimally Verbal Children
+
+**Description:** Not speaking does not mean not communicating. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Important topic for nonspeaking community visibility
 - **Format:** Educational carousel about AAC options and support

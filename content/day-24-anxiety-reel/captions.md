@@ -63,3 +63,16 @@ What helps your child? Share in the comments!
 ---
 
 #autism #anxiety #autismandanxiety #autismawareness #anxiouskids #neurodivergent #autismparenting #mentalhealth
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Day 24: Autism and Anxiety
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

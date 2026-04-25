@@ -62,6 +62,18 @@ Melatonin isn't the only answer. What helps YOUR child? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Sleep Issues in Autism: What Actually Helps
+
+**Description:** Melatonin isn't the only answer. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism & Sleep
+
+---
+
 ## Content Notes
 - **Why now:** Common struggle, parents desperately searching for solutions
 - **Format:** Problem-solution carousel with practical tips

@@ -15,3 +15,16 @@ Save before your next meeting.
 ## 📱 FEED CAPTION (Carousel/Image Posts)
 
 see calendar for feed caption
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Day 83: 4 IEP Rights Phrases
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

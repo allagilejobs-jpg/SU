@@ -69,6 +69,18 @@ Which one will you try first? Comment below! 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** 5 Sensory Hacks That Actually Work
+
+**Description:** OT-approved tips for meltdown prevention. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (7 slides, 1080x1920)
 - **Timing:** 3-4 seconds per slide

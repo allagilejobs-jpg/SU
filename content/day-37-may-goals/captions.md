@@ -61,6 +61,18 @@ What do YOU want to see? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** May Goals: What's Next for Our Community
+
+**Description:** New month, same mission. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism Community
+
+---
+
 ## Content Notes
 - **Why now:** May kickoff, set expectations
 - **Format:** Preview carousel with community engagement

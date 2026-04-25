@@ -59,6 +59,18 @@ Did this resonate? 💜
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** High-Masking Autism: The Hidden Struggle
+
+**Description:** "They look fine" but they're exhausted inside. Learn what masking is, why it's harmful, and signs someone is high-masking. Save this for yourself or someone you love.
+
+**Board:** Autism Parenting Tips / Understanding Autism
+
+---
+
 ## Content Notes
 - **Why it works:** High resonance with autistic adults & late-diagnosed
 - **Format:** Educational + validating

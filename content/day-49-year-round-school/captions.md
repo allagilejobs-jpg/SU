@@ -71,6 +71,18 @@ Has your child done ESY? Tell me below 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Year-Round School Options and ESY
+
+**Description:** Could Extended School Year help your autistic child? Understanding ESY and other options. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / IEP & School Advocacy
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Looking Ahead - Year-round education
 - **Format:** Educational carousel with advocacy tips

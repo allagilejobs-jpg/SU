@@ -85,6 +85,18 @@ What resource would you add to this list? Drop it below! 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Day 35: Resources Toolkit
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (6 slides, 1080x1920)
 - **Timing:** 3-4 seconds per slide

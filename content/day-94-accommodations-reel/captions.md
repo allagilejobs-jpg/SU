@@ -15,3 +15,16 @@ Save before your next meeting.
 ## 📱 FEED CAPTION (Carousel/Image Posts)
 
 see calendar for feed caption
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Day 94: 4 Day-1 Accommodations
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

@@ -40,3 +40,16 @@ One year since FJ's diagnosis.
 One year since the diagnosis.
 
 Here's what I've learned.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

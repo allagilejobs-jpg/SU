@@ -61,6 +61,18 @@ DM "IEP" for more tips!
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Neurodiversity-Affirming IEP Accommodations for Autistic Students
+
+**Description:** IEPs shouldn't teach kids to mask. Get sensory supports, communication aids, academic flexibility, and emotional accommodations that actually work. Save this checklist for your next IEP meeting.
+
+**Board:** Autism Parenting Tips / IEP & School Advocacy
+
+---
+
 ## Content Notes
 - **Why it works:** Saveable, practical resource
 - **Format:** Categorized checklist

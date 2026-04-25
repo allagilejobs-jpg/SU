@@ -66,6 +66,18 @@ A denial is not the final answer. Many families win on appeal. What's your bigge
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Insurance and Therapy Coverage
+
+**Description:** Navigating the maze of coverage for autism therapies. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Therapy Options
+
+---
+
 ## Content Notes
 - **Why now:** Practical resource for therapy coverage
 - **Format:** Educational carousel with actionable steps

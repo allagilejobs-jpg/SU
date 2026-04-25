@@ -72,6 +72,18 @@ What skill is your child working on? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Building Independence
+
+**Description:** Teaching life skills at every age. Small steps toward big autonomy. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Looking Ahead - Building independence
 - **Format:** Educational carousel with practical strategies

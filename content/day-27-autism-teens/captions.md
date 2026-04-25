@@ -66,6 +66,18 @@ Parents of autistic teens - what's your biggest challenge? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism in Teens: What Changes and What Stays the Same
+
+**Description:** Puberty + autism = a whole new journey. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Underserved age group in content, parents need this
 - **Format:** Educational carousel with practical support

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Magnet Promo Hub | Spectrum Unlocked</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
+    
+    .nav { background: #0f0f1a; padding: 14px 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav a { color: #888; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; font-size: 13px; transition: all 0.2s; }
+    .nav a:hover, .nav a.active { background: #4A90A4; color: white; }
+    
+    .header { background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%); padding: 50px 20px; text-align: center; color: #1a1a2e; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+    .header p { opacity: 0.8; font-size: 1.1rem; }
+    
+    .stats { background: #16213e; padding: 20px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 700; color: #E8B86D; }
+    .stat-label { font-size: 13px; opacity: 0.6; }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    
+    .post-card { background: #16213e; border-radius: 16px; margin-bottom: 30px; overflow: hidden; }
+    .post-card.pinned { border: 2px solid #E8B86D; }
+    
+    .post-header { background: #0f3460; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+    .post-title { font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    .post-day { background: #4A90A4; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+    .post-day.pinned { background: #E8B86D; color: #1a1a2e; }
+    .post-meta { padding: 15px 25px; color: rgba(255,255,255,0.6); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    
+    .slides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 20px 25px; }
+    .slide-item { position: relative; border-radius: 10px; overflow: hidden; background: #0a1628; }
+    .slide-item img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; transition: transform 0.2s; }
+    .slide-item:hover img { transform: scale(1.03); }
+    .slide-item.reel img { aspect-ratio: 9/16; }
+    .slide-label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); padding: 8px; font-size: 11px; text-align: center; }
+    .download-btn { position: absolute; top: 8px; right: 8px; background: #E8B86D; color: #1a1a2e; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; text-decoration: none; opacity: 0; transition: opacity 0.2s; }
+    .slide-item:hover .download-btn { opacity: 1; }
+    
+    .caption-section { padding: 20px 25px; border-top: 1px solid rgba(255,255,255,0.05); }
+    .caption-tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+    .caption-tab { padding: 8px 16px; background: #0f3460; border: none; border-radius: 8px; color: #888; font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .caption-tab.active { background: #E8B86D; color: #1a1a2e; }
+    .caption-box { background: #0a1628; border-radius: 10px; padding: 20px; }
+    .caption-box h4 { color: #E8B86D; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .caption-text { font-size: 14px; line-height: 1.7; white-space: pre-wrap; color: rgba(255,255,255,0.85); }
+    .hashtags { background: rgba(232,184,109,0.1); border-radius: 8px; padding: 12px; margin-top: 15px; font-size: 13px; color: #E8B86D; }
+    .copy-btn { background: #4A90A4; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 15px; }
+    .copy-btn:hover { background: #3a7a94; }
+    
+    .strategy-card { background: linear-gradient(135deg, rgba(74,144,164,0.2) 0%, rgba(74,144,164,0.05) 100%); border: 1px solid rgba(74,144,164,0.3); border-radius: 16px; padding: 30px; margin-top: 40px; }
+    .strategy-card h2 { color: #4A90A4; margin-bottom: 20px; }
+    .strategy-list { list-style: none; }
+    .strategy-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 15px; }
+    .strategy-list li:last-child { border: none; }
+    .strategy-list strong { color: #E8B86D; }
+    
+    footer { text-align: center; padding: 40px; color: rgba(255,255,255,0.4); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html">🏠 Home</a>
+    <a href="../beacon-launch.html">🧭 Beacon</a>
+    <a href="../calendar-30day.html">📅 30-Day</a>
+    <a href="../calendar-60day.html">📅 60-Day</a>
+    <a href="../pinterest-hub.html">📌 Pinterest</a>
+    <a href="index.html" class="active">🎯 Lead Magnet</a>
+  </nav>
+  
+  <header class="header">
+    <h1>🎯 Lead Magnet Promo Hub</h1>
+    <p>7 days of posts designed to drive email signups</p>
+  </header>
+  
+  <div class="stats">
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">Posts</div></div>
+    <div class="stat"><div class="stat-num">25+</div><div class="stat-label">Graphics</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">Captions</div></div>
+  </div>
+  
+  <div class="container">
+    
+    <!-- PINNED POST -->
+    <div class="post-card pinned">
+      <div class="post-header">
+        <div class="post-title">📌 PINNED POST - Profile Carousel</div>
+        <span class="post-day pinned">Pin to Profile</span>
+      </div>
+      <div class="post-meta">Format: 3-slide carousel | Goal: Convert every profile visitor</div>
+      <div class="slides-grid">
+        <div class="slide-item">
+          <img src="pinned-post/slide-01-cover.png" alt="Cover">
+          <a href="pinned-post/slide-01-cover.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Cover</div>
+        </div>
+        <div class="slide-item">
+          <img src="pinned-post/slide-02-whats-inside.png" alt="What's Inside">
+          <a href="pinned-post/slide-02-whats-inside.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">What's Inside</div>
+        </div>
+        <div class="slide-item">
+          <img src="pinned-post/slide-03-cta.png" alt="CTA">
+          <a href="pinned-post/slide-03-cta.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">CTA</div>
+        </div>
+      </div>
+      <div class="caption-section">
+        <div class="caption-box">
+          <h4>📸 Instagram Caption</h4>
+          <div class="caption-text" id="pinned-caption">This is why I built Spectrum Unlocked.
+
+When my son was diagnosed at 3, I couldn't find a single free resource that walked me through what to actually do. Everything was either clinical jargon or behind a paywall.
+
+So I made the guide I wish existed.
+
+It's free. It's calm. It's step by step.
+
+Link in bio to download.
+
+Pin this. Save this. Send this to anyone who needs it.</div>
+          <div class="hashtags">#autismdiagnosis #autismparent #autismmom #autismdad #newlydiagnosed #autismawareness #freeresource #autismresources</div>
+          <button class="copy-btn" onclick="copyText('pinned-caption')">📋 Copy Caption</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- POST 1 -->
+    <div class="post-card">
+      <div class="post-header">
+        <div class="post-title">📝 Post 1: Direct Promotion Carousel</div>
+        <span class="post-day">Monday</span>
+      </div>
+      <div class="post-meta">Format: 5-slide carousel | Goal: Directly promote the free guide</div>
+      <div class="slides-grid">
+        <div class="slide-item">
+          <img src="post1-direct-promo/slide-01-hook.png" alt="Hook">
+          <a href="post1-direct-promo/slide-01-hook.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Hook</div>
+        </div>
+        <div class="slide-item">
+          <img src="post1-direct-promo/slide-02-whats-inside.png" alt="What's Inside">
+          <a href="post1-direct-promo/slide-02-whats-inside.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">What's Inside</div>
+        </div>
+        <div class="slide-item">
+          <img src="post1-direct-promo/slide-03-what-not.png" alt="What NOT">
+          <a href="post1-direct-promo/slide-03-what-not.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">What NOT to Do</div>
+        </div>
+        <div class="slide-item">
+          <img src="post1-direct-promo/slide-04-why.png" alt="Why">
+          <a href="post1-direct-promo/slide-04-why.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Why I Made It</div>
+        </div>
+        <div class="slide-item">
+          <img src="post1-direct-promo/slide-05-cta.png" alt="CTA">
+          <a href="post1-direct-promo/slide-05-cta.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">CTA</div>
+        </div>
+      </div>
+      <div class="caption-section">
+        <div class="caption-box">
+          <h4>📸 Instagram Caption</h4>
+          <div class="caption-text" id="post1-caption">My son could count to 100 by age 2. Knew every letter, color, shape, and animal. On paper he looked ahead of his peers.
+
+But he wasn't talking. And the behaviors we couldn't explain kept getting worse.
+
+When the diagnosis came at 3, I panicked. I Googled for hours. Everything I found was either written by doctors who'd never lived it, or locked behind a paywall.
+
+So I made the guide I wish someone had handed me that day.
+
+It's free. It's calm. It walks you through the first 48 hours step by step - who to call, what to say, what to avoid, and how to take care of yourself while you process everything.
+
+Link in bio to download.
+
+If you know someone who just got a diagnosis - send them this post. It might be the thing that gets them through the week.</div>
+          <div class="hashtags">#autismdiagnosis #autismparent #autismmom #autismdad #newlydiagnosed #autismawareness #iep #autismresources</div>
+          <button class="copy-btn" onclick="copyText('post1-caption')">📋 Copy Caption</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- POST 2 -->
+    <div class="post-card">
+      <div class="post-header">
+        <div class="post-title">🎬 Post 2: "Things I Learned Too Late" Reel</div>
+        <span class="post-day">Tuesday</span>
+      </div>
+      <div class="post-meta">Format: Text-on-screen reel (9:16) | Goal: Emotional connection</div>
+      <div class="slides-grid">
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-01.png" alt="Slide 1">
+          <a href="post2-learned-late/slide-01.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Hook</div>
+        </div>
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-02.png" alt="Slide 2">
+          <a href="post2-learned-late/slide-02.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">IEP Meeting</div>
+        </div>
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-03.png" alt="Slide 3">
+          <a href="post2-learned-late/slide-03.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Don't Sign</div>
+        </div>
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-04.png" alt="Slide 4">
+          <a href="post2-learned-late/slide-04.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Insurance</div>
+        </div>
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-05.png" alt="Slide 5">
+          <a href="post2-learned-late/slide-05.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">School Can't Refuse</div>
+        </div>
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-06.png" alt="Slide 6">
+          <a href="post2-learned-late/slide-06.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Equal Member</div>
+        </div>
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-07.png" alt="Slide 7">
+          <a href="post2-learned-late/slide-07.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Free Guide</div>
+        </div>
+        <div class="slide-item reel">
+          <img src="post2-learned-late/slide-08.png" alt="Slide 8">
+          <a href="post2-learned-late/slide-08.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Link in Bio</div>
+        </div>
+      </div>
+      <div class="caption-section">
+        <div class="caption-box">
+          <h4>📸 Instagram Caption</h4>
+          <div class="caption-text" id="post2-caption">Every single one of these would have changed our first year.
+
+I put everything I've learned into a free guide - the first 48 hours after diagnosis, step by step. Who to call. What to say. What not to do.
+
+Free download, link in bio.</div>
+          <div class="hashtags">#autismdiagnosis #autismparent #autismmom #ieptips #autismadvocacy #specialeducation #newlydiagnosed</div>
+          <button class="copy-btn" onclick="copyText('post2-caption')">📋 Copy Caption</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- POST 3 -->
+    <div class="post-card">
+      <div class="post-header">
+        <div class="post-title">📱 Post 3: Story Sequence</div>
+        <span class="post-day">Wednesday</span>
+      </div>
+      <div class="post-meta">Format: 4-5 Instagram Stories | Goal: Direct clicks with link sticker</div>
+      <div class="caption-section">
+        <div class="caption-box">
+          <h4>📱 Story Script</h4>
+          <div class="caption-text" id="post3-caption">Story 1: Poll
+"Did you feel completely lost after your child's diagnosis?"
+[Yes, totally] [Still lost honestly]
+
+Story 2: Text slide
+"I felt the same way. So I made something."
+
+Story 3: Screenshot/mockup of PDF guide
+"The First 48 Hours Post-Diagnosis - a free step-by-step guide for parents"
+
+Story 4: Link sticker
+"Grab it free - no email required to read, but I'll send you the PDF"
+[ADD LINK STICKER to signup page]
+
+Story 5: Text slide
+"Know a parent who just got a diagnosis? Send them this. It might be the thing they need today."
+[ADD SHARE BUTTON]</div>
+          <button class="copy-btn" onclick="copyText('post3-caption')">📋 Copy Script</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- POST 4 -->
+    <div class="post-card">
+      <div class="post-header">
+        <div class="post-title">📚 Post 4: Myth-Busting Carousel</div>
+        <span class="post-day">Thursday</span>
+      </div>
+      <div class="post-meta">Format: 7-slide carousel | Goal: Provide value + drive to guide</div>
+      <div class="slides-grid">
+        <div class="slide-item">
+          <img src="post4-myth-busting/slide-01-cover.png" alt="Cover">
+          <a href="post4-myth-busting/slide-01-cover.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Cover</div>
+        </div>
+        <div class="slide-item">
+          <img src="post4-myth-busting/slide-02.png" alt="Slide 2">
+          <a href="post4-myth-busting/slide-02.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Free Evaluation</div>
+        </div>
+        <div class="slide-item">
+          <img src="post4-myth-busting/slide-03.png" alt="Slide 3">
+          <a href="post4-myth-busting/slide-03.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">IEP Request</div>
+        </div>
+        <div class="slide-item">
+          <img src="post4-myth-busting/slide-04.png" alt="Slide 4">
+          <a href="post4-myth-busting/slide-04.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Accommodations</div>
+        </div>
+        <div class="slide-item">
+          <img src="post4-myth-busting/slide-05.png" alt="Slide 5">
+          <a href="post4-myth-busting/slide-05.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Related Services</div>
+        </div>
+        <div class="slide-item">
+          <img src="post4-myth-busting/slide-06.png" alt="Slide 6">
+          <a href="post4-myth-busting/slide-06.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Equal Member</div>
+        </div>
+        <div class="slide-item">
+          <img src="post4-myth-busting/slide-07-cta.png" alt="CTA">
+          <a href="post4-myth-busting/slide-07-cta.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">CTA</div>
+        </div>
+      </div>
+      <div class="caption-section">
+        <div class="caption-box">
+          <h4>📸 Instagram Caption</h4>
+          <div class="caption-text" id="post4-caption">I didn't know any of this when we started. I sat in our first meeting and nodded along because I didn't know I was allowed to push back.
+
+Now I know. And I put everything into a free guide so you don't have to figure it out alone.
+
+Link in bio → free download.
+
+Save this post. Send it to a parent who needs it.</div>
+          <div class="hashtags">#iep #specialeducation #autismadvocacy #ieptips #autismparent #parentrights #specialneeds #autismmom #autismdad</div>
+          <button class="copy-btn" onclick="copyText('post4-caption')">📋 Copy Caption</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- POST 5 -->
+    <div class="post-card">
+      <div class="post-header">
+        <div class="post-title">💭 Post 5: Weekend Story Series</div>
+        <span class="post-day">Saturday</span>
+      </div>
+      <div class="post-meta">Format: Instagram Stories (casual) | Goal: Soft promo + connection</div>
+      <div class="caption-section">
+        <div class="caption-box">
+          <h4>📱 Story Script</h4>
+          <div class="caption-text" id="post5-caption">Story 1: Text on colored background
+"Saturday real talk: the hardest part of the autism journey for me wasn't the diagnosis. It was the silence after."
+
+Story 2:
+"Nobody was sharing their real stories. I couldn't find a single parent online who sounded like me."
+
+Story 3:
+"So I started building @spectrum_unlocked. Free tools. Free guides. Real talk."
+
+Story 4: + Link sticker
+"If you haven't grabbed the free diagnosis guide yet - it's the thing I'm most proud of building."
+[ADD LINK STICKER]</div>
+          <button class="copy-btn" onclick="copyText('post5-caption')">📋 Copy Script</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- POST 6 -->
+    <div class="post-card">
+      <div class="post-header">
+        <div class="post-title">💫 Post 6: Shareable Quote</div>
+        <span class="post-day">Sunday</span>
+      </div>
+      <div class="post-meta">Format: Bold text graphic | Goal: Maximum shares</div>
+      <div class="slides-grid">
+        <div class="slide-item">
+          <img src="post6-shareable/shareable-quote.png" alt="Quote">
+          <a href="post6-shareable/shareable-quote.png" download class="download-btn">⬇️</a>
+          <div class="slide-label">Shareable Quote</div>
+        </div>
+      </div>
+      <div class="caption-section">
+        <div class="caption-box">
+          <h4>📸 Instagram Caption</h4>
+          <div class="caption-text" id="post6-caption">This is the first line of our free diagnosis guide.
+
+If you're in the first days, weeks, or months after an autism diagnosis - I made something for you.
+
+A calm, step-by-step plan for the first 48 hours. What to do. Who to call. What NOT to do. And how to take care of yourself while you figure it all out.
+
+It's free. Link in bio.
+
+Tag a parent who needs to hear this today.</div>
+          <div class="hashtags">#autismdiagnosis #autismparent #autismmom #autismdad #newlydiagnosed #autismawareness #autismacceptance #autismlove</div>
+          <button class="copy-btn" onclick="copyText('post6-caption')">📋 Copy Caption</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- STRATEGY -->
+    <div class="strategy-card">
+      <h2>📈 Weekly Rhythm Going Forward</h2>
+      <ul class="strategy-list">
+        <li><strong>1 post</strong> that directly mentions the free guide</li>
+        <li><strong>2-3 stories</strong> per week with link stickers to the guide</li>
+        <li><strong>1 value post</strong> (carousel tip) ending with "more in our free guide, link in bio"</li>
+      </ul>
+      <p style="margin-top: 20px; color: rgba(255,255,255,0.6); font-style: italic;">The guide is your funnel. Every piece of content should eventually point to it.</p>
+    </div>
+    
+    <!-- FACEBOOK STRATEGY -->
+    <div class="strategy-card" style="margin-top: 20px;">
+      <h2>📘 Facebook Group Strategy (10 min/day)</h2>
+      <p style="margin-bottom: 15px; color: rgba(255,255,255,0.7);">Join these types of groups:</p>
+      <ul class="strategy-list">
+        <li>"Autism parents [your city/state]"</li>
+        <li>"Autism support group for parents"</li>
+        <li>"IEP help for parents"</li>
+        <li>"Newly diagnosed autism"</li>
+      </ul>
+      <div style="background: #0a1628; border-radius: 10px; padding: 20px; margin-top: 20px;">
+        <h4 style="color: #E8B86D; margin-bottom: 10px;">Sample Response Template:</h4>
+        <p style="font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.8);">"We went through the same thing. The first week was the hardest. I actually put together a free guide for the first 48 hours after diagnosis - covers who to call, what to say to the school, insurance checklist, everything. Happy to share the link if you want it."</p>
+      </div>
+      <p style="margin-top: 15px; color: #27AE60; font-weight: 600;">💡 This strategy alone can drive 5-15 signups per week from day one.</p>
+    </div>
+    
+  </div>
+  
+  <footer>
+    <p>Spectrum Unlocked | Lead Magnet Promo Campaign</p>
+    <p style="margin-top: 10px; font-size: 12px;">All captions em-dash free ✓</p>
+  </footer>
+  
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target;
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => btn.textContent = '📋 Copy Caption', 2000);
+      });
+    }
+  </script>
+</body>
+</html>

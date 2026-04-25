@@ -61,6 +61,18 @@ What's your experience?
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** The ABA Controversy: What Parents Need to Know
+
+**Description:** Is ABA therapy right for your child? Here's both sides. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Therapy Options
+
+---
+
 ## Content Notes
 - **Why it works:** Controversial = engagement, but balanced approach builds trust
 - **Format:** Both sides presented fairly

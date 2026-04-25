@@ -15,3 +15,16 @@ We see you. We hear you. We celebrate you. Share if you agree.
 ## 📱 FEED CAPTION (Carousel/Image Posts)
 
 see calendar for feed caption
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Autism Acceptance Month
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

@@ -63,6 +63,18 @@ Throw the milestone charts away. Here's what actually works 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Potty Training an Autistic Child: A Different Timeline
+
+**Description:** Forget milestone charts. Learn why autistic kids train on a different timeline, signs of readiness, and sensory-friendly strategies that actually work. No pressure, no shame.
+
+**Board:** Autism Parenting Tips / Potty Training Tips
+
+---
+
 ## Content Notes
 - **Why now:** High search volume, practical need
 - **Format:** Educational carousel with strategies

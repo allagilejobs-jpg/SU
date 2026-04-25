@@ -69,6 +69,18 @@ What brings YOU autistic joy? Tell me! 🌟
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Celebrating Autistic Joy
+
+**Description:** Because autism isn't just challenges. It's also wonder, depth, and magic. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autistic Joy
+
+---
+
 ## Content Notes
 - **Format:** Celebratory, uplifting carousel
 - **Tone:** Joyful, affirming

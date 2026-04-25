@@ -38,3 +38,16 @@ He doesn't need to be more like other kids. I needed to be more like his dad.
 My 4-year-old
 is teaching me things
 no one else could.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

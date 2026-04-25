@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1080px; height: 1350px; 
+      font-family: 'Poppins', sans-serif; color: white;
+      background: linear-gradient(165deg, #1a365d 0%, #1a1a2e 50%, #0f3460 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 80px;
+      position: relative; overflow: hidden;
+    }
+    .bg-shape { position: absolute; border-radius: 50%; opacity: 0.06; }
+    .bg-shape-1 { width: 600px; height: 600px; background: #E8B86D; top: -200px; right: -200px; }
+    .bg-shape-2 { width: 400px; height: 400px; background: #4A90A4; bottom: 50px; left: -150px; }
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 250px;
+      color: #E8B86D;
+      opacity: 0.2;
+      line-height: 0.5;
+      margin-bottom: 30px;
+    }
+    .main-quote { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 52px; 
+      font-weight: 700; 
+      line-height: 1.4; 
+      max-width: 900px;
+      font-style: italic;
+    }
+    .highlight { color: #E8B86D; font-style: normal; }
+    .divider {
+      width: 120px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #E8B86D, transparent);
+      margin: 60px 0;
+    }
+    .source {
+      font-size: 20px;
+      opacity: 0.6;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .footer { position: absolute; bottom: 50px; text-align: center; }
+    .handle { font-size: 26px; opacity: 0.5; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  
+  <div class="quote-mark">"</div>
+  
+  <div class="main-quote">
+    The diagnosis doesn't change who your child is. It gives you <span class="highlight">better tools</span> to support who they've always been.
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="source">From our free diagnosis guide</div>
+  
+  <div class="footer">
+    <div class="handle">@spectrum_unlocked</div>
+  </div>
+</body>
+</html>

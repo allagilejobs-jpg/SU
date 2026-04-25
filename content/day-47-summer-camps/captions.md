@@ -73,6 +73,18 @@ Has your kid done camp? Tell me below 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Summer Camp Considerations for Autistic Kids
+
+**Description:** Finding the right fit for your autistic child. Questions to ask before you enroll. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Seasonal Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Looking Ahead - Summer preparation
 - **Format:** Educational carousel with practical checklists

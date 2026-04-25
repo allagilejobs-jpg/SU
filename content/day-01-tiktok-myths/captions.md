@@ -39,6 +39,18 @@ Stop self-diagnosing from 30-second videos. Here's the truth.
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** 3 Things TikTok Gets WRONG About Autism
+
+**Description:** 5 autism myths that need to die. These harmful misconceptions hurt autistic people every day. Learn the truth and share it.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why it works:** Mistake hook = high engagement (IG research)
 - **Trending tie-in:** New misinformation study this week

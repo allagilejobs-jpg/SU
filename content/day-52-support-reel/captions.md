@@ -73,6 +73,18 @@ Who's in your village? Tag them below! 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Day 52: Building Your Support System
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (5 slides, 1080x1920)
 - **Timing:** 3-4 seconds per slide

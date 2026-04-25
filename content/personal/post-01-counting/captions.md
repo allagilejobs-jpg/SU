@@ -35,3 +35,16 @@ He counts to 100 before breakfast.
 Every morning. In the same order.
 In the same rhythm.
 And I've stopped trying to interrupt it.
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

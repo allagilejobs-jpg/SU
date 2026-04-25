@@ -55,6 +55,18 @@ Turn on notifications — tomorrow is WORLD AUTISM DAY! 🌍
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism Acceptance Month Kickoff
+
+**Description:** It's here. A whole month dedicated to acceptance. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Autism Acceptance
+
+---
+
 ## Content Notes
 - **Purpose:** Build anticipation for WAAD (April 2)
 - **CTA:** Follow + notifications = retention

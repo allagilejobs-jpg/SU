@@ -56,6 +56,18 @@ Watch "Life on the Spectrum" - BBC Africa Eye. Link in bio. 💛
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Source:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Notes
 
 - **Do NOT post the child's image or any stills from the lock-up scene.** Dignity first.

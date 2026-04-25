@@ -43,3 +43,16 @@ Everyone was staring.
 One woman shook her head.
 Another one said
 "hang in there, dad."
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Template:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips / Late Diagnosis
+
+---

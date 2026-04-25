@@ -15,3 +15,16 @@ Pool, park, playground—bring it. Save this.
 ## 📱 FEED CAPTION (Carousel/Image Posts)
 
 see calendar for feed caption
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Day 65: AAC at Pool, Park, Playground
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

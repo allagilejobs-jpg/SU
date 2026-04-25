@@ -60,6 +60,18 @@ What's your go-to? 💕
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Self-Care for Autism Parents
+
+**Description:** Not bubble baths. Real strategies. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why it works:** Validating, community-building, practical
 - **Format:** Numbered tips with categories

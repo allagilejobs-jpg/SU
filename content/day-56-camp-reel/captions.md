@@ -75,6 +75,18 @@ Any camp recommendations? Share below! 🏕️
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Day 56: Summer Camps for Autistic Kids
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (5 slides, 1080x1920)
 - **Timing:** 3-4 seconds per slide

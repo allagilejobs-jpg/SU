@@ -72,6 +72,18 @@ What's one thing you'll do for yourself this week?
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Self-Care Deep Dive for Autism Parents
+
+**Description:** Not bubble baths. Real strategies for caregiver survival. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 7 Family Dynamics - Self-care deep dive
 - **Format:** Educational carousel with practical strategies

@@ -47,6 +47,18 @@ What's your go-to sensory tool?
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** 5 Sensory Hacks That Actually Work
+
+**Description:** Meltdown prevention starts here. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Sensory Support & Hacks
+
+---
+
 ## Content Notes
 - **Why it works:** Practical, saveable, high engagement
 - **Format:** Numbered list = high swipe-through

@@ -80,6 +80,18 @@ What accommodation changed everything for YOUR child? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Neurodiversity-Affirming IEP Accommodations
+
+**Description:** Your child's IEP shouldn't teach them to mask. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Format:** Slideshow reel (6 slides, 1080x1920)
 - **Timing:** 4 seconds per slide

@@ -70,6 +70,18 @@ What outdoor activity does your child love? 🌳👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Nature and Autism: Sensory Benefits of the Outdoors
+
+**Description:** Fresh air might be the best sensory tool. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Sensory Support & Hacks
+
+---
+
 ## Content Notes
 - **Why now:** Earth Day tie-in, practical seasonal content
 - **Format:** Educational carousel with activity ideas

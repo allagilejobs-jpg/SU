@@ -15,3 +15,16 @@ Save this guide.
 ## 📱 FEED CAPTION (Carousel/Image Posts)
 
 see calendar for feed caption
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Day 86: Sensory Seeking VS Avoiding
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

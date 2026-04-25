@@ -74,6 +74,18 @@ What helps: visual timers, body doubling, tiny steps
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Executive Function Support
+
+**Description:** The brain's CEO is running differently. Here's how to help. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Theme:** Week 8 Practical Tools - Executive function strategies
 - **Format:** Educational carousel with actionable tips

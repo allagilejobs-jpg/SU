@@ -69,6 +69,18 @@ Late-diagnosed? Tell me your "aha" moment 💡👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** The Diagnosis Journey: Adult Edition
+
+**Description:** It's never too late to understand yourself. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Newly Diagnosed
+
+---
+
 ## Content Notes
 - **Why now:** Massive trending topic, 450% increase statistic
 - **Format:** Educational carousel with emotional journey

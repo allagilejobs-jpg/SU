@@ -67,6 +67,18 @@ What helps YOUR anxiety? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism and Anxiety: The Hidden Connection
+
+**Description:** Most autistic people experience anxiety. Here's what helps. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Anxiety awareness, high engagement topic
 - **Format:** Educational carousel with triggers and strategies

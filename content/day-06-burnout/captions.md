@@ -57,6 +57,18 @@ Here are the signs (and how to recover) ⬇️
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autistic Burnout: Signs in Kids AND Adults
+
+**Description:** Some people experience their first burnout at age 6. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / Self-Care for Parents
+
+---
+
 ## Content Notes
 - **Why it works:** Trending topic, deeply relatable
 - **Format:** Signs + prevention = high save rate

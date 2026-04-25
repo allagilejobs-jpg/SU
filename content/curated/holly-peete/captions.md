@@ -42,3 +42,16 @@ This clip is a reminder: autism doesn't go away. But with love, understanding, a
 - `ending-slide.png` - CTA ending slide (1080x1350) [TO BE BUILT]
 - `FINAL-reel.mp4` - Combined reel: cover + clip + ending (1080x1920) [TO BE BUILT]
 - `FINAL.mp4` - Original branded vertical clip (1080x1920)
+
+
+---
+
+## 📌 Pinterest
+
+**Title:** Source:
+
+**Description:** Save this guide for practical tips that actually work for autism families.
+
+**Board:** Autism Parenting Tips
+
+---

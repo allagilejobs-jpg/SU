@@ -61,6 +61,18 @@ Has your child found their person? 👇
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Building Friendships: Social Support for Autistic Kids
+
+**Description:** Friendship looks different. That's okay. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips
+
+---
+
 ## Content Notes
 - **Why now:** Community building, emotional resonance topic
 - **Format:** Educational carousel with practical support

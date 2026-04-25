@@ -65,6 +65,18 @@ AuDHDer? Drop a 🧠⚡
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Autism + ADHD: The AuDHD Experience
+
+**Description:** When your brain has two operating systems. Save this guide for tips that actually work.
+
+**Board:** Autism Parenting Tips / ADHD & Autism
+
+---
+
 ## Content Notes
 - **Why now:** #audhd is trending, high comorbidity awareness growing
 - **Format:** Educational carousel explaining dual diagnosis

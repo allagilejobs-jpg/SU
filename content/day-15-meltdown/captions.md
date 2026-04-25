@@ -69,6 +69,18 @@ What helps your child? 💙
 
 ---
 
+---
+
+## 📌 Pinterest
+
+**Title:** Meltdown vs Tantrum: How to Support Your Autistic Child
+
+**Description:** Meltdowns aren't misbehavior. Learn the difference between tantrums and meltdowns, plus exactly what to do (and avoid) during and after. A must-save guide for autism parents.
+
+**Board:** Autism Parenting Tips / Meltdown Support
+
+---
+
 ## Content Notes
 - **Why it works:** High save rate, practical crisis guide
 - **Format:** Comparison + Do/Don't lists
