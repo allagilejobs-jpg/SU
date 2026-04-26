@@ -17,8 +17,19 @@ const path = require('path');
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 function detectSize(html) {
-  const match = html.match(/body\s*\{[^}]*?width:\s*(\d+)px;\s*height:\s*(\d+)px/);
-  if (match) return { width: parseInt(match[1], 10), height: parseInt(match[2], 10) };
+  // Look at body first (most common), then any selector with substantial canvas
+  // dimensions (e.g. `.slide { width: 1080px; height: 1920px }` for reels,
+  // `.pin { width: 1000px; height: 1500px }` for Pinterest pins).
+  const bodyMatch = html.match(/body\s*\{[^}]*?width:\s*(\d+)px;\s*height:\s*(\d+)px/);
+  if (bodyMatch) return { width: parseInt(bodyMatch[1], 10), height: parseInt(bodyMatch[2], 10) };
+
+  // Fallback: scan every CSS rule, accept the largest 1000+px pair (graphics canvas).
+  const ruleMatches = [...html.matchAll(/\{[^}]*?width:\s*(\d+)px;[^}]*?height:\s*(\d+)px/g)];
+  for (const m of ruleMatches) {
+    const w = parseInt(m[1], 10);
+    const h = parseInt(m[2], 10);
+    if (w >= 1000 && h >= 1000) return { width: w, height: h };
+  }
   return { width: 1080, height: 1350 };
 }
 
