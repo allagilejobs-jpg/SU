@@ -7,58 +7,58 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
+    body { font-family: 'Poppins', sans-serif; background: #2a004a; color: #eee; min-height: 100vh; }
     
-    .nav { background: #0f0f1a; padding: 14px 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav { background: #1f0033; padding: 14px 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .nav a { color: #888; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; font-size: 13px; transition: all 0.2s; }
-    .nav a:hover, .nav a.active { background: #4A90A4; color: white; }
+    .nav a:hover, .nav a.active { background: #18A8F1; color: white; }
     
-    .header { background: linear-gradient(135deg, #E8B86D 0%, #D4A84B 100%); padding: 50px 20px; text-align: center; color: #1a1a2e; }
+    .header { background: linear-gradient(135deg, #FDB03E 0%, #E59A2A 100%); padding: 50px 20px; text-align: center; color: #2a004a; }
     .header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
     .header p { opacity: 0.8; font-size: 1.1rem; }
     
-    .stats { background: #16213e; padding: 20px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .stats { background: #52008C; padding: 20px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .stat { text-align: center; }
-    .stat-num { font-size: 2rem; font-weight: 700; color: #E8B86D; }
+    .stat-num { font-size: 2rem; font-weight: 700; color: #FDB03E; }
     .stat-label { font-size: 13px; opacity: 0.6; }
     
     .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
     
-    .post-card { background: #16213e; border-radius: 16px; margin-bottom: 30px; overflow: hidden; }
-    .post-card.pinned { border: 2px solid #E8B86D; }
+    .post-card { background: #52008C; border-radius: 16px; margin-bottom: 30px; overflow: hidden; }
+    .post-card.pinned { border: 2px solid #FDB03E; }
     
-    .post-header { background: #0f3460; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+    .post-header { background: #3a005f; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
     .post-title { font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
-    .post-day { background: #4A90A4; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; }
-    .post-day.pinned { background: #E8B86D; color: #1a1a2e; }
+    .post-day { background: #18A8F1; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+    .post-day.pinned { background: #FDB03E; color: #2a004a; }
     .post-meta { padding: 15px 25px; color: rgba(255,255,255,0.6); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05); }
     
     .slides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 20px 25px; }
-    .slide-item { position: relative; border-radius: 10px; overflow: hidden; background: #0a1628; }
+    .slide-item { position: relative; border-radius: 10px; overflow: hidden; background: #1f0033; }
     .slide-item img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; transition: transform 0.2s; }
     .slide-item:hover img { transform: scale(1.03); }
     .slide-item.reel img { aspect-ratio: 9/16; }
     .slide-label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); padding: 8px; font-size: 11px; text-align: center; }
-    .download-btn { position: absolute; top: 8px; right: 8px; background: #E8B86D; color: #1a1a2e; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; text-decoration: none; opacity: 0; transition: opacity 0.2s; }
+    .download-btn { position: absolute; top: 8px; right: 8px; background: #FDB03E; color: #2a004a; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; text-decoration: none; opacity: 0; transition: opacity 0.2s; }
     .slide-item:hover .download-btn { opacity: 1; }
     
     .caption-section { padding: 20px 25px; border-top: 1px solid rgba(255,255,255,0.05); }
     .caption-tabs { display: flex; gap: 10px; margin-bottom: 15px; }
-    .caption-tab { padding: 8px 16px; background: #0f3460; border: none; border-radius: 8px; color: #888; font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
-    .caption-tab.active { background: #E8B86D; color: #1a1a2e; }
-    .caption-box { background: #0a1628; border-radius: 10px; padding: 20px; }
-    .caption-box h4 { color: #E8B86D; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .caption-tab { padding: 8px 16px; background: #3a005f; border: none; border-radius: 8px; color: #888; font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .caption-tab.active { background: #FDB03E; color: #2a004a; }
+    .caption-box { background: #1f0033; border-radius: 10px; padding: 20px; }
+    .caption-box h4 { color: #FDB03E; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
     .caption-text { font-size: 14px; line-height: 1.7; white-space: pre-wrap; color: rgba(255,255,255,0.85); }
-    .hashtags { background: rgba(232,184,109,0.1); border-radius: 8px; padding: 12px; margin-top: 15px; font-size: 13px; color: #E8B86D; }
-    .copy-btn { background: #4A90A4; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 15px; }
-    .copy-btn:hover { background: #3a7a94; }
+    .hashtags { background: rgba(253, 176, 62, 0.1); border-radius: 8px; padding: 12px; margin-top: 15px; font-size: 13px; color: #FDB03E; }
+    .copy-btn { background: #18A8F1; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 15px; }
+    .copy-btn:hover { background: #0F7BB3; }
     
-    .strategy-card { background: linear-gradient(135deg, rgba(74,144,164,0.2) 0%, rgba(74,144,164,0.05) 100%); border: 1px solid rgba(74,144,164,0.3); border-radius: 16px; padding: 30px; margin-top: 40px; }
-    .strategy-card h2 { color: #4A90A4; margin-bottom: 20px; }
+    .strategy-card { background: linear-gradient(135deg, rgba(24, 168, 241, 0.2) 0%, rgba(24, 168, 241, 0.05) 100%); border: 1px solid rgba(24, 168, 241, 0.3); border-radius: 16px; padding: 30px; margin-top: 40px; }
+    .strategy-card h2 { color: #18A8F1; margin-bottom: 20px; }
     .strategy-list { list-style: none; }
     .strategy-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 15px; }
     .strategy-list li:last-child { border: none; }
-    .strategy-list strong { color: #E8B86D; }
+    .strategy-list strong { color: #FDB03E; }
     
     footer { text-align: center; padding: 40px; color: rgba(255,255,255,0.4); font-size: 14px; }
   </style>
@@ -421,11 +421,11 @@ Tag a parent who needs to hear this today.</div>
         <li>"IEP help for parents"</li>
         <li>"Newly diagnosed autism"</li>
       </ul>
-      <div style="background: #0a1628; border-radius: 10px; padding: 20px; margin-top: 20px;">
-        <h4 style="color: #E8B86D; margin-bottom: 10px;">Sample Response Template:</h4>
+      <div style="background: #1f0033; border-radius: 10px; padding: 20px; margin-top: 20px;">
+        <h4 style="color: #FDB03E; margin-bottom: 10px;">Sample Response Template:</h4>
         <p style="font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.8);">"We went through the same thing. The first week was the hardest. I actually put together a free guide for the first 48 hours after diagnosis - covers who to call, what to say to the school, insurance checklist, everything. Happy to share the link if you want it."</p>
       </div>
-      <p style="margin-top: 15px; color: #27AE60; font-weight: 600;">💡 This strategy alone can drive 5-15 signups per week from day one.</p>
+      <p style="margin-top: 15px; color: #18A8F1; font-weight: 600;">💡 This strategy alone can drive 5-15 signups per week from day one.</p>
     </div>
     
   </div>

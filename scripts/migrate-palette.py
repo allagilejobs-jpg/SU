@@ -15,10 +15,19 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
-# Files are in scope if they ship the navy palette (any direction/stops) or the
-# new purple palette (so re-runs can also clean up stray colors on already-migrated files).
-NAVY_HEX = re.compile(r"#1a1a2e", re.IGNORECASE)
-NAVY_HEX_2 = re.compile(r"#16213e", re.IGNORECASE)
+# Files are in scope if they ship ANY legacy palette color (navy, teal, gold,
+# orange, green, red, purple-variant, blue) or the new purple palette.
+LEGACY_FAMILY = re.compile(
+    r"#1a1a2e|#16213e|#0f3460|#0f0f1a|#0a1628|#1a365d"     # navy family
+    r"|#4A90A4|#2C5F6E|#3a7a94|#128190"                    # teal family
+    r"|#E8B86D|#d4a85d|#D4A84B|#D4A05A|#D4A35A"            # gold family
+    r"|#E67E22|#F39C12"                                    # orange family
+    r"|#27AE60|#1E8449|#128228|#2ecc71"                    # green family
+    r"|#E74C3C|#C0392B"                                    # red family
+    r"|#9B59B6|#8e44ad"                                    # purple-variant family
+    r"|#3498DB",                                           # blue family
+    re.IGNORECASE,
+)
 NAVY_RGB = re.compile(r"rgb\(\s*26\s*,\s*26\s*,\s*46\s*\)|rgba\(\s*26\s*,\s*26\s*,\s*46")
 PURPLE_HEX = re.compile(r"#52008C|#2a004a", re.IGNORECASE)
 
@@ -30,10 +39,13 @@ REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"#16213e", re.IGNORECASE), "#52008C"),
     (re.compile(r"#0f3460", re.IGNORECASE), "#3a005f"),
     (re.compile(r"#0f0f1a", re.IGNORECASE), "#1f0033"),  # ultra-dark sibling
+    (re.compile(r"#0a1628", re.IGNORECASE), "#1f0033"),  # very-dark navy sibling
+    (re.compile(r"#1a365d", re.IGNORECASE), "#3a005f"),  # navy variant -> purple variant
 
     # Teal accent  -> Vivid Azure
     (re.compile(r"#4A90A4", re.IGNORECASE), "#18A8F1"),
     (re.compile(r"#2C5F6E", re.IGNORECASE), "#0F7BB3"),  # darker teal -> darker azure
+    (re.compile(r"#3a7a94", re.IGNORECASE), "#0F7BB3"),  # teal variant
     (re.compile(r"#128190", re.IGNORECASE), "#0F7BB3"),
 
     # Gold/amber variants  -> Amber
@@ -54,7 +66,9 @@ REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"#128228", re.IGNORECASE), "#0F7BB3"),  # outlier green -> darker Azure
     (re.compile(r"#2ecc71", re.IGNORECASE), "#18A8F1"),  # flat-UI green -> Azure
     (re.compile(r"#E74C3C", re.IGNORECASE), "#CC78CB"),  # alert-red -> Neon Pink
+    (re.compile(r"#C0392B", re.IGNORECASE), "#B85FB6"),  # darker red -> darker Pink
     (re.compile(r"#9B59B6", re.IGNORECASE), "#52008C"),  # generic purple -> brand Purple
+    (re.compile(r"#8e44ad", re.IGNORECASE), "#3F006D"),  # darker generic purple
     (re.compile(r"#3498DB", re.IGNORECASE), "#18A8F1"),  # flat-UI blue -> Vivid Azure
 
     # rgba forms (accept any whitespace and alpha)
@@ -83,11 +97,10 @@ REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
 
 
 def has_signature(text: str) -> bool:
-    """In scope when the file uses the navy palette (any form) or the new purple palette.
-    Requiring two navy stops together avoids false positives on unrelated dark UI."""
+    """In scope when the file uses any legacy palette color or the new purple palette."""
     if PURPLE_HEX.search(text):
         return True
-    if NAVY_HEX.search(text) and NAVY_HEX_2.search(text):
+    if LEGACY_FAMILY.search(text):
         return True
     if NAVY_RGB.search(text):
         return True
