@@ -21,8 +21,8 @@ APPLY_LOG = STATE_DIR / "apply-log.jsonl"
 API_BASE_PRODUCTION = "https://api.pinterest.com/v5"
 API_BASE_SANDBOX = "https://api-sandbox.pinterest.com/v5"
 OAUTH_AUTHORIZE_URL = "https://www.pinterest.com/oauth/"
-OAUTH_REDIRECT_URI = "http://localhost:8080/callback"
 OAUTH_CALLBACK_PORT = 8080
+OAUTH_REDIRECT_URI = f"http://localhost:{OAUTH_CALLBACK_PORT}/callback"
 
 # Required scopes — write scopes only requested when needed
 SCOPES_READ_ONLY = ["pins:read", "boards:read"]
