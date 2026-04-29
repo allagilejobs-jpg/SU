@@ -55,3 +55,22 @@ def test_wrong_image_dimensions_fails(tmp_path):
     )
     with pytest.raises(ParseError, match="dimensions"):
         parse_pinterest_posts(md, image_dir=tmp_path)
+
+def test_description_with_single_blank_line(tmp_path):
+    """Ensure description regex works with single blank between fields."""
+    img = tmp_path / "p.png"
+    from PIL import Image
+    Image.new("RGB", (1000, 1500)).save(img)
+    md = tmp_path / "posts.md"
+    # Single blank line between Description and Board (not double)
+    md.write_text(
+        "## 1. Test\n"
+        "**File:** `p.png`\n\n"
+        "**Title:** Short Title\n\n"
+        "**Description:** A description that ends with one blank line.\n"
+        "**Board:** B / S\n"
+        "---\n"
+    )
+    records = parse_pinterest_posts(md, image_dir=tmp_path)
+    assert len(records) == 1
+    assert "one blank line" in records[0].description

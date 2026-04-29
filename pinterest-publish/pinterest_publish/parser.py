@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 import re
-from typing import List, Optional
+from typing import List
 
 from PIL import Image
 
@@ -31,7 +31,7 @@ class PinRecord:
 _SECTION_RE = re.compile(r"^## \d+\. (.+?)$", re.MULTILINE)
 _FILE_RE = re.compile(r"\*\*File:\*\*\s*`([^`]+)`")
 _TITLE_RE = re.compile(r"\*\*Title:\*\*\s*(.+?)(?:\n|$)")
-_DESC_RE = re.compile(r"\*\*Description:\*\*\s*(.+?)(?=\n\n)", re.DOTALL)
+_DESC_RE = re.compile(r"\*\*Description:\*\*\s*(.+?)(?=\n\*\*|\n---|\Z)", re.DOTALL)
 _BOARD_RE = re.compile(r"\*\*Board:\*\*\s*(.+?)(?:\n|$)")
 
 
@@ -39,7 +39,7 @@ def parse_pinterest_posts(md_path: Path, image_dir: Path) -> List[PinRecord]:
     if not md_path.exists():
         raise ParseError(f"PINTEREST-POSTS.md not found at {md_path}")
 
-    text = md_path.read_text(encoding="utf-8")
+    text = md_path.read_text(encoding="utf-8").replace("\r\n", "\n")
 
     # Split on `## N. ` headers — keep the topic text but ignore it (we use Title field instead)
     starts = [(m.start(), m.group(1)) for m in _SECTION_RE.finditer(text)]
