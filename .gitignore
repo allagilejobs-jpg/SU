@@ -37,3 +37,6 @@ content/curated/*/_source-full-transcript.json
 
 # Carousel debug frames
 content/curated/*/carousel-v2/_check-*.png
+
+pinterest-publish/state/
+pinterest-publish/.env

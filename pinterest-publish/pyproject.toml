@@ -1,0 +1,28 @@
+[project]
+name = "pinterest-publish"
+version = "0.1.0"
+description = "Publish Spectrum Unlocked pins to Pinterest via v5 API"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "pyyaml>=6.0",
+    "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-mock>=3.12",
+    "responses>=0.24",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pinterest_publish*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
