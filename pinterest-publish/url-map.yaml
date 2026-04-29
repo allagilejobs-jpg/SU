@@ -21,16 +21,18 @@ pins:
   pin-20-autism-teens.png:          "https://www.spectrumunlocked.com/start-here/parents-of-teens"
   pin-24-school-accommodations.png: "https://www.spectrumunlocked.com/blog/first-iep-meeting-checklist"
   pin-25-aba-controversy.png:       "https://www.spectrumunlocked.com/blog/autism-therapy-types-explained"
-  # Pins not listed fall through to `default`:
-  #   pin-05-signs-of-masking
-  #   pin-07-audhd
-  #   pin-08-autism-in-girls
-  #   pin-10-anxiety-autism
-  #   pin-16-autism-myths
-  #   pin-18-late-diagnosis
-  #   pin-21-travel-autism
-  #   pin-22-summer-camps
-  #   pin-23-building-friendships
+  # Homepage-fallback pins use UTM-tagged URLs so each is unique
+  # (Pinterest dedups by URL across an account). Tags also let you
+  # see in analytics which Pinterest pin drove which traffic.
+  pin-05-signs-of-masking.png:      "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=masking"
+  pin-07-audhd.png:                 "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=audhd"
+  pin-08-autism-in-girls.png:       "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=autism-in-girls"
+  pin-10-anxiety-autism.png:        "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=anxiety"
+  pin-16-autism-myths.png:          "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=myths"
+  pin-18-late-diagnosis.png:        "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=late-diagnosis"
+  pin-21-travel-autism.png:         "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=travel"
+  pin-22-summer-camps.png:          "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=summer-camps"
+  pin-23-building-friendships.png:  "https://www.spectrumunlocked.com/?utm_source=pinterest&utm_campaign=friendships"
 
 # Map live Pinterest titles back to repo filenames so the dedup step finds
 # old-palette pins whose live titles drifted from the current repo titles.
