@@ -1,4 +1,7 @@
 node_modules/
+__pycache__/
+*.pyc
+*.pyo
 
 # Debug / scratch files from reel pipeline
 content/curated/*/_v3-frame-*.png
