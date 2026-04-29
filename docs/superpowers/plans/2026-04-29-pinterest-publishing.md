@@ -2350,8 +2350,8 @@ new-palette versions in a single coordinated sweep.
    developer console for the "Spectrum Unlocked" app.
 2. Set credentials (env vars OR a gitignored `pinterest-publish/.env`):
    ```
-   PINTEREST_CLIENT_ID=1565261
-   PINTEREST_CLIENT_SECRET=<from-dev-console>
+   PINTEREST_CLIENT_ID=<your-app-id>
+   PINTEREST_CLIENT_SECRET=<your-app-secret>
    ```
 3. Install:
    ```bash

@@ -19,7 +19,7 @@ The current Pinterest account already has older versions of these pins live, bui
 
 ## Constraints and inputs
 
-- **Pinterest app:** "Spectrum Unlocked" (App ID `1565261`). Trial-tier access.
+- **Pinterest app:** Spectrum Unlocked OAuth app, trial-tier access. App ID + secret stored locally in `pinterest-publish/.env` (gitignored), never committed.
 - **Auth model:** OAuth 2.0 authorization-code flow using `client_id` + `client_secret`. Required scopes: `pins:read`, `pins:write`, `boards:read`. Add `boards:write` only if `--create-missing` is invoked.
 - **Rate limits:** Pinterest trial tier historically caps creation at ~5 pins/day; full sweep of 25 expected to take ~5 calendar days.
 - **Image format:** all 25 source PNGs are 1000×1500 (Pinterest's recommended 2:3 ratio). Parser rejects mismatched dimensions.
@@ -194,8 +194,8 @@ One-time setup (documented in `pinterest-publish/README.md`):
 1. In the Pinterest dev console, add `http://localhost:8080/callback` to the app's redirect URIs.
 2. Set env vars (or paste into `pinterest-publish/.env`, gitignored):
    ```
-   PINTEREST_CLIENT_ID=1565261
-   PINTEREST_CLIENT_SECRET=<from-dev-console>
+   PINTEREST_CLIENT_ID=<your-app-id>
+   PINTEREST_CLIENT_SECRET=<your-app-secret>
    ```
 3. Run `python -m pinterest_publish auth`.
 
