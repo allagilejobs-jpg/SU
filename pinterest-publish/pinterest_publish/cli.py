@@ -19,7 +19,26 @@ from .plan import build_plan, write_plan
 from .url_mapper import UrlMapper
 
 
+def _load_env_file(path: Path) -> None:
+    """Minimal .env loader: KEY=VALUE per line, # comments, blank lines OK.
+
+    Existing os.environ values take precedence (so a real shell export wins).
+    """
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
 def main(argv: List[str] | None = None) -> int:
+    _load_env_file(config.TOOL_ROOT / ".env")
     parser = argparse.ArgumentParser(prog="pinterest_publish")
     parser.add_argument(
         "--env", choices=["production", "sandbox"], default="production",
