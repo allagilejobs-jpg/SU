@@ -1,0 +1,17 @@
+{
+  "boards": [
+    {
+      "id": "b1",
+      "name": "Autism Parenting Tips",
+      "pin_count": 2,
+      "sections": [
+        {"id": "s1", "name": "IEP & School Advocacy"},
+        {"id": "s2", "name": "Sleep"}
+      ]
+    }
+  ],
+  "pins": [
+    {"id": "p_old_iep", "title": "Test IEP Accommodations Title", "board_id": "b1", "board_section_id": "s1", "link": "https://x"},
+    {"id": "p_orphan", "title": "Some Old Pin Title", "board_id": "b1", "board_section_id": "s2", "link": "https://x"}
+  ]
+}
