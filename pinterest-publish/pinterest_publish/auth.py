@@ -136,29 +136,29 @@ def run_interactive_oauth(
             pass  # silence default access log
 
     server = HTTPServer(("localhost", callback_port), _Handler)
-    thread = threading.Thread(target=server.serve_forever, daemon=True)
-    thread.start()
+    server.timeout = 1  # seconds; handle_request returns after this if idle
 
+    params = {
+        "client_id": client_id,
+        "redirect_uri": redirect_uri,
+        "response_type": "code",
+        "scope": ",".join(scopes),
+        "state": state,
+    }
+    url = f"{authorize_url}?{urllib.parse.urlencode(params)}"
+    print(f"Opening browser to:\n  {url}\n")
+    webbrowser.open(url)
+    print(f"Listening on {redirect_uri} ...")
+
+    # Single-threaded handle_request loop — avoids shutdown() deadlock on Windows.
+    # Loop until callback fires or 5-minute deadline.
     try:
-        params = {
-            "client_id": client_id,
-            "redirect_uri": redirect_uri,
-            "response_type": "code",
-            "scope": ",".join(scopes),
-            "state": state,
-        }
-        url = f"{authorize_url}?{urllib.parse.urlencode(params)}"
-        print(f"Opening browser to:\n  {url}\n")
-        webbrowser.open(url)
-        print(f"Listening on {redirect_uri} ...")
-
-        # Wait for the callback — poll up to 5 minutes
-        for _ in range(300):
+        deadline = time.time() + 300
+        while time.time() < deadline:
             if "code" in captured or "error" in captured:
                 break
-            time.sleep(1)
+            server.handle_request()
     finally:
-        server.shutdown()
         server.server_close()
 
     if captured.get("error"):
