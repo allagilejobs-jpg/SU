@@ -32,8 +32,18 @@ pins:
   #   pin-22-summer-camps
   #   pin-23-building-friendships
 
-# Map live Pinterest titles back to repo filenames if you ever rename
-# a pin on Pinterest after it's been published. Example:
-#   pin-02-meltdown-vs-tantrum.png:
-#     - "Meltdown vs Tantrum (the difference matters)"
-aliases: {}
+# Map live Pinterest titles back to repo filenames so the dedup step finds
+# old-palette pins whose live titles drifted from the current repo titles.
+aliases:
+  pin-06-potty-training.png:
+    - "Potty Training an Autistic Child"
+  pin-07-audhd.png:
+    - "AuDHD: Autism + ADHD"
+  pin-08-autism-in-girls.png:
+    - "Autism in Girls: Why They're Missed"
+  pin-11-5-things-diagnosis.png:
+    - "5 Things I Wish I Knew After Diagnosis"
+  pin-13-self-care-parents.png:
+    - "Self-Care for Autism Parents"
+  pin-14-glass-child.png:
+    - "Glass Child Syndrome"

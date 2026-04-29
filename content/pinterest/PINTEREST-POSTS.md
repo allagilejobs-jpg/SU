@@ -11,7 +11,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Your child's IEP shouldn't teach them to mask. Save this checklist of sensory, communication, academic, and social accommodations for your next IEP meeting. Real support for autistic learners.
 
-**Board:** Autism Parenting Tips / IEP & School Advocacy
+**Board:** IEP Tips & School Advocacy
 
 ---
 
@@ -22,7 +22,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** They look similar but need completely different responses. Learn what a meltdown really is, how it differs from a tantrum, and exactly what to do (and avoid) to help your child. Must-save for autism parents.
 
-**Board:** Autism Parenting Tips / Meltdown Support
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -33,7 +33,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** OT-approved sensory tools for meltdown prevention. Noise-canceling headphones, sunglasses indoors, fidgets, visual timers, and calm-down corners. Simple, effective, no expensive equipment needed.
 
-**Board:** Autism Parenting Tips / Sensory Support
+**Board:** Sensory Activities & Regulation
 
 ---
 
@@ -44,7 +44,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** 50-80% of autistic kids have sleep problems. This guide covers why sleep is harder, environment fixes (blackout curtains, white noise, weighted blankets), and routines that work. Save for exhausted nights.
 
-**Board:** Autism Parenting Tips / Sleep
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -55,7 +55,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** "They look fine. They're falling apart inside." Learn what masking is, the 6 signs someone is high-masking, and the real cost of performing "normal." You shouldn't have to mask to be accepted.
 
-**Board:** Autism Parenting Tips / Understanding Autism
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -66,7 +66,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Forget milestone charts. Learn why autistic kids train on a different timeline, readiness signs to look for, and autism-friendly strategies that actually work. No pressure, no shame. Your child will get there.
 
-**Board:** Autism Parenting Tips / Potty Training
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -77,7 +77,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** 50-70% of autistic people also have ADHD traits. This guide shows the internal tug-of-war (routine vs novelty), common AuDHD experiences, and the superpowers that come with it. Your brain isn't broken.
 
-**Board:** Autism Parenting Tips / AuDHD
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -88,7 +88,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Girls mask better, get misdiagnosed as anxious, and struggle silently. Learn why the diagnostic criteria misses them and the 8 signs to look for. The real ratio may be 1:1. Share this - it might change a life.
 
-**Board:** Autism Parenting Tips / Autism in Girls
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -99,7 +99,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Not speaking doesn't mean not communicating. This guide covers AAC options (high-tech, low-tech, sign), how to support success, and myths busted. AAC does NOT prevent speech. Communication is a right.
 
-**Board:** Autism Parenting Tips / Communication & AAC
+**Board:** Autism Resources for Parents
 
 ---
 
@@ -110,7 +110,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** 40-80% of autistic people have clinical anxiety. Learn the common triggers (sensory overload, unexpected changes, social uncertainty), what actually helps, and red flags that need professional support.
 
-**Board:** Autism Parenting Tips / Mental Health
+**Board:** Autism Resources for Parents
 
 ---
 
@@ -121,7 +121,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** The advice every newly diagnosed autism parent needs: therapy waitlists are long, your pediatrician isn't the expert, IEPs are negotiable, other parents become your village, and your child is still amazing.
 
-**Board:** Autism Parenting Tips / Newly Diagnosed
+**Board:** Autism Diagnosis & Getting Started
 
 ---
 
@@ -132,7 +132,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Tools to reduce anxiety and increase independence: visual schedules, timers, first-then boards, choice boards, social stories, and break cards. Pro tip: Keep visuals consistent across home, school, and therapy.
 
-**Board:** Autism Parenting Tips / Visual Supports
+**Board:** Visual Schedules & Daily Routines
 
 ---
 
@@ -143,7 +143,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Real micro self-care that works: the hot coffee rule, parking lot pause, sensory reset with headphones, sleep when possible. Plus how to find your people. You can't pour from an empty cup.
 
-**Board:** Autism Parenting Tips / Self-Care for Parents
+**Board:** Autism Resources for Parents
 
 ---
 
@@ -154,7 +154,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Is your neurotypical child becoming invisible? Learn the warning signs that a sibling is becoming a "glass child" and practical ways to help every child in your family feel seen and valued.
 
-**Board:** Autism Parenting Tips / Sibling Support
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -165,7 +165,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Some experience their first burnout at age 6. Learn the warning signs in children (regression, meltdowns, school refusal) and adults (executive function collapse, can't mask anymore). Recovery takes time.
 
-**Board:** Autism Parenting Tips / Understanding Autism
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -176,7 +176,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** You've probably believed at least one. Vaccines don't cause autism. Autistic people DO have empathy. There's no "autistic look." Girls get it too. And no, they won't "grow out of it." Education fights stigma.
 
-**Board:** Autism Parenting Tips / Myth Busting
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -187,7 +187,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** The autism community moved on from awareness. Awareness says "I see you." Acceptance says "I welcome you." Learn the difference and why gold (not blue) is now preferred. Language shapes attitudes.
 
-**Board:** Autism Parenting Tips / Autism Acceptance
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -198,7 +198,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Most are women. They were missed because diagnostic criteria was based on boys, they masked better socially, and got misdiagnosed as anxious. Signs that lead to late diagnosis and "what if everything finally made sense?"
 
-**Board:** Autism Parenting Tips / Adult Autism
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -209,7 +209,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** It's not defiance. It's sensory. Texture sensitivity, smell overwhelm, brand consistency matters. What helps (same plate, foods not touching) and what to avoid ("just try one bite"). Chicken nuggets are keeping your kid alive.
 
-**Board:** Autism Parenting Tips / Feeding & Food
+**Board:** Autism Resources for Parents
 
 ---
 
@@ -220,7 +220,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Body changes hit different, social gaps widen, identity questions intensify, school demands increase, and mental health risks rise. How to support your autistic teen through adolescence.
 
-**Board:** Autism Parenting Tips / Teens
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -231,7 +231,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Yes, you can do this. Airport hacks (TSA Cares, pre-boarding), hotel tips (quiet rooms, familiar bedding), packing essentials (safe snacks, comfort items), and prep strategies. Theme parks offer disability passes!
 
-**Board:** Autism Parenting Tips / Travel
+**Board:** Autism Resources for Parents
 
 ---
 
@@ -242,7 +242,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Types of camps (autism-specific, inclusive, virtual), questions to ask (staff ratio, training, sensory spaces), red flags ("we treat everyone the same"), and green flags (welcomes parent input). Start planning now.
 
-**Board:** Autism Parenting Tips / Summer
+**Board:** Autism Resources for Parents
 
 ---
 
@@ -253,7 +253,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Friendship looks different for autistic kids. Parallel play, bonding over shared interests, online friendships count. What to do (interest-based activities, structured playdates) and what to avoid (forcing eye contact, surprise events).
 
-**Board:** Autism Parenting Tips / Social Skills
+**Board:** Autism Parenting Real Talk
 
 ---
 
@@ -264,7 +264,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** You can ask for more than you think. Sensory (headphones, fidgets), timing (extended time, breaks), transitions (early release, visual schedule), academic (typed vs written), social (lunch buddy), and communication supports.
 
-**Board:** Autism Parenting Tips / School
+**Board:** IEP Tips & School Advocacy
 
 ---
 
@@ -275,7 +275,7 @@ All 25 Pinterest-ready graphics with their post content.
 
 **Description:** Both sides so YOU can decide. Concerns: teaching masking, intensive hours, targeting stims. Defenses: modern ABA evolved, play-based approaches exist. Questions to ask: Do you allow stimming? How do you handle "no"?
 
-**Board:** Autism Parenting Tips / Therapy Options
+**Board:** Autism Resources for Parents
 
 ---
 
