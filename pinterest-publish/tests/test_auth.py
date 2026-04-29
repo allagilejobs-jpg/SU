@@ -86,3 +86,14 @@ def test_load_or_refresh_no_token_raises(tmp_path):
             client_secret="csec",
             api_base=BASE,
         )
+
+def test_save_overwrites_existing_token(tmp_path):
+    """Re-saving the token should atomically replace the file (O_TRUNC)."""
+    store = TokenStore(tmp_path / "tok.json")
+    tok1 = Token(access_token="OLD", refresh_token="R1", expires_at=time.time() + 1000)
+    tok2 = Token(access_token="NEW", refresh_token="R2", expires_at=time.time() + 1000)
+    store.save(tok1)
+    store.save(tok2)
+    loaded = store.load()
+    assert loaded.access_token == "NEW"
+    assert loaded.refresh_token == "R2"

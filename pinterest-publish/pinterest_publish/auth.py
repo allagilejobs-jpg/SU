@@ -2,6 +2,7 @@
 from __future__ import annotations
 import base64
 import json
+import os
 import time
 from dataclasses import dataclass, asdict
 from pathlib import Path
@@ -30,7 +31,14 @@ class TokenStore:
 
     def save(self, token: Token) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.path.write_text(json.dumps(asdict(token), indent=2))
+        text = json.dumps(asdict(token), indent=2)
+        # 0o600 is enforced on POSIX; Windows treats it as a no-op but the
+        # token file is gitignored either way (state/ is in .gitignore).
+        fd = os.open(self.path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+        try:
+            os.write(fd, text.encode("utf-8"))
+        finally:
+            os.close(fd)
 
     def load(self) -> Optional[Token]:
         if not self.path.exists():
@@ -76,7 +84,7 @@ def _refresh_access_token(
         "Content-Type": "application/x-www-form-urlencoded",
     }
     data = {"grant_type": "refresh_token", "refresh_token": refresh_token}
-    resp = requests.post(f"{api_base}/oauth/token", headers=headers, data=data)
+    resp = requests.post(f"{api_base}/oauth/token", headers=headers, data=data, timeout=30)
     if resp.status_code >= 400:
         raise AuthError(f"refresh failed: {resp.status_code} {resp.text[:200]}")
     body = resp.json()
