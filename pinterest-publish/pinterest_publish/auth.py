@@ -3,10 +3,15 @@ from __future__ import annotations
 import base64
 import json
 import os
+import secrets
+import threading
 import time
+import urllib.parse
+import webbrowser
 from dataclasses import dataclass, asdict
+from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 import requests
 
@@ -91,5 +96,110 @@ def _refresh_access_token(
     return Token(
         access_token=body["access_token"],
         refresh_token=body.get("refresh_token", refresh_token),
+        expires_at=time.time() + int(body.get("expires_in", 2592000)),
+    )
+
+
+def run_interactive_oauth(
+    client_id: str,
+    client_secret: str,
+    api_base: str,
+    redirect_uri: str,
+    callback_port: int,
+    scopes: List[str],
+    authorize_url: str,
+) -> Token:
+    """Spawn a local server, open the browser to Pinterest, capture code, exchange for tokens."""
+    state = secrets.token_urlsafe(16)
+    captured: dict = {}
+
+    class _Handler(BaseHTTPRequestHandler):
+        def do_GET(self):
+            parsed = urllib.parse.urlparse(self.path)
+            if parsed.path != "/callback":
+                self.send_response(404)
+                self.end_headers()
+                return
+            qs = urllib.parse.parse_qs(parsed.query)
+            captured["code"] = (qs.get("code") or [None])[0]
+            captured["state"] = (qs.get("state") or [None])[0]
+            captured["error"] = (qs.get("error") or [None])[0]
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html")
+            self.end_headers()
+            self.wfile.write(
+                b"<html><body><h2>Pinterest auth complete.</h2>"
+                b"<p>You may close this tab.</p></body></html>"
+            )
+
+        def log_message(self, *args, **kwargs):
+            pass  # silence default access log
+
+    server = HTTPServer(("localhost", callback_port), _Handler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+
+    try:
+        params = {
+            "client_id": client_id,
+            "redirect_uri": redirect_uri,
+            "response_type": "code",
+            "scope": ",".join(scopes),
+            "state": state,
+        }
+        url = f"{authorize_url}?{urllib.parse.urlencode(params)}"
+        print(f"Opening browser to:\n  {url}\n")
+        webbrowser.open(url)
+        print(f"Listening on {redirect_uri} ...")
+
+        # Wait for the callback — poll up to 5 minutes
+        for _ in range(300):
+            if "code" in captured or "error" in captured:
+                break
+            time.sleep(1)
+    finally:
+        server.shutdown()
+        server.server_close()
+
+    if captured.get("error"):
+        raise AuthError(f"authorization denied: {captured['error']}")
+    if not captured.get("code"):
+        raise AuthError("timed out waiting for OAuth callback")
+    if captured.get("state") != state:
+        raise AuthError("OAuth state mismatch — possible CSRF")
+
+    return _exchange_code_for_token(
+        code=captured["code"],
+        client_id=client_id,
+        client_secret=client_secret,
+        api_base=api_base,
+        redirect_uri=redirect_uri,
+    )
+
+
+def _exchange_code_for_token(
+    code: str,
+    client_id: str,
+    client_secret: str,
+    api_base: str,
+    redirect_uri: str,
+) -> Token:
+    basic = base64.b64encode(f"{client_id}:{client_secret}".encode()).decode()
+    headers = {
+        "Authorization": f"Basic {basic}",
+        "Content-Type": "application/x-www-form-urlencoded",
+    }
+    data = {
+        "grant_type": "authorization_code",
+        "code": code,
+        "redirect_uri": redirect_uri,
+    }
+    resp = requests.post(f"{api_base}/oauth/token", headers=headers, data=data, timeout=30)
+    if resp.status_code >= 400:
+        raise AuthError(f"token exchange failed: {resp.status_code} {resp.text[:200]}")
+    body = resp.json()
+    return Token(
+        access_token=body["access_token"],
+        refresh_token=body["refresh_token"],
         expires_at=time.time() + int(body.get("expires_in", 2592000)),
     )
