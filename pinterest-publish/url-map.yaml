@@ -1,0 +1,39 @@
+# Per-pin destination URL on spectrumunlocked.com.
+# Filename keys match content/pinterest/pin-*.png.
+# Pins not listed fall through to `default`.
+
+default: "https://www.spectrumunlocked.com/"
+
+pins:
+  pin-01-iep-accommodations.png:    "https://www.spectrumunlocked.com/blog/iep-rights-schools-wont-tell-you"
+  pin-02-meltdown-vs-tantrum.png:   "https://www.spectrumunlocked.com/blog/autism-meltdown-vs-tantrum"
+  pin-03-sensory-hacks.png:         "https://www.spectrumunlocked.com/blog/sensory-diet-beginners-guide"
+  pin-04-sleep-strategies.png:      "https://www.spectrumunlocked.com/blog/autism-sleep-strategies"
+  pin-06-potty-training.png:        "https://www.spectrumunlocked.com/blog/autism-potty-training-readiness-guide"
+  pin-09-aac-communication.png:     "https://www.spectrumunlocked.com/blog/aac-for-beginners"
+  pin-11-5-things-diagnosis.png:    "https://www.spectrumunlocked.com/blog/diagnosed-now-what"
+  pin-12-visual-supports.png:       "https://www.spectrumunlocked.com/blog/visual-schedule-guide"
+  pin-13-self-care-parents.png:     "https://www.spectrumunlocked.com/blog/self-care-autism-parents"
+  pin-14-glass-child.png:           "https://www.spectrumunlocked.com/blog/autism-sibling-support"
+  pin-15-autistic-burnout.png:      "https://www.spectrumunlocked.com/blog/autism-parent-burnout"
+  pin-17-acceptance-vs-awareness.png: "https://www.spectrumunlocked.com/blog/autism-acceptance-month-2026"
+  pin-19-feeding-challenges.png:    "https://www.spectrumunlocked.com/blog/autism-picky-eating"
+  pin-20-autism-teens.png:          "https://www.spectrumunlocked.com/start-here/parents-of-teens"
+  pin-24-school-accommodations.png: "https://www.spectrumunlocked.com/blog/first-iep-meeting-checklist"
+  pin-25-aba-controversy.png:       "https://www.spectrumunlocked.com/blog/autism-therapy-types-explained"
+  # Pins not listed fall through to `default`:
+  #   pin-05-signs-of-masking
+  #   pin-07-audhd
+  #   pin-08-autism-in-girls
+  #   pin-10-anxiety-autism
+  #   pin-16-autism-myths
+  #   pin-18-late-diagnosis
+  #   pin-21-travel-autism
+  #   pin-22-summer-camps
+  #   pin-23-building-friendships
+
+# Map live Pinterest titles back to repo filenames if you ever rename
+# a pin on Pinterest after it's been published. Example:
+#   pin-02-meltdown-vs-tantrum.png:
+#     - "Meltdown vs Tantrum (the difference matters)"
+aliases: {}
