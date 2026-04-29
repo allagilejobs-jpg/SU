@@ -67,3 +67,21 @@ pins:
 """)
     with pytest.raises(UrlMapError, match="https"):
         UrlMapper.load(p)
+
+def test_non_https_pin_url_raises(tmp_path):
+    p = _write_yaml(tmp_path, """
+default: "https://example.com/"
+pins:
+  pin-01.png: "http://example.com/insecure"
+""")
+    with pytest.raises(UrlMapError, match="https"):
+        UrlMapper.load(p)
+
+def test_aliases_not_list_raises(tmp_path):
+    p = _write_yaml(tmp_path, """
+default: "https://example.com/"
+aliases:
+  pin-01.png: "not-a-list"
+""")
+    with pytest.raises(UrlMapError, match="list"):
+        UrlMapper.load(p)
