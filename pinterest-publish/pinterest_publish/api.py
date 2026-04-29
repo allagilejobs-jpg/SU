@@ -25,7 +25,6 @@ class PinterestClient:
         self._session = requests.Session()
         self._session.headers.update({
             "Authorization": f"Bearer {access_token}",
-            "Content-Type": "application/json",
         })
 
     # ---------- helpers ----------
@@ -50,7 +49,7 @@ class PinterestClient:
             for item in data.get("items", []):
                 yield item
             bookmark = data.get("bookmark")
-            if not bookmark:
+            if bookmark is None:
                 return
             params["bookmark"] = bookmark
 
@@ -96,7 +95,7 @@ class PinterestClient:
                 "data": base64.b64encode(image_bytes).decode("ascii"),
             },
         }
-        if section_id:
+        if section_id is not None:
             body["board_section_id"] = section_id
         return self._request("POST", "/pins", json=body).json()
 

@@ -24,6 +24,19 @@ def test_list_boards_paginates():
     assert [b["id"] for b in boards] == ["b1", "b2"]
 
 @responses.activate
+def test_list_boards_stops_when_bookmark_key_absent():
+    """Pagination should terminate when 'bookmark' is missing entirely (not just None)."""
+    responses.add(
+        method=responses.GET,
+        url=f"{BASE}/boards",
+        json={"items": [{"id": "b1", "name": "Board1"}]},  # no 'bookmark' key at all
+        status=200,
+    )
+    client = PinterestClient(access_token="t", api_base=BASE)
+    boards = client.list_boards()
+    assert [b["id"] for b in boards] == ["b1"]
+
+@responses.activate
 def test_create_pin_sends_base64():
     captured = {}
     def callback(req):
