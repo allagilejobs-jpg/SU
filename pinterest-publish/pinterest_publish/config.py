@@ -24,10 +24,11 @@ OAUTH_AUTHORIZE_URL = "https://www.pinterest.com/oauth/"
 OAUTH_CALLBACK_PORT = 8080
 OAUTH_REDIRECT_URI = f"http://localhost:{OAUTH_CALLBACK_PORT}/callback"
 
-# Required scopes — write scopes only requested when needed
+# Required scopes. Pinterest treats POST /pins as a board modification, so
+# creating pins requires boards:write even when posting to an existing board.
 SCOPES_READ_ONLY = ["pins:read", "boards:read"]
-SCOPES_PUBLISH = ["pins:read", "pins:write", "boards:read"]
-SCOPES_PUBLISH_WITH_CREATE = ["pins:read", "pins:write", "boards:read", "boards:write"]
+SCOPES_PUBLISH = ["pins:read", "pins:write", "boards:read", "boards:write"]
+SCOPES_PUBLISH_WITH_CREATE = SCOPES_PUBLISH  # kept for backward compat
 
 # Pinterest content limits
 MAX_TITLE_LEN = 100
