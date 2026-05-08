@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1500px;
+      font-family: 'Poppins', sans-serif;
+      background: #FFF4E8;
+      color: #2a004a;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative blob top-right */
+    .blob {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: #FDB03E;
+      top: -120px;
+      right: -120px;
+      opacity: 0.55;
+    }
+    .blob.b2 {
+      width: 220px; height: 220px;
+      background: #18A8F1;
+      top: auto; bottom: 380px; right: -80px;
+      opacity: 0.18;
+    }
+
+    /* HERO TITLE BLOCK — Pink dominant */
+    .hero {
+      background: #CC78CB;
+      color: white;
+      padding: 70px 60px 60px;
+      position: relative;
+      z-index: 2;
+    }
+    .kicker {
+      display: inline-block;
+      background: #FDB03E;
+      color: #2a004a;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+    .title {
+      font-size: 96px;
+      font-weight: 900;
+      line-height: 0.98;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+    .title em {
+      font-style: normal;
+      background: #18A8F1;
+      color: white;
+      padding: 0 14px;
+      display: inline-block;
+      transform: rotate(-1.5deg);
+      box-decoration-break: clone;
+    }
+    .subtitle {
+      font-size: 26px;
+      font-weight: 500;
+      opacity: 0.95;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+
+    /* CONTENT — listicle with big number circles */
+    .content {
+      flex: 1;
+      padding: 50px 60px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      position: relative;
+      z-index: 2;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: white;
+      border-radius: 22px;
+      padding: 26px 30px;
+      box-shadow: 0 6px 0 rgba(82, 0, 140, 0.12);
+    }
+    .num {
+      flex-shrink: 0;
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      background: #18A8F1;
+      color: white;
+      font-size: 44px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .row:nth-child(2) .num { background: #CC78CB; }
+    .row:nth-child(3) .num { background: #FDB03E; color: #2a004a; }
+    .row:nth-child(4) .num { background: #52008C; }
+    .row-text {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #2a004a;
+    }
+    .row-text small {
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+      color: #6b5a7a;
+      margin-top: 4px;
+    }
+
+    /* Closing tip card — fills cream zone */
+    .tip-card {
+      margin: 18px 0 0;
+      background: #2a004a;
+      color: white;
+      border-radius: 22px;
+      padding: 26px 30px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      border: 4px solid #FDB03E;
+    }
+    .tip-card .tip-emoji {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #FDB03E;
+      color: #2a004a;
+      font-size: 32px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(-6deg);
+    }
+    .tip-card .tip-text {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .tip-card .tip-text small {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    /* Save CTA */
+    .save-band {
+      background: #2a004a;
+      color: white;
+      padding: 26px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+    .save-cta {
+      font-size: 22px;
+      font-weight: 800;
+    }
+    .save-cta .pin-emoji {
+      display: inline-block;
+      background: #CC78CB;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 36px;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    .brand {
+      font-family: 'Caveat', cursive;
+      font-size: 30px;
+      color: #FDB03E;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob"></div>
+  <div class="blob b2"></div>
+
+  <div class="hero">
+    <span class="kicker">📧 IEP advocacy</span>
+    <h1 class="title">Always ask in <em>writing</em></h1>
+    <p class="subtitle">A 4-step rule that protects your child & starts the legal clock</p>
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <div class="num">1</div>
+      <div class="row-text">Email, never just talk
+        <small>Verbal requests can be "forgotten" or denied</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="num">2</div>
+      <div class="row-text">Include the date you sent it
+        <small>This starts the 30-day legal clock</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="num">3</div>
+      <div class="row-text">Ask for written confirmation
+        <small>Creates documentation if you escalate</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="num">4</div>
+      <div class="row-text">Save every reply
+        <small>You'll need the paper trail at the meeting</small>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-emoji">!</div>
+      <div class="tip-text">Pro tip: cc your spouse or advocate
+        <small>A second name on the email = a second witness if it gets ignored.</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="save-band">
+    <div class="save-cta"><span class="pin-emoji">📌</span>Save for your next IEP request</div>
+    <div class="brand">spectrumunlocked.com</div>
+  </div>
+</body>
+</html>

@@ -1,185 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1000px;
-      height: 1500px;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
-      color: white;
-      padding: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .header {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-    .badge {
-      display: inline-block;
-      background: #52008C;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-    .title {
-      font-size: 50px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 15px;
-    }
-    .title span { color: #52008C; }
-    .subtitle {
-      font-size: 22px;
-      color: #aaa;
-    }
-    
-    .quote-box {
-      background: rgba(82, 0, 140, 0.15);
-      border-left: 5px solid #52008C;
-      border-radius: 0 16px 16px 0;
-      padding: 30px;
-      margin-bottom: 30px;
-    }
-    .quote-text {
-      font-size: 24px;
-      font-style: italic;
-      line-height: 1.5;
-      color: #ddd;
-    }
-    
-    .content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-    
-    .grief-item {
-      display: flex;
-      gap: 20px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 22px 25px;
-      align-items: flex-start;
-    }
-    .grief-icon {
-      font-size: 36px;
-      flex-shrink: 0;
-    }
-    .grief-content {
-      flex: 1;
-    }
-    .grief-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #FDB03E;
-      margin-bottom: 6px;
-    }
-    .grief-desc {
-      font-size: 16px;
-      color: #aaa;
-      line-height: 1.4;
-    }
-    
-    .affirmation {
-      background: linear-gradient(135deg, rgba(24, 168, 241, 0.2) 0%, rgba(24, 168, 241, 0.2) 100%);
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      margin-top: 15px;
-    }
-    .affirm-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #18A8F1;
-      margin-bottom: 10px;
-    }
-    .affirm-text {
-      font-size: 18px;
-      line-height: 1.5;
-    }
-    
-    .footer {
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .cta {
-      font-size: 20px;
-      font-weight: 700;
-      color: #FDB03E;
-      margin-bottom: 10px;
-    }
-    .brand {
-      font-size: 16px;
-      color: #666;
-    }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#FFF4E8; color:#2a004a; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.blob { position:absolute; width:320px; height:320px; border-radius:50%; background:#FDB03E; top:-120px; right:-120px; opacity:0.55; }
+.blob.b2 { width:220px; height:220px; background:#18A8F1; top:auto; bottom:380px; right:-80px; opacity:0.18; }
+.hero { background:#CC78CB; color:white; padding:70px 60px 60px; position:relative; z-index:2; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:10px 22px; border-radius:999px; font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:28px; }
+.title { font-size:96px; font-weight:900; line-height:0.98; letter-spacing:-2px; margin-bottom:18px; }
+.title em { font-style:normal; background:#18A8F1; color:white; padding:0 14px; display:inline-block; transform:rotate(-1.5deg); box-decoration-break:clone; }
+.subtitle { font-size:26px; font-weight:500; opacity:0.95; max-width:600px; line-height:1.3; }
+.content { flex:1; padding:50px 60px 30px; display:flex; flex-direction:column; gap:18px; position:relative; z-index:2; }
+.row { display:flex; align-items:center; gap:24px; background:white; border-radius:22px; padding:24px 30px; box-shadow:0 6px 0 rgba(82,0,140,0.12); }
+.num { flex-shrink:0; width:74px; height:74px; border-radius:50%; background:#18A8F1; color:white; font-size:42px; font-weight:900; display:flex; align-items:center; justify-content:center; line-height:1; }
+.row:nth-child(2) .num { background:#CC78CB; }
+.row:nth-child(3) .num { background:#FDB03E; color:#2a004a; }
+.row:nth-child(4) .num { background:#52008C; }
+.row:nth-child(5) .num { background:#18A8F1; }
+.row-text { font-size:25px; font-weight:700; line-height:1.25; color:#2a004a; }
+.row-text small { display:block; font-size:18px; font-weight:500; color:#6b5a7a; margin-top:4px; }
+.tip-card { margin:8px 0 0; background:#2a004a; color:white; border-radius:22px; padding:26px 30px; display:flex; align-items:center; gap:22px; border:4px solid #FDB03E; }
+.tip-card .tip-emoji { flex-shrink:0; width:64px; height:64px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:32px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-6deg); }
+.tip-card .tip-text { font-size:21px; font-weight:700; line-height:1.3; }
+.tip-card .tip-text small { display:block; font-size:16px; font-weight:500; opacity:0.85; margin-top:4px; }
+.save-band { background:#2a004a; color:white; padding:26px 60px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="badge">💜 Emotional Support</div>
-    <h1 class="title">The <span>Grief</span><br>No One Talks About</h1>
-    <p class="subtitle">For the parents who are struggling</p>
-  </div>
-  
-  <div class="quote-box">
-    <div class="quote-text">"You might grieve the future you imagined. The milestones. The expectations. This grief is valid."</div>
-  </div>
-  
-  <div class="content">
-    <div class="grief-item">
-      <div class="grief-icon">💔</div>
-      <div class="grief-content">
-        <div class="grief-title">It's Not About Loving Them Less</div>
-        <div class="grief-desc">Grieving the path you imagined doesn't mean you love your child any less. Both can exist.</div>
+<div class="blob"></div><div class="blob b2"></div>
+<div class="hero">
+  <span class="kicker">💜 You're not alone</span>
+  <h1 class="title">The <em>grief</em><br>no one talks about</h1>
+  <p class="subtitle">For autism parents struggling with the feeling no one warned them about</p>
+</div>
+<div class="content">
+    <div class="row">
+      <div class="num">1</div>
+      <div class="row-text">It's not loving them less
+        <small>Grieving the path you imagined doesn't mean you love your child any less. Both can exist.</small>
       </div>
     </div>
-    
-    <div class="grief-item">
-      <div class="grief-icon">🌊</div>
-      <div class="grief-content">
-        <div class="grief-title">Grief Comes in Waves</div>
-        <div class="grief-desc">Birthday parties. School milestones. Watching other kids. It hits when you least expect it.</div>
+    <div class="row">
+      <div class="num">2</div>
+      <div class="row-text">Grief comes in waves
+        <small>Birthday parties. Other kids' milestones. It hits when you least expect it.</small>
       </div>
     </div>
-    
-    <div class="grief-item">
-      <div class="grief-icon">🤐</div>
-      <div class="grief-content">
-        <div class="grief-title">Not Everyone Will Understand</div>
-        <div class="grief-desc">"But your child is alive and healthy!" They don't get it. Find people who do.</div>
+    <div class="row">
+      <div class="num">3</div>
+      <div class="row-text">Not everyone will get it
+        <small>"But your child is healthy!" They don't understand. Find people who do.</small>
       </div>
     </div>
-    
-    <div class="grief-item">
-      <div class="grief-icon">🌱</div>
-      <div class="grief-content">
-        <div class="grief-title">There Is Joy on the Other Side</div>
-        <div class="grief-desc">The grief doesn't disappear, but it makes room for unexpected joys you couldn't have imagined.</div>
+    <div class="row">
+      <div class="num">4</div>
+      <div class="row-text">Joy lives on the other side
+        <small>The grief doesn't disappear — it makes room for joys you couldn't have imagined.</small>
       </div>
     </div>
-    
-    <div class="affirmation">
-      <div class="affirm-title">Remember This</div>
-      <div class="affirm-text">Your feelings are valid. Seeking help is strength.<br>You are not alone in this. 💜</div>
-    </div>
-  </div>
-  
-  <div class="footer">
-    <div class="cta">💾 Save for when you need it</div>
-    <div class="brand">@spectrum_unlocked</div>
-  </div>
-</body>
-</html>
+    <div class="tip-card">
+      <div class="tip-emoji">💜</div>
+      <div class="tip-text">Your feelings are valid. Asking for help is strength.
+        <small>You are not alone in this — and you don't have to carry it alone, either.</small>
+      </div>
+    </div></div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save for the hard days</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>

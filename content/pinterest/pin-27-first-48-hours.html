@@ -1,182 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1000px;
-      height: 1500px;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
-      color: white;
-      padding: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .badge {
-      display: inline-block;
-      background: #18A8F1;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-    .title {
-      font-size: 50px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 15px;
-    }
-    .title span { color: #18A8F1; }
-    .subtitle {
-      font-size: 20px;
-      color: #aaa;
-    }
-    
-    .content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-    
-    .step {
-      display: flex;
-      gap: 20px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 22px 25px;
-      align-items: flex-start;
-    }
-    
-    .step-time {
-      background: #18A8F1;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    
-    .step-content {
-      flex: 1;
-    }
-    .step-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #FDB03E;
-      margin-bottom: 6px;
-    }
-    .step-desc {
-      font-size: 15px;
-      color: #aaa;
-      line-height: 1.4;
-    }
-    
-    .reminder {
-      background: linear-gradient(135deg, rgba(24, 168, 241, 0.2) 0%, rgba(253, 176, 62, 0.2) 100%);
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      margin-top: 15px;
-    }
-    .reminder-text {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .reminder-sub {
-      font-size: 16px;
-      color: #aaa;
-    }
-    
-    .footer {
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .cta {
-      font-size: 20px;
-      font-weight: 700;
-      color: #FDB03E;
-      margin-bottom: 10px;
-    }
-    .brand {
-      font-size: 16px;
-      color: #666;
-    }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#FFF4E8; color:#2a004a; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.blob { position:absolute; width:320px; height:320px; border-radius:50%; background:#FDB03E; top:-120px; right:-120px; opacity:0.55; }
+.blob.b2 { width:220px; height:220px; background:#18A8F1; top:auto; bottom:380px; right:-80px; opacity:0.18; }
+.hero { background:#CC78CB; color:white; padding:70px 60px 60px; position:relative; z-index:2; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:10px 22px; border-radius:999px; font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:28px; }
+.title { font-size:96px; font-weight:900; line-height:0.98; letter-spacing:-2px; margin-bottom:18px; }
+.title em { font-style:normal; background:#18A8F1; color:white; padding:0 14px; display:inline-block; transform:rotate(-1.5deg); box-decoration-break:clone; }
+.subtitle { font-size:26px; font-weight:500; opacity:0.95; max-width:600px; line-height:1.3; }
+.content { flex:1; padding:50px 60px 30px; display:flex; flex-direction:column; gap:18px; position:relative; z-index:2; }
+.row { display:flex; align-items:center; gap:24px; background:white; border-radius:22px; padding:24px 30px; box-shadow:0 6px 0 rgba(82,0,140,0.12); }
+.num { flex-shrink:0; width:74px; height:74px; border-radius:50%; background:#18A8F1; color:white; font-size:42px; font-weight:900; display:flex; align-items:center; justify-content:center; line-height:1; }
+.row:nth-child(2) .num { background:#CC78CB; }
+.row:nth-child(3) .num { background:#FDB03E; color:#2a004a; }
+.row:nth-child(4) .num { background:#52008C; }
+.row:nth-child(5) .num { background:#18A8F1; }
+.row-text { font-size:25px; font-weight:700; line-height:1.25; color:#2a004a; }
+.row-text small { display:block; font-size:18px; font-weight:500; color:#6b5a7a; margin-top:4px; }
+.tip-card { margin:8px 0 0; background:#2a004a; color:white; border-radius:22px; padding:26px 30px; display:flex; align-items:center; gap:22px; border:4px solid #FDB03E; }
+.tip-card .tip-emoji { flex-shrink:0; width:64px; height:64px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:32px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-6deg); }
+.tip-card .tip-text { font-size:21px; font-weight:700; line-height:1.3; }
+.tip-card .tip-text small { display:block; font-size:16px; font-weight:500; opacity:0.85; margin-top:4px; }
+.save-band { background:#2a004a; color:white; padding:26px 60px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="badge">📋 Newly Diagnosed</div>
-    <h1 class="title">The First <span>48 Hours</span><br>After Diagnosis</h1>
-    <p class="subtitle">Stop the frantic 2am Googling. Start here.</p>
-  </div>
-  
-  <div class="content">
-    <div class="step">
-      <div class="step-time">Hour 1-6</div>
-      <div class="step-content">
-        <div class="step-title">Feel Your Feelings</div>
-        <div class="step-desc">Grief, relief, fear, hope — all valid. Don't make any big decisions yet. Just breathe.</div>
+<div class="blob"></div><div class="blob b2"></div>
+<div class="hero">
+  <span class="kicker">📋 Just diagnosed</span>
+  <h1 class="title">The first <em>48 hours</em></h1>
+  <p class="subtitle">Stop the 2am Googling — do these 4 things instead</p>
+</div>
+<div class="content">
+    <div class="row">
+      <div class="num">1</div>
+      <div class="row-text">Feel it. Don't fix it yet.
+        <small>Grief, relief, fear, hope — all valid. No big decisions today.</small>
       </div>
     </div>
-    
-    <div class="step">
-      <div class="step-time">Hour 6-12</div>
-      <div class="step-content">
-        <div class="step-title">Call 3 People</div>
-        <div class="step-desc">1) Your pediatrician for referrals. 2) Your insurance for coverage info. 3) Your school district about early intervention.</div>
+    <div class="row">
+      <div class="num">2</div>
+      <div class="row-text">Make 3 calls
+        <small>Pediatrician for referrals. Insurance for coverage. School district for early intervention.</small>
       </div>
     </div>
-    
-    <div class="step">
-      <div class="step-time">Hour 12-24</div>
-      <div class="step-content">
-        <div class="step-title">Get on Waitlists</div>
-        <div class="step-desc">Speech, OT, ABA — whatever was recommended. Don't wait until you "know more." Waitlists are 6-12 months.</div>
+    <div class="row">
+      <div class="num">3</div>
+      <div class="row-text">Get on every waitlist
+        <small>Speech, OT, ABA — whatever was recommended. They're 6–12 months long.</small>
       </div>
     </div>
-    
-    <div class="step">
-      <div class="step-time">Hour 24-36</div>
-      <div class="step-content">
-        <div class="step-title">Find Your People</div>
-        <div class="step-desc">Join one Facebook group or follow autism parent accounts. You need people who GET IT.</div>
+    <div class="row">
+      <div class="num">4</div>
+      <div class="row-text">Find one person who gets it
+        <small>A Facebook group, an autism parent account. You need your people.</small>
       </div>
     </div>
-    
-    <div class="step">
-      <div class="step-time">Hour 36-48</div>
-      <div class="step-content">
-        <div class="step-title">Take Care of YOU</div>
-        <div class="step-desc">Sleep. Eat. Hug your kid. The marathon starts now. You need to pace yourself.</div>
+    <div class="tip-card">
+      <div class="tip-emoji">🤍</div>
+      <div class="tip-text">Your child is the same kid they were yesterday
+        <small>The diagnosis is information, not a tragedy. The marathon starts now — pace yourself.</small>
       </div>
-    </div>
-    
-    <div class="reminder">
-      <div class="reminder-text">🤍 Your child is still the same kid they were yesterday.</div>
-      <div class="reminder-sub">The diagnosis is information, not a tragedy.</div>
-    </div>
-  </div>
-  
-  <div class="footer">
-    <div class="cta">💾 Save this to share with a newly diagnosed family</div>
-    <div class="brand">@spectrum_unlocked</div>
-  </div>
-</body>
-</html>
+    </div></div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save & share with a newly diagnosed family</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>

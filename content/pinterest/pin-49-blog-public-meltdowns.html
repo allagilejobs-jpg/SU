@@ -1,76 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #2a004a 0%, #52008C 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
-    .blog-badge { display: inline-block; background: #CC78CB; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
-    .header { text-align: center; margin-bottom: 25px; }
-    .title { font-size: 46px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
-    .title span { color: #CC78CB; }
-    .subtitle { font-size: 20px; color: #aaa; }
-    .scenario { background: rgba(204, 120, 203, 0.15); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 25px; font-size: 18px; font-style: italic; }
-    .content { flex: 1; display: flex; flex-direction: column; gap: 15px; }
-    .section { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; }
-    .section-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
-    .section.do .section-title { color: #18A8F1; }
-    .section.dont .section-title { color: #CC78CB; }
-    .section.strangers .section-title { color: #FDB03E; }
-    .items { display: flex; flex-direction: column; gap: 8px; }
-    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; }
-    .section.do .item span { color: #18A8F1; }
-    .section.dont .item span { color: #CC78CB; }
-    .section.strangers .item span { color: #FDB03E; }
-    .read-box { background: linear-gradient(135deg, #CC78CB 0%, #B85FB6 100%); border-radius: 16px; padding: 25px; text-align: center; margin-top: 15px; }
-    .read-text { font-size: 22px; font-weight: 700; }
-    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
-    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .brand { font-size: 16px; color: #666; }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#FFF4E8; color:#2a004a; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.blob { position:absolute; width:320px; height:320px; border-radius:50%; background:#FDB03E; top:-120px; right:-120px; opacity:0.55; }
+.blob.b2 { width:220px; height:220px; background:#18A8F1; top:auto; bottom:380px; right:-80px; opacity:0.18; }
+.hero { background:#CC78CB; color:white; padding:70px 60px 60px; position:relative; z-index:2; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:10px 22px; border-radius:999px; font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:28px; }
+.title { font-size:96px; font-weight:900; line-height:0.98; letter-spacing:-2px; margin-bottom:18px; }
+.title em { font-style:normal; background:#18A8F1; color:white; padding:0 14px; display:inline-block; transform:rotate(-1.5deg); box-decoration-break:clone; }
+.subtitle { font-size:26px; font-weight:500; opacity:0.95; max-width:600px; line-height:1.3; }
+.content { flex:1; padding:50px 60px 30px; display:flex; flex-direction:column; gap:18px; position:relative; z-index:2; }
+.row { display:flex; align-items:center; gap:24px; background:white; border-radius:22px; padding:24px 30px; box-shadow:0 6px 0 rgba(82,0,140,0.12); }
+.num { flex-shrink:0; width:74px; height:74px; border-radius:50%; background:#18A8F1; color:white; font-size:42px; font-weight:900; display:flex; align-items:center; justify-content:center; line-height:1; }
+.row:nth-child(2) .num { background:#CC78CB; }
+.row:nth-child(3) .num { background:#FDB03E; color:#2a004a; }
+.row:nth-child(4) .num { background:#52008C; }
+.row:nth-child(5) .num { background:#18A8F1; }
+.row-text { font-size:25px; font-weight:700; line-height:1.25; color:#2a004a; }
+.row-text small { display:block; font-size:18px; font-weight:500; color:#6b5a7a; margin-top:4px; }
+.tip-card { margin:8px 0 0; background:#2a004a; color:white; border-radius:22px; padding:26px 30px; display:flex; align-items:center; gap:22px; border:4px solid #FDB03E; }
+.tip-card .tip-emoji { flex-shrink:0; width:64px; height:64px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:32px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-6deg); }
+.tip-card .tip-text { font-size:21px; font-weight:700; line-height:1.3; }
+.tip-card .tip-text small { display:block; font-size:16px; font-weight:500; opacity:0.85; margin-top:4px; }
+.save-band { background:#2a004a; color:white; padding:26px 60px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="blog-badge">📖 Blog Post</div>
-    <h1 class="title">How to Handle <span>Public Meltdowns</span></h1>
-    <p class="subtitle">Without shame</p>
-  </div>
-  <div class="scenario">"Your child is on the floor of Target and everyone is staring."</div>
-  <div class="content">
-    <div class="section do">
-      <div class="section-title">✓ In the Moment: DO</div>
-      <div class="items">
-        <div class="item"><span>✓</span> Get low, speak quietly</div>
-        <div class="item"><span>✓</span> Reduce sensory input (lights, sounds)</div>
-        <div class="item"><span>✓</span> Offer comfort items or stims</div>
-        <div class="item"><span>✓</span> Wait it out safely — don't rush</div>
-        <div class="item"><span>✓</span> Move to a quieter space if possible</div>
+<div class="blob"></div><div class="blob b2"></div>
+<div class="hero">
+  <span class="kicker">🛒 Public meltdowns</span>
+  <h1 class="title">On the floor of <em>Target</em><br>?</h1>
+  <p class="subtitle">What to do when your kid melts down and everyone's staring</p>
+</div>
+<div class="content">
+    <div class="row">
+      <div class="num">1</div>
+      <div class="row-text">Get low. Speak quietly.
+        <small>Lecturing makes it worse. Match the energy you want them to find.</small>
       </div>
     </div>
-    <div class="section dont">
-      <div class="section-title">✕ In the Moment: DON'T</div>
-      <div class="items">
-        <div class="item"><span>✕</span> Try to reason or lecture</div>
-        <div class="item"><span>✕</span> Raise your voice</div>
-        <div class="item"><span>✕</span> Physically force compliance</div>
-        <div class="item"><span>✕</span> Threaten or punish</div>
+    <div class="row">
+      <div class="num">2</div>
+      <div class="row-text">Reduce the input fast
+        <small>Lights, sounds, crowds. Move to a quieter spot if you can. Offer comfort items.</small>
       </div>
     </div>
-    <div class="section strangers">
-      <div class="section-title">👀 For Judgmental Strangers</div>
-      <div class="items">
-        <div class="item"><span>→</span> "My child is autistic. We're okay."</div>
-        <div class="item"><span>→</span> Carry cards explaining autism</div>
-        <div class="item"><span>→</span> Ignore them — your child comes first</div>
-        <div class="item"><span>→</span> Remember: their opinion doesn't matter</div>
+    <div class="row">
+      <div class="num">3</div>
+      <div class="row-text">Wait it out — don't rush
+        <small>Meltdowns can't be reasoned out of. They have to ride out safely.</small>
       </div>
     </div>
-  </div>
-  <div class="read-box">
-    <div class="read-text">📖 Read Prevention Tips</div>
-    <div class="read-url">spectrumunlocked.com/blog/public-meltdowns</div>
-  </div>
-  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
-</body>
-</html>
+    <div class="row">
+      <div class="num">4</div>
+      <div class="row-text">Have a one-liner ready for strangers
+        <small>"My child is autistic. We're okay." Then ignore them. Their opinion doesn't matter.</small>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-emoji">📖</div>
+      <div class="tip-text">Read prevention tips
+        <small>spectrumunlocked.com/blog/public-meltdowns — what to do BEFORE the next one happens.</small>
+      </div>
+    </div></div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save before your next outing</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>

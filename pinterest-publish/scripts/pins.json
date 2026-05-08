@@ -1,0 +1,833 @@
+{
+  "pins": [
+    {
+      "file": "pin-26-therapy-waitlists",
+      "template": "C",
+      "kicker": "⚠️ Newly diagnosed?",
+      "pre": "The therapy waitlist truth:",
+      "statValue": "6–12",
+      "statUnit": "MONTHS",
+      "statLabel": "average wait for autism therapy in the US",
+      "actionsTitle": "What to do RIGHT NOW",
+      "actions": [
+        { "title": "Get on multiple waitlists today", "sub": "Even before you're 100% sure which therapy is right" },
+        { "title": "Ask about cancellation lists", "sub": "You can sometimes start in weeks, not months" },
+        { "title": "You can always say no later", "sub": "But you can't recover lost months" },
+        { "title": "Call your insurance the same day", "sub": "Ask for in-network providers — saves weeks of phone tag" }
+      ],
+      "tip": {
+        "icon": "💡",
+        "title": "Start with your pediatrician's referral",
+        "sub": "Most insurers won't cover therapy without one. Get it in writing."
+      },
+      "saveCta": "Save for every newly diagnosed family"
+    },
+    {
+      "file": "pin-27-first-48-hours",
+      "template": "A",
+      "kicker": "📋 Just diagnosed",
+      "titlePre": "The first",
+      "titleHighlight": "48 hours",
+      "subtitle": "Stop the 2am Googling — do these 4 things instead",
+      "rows": [
+        { "title": "Feel it. Don't fix it yet.", "sub": "Grief, relief, fear, hope — all valid. No big decisions today." },
+        { "title": "Make 3 calls", "sub": "Pediatrician for referrals. Insurance for coverage. School district for early intervention." },
+        { "title": "Get on every waitlist", "sub": "Speech, OT, ABA — whatever was recommended. They're 6–12 months long." },
+        { "title": "Find one person who gets it", "sub": "A Facebook group, an autism parent account. You need your people." }
+      ],
+      "tip": {
+        "icon": "🤍",
+        "title": "Your child is the same kid they were yesterday",
+        "sub": "The diagnosis is information, not a tragedy. The marathon starts now — pace yourself."
+      },
+      "saveCta": "Save & share with a newly diagnosed family"
+    },
+    {
+      "file": "pin-28-iep-in-writing",
+      "template": "A",
+      "kicker": "📧 IEP advocacy",
+      "titlePre": "Always ask in",
+      "titleHighlight": "writing",
+      "subtitle": "A 4-step rule that protects your child & starts the legal clock",
+      "rows": [
+        { "title": "Email, never just talk", "sub": "Verbal requests can be \"forgotten\" or denied" },
+        { "title": "Include the date you sent it", "sub": "This starts the 30-day legal clock" },
+        { "title": "Ask for written confirmation", "sub": "Creates documentation if you escalate" },
+        { "title": "Save every reply", "sub": "You'll need the paper trail at the meeting" }
+      ],
+      "tip": {
+        "icon": "!",
+        "title": "Pro tip: cc your spouse or advocate",
+        "sub": "A second name on the email = a second witness if it gets ignored."
+      },
+      "saveCta": "Save for your next IEP request"
+    },
+    {
+      "file": "pin-29-grief-diagnosis",
+      "template": "A",
+      "kicker": "💜 You're not alone",
+      "titlePre": "The",
+      "titleHighlight": "grief",
+      "titlePost": "no one talks about",
+      "subtitle": "For autism parents struggling with the feeling no one warned them about",
+      "rows": [
+        { "title": "It's not loving them less", "sub": "Grieving the path you imagined doesn't mean you love your child any less. Both can exist." },
+        { "title": "Grief comes in waves", "sub": "Birthday parties. Other kids' milestones. It hits when you least expect it." },
+        { "title": "Not everyone will get it", "sub": "\"But your child is healthy!\" They don't understand. Find people who do." },
+        { "title": "Joy lives on the other side", "sub": "The grief doesn't disappear — it makes room for joys you couldn't have imagined." }
+      ],
+      "tip": {
+        "icon": "💜",
+        "title": "Your feelings are valid. Asking for help is strength.",
+        "sub": "You are not alone in this — and you don't have to carry it alone, either."
+      },
+      "saveCta": "Save for the hard days"
+    },
+    {
+      "file": "pin-30-autism-apps",
+      "template": "A",
+      "kicker": "📱 Parent toolkit",
+      "titlePre": "5 apps every autism",
+      "titleHighlight": "parent",
+      "titlePost": "needs",
+      "subtitle": "Tools that actually help — not just hype",
+      "rows": [
+        { "title": "First Then Visual Schedule", "sub": "Visual routines that reduce anxiety and meltdowns. Also try Choiceworks." },
+        { "title": "Proloquo2Go or TouchChat", "sub": "AAC apps that give nonverbal kids a voice. Free options: LetMeTalk, JABtalk." },
+        { "title": "Calm or Breathe Kids", "sub": "Guided breathing and sensory regulation. Also try Moshi or Headspace for Kids." },
+        { "title": "Time Timer", "sub": "Makes time visible to reduce transition anxiety. Physical version exists too." }
+      ],
+      "tip": {
+        "icon": "💡",
+        "title": "Pair the app with a real routine",
+        "sub": "Apps support the system — they don't replace it. Use them daily, not just in crisis."
+      },
+      "saveCta": "Save this app toolkit"
+    },
+    {
+      "file": "pin-31-functioning-labels",
+      "template": "B",
+      "kicker": "🚫 Language matters",
+      "titlePre": "\"High-functioning\" is",
+      "titleHighlight": "NOT",
+      "titlePost": "a compliment",
+      "mythLabel": "The Myth",
+      "mythText": "Functioning labels are helpful shorthand.",
+      "mythSub": "They describe how autism LOOKS to others — not how it actually feels to live with it.",
+      "truthLabel": "The Truth",
+      "truthHeadline": "Functioning labels harm everyone they're stuck on.",
+      "truthItems": [
+        { "icon": "🔇", "label": "\"High support needs\" kids get silenced", "sub": "Underestimated. Spoken about, not spoken to." },
+        { "icon": "🚫", "label": "\"Low support needs\" kids get denied help", "sub": "\"You don't look autistic\" = no services, no understanding." },
+        { "icon": "✓", "label": "Say this instead", "sub": "Describe specific strengths and challenges. Ask the person what they prefer." }
+      ],
+      "quote": {
+        "text": "I'm not high-functioning. I'm just good at hiding how hard this is.",
+        "who": "autistic adults, repeatedly"
+      },
+      "saveCta": "Save & share to spread awareness"
+    },
+    {
+      "file": "pin-32-what-to-say",
+      "template": "A",
+      "kicker": "💬 For friends & family",
+      "titlePre": "What",
+      "titleHighlight": "TO say",
+      "titlePost": "to autism parents",
+      "subtitle": "Share this with the people who want to help but don't know how",
+      "rows": [
+        { "title": "Say \"thanks for sharing with me\"", "sub": "Not \"I'm so sorry.\" Autism isn't a tragedy to apologize for." },
+        { "title": "Say \"how can I support you?\"", "sub": "Not \"they'll grow out of it.\" Autism is lifelong — and that's okay." },
+        { "title": "Say \"tell me about them\"", "sub": "Not \"they don't look autistic.\" There is no autistic look." },
+        { "title": "Say \"can I bring you dinner?\"", "sub": "Not \"have you tried [random cure]?\" Practical help beats unsolicited advice." }
+      ],
+      "tip": {
+        "icon": "💡",
+        "title": "When in doubt: listen more, advise less",
+        "sub": "Simple validation goes further than any expert tip you read online."
+      },
+      "saveCta": "Save & send to friends and family"
+    },
+    {
+      "file": "pin-33-diagnosis-week",
+      "template": "A",
+      "kicker": "📋 Just diagnosed",
+      "titlePre": "Your first",
+      "titleHighlight": "week",
+      "titlePost": "checklist",
+      "subtitle": "5 steps that actually help — skip the rest of the internet",
+      "rows": [
+        { "title": "Take a breath", "sub": "You don't have to figure it all out today. Your child is the same amazing kid." },
+        { "title": "Get on every waitlist NOW", "sub": "Speech, OT, ABA. Lists are 6–12 months. You can always decline later." },
+        { "title": "Email your school district", "sub": "Request an evaluation in writing. Early intervention and IEPs are your right." },
+        { "title": "Find your people", "sub": "One Facebook group or autism parent account. You need people who understand." },
+        { "title": "Take care of YOU", "sub": "It's a marathon. Sleep. Eat. Ask for help. You can't pour from an empty cup." }
+      ],
+      "saveCta": "Save for a family who just got diagnosed"
+    },
+    {
+      "file": "pin-34-emotions-myth",
+      "template": "B",
+      "kicker": "🚫 Myth busted",
+      "titlePre": "Autistic kids",
+      "titleHighlight": "feel",
+      "titlePost": "emotions deeply",
+      "mythLabel": "The Myth",
+      "mythText": "Autistic people don't have empathy.",
+      "mythSub": "A harmful assumption that still gets repeated by teachers, family, even doctors — and costs kids friendships.",
+      "truthLabel": "The Truth",
+      "truthHeadline": "They often feel MORE intensely — they just show it differently.",
+      "truthItems": [
+        { "icon": "🌊", "label": "Emotional flooding", "sub": "So much feeling, it can shut them down" },
+        { "icon": "🎭", "label": "A flat face ≠ a flat heart", "sub": "Expression and experience aren't the same" },
+        { "icon": "⏰", "label": "Delayed processing", "sub": "The cry can come hours or days later" }
+      ],
+      "quote": {
+        "text": "Just because I don't show it the way you expect doesn't mean I don't feel it.",
+        "who": "autistic adults, almost universally"
+      },
+      "saveCta": "Save & share to bust this myth"
+    },
+    {
+      "file": "pin-35-encouragement",
+      "template": "A",
+      "kicker": "💛 For you",
+      "titlePre": "You're doing",
+      "titleHighlight": "better",
+      "titlePost": "than you think",
+      "subtitle": "The fact that you're here — searching, learning, advocating — that's love in action",
+      "rows": [
+        { "title": "Your child is lucky to have you", "sub": "The parent who shows up, even on the hardest days. That's everything." },
+        { "title": "You don't have to be perfect", "sub": "Good enough, every day, is more than enough." },
+        { "title": "Asking for help is strength", "sub": "Not weakness. Not failure. The bravest parents have a team behind them." },
+        { "title": "You are not alone in this", "sub": "There are thousands of us, walking the same road, rooting for you." }
+      ],
+      "tip": {
+        "icon": "💛",
+        "title": "Save this for the hard days",
+        "sub": "When the meltdown lasts an hour and the IEP email is unread — come back here."
+      },
+      "saveCta": "Save for the hard days"
+    },
+    {
+      "file": "pin-36-tiktok-myths",
+      "template": "C",
+      "kicker": "🚫 Fact check",
+      "pre": "TikTok autism content:",
+      "statValue": "50%+",
+      "statUnit": "MISINFO",
+      "statLabel": "of TikTok autism videos contain false or misleading info",
+      "actionsTitle": "3 myths to stop repeating",
+      "actions": [
+        { "title": "\"Everyone is a little autistic\"", "sub": "No. Autism is a specific neurotype. This minimizes real struggles." },
+        { "title": "\"You can tell by looking at someone\"", "sub": "There is no autistic look. Many mask. Assuming you can spot it is harmful." },
+        { "title": "\"Autism is caused by bad parenting\"", "sub": "It's neurological and present from birth. Parents don't cause it. Period." }
+      ],
+      "tip": {
+        "icon": "💡",
+        "title": "Source check before you share",
+        "sub": "Look for autistic adults, SLPs, and OTs — not unverified hot takes from your FYP."
+      },
+      "saveCta": "Save & share to fight misinformation"
+    },
+    {
+      "file": "pin-37-world-autism-day",
+      "template": "A",
+      "kicker": "📅 April 2nd",
+      "titlePre": "World Autism",
+      "titleHighlight": "Acceptance",
+      "titlePost": "Day",
+      "subtitle": "Acceptance > Awareness — here's how to show up for autistic people on April 2",
+      "rows": [
+        { "title": "Light it up GOLD, not blue", "sub": "Gold is the color chosen by the autistic community. Blue comes from a controversial org." },
+        { "title": "Amplify autistic voices", "sub": "\"Nothing about us without us.\" Share autistic creators, not just parents and pros." },
+        { "title": "Celebrate, don't pity", "sub": "Today we embrace differences — we don't ask anyone to be \"less autistic.\"" },
+        { "title": "Acceptance lives in the everyday", "sub": "Hashtags fade. How you treat autistic people on a regular Wednesday is what counts." }
+      ],
+      "saveCta": "Save & share for April 2nd"
+    },
+    {
+      "file": "pin-38-nature-therapy",
+      "template": "A",
+      "kicker": "🌿 Free therapy",
+      "titlePre": "Nature is",
+      "titleHighlight": "free",
+      "titlePost": "therapy",
+      "subtitle": "Effective sensory regulation that costs zero dollars and zero waitlists",
+      "rows": [
+        { "title": "Natural sensory regulation", "sub": "Wind, water, leaves, dirt — gentle unpredictable input that calms the nervous system." },
+        { "title": "Escape artificial overload", "sub": "No fluorescent lights. No beeping. Natural sounds are easier to process." },
+        { "title": "Movement without rules", "sub": "No \"sit still\" or \"quiet hands.\" Run, climb, stim freely without judgment." },
+        { "title": "Lower cortisol, fewer meltdowns", "sub": "Studies show time outside improves emotional regulation in autistic kids." }
+      ],
+      "tip": {
+        "icon": "🌳",
+        "title": "Start with 15 minutes a day",
+        "sub": "Backyard walk, cloud watching, digging in dirt. The simplest activities work best."
+      },
+      "saveCta": "Save for your sensory toolkit"
+    },
+    {
+      "file": "pin-39-resources-toolkit",
+      "template": "A",
+      "kicker": "📚 Bookmark this",
+      "titlePre": "Your autism parent",
+      "titleHighlight": "toolkit",
+      "subtitle": "Every resource you actually need — in one bookmark",
+      "rows": [
+        { "title": "Start with ASAN + Autism Society", "sub": "ASAN is autistic-led. Autism Society has local chapters everywhere." },
+        { "title": "Read \"Uniquely Human\" first", "sub": "Then NeuroTribes. Then Unmasking Autism. The trifecta that changes how you see everything." },
+        { "title": "Wrightslaw for IEP and 504", "sub": "The legal advocacy site every autism parent learns to live on." },
+        { "title": "Find one community that fits", "sub": "Reddit r/autism_parenting, a local FB group, or autistic adults on Instagram." }
+      ],
+      "tip": {
+        "icon": "💡",
+        "title": "Don't try to read everything",
+        "sub": "Pick one book and one community. Go deep before going wide — overwhelm is the real enemy."
+      },
+      "saveCta": "Bookmark this toolkit"
+    },
+    {
+      "file": "pin-40-marriage-autism",
+      "template": "C",
+      "kicker": "💑 Relationships",
+      "pre": "Autism parent marriages:",
+      "statValue": "80%",
+      "statSize": 220,
+      "statUnit": "STRAIN",
+      "statLabel": "of autism parents report relationship strain — but it doesn't have to be your story",
+      "actionsTitle": "What actually helps",
+      "actions": [
+        { "title": "Schedule 15-min daily check-ins", "sub": "Not therapy talk. Just \"how are YOU?\" Coffee on the couch counts." },
+        { "title": "Share the \"expert\" role", "sub": "When one parent does all the research, resentment builds. Trade off who reads up." },
+        { "title": "Use respite for date nights", "sub": "Even once a month. Even 90 minutes. Adults-only conversations rebuild you." },
+        { "title": "Get autism-informed couples therapy", "sub": "A regular therapist may pathologize your reality. Find one who already gets it." }
+      ],
+      "tip": {
+        "icon": "💕",
+        "title": "Taking care of your marriage IS taking care of your kids",
+        "sub": "A stable partnership is the foundation that everything else gets built on."
+      },
+      "saveCta": "Save for when you need this reminder"
+    },
+    {
+      "file": "pin-41-autistic-joy",
+      "template": "A",
+      "kicker": "✨ Celebration",
+      "titlePre": "Autistic",
+      "titleHighlight": "joy",
+      "titlePost": "is real",
+      "subtitle": "The unique ways autistic people experience happiness — and why we celebrate it",
+      "rows": [
+        { "title": "Special interests light them up", "sub": "The deep dive. The encyclopedic knowledge. The pure enthusiasm that fills the room." },
+        { "title": "Happy stims = happiness, visible", "sub": "Hand flapping, jumping, spinning. Don't suppress them. Celebrate them." },
+        { "title": "Pattern recognition is joy", "sub": "Seeing connections others miss. Finding order in chaos. The satisfaction is real." },
+        { "title": "Connection without small talk", "sub": "When autistic people connect, it's deep, real, honest. No pretense required." }
+      ],
+      "tip": {
+        "icon": "💛",
+        "title": "Joy is resistance",
+        "sub": "In a world that calls them \"too much,\" celebrating who they are is revolutionary."
+      },
+      "saveCta": "Save to celebrate autistic joy"
+    },
+    {
+      "file": "pin-42-blog-parent-burnout",
+      "template": "A",
+      "kicker": "🔥 Real talk",
+      "titlePre": "Autism parent",
+      "titleHighlight": "burnout",
+      "titlePost": "is real",
+      "subtitle": "It doesn't mean you're failing. It means you're human running on empty.",
+      "rows": [
+        { "title": "It's 2am and no one is awake", "sub": "Your child won't sleep, no therapist is answering, you're empty. That's burnout." },
+        { "title": "Why it hits autism parents harder", "sub": "Constant advocacy. Sensory vigilance. Therapy schedules. Insurance fights. The load never stops." },
+        { "title": "Warning signs to take seriously", "sub": "Irritability, detachment, dreading each day. These aren't character flaws — they're alarms." },
+        { "title": "Where to find real help", "sub": "Respite care, parent support groups, therapy for YOU. Asking for help isn't weakness." }
+      ],
+      "tip": {
+        "icon": "💚",
+        "title": "Read the full guide",
+        "sub": "spectrumunlocked.com/blog/autism-parent-burnout — strategies, scripts, and a no-guilt action plan."
+      },
+      "saveCta": "Save for the 2am nights"
+    },
+    {
+      "file": "pin-43-blog-gestalt-language",
+      "template": "A",
+      "kicker": "🗣️ Speech 101",
+      "titlePre": "What is",
+      "titleHighlight": "gestalt",
+      "titlePost": "language?",
+      "subtitle": "If your child scripts full Bluey lines but can't say \"milk\" — read this",
+      "rows": [
+        { "title": "Stage 1: Echolalia", "sub": "Repeating whole phrases from TV, songs, or people. This IS communication." },
+        { "title": "Stage 2: Mixing scripts", "sub": "Combining parts of different chunks together to mean new things." },
+        { "title": "Stages 3–4: Single words → phrases", "sub": "Isolating individual words from chunks, then making 2-word combos." },
+        { "title": "Stages 5–6: Sentences → flexible language", "sub": "Original grammar. Complex spontaneous speech. The path is real." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read the full guide",
+        "sub": "spectrumunlocked.com/blog/gestalt-language-processing — what to do at each stage."
+      },
+      "saveCta": "Save for your SLP appointment"
+    },
+    {
+      "file": "pin-44-blog-acceptance",
+      "template": "A",
+      "kicker": "💛 Acceptance",
+      "titlePre": "What acceptance",
+      "titleHighlight": "actually",
+      "titlePost": "looks like",
+      "subtitle": "Not a hashtag. Not a blue light. How you treat my kid on a regular Wednesday.",
+      "rows": [
+        { "title": "The cashier who waits", "sub": "Without sighing while my son finds his words." },
+        { "title": "The teacher who texts good news", "sub": "\"He had a great day\" — instead of a list of what went wrong." },
+        { "title": "The neighbor who invites us anyway", "sub": "Even though we might leave early. Especially because we might leave early." },
+        { "title": "Asking \"how can I help?\"", "sub": "Instead of \"what's wrong with him?\" The framing changes everything." }
+      ],
+      "tip": {
+        "icon": "💛",
+        "title": "Read the full post",
+        "sub": "spectrumunlocked.com/blog/autism-acceptance-month-2026 — what acceptance looks like in real life."
+      },
+      "saveCta": "Save for Acceptance Month"
+    },
+    {
+      "file": "pin-45-blog-aac-beginners",
+      "template": "B",
+      "kicker": "💬 AAC 101",
+      "titlePre": "AAC",
+      "titleHighlight": "supports",
+      "titlePost": "speech",
+      "mythLabel": "The Myth",
+      "mythText": "AAC will prevent my child from speaking.",
+      "mythSub": "This myth keeps thousands of nonverbal kids without a voice for years longer than necessary.",
+      "truthLabel": "The Truth",
+      "truthHeadline": "Research shows AAC helps speech develop, not block it.",
+      "truthItems": [
+        { "icon": "📱", "label": "Pick a tool that fits today", "sub": "High-tech apps, PECS boards, sign — all count as AAC." },
+        { "icon": "🚀", "label": "Model it yourself", "sub": "Use the device while you talk. Modeling is how kids learn AAC." },
+        { "icon": "✅", "label": "Accept every attempt", "sub": "One word, one icon, one sign. Respond to every try — perfection isn't the goal." }
+      ],
+      "quote": {
+        "text": "Giving a kid AAC doesn't take away words. It gives them the words they didn't have.",
+        "who": "every SLP, ever"
+      },
+      "saveCta": "Save & share to bust this myth"
+    },
+    {
+      "file": "pin-46-blog-early-intervention",
+      "template": "A",
+      "kicker": "🧠 Early intervention",
+      "titlePre": "Early help",
+      "titleHighlight": "rewires",
+      "titlePost": "the brain",
+      "subtitle": "Why the first 3 years matter — and what to actually request",
+      "rows": [
+        { "title": "Brain plasticity peaks under age 3", "sub": "Early support builds stronger neural pathways. The window is real, not hype." },
+        { "title": "Speech and OT come first", "sub": "Almost always. ABA depends on your child's specific needs — ask, don't assume." },
+        { "title": "Under 3? Call state EI", "sub": "It's free. 3+? Request a school evaluation in writing today." },
+        { "title": "Long waitlist? Start at home", "sub": "YouTube SLPs, Hanen, sensory play. Every interaction is therapy." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read the full guide",
+        "sub": "spectrumunlocked.com/blog/autism-early-intervention — service-by-service breakdown."
+      },
+      "saveCta": "Save before your next pediatrician visit"
+    },
+    {
+      "file": "pin-47-blog-iep-vs-504",
+      "template": "B",
+      "kicker": "📋 IEP vs 504",
+      "titlePre": "Which one does your kid",
+      "titleHighlight": "need?",
+      "mythLabel": "The Confusion",
+      "mythText": "An IEP and a 504 are basically the same thing.",
+      "mythSub": "They sound similar. They're not. Picking the wrong one can leave your child without the support the law guarantees.",
+      "truthLabel": "The Truth",
+      "truthHeadline": "An IEP teaches differently. A 504 just accommodates.",
+      "truthItems": [
+        { "icon": "📚", "label": "IEP = specialized instruction", "sub": "Individualized goals. Speech, OT. Legal protection under IDEA." },
+        { "icon": "🛠️", "label": "504 = accommodations only", "sub": "No specialized teaching. Less paperwork. Faster to set up." },
+        { "icon": "💡", "label": "Not sure? Start with IEP", "sub": "Request the eval in writing. You can step down to a 504 — you can't easily go up." }
+      ],
+      "quote": {
+        "text": "If your child needs specialized teaching, a 504 won't cut it. Don't let the school steer you wrong.",
+        "who": "every veteran IEP advocate"
+      },
+      "saveCta": "Save before your next school meeting"
+    },
+    {
+      "file": "pin-48-blog-workplace",
+      "template": "A",
+      "kicker": "⚖️ ADA rights",
+      "titlePre": "Workplace rights",
+      "titleHighlight": "for autistic",
+      "titlePost": "adults",
+      "subtitle": "What every autism parent should know for their kid's future",
+      "rows": [
+        { "title": "Autism is protected under ADA", "sub": "Employers must provide \"reasonable accommodations.\" They can't fire someone for being autistic." },
+        { "title": "Common accommodations to request", "sub": "Headphones, written instructions, flexible hours, remote work, dim lighting." },
+        { "title": "Use JAN — it's free", "sub": "Job Accommodation Network is a free government service most families don't know exists." },
+        { "title": "Always request in writing", "sub": "Document the ask. Explain how autism affects the job. Suggest specific accommodations." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read the full guide",
+        "sub": "spectrumunlocked.com/blog/workplace-accommodations-autism — sample request letters included."
+      },
+      "saveCta": "Save for your kid's future"
+    },
+    {
+      "file": "pin-49-blog-public-meltdowns",
+      "template": "A",
+      "kicker": "🛒 Public meltdowns",
+      "titlePre": "On the floor of",
+      "titleHighlight": "Target",
+      "titlePost": "?",
+      "subtitle": "What to do when your kid melts down and everyone's staring",
+      "rows": [
+        { "title": "Get low. Speak quietly.", "sub": "Lecturing makes it worse. Match the energy you want them to find." },
+        { "title": "Reduce the input fast", "sub": "Lights, sounds, crowds. Move to a quieter spot if you can. Offer comfort items." },
+        { "title": "Wait it out — don't rush", "sub": "Meltdowns can't be reasoned out of. They have to ride out safely." },
+        { "title": "Have a one-liner ready for strangers", "sub": "\"My child is autistic. We're okay.\" Then ignore them. Their opinion doesn't matter." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read prevention tips",
+        "sub": "spectrumunlocked.com/blog/public-meltdowns — what to do BEFORE the next one happens."
+      },
+      "saveCta": "Save before your next outing"
+    },
+    {
+      "file": "pin-50-blog-explain-family",
+      "template": "A",
+      "kicker": "👨‍👩‍👧 Family scripts",
+      "titlePre": "Explain autism",
+      "titleHighlight": "to family",
+      "titlePost": "who don't get it",
+      "subtitle": "Scripts for grandparents, in-laws, and that one uncle",
+      "rows": [
+        { "title": "The \"different brain\" script", "sub": "\"Their brain processes the world differently. Covering ears isn't rude — sounds actually hurt.\"" },
+        { "title": "Shut down \"they need discipline\"", "sub": "\"They don't need discipline. They need understanding. I've already tried what you're suggesting.\"" },
+        { "title": "Set the boundary clearly", "sub": "\"If you can't respect our accommodations, visits will be shorter. That's a hard line.\"" },
+        { "title": "The phrase that ends the debate", "sub": "\"You don't have to fully understand autism to fully accept my child.\"" }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read all the scripts",
+        "sub": "spectrumunlocked.com/blog/explain-autism-to-family — for every relative who needs them."
+      },
+      "saveCta": "Save before the next family dinner"
+    },
+    {
+      "file": "pin-51-blog-picky-eating",
+      "template": "A",
+      "kicker": "🍟 Picky eating",
+      "titlePre": "It's not defiance.",
+      "titleHighlight": "It's sensory.",
+      "subtitle": "Strategies that go beyond \"just try one bite\"",
+      "rows": [
+        { "title": "Why it happens", "sub": "Texture sensitivity, smell overwhelm, color issues, need for sameness. It's neurological, not behavioral." },
+        { "title": "What doesn't work", "sub": "Power struggles, forcing bites, hiding foods, comparing to other kids, withholding safe foods." },
+        { "title": "What actually helps", "sub": "Food chaining, same brands, same plates, exposure without pressure. Senses first, mouth later." },
+        { "title": "Chicken nuggets aren't failure", "sub": "They're keeping your kid alive and fed. That's meeting them where they are." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read full strategies",
+        "sub": "spectrumunlocked.com/blog/autism-picky-eating — week-by-week food chaining plan."
+      },
+      "saveCta": "Save before your next mealtime battle"
+    },
+    {
+      "file": "pin-52-blog-therapies-explained",
+      "template": "A",
+      "kicker": "🧩 Therapies 101",
+      "titlePre": "Autism therapies",
+      "titleHighlight": "explained",
+      "subtitle": "ABA, OT, Speech & more — in plain language, no clinical jargon",
+      "rows": [
+        { "title": "Speech therapy", "sub": "Communication, AAC, social language, articulation. Often the first one recommended." },
+        { "title": "Occupational therapy (OT)", "sub": "Sensory processing, fine motor, daily living, self-regulation. Probably the second." },
+        { "title": "ABA therapy", "sub": "Behavior-based learning. Common but controversial. Ask about play-based, child-led approaches." },
+        { "title": "Floortime / DIR", "sub": "Relationship-based. Follows the child's lead. Builds emotional connection — not compliance." },
+        { "title": "Social skills groups", "sub": "Peer interaction, friendship skills, group setting. Best when paired with the others." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read full guide + red flags",
+        "sub": "spectrumunlocked.com/blog/autism-therapy-types-explained — what to ask before signing up."
+      },
+      "saveCta": "Save before your first therapy intake"
+    },
+    {
+      "file": "pin-53-blog-sensory-diet",
+      "template": "A",
+      "kicker": "🧘 Sensory diet",
+      "titlePre": "A sensory diet has",
+      "titleHighlight": "nothing",
+      "titlePost": "to do with food",
+      "subtitle": "It's a schedule of activities that keeps your child regulated all day",
+      "rows": [
+        { "title": "Planned sensory input, on a schedule", "sub": "Not reactive. Proactive. You meet the need BEFORE the meltdown." },
+        { "title": "Built around your child's profile", "sub": "Seekers need movement and pressure. Avoiders need quiet and predictability. It's individual." },
+        { "title": "Use it before hard moments", "sub": "Grocery store, appointments, transitions. 10 minutes of jumping or deep pressure first." },
+        { "title": "OT designs it — you run it", "sub": "Get an OT to map it out, then weave activities into your normal day." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read the full guide",
+        "sub": "spectrumunlocked.com/blog/sensory-diet-beginners-guide — sample schedules included."
+      },
+      "saveCta": "Save before your next OT visit"
+    },
+    {
+      "file": "pin-54-blog-diagnosed-now-what",
+      "template": "A",
+      "kicker": "📋 Just diagnosed",
+      "titlePre": "Just diagnosed?",
+      "titleHighlight": "Now what.",
+      "subtitle": "The 5 things actually worth doing in the first month",
+      "rows": [
+        { "title": "Get the written report", "sub": "You'll need it for services, school, and insurance. Don't leave the office without it." },
+        { "title": "Contact early intervention or school", "sub": "Under 3: state EI is free. 3+: request a school evaluation in writing today." },
+        { "title": "Call insurance about ABA coverage", "sub": "Most states require it. Document every call — name, date, reference number." },
+        { "title": "Get on every waitlist now", "sub": "Speech, OT, specialists. Lists are months long. Get on all of them in one afternoon." },
+        { "title": "Find your people + your therapist", "sub": "A Facebook group for support. A therapist for you. Don't skip the second one." }
+      ],
+      "saveCta": "Save for a newly diagnosed family"
+    },
+    {
+      "file": "pin-55-blog-sensory-activities",
+      "template": "A",
+      "kicker": "🌧️ Rainy day",
+      "titlePre": "5 sensory activities",
+      "titleHighlight": "indoors",
+      "subtitle": "OT-approved, parent-tested, all using stuff you already own",
+      "rows": [
+        { "title": "Sensory bin with hidden toys", "sub": "Rice, beans, or kinetic sand + small toys to find. 30 minutes of focus, easy." },
+        { "title": "Indoor obstacle course", "sub": "Pillows to jump on, blanket tunnels, couch cushions to climb. Heavy work = regulation." },
+        { "title": "Shaving cream art on a tray", "sub": "Or in the bathtub for instant cleanup. Add food coloring for extra fun." },
+        { "title": "Calming playdough", "sub": "Homemade with lavender. The smell + the squish = nervous system reset." },
+        { "title": "Blanket fort + fairy lights", "sub": "A cozy, low-stimulation retreat. The most powerful activity on this list." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Get full instructions",
+        "sub": "spectrumunlocked.com/blog/sensory-friendly-activities — recipes, supply lists, OT notes."
+      },
+      "saveCta": "Save for the next rainy weekend"
+    },
+    {
+      "file": "pin-56-blog-first-iep",
+      "template": "A",
+      "kicker": "📋 First IEP meeting",
+      "titlePre": "Your first IEP meeting",
+      "titleHighlight": "checklist",
+      "subtitle": "Walk in prepared. Walk out with what your kid actually needs.",
+      "rows": [
+        { "title": "Bring evaluations + written concerns", "sub": "Plus a notebook, pen, water, and an advocate or spouse. Meetings run long." },
+        { "title": "Use \"I'd like that in writing\"", "sub": "Verbal promises mean nothing. Everything goes in the IEP or it doesn't exist." },
+        { "title": "Ask \"can you show me the data?\"", "sub": "If they can't back it up with evidence, it doesn't belong in your child's plan." },
+        { "title": "Don't sign the same day", "sub": "Take it home. Read it. \"We don't do that here\" is not a legal reason." }
+      ],
+      "tip": {
+        "icon": "⚠️",
+        "title": "Record the meeting (check your state)",
+        "sub": "Most states allow one-party consent. A recording protects you when memories disagree later."
+      },
+      "saveCta": "Save before your IEP meeting"
+    },
+    {
+      "file": "pin-57-blog-iep-rights",
+      "template": "A",
+      "kicker": "⚖️ IEP rights",
+      "titlePre": "IEP rights schools",
+      "titleHighlight": "won't",
+      "titlePost": "tell you",
+      "subtitle": "Most schools won't volunteer these. IDEA guarantees them anyway.",
+      "rows": [
+        { "title": "You don't have to sign same day", "sub": "Take it home. Review it. Consult an advocate. Never feel pressured into signing." },
+        { "title": "You can request ANY meeting", "sub": "You don't have to wait for annual review. Request one in writing — anytime." },
+        { "title": "You can request an IEE", "sub": "Disagree with the school's eval? You can demand an Independent Educational Evaluation at district expense." },
+        { "title": "\"We don't have that\" isn't legal", "sub": "If your child needs it, the district must provide it — or pay for it elsewhere." },
+        { "title": "Bring anyone you want", "sub": "Advocate, lawyer, friend, therapist. You choose your team." }
+      ],
+      "saveCta": "Save before your next IEP meeting"
+    },
+    {
+      "file": "pin-58-blog-finding-village",
+      "template": "A",
+      "kicker": "🤝 Find your people",
+      "titlePre": "Finding your",
+      "titleHighlight": "village",
+      "titlePost": "in an isolated world",
+      "subtitle": "Where autism parents actually find the friends who get it",
+      "rows": [
+        { "title": "Online communities first", "sub": "FB groups, Reddit r/autism_parenting, Discord. 24/7 support from people who've been there." },
+        { "title": "Local parent meetups", "sub": "Search \"[your city] autism parent support group.\" Real friendships, real coffee, real life." },
+        { "title": "Therapy waiting rooms", "sub": "Some of your best connections will come from the parent sitting next to you on Tuesdays." },
+        { "title": "Vulnerability first", "sub": "Share your hard days. The right people will show up. The wrong ones will quietly fade." }
+      ],
+      "tip": {
+        "icon": "💚",
+        "title": "Read the full guide",
+        "sub": "spectrumunlocked.com/blog/finding-your-village — where to look + how to start."
+      },
+      "saveCta": "Save when you feel alone"
+    },
+    {
+      "file": "pin-59-blog-visual-schedule",
+      "template": "A",
+      "kicker": "📋 Visual schedules",
+      "titlePre": "Visual schedules that",
+      "titleHighlight": "actually",
+      "titlePost": "work",
+      "subtitle": "Why they reduce meltdowns — and how to build one tonight",
+      "rows": [
+        { "title": "Photos for younger kids", "sub": "Real pictures > line drawings. The brain processes them faster, with less translation." },
+        { "title": "Vertical layout, top-to-bottom", "sub": "It's the most intuitive. Start with 3–5 items. Add more once it's working." },
+        { "title": "Make it interactive", "sub": "Velcro. Moveable pieces. A \"done\" pocket. Touching the schedule = using the schedule." },
+        { "title": "Let your child help build it", "sub": "If they didn't make it, they may not buy in. Co-creating drives ownership." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Free printables",
+        "sub": "spectrumunlocked.com/blog/visual-schedule-guide — templates ready to print tonight."
+      },
+      "saveCta": "Save before tomorrow morning"
+    },
+    {
+      "file": "pin-60-blog-school-communication",
+      "template": "A",
+      "kicker": "📧 School comms",
+      "titlePre": "School emails that",
+      "titleHighlight": "protect",
+      "titlePost": "your child",
+      "subtitle": "Email templates that start the legal clock — and build a paper trail teachers can't ignore",
+      "rows": [
+        { "title": "Email > phone, every time", "sub": "Verbal conversations don't exist legally. If it's not in writing, it didn't happen." },
+        { "title": "Follow up calls with summary email", "sub": "\"Per our conversation on [date], we agreed to [X]. Please confirm.\" Done." },
+        { "title": "CC yourself on every send", "sub": "Plus a dated folder of all correspondence. Build the paper trail before you need it." },
+        { "title": "Use \"under IDEA\" when it counts", "sub": "\"I am requesting this in writing under IDEA.\" That phrase changes the timeline." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Free email templates",
+        "sub": "spectrumunlocked.com/blog/school-communication-tips — copy, paste, send."
+      },
+      "saveCta": "Save before your next school email"
+    },
+    {
+      "file": "pin-61-blog-siblings",
+      "template": "A",
+      "kicker": "👫 Siblings",
+      "titlePre": "Don't forget the",
+      "titleHighlight": "other",
+      "titlePost": "kid",
+      "subtitle": "Neurotypical siblings notice more than you think — here's how to show up for them",
+      "rows": [
+        { "title": "Explain it simply, often", "sub": "\"Their brain works differently. Some things are harder, some easier. We all have different needs.\"" },
+        { "title": "Name the feelings they hide", "sub": "Embarrassment. Jealousy. Guilt for feeling jealous. Worry. Loneliness. All real, all valid." },
+        { "title": "Schedule 1-on-1 time", "sub": "Attend THEIR activities. Validate their frustrations without guilt. Show up just for them." },
+        { "title": "Don't make them \"the easy one\"", "sub": "They're not your backup plan. They have their own needs that matter equally." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read the full guide",
+        "sub": "spectrumunlocked.com/blog/autism-sibling-support — scripts and weekly check-in ideas."
+      },
+      "saveCta": "Save for your other kid"
+    },
+    {
+      "file": "pin-62-blog-sleep-strategies",
+      "template": "A",
+      "kicker": "😴 Sleep help",
+      "titlePre": "Sleep strategies that",
+      "titleHighlight": "actually",
+      "titlePost": "work",
+      "subtitle": "Evidence-based approaches for autistic kids who can't shut their brain off",
+      "rows": [
+        { "title": "Build a sensory-friendly bedroom", "sub": "Blackout curtains. White noise. Weighted blanket. Cool temp. Remove visual clutter." },
+        { "title": "Same routine, every night", "sub": "Visual schedule, same order, no surprises. Predictability = the calm before sleep." },
+        { "title": "No screens 1–2 hours before bed", "sub": "Blue light disrupts melatonin. Books, audiobooks, dim lights instead." },
+        { "title": "Melatonin isn't the only option", "sub": "It helps some kids. Talk to your pediatrician about other options first." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read all strategies",
+        "sub": "spectrumunlocked.com/blog/autism-sleep-strategies — including non-melatonin options."
+      },
+      "saveCta": "Save before tonight's bedtime"
+    },
+    {
+      "file": "pin-63-blog-meltdown-tantrum",
+      "template": "B",
+      "kicker": "🚨 Meltdown vs tantrum",
+      "titlePre": "Meltdown isn't a",
+      "titleHighlight": "tantrum",
+      "mythLabel": "The Confusion",
+      "mythText": "A meltdown is just a bigger tantrum.",
+      "mythSub": "Treating a meltdown like a tantrum makes it worse — and tells your child their brain is bad. The difference matters.",
+      "truthLabel": "The Truth",
+      "truthHeadline": "One is a brain overload. The other is a goal.",
+      "truthItems": [
+        { "icon": "🧠", "label": "Meltdown = neurological", "sub": "No goal. Can't be reasoned with. Happens with or without an audience." },
+        { "icon": "🎯", "label": "Tantrum = goal-oriented", "sub": "Wants something. Checks for an audience. Stops when goal is met or given up." },
+        { "icon": "🔧", "label": "Different responses", "sub": "Meltdown: safety + reduce stimuli + wait. Tantrum: stay calm + hold the boundary." }
+      ],
+      "quote": {
+        "text": "Your child isn't giving you a hard time. They're having a hard time.",
+        "who": "every veteran autism parent"
+      },
+      "saveCta": "Save before the next meltdown"
+    },
+    {
+      "file": "pin-64-blog-waitlist",
+      "template": "C",
+      "kicker": "⏳ On a waitlist?",
+      "pre": "Stuck waiting for therapy?",
+      "statValue": "6",
+      "statSize": 220,
+      "statUnit": "MONTHS",
+      "statLabel": "average waitlist length — but you don't have to waste a single one of them",
+      "actionsTitle": "Do these RIGHT NOW",
+      "actions": [
+        { "title": "Get on every list in your area", "sub": "Call them all today. The more lists, the faster a spot opens up." },
+        { "title": "Call state Early Intervention", "sub": "Under 3? It's free and often has shorter waits than private therapy." },
+        { "title": "Ask to be on cancellation lists", "sub": "Call weekly. Be ready to drop everything. Spots open more than you'd think." },
+        { "title": "Try telehealth", "sub": "Online speech and parent coaching often have wait times in weeks, not months." }
+      ],
+      "tip": {
+        "icon": "💡",
+        "title": "Document everything while you wait",
+        "sub": "Behavior log, video clips, regression notes. Your future therapist will save weeks because of it."
+      },
+      "saveCta": "Save the day you join a waitlist"
+    },
+    {
+      "file": "pin-65-blog-self-care",
+      "template": "A",
+      "kicker": "🛁 Real self-care",
+      "titlePre": "Self-care isn't a",
+      "titleHighlight": "bubble bath",
+      "subtitle": "Real strategies for parents who've spent an hour on hold with insurance",
+      "rows": [
+        { "title": "It's saying no, not lighting candles", "sub": "Boundaries. Asking for help. Actual rest. The unglamorous stuff that actually works." },
+        { "title": "Ask for help — and accept it", "sub": "Respite care. Family. Paid sitters who get it. You cannot do this alone forever." },
+        { "title": "Therapy for YOU", "sub": "An autism-informed therapist. Your mental health is not optional infrastructure." },
+        { "title": "Micro-moments count", "sub": "5 minutes of silence. Hot coffee. A locked bathroom. Small wins keep you upright." }
+      ],
+      "tip": {
+        "icon": "📖",
+        "title": "Read all strategies",
+        "sub": "spectrumunlocked.com/blog/self-care-autism-parents — no bubble baths, promise."
+      },
+      "saveCta": "Save for the next hard day"
+    }
+  ]
+}

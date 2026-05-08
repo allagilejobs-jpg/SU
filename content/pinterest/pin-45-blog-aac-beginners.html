@@ -1,117 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1000px;
-      height: 1500px;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
-      color: white;
-      padding: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-    .blog-badge {
-      display: inline-block;
-      background: #18A8F1;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-    .header { text-align: center; margin-bottom: 25px; }
-    .title { font-size: 48px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
-    .title span { color: #18A8F1; }
-    .subtitle { font-size: 20px; color: #aaa; }
-    .myth-box {
-      background: rgba(24, 168, 241, 0.15);
-      border: 2px solid #18A8F1;
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-    .myth-text { font-size: 20px; font-weight: 600; }
-    .myth-text span { color: #18A8F1; }
-    .content { flex: 1; display: flex; flex-direction: column; gap: 15px; }
-    .section { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; }
-    .section-title { font-size: 18px; font-weight: 700; color: #FDB03E; margin-bottom: 12px; }
-    .items { display: flex; flex-direction: column; gap: 10px; }
-    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; }
-    .item span { color: #18A8F1; flex-shrink: 0; }
-    .types-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .type-item { display: flex; align-items: center; gap: 10px; font-size: 15px; }
-    .type-icon { font-size: 24px; }
-    .read-box {
-      background: linear-gradient(135deg, #18A8F1 0%, #0F7BB3 100%);
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      margin-top: 15px;
-    }
-    .read-text { font-size: 22px; font-weight: 700; }
-    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
-    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .brand { font-size: 16px; color: #666; }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#FFF4E8; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.title-strip { background:#18A8F1; color:white; padding:54px 60px 60px; text-align:center; position:relative; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:8px 22px; border-radius:999px; font-size:16px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:18px; }
+.title { font-size:84px; font-weight:900; line-height:0.96; letter-spacing:-2px; }
+.title .feel { background:#CC78CB; padding:0 16px; display:inline-block; transform:rotate(-2deg); }
+.compare { flex:1; display:flex; flex-direction:column; }
+.block { padding:44px 60px; position:relative; }
+.block.myth { background:#FFE4E1; border-bottom:6px dashed #CC78CB; }
+.block.truth { background:#CC78CB; color:white; flex:1; }
+.block-label { display:inline-block; font-size:22px; font-weight:900; text-transform:uppercase; letter-spacing:3px; padding:8px 20px; border-radius:8px; margin-bottom:22px; }
+.myth .block-label { background:#2a004a; color:white; }
+.truth .block-label { background:#FDB03E; color:#2a004a; }
+.block-text { font-size:42px; font-weight:800; line-height:1.1; letter-spacing:-1px; }
+.myth .block-text { color:#6b5a7a; text-decoration:line-through; text-decoration-color:#CC78CB; text-decoration-thickness:4px; }
+.block-sub { font-size:22px; font-weight:500; line-height:1.35; margin-top:22px; }
+.myth .block-sub { color:#2a004a; opacity:0.8; }
+.vs-stamp { position:absolute; left:50%; transform:translateX(-50%) rotate(-8deg); bottom:-42px; width:86px; height:86px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:26px; font-weight:900; display:flex; align-items:center; justify-content:center; z-index:3; box-shadow:0 6px 0 rgba(82,0,140,0.4); border:4px solid white; }
+.truth-list { display:flex; flex-direction:column; gap:12px; margin-top:26px; }
+.truth-item { display:flex; align-items:center; gap:16px; background:rgba(255,255,255,0.18); border-radius:14px; padding:14px 18px; }
+.truth-item .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px; background:#FDB03E; color:#2a004a; font-size:20px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-4deg); }
+.truth-item .lbl { font-size:19px; font-weight:700; line-height:1.25; }
+.truth-item .lbl small { display:block; font-size:14px; font-weight:500; opacity:0.85; margin-top:2px; }
+.truth-quote { margin-top:24px; background:#2a004a; color:white; border-radius:18px; padding:22px 26px; font-size:21px; font-weight:700; line-height:1.3; border-left:8px solid #FDB03E; font-style:italic; }
+.truth-quote .who { display:block; font-style:normal; font-size:15px; font-weight:500; opacity:0.8; margin-top:8px; }
+.save-band { background:#2a004a; color:white; padding:24px 60px; display:flex; align-items:center; justify-content:space-between; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="blog-badge">📖 Blog Post</div>
-    <h1 class="title"><span>AAC</span> for Beginners</h1>
-    <p class="subtitle">A Parent's Guide to Augmentative Communication</p>
+<div class="title-strip">
+  <span class="kicker">💬 AAC 101</span>
+  <h1 class="title">AAC <span class="feel">supports</span><br>speech</h1>
+</div>
+<div class="compare">
+  <div class="block myth">
+    <span class="block-label">✕ The Myth</span>
+    <div class="block-text">"AAC will prevent my child from speaking."</div>
+    <div class="block-sub">This myth keeps thousands of nonverbal kids without a voice for years longer than necessary.</div>
+    <div class="vs-stamp">VS</div>
   </div>
-  
-  <div class="myth-box">
-    <div class="myth-text">Myth: AAC prevents speech.<br><span>Truth: Research shows it SUPPORTS speech development.</span></div>
-  </div>
-  
-  <div class="content">
-    <div class="section">
-      <div class="section-title">💬 Types of AAC</div>
-      <div class="types-grid">
-        <div class="type-item"><span class="type-icon">📱</span> High-tech apps (Proloquo2Go)</div>
-        <div class="type-item"><span class="type-icon">📋</span> Low-tech boards (PECS)</div>
-        <div class="type-item"><span class="type-icon">🤟</span> Sign language</div>
-        <div class="type-item"><span class="type-icon">🖼️</span> Picture exchange</div>
-      </div>
+  <div class="block truth">
+    <span class="block-label">✓ The Truth</span>
+    <div class="block-text">Research shows AAC helps speech develop, not block it.</div>
+    <div class="truth-list">
+    <div class="truth-item">
+      <div class="ico">📱</div>
+      <div class="lbl">Pick a tool that fits today<small>High-tech apps, PECS boards, sign — all count as AAC.</small></div>
     </div>
+    <div class="truth-item">
+      <div class="ico">🚀</div>
+      <div class="lbl">Model it yourself<small>Use the device while you talk. Modeling is how kids learn AAC.</small></div>
+    </div>
+    <div class="truth-item">
+      <div class="ico">✅</div>
+      <div class="lbl">Accept every attempt<small>One word, one icon, one sign. Respond to every try — perfection isn't the goal.</small></div>
+    </div></div>
     
-    <div class="section">
-      <div class="section-title">🚀 How to Start Today</div>
-      <div class="items">
-        <div class="item"><span>1.</span> Model AAC yourself — use it while talking</div>
-        <div class="item"><span>2.</span> Start with motivating words (snack, play, more)</div>
-        <div class="item"><span>3.</span> Accept ALL communication attempts</div>
-        <div class="item"><span>4.</span> Don't require perfection — respond to any try</div>
-      </div>
-    </div>
-    
-    <div class="section">
-      <div class="section-title">✅ Signs It's Working</div>
-      <div class="items">
-        <div class="item"><span>✓</span> Less frustration and fewer meltdowns</div>
-        <div class="item"><span>✓</span> Child initiates communication</div>
-        <div class="item"><span>✓</span> More connection and engagement</div>
-      </div>
+    <div class="truth-quote">"Giving a kid AAC doesn't take away words. It gives them the words they didn't have."
+      <span class="who">— every SLP, ever</span>
     </div>
   </div>
-  
-  <div class="read-box">
-    <div class="read-text">📖 Read the Full Guide</div>
-    <div class="read-url">spectrumunlocked.com/blog/aac-for-beginners</div>
-  </div>
-  
-  <div class="footer">
-    <div class="brand">@spectrum_unlocked</div>
-  </div>
-</body>
-</html>
+</div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save & share to bust this myth</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>

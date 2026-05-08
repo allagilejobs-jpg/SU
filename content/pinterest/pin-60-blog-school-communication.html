@@ -1,68 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #2a004a 0%, #52008C 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
-    .blog-badge { display: inline-block; background: #18A8F1; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
-    .header { text-align: center; margin-bottom: 25px; }
-    .title { font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
-    .title span { color: #18A8F1; }
-    .subtitle { font-size: 18px; color: #aaa; }
-    .free-badge { background: rgba(24, 168, 241, 0.2); border: 2px solid #18A8F1; border-radius: 12px; padding: 15px; text-align: center; margin-bottom: 25px; }
-    .free-text { font-size: 18px; color: #18A8F1; font-weight: 700; }
-    .content { flex: 1; display: flex; flex-direction: column; gap: 15px; }
-    .section { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; }
-    .section-title { font-size: 17px; font-weight: 700; color: #FDB03E; margin-bottom: 12px; }
-    .items { display: flex; flex-direction: column; gap: 10px; }
-    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; }
-    .item span { color: #18A8F1; flex-shrink: 0; }
-    .template { background: rgba(24, 168, 241, 0.1); border: 2px dashed #18A8F1; border-radius: 12px; padding: 15px; font-size: 14px; font-style: italic; color: #aaa; }
-    .read-box { background: linear-gradient(135deg, #18A8F1 0%, #0F7BB3 100%); border-radius: 16px; padding: 25px; text-align: center; margin-top: 15px; }
-    .read-text { font-size: 22px; font-weight: 700; }
-    .read-url { font-size: 14px; opacity: 0.9; margin-top: 8px; }
-    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .brand { font-size: 16px; color: #666; }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#FFF4E8; color:#2a004a; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.blob { position:absolute; width:320px; height:320px; border-radius:50%; background:#FDB03E; top:-120px; right:-120px; opacity:0.55; }
+.blob.b2 { width:220px; height:220px; background:#18A8F1; top:auto; bottom:380px; right:-80px; opacity:0.18; }
+.hero { background:#CC78CB; color:white; padding:70px 60px 60px; position:relative; z-index:2; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:10px 22px; border-radius:999px; font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:28px; }
+.title { font-size:96px; font-weight:900; line-height:0.98; letter-spacing:-2px; margin-bottom:18px; }
+.title em { font-style:normal; background:#18A8F1; color:white; padding:0 14px; display:inline-block; transform:rotate(-1.5deg); box-decoration-break:clone; }
+.subtitle { font-size:26px; font-weight:500; opacity:0.95; max-width:600px; line-height:1.3; }
+.content { flex:1; padding:50px 60px 30px; display:flex; flex-direction:column; gap:18px; position:relative; z-index:2; }
+.row { display:flex; align-items:center; gap:24px; background:white; border-radius:22px; padding:24px 30px; box-shadow:0 6px 0 rgba(82,0,140,0.12); }
+.num { flex-shrink:0; width:74px; height:74px; border-radius:50%; background:#18A8F1; color:white; font-size:42px; font-weight:900; display:flex; align-items:center; justify-content:center; line-height:1; }
+.row:nth-child(2) .num { background:#CC78CB; }
+.row:nth-child(3) .num { background:#FDB03E; color:#2a004a; }
+.row:nth-child(4) .num { background:#52008C; }
+.row:nth-child(5) .num { background:#18A8F1; }
+.row-text { font-size:25px; font-weight:700; line-height:1.25; color:#2a004a; }
+.row-text small { display:block; font-size:18px; font-weight:500; color:#6b5a7a; margin-top:4px; }
+.tip-card { margin:8px 0 0; background:#2a004a; color:white; border-radius:22px; padding:26px 30px; display:flex; align-items:center; gap:22px; border:4px solid #FDB03E; }
+.tip-card .tip-emoji { flex-shrink:0; width:64px; height:64px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:32px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-6deg); }
+.tip-card .tip-text { font-size:21px; font-weight:700; line-height:1.3; }
+.tip-card .tip-text small { display:block; font-size:16px; font-weight:500; opacity:0.85; margin-top:4px; }
+.save-band { background:#2a004a; color:white; padding:26px 60px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="blog-badge">📖 Blog Post</div>
-    <h1 class="title">How to <span>Communicate</span> with Your Child's School</h1>
-    <p class="subtitle">Email templates and strategies</p>
-  </div>
-  <div class="free-badge">
-    <div class="free-text">📧 FREE Email Templates Included!</div>
-  </div>
-  <div class="content">
-    <div class="section">
-      <div class="section-title">📝 Documentation Strategies</div>
-      <div class="items">
-        <div class="item"><span>✓</span> Always communicate in writing (email > phone)</div>
-        <div class="item"><span>✓</span> Follow up verbal conversations with email summary</div>
-        <div class="item"><span>✓</span> Keep a dated folder of all correspondence</div>
-        <div class="item"><span>✓</span> CC yourself on every email you send</div>
+<div class="blob"></div><div class="blob b2"></div>
+<div class="hero">
+  <span class="kicker">📧 School comms</span>
+  <h1 class="title">School emails that <em>protect</em><br>your child</h1>
+  <p class="subtitle">Email templates that start the legal clock — and build a paper trail teachers can't ignore</p>
+</div>
+<div class="content">
+    <div class="row">
+      <div class="num">1</div>
+      <div class="row-text">Email > phone, every time
+        <small>Verbal conversations don't exist legally. If it's not in writing, it didn't happen.</small>
       </div>
     </div>
-    <div class="section">
-      <div class="section-title">💡 Key Phrases That Work</div>
-      <div class="items">
-        <div class="item"><span>→</span> "Per our conversation on [date]..."</div>
-        <div class="item"><span>→</span> "Please confirm receipt of this email"</div>
-        <div class="item"><span>→</span> "I am requesting this in writing under IDEA"</div>
-        <div class="item"><span>→</span> "What is the timeline for [action]?"</div>
+    <div class="row">
+      <div class="num">2</div>
+      <div class="row-text">Follow up calls with summary email
+        <small>"Per our conversation on [date], we agreed to [X]. Please confirm." Done.</small>
       </div>
     </div>
-    <div class="template">
-      📧 Sample: "Dear [Teacher], I wanted to follow up on our conversation about [issue]. As we discussed, [summary]. Please let me know if I've misunderstood anything. Thank you, [Your name]"
+    <div class="row">
+      <div class="num">3</div>
+      <div class="row-text">CC yourself on every send
+        <small>Plus a dated folder of all correspondence. Build the paper trail before you need it.</small>
+      </div>
     </div>
-  </div>
-  <div class="read-box">
-    <div class="read-text">📖 Get All Free Templates</div>
-    <div class="read-url">spectrumunlocked.com/blog/school-communication-tips</div>
-  </div>
-  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
-</body>
-</html>
+    <div class="row">
+      <div class="num">4</div>
+      <div class="row-text">Use "under IDEA" when it counts
+        <small>"I am requesting this in writing under IDEA." That phrase changes the timeline.</small>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-emoji">📖</div>
+      <div class="tip-text">Free email templates
+        <small>spectrumunlocked.com/blog/school-communication-tips — copy, paste, send.</small>
+      </div>
+    </div></div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save before your next school email</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>

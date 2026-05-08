@@ -1,75 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #2a004a 0%, #52008C 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
-    .blog-badge { display: inline-block; background: #FDB03E; color: #2a004a; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
-    .header { text-align: center; margin-bottom: 25px; }
-    .title { font-size: 52px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
-    .subtitle { font-size: 20px; color: #aaa; }
-    .comparison { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .side { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; border: 3px solid; }
-    .side.iep { border-color: #18A8F1; }
-    .side.plan504 { border-color: #FDB03E; }
-    .side-title { font-size: 32px; font-weight: 800; text-align: center; margin-bottom: 20px; }
-    .side.iep .side-title { color: #18A8F1; }
-    .side.plan504 .side-title { color: #FDB03E; }
-    .items { display: flex; flex-direction: column; gap: 12px; }
-    .item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; }
-    .item span { flex-shrink: 0; }
-    .side.iep .item span { color: #18A8F1; }
-    .side.plan504 .item span { color: #FDB03E; }
-    .bottom-tip { background: rgba(24, 168, 241, 0.15); border-radius: 16px; padding: 20px; text-align: center; margin-top: 20px; grid-column: 1 / -1; }
-    .tip-text { font-size: 18px; color: #18A8F1; font-weight: 600; }
-    .read-box { background: linear-gradient(135deg, #FDB03E 0%, #E59A2A 100%); color: #2a004a; border-radius: 16px; padding: 20px; text-align: center; grid-column: 1 / -1; }
-    .read-text { font-size: 20px; font-weight: 700; }
-    .read-url { font-size: 14px; opacity: 0.8; margin-top: 5px; }
-    .footer { text-align: center; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .brand { font-size: 16px; color: #666; }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#FFF4E8; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.title-strip { background:#18A8F1; color:white; padding:54px 60px 60px; text-align:center; position:relative; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:8px 22px; border-radius:999px; font-size:16px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:18px; }
+.title { font-size:84px; font-weight:900; line-height:0.96; letter-spacing:-2px; }
+.title .feel { background:#CC78CB; padding:0 16px; display:inline-block; transform:rotate(-2deg); }
+.compare { flex:1; display:flex; flex-direction:column; }
+.block { padding:44px 60px; position:relative; }
+.block.myth { background:#FFE4E1; border-bottom:6px dashed #CC78CB; }
+.block.truth { background:#CC78CB; color:white; flex:1; }
+.block-label { display:inline-block; font-size:22px; font-weight:900; text-transform:uppercase; letter-spacing:3px; padding:8px 20px; border-radius:8px; margin-bottom:22px; }
+.myth .block-label { background:#2a004a; color:white; }
+.truth .block-label { background:#FDB03E; color:#2a004a; }
+.block-text { font-size:42px; font-weight:800; line-height:1.1; letter-spacing:-1px; }
+.myth .block-text { color:#6b5a7a; text-decoration:line-through; text-decoration-color:#CC78CB; text-decoration-thickness:4px; }
+.block-sub { font-size:22px; font-weight:500; line-height:1.35; margin-top:22px; }
+.myth .block-sub { color:#2a004a; opacity:0.8; }
+.vs-stamp { position:absolute; left:50%; transform:translateX(-50%) rotate(-8deg); bottom:-42px; width:86px; height:86px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:26px; font-weight:900; display:flex; align-items:center; justify-content:center; z-index:3; box-shadow:0 6px 0 rgba(82,0,140,0.4); border:4px solid white; }
+.truth-list { display:flex; flex-direction:column; gap:12px; margin-top:26px; }
+.truth-item { display:flex; align-items:center; gap:16px; background:rgba(255,255,255,0.18); border-radius:14px; padding:14px 18px; }
+.truth-item .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px; background:#FDB03E; color:#2a004a; font-size:20px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-4deg); }
+.truth-item .lbl { font-size:19px; font-weight:700; line-height:1.25; }
+.truth-item .lbl small { display:block; font-size:14px; font-weight:500; opacity:0.85; margin-top:2px; }
+.truth-quote { margin-top:24px; background:#2a004a; color:white; border-radius:18px; padding:22px 26px; font-size:21px; font-weight:700; line-height:1.3; border-left:8px solid #FDB03E; font-style:italic; }
+.truth-quote .who { display:block; font-style:normal; font-size:15px; font-weight:500; opacity:0.8; margin-top:8px; }
+.save-band { background:#2a004a; color:white; padding:24px 60px; display:flex; align-items:center; justify-content:space-between; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="blog-badge">📖 Blog Post</div>
-    <h1 class="title">IEP vs 504 Plan</h1>
-    <p class="subtitle">Which does your autistic child need?</p>
+<div class="title-strip">
+  <span class="kicker">📋 IEP vs 504</span>
+  <h1 class="title">Which one does your kid <span class="feel">need?</span></h1>
+</div>
+<div class="compare">
+  <div class="block myth">
+    <span class="block-label">✕ The Confusion</span>
+    <div class="block-text">"An IEP and a 504 are basically the same thing."</div>
+    <div class="block-sub">They sound similar. They're not. Picking the wrong one can leave your child without the support the law guarantees.</div>
+    <div class="vs-stamp">VS</div>
   </div>
-  <div class="comparison">
-    <div class="side iep">
-      <div class="side-title">IEP</div>
-      <div class="items">
-        <div class="item"><span>✓</span> Specialized instruction</div>
-        <div class="item"><span>✓</span> Individualized goals</div>
-        <div class="item"><span>✓</span> Progress monitoring</div>
-        <div class="item"><span>✓</span> Related services (OT, Speech)</div>
-        <div class="item"><span>✓</span> Legal protections under IDEA</div>
-        <div class="item"><span>✓</span> Annual review required</div>
-        <div class="item"><span>✓</span> For kids who need specialized teaching</div>
-      </div>
+  <div class="block truth">
+    <span class="block-label">✓ The Truth</span>
+    <div class="block-text">An IEP teaches differently. A 504 just accommodates.</div>
+    <div class="truth-list">
+    <div class="truth-item">
+      <div class="ico">📚</div>
+      <div class="lbl">IEP = specialized instruction<small>Individualized goals. Speech, OT. Legal protection under IDEA.</small></div>
     </div>
-    <div class="side plan504">
-      <div class="side-title">504</div>
-      <div class="items">
-        <div class="item"><span>✓</span> Accommodations only</div>
-        <div class="item"><span>✓</span> No specialized instruction</div>
-        <div class="item"><span>✓</span> Less paperwork</div>
-        <div class="item"><span>✓</span> Faster to set up</div>
-        <div class="item"><span>✓</span> Civil rights protection</div>
-        <div class="item"><span>✓</span> Less formal review</div>
-        <div class="item"><span>✓</span> For kids who just need accommodations</div>
-      </div>
+    <div class="truth-item">
+      <div class="ico">🛠️</div>
+      <div class="lbl">504 = accommodations only<small>No specialized teaching. Less paperwork. Faster to set up.</small></div>
     </div>
-    <div class="bottom-tip">
-      <div class="tip-text">💡 Not sure? Start with IEP request. You can always move to 504 later.</div>
-    </div>
-    <div class="read-box">
-      <div class="read-text">📖 Read the Full Comparison</div>
-      <div class="read-url">spectrumunlocked.com/blog/iep-vs-504-plan</div>
+    <div class="truth-item">
+      <div class="ico">💡</div>
+      <div class="lbl">Not sure? Start with IEP<small>Request the eval in writing. You can step down to a 504 — you can't easily go up.</small></div>
+    </div></div>
+    
+    <div class="truth-quote">"If your child needs specialized teaching, a 504 won't cut it. Don't let the school steer you wrong."
+      <span class="who">— every veteran IEP advocate</span>
     </div>
   </div>
-  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
-</body>
-</html>
+</div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save before your next school meeting</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>

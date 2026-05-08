@@ -1,53 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1000px; height: 1500px; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #2a004a 0%, #52008C 100%); color: white; padding: 50px; display: flex; flex-direction: column; }
-    .blog-badge { display: inline-block; background: #FDB03E; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
-    .header { text-align: center; margin-bottom: 25px; }
-    .title { font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
-    .title span { color: #FDB03E; }
-    .subtitle { font-size: 18px; color: #aaa; }
-    .stat { background: rgba(253, 176, 62, 0.15); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 25px; }
-    .stat-text { font-size: 22px; font-weight: 600; }
-    .stat-text strong { color: #FDB03E; font-size: 28px; }
-    .content { flex: 1; display: flex; flex-direction: column; gap: 15px; }
-    .tip { display: flex; gap: 15px; background: rgba(255,255,255,0.05); border-radius: 14px; padding: 18px; align-items: flex-start; }
-    .tip-num { background: #FDB03E; color: #2a004a; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0; }
-    .tip-content { flex: 1; }
-    .tip-title { font-size: 17px; font-weight: 700; color: #FDB03E; margin-bottom: 4px; }
-    .tip-desc { font-size: 14px; color: #aaa; line-height: 1.4; }
-    .read-box { background: linear-gradient(135deg, #FDB03E 0%, #D68910 100%); color: #2a004a; border-radius: 16px; padding: 25px; text-align: center; margin-top: 15px; }
-    .read-text { font-size: 22px; font-weight: 700; }
-    .read-url { font-size: 14px; opacity: 0.8; margin-top: 8px; }
-    .footer { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .brand { font-size: 16px; color: #666; }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#CC78CB; color:white; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.dots { position:absolute; top:0; left:0; right:0; bottom:0; background-image:radial-gradient(circle, rgba(255,255,255,0.18) 2px, transparent 2px); background-size:36px 36px; pointer-events:none; opacity:0.45; }
+.top { padding:60px 60px 30px; position:relative; z-index:2; text-align:center; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:10px 22px; border-radius:999px; font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:24px; }
+.pre { font-size:28px; font-weight:700; letter-spacing:1px; margin-bottom:8px; opacity:0.95; }
+.stat-wrap { background:white; color:#2a004a; margin:14px 60px 0; border-radius:28px; padding:46px 30px 32px; text-align:center; position:relative; z-index:2; box-shadow:0 12px 0 rgba(82,0,140,0.4); }
+.stat { font-size:220px; font-weight:900; line-height:0.85; letter-spacing:-8px; background:linear-gradient(180deg,#18A8F1 0%,#52008C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.stat-unit { font-size:38px; font-weight:800; color:#CC78CB; letter-spacing:1px; margin-top:-4px; }
+.stat-label { font-size:24px; font-weight:600; color:#2a004a; margin-top:16px; line-height:1.25; }
+.actions { padding:32px 60px 8px; display:flex; flex-direction:column; gap:14px; position:relative; z-index:2; }
+.actions-title { font-size:30px; font-weight:900; letter-spacing:1px; text-align:center; margin-bottom:4px; }
+.action { display:flex; align-items:center; gap:18px; background:rgba(255,255,255,0.95); color:#2a004a; border-radius:18px; padding:18px 24px; }
+.action-bullet { flex-shrink:0; width:50px; height:50px; border-radius:12px; background:#FDB03E; color:#2a004a; font-weight:900; font-size:26px; display:flex; align-items:center; justify-content:center; transform:rotate(-4deg); }
+.action:nth-child(3) .action-bullet { background:#18A8F1; color:white; transform:rotate(3deg); }
+.action:nth-child(4) .action-bullet { background:#52008C; color:white; transform:rotate(-2deg); }
+.action:nth-child(5) .action-bullet { background:#CC78CB; color:white; transform:rotate(4deg); }
+.action-text { font-size:21px; font-weight:700; line-height:1.25; }
+.action-text small { display:block; font-size:15px; font-weight:500; color:#6b5a7a; margin-top:2px; }
+.tip-band { margin:14px 60px 24px; background:#2a004a; border-radius:22px; padding:22px 26px; display:flex; align-items:center; gap:20px; border:4px solid #FDB03E; position:relative; z-index:2; }
+.tip-band .tip-icon { flex-shrink:0; width:60px; height:60px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:28px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-5deg); }
+.tip-band .tip-text { color:white; font-size:20px; font-weight:700; line-height:1.3; }
+.tip-band .tip-text small { display:block; font-size:15px; font-weight:500; opacity:0.85; margin-top:3px; }
+.spacer { flex:1; }
+.save-band { background:#2a004a; color:white; padding:24px 60px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="blog-badge">📖 Blog Post</div>
-    <h1 class="title"><span>Therapy Waitlist</span>? What to Do While You Wait</h1>
-    <p class="subtitle">Don't waste the waiting time</p>
-  </div>
-  <div class="stat">
-    <div class="stat-text">Stuck on a <strong>6-month</strong> waitlist?<br>Here's what you can do RIGHT NOW.</div>
-  </div>
-  <div class="content">
-    <div class="tip"><div class="tip-num">1</div><div class="tip-content"><div class="tip-title">Get on Multiple Lists</div><div class="tip-desc">Call EVERY provider in your area today. The more lists, the faster you'll get a spot.</div></div></div>
-    <div class="tip"><div class="tip-num">2</div><div class="tip-content"><div class="tip-title">Contact Early Intervention</div><div class="tip-desc">Under 3? State EI is FREE and often has shorter waits than private therapy.</div></div></div>
-    <div class="tip"><div class="tip-num">3</div><div class="tip-content"><div class="tip-title">Learn to Support at Home</div><div class="tip-desc">YouTube SLPs, Hanen Programs, sensory activities. Every interaction is therapy.</div></div></div>
-    <div class="tip"><div class="tip-num">4</div><div class="tip-content"><div class="tip-title">Check for Cancellations</div><div class="tip-desc">Call weekly. Ask to be on cancellation list. Be ready to drop everything.</div></div></div>
-    <div class="tip"><div class="tip-num">5</div><div class="tip-content"><div class="tip-title">Consider Telehealth</div><div class="tip-desc">Online therapy often has shorter waits. Great for speech and parent coaching.</div></div></div>
-    <div class="tip"><div class="tip-num">6</div><div class="tip-content"><div class="tip-title">Document Everything</div><div class="tip-desc">Keep a log of behaviors, challenges, progress. Therapists will thank you.</div></div></div>
-  </div>
-  <div class="read-box">
-    <div class="read-text">📖 Read Full Guide</div>
-    <div class="read-url">spectrumunlocked.com/blog/autism-therapy-waitlist</div>
-  </div>
-  <div class="footer"><div class="brand">@spectrum_unlocked</div></div>
-</body>
-</html>
+<div class="dots"></div>
+<div class="top">
+  <span class="kicker">⏳ On a waitlist?</span>
+  <div class="pre">Stuck waiting for therapy?</div>
+</div>
+<div class="stat-wrap">
+  <div class="stat">6</div>
+  <div class="stat-unit">MONTHS</div>
+  <div class="stat-label">average waitlist length — but you don't have to waste a single one of them</div>
+</div>
+<div class="actions">
+  <div class="actions-title">Do these RIGHT NOW</div>
+  
+    <div class="action">
+      <div class="action-bullet">1</div>
+      <div class="action-text">Get on every list in your area
+        <small>Call them all today. The more lists, the faster a spot opens up.</small>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-bullet">2</div>
+      <div class="action-text">Call state Early Intervention
+        <small>Under 3? It's free and often has shorter waits than private therapy.</small>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-bullet">3</div>
+      <div class="action-text">Ask to be on cancellation lists
+        <small>Call weekly. Be ready to drop everything. Spots open more than you'd think.</small>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-bullet">4</div>
+      <div class="action-text">Try telehealth
+        <small>Online speech and parent coaching often have wait times in weeks, not months.</small>
+      </div>
+    </div>
+</div>
+
+    <div class="tip-band">
+      <div class="tip-icon">💡</div>
+      <div class="tip-text">Document everything while you wait
+        <small>Behavior log, video clips, regression notes. Your future therapist will save weeks because of it.</small>
+      </div>
+    </div>
+<div class="spacer"></div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save the day you join a waitlist</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>

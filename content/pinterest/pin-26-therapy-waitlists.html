@@ -1,175 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1000px;
-      height: 1500px;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #2a004a 0%, #52008C 100%);
-      color: white;
-      padding: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .badge {
-      display: inline-block;
-      background: #CC78CB;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-    .title {
-      font-size: 52px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 15px;
-    }
-    .title span { color: #CC78CB; }
-    .subtitle {
-      font-size: 22px;
-      color: #aaa;
-    }
-    
-    .main-message {
-      background: rgba(204, 120, 203, 0.15);
-      border: 3px solid #CC78CB;
-      border-radius: 20px;
-      padding: 40px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .main-stat {
-      font-size: 72px;
-      font-weight: 800;
-      color: #CC78CB;
-      margin-bottom: 10px;
-    }
-    .main-text {
-      font-size: 28px;
-      font-weight: 600;
-    }
-    
-    .action-box {
-      background: rgba(24, 168, 241, 0.15);
-      border: 3px solid #18A8F1;
-      border-radius: 20px;
-      padding: 35px;
-      flex: 1;
-    }
-    .action-title {
-      font-size: 24px;
-      font-weight: 700;
-      color: #18A8F1;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-    .actions {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .action-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      font-size: 20px;
-    }
-    .action-num {
-      background: #18A8F1;
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-    .action-text {
-      line-height: 1.4;
-    }
-    .action-text strong { color: #18A8F1; }
-    
-    .bottom-tip {
-      background: rgba(253, 176, 62, 0.15);
-      border-radius: 16px;
-      padding: 20px;
-      margin-top: 30px;
-      text-align: center;
-    }
-    .tip-icon { font-size: 24px; margin-right: 10px; }
-    .tip-text { font-size: 18px; color: #FDB03E; }
-    
-    .footer {
-      text-align: center;
-      padding-top: 25px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .cta {
-      font-size: 20px;
-      font-weight: 700;
-      color: #FDB03E;
-      margin-bottom: 10px;
-    }
-    .brand {
-      font-size: 16px;
-      color: #666;
-    }
-  </style>
-</head>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1000px; height:1500px; font-family:'Poppins',sans-serif; background:#CC78CB; color:white; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.dots { position:absolute; top:0; left:0; right:0; bottom:0; background-image:radial-gradient(circle, rgba(255,255,255,0.18) 2px, transparent 2px); background-size:36px 36px; pointer-events:none; opacity:0.45; }
+.top { padding:60px 60px 30px; position:relative; z-index:2; text-align:center; }
+.kicker { display:inline-block; background:#FDB03E; color:#2a004a; padding:10px 22px; border-radius:999px; font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:24px; }
+.pre { font-size:28px; font-weight:700; letter-spacing:1px; margin-bottom:8px; opacity:0.95; }
+.stat-wrap { background:white; color:#2a004a; margin:14px 60px 0; border-radius:28px; padding:46px 30px 32px; text-align:center; position:relative; z-index:2; box-shadow:0 12px 0 rgba(82,0,140,0.4); }
+.stat { font-size:220px; font-weight:900; line-height:0.85; letter-spacing:-8px; background:linear-gradient(180deg,#18A8F1 0%,#52008C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.stat-unit { font-size:38px; font-weight:800; color:#CC78CB; letter-spacing:1px; margin-top:-4px; }
+.stat-label { font-size:24px; font-weight:600; color:#2a004a; margin-top:16px; line-height:1.25; }
+.actions { padding:32px 60px 8px; display:flex; flex-direction:column; gap:14px; position:relative; z-index:2; }
+.actions-title { font-size:30px; font-weight:900; letter-spacing:1px; text-align:center; margin-bottom:4px; }
+.action { display:flex; align-items:center; gap:18px; background:rgba(255,255,255,0.95); color:#2a004a; border-radius:18px; padding:18px 24px; }
+.action-bullet { flex-shrink:0; width:50px; height:50px; border-radius:12px; background:#FDB03E; color:#2a004a; font-weight:900; font-size:26px; display:flex; align-items:center; justify-content:center; transform:rotate(-4deg); }
+.action:nth-child(3) .action-bullet { background:#18A8F1; color:white; transform:rotate(3deg); }
+.action:nth-child(4) .action-bullet { background:#52008C; color:white; transform:rotate(-2deg); }
+.action:nth-child(5) .action-bullet { background:#CC78CB; color:white; transform:rotate(4deg); }
+.action-text { font-size:21px; font-weight:700; line-height:1.25; }
+.action-text small { display:block; font-size:15px; font-weight:500; color:#6b5a7a; margin-top:2px; }
+.tip-band { margin:14px 60px 24px; background:#2a004a; border-radius:22px; padding:22px 26px; display:flex; align-items:center; gap:20px; border:4px solid #FDB03E; position:relative; z-index:2; }
+.tip-band .tip-icon { flex-shrink:0; width:60px; height:60px; border-radius:50%; background:#FDB03E; color:#2a004a; font-size:28px; font-weight:900; display:flex; align-items:center; justify-content:center; transform:rotate(-5deg); }
+.tip-band .tip-text { color:white; font-size:20px; font-weight:700; line-height:1.3; }
+.tip-band .tip-text small { display:block; font-size:15px; font-weight:500; opacity:0.85; margin-top:3px; }
+.spacer { flex:1; }
+.save-band { background:#2a004a; color:white; padding:24px 60px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; }
+.save-cta { font-size:22px; font-weight:800; }
+.save-cta .pin-emoji { display:inline-block; background:#CC78CB; width:36px; height:36px; border-radius:50%; text-align:center; line-height:36px; margin-right:10px; font-size:18px; }
+.brand { font-family:'Caveat',cursive; font-size:30px; color:#FDB03E; font-weight:700; }
+</style></head>
 <body>
-  <div class="header">
-    <div class="badge">⚠️ Newly Diagnosed</div>
-    <h1 class="title">Therapy <span>Waitlists</span></h1>
-    <p class="subtitle">The advice I wish someone gave me on day one</p>
-  </div>
+<div class="dots"></div>
+<div class="top">
+  <span class="kicker">⚠️ Newly diagnosed?</span>
+  <div class="pre">The therapy waitlist truth:</div>
+</div>
+<div class="stat-wrap">
+  <div class="stat">6–12</div>
+  <div class="stat-unit">MONTHS</div>
+  <div class="stat-label">average wait for autism therapy in the US</div>
+</div>
+<div class="actions">
+  <div class="actions-title">What to do RIGHT NOW</div>
   
-  <div class="main-message">
-    <div class="main-stat">6-12 months</div>
-    <div class="main-text">Average wait time for autism therapy</div>
-  </div>
-  
-  <div class="action-box">
-    <div class="action-title">What To Do RIGHT NOW</div>
-    <div class="actions">
-      <div class="action-item">
-        <div class="action-num">1</div>
-        <div class="action-text"><strong>Get on multiple waitlists</strong> — even before you're 100% sure which therapy is right</div>
-      </div>
-      <div class="action-item">
-        <div class="action-num">2</div>
-        <div class="action-text"><strong>Ask about cancellation lists</strong> — you might get in sooner</div>
-      </div>
-      <div class="action-item">
-        <div class="action-num">3</div>
-        <div class="action-text"><strong>You can always say no</strong> when they call. But you can't get that time back.</div>
+    <div class="action">
+      <div class="action-bullet">1</div>
+      <div class="action-text">Get on multiple waitlists today
+        <small>Even before you're 100% sure which therapy is right</small>
       </div>
     </div>
-  </div>
-  
-  <div class="bottom-tip">
-    <span class="tip-icon">💡</span>
-    <span class="tip-text">Start with your pediatrician referral, then call insurance for in-network providers</span>
-  </div>
-  
-  <div class="footer">
-    <div class="cta">💾 Save this for every newly diagnosed family</div>
-    <div class="brand">@spectrum_unlocked</div>
-  </div>
-</body>
-</html>
+    <div class="action">
+      <div class="action-bullet">2</div>
+      <div class="action-text">Ask about cancellation lists
+        <small>You can sometimes start in weeks, not months</small>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-bullet">3</div>
+      <div class="action-text">You can always say no later
+        <small>But you can't recover lost months</small>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-bullet">4</div>
+      <div class="action-text">Call your insurance the same day
+        <small>Ask for in-network providers — saves weeks of phone tag</small>
+      </div>
+    </div>
+</div>
+
+    <div class="tip-band">
+      <div class="tip-icon">💡</div>
+      <div class="tip-text">Start with your pediatrician's referral
+        <small>Most insurers won't cover therapy without one. Get it in writing.</small>
+      </div>
+    </div>
+<div class="spacer"></div>
+<div class="save-band">
+  <div class="save-cta"><span class="pin-emoji">📌</span>Save for every newly diagnosed family</div>
+  <div class="brand">spectrumunlocked.com</div>
+</div>
+</body></html>
