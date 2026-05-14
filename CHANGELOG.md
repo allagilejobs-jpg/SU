@@ -3,7 +3,7 @@
 ## 2026-05-14
 
 ### Added - Pinterest Brand Kit
-**Commit:** pending at edit time
+**Commit:** 6c08e81
 
 **What Changed:**
 - Added `pinterest-brand-kit.html` as a shareable reference page for Copilot.
