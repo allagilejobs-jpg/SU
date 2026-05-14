@@ -4,31 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pinterest Playbook | Spectrum Unlocked</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --navy: #1a1a2e;
-      --ink: #0f0f1a;
-      --midnight: #16213e;
-      --blue: #0f3460;
-      --teal: #4A90A4;
-      --gold: #E8B86D;
-      --green: #27AE60;
+      --bg: #2a004a;
+      --bg-deep: #1f0033;
+      --panel: #52008C;
+      --panel-dark: #3a005f;
+      --red: #E60023;
+      --red-dark: #BD081C;
+      --blue: #18A8F1;
+      --gold: #FDB03E;
+      --pink: #CC78CB;
       --white: #ffffff;
-      --soft: rgba(255,255,255,0.82);
-      --muted: rgba(255,255,255,0.62);
-      --border: rgba(255,255,255,0.12);
-      --card: rgba(255,255,255,0.08);
+      --text: #eeeeee;
+      --muted: #aaa;
+      --soft: rgba(255,255,255,0.78);
+      --border: rgba(255,255,255,0.13);
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--ink);
-      color: var(--white);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
       line-height: 1.6;
     }
     .main-nav {
-      background: #0f0f1a;
+      background: var(--bg-deep);
       padding: 15px 20px;
       display: flex;
       justify-content: center;
@@ -37,10 +40,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .main-nav a {
-      color: #aaa;
+      color: var(--muted);
       text-decoration: none;
       padding: 10px 20px;
       border-radius: 25px;
@@ -48,654 +50,357 @@
       font-size: 14px;
       transition: all 0.2s;
     }
-    .main-nav a:hover, .main-nav a.active { background: var(--teal); color: white; }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 92px 24px 72px;
+    .main-nav a:hover,
+    .main-nav a.active { background: var(--red); color: white; }
+    .header {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      padding: 56px 20px;
       text-align: center;
-      background:
-        radial-gradient(circle at 88% 12%, rgba(74,144,164,0.32) 0%, transparent 34%),
-        radial-gradient(circle at 8% 88%, rgba(232,184,109,0.22) 0%, transparent 34%),
-        linear-gradient(165deg, var(--navy) 0%, var(--midnight) 55%, var(--blue) 100%);
     }
-    .eyebrow {
-      display: inline-flex;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(232,184,109,0.55);
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      background: rgba(15,15,26,0.45);
-      margin-bottom: 22px;
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.3rem, 6vw, 4.8rem);
+      margin-bottom: 14px;
+      line-height: 1.02;
     }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.05; }
-    h1 {
-      font-size: clamp(44px, 7vw, 86px);
-      max-width: 980px;
-      margin: 0 auto 18px;
-      letter-spacing: -1.8px;
-    }
-    .hero p {
-      max-width: 760px;
+    .header p {
+      opacity: 0.93;
+      font-size: 1.12rem;
+      max-width: 860px;
       margin: 0 auto;
-      color: var(--soft);
-      font-size: 20px;
     }
-    .container { max-width: 1220px; margin: 0 auto; padding: 54px 22px 86px; }
-    .section { margin-bottom: 56px; }
-    .section-head {
+    .stats-bar {
+      background: var(--panel);
+      padding: 20px;
       display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 22px;
-      margin-bottom: 22px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 18px;
+      justify-content: center;
+      gap: 34px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--panel-dark);
     }
-    .section-head h2 { font-size: 36px; color: var(--gold); }
-    .section-head p { color: var(--muted); max-width: 560px; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; color: var(--red); }
+    .stat-label { font-size: 0.85rem; color: var(--muted); }
+    .container { max-width: 1380px; margin: 0 auto; padding: 34px 20px 80px; }
+    .section { margin-bottom: 34px; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: white;
+      font-size: 2rem;
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid var(--red);
+    }
+    .section-intro { color: var(--soft); max-width: 900px; margin-bottom: 18px; }
     .grid { display: grid; gap: 20px; }
     .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.055));
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.22);
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.18);
     }
-    .panel h3 { font-size: 25px; color: var(--white); margin-bottom: 10px; }
-    .panel p, .panel li { color: var(--soft); }
-    .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .swatch { border-radius: 18px; overflow: hidden; border: 1px solid var(--border); background: rgba(255,255,255,0.04); }
+    .card h3 {
+      color: white;
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    .card p, .card li { color: var(--soft); font-size: 0.94rem; }
+    .card strong { color: white; }
+    .rule-list { list-style: none; display: grid; gap: 9px; }
+    .rule-list li { position: relative; padding-left: 24px; }
+    .rule-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--blue);
+      font-weight: 900;
+    }
+    .warning li:before { content: "!"; color: var(--gold); }
+    .swatches { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+    .swatch { border-radius: 14px; overflow: hidden; background: var(--bg-deep); border: 1px solid rgba(255,255,255,0.08); }
     .swatch-color { height: 78px; }
-    .swatch-copy { padding: 12px; font-size: 13px; color: var(--soft); }
-    .rule-list { list-style: none; display: grid; gap: 12px; }
-    .rule-list li { padding-left: 30px; position: relative; }
-    .rule-list li:before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 800; }
-    .variant-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
-    .variant-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 16px;
-    }
+    .swatch-copy { padding: 10px; color: var(--soft); font-size: 0.76rem; }
+    .variant-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
+    .variant-card { background: var(--panel); border-radius: 18px; overflow: hidden; }
     .mini-pin {
       aspect-ratio: 2 / 3;
-      border-radius: 22px;
-      padding: 22px 20px 18px;
+      padding: 24px 20px 18px;
+      background:
+        radial-gradient(circle at 88% 8%, rgba(204,120,203,0.28), transparent 26%),
+        radial-gradient(circle at 6% 92%, rgba(24,168,241,0.22), transparent 28%),
+        linear-gradient(165deg, #2a004a 0%, #52008C 62%, #1f0033 100%);
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      position: relative;
-      background:
-        radial-gradient(circle at 88% 10%, rgba(74,144,164,0.35), transparent 34%),
-        radial-gradient(circle at 5% 94%, rgba(232,184,109,0.22), transparent 34%),
-        linear-gradient(165deg, var(--navy) 0%, var(--midnight) 55%, var(--blue) 100%);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+      color: white;
     }
-    .mini-badge {
+    .pin-chip {
       align-self: center;
-      color: var(--gold);
-      border: 1px solid rgba(232,184,109,0.55);
-      background: rgba(15,15,26,0.38);
+      padding: 7px 13px;
       border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: 1.6px;
+      background: linear-gradient(135deg, var(--red), var(--red-dark));
+      color: white;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.7px;
       text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .mini-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      line-height: 0.98;
-      font-weight: 800;
+      margin-bottom: 18px;
       text-align: center;
-      letter-spacing: -0.6px;
-      margin-bottom: 10px;
     }
-    .mini-title .gold { color: var(--gold); }
-    .mini-title .teal { color: var(--teal); }
-    .mini-sub { color: var(--soft); font-size: 10px; text-align: center; margin-bottom: 16px; }
-    .mini-body { display: grid; gap: 7px; margin-top: auto; margin-bottom: auto; }
-    .mini-line, .mini-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(74,144,164,0.5);
-      border-radius: 12px;
-      padding: 8px 10px;
+    .pin-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 30px;
+      line-height: 0.98;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: -0.9px;
+      margin-bottom: 9px;
+    }
+    .pin-title .blue { color: var(--blue); }
+    .pin-title .gold { color: var(--gold); }
+    .pin-title .pink { color: var(--pink); }
+    .pin-sub { color: rgba(255,255,255,0.74); text-align: center; font-size: 10px; line-height: 1.35; margin-bottom: 14px; }
+    .mini-body { display: grid; gap: 8px; margin-top: auto; margin-bottom: auto; }
+    .mini-line, .mini-box {
+      background: rgba(31,0,51,0.72);
+      border: 1.5px solid rgba(24,168,241,0.55);
+      border-radius: 14px;
+      padding: 9px 10px;
       color: white;
       font-size: 11px;
       font-weight: 700;
     }
-    .mini-card strong { color: var(--gold); }
-    .mini-footer { text-align: center; margin-top: 12px; }
-    .brand-line { width: 58px; height: 2px; border-radius: 999px; background: var(--teal); margin: 0 auto 7px; }
-    .brand-lockup { font-size: 10px; line-height: 1.05; letter-spacing: 1.5px; font-weight: 800; }
-    .brand-lockup .unlocked { color: var(--teal); }
-    .handle { color: var(--muted); font-size: 8px; font-weight: 600; margin-top: 4px; }
-    .variant-info { padding: 14px 4px 4px; }
-    .variant-info h3 { font-size: 21px; color: var(--gold); margin-bottom: 6px; }
-    .variant-info p { color: var(--soft); font-size: 14px; }
+    .mini-line span, .mini-box span { color: var(--gold); }
+    .mini-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .mini-footer {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 800;
+    }
+    .mini-handle { color: rgba(255,255,255,0.66); font-size: 8px; margin-top: 3px; }
+    .variant-info { padding: 18px; }
+    .variant-info h3 { color: white; font-size: 1rem; margin-bottom: 6px; }
+    .variant-info p { color: var(--muted); font-size: 0.86rem; }
+    .formula { display: grid; gap: 12px; }
+    .formula-item { background: var(--bg-deep); border-left: 4px solid var(--blue); border-radius: 12px; padding: 14px; }
+    .formula-item:nth-child(2n) { border-left-color: var(--gold); }
+    .formula-item:nth-child(3n) { border-left-color: var(--pink); }
     .code-block {
       white-space: pre-wrap;
-      background: #080812;
-      color: #e8f2f4;
-      border: 1px solid rgba(74,144,164,0.35);
-      border-radius: 20px;
+      background: var(--bg-deep);
+      color: #f5f5f5;
+      border: 1px solid rgba(24,168,241,0.35);
+      border-radius: 16px;
       padding: 22px;
       overflow-x: auto;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 13px;
       line-height: 1.55;
     }
-    .copy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
-    .dos-donts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-    .do { border-color: rgba(39,174,96,0.45); }
-    .dont { border-color: rgba(232,184,109,0.45); }
-    @media (max-width: 820px) {
-      .grid.two, .grid.three, .dos-donts { grid-template-columns: 1fr; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill { background: var(--bg-deep); color: white; border-radius: 999px; padding: 9px 14px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.1); }
+    .pill.red { background: var(--red); }
+    .pill.blue { background: var(--blue); }
+    .pill.gold { background: var(--gold); color: var(--bg); }
+    .pill.pink { background: var(--pink); }
+    @media (max-width: 900px) {
+      .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; }
       .swatches { grid-template-columns: repeat(2, 1fr); }
-      .section-head { display: block; }
-      .section-head h2 { margin-bottom: 10px; }
+      .main-nav a { padding: 8px 12px; }
     }
   </style>
 </head>
 <body>
   <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="brand-guidelines.html">Brand Guidelines</a>
-    <a href="pinterest-hub.html">Pinterest Hub</a>
-    <a href="pinterest-playbook.html" class="active">Pinterest Playbook</a>
-    <a href="create.html">Create</a>
+    <a href="index.html">🏠 Home</a>
+    <a href="brand-guidelines.html">📋 Brand</a>
+    <a href="pinterest-hub.html">📌 Pinterest Hub</a>
+    <a href="pinterest-playbook.html" class="active">📌 Pinterest Playbook</a>
+    <a href="create.html">✨ Create</a>
   </nav>
 
-  <header class="hero">
-    <div class="eyebrow">Spectrum Unlocked Pinterest System</div>
-    <h1>Complete Pinterest Playbook, Branding, Pin Variants, and HTML Direction</h1>
-    <p>Use this page as the single reference for Copilot when creating Spectrum Unlocked Pinterest graphics. It includes the brand identity, what to look out for, the strategy, reusable variations, copy formulas, HTML structure, and QA rules. Build pins natively at 1000 by 1500 pixels and keep the visual identity consistent.</p>
+  <header class="header">
+    <h1>Spectrum Unlocked Pinterest Playbook</h1>
+    <p>The current Pinterest system: bold purple, high contrast, social-first, search-aware, save-worthy pins for autism parents.</p>
   </header>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">1000 × 1500</div><div class="stat-label">Native Pinterest Canvas</div></div>
+    <div class="stat"><div class="stat-num">9</div><div class="stat-label">Core Pin Variants</div></div>
+    <div class="stat"><div class="stat-num">3 to 5</div><div class="stat-label">Points Per Pin</div></div>
+    <div class="stat"><div class="stat-num">Save</div><div class="stat-label">Primary CTA Goal</div></div>
+  </div>
 
   <main class="container">
     <section class="section">
-      <div class="section-head">
-        <h2>Core Pinterest Rules</h2>
-        <p>The rules that should apply to every pin, no matter the topic or format.</p>
-      </div>
-      <div class="grid three">
-        <div class="panel">
-          <h3>Canvas</h3>
-          <ul class="rule-list">
-            <li>Use 1000px by 1500px.</li>
-            <li>Design at native Pinterest size.</li>
-            <li>Do not resize Instagram graphics.</li>
-            <li>Keep a 60px to 80px safe margin.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Brand Feel</h3>
-          <ul class="rule-list">
-            <li>Calm, warm, premium, and parent-friendly.</li>
-            <li>High contrast and readable on mobile.</li>
-            <li>Rounded cards, soft shadows, and breathing room.</li>
-            <li>Educational, not clinical or cold.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Never Use</h3>
-          <ul class="rule-list">
-            <li>No puzzle symbols.</li>
-            <li>No puzzle emoji.</li>
-            <li>No em dashes in copy.</li>
-            <li>No tiny text or cluttered layouts.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Brand Identity</h2>
-        <p>Colors, typography, lockup, and visual language for Pinterest pins.</p>
-      </div>
+      <h2 class="section-title">Current Pinterest Brand Identity</h2>
+      <p class="section-intro">This playbook follows the live Pinterest Hub identity, not the older navy, teal, and gold carousel system. Pinterest pins use a saturated purple base with red Pinterest energy, bright blue utility accents, gold emphasis, and pink category accents.</p>
       <div class="grid two">
-        <div class="panel">
-          <h3>Color System</h3>
-          <div class="swatches">
-            <div class="swatch"><div class="swatch-color" style="background:#1a1a2e"></div><div class="swatch-copy"><strong>Navy</strong><br>#1a1a2e</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#16213e"></div><div class="swatch-copy"><strong>Midnight</strong><br>#16213e</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#0f3460"></div><div class="swatch-copy"><strong>Deep Blue</strong><br>#0f3460</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#4A90A4"></div><div class="swatch-copy"><strong>Teal</strong><br>#4A90A4</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#E8B86D"></div><div class="swatch-copy"><strong>Gold</strong><br>#E8B86D</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#27AE60"></div><div class="swatch-copy"><strong>Green</strong><br>#27AE60</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-copy"><strong>White</strong><br>#FFFFFF</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:linear-gradient(165deg,#1a1a2e,#16213e,#0f3460)"></div><div class="swatch-copy"><strong>Gradient</strong><br>165deg</div></div>
-          </div>
-        </div>
-        <div class="panel">
-          <h3>Typography and Lockup</h3>
+        <div class="card">
+          <h3>Visual Direction</h3>
           <ul class="rule-list">
-            <li>Headlines: Playfair Display, 700 or 800 weight.</li>
-            <li>Body: Poppins, 400 to 800 weight.</li>
-            <li>Badge: Poppins uppercase with wide letter spacing.</li>
-            <li>Brand lockup: teal line, SPECTRUM in white, UNLOCKED in teal.</li>
-            <li>Handle: @spectrum.unlocked in small Poppins.</li>
-          </ul>
-          <div style="margin-top:26px;text-align:center;background:rgba(255,255,255,0.06);border-radius:20px;padding:22px;">
-            <div class="brand-line"></div>
-            <div style="font-weight:800;letter-spacing:4px;font-size:24px;line-height:1.05;">SPECTRUM<br><span style="color:var(--teal);">UNLOCKED</span></div>
-            <div class="handle" style="font-size:14px;">@spectrum.unlocked</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Pin Variants</h2>
-        <p>Use these as the main reusable Pinterest design families.</p>
-      </div>
-      <div class="variant-grid">
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Quick Guide</div>
-            <div class="mini-title">5 WAYS TO<br><span class="gold">SUPPORT</span><br><span class="teal">SENSORY NEEDS</span></div>
-            <div class="mini-sub">Small shifts that make the day easier.</div>
-            <div class="mini-body">
-              <div class="mini-line">✓ Offer quiet space</div>
-              <div class="mini-line">✓ Lower demands</div>
-              <div class="mini-line">✓ Add deep pressure</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Checklist Pin</h3><p>Best for practical tips, routines, and parent saves.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Mindset Shift</div>
-            <div class="mini-title">BEHAVIOR<br><span class="gold">IS</span><br><span class="teal">COMMUNICATION</span></div>
-            <div class="mini-sub">Look for the need underneath the action.</div>
-            <div class="mini-body">
-              <div class="mini-card"><strong>Instead of:</strong> They are being difficult</div>
-              <div class="mini-card"><strong>Try:</strong> What are they telling me?</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Reframe Pin</h3><p>Best for behavior, meltdowns, masking, and parent perspective shifts.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Myth Buster</div>
-            <div class="mini-title">MYTH<br><span class="gold">VS</span><br><span class="teal">TRUTH</span></div>
-            <div class="mini-sub">Autism support starts with better assumptions.</div>
-            <div class="mini-body">
-              <div class="mini-card"><strong>Myth:</strong> Eye contact means listening</div>
-              <div class="mini-card"><strong>Truth:</strong> Listening can look different</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Myth vs Truth</h3><p>Best for simple education and myth correction.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Parent Script</div>
-            <div class="mini-title">WHAT TO<br><span class="gold">SAY</span><br><span class="teal">INSTEAD</span></div>
-            <div class="mini-sub">Language that lowers pressure.</div>
-            <div class="mini-body">
-              <div class="mini-line">Try: I see this is hard</div>
-              <div class="mini-line">Try: We can pause</div>
-              <div class="mini-line">Try: Show me another way</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Script Pin</h3><p>Best for parent wording, IEP conversations, and meltdown support.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Do This</div>
-            <div class="mini-title">DO THIS<br><span class="gold">NOT</span><br><span class="teal">THAT</span></div>
-            <div class="mini-sub">A clear support swap.</div>
-            <div class="mini-body">
-              <div class="mini-card"><strong>Do:</strong> Reduce noise</div>
-              <div class="mini-card"><strong>Not:</strong> Force through it</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Do and Do Not</h3><p>Best for fast contrast posts and behavior support choices.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Spot the Signs</div>
-            <div class="mini-title">SIGNS OF<br><span class="gold">AUTISTIC</span><br><span class="teal">BURNOUT</span></div>
-            <div class="mini-sub">What parents may notice first.</div>
-            <div class="mini-body">
-              <div class="mini-line">Less tolerance</div>
-              <div class="mini-line">More shutdowns</div>
-              <div class="mini-line">Skill regression</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Signs Pin</h3><p>Best for recognition content and search-friendly topics.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Data Point</div>
-            <div class="mini-title"><span class="gold">1 IN 36</span><br>CHILDREN<br><span class="teal">IDENTIFIED</span></div>
-            <div class="mini-sub">Use one big number with one clear explanation.</div>
-            <div class="mini-body">
-              <div class="mini-card">Make the statistic human, useful, and easy to save.</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Stat Pin</h3><p>Best for awareness facts, research summaries, and authority posts.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Quote</div>
-            <div class="mini-title">SUPPORT<br><span class="gold">BEFORE</span><br><span class="teal">COMPLIANCE</span></div>
-            <div class="mini-sub">A saveable line that matches the brand voice.</div>
-            <div class="mini-body"><div class="mini-card">Short, emotionally clear, and parent-centered.</div></div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Quote Pin</h3><p>Best for connection, shares, and brand values.</p></div>
-        </article>
-
-        <article class="variant-card">
-          <div class="mini-pin">
-            <div class="mini-badge">Resource</div>
-            <div class="mini-title">NEED HELP<br><span class="gold">FINDING</span><br><span class="teal">PATTERNS?</span></div>
-            <div class="mini-sub">Use a specific tool only when it fits.</div>
-            <div class="mini-body">
-              <div class="mini-line">Sensory Profile Quiz</div>
-              <div class="mini-line">Meltdown Tracker</div>
-              <div class="mini-line">Beacon Guidance</div>
-            </div>
-            <div class="mini-footer"><div class="brand-line"></div><div class="brand-lockup">SPECTRUM<br><span class="unlocked">UNLOCKED</span></div><div class="handle">@spectrum.unlocked</div></div>
-          </div>
-          <div class="variant-info"><h3>Resource Pin</h3><p>Best for gently pointing to Spectrum Unlocked tools.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Copy Formulas</h2>
-        <p>Simple formulas Copilot can use to create pin content quickly.</p>
-      </div>
-      <div class="copy-grid">
-        <div class="panel"><h3>Checklist</h3><p><strong>Headline:</strong> 5 Ways to [Support Outcome]</p><p><strong>Subhead:</strong> Small shifts for [specific parent moment].</p><p><strong>CTA:</strong> Save this for [specific situation].</p></div>
-        <div class="panel"><h3>Reframe</h3><p><strong>Headline:</strong> [Behavior] Is Communication</p><p><strong>Subhead:</strong> Look for the need underneath the action.</p><p><strong>CTA:</strong> Save this reminder for hard days.</p></div>
-        <div class="panel"><h3>Myth</h3><p><strong>Headline:</strong> Myth vs Truth: [Topic]</p><p><strong>Subhead:</strong> A better way to understand [behavior or need].</p><p><strong>CTA:</strong> Share with someone who needs this.</p></div>
-        <div class="panel"><h3>Signs</h3><p><strong>Headline:</strong> Signs of [Topic]</p><p><strong>Subhead:</strong> What parents may notice first.</p><p><strong>CTA:</strong> Save this so you can spot patterns.</p></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Do and Do Not</h2>
-        <p>Keep the voice warm and practical.</p>
-      </div>
-      <div class="dos-donts">
-        <div class="panel do">
-          <h3>Do</h3>
-          <ul class="rule-list">
-            <li>Say behavior is communication.</li>
-            <li>Use parent-friendly language.</li>
-            <li>Make one clear point per pin.</li>
-            <li>Use specific CTAs like save this checklist.</li>
-            <li>Use tools only when the match is specific.</li>
+            <li>Deep purple canvas with stacked darker purple panels.</li>
+            <li>Bold white heavy sans-serif headlines.</li>
+            <li>Bright blue for useful tips, borders, checkmarks, and section labels.</li>
+            <li>Red for Pinterest-ready badges, active states, and action energy.</li>
+            <li>Gold for emotional emphasis, statistics, and warm save prompts.</li>
+            <li>Pink for personal, blog, myth, and softer emotional accents.</li>
           </ul>
         </div>
-        <div class="panel dont">
-          <h3>Do Not</h3>
+        <div class="card">
+          <h3>Voice Direction</h3>
           <ul class="rule-list">
-            <li>Do not use fear-based copy.</li>
-            <li>Do not shame parents or children.</li>
-            <li>Do not use generic platitudes.</li>
-            <li>Do not overfill the pin with paragraphs.</li>
-            <li>Do not use puzzle symbols or em dashes.</li>
+            <li>Direct, validating, and parent-friendly.</li>
+            <li>Educational without sounding clinical.</li>
+            <li>Specific parent moments over generic advice.</li>
+            <li>Support-first framing, not compliance-first framing.</li>
+            <li>Save-worthy takeaways that make sense without a caption.</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <section class="section">
+      <h2 class="section-title">Color System</h2>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-color" style="background:#2a004a"></div><div class="swatch-copy"><strong>Core Purple</strong><br>#2a004a</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#1f0033"></div><div class="swatch-copy"><strong>Deep Purple</strong><br>#1f0033</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#52008C"></div><div class="swatch-copy"><strong>Panel Purple</strong><br>#52008C</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#E60023"></div><div class="swatch-copy"><strong>Pinterest Red</strong><br>#E60023</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#18A8F1"></div><div class="swatch-copy"><strong>Bright Blue</strong><br>#18A8F1</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#FDB03E"></div><div class="swatch-copy"><strong>Gold</strong><br>#FDB03E</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#CC78CB"></div><div class="swatch-copy"><strong>Pink</strong><br>#CC78CB</div></div>
+      </div>
+    </section>
 
     <section class="section">
-      <div class="section-head">
-        <h2>The Pinterest Playbook</h2>
-        <p>The goal is simple: create pins people save because they solve a real parenting moment.</p>
-      </div>
+      <h2 class="section-title">Typography and Layout Rules</h2>
       <div class="grid three">
-        <div class="panel">
-          <h3>1. Start With Search</h3>
-          <ul class="rule-list">
-            <li>Use a parent search phrase in the title.</li>
-            <li>Make the topic obvious in 2 seconds.</li>
-            <li>Prefer practical phrases over clever phrases.</li>
-            <li>Put the keyword in the headline or subheadline.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>2. Create Save Value</h3>
-          <ul class="rule-list">
-            <li>Give a checklist, script, sign list, or reframe.</li>
-            <li>Make it useful without needing the caption.</li>
-            <li>Use 3 to 5 points max.</li>
-            <li>End with a save-focused CTA.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>3. Keep Brand Trust</h3>
-          <ul class="rule-list">
-            <li>Warm parent voice, not a clinical voice.</li>
-            <li>Support-first language.</li>
-            <li>Do not shame behavior, parents, or children.</li>
-            <li>Use tools only when there is a specific fit.</li>
-          </ul>
-        </div>
+        <div class="card"><h3>Typography</h3><ul class="rule-list"><li>Use Poppins for pin graphics.</li><li>Headlines should be bold, rounded, and heavy, usually 800 or 900 weight.</li><li>Use uppercase for section labels and CTA chips.</li><li>Keep body copy short and scannable.</li></ul></div>
+        <div class="card"><h3>Layout</h3><ul class="rule-list"><li>Top pill badge, large headline, one short subtitle.</li><li>Use rounded cards and two-column grids where helpful.</li><li>Center major headlines and left-align body content.</li><li>Leave generous margins so the pin does not feel crowded.</li></ul></div>
+        <div class="card"><h3>Footer and CTA</h3><ul class="rule-list"><li>CTA should be save-focused or share-focused.</li><li>Use @spectrum_unlocked, not the dot handle.</li><li>Footer can include a small emoji or icon.</li><li>Avoid salesy CTAs unless the tool is a perfect fit.</li></ul></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-head">
-        <h2>What We Look Out For</h2>
-        <p>This is the quality filter before any pin is published.</p>
-      </div>
+      <h2 class="section-title">What We Look Out For</h2>
       <div class="grid two">
-        <div class="panel">
+        <div class="card">
           <h3>Content Checks</h3>
           <ul class="rule-list">
-            <li>Does the headline name a real parent problem?</li>
-            <li>Is there one clear promise, not five competing ideas?</li>
-            <li>Would a parent save this for later?</li>
-            <li>Can the content stand alone without a caption?</li>
-            <li>Is it specific enough to avoid sounding generic?</li>
-            <li>Does it avoid fear, shame, and absolute claims?</li>
+            <li>Does the headline name a real autism parenting search intent?</li>
+            <li>Would a parent save this for a hard moment later?</li>
+            <li>Is there one clear promise?</li>
+            <li>Can the pin stand alone without the caption?</li>
+            <li>Is the advice specific, kind, and practical?</li>
+            <li>Does the tool mention feel earned, not forced?</li>
           </ul>
         </div>
-        <div class="panel">
+        <div class="card">
           <h3>Design Checks</h3>
           <ul class="rule-list">
-            <li>Is the headline readable on a phone?</li>
-            <li>Is the top third strong enough to stop the scroll?</li>
-            <li>Is there enough spacing around every text block?</li>
-            <li>Are teal and gold used as accents, not decoration overload?</li>
-            <li>Does the footer branding stay consistent?</li>
-            <li>Are all edges inside the safe margin?</li>
+            <li>Headline must be readable at thumbnail size.</li>
+            <li>White text must have strong contrast on purple.</li>
+            <li>Cards should be rounded and consistent.</li>
+            <li>Blue, red, gold, and pink should be accents, not clutter.</li>
+            <li>Icons should help scanning, not decorate randomly.</li>
+            <li>Pin must be native 1000 by 1500, not resized from Instagram.</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-head">
-        <h2>Pin Anatomy</h2>
-        <p>Every strong Spectrum Unlocked pin should follow this structure.</p>
-      </div>
+      <h2 class="section-title">Never Do This</h2>
       <div class="grid three">
-        <div class="panel"><h3>Top Third</h3><p><strong>Purpose:</strong> Stop the scroll.</p><ul class="rule-list"><li>Small category badge.</li><li>Large keyword-rich headline.</li><li>One emotional or practical hook.</li></ul></div>
-        <div class="panel"><h3>Middle Third</h3><p><strong>Purpose:</strong> Deliver the value.</p><ul class="rule-list"><li>3 to 5 cards or callouts.</li><li>Short phrases, not paragraphs.</li><li>Icons should be simple checks, numbers, or labels.</li></ul></div>
-        <div class="panel"><h3>Bottom Third</h3><p><strong>Purpose:</strong> Drive the save.</p><ul class="rule-list"><li>Specific save or share CTA.</li><li>Consistent Spectrum Unlocked lockup.</li><li>Handle visible but not overpowering.</li></ul></div>
+        <div class="card"><h3>Brand Mistakes</h3><ul class="rule-list warning"><li>Do not use the old navy, teal, and gold system for Pinterest pins.</li><li>Do not use puzzle symbols or puzzle emoji.</li><li>Do not use the dot version of the handle on Pinterest graphics.</li><li>Do not use low contrast muted designs.</li></ul></div>
+        <div class="card"><h3>Copy Mistakes</h3><ul class="rule-list warning"><li>Do not use em dashes.</li><li>Do not shame parents or children.</li><li>Do not use fear-based headlines.</li><li>Do not write long paragraphs.</li></ul></div>
+        <div class="card"><h3>Design Mistakes</h3><ul class="rule-list warning"><li>Do not make text tiny.</li><li>Do not cram more than 5 points on one pin.</li><li>Do not rely on complex illustrations.</li><li>Do not let decorative icons overpower the message.</li></ul></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-head">
-        <h2>Content Pillars</h2>
-        <p>Rotate through these so the Pinterest account feels useful, balanced, and searchable.</p>
-      </div>
-      <div class="copy-grid">
-        <div class="panel"><h3>Sensory Support</h3><p>Search topics: sensory overload, sensory diet, noise sensitivity, clothing issues, feeding challenges, transitions.</p><p><strong>Best variants:</strong> checklist, signs, do and do not, resource.</p></div>
-        <div class="panel"><h3>Meltdowns and Regulation</h3><p>Search topics: meltdown vs tantrum, after-school restraint collapse, shutdowns, recovery after meltdown.</p><p><strong>Best variants:</strong> reframe, parent script, signs, checklist.</p></div>
-        <div class="panel"><h3>Communication</h3><p>Search topics: AAC, non-speaking autism, behavior as communication, speech delay, scripts, gestures.</p><p><strong>Best variants:</strong> reframe, checklist, myth vs truth, quote.</p></div>
-        <div class="panel"><h3>School and IEP</h3><p>Search topics: IEP meeting checklist, accommodations, classroom sensory needs, school refusal, teacher communication.</p><p><strong>Best variants:</strong> checklist, script, do and do not, resource.</p></div>
-        <div class="panel"><h3>Parent Mindset</h3><p>Search topics: autism acceptance, masking, burnout, late diagnosis, low demand parenting, sibling support.</p><p><strong>Best variants:</strong> quote, reframe, myth vs truth, signs.</p></div>
-        <div class="panel"><h3>Spectrum Unlocked Tools</h3><p>Use only when the topic naturally fits. Sensory Profile Quiz for sensory issues, Meltdown Tracker for patterns, Beacon for personalized guidance.</p><p><strong>Best variants:</strong> resource, checklist, problem to tool bridge.</p></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Variation Matrix</h2>
-        <p>Pick the format based on what the pin needs to do.</p>
-      </div>
-      <div class="copy-grid">
-        <div class="panel"><h3>Checklist Pin</h3><p><strong>Use when:</strong> The parent needs steps.</p><p><strong>Headline:</strong> 5 Ways to Make Transitions Easier</p><p><strong>CTA:</strong> Save this for tomorrow morning.</p></div>
-        <div class="panel"><h3>Signs Pin</h3><p><strong>Use when:</strong> The parent needs recognition.</p><p><strong>Headline:</strong> Signs Your Child Is Overloaded</p><p><strong>CTA:</strong> Save this so you can spot patterns.</p></div>
-        <div class="panel"><h3>Reframe Pin</h3><p><strong>Use when:</strong> The parent needs a mindset shift.</p><p><strong>Headline:</strong> Behavior Is Communication</p><p><strong>CTA:</strong> Save this for hard moments.</p></div>
-        <div class="panel"><h3>Myth vs Truth</h3><p><strong>Use when:</strong> The topic has common misinformation.</p><p><strong>Headline:</strong> Myth vs Truth: Eye Contact</p><p><strong>CTA:</strong> Share this with someone learning.</p></div>
-        <div class="panel"><h3>Parent Script</h3><p><strong>Use when:</strong> Parents need exact words.</p><p><strong>Headline:</strong> What to Say During a Meltdown</p><p><strong>CTA:</strong> Save these phrases for later.</p></div>
-        <div class="panel"><h3>Do and Do Not</h3><p><strong>Use when:</strong> A support swap is clearer than an explanation.</p><p><strong>Headline:</strong> Do This, Not That During Overload</p><p><strong>CTA:</strong> Save this quick support swap.</p></div>
-        <div class="panel"><h3>Stat Pin</h3><p><strong>Use when:</strong> One number gives authority.</p><p><strong>Headline:</strong> 1 in 36 Children Identified</p><p><strong>CTA:</strong> Save this context for advocacy.</p></div>
-        <div class="panel"><h3>Quote Pin</h3><p><strong>Use when:</strong> The message is emotional and shareable.</p><p><strong>Headline:</strong> Support Before Compliance</p><p><strong>CTA:</strong> Save this reminder.</p></div>
-        <div class="panel"><h3>Resource Pin</h3><p><strong>Use when:</strong> A Spectrum Unlocked tool helps solve the problem.</p><p><strong>Headline:</strong> Need Help Finding Patterns?</p><p><strong>CTA:</strong> Try the Meltdown Tracker.</p></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Pinterest SEO and Titles</h2>
-        <p>Use clear search language. Pinterest is a search engine, not just a feed.</p>
-      </div>
-      <div class="grid two">
-        <div class="panel">
-          <h3>Keyword Patterns</h3>
-          <ul class="rule-list">
-            <li>Autism parenting tips</li>
-            <li>Autism sensory overload</li>
-            <li>Autism meltdown support</li>
-            <li>IEP meeting checklist</li>
-            <li>Autism communication strategies</li>
-            <li>Autistic burnout signs</li>
-            <li>After-school restraint collapse</li>
-            <li>AAC for autistic children</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Title Formulas</h3>
-          <ul class="rule-list">
-            <li>5 Ways to [Support Specific Need]</li>
-            <li>Signs Your Child Is [State]</li>
-            <li>What to Say When [Moment Happens]</li>
-            <li>[Behavior] Is Communication</li>
-            <li>Myth vs Truth: [Topic]</li>
-            <li>Before You [Common Reaction], Try This</li>
-            <li>Save This [Checklist or Script]</li>
-            <li>Do This, Not That: [Support Moment]</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Copilot Build Workflow</h2>
-        <p>Give Copilot these steps so it produces complete usable HTML, not just a visual idea.</p>
-      </div>
+      <h2 class="section-title">Pin Anatomy</h2>
       <div class="grid three">
-        <div class="panel"><h3>Brief</h3><ul class="rule-list"><li>Topic and parent problem.</li><li>Pin variant to use.</li><li>3 to 5 content points.</li><li>CTA and tool mention, if any.</li></ul></div>
-        <div class="panel"><h3>Build</h3><ul class="rule-list"><li>Create a single HTML file.</li><li>Use inline CSS.</li><li>Canvas must be 1000 by 1500.</li><li>Use Google Fonts for Playfair Display and Poppins.</li></ul></div>
-        <div class="panel"><h3>Check</h3><ul class="rule-list"><li>No puzzle symbols.</li><li>No em dashes.</li><li>No tiny text.</li><li>Footer brand lockup present.</li></ul></div>
+        <div class="card"><h3>Top Third</h3><ul class="rule-list"><li>Pill badge like SAVE THIS CHECKLIST.</li><li>Large white headline with blue or gold emphasis.</li><li>One clear subtitle that explains the value.</li></ul></div>
+        <div class="card"><h3>Middle Third</h3><ul class="rule-list"><li>3 to 5 rounded cards, bullets, or comparison blocks.</li><li>Use checkmarks, numbers, simple icons, and short text.</li><li>Make the useful content obvious without reading everything.</li></ul></div>
+        <div class="card"><h3>Bottom Third</h3><ul class="rule-list"><li>One save or share prompt.</li><li>Handle: @spectrum_unlocked.</li><li>Optional warm icon like heart, bookmark, or lightbulb.</li></ul></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-head">
-        <h2>Final QA Checklist</h2>
-        <p>Before publishing or exporting the pin, check every item.</p>
+      <h2 class="section-title">Core Pin Variations</h2>
+      <p class="section-intro">These are the reusable design families Copilot should follow when generating new Pinterest pins.</p>
+      <div class="variant-grid">
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Save This Checklist</div><div class="pin-title">5 <span class="blue">IEP</span><br>ACCOMMODATIONS</div><div class="pin-sub">Supports that can make school feel safer.</div><div class="mini-body"><div class="mini-line">✓ Visual schedule</div><div class="mini-line">✓ Sensory breaks</div><div class="mini-line">✓ Written directions</div></div><div class="mini-footer">Save for your next IEP meeting<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Checklist Pin</h3><p>Best for practical supports, routines, IEPs, sensory strategies, and parent tools.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Know The Difference</div><div class="pin-title">MELTDOWN<br><span class="gold">VS</span><br>TANTRUM</div><div class="pin-sub">A quick reframe for hard moments.</div><div class="mini-body mini-two"><div class="mini-box"><span>Meltdown</span><br>overload</div><div class="mini-box"><span>Tantrum</span><br>goal-driven</div></div><div class="mini-footer">Share this with someone learning<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Comparison Pin</h3><p>Best for X vs Y education, clear distinctions, and common confusion points.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Quick Tips</div><div class="pin-title"><span class="blue">SENSORY</span><br>HACKS FOR<br>OVERLOAD</div><div class="pin-sub">Small changes that can lower stress.</div><div class="mini-body"><div class="mini-line">🎧 Reduce sound</div><div class="mini-line">💡 Dim bright lights</div><div class="mini-line">🧸 Offer pressure</div></div><div class="mini-footer">Save for the next overwhelmed day<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Tip List Pin</h3><p>Best for quick wins, sensory supports, routines, and home strategies.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Myth Buster</div><div class="pin-title">AUTISM<br><span class="pink">MYTHS</span><br>TO DROP</div><div class="pin-sub">Better assumptions create better support.</div><div class="mini-body"><div class="mini-box"><span>Myth:</span> No eye contact means not listening</div><div class="mini-box"><span>Truth:</span> Listening can look different</div></div><div class="mini-footer">Save this reframe<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Myth Buster Pin</h3><p>Best for correcting misinformation without shaming the reader.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Spot The Signs</div><div class="pin-title">SIGNS OF<br><span class="gold">AUTISTIC</span><br>BURNOUT</div><div class="pin-sub">What parents may notice first.</div><div class="mini-body"><div class="mini-line">Less tolerance</div><div class="mini-line">More shutdowns</div><div class="mini-line">Skill regression</div></div><div class="mini-footer">Save so you can spot patterns<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Signs Pin</h3><p>Best for recognition content, search topics, and parent pattern spotting.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Parent Script</div><div class="pin-title">WHAT TO<br><span class="blue">SAY</span><br>INSTEAD</div><div class="pin-sub">Words that lower pressure.</div><div class="mini-body"><div class="mini-line">I see this is hard</div><div class="mini-line">We can pause</div><div class="mini-line">Show me another way</div></div><div class="mini-footer">Save these phrases<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Script Pin</h3><p>Best for meltdowns, IEP meetings, advocacy, and communication moments.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Do This</div><div class="pin-title">DO THIS<br><span class="gold">NOT</span><br>THAT</div><div class="pin-sub">A quick support swap.</div><div class="mini-body mini-two"><div class="mini-box"><span>Do</span><br>reduce noise</div><div class="mini-box"><span>Not</span><br>force through</div></div><div class="mini-footer">Save this support swap<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Do This, Not That</h3><p>Best when contrast is clearer than a long explanation.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Big Number</div><div class="pin-title"><span class="gold">1 IN 36</span><br>CHILDREN<br>IDENTIFIED</div><div class="pin-sub">Use one statistic and make it human.</div><div class="mini-body"><div class="mini-box">Keep the number large, then explain why it matters for families.</div></div><div class="mini-footer">Save for advocacy context<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Stat Pin</h3><p>Best for research, awareness, and authority-building posts.</p></div></article>
+        <article class="variant-card"><div class="mini-pin"><div class="pin-chip">Resource</div><div class="pin-title">NEED HELP<br><span class="blue">FINDING</span><br>PATTERNS?</div><div class="pin-sub">Use a tool only when it fits the need.</div><div class="mini-body"><div class="mini-line">Sensory Profile Quiz</div><div class="mini-line">Meltdown Tracker</div><div class="mini-line">Beacon guidance</div></div><div class="mini-footer">Try the matching SU tool<div class="mini-handle">@spectrum_unlocked</div></div></div><div class="variant-info"><h3>Resource Pin</h3><p>Best for connecting a specific parent problem to a Spectrum Unlocked tool.</p></div></article>
       </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Content Pillars</h2>
+      <div class="grid three">
+        <div class="card"><h3>Sensory Support</h3><p>Noise sensitivity, sensory overload, clothing issues, picky eating, transitions, sensory breaks.</p><div class="pill-row"><span class="pill blue">Checklist</span><span class="pill gold">Tips</span><span class="pill pink">Signs</span></div></div>
+        <div class="card"><h3>Meltdowns and Regulation</h3><p>Meltdown vs tantrum, shutdowns, after-school restraint collapse, recovery, low-demand support.</p><div class="pill-row"><span class="pill red">Comparison</span><span class="pill blue">Script</span><span class="pill gold">Reframe</span></div></div>
+        <div class="card"><h3>Communication</h3><p>AAC, gestures, body language, behavior as communication, gestalt language, non-speaking support.</p><div class="pill-row"><span class="pill blue">Myth</span><span class="pill pink">Reframe</span><span class="pill gold">Checklist</span></div></div>
+        <div class="card"><h3>School and IEP</h3><p>IEP meetings, accommodations, teacher communication, school refusal, advocacy language.</p><div class="pill-row"><span class="pill red">Checklist</span><span class="pill blue">Script</span></div></div>
+        <div class="card"><h3>Parent Mindset</h3><p>Acceptance, masking, burnout, late diagnosis, sibling support, grief after diagnosis.</p><div class="pill-row"><span class="pill pink">Quote</span><span class="pill gold">Signs</span></div></div>
+        <div class="card"><h3>Tools and Resources</h3><p>Sensory Profile Quiz, Meltdown Tracker, Beacon, blog guides, resource toolkit.</p><div class="pill-row"><span class="pill blue">Resource</span><span class="pill red">CTA</span></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Pinterest SEO and Title Formulas</h2>
       <div class="grid two">
-        <div class="panel">
-          <h3>Must Pass</h3>
-          <ul class="rule-list">
-            <li>1000 by 1500 native layout.</li>
-            <li>Headline readable at thumbnail size.</li>
-            <li>3 to 5 main points only.</li>
-            <li>Strong contrast across all text.</li>
-            <li>Brand lockup and handle included.</li>
-            <li>CTA is specific and save-focused.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Red Flags</h3>
-          <ul class="rule-list">
-            <li>More than 65 words on one pin.</li>
-            <li>Headline needs context to make sense.</li>
-            <li>Graphic looks like an Instagram resize.</li>
-            <li>Too many decorative shapes.</li>
-            <li>Generic advice with no parent moment.</li>
-            <li>Tool plug feels forced.</li>
-          </ul>
-        </div>
+        <div class="card"><h3>Keyword Themes</h3><ul class="rule-list"><li>Autism parenting tips</li><li>Autism sensory overload</li><li>Autism meltdown support</li><li>IEP accommodations</li><li>AAC communication</li><li>Autistic burnout signs</li><li>After-school restraint collapse</li><li>Autism in girls</li></ul></div>
+        <div class="card"><h3>Title Formulas</h3><div class="formula"><div class="formula-item">5 Ways to [Support Specific Need]</div><div class="formula-item">Signs Your Child Is [State]</div><div class="formula-item">[Topic] Checklist for Autism Parents</div><div class="formula-item">Meltdown vs Tantrum: Know the Difference</div><div class="formula-item">What to Say When [Moment Happens]</div><div class="formula-item">Do This, Not That During [Moment]</div></div></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-head">
-        <h2>Base HTML Pattern</h2>
-        <p>Copilot can use this structure for any Pinterest variant.</p>
+      <h2 class="section-title">Copilot Build Workflow</h2>
+      <div class="grid three">
+        <div class="card"><h3>Brief Copilot</h3><ul class="rule-list"><li>Give topic, parent problem, and target keyword.</li><li>Pick one variant from this playbook.</li><li>Provide 3 to 5 points.</li><li>State the CTA and whether a tool should be mentioned.</li></ul></div>
+        <div class="card"><h3>Build HTML</h3><ul class="rule-list"><li>Single HTML file with inline CSS.</li><li>Canvas is exactly 1000px by 1500px.</li><li>Use Poppins with 800 to 900 weight for headline.</li><li>Use purple system and hub accent colors.</li></ul></div>
+        <div class="card"><h3>QA Before Export</h3><ul class="rule-list"><li>No puzzle symbols.</li><li>No em dashes.</li><li>No tiny text.</li><li>Handle is @spectrum_unlocked.</li><li>Looks like Pinterest hub, not older SU carousels.</li></ul></div>
       </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Base HTML Pattern</h2>
       <pre class="code-block">&lt;main class="pin"&gt;
-  &lt;section class="content"&gt;
-    &lt;div class="badge"&gt;CATEGORY LABEL&lt;/div&gt;
+  &lt;div class="chip"&gt;SAVE THIS CHECKLIST&lt;/div&gt;
 
-    &lt;h1 class="headline"&gt;
-      &lt;span class="white"&gt;PRIMARY HOOK&lt;/span&gt;&lt;br&gt;
-      &lt;span class="gold"&gt;EMOTIONAL WORD&lt;/span&gt;&lt;br&gt;
-      &lt;span class="teal"&gt;SEARCH KEYWORD&lt;/span&gt;
-    &lt;/h1&gt;
+  &lt;h1&gt;
+    MAIN HOOK &lt;span&gt;KEYWORD&lt;/span&gt;
+  &lt;/h1&gt;
 
-    &lt;p class="subheadline"&gt;One short sentence explaining why it matters.&lt;/p&gt;
+  &lt;p class="subtitle"&gt;One short sentence explaining the value.&lt;/p&gt;
 
-    &lt;div class="cards"&gt;
-      &lt;div class="card"&gt;&lt;span class="check"&gt;✓&lt;/span&gt;&lt;span&gt;Point one&lt;/span&gt;&lt;/div&gt;
-      &lt;div class="card"&gt;&lt;span class="check"&gt;✓&lt;/span&gt;&lt;span&gt;Point two&lt;/span&gt;&lt;/div&gt;
-      &lt;div class="card"&gt;&lt;span class="check"&gt;✓&lt;/span&gt;&lt;span&gt;Point three&lt;/span&gt;&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="cta"&gt;Save this for a specific parent moment&lt;/div&gt;
-
-    &lt;footer class="brand"&gt;
-      &lt;div class="brand-line"&gt;&lt;/div&gt;
-      &lt;div class="brand-name"&gt;
-        &lt;div&gt;SPECTRUM&lt;/div&gt;
-        &lt;div class="unlocked"&gt;UNLOCKED&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="handle"&gt;@spectrum.unlocked&lt;/div&gt;
-    &lt;/footer&gt;
+  &lt;section class="cards"&gt;
+    &lt;div class="card"&gt;✓ Point one&lt;/div&gt;
+    &lt;div class="card"&gt;✓ Point two&lt;/div&gt;
+    &lt;div class="card"&gt;✓ Point three&lt;/div&gt;
   &lt;/section&gt;
+
+  &lt;footer&gt;
+    &lt;strong&gt;Save this for later&lt;/strong&gt;
+    &lt;span&gt;@spectrum_unlocked&lt;/span&gt;
+  &lt;/footer&gt;
 &lt;/main&gt;</pre>
     </section>
   </main>

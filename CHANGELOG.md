@@ -2,6 +2,22 @@
 
 ## 2026-05-14
 
+### Fixed - Pinterest Playbook Brand Match
+**Commit:** pending at edit time
+
+**What Changed:**
+- Rebuilt `pinterest-playbook.html` to match the live Pinterest Hub identity.
+- Switched the playbook from the older navy, teal, and gold carousel style to the current purple Pinterest system.
+- Updated brand colors to Core Purple #2a004a, Deep Purple #1f0033, Panel Purple #52008C, Pinterest Red #E60023, Bright Blue #18A8F1, Gold #FDB03E, and Pink #CC78CB.
+- Updated guidance to use heavy Poppins headlines, rounded purple cards, red CTA chips, blue utility accents, and @spectrum_unlocked.
+- Added explicit warnings to avoid the older SU carousel brand style for Pinterest pins.
+
+**Files Updated:**
+- `pinterest-playbook.html`
+- `CHANGELOG.md`
+
+---
+
 ### Added - Complete Pinterest Playbook
 **Commit:** cfda130
 
