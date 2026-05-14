@@ -2,17 +2,19 @@
 
 ## 2026-05-14
 
-### Added - Pinterest Brand Kit
-**Commit:** 6c08e81
+### Added - Complete Pinterest Playbook
+**Commit:** pending at edit time
 
 **What Changed:**
-- Added `pinterest-brand-kit.html` as a shareable reference page for Copilot.
-- Included full Spectrum Unlocked Pinterest rules, colors, typography, lockup guidance, copy formulas, and do and do not guidance.
+- Added `pinterest-playbook.html` as the full shareable Pinterest playbook for Copilot.
+- Kept `pinterest-brand-kit.html` as a redirect to the new playbook URL.
+- Included Spectrum Unlocked Pinterest strategy, brand rules, colors, typography, lockup guidance, copy formulas, content pillars, Pinterest SEO patterns, what to look out for, final QA checks, and do and do not guidance.
 - Added 9 reusable Pinterest pin variants with live mini previews.
-- Added a base HTML pattern for creating native 1000 by 1500 Pinterest pins.
-- Linked the Pinterest Brand Kit from the home page top navigation and Brand & Guides dropdown.
+- Added a variation matrix and base HTML pattern for creating native 1000 by 1500 Pinterest pins.
+- Linked the Pinterest Playbook from the home page top navigation and Brand & Guides dropdown.
 
 **Files Added:**
+- `pinterest-playbook.html`
 - `pinterest-brand-kit.html`
 
 **Files Updated:**
