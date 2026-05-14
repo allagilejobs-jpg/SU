@@ -1,5 +1,26 @@
 # Changelog - Spectrum Unlocked
 
+## 2026-05-14
+
+### Added - Pinterest Brand Kit
+**Commit:** pending at edit time
+
+**What Changed:**
+- Added `pinterest-brand-kit.html` as a shareable reference page for Copilot.
+- Included full Spectrum Unlocked Pinterest rules, colors, typography, lockup guidance, copy formulas, and do and do not guidance.
+- Added 9 reusable Pinterest pin variants with live mini previews.
+- Added a base HTML pattern for creating native 1000 by 1500 Pinterest pins.
+- Linked the Pinterest Brand Kit from the home page top navigation and Brand & Guides dropdown.
+
+**Files Added:**
+- `pinterest-brand-kit.html`
+
+**Files Updated:**
+- `index.html`
+- `CHANGELOG.md`
+
+---
+
 ## 2026-04-05
 
 ### Added - Reel Content System
