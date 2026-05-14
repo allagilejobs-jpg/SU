@@ -3,7 +3,7 @@
 ## 2026-05-14
 
 ### Added - Complete Pinterest Playbook
-**Commit:** pending at edit time
+**Commit:** cfda130
 
 **What Changed:**
 - Added `pinterest-playbook.html` as the full shareable Pinterest playbook for Copilot.
