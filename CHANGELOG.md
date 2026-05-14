@@ -3,7 +3,7 @@
 ## 2026-05-14
 
 ### Fixed - Pinterest Playbook Brand Match
-**Commit:** pending at edit time
+**Commit:** bab397d
 
 **What Changed:**
 - Rebuilt `pinterest-playbook.html` to match the live Pinterest Hub identity.
