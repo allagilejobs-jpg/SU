@@ -3,7 +3,7 @@
 ## 2026-08-07
 
 ### Added - Worksheet Mockup Gallery
-**Commit:** 4609194
+**Commit:** b9fe9ae
 
 **What Changed:**
 - Added a hosted static worksheet mockup gallery at `worksheet-mockups/`.
