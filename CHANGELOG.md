@@ -1,5 +1,26 @@
 # Changelog - Spectrum Unlocked
 
+## 2026-08-07
+
+### Added - Worksheet Mockup Gallery
+**Commit:** 4609194
+
+**What Changed:**
+- Added a hosted static worksheet mockup gallery at `worksheet-mockups/`.
+- Built 25 visual mockup cards for CreatePrintables-style worksheet and generator types.
+- Added category filters, search, responsive desktop/mobile layout, and worksheet-preview cards.
+- Covered name tracing, name tracing packs, cursive/holiday/seasonal name tracing, name + picture practice, playdough mats, word tracing, letter tracing, alphabet chart, days of the week tracing, number tracing, 1-100 number pack, address/phone tracing, colors, certificates, and chore chart mockups.
+
+**Files Added:**
+- `worksheet-mockups/index.html`
+- `worksheet-mockups/styles.css`
+- `worksheet-mockups/script.js`
+
+**Files Updated:**
+- `CHANGELOG.md`
+
+---
+
 ## 2026-05-14
 
 ### Fixed - Pinterest Playbook Brand Match

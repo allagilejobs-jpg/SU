@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Worksheet Generator Mockup Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Spectrum Unlocked worksheet generator</p>
+        <h1>CreatePrintables-style mockup gallery</h1>
+      </div>
+      <div class="stats" aria-label="Gallery stats">
+        <span><strong id="visibleCount">0</strong> shown</span>
+        <span><strong id="totalCount">0</strong> mockups</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="Filters">
+        <div class="searchWrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search worksheets">
+        </div>
+        <div id="filters" class="filters" aria-label="Worksheet categories"></div>
+      </section>
+
+      <section id="gallery" class="gallery" aria-label="Worksheet mockups"></section>
+    </main>
+
+    <template id="cardTemplate">
+      <article class="mockCard">
+        <div class="previewShell"></div>
+        <div class="cardBody">
+          <div class="cardTop">
+            <span class="pill category"></span>
+            <span class="pill type"></span>
+          </div>
+          <h2></h2>
+          <p class="summary"></p>
+          <dl>
+            <div>
+              <dt>Inputs</dt>
+              <dd class="inputs"></dd>
+            </div>
+            <div>
+              <dt>Output</dt>
+              <dd class="output"></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
